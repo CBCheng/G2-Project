@@ -1,0 +1,46 @@
+// DESK FONT
+@mixin body($font-base-size) {
+    body {
+     font-size: $font-base-size;
+     padding-left: ceil($font-base-size * 1.1);
+     padding-right : ceil($font-base-size * 1.1);
+     background-image: $bgimg;
+     background-repeat:repeat; 
+     font-family: $fontfamily;
+     color:$fontColorWhite;
+
+    }
+    h1 { font-size: ceil($font-base-size * 3.4)}
+    
+    h2 { font-size: ceil($font-base-size * 3)}
+    
+    h3 { font-size: ceil($font-base-size * 2.6)}
+    
+    h4 { font-size: ceil($font-base-size * 2)}
+    
+    h5 { font-size: ceil($font-base-size * 1)}
+
+    p { font-size: ceil($font-base-size * 1)}
+    
+    }
+// RWD
+@mixin respond($breakpoint) {
+    //手機
+    @if $breakpoint=="small" {
+        @media all and (max-width: $small) {
+            @content;
+        }
+    }
+    //平板
+    @else if $breakpoint=="medium" {
+        @media all and (min-width: $medium) {
+            @content;
+        }
+    }
+    //桌機
+    @else if $breakpoint=="desktop" {
+        @media all and (min-width: $desktop) {
+            @content;
+        }
+    }
+}

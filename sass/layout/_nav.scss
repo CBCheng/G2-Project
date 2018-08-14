@@ -1,0 +1,65 @@
+nav{
+    width: 100%;
+    height: 100px;
+    box-sizing: content-box;
+    padding: 20px 0 20px 0;
+    background-image: $gradation;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+.logo{
+    display: inline-block;
+    width: 100px;
+}
+.menu{
+    display: inline-block;
+    vertical-align: middle; 
+    text-align: center;
+}
+.menu li{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 50px 50px 0 50px; 
+    transition: .5s;
+}
+.member{
+    display: inline-block;
+    vertical-align: middle; 
+    position: absolute;
+    right: 20px;
+}
+.member li{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 60px 0 0 0; 
+}
+.active{
+    color:#6cd5ff;
+}
+.shoppingCar{
+    width: 25px;
+}
+.memberSelect{
+    width: 200px;
+    position: absolute;
+    top: 150px;
+    right: 10px;
+    text-align:left;
+    background-color: rgba(0,255,255,.3);
+    display: none;
+}
+.memberSelect li{
+    padding: 10px; 
+}
+
+// hover
+.member a:hover,.menu a:hover,.memberSelect a:hover{
+    color:#6cd5ff;
+}
+
+
+
