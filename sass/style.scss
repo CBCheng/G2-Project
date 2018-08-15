@@ -2,6 +2,9 @@
 @import "base/reset";
 @import "mixin/mixin";
 @include body(12px);
+// *{
+//     outline: 1px solid #fff;
+// }
 img{
     width: 100%;
     vertical-align: middle;
@@ -16,7 +19,7 @@ section{
     height: 3000px;
 }
 @import "layout/footer";
-@import "layout/small";
+@import "layout/nav-small";
 @import "layout/medium";
 @import "layout/desktop";
 

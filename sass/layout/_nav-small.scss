@@ -1,0 +1,83 @@
+
+@include respond(small){
+    //手機
+    nav{
+        width: 100%;
+        height: 50px;
+        box-sizing: content-box;
+        padding: 5px 0 5px 0;
+        background-image: $gradation;
+        position: fixed;
+        top: 0;
+        left: 0;
+        // text-align: center;
+        letter-spacing: 2px;
+        font-size: 18px;
+    }
+    .logo{
+        width: 50px;
+    }
+    .menu,.member{
+        display: none;
+    }
+    // 漢堡選單
+    .hambger{
+        width: 22px;
+        height: 20px;
+        display: inline-block;
+        position: absolute;
+        right: 10px;
+        top:0;
+        bottom:0;
+        margin: auto;
+    }
+    .line:before{
+        content: '';
+        display: block;
+        width: 50%;
+        height: 2px;
+        box-shadow: 0px 16px #fff;
+    }
+    .line{
+        width: 100%;
+        height: 2px;
+        position: relative;
+        background-color: $fontColorWhite;
+        box-shadow: 0px 8px #fff;
+    }
+    // 漢堡選單變形
+    .transform:before{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        transform: rotate(-45deg);
+    }
+    .transform{
+        width: 100%;
+        height: 2px;
+        position: relative;
+        background-color: $fontColorWhite;
+        transform: rotate(45deg);
+    }
+    .menuMobile{
+        display: block;
+        width: 100%;
+        height: 100vh;;
+        line-height: 40px;
+        padding-top: 50px;
+        background-color: $navColor;
+        position: absolute;
+        top: 60px;
+        right: -100%;
+        transition: .8s;
+    }
+    .activeM{
+        position: absolute;
+        top: 60px;
+        right: 0;
+    }
+    .activeB{
+        color:$fontColorBlue;
+    }
+  }

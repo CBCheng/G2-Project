@@ -37,8 +37,15 @@ nav{
     vertical-align: middle;
     padding: 60px 0 0 0; 
 }
+.memberSign a {
+    border-left: 1px solid $fontColorWhite;
+    padding-left: 10px;
+}
 .active{
     color:$fontColorBlue;
+}
+.shoppingCar{
+    margin-right: 8px;
 }
 .shoppingCar{
     width: 25px;
@@ -54,6 +61,9 @@ nav{
 }
 .memberSelect li{
     padding: 10px; 
+}
+.hambger,.menuMobile{
+    display: none;
 }
 
 // hover

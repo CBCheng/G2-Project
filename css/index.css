@@ -42,7 +42,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-@media all and (max-width: 374px) {
+@media all and (max-width: 767px) {
   font-size: 12px; }
 
 body {
@@ -117,8 +117,15 @@ nav {
   vertical-align: middle;
   padding: 60px 0 0 0; }
 
+.memberSign a {
+  border-left: 1px solid #fff;
+  padding-left: 10px; }
+
 .active {
   color: #6cd5ff; }
+
+.shoppingCar {
+  margin-right: 8px; }
 
 .shoppingCar {
   width: 25px; }
@@ -134,6 +141,9 @@ nav {
 
 .memberSelect li {
   padding: 10px; }
+
+.hambger, .menuMobile {
+  display: none; }
 
 .member a:hover, .menu a:hover, .memberSelect a:hover {
   color: #6cd5ff; }
