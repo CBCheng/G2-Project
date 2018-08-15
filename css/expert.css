@@ -43,53 +43,159 @@ table {
   border-spacing: 0; }
 
 body {
-  font-size: 16px;
+  font-size: 12px;
   background-image: url(../img/bg.png);
   background-repeat: repeat;
   font-family: "微軟正黑體", "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS", sans-serif;
   color: #fff; }
 
 h1 {
-  font-size: 55px; }
+  font-size: 41px; }
 
 h2 {
-  font-size: 48px; }
+  font-size: 36px; }
 
 h3 {
-  font-size: 42px; }
-
-h4 {
   font-size: 32px; }
 
+h4 {
+  font-size: 24px; }
+
 h5 {
-  font-size: 16px; }
+  font-size: 12px; }
 
 p {
-  font-size: 16px; }
+  font-size: 12px; }
 
-.title {
-  position: relative;
-  margin: auto; }
-  .title h1 {
-    position: absolute;
-    text-align: center;
+img {
+  width: 100%;
+  vertical-align: middle; }
+
+a {
+  text-decoration: none;
+  color: #fff; }
+
+nav {
+  width: 100%;
+  height: 100px;
+  box-sizing: content-box;
+  padding: 20px 0 20px 0;
+  background-image: linear-gradient(to top, rgba(0, 255, 255, 0.3), rgba(0, 183, 255, 0.3) 100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 18px; }
+
+.logo {
+  display: inline-block;
+  width: 100px; }
+
+.menu {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center; }
+
+.menu li {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 50px 50px 0 50px;
+  transition: .5s; }
+
+.member {
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  right: 20px; }
+
+.member li {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 60px 0 0 0; }
+
+.active {
+  color: #6cd5ff; }
+
+.shoppingCar {
+  width: 25px; }
+
+.memberSelect {
+  width: 200px;
+  position: absolute;
+  top: 150px;
+  right: 10px;
+  text-align: left;
+  background-color: rgba(0, 255, 255, 0.3);
+  display: none; }
+
+.memberSelect li {
+  padding: 10px; }
+
+.member a:hover, .menu a:hover, .memberSelect a:hover {
+  color: #6cd5ff; }
+
+@media all and (min-width: 1366px) {
+  .title {
+    top: 200px;
+    position: relative;
     margin: auto;
-    top: 90px;
-    bottom: 0;
-    right: 0;
-    left: 0; }
-  .title #can {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    width: 100%; }
+    .title h1 {
+      position: absolute;
+      text-align: center;
+      margin: auto;
+      top: 90px;
+      bottom: 0;
+      right: 0;
+      left: 0; }
+    .title #can {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      text-align: center; }
+    .title #canvas1 {
+      position: absolute;
+      animation: aa 30s 0s infinite; }
+    .title #canvas2 {
+      animation: bb 30s 0s infinite; }
+  .cloud_group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; }
+    .cloud_group .cloud1 {
+      width: 700px; }
+    .cloud_group .cloud2 {
+      width: 500px; }
+  .panel {
+    width: 1200px;
     margin: auto;
-    text-align: center; }
-  .title #canvas1 {
-    position: absolute;
-    animation: aa 30s 0s infinite; }
-  .title #canvas2 {
-    animation: bb 30s 0s infinite; }
+    margin-top: 100px; }
+    .panel .tab_group {
+      text-align: center;
+      margin-bottom: 20px; }
+      .panel .tab_group .tab {
+        display: inline-block;
+        border: 1px solid #6cd5ff;
+        padding: 8px 30px;
+        margin: 10px 20px;
+        text-decoration: none;
+        color: #6cd5ff;
+        font-size: 18px;
+        position: relative;
+        bottom: -1px; }
+      .panel .tab_group .tab.active {
+        background-color: #b5e9f9;
+        color: #000;
+        border-bottom: none; }
+    .panel .content_group .content {
+      border-top: 1px solid #6cd5ff;
+      display: none; }
+    .panel .content_group .content.active {
+      display: block; } }
 
 @keyframes aa {
   0% {
@@ -146,3 +252,20 @@ p {
     transform: rotate(-330deg); }
   100% {
     transform: rotate(-360deg); } }
+
+footer {
+  width: 100%;
+  position: relative;
+  z-index: -100;
+  text-align: center; }
+
+.copyright {
+  padding: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto; }

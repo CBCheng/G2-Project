@@ -67,6 +67,9 @@ h5 {
 p {
   font-size: 12px; }
 
+* {
+  outline: 1px solid #f00; }
+
 img {
   width: 100%;
   vertical-align: middle; }
@@ -137,7 +140,8 @@ nav {
 
 section {
   width: 80%;
-  height: 3000px; }
+  height: 3000px;
+  margin: auto; }
 
 footer {
   width: 100%;

@@ -2,22 +2,28 @@
 @import "base/reset";
 @import "mixin/mixin";
 @include body(12px);
-img{
+* {
+    outline: 1px solid #f00;
+}
+
+img {
     width: 100%;
     vertical-align: middle;
 }
-a{
+
+a {
     text-decoration: none;
     color: $fontColorWhite;
 }
+
 @import "layout/nav";
-section{
+section {
     width: 80%;
     height: 3000px;
+    margin: auto;
 }
+
 @import "layout/footer";
 @import "layout/small";
 @import "layout/medium";
 @import "layout/desktop";
-
-
