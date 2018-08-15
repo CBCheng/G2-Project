@@ -2,8 +2,8 @@
 @mixin body($font-base-size) {
     body {
      font-size: $font-base-size;
-     padding-left: ceil($font-base-size * 1.1);
-     padding-right : ceil($font-base-size * 1.1);
+    //  padding-left: ceil($font-base-size * 1.1);
+    //  padding-right : ceil($font-base-size * 1.1);
      background-image: $bgimg;
      background-repeat:repeat; 
      font-family: $fontfamily;
