@@ -42,6 +42,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+@media all and (max-width: 374px) {
+  font-size: 12px; }
+
 body {
   font-size: 12px;
   background-image: url(../img/bg.png);

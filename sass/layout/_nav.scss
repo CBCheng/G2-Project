@@ -38,7 +38,7 @@ nav{
     padding: 60px 0 0 0; 
 }
 .active{
-    color:#6cd5ff;
+    color:$fontColorBlue;
 }
 .shoppingCar{
     width: 25px;
@@ -49,7 +49,7 @@ nav{
     top: 150px;
     right: 10px;
     text-align:left;
-    background-color: rgba(0,255,255,.3);
+    background-color: $navColor;
     display: none;
 }
 .memberSelect li{
@@ -58,7 +58,7 @@ nav{
 
 // hover
 .member a:hover,.menu a:hover,.memberSelect a:hover{
-    color:#6cd5ff;
+    color:$fontColorBlue;
 }
 
 
