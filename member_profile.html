@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/member.css">
+    <title>會員資訊</title>
+    <style>
+    
+    
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="all_content ">
+            <div class="sidebar memberPage">
+                <ul class="tab-grop">
+                    <h1 class="where">會員中心</h1>
+                    <li class="default">
+                        <a data-toggle="tab" rel="account">會員資訊</a>
+                    </li>
+                    <!-- <li class="">
+                        <a data-toggle="tab" rel="favorite">我的收藏</a>
+                    </li> -->
+                    <!-- <li class="">
+                        <a data-toggle="tab" rel="score">評分專家</a>
+                    </li> -->
+                    <!-- <li class="">
+                        <a data-toggle="tab" rel="order_mg">訂單管理</a>
+                    </li> -->
+                </ul>
+            </div>
+            <div id="account" class="tabPage active" style="">
+                <div class="tabPage_border clearfix">
+                    <div class="account_box">
+                        <div class="member_title">
+                            <h3>會員資訊</h3></div>
+                        <div class="title_line clearfix">
+                            <div class="title_circle big">
+                                <div class="title_circle small"></div>
+                            </div>
+                            <div class="title_center_line"></div>
+                        </div>
+                        <div class="form_box">
+                            <!-- <form action="" method="post" enctype="multipart/form-data"> -->
+                            <div class="col-sm-6 col-xs-12 ">
+                                <form method="post" enctype="multipart/form-data" id="img_form" class="member_img">
+                                    <input type="hidden" name="memNo" value="140">
+                                    <figure>
+                                        <img id="mem_img" src="images/memberImg.jpg">
+                                    </figure>
+                                    <input id="member_img_upload" type="file" name="member_img_upload">
+                                    <div class="img_btn_div">
+                                        <button type="button" class="btn btn-o-nb" id="img_update_btn" style="display: block;">上傳</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-sm-6 col-xs-12 member_form ">
+                                <table class="member_mod" style="display: block;">
+                                    <tbody>
+                                        <tr>
+                                            <th class="mob_hidden">姓名 :</th>
+                                            <td>11</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="mob_hidden">e-mail :</th>
+                                            <td id="testtest">11@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="mob_hidden">原密碼 :</th>
+                                            <td>
+                                                <input class="memUpdate_OriPsw" type="password" maxlength="12" placeholder="請輸入原密碼">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="mob_hidden">新密碼 :</th>
+                                            <td>
+                                                <input id="memUpdate_psw" type="password" maxlength="12" placeholder="請輸入新密碼">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="mob_hidden">二次確認密碼 :</th>
+                                            <td>
+                                                <input id="memUpdate_psw_conf" type="password" placeholder="請再次輸入密碼">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="mob_hidden">地址 :</th>
+                                            <td>
+                                                <input type="text" id="memAdd" value="" placeholder="如需修改 ，請輸入地址">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="mob_hidden">電話 :</th>
+                                            <td>
+                                                <input type="text" id="memPhone" value="" placeholder="如需修改，請輸入電話">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="mob_hidden">生日 :</th>
+                                            <td>
+                                                <input type="date" id="memBir" value="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <a href="member.php">
+                                                    <button type="button" id="cxl_btn" class="btn btn-w-nb">取消</button>
+                                                </a>
+                                                <button name="error" class="btn btn-o-nb" id="mem_update_btn">送出</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="member_info" style="display: none;">
+                                    <tbody>
+                                        <tr>
+                                            <th>姓名 :</th>
+                                            <td>11 </td>
+                                        </tr>
+                                        <tr>
+                                            <th>e-mail :</th>
+                                            <td>11@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <th>地址 :</th>
+                                            <td>
+                                                未填寫
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>電話 :</th>
+                                            <td>
+                                                未填寫
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>生日 :</th>
+                                            <td>
+                                                未填寫
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>購物金 :</th>
+                                            <td>
+                                                <span id="coupon_show">
+											100											
+											</span> 元</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <button id="member_mod_btn" class="btn btn-o-nb">修改</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- </form> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="favorite" class="tabPage active" style="display: none;">
+                <div class="tabPage_border">
+                    <div class="favorite_box">
+                        <div class="member_title">
+                            <h3>我的收藏</h3></div>
+                        <div class="title_line clearfix">
+                            <div class="title_circle big">
+                                <div class="title_circle small"></div>
+                            </div>
+                            <div class="title_center_line"></div>
+                        </div>
+                        <button rel="favorite_recipe" class="favorite_tab btn active">收藏食譜</button>
+                        <button rel="favorite_prod" class="favorite_tab btn">待購商品</button>
+                        <div id="favorite_recipe" class="favorite_page active" style="">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th class="mob_hidden">食譜圖片</th>
+                                        <th>食譜名稱</th>
+                                        <th>查看</th>
+                                        <th>刪除</th>
+                                    </tr>
+                                    <!-- 食譜收藏品開始 -->
+                                    <tr>
+                                        <td colspan="5">無收藏食譜</td>
+                                    </tr>
+                                    <!--食譜收藏結束-->
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="favorite_prod" class="favorite_page active" style="display: none;">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th class="mob_hidden">商品圖片</th>
+                                        <th>商品名稱</th>
+                                        <th>價格</th>
+                                        <th>購物車</th>
+                                        <th>刪除</th>
+                                    </tr>
+                                    <!-- 待購商品開始 -->
+                                    <tr>
+                                        <td colspan="5">無待購商品</td>
+                                    </tr>
+                                    <!-- 待購商品結束 -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+
+</html>
