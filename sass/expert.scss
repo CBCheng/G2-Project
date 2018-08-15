@@ -1,90 +1,197 @@
 @import "base/var";
 @import "base/reset";
 @import "mixin/mixin";
-@import "mixin/font_mixin";
-
-*{
-	// outline: 1px solid #f00;
+@include body(10px);
+* {
+    // outline: 1px solid #f00;
 }
 
-@include body(16px);
-
-.title{
-	position: relative;
-	margin: auto;
-	h1{
-		position: absolute;
-		text-align: center;
-		margin: auto;
-		top: 90px; bottom: 0;
-		right: 0;left: 0;
-	}
-	#can{
-		top: 0;bottom: 0;
-		left: 0; right: 0;
-		margin: auto;
-		text-align: center;
-	}
-	#canvas1{
-		position: absolute;
-		animation: aa 30s 0s infinite ;
-	}
-	#canvas2{
-		// position: absolute;
-		animation: bb 30s 0s infinite ;
-	}
+img {
+    width: 100%;
+    vertical-align: middle;
 }
-@keyframes aa{
-	0%		{transform: rotate(0deg);}
 
-	8.3333% {transform: rotate(30deg);}
-
-	16.6667%{transform: rotate(60deg);}
-
-	25%		{transform: rotate(90deg);}
-
-	33.3333%{transform: rotate(120deg);}
-
-	41.6667%{transform: rotate(150deg);}
-
-	50%		{transform: rotate(180deg);}
-
-	58.3333%{transform: rotate(210deg);}
-
-	66.6667%{transform: rotate(240deg);}
-
-	75%		{transform: rotate(270deg);}
-
-	83.3333%{transform: rotate(300deg);}
-
-	91.6667%{transform: rotate(330deg);}
-
-	100%	{transform: rotate(360deg);}
+a {
+    text-decoration: none;
+    color: $fontColorWhite;
 }
-@keyframes bb{
-	0%		{transform: rotate(0deg);}
 
-	8.3333% {transform: rotate(-30deg);}
+@import "layout/nav";
+@include respond(small) {}
 
-	16.6667%{transform: rotate(-60deg);}
+@include respond(medium) {}
 
-	25%		{transform: rotate(-90deg);}
-
-	33.3333%{transform: rotate(-120deg);}
-
-	41.6667%{transform: rotate(-150deg);}
-
-	50%		{transform: rotate(-180deg);}
-
-	58.3333%{transform: rotate(-210deg);}
-
-	66.6667%{transform: rotate(-240deg);}
-
-	75%		{transform: rotate(-270deg);}
-
-	83.3333%{transform: rotate(-300deg);}
-
-	91.6667%{transform: rotate(-330deg);}
-
-	100%	{transform: rotate(-360deg);}
+@include respond(desktop) {
+    .title {
+        top: 200px;
+        position: relative;
+        margin: auto;
+        width: 100%;
+        h1 {
+            position: absolute;
+            text-align: center;
+            margin: auto;
+            top: 90px;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+        #can {
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            text-align: center;
+        }
+        #canvas1 {
+            position: absolute;
+            animation: aa 30s 0s infinite;
+        }
+        #canvas2 {
+            // position: absolute;
+            animation: bb 30s 0s infinite;
+        }
+    }
+    .cloud_group {
+        // outline: 1px solid #fff;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        .cloud1 {
+            width: 700px;
+        }
+        .cloud2 {
+            width: 500px;
+        }
+    }
+    .panel {
+        width: 1200px;
+        margin: auto;
+        margin-top: 100px;
+        ;
+        .tab_group {
+            text-align: center;
+            margin-bottom: 20px;
+            .tab {
+                display: inline-block;
+                border: 1px solid $fontColorBlue;
+                padding: 8px 30px;
+                margin: 10px 20px;
+                text-decoration: none;
+                color: $fontColorBlue;
+                font-size: 18px;
+                position: relative;
+                bottom: -1px;
+            }
+            .tab.active {
+                background-color: #b5e9f9;
+                color: #000;
+                border-bottom: none;
+            }
+        }
+        .content_group {
+            .content {
+                border-top: 1px solid $fontColorBlue; // padding: 20px;
+                display: none;
+            }
+            .content.active {
+                display: block;
+            }
+            // .content.active:after {
+    //     content: ' \2728';
+    //     font-size: 30px;
+    // }
+        }
+    }
 }
+
+@keyframes aa {
+    0% {
+        transform: rotate(0deg);
+    }
+    8.3333% {
+        transform: rotate(30deg);
+    }
+    16.6667% {
+        transform: rotate(60deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    33.3333% {
+        transform: rotate(120deg);
+    }
+    41.6667% {
+        transform: rotate(150deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    58.3333% {
+        transform: rotate(210deg);
+    }
+    66.6667% {
+        transform: rotate(240deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    83.3333% {
+        transform: rotate(300deg);
+    }
+    91.6667% {
+        transform: rotate(330deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bb {
+    0% {
+        transform: rotate(0deg);
+    }
+    8.3333% {
+        transform: rotate(-30deg);
+    }
+    16.6667% {
+        transform: rotate(-60deg);
+    }
+    25% {
+        transform: rotate(-90deg);
+    }
+    33.3333% {
+        transform: rotate(-120deg);
+    }
+    41.6667% {
+        transform: rotate(-150deg);
+    }
+    50% {
+        transform: rotate(-180deg);
+    }
+    58.3333% {
+        transform: rotate(-210deg);
+    }
+    66.6667% {
+        transform: rotate(-240deg);
+    }
+    75% {
+        transform: rotate(-270deg);
+    }
+    83.3333% {
+        transform: rotate(-300deg);
+    }
+    91.6667% {
+        transform: rotate(-330deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@import "layout/footer";
+@import "layout/small";
+@import "layout/medium";
+@import "layout/desktop";
