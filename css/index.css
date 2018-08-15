@@ -70,6 +70,9 @@ h5 {
 p {
   font-size: 12px; }
 
+body {
+  background-image: url(); }
+
 img {
   width: 100%;
   vertical-align: middle; }
@@ -138,10 +141,6 @@ nav {
 .member a:hover, .menu a:hover, .memberSelect a:hover {
   color: #6cd5ff; }
 
-section {
-  width: 80%;
-  height: 3000px; }
-
 footer {
   width: 100%;
   position: relative;
@@ -158,3 +157,65 @@ footer {
   right: 0;
   left: 0;
   margin: auto; }
+
+* {
+  outline: 1px solid #f00;
+  box-sizing: border-box; }
+
+nav {
+  z-index: 99; }
+
+.part1 {
+  width: 100%;
+  height: 0px;
+  padding-bottom: 50%;
+  background-image: url(../img/indexOnlyBg.jpg);
+  background-size: 100% auto;
+  background-position: 0% 10%;
+  overflow: hidden;
+  position: relative; }
+
+.wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
+.part2 {
+  width: 100%;
+  height: 1000px; }
+
+.choPlanet {
+  width: 10%;
+  height: 20%;
+  position: relative; }
+
+.choPlt1 {
+  top: 20%;
+  left: -5%; }
+
+.choPlt2 {
+  top: 25%;
+  left: 5%; }
+
+.choPlt3 {
+  top: 30%;
+  left: -5%; }
+
+.choPlanet img {
+  width: 100%;
+  position: absolute; }
+
+.choPlanet .planetBg {
+  width: 180%;
+  top: -28%;
+  left: -100%; }
+
+.bigPlanet {
+  width: 36%;
+  height: 72%;
+  position: absolute;
+  top: 21%;
+  left: 32%; }
+
+.bigPlanet img {
+  width: 100%; }

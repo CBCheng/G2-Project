@@ -3,7 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- css -->
     <link rel="stylesheet" type="text/css" href="css/member.css">
+    <link rel="stylesheet" href="css/style.css">
+
     <title>會員資訊</title>
     <style>
     
@@ -12,14 +17,45 @@
 </head>
 
 <body>
+    <!-- nav -->
+    <nav>
+        <ul class="menu mRight">
+            <li><a href="planning.html">開始冒險</a></li>
+            <li><a href="expert.html">專家帶你玩</a></li>
+        </ul>
+            <a href="index.html" class="logo">
+                <img src="img/logo-1.png">
+            </a>
+        <ul class="menu mLeft">
+            <li><a href="refer.html">別人怎麼玩</a></li>
+            <li><a href="shop.html">星際商城</a></li>
+        </ul>
+        <ul class="member">
+            <li class="shoppingCar"><a href="#">
+                <img class="shoppingCarPic" src="img/shopping car.png" alt="">
+                <!-- <img class="shoppingCarHover" src="img/shoppingCarHover.png" alt=""> -->
+            </a></li>
+            <li class="memberSign"><a href="#"> | 登入</a></li>
+        </ul>
+        <ul class="memberSelect">
+            <li>Hi ~ 冒險者</li>
+            <li><a href="member_mytrip.html">我的行程</a></li>
+            <li><a href="member_favorite.html">我的收藏</a></li>
+            <li><a href="member_order.html">我的訂單</a></li>
+            <li><a href="member_comment.html">專家評論</a></li>
+            <li><a href="member_profile.html">會員資料修改</a></li>
+            <li><a href="sign.html">登出</a></li>
+        </ul>
+    </nav>
+                    <!-- <img class="shoppingCarHover" src="img/shoppingCarHover.png" alt=""> -->
     <div class="container">
         <div class="all_content ">
             <div class="sidebar memberPage">
                 <ul class="tab-grop">
                     <h1 class="where">會員中心</h1>
-                    <li class="default">
+                    <!-- <li class="default">
                         <a data-toggle="tab" rel="account">會員資訊</a>
-                    </li>
+                    </li> -->
                     <!-- <li class="">
                         <a data-toggle="tab" rel="favorite">我的收藏</a>
                     </li> -->
@@ -48,7 +84,7 @@
                                 <form method="post" enctype="multipart/form-data" id="img_form" class="member_img">
                                     <input type="hidden" name="memNo" value="140">
                                     <figure>
-                                        <img id="mem_img" src="images/memberImg.jpg">
+                                        <img id="mem_img" src="img/member_pic.jpg">
                                     </figure>
                                     <input id="member_img_upload" type="file" name="member_img_upload">
                                     <div class="img_btn_div">
@@ -117,11 +153,11 @@
                                     <tbody>
                                         <tr>
                                             <th>姓名 :</th>
-                                            <td>11 </td>
+                                            <td>阿摩斯 </td>
                                         </tr>
                                         <tr>
                                             <th>e-mail :</th>
-                                            <td>11@gmail.com</td>
+                                            <td>Amos@gmail.com</td>
                                         </tr>
                                         <tr>
                                             <th>地址 :</th>
@@ -142,13 +178,6 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th>購物金 :</th>
-                                            <td>
-                                                <span id="coupon_show">
-											100											
-											</span> 元</td>
-                                        </tr>
-                                        <tr>
                                             <td colspan="2">
                                                 <button id="member_mod_btn" class="btn btn-o-nb">修改</button>
                                             </td>
@@ -161,60 +190,32 @@
                     </div>
                 </div>
             </div>
-            <div id="favorite" class="tabPage active" style="display: none;">
-                <div class="tabPage_border">
-                    <div class="favorite_box">
-                        <div class="member_title">
-                            <h3>我的收藏</h3></div>
-                        <div class="title_line clearfix">
-                            <div class="title_circle big">
-                                <div class="title_circle small"></div>
-                            </div>
-                            <div class="title_center_line"></div>
-                        </div>
-                        <button rel="favorite_recipe" class="favorite_tab btn active">收藏食譜</button>
-                        <button rel="favorite_prod" class="favorite_tab btn">待購商品</button>
-                        <div id="favorite_recipe" class="favorite_page active" style="">
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <th class="mob_hidden">食譜圖片</th>
-                                        <th>食譜名稱</th>
-                                        <th>查看</th>
-                                        <th>刪除</th>
-                                    </tr>
-                                    <!-- 食譜收藏品開始 -->
-                                    <tr>
-                                        <td colspan="5">無收藏食譜</td>
-                                    </tr>
-                                    <!--食譜收藏結束-->
-                                </tbody>
-                            </table>
-                        </div>
-                        <div id="favorite_prod" class="favorite_page active" style="display: none;">
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <th class="mob_hidden">商品圖片</th>
-                                        <th>商品名稱</th>
-                                        <th>價格</th>
-                                        <th>購物車</th>
-                                        <th>刪除</th>
-                                    </tr>
-                                    <!-- 待購商品開始 -->
-                                    <tr>
-                                        <td colspan="5">無待購商品</td>
-                                    </tr>
-                                    <!-- 待購商品結束 -->
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
+         </div>             
     </div>
+     
+    <footer>
+            
+        <img src="img/footerbg-1.png">
+        <div class="copyright">
+            <p>copyright@OhPlanets  2145</p>
+        </div>
+        
+    </footer>
+
+    <!-- jquery -->
+   <script>
+    //    登入下拉選單
+      $(function () {
+           $('.memberSign').click(function(){
+              $('.memberSelect').toggle();
+              $('.memberSign a').toggleClass("active")
+          });
+      });
+   </script>
+            
+
+    <!-- script -->
+    <script src="js/tween.js"></script>
 </body>
 
 </html>

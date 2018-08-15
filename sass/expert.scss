@@ -1,7 +1,6 @@
 @import "base/var";
 @import "base/reset";
 @import "mixin/mixin";
-@include body(10px);
 * {
     // outline: 1px solid #f00;
 }
@@ -98,11 +97,10 @@ a {
             }
             .content.active {
                 display: block;
-            }
-            // .content.active:after {
-    //     content: ' \2728';
-    //     font-size: 30px;
-    // }
+            } // .content.active:after {
+            //     content: ' \2728';
+            //     font-size: 30px;
+            // }
         }
     }
 }
