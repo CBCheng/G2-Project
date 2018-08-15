@@ -138,9 +138,6 @@ nav {
 .member a:hover, .menu a:hover, .memberSelect a:hover {
   color: #6cd5ff; }
 
-nav {
-  background-image: ''; }
-
 section {
   width: 80%;
   height: 3000px; }
@@ -161,8 +158,3 @@ footer {
   right: 0;
   left: 0;
   margin: auto; }
-
-.aaa {
-  width: 100%;
-  height: 500px;
-  background-color: #fff; }

@@ -14,9 +14,7 @@ a{
     color: #fff;
 }
 @import "layout/nav";
-nav{
-    background-image: '';
-}
+
 section{
     width: 80%;
     height: 3000px;
@@ -26,8 +24,3 @@ section{
 @import "layout/medium";
 @import "layout/desktop";
 
-.aaa{
-    width: 100%;
-    height: 500px;
-    background-color: #fff;
-}
