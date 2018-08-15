@@ -67,9 +67,6 @@ h5 {
 p {
   font-size: 12px; }
 
-* {
-  outline: 1px solid #f00; }
-
 img {
   width: 100%;
   vertical-align: middle; }
@@ -148,10 +145,123 @@ nav {
 .member a:hover, .menu a:hover, .memberSelect a:hover {
   color: #6cd5ff; }
 
-section {
-  width: 80%;
-  height: 3000px;
-  margin: auto; }
+@media all and (min-width: 1233px) {
+  .title {
+    top: 200px;
+    position: relative;
+    margin: auto;
+    width: 100%; }
+    .title h1 {
+      position: absolute;
+      text-align: center;
+      margin: auto;
+      top: 90px;
+      bottom: 0;
+      right: 0;
+      left: 0; }
+    .title #can {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      text-align: center; }
+    .title #canvas1 {
+      position: absolute;
+      animation: aa 30s 0s infinite; }
+    .title #canvas2 {
+      animation: bb 30s 0s infinite; }
+  .cloud_group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; }
+    .cloud_group .cloud1 {
+      width: 700px; }
+    .cloud_group .cloud2 {
+      width: 500px; }
+  .panel {
+    width: 1200px;
+    margin: auto;
+    margin-top: 100px; }
+    .panel .tab_group {
+      text-align: center;
+      margin-bottom: 20px; }
+      .panel .tab_group .tab {
+        display: inline-block;
+        border: 1px solid #6cd5ff;
+        padding: 8px 30px;
+        margin: 10px 20px;
+        text-decoration: none;
+        color: #6cd5ff;
+        font-size: 18px;
+        position: relative;
+        bottom: -1px; }
+      .panel .tab_group .tab.active {
+        background-color: #b5e9f9;
+        color: #000;
+        border-bottom: none; }
+    .panel .content_group .content {
+      border-top: 1px solid #6cd5ff;
+      display: none; }
+    .panel .content_group .content.active {
+      display: block; } }
+
+@keyframes aa {
+  0% {
+    transform: rotate(0deg); }
+  8.3333% {
+    transform: rotate(30deg); }
+  16.6667% {
+    transform: rotate(60deg); }
+  25% {
+    transform: rotate(90deg); }
+  33.3333% {
+    transform: rotate(120deg); }
+  41.6667% {
+    transform: rotate(150deg); }
+  50% {
+    transform: rotate(180deg); }
+  58.3333% {
+    transform: rotate(210deg); }
+  66.6667% {
+    transform: rotate(240deg); }
+  75% {
+    transform: rotate(270deg); }
+  83.3333% {
+    transform: rotate(300deg); }
+  91.6667% {
+    transform: rotate(330deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@keyframes bb {
+  0% {
+    transform: rotate(0deg); }
+  8.3333% {
+    transform: rotate(-30deg); }
+  16.6667% {
+    transform: rotate(-60deg); }
+  25% {
+    transform: rotate(-90deg); }
+  33.3333% {
+    transform: rotate(-120deg); }
+  41.6667% {
+    transform: rotate(-150deg); }
+  50% {
+    transform: rotate(-180deg); }
+  58.3333% {
+    transform: rotate(-210deg); }
+  66.6667% {
+    transform: rotate(-240deg); }
+  75% {
+    transform: rotate(-270deg); }
+  83.3333% {
+    transform: rotate(-300deg); }
+  91.6667% {
+    transform: rotate(-330deg); }
+  100% {
+    transform: rotate(-360deg); } }
 
 footer {
   width: 100%;
@@ -169,70 +279,3 @@ footer {
   right: 0;
   left: 0;
   margin: auto; }
-
-@media all and (max-width: 767px) {
-  nav {
-    width: 100%;
-    height: 50px;
-    box-sizing: content-box;
-    padding: 5px 0 5px 0;
-    background-image: linear-gradient(to top, rgba(0, 255, 255, 0.3), rgba(0, 183, 255, 0.3) 100%);
-    position: fixed;
-    top: 0;
-    left: 0;
-    letter-spacing: 2px;
-    font-size: 18px; }
-  .logo {
-    width: 50px; }
-  .menu, .member {
-    display: none; }
-  .hambger {
-    width: 22px;
-    height: 20px;
-    display: inline-block;
-    position: absolute;
-    right: 10px;
-    top: 0;
-    bottom: 0;
-    margin: auto; }
-  .line:before {
-    content: '';
-    display: block;
-    width: 50%;
-    height: 2px;
-    box-shadow: 0px 16px #fff; }
-  .line {
-    width: 100%;
-    height: 2px;
-    position: relative;
-    background-color: #fff;
-    box-shadow: 0px 8px #fff; }
-  .transform:before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 2px;
-    transform: rotate(-45deg); }
-  .transform {
-    width: 100%;
-    height: 2px;
-    position: relative;
-    background-color: #fff;
-    transform: rotate(45deg); }
-  .menuMobile {
-    display: block;
-    width: 100%;
-    height: 100vh;
-    line-height: 40px;
-    padding-top: 50px;
-    background-color: rgba(0, 255, 255, 0.3);
-    position: absolute;
-    top: 60px;
-    right: -100%;
-    transition: .8s; }
-  .activeM {
-    position: absolute;
-    top: 60px;
-    right: 0; }
-  .activeB {
-    color: #6cd5ff; } }
