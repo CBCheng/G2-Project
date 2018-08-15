@@ -1,16 +1,20 @@
 @import "base/var";
 @import "base/reset";
 @import "mixin/mixin";
+@include respond(small){
+    font-size:12px; 
+  }
 @include body(12px);
-img{
+img {
     width: 100%;
     vertical-align: middle;
 }
 a{
     text-decoration: none;
-    color: $fontColorWhite;
+    color: #fff;
 }
 @import "layout/nav";
+
 section{
     width: 80%;
     height: 3000px;
@@ -19,5 +23,4 @@ section{
 @import "layout/small";
 @import "layout/medium";
 @import "layout/desktop";
-
 
