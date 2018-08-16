@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -41,27 +42,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-@media all and (min-width: 1200px) {
-  .wrap {
-    margin: 100px; } }
-
-@media all and (min-width: 992px) {
-  .wrap {
-    margin: 200px; } }
-
-@media all and (max-width: 767px) {
-  .wrap {
-    margin: 300px; } }
-
 body {
-  font-size: 14px; }
-
-img {
-  width: 100%;
-  vertical-align: middle; }
-
-a {
-  text-decoration: none;
+  font-size: 14px;
+  background-image: url(../img/bg.png);
+  background-repeat: repeat;
+  font-family: "微軟正黑體", "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS", sans-serif;
   color: #fff; }
 
 h1 {
@@ -79,8 +64,18 @@ h4 {
 h5 {
   font-size: 14px; }
 
+p {
+  font-size: 14px; }
+
+img {
+  width: 100%;
+  vertical-align: middle; }
+
+a {
+  text-decoration: none;
+  color: #fff; }
+
 nav {
-  z-index: 999;
   width: 100%;
   height: 100px;
   box-sizing: content-box;
@@ -119,8 +114,15 @@ nav {
   vertical-align: middle;
   padding: 60px 0 0 0; }
 
+.memberSign a {
+  border-left: 1px solid #fff;
+  padding-left: 10px; }
+
 .active {
   color: #6cd5ff; }
+
+.shoppingCar {
+  margin-right: 8px; }
 
 .shoppingCar {
   width: 25px; }
@@ -136,6 +138,9 @@ nav {
 
 .memberSelect li {
   padding: 10px; }
+
+.hambger, .menuMobile {
+  display: none; }
 
 .member a:hover, .menu a:hover, .memberSelect a:hover {
   color: #6cd5ff; }
