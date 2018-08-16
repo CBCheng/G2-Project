@@ -7,9 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- css -->
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/fullpage.css">
     <!-- plugin -->
     <!-- <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script> -->
     <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="/libs/fullpage/fullpage.min.js"></script>
     <!-- <script src="libs/gsap/src/minified/TweenMax.min.js"></script>
     <script type="text/javascript" src="js/parallax.min.js"></script> -->
     <!-- scroll -->
@@ -51,8 +53,8 @@
     <!-- nav end-->
     <div></div>
     <!-- part1 start -->
-    <section class="part1">
-        <div class="wrap">
+    <div id="dowebok">
+        <div class="section part1">
             <div class="choPlanet choPlt1">
                 <img class="planetBg" src="/img/planetBg.png">
                 <img src="/img/planetsan.png">
@@ -66,14 +68,17 @@
                 <img class="planetBg" src="/img/planetBg.png">
                 <img src="/img/planettree.png">
             </div>
-            <div class="bigPlanet">
-                    <img src="/img/planetwater.png">
+            <div class="bigPlt bigPltWater">
+                    <img src="img/planetwater.png">
             </div>
         </div>
-    </section>
-    <section class="part2">
-
-    </section>
+        <div class="section part2">
+            <h3>第二屏</h3>
+        </div>
+    
+    </div>
+    
+    
     <!-- part1 end -->
 
 
@@ -102,6 +107,13 @@
 
 
     <!-- script -->
+    <script>
+        $( "#dowebok" ).fullpage({
+            // 參數設定[註1]
+            navigation: true, // 顯示導行列
+            navigationPosition: "right" // 導行列位置
+        });
+    </script>
     <!-- <script src="js/tween.js"></script> -->
 </body>
 
