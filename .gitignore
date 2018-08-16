@@ -5,5 +5,3 @@ gulpfile.js
 package.json
 package-lock.json
 /img/*
-style.scss
-style.css
