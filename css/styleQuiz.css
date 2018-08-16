@@ -1,0 +1,353 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@media all and (min-width: 1200px) {
+  .wrap {
+    margin: 100px; } }
+
+@media all and (min-width: 992px) {
+  .wrap {
+    margin: 200px; } }
+
+@media all and (max-width: 767px) {
+  .wrap {
+    margin: 300px; } }
+
+body {
+  font-size: 14px; }
+
+img {
+  width: 100%;
+  vertical-align: middle; }
+
+a {
+  text-decoration: none;
+  color: #fff; }
+
+h1 {
+  font-size: 48px; }
+
+h2 {
+  font-size: 42px; }
+
+h3 {
+  font-size: 37px; }
+
+h4 {
+  font-size: 28px; }
+
+h5 {
+  font-size: 14px; }
+
+nav {
+  z-index: 999;
+  width: 100%;
+  height: 100px;
+  box-sizing: content-box;
+  padding: 20px 0 20px 0;
+  background-image: linear-gradient(to top, rgba(0, 255, 255, 0.3), rgba(0, 183, 255, 0.3) 100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 18px; }
+
+.logo {
+  display: inline-block;
+  width: 100px; }
+
+.menu {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center; }
+
+.menu li {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 50px 50px 0 50px;
+  transition: .5s; }
+
+.member {
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  right: 20px; }
+
+.member li {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 60px 0 0 0; }
+
+.active {
+  color: #6cd5ff; }
+
+.shoppingCar {
+  width: 25px; }
+
+.memberSelect {
+  width: 200px;
+  position: absolute;
+  top: 150px;
+  right: 10px;
+  text-align: left;
+  background-color: rgba(0, 255, 255, 0.3);
+  display: none; }
+
+.memberSelect li {
+  padding: 10px; }
+
+.member a:hover, .menu a:hover, .memberSelect a:hover {
+  color: #6cd5ff; }
+
+.full {
+  width: 100%; }
+  .full .slider {
+    margin: auto;
+    width: 60%;
+    max-height: 850px;
+    overflow: hidden; }
+    .full .slider .wrapQuiz {
+      margin-top: -3400px;
+      color: #FFF;
+      text-align: center;
+      transition: 2s; }
+      .full .slider .wrapQuiz .sectionQuiz {
+        min-height: 850px; }
+      .full .slider .wrapQuiz .sectionQuiz1 {
+        width: 100%; }
+        .full .slider .wrapQuiz .sectionQuiz1 .ansTrip {
+          width: 100%;
+          padding-top: 20%; }
+          .full .slider .wrapQuiz .sectionQuiz1 .ansTrip h2 {
+            padding-bottom: 10%; }
+          .full .slider .wrapQuiz .sectionQuiz1 .ansTrip .recommendTrip {
+            width: 200px;
+            margin: auto;
+            position: relative; }
+            .full .slider .wrapQuiz .sectionQuiz1 .ansTrip .recommendTrip .sandPlanet {
+              width: 100px;
+              top: -50px;
+              left: 50px;
+              position: absolute;
+              cursor: pointer; }
+            .full .slider .wrapQuiz .sectionQuiz1 .ansTrip .recommendTrip .sandPic {
+              display: block;
+              border: 1px solid #CCC;
+              cursor: pointer; }
+          .full .slider .wrapQuiz .sectionQuiz1 .ansTrip .ansBtn {
+            width: 100px;
+            height: 30px;
+            background-color: #AAA;
+            border-radius: 3px;
+            margin: -15px auto;
+            line-height: 30px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            cursor: pointer; }
+      .full .slider .wrapQuiz .sectionQuiz2 {
+        width: 100%; }
+        .full .slider .wrapQuiz .sectionQuiz2 .quiz4 {
+          width: 100%;
+          padding-top: 20%; }
+          .full .slider .wrapQuiz .sectionQuiz2 .quiz4 h2 {
+            padding-bottom: 10%; }
+          .full .slider .wrapQuiz .sectionQuiz2 .quiz4 .days {
+            width: 50%;
+            float: left; }
+            .full .slider .wrapQuiz .sectionQuiz2 .quiz4 .days .daysGroup {
+              cursor: pointer;
+              width: 129px;
+              margin: auto;
+              position: relative;
+              height: 132px; }
+              .full .slider .wrapQuiz .sectionQuiz2 .quiz4 .days .daysGroup img {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0; }
+              .full .slider .wrapQuiz .sectionQuiz2 .quiz4 .days .daysGroup .days3, .full .slider .wrapQuiz .sectionQuiz2 .quiz4 .days .daysGroup .days5 {
+                margin: auto;
+                position: relative;
+                top: 40px;
+                width: 60px;
+                height: 50px;
+                -webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+                border-radius: 3px;
+                background-color: #6cd5ff;
+                line-height: 50px;
+                font-size: 24px; }
+      .full .slider .wrapQuiz .sectionQuiz3 {
+        width: 100%; }
+        .full .slider .wrapQuiz .sectionQuiz3 .quiz3 {
+          width: 100%;
+          padding-top: 20%; }
+          .full .slider .wrapQuiz .sectionQuiz3 .quiz3 h2 {
+            padding-bottom: 10%; }
+          .full .slider .wrapQuiz .sectionQuiz3 .quiz3 .landscape {
+            width: 33.3333%;
+            float: left;
+            padding-bottom: 5%;
+            position: relative; }
+            .full .slider .wrapQuiz .sectionQuiz3 .quiz3 .landscape .landscapePic {
+              width: 70%;
+              margin: auto;
+              padding: 10px;
+              border: 1px solid #FFF;
+              cursor: pointer; }
+            .full .slider .wrapQuiz .sectionQuiz3 .quiz3 .landscape .landscapeBtn {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              width: 30%;
+              height: 30px;
+              margin: auto;
+              line-height: 30px;
+              background-color: #DDD;
+              color: #000;
+              cursor: pointer; }
+      .full .slider .wrapQuiz .sectionQuiz4 {
+        width: 100%; }
+        .full .slider .wrapQuiz .sectionQuiz4 .quiz2 {
+          width: 100%;
+          margin: auto;
+          padding-top: 20%; }
+          .full .slider .wrapQuiz .sectionQuiz4 .quiz2 h2 {
+            padding-bottom: 10%; }
+          .full .slider .wrapQuiz .sectionQuiz4 .quiz2 .alien {
+            width: 33.3333%;
+            float: left;
+            padding-bottom: 5%;
+            position: relative; }
+            .full .slider .wrapQuiz .sectionQuiz4 .quiz2 .alien .alienPic {
+              width: 70%;
+              margin: auto;
+              padding: 10px;
+              border: 1px solid #FFF;
+              cursor: pointer; }
+            .full .slider .wrapQuiz .sectionQuiz4 .quiz2 .alien .alienBtn {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              width: 30%;
+              height: 30px;
+              margin: auto;
+              line-height: 30px;
+              background-color: #DDD;
+              color: #000;
+              cursor: pointer; }
+      .full .slider .wrapQuiz .sectionQuiz5 {
+        width: 100%;
+        box-sizing: border-box; }
+        .full .slider .wrapQuiz .sectionQuiz5 .quiz1 {
+          width: 100%;
+          margin: auto;
+          padding-top: 20%; }
+          .full .slider .wrapQuiz .sectionQuiz5 .quiz1 h2 {
+            padding-bottom: 10%; }
+          .full .slider .wrapQuiz .sectionQuiz5 .quiz1 .gender {
+            width: 50%;
+            float: left;
+            position: relative;
+            padding-bottom: 5%; }
+            .full .slider .wrapQuiz .sectionQuiz5 .quiz1 .gender .genderPic {
+              padding: 10px;
+              border: 1px solid #FFF;
+              width: 30%;
+              margin: auto;
+              cursor: pointer; }
+            .full .slider .wrapQuiz .sectionQuiz5 .quiz1 .gender .genderBtn {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              width: 100px;
+              height: 30px;
+              margin: auto;
+              line-height: 30px;
+              background-color: #DDD;
+              color: #000;
+              cursor: pointer; }
+
+.hover1 {
+  animation: poa1 5s linear infinite; }
+
+.hover2 {
+  animation: poa2 5s linear infinite; }
+
+@keyframes poa1 {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@keyframes poa2 {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(-360deg); } }
+
+/* ---- reset ---- */
+canvas {
+  display: block;
+  vertical-align: bottom; }
+
+/* ---- particles.js container ---- */
+#particles-js {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #232741;
+  /* background-image: url("http://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/1237px-NASA_logo.svg.png");  */
+  background-image: url("../img/bg1080.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  z-index: -1; }
+
+/* ---- stats.js ---- */

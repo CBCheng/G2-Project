@@ -1,0 +1,329 @@
+@import 'base/var';
+@import 'base/reset';
+
+@import 'mixin/mixin';
+
+@import 'layout/desktop';
+@import 'layout/medium';
+@import 'layout/small';
+
+
+//body
+@include body(14px);
+*{
+    // outline: 1px solid #F00;
+}
+//nav
+@import 'layout/header';
+
+
+.full{
+    width:100%;
+    // position: absolute;
+    // top:0;
+    // left:0;
+    
+    .slider{
+        margin: auto;
+        width:60%;
+        //background-color: #CCC;
+        max-height: 850px;
+        overflow: hidden;
+        .wrapQuiz{
+            margin-top: -3400px;
+            color:#FFF;
+            text-align: center;
+            transition: 2s;
+
+            .sectionQuiz{
+                min-height: 850px;
+                // background-color: #000;
+            }
+            .sectionQuiz1{
+                width:100%;
+                // background-color: rgb(94, 12, 19);
+                .ansTrip{
+                    width:100%;
+                    padding-top:20%;
+                    
+                    h2{
+                        padding-bottom: 10%;
+                    }
+                    .recommendTrip{
+                        width:200px;
+                        margin:auto;
+                        position: relative;
+                        .sandPlanet{
+                            width:100px;
+                            top:-50px;
+                            left:50px;
+                            position: absolute;
+                            cursor: pointer;
+                        } 
+                        .sandPic{
+                            display:block;
+                            border:1px solid #CCC;
+                            cursor: pointer;
+                        }
+                    }
+                    .ansBtn{
+                            width:100px;
+                            height:30px;
+                            background-color: #AAA;
+                            border-radius: 3px;
+                            margin:-15px auto;
+                            line-height: 30px;
+                            position: absolute;
+                            bottom:0;
+                            left:0;
+                            right:0;
+                            cursor: pointer;
+                        }
+                }    
+            }
+            .sectionQuiz2{
+                width:100%;
+                // background-color:#000;
+                .quiz4{
+                    width:100%;
+                    padding-top:20%;
+                    h2{
+                        padding-bottom: 10%;
+                    }
+                    .days{
+                        width:50%;
+                        float: left;
+                        .daysGroup{
+                            cursor: pointer;
+                            width:129px;
+                            margin:auto;
+                            position: relative;
+                            // background-color: #CCC;
+                            height:132px;
+                            img{
+                                display:block;
+                                position: absolute;
+                                top:0;
+                                left:0;
+                            }
+                            .days3,.days5{
+                                margin:auto;
+                                // padding-top:30px;
+                                position: relative;
+                                top:40px;
+                                width:60px;
+                                height:50px;
+                                -webkit-clip-path:polygon(25% 0%, 75% 0%,100% 50%,75% 100%,25% 100%,0% 50%);
+                                border-radius: 3px;
+                                background-color: #6cd5ff;
+                                line-height: 50px;
+                                font-size: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .sectionQuiz3{
+                width:100%;
+                // background-color: #AAA;
+                .quiz3{
+                    width:100%;
+                    padding-top:20%;
+                    h2{
+                        padding-bottom: 10%;
+                    }
+                    .landscape{
+                        width:33.3333%;
+                        float: left;
+                        padding-bottom: 5%;
+                        position: relative;
+                    .landscapePic{
+                        width:70%;
+                        margin:auto;
+                        padding: 10px;
+                        border:1px solid #FFF; 
+                        cursor: pointer;
+                    }
+                    .landscapeBtn{
+                        position: absolute;
+                        bottom:0;
+                        left:0;
+                        right:0;
+                        width:30%;
+                        height:30px;
+                        margin:auto;
+                        line-height: 30px;
+                        background-color: #DDD;
+                        color:#000;
+                        cursor: pointer;
+                        }
+                    }
+                } 
+            }
+
+
+            .sectionQuiz4{
+                width:100%;
+                // background-color: rgb(38, 132, 219);
+                .quiz2{
+                    width:100%;
+                    margin:auto;
+                    padding-top:20%;
+                    h2{
+                    padding-bottom: 10%;
+                    }
+                    .alien{
+                        width:33.3333%;
+                        float: left;
+                        padding-bottom: 5%;
+                        position: relative;
+                        .alienPic{
+                            width:70%;
+                            margin:auto;
+                            padding: 10px;
+                            border:1px solid #FFF; 
+                            cursor: pointer;
+                        }
+                        .alienBtn{
+                            position: absolute;
+                            bottom:0;
+                            left:0;
+                            right:0;
+                            width:30%;
+                            height:30px;
+                            margin:auto;
+                            line-height: 30px;
+                            background-color: #DDD;
+                            color:#000;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                
+            }
+
+
+            .sectionQuiz5{
+                width:100%;
+                box-sizing: border-box;
+                // background-color: #FAA;
+                .quiz1{
+                    width:100%;
+                    margin: auto;
+                    padding-top:20%;
+                    
+                    h2{
+                        padding-bottom: 10%;
+                        }
+                    .gender{
+                        width:50%;
+                        float: left;
+                        position: relative;
+                        padding-bottom: 5%;
+                        
+                        .genderPic{
+                            padding:10px;
+                            border:1px solid #FFF;
+                            width:30%;
+                            margin: auto;
+                            cursor: pointer;
+                        }
+                        .genderBtn{
+                            position: absolute;
+                            bottom:0;
+                            left:0;
+                            right:0;
+                            width:100px;
+                            height:30px;
+                            margin:auto;
+                            line-height: 30px;
+                            background-color: #DDD;
+                            color:#000;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//quiz4-hover
+.hover1{
+    animation: poa1 5s linear infinite;
+}
+.hover2{
+    animation: poa2 5s linear infinite;
+}
+@keyframes poa1{
+    0%{transform: rotate(0deg) ;}
+    100%{ transform: rotate(360deg);}
+}
+@keyframes poa2{
+    0%{transform: rotate(0deg) ;}
+    100%{ transform: rotate(-360deg);}
+}
+
+
+
+
+//particle js
+
+/* ---- reset ---- */ 
+// body{ 
+//     margin:0; 
+//     font:normal 75% Arial, Helvetica, sans-serif; 
+// } 
+canvas{ 
+    display: block; 
+    vertical-align: bottom; 
+} 
+/* ---- particles.js container ---- */ 
+#particles-js{ 
+    top:0;
+    left:0;
+    position:absolute; 
+    width: 100%; 
+    height: 100%;
+    background-color: #232741; 
+    /* background-image: url("http://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/1237px-NASA_logo.svg.png");  */
+    background-image: url("../img/bg1080.png");
+    background-repeat: no-repeat; 
+    background-size: 100%; 
+    // background-position: 50% 50%; 
+    z-index: -1;
+} 
+    /* ---- stats.js ---- */ 
+//     .count-particles{ 
+//     background: #000022; 
+//     position: absolute; 
+//     top: 48px; 
+//     left: 0; 
+//     width: 80px; 
+//     color: #13E8E9; 
+//     font-size: .8em; 
+//     text-align: left; 
+//     text-indent: 4px; 
+//     line-height: 14px; 
+//     padding-bottom: 2px; 
+//     font-family: Helvetica, Arial, sans-serif; 
+//     font-weight: bold; 
+// } 
+// .js-count-particles{ 
+//     font-size: 1.1em; 
+// } 
+// #stats, .count-particles{ 
+//     -webkit-user-select: none; 
+//     margin-top: 5px; 
+//     margin-left: 5px; 
+// } 
+// #stats{ 
+//     border-radius: 3px 3px 0 0; 
+//     overflow: hidden; 
+// } 
+// .count-particles{ 
+//     border-radius: 0 0 3px 3px; 
+// }
+
+
