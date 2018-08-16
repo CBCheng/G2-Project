@@ -2,18 +2,10 @@
 @import "base/reset";
 @import "mixin/mixin";
 @include body(12px);
-<<<<<<< HEAD
-* {
-    outline: 1px solid #f00;
-}
-
-img {
-=======
 // *{
 //     outline: 1px solid #fff;
 // }
 img{
->>>>>>> ce1ca5c38e3f895d151ddfb3c0e3ee8080a8368d
     width: 100%;
     vertical-align: middle;
 }
