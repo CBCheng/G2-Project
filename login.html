@@ -37,7 +37,7 @@
             <img class="shoppingCarPic" src="img/shopping car.png" alt="">
             <!-- <img class="shoppingCarHover" src="img/shoppingCarHover.png" alt=""> -->
         </a></li>
-        <li class="memberSign"><a href="login.html">登入</a></li>
+        <li class="memberSign" id="spanLogin"><a href="login.html">登入</a></li>
     </ul>
     <ul class="memberSelect">
         <li>Hi ~ 冒險者</li>
@@ -61,7 +61,7 @@
         <li><a href="shop.html">購物車</a></li>
     </ul>
 </nav>
-    <div class="login_modal" style="display: block;">
+    <div class="login_modal" id="lightBox" style="display: block;">
         <div class="regist_box" style="display: none;">
             <div class="regist_content">
                 <span class="close">×</span>
@@ -146,5 +146,69 @@
           });
       });
    </script>
+
+<script>
+    function $id(id){
+      return document.getElementById(id);
+    }
+    
+    function showLoginForm(){
+      //檢查登入bar面版上 spanLogin 的字是登入或登出
+      var loginTitle = document.getElementById("spanLogin").innerText;
+      if (loginTitle == '登入') {
+         document.getElementById("lightBox").style.display="block";
+      } else {
+        document.getElementById("memName").innerText = '';
+        document.getElementById("spanLogin").innerText = '登入';
+        window.alert('您已登出');
+    
+      }
+    }//showLoginForm
+    
+    function sendForm(){
+      //帳號必須是 Sara , 密碼是 111
+      var memEmail = document.getElementById("memEmail").value;
+      if (memEmail === 'Sara') {
+        var memPsw = document.getElementById("memPsw").value;
+        if (memPsw === '111') {
+          window.alert('登入成功!!');
+          var user = '董董';
+          successLogin(user);
+        } else {
+          window.alert('密碼錯誤!!');
+        }
+      } else {
+        window.alert('帳號錯誤!!');
+      }
+    
+    
+    }
+    
+    function successLogin(user) {
+       document.getElementById("lightBox").style.display="none";
+       document.getElementById("memEmail").innerText = user + ' 您好~~';
+       document.getElementById("spanLogin").innerText = '登出';
+    
+    }
+    function cancelLogin(){
+      //將登入表單上的資料清空，並將燈箱隱藏起來
+      document.getElementById("lightBox").style.display="none";
+    
+    }
+    
+    function init(){
+      //===設定spanLogin.onclick 事件處理程序是 showLoginForm
+      document.getElementById("spanLogin").onclick = showLoginForm;
+    
+      //===設定btnLogin.onclick 事件處理程序是 sendForm
+      document.getElementById("login_send").onclick = sendForm;
+    
+      //===設定btnLoginCancel.onclick 事件處理程序是 cancelLogin
+      document.getElementById("btnLoginCancel").onclick = cancelLogin;
+    }; //window.onload
+    
+    window.onload=init;
+    </script>
+    
 </body>
 </html>
