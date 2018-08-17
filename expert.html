@@ -8,6 +8,8 @@
     <!-- css -->
     <!-- <link rel="stylesheet" href="css/style.css"> -->
     <link rel="stylesheet" href="css/expert.css">
+    <link rel="stylesheet" href="libs/lity/lity.css">
+    <!-- <link rel="stylesheet" href="css/login.css"> -->
     <!-- plugin -->
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script src="libs/jquery/dist/jquery.min.js"></script>
@@ -15,6 +17,7 @@
     <script type="text/javascript" src="js/parallax.min.js"></script>
     <!-- scroll -->
     <script src="js/expert.js"></script>
+    <!-- <script src="js/login.js"></script> -->
 
 
     <title>內頁公版</title>
@@ -101,6 +104,69 @@
         </ul>
     </nav>
 
+
+    <!-- <div class="login_modal" id="lightBox" style="display: block;">
+        <div class="regist_box" style="display: none;">
+            <div class="regist_content">
+                <span class="close">×</span>
+                <h3>註冊會員</h3>
+
+                <form action="#">
+
+                    <div>
+                        <div class="login_input">
+                            <input required="required" type="text" id="regist_name">
+                            <label class="login_lable" style="top: 18px; color: grey;">*姓名 </label>
+                        </div>
+                        <div class="login_input">
+                            <input required="required" type="password" maxlength="12" id="memPsw_input">
+                            <label class="login_lable" style="top: 18px; color: grey;">*密碼(6~12位數) </label>
+                            <span class="inputErr_notice">字數不符</span>
+                        </div>
+                        <div class="login_input">
+                            <input required="required" type="password" maxlength="12" id="memPsw_2nd_input">
+                            <label class="login_lable" style="top: 18px; color: grey;">*確認密碼 </label>
+                            <span class="inputErr_notice">密碼不符</span>
+                        </div>
+                        <div class="login_input">
+                            <input required="required" type="text" id="regist_email">
+                            <label class="login_lable" style="top: 18px; color: grey;">*電子信箱 </label>
+                            <span class="inputErr_notice">非電子信箱</span>
+                        </div>
+                        <button type="button" id="regist_btn" class="btn btn-o-nb">送出</button>
+
+                    </div>
+                </form>
+
+
+                <img src="img/login/login.png">
+            </div>
+
+        </div>
+        <div class="login_box" style="">
+            <div class="login_content">
+                <span class="close">×</span>
+                <h3>會員登入</h3>
+                <div>
+                    <div class="login_input">
+                        <input type="text" id="memEmail">
+                        <label class="login_lable" style="top: 18px; color: grey;">電子信箱 </label>
+                    </div>
+                    <div class="login_input">
+                        <input type="password" id="memPsw">
+                        <label class="login_lable" style="top: 18px; color: grey;">密碼 </label>
+                    </div>
+                    <button class="btn btn-o-nb" id="login_send" onclick="login_check()">送出</button>
+                </div>
+                <span>還不是會員，立馬
+                    <span class="registBtn"> 註冊 </span>
+                </span>
+                <img src="img/login/login.png">
+            </div>
+        </div>
+    </div> -->
+
+
     <div class="title">
         <h1>專家帶你玩</h1>
         <div id="can">
@@ -123,7 +189,7 @@
 
 
     <!-- filter -->
-    <div class="panel">
+    <section class="panel">
         <div id="filters" class="button-group">
             <button class="button is-checked" data-filter="*">全部</button>
             <button class="button" data-filter=".popular">人氣</button>
@@ -136,7 +202,7 @@
         <div class="grid">
             <div class="element-item blue popular ">
                 <h2>瓦特星popu</h2>
-                <img src="img/emma.jpg" alt="emma">
+                <img id="box1" src="img/emma.jpg" alt="emma">
                 <h3>妙麗</h3>
                 <div class="score">
                     <span>5</span>
@@ -291,7 +357,56 @@
             </div>
 
         </div>
-    </div>
+    </section>
+
+
+
+    <section id="lightBox1" style="display:none">
+        <img src="img/close.png" alt="close" id="closeBtn">
+        <div class="expPic">
+            <h2>瓦特星專家</h2>
+            <div class="pic">
+                <div class="attr">知性</div>
+                <img src="img/emma.jpg" alt="emma">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // $(function () {
+        //     $("#box1").click(function () {
+        //         $("#lightBox1").css('display', 'block');
+        //     })
+        // })
+
+        // $(function () {
+        //     $("#closeBtn").click(function () {
+        //         $("#lightBox").hide();
+        //     })
+        // })
+
+
+
+
+        var lightBox1 = document.getElementById("lightBox1");
+        var closeBtn = document.getElementById("closeBtn");
+        function openBox() {
+            lightBox1.style.display = "block";
+        }
+        function closeBox() {
+            lightBox1.style.display = "none";
+        }
+        function init() {
+            document.getElementById("box1").onclick = openBox;
+            document.getElementById("closeBtn").onclick = closeBox;
+        };
+
+        window.onload = init;
+
+    </script>
+
+
+
 
     <!-- footer -->
     <footer>
@@ -324,11 +439,80 @@
     </script>
 
 
+    <!-- <script>
+        function $id(id) {
+            return document.getElementById(id);
+        }
+
+        function showLoginForm() {
+            //檢查登入bar面版上 spanLogin 的字是登入或登出
+            var loginTitle = document.getElementById("spanLogin").innerText;
+            if (loginTitle == '登入') {
+                document.getElementById("lightBox").style.display = "block";
+            } else {
+                document.getElementById("memName").innerText = '';
+                document.getElementById("spanLogin").innerText = '登入';
+                window.alert('您已登出');
+
+            }
+        }//showLoginForm
+
+        function sendForm() {
+            //帳號必須是 Sara , 密碼是 111
+            var memEmail = document.getElementById("memEmail").value;
+            if (memEmail === 'Sara') {
+                var memPsw = document.getElementById("memPsw").value;
+                if (memPsw === '111') {
+                    window.alert('登入成功!!');
+                    var user = '董董';
+                    successLogin(user);
+                } else {
+                    window.alert('密碼錯誤!!');
+                }
+            } else {
+                window.alert('帳號錯誤!!');
+            }
+
+
+        }
+
+        function successLogin(user) {
+            document.getElementById("lightBox").style.display = "none";
+            document.getElementById("memEmail").innerText = user + ' 您好~~';
+            document.getElementById("spanLogin").innerText = '登出';
+
+        }
+        function cancelLogin() {
+            //將登入表單上的資料清空，並將燈箱隱藏起來
+            document.getElementById("lightBox").style.display = "none";
+
+        }
+
+        function init() {
+            //===設定spanLogin.onclick 事件處理程序是 showLoginForm
+            document.getElementById("spanLogin").onclick = showLoginForm;
+
+            //===設定btnLogin.onclick 事件處理程序是 sendForm
+            document.getElementById("login_send").onclick = sendForm;
+
+            //===設定btnLoginCancel.onclick 事件處理程序是 cancelLogin
+            document.getElementById("btnLoginCancel").onclick = cancelLogin;
+        }; //window.onload
+
+        window.onload = init;
+    </script> -->
+
+
+
+
     <!-- script -->
     <script src="js/tween.js"></script>
     <script src="libs/isotope/isotope.pkgd.min.js"></script>
     <script src="js/isotope.js"></script>
     <script src="libs/jquery/dist/jquery.min.js"></script>
+    <!-- <script src="libs/lity/jquery.js"></script> -->
+    <!-- <script src="libs/lity/lity.js"></script> -->
+
 </body>
 
 </html>
