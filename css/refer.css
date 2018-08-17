@@ -67,6 +67,9 @@ h5 {
 p {
   font-size: 12px; }
 
+* {
+  outline: 1px solid #fff; }
+
 img {
   width: 100%;
   vertical-align: middle; }
@@ -145,28 +148,6 @@ nav {
 .member a:hover, .menu a:hover, .memberSelect a:hover {
   color: #6cd5ff; }
 
-section {
-  width: 80%;
-  height: 3000px;
-  margin: auto; }
-
-footer {
-  width: 100%;
-  position: relative;
-  z-index: -100;
-  text-align: center; }
-
-.copyright {
-  padding: 20px;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto; }
-
 @media all and (max-width: 767px) {
   nav {
     width: 100%;
@@ -221,3 +202,46 @@ footer {
     right: 0; }
   .activeB {
     color: #6cd5ff; } }
+
+.wrap {
+  width: 100%;
+  margin: auto; }
+
+.tripKind {
+  width: 80%;
+  text-align: center;
+  margin: auto; }
+
+.tripKind li {
+  display: inline-block;
+  border: 1px solid #6cd5ff;
+  border-radius: 3px;
+  padding: 10px; }
+
+hr {
+  width: 80%; }
+
+.tripWrap {
+  width: 80%;
+  display: flex;
+  margin: auto; }
+
+.tripBox {
+  width: 33.33%; }
+
+footer {
+  width: 100%;
+  position: relative;
+  z-index: -100;
+  text-align: center; }
+
+.copyright {
+  padding: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto; }
