@@ -73,9 +73,61 @@
             <div class="bigPlt bigPltWater">
                 <img src="img/planetwater.png">
                 <div class="viewDot">
-                    <div id="p1V1">
-                        <div class="p1V1Dot"></div>  
-                        <div class="pulse"></div>  
+                    <div class="p1V1">
+                        <div id="p1V1Dot"></div>  
+                        <div class="pulse pulse3s"></div>
+                    </div>
+                    <div class="p1V2">
+                        <div id="p1V2Dot"></div>  
+                        <div class="pulse pulse6s"></div>
+                    </div>
+                    <div class="p1V3">
+                        <div id="p1V3Dot"></div>  
+                        <div class="pulse pulse0s"></div>
+                    </div>
+                    <div class="p1V4">
+                        <div id="p1V4Dot"></div>  
+                        <div class="pulse pulse3s"></div>
+                    </div>
+                    <div class="p1V5">
+                        <div id="p1V5Dot"></div>  
+                        <div class="pulse pulse0s"></div>
+                    </div>
+                    <div class="p1V6">
+                        <div id="p1V6Dot"></div>  
+                        <div class="pulse pulse6s"></div>
+                    </div>
+                    <div class="p1V7">
+                        <div id="p1V7Dot"></div>  
+                        <div class="pulse pulse6s"></div>
+                    </div>
+                    <div class="p1V8">
+                        <div id="p1V8Dot"></div>  
+                        <div class="pulse pulse3s"></div>
+                    </div>
+                    <div class="p1V9">
+                        <div id="p1V9Dot"></div>  
+                        <div class="pulse pulse0s"></div>
+                    </div>
+                    <div class="p1V10">
+                        <div id="p1V10Dot"></div>  
+                        <div class="pulse pulse0s"></div>
+                    </div>
+                    <div class="p1V11">
+                        <div id="p1V11Dot"></div>  
+                        <div class="pulse pulse3s"></div>
+                    </div>
+                    <div class="p1V12">
+                        <div id="p1V12Dot"></div>  
+                        <div class="pulse pulse6s"></div>
+                    </div>
+                    <div class="p1V13">
+                        <div id="p1V13Dot"></div>  
+                        <div class="pulse pulse0s"></div>
+                    </div>
+                    <div class="p1V14">
+                        <div id="p1V14Dot"></div>  
+                        <div class="pulse pulse3s"></div>
                     </div>
                 </div>
             </div>
@@ -159,6 +211,170 @@
                 $('.choPlt1 span').css('color','rgba(255, 255, 255, 0.5)');
                 $('.choPlt2').css('left','-5%');
                 $('.choPlt2 span').css('color','rgba(255, 255, 255, 0.5)');
+            });
+        });
+
+        $(function(){
+            var borCh = '6px solid #6cd5ff';
+            var borOr = '6px solid #fff';
+            var aniCh = 'dotHover 1s infinite';
+            var aniOr0s = 'dotHover2 4.8s infinite';
+            var aniOr6s = 'dotHover2 4.8s 6s infinite';
+            var aniOr3s = 'dotHover2 4.8s 3s infinite';
+
+            //p1V1
+            $('#p1V1Dot').on('mouseover',function(){
+                $(this).css('background-color','#6cd5ff');
+                $(this).next().css('border',borCh);
+                $(this).next().css('animation',aniCh);
+            });
+            $('#p1V1Dot').on('mouseout',function(){
+                $(this).css('background-color','#fff');
+                $(this).next().css('border',borOr);
+                $(this).next().css('animation',aniOr3s);
+            });
+            //p1V2
+            $('#p1V2Dot').on('mouseover',function(){
+                $(this).css('background-color','#6cd5ff');
+                $(this).next().css('border',borCh);
+                $(this).next().css('animation',aniCh);
+            });
+            $('#p1V2Dot').on('mouseout',function(){
+                $(this).css('background-color','#fff');
+                $(this).next().css('border',borOr);
+                $(this).next().css('animation',aniOr6s);
+            });
+            //p1V3
+            $('#p1V3Dot').on('mouseover',function(){
+                $(this).css('background-color','#6cd5ff');
+                $(this).next().css('border',borCh);
+                $(this).next().css('animation',aniCh);
+            });
+            $('#p1V3Dot').on('mouseout',function(){
+                $(this).css('background-color','#fff');
+                $(this).next().css('border',borOr);
+                $(this).next().css('animation',aniOr0s);
+            });
+            //p1V4
+            $('#p1V4Dot').on('mouseover',function(){
+                $(this).css('background-color','#6cd5ff');
+                $(this).next().css('border',borCh);
+                $(this).next().css('animation',aniCh);
+            });
+            $('#p1V4Dot').on('mouseout',function(){
+                $(this).css('background-color','#fff');
+                $(this).next().css('border',borOr);
+                $(this).next().css('animation',aniOr3s);
+            });
+            //p1V5
+            $('#p1V5Dot').on('mouseover',function(){
+                $(this).css('background-color','#6cd5ff');
+                $(this).next().css('border',borCh);
+                $(this).next().css('animation',aniCh);
+            });
+            $('#p1V5Dot').on('mouseout',function(){
+                $(this).css('background-color','#fff');
+                $(this).next().css('border',borOr);
+                $(this).next().css('animation',aniOr0s);
+            });
+            //p1V6
+            $('#p1V6Dot').on('mouseover',function(){
+                $(this).css('background-color','#6cd5ff');
+                $(this).next().css('border',borCh);
+                $(this).next().css('animation',aniCh);
+            });
+            $('#p1V6Dot').on('mouseout',function(){
+                $(this).css('background-color','#fff');
+                $(this).next().css('border',borOr);
+                $(this).next().css('animation',aniOr6s);
+            });
+            //p1V7
+            $('#p1V7Dot').on('mouseover',function(){
+                $(this).css('background-color','#6cd5ff');
+                $(this).next().css('border',borCh);
+                $(this).next().css('animation',aniCh);
+            });
+            $('#p1V7Dot').on('mouseout',function(){
+                $(this).css('background-color','#fff');
+                $(this).next().css('border',borOr);
+                $(this).next().css('animation',aniOr6s);
+            });
+            //p1V8
+            $('#p1V8Dot').on('mouseover',function(){
+                $(this).css('background-color','#6cd5ff');
+                $(this).next().css('border',borCh);
+                $(this).next().css('animation',aniCh);
+            });
+            $('#p1V8Dot').on('mouseout',function(){
+                $(this).css('background-color','#fff');
+                $(this).next().css('border',borOr);
+                $(this).next().css('animation',aniOr3s);
+            });
+            //p1V9
+            $('#p1V9Dot').on('mouseover',function(){
+                $(this).css('background-color','#6cd5ff');
+                $(this).next().css('border',borCh);
+                $(this).next().css('animation',aniCh);
+            });
+            $('#p1V9Dot').on('mouseout',function(){
+                $(this).css('background-color','#fff');
+                $(this).next().css('border',borOr);
+                $(this).next().css('animation',aniOr0s);
+            });
+            //p1V10
+            $('#p1V10Dot').on('mouseover',function(){
+                $(this).css('background-color','#6cd5ff');
+                $(this).next().css('border',borCh);
+                $(this).next().css('animation',aniCh);
+            });
+            $('#p1V10Dot').on('mouseout',function(){
+                $(this).css('background-color','#fff');
+                $(this).next().css('border',borOr);
+                $(this).next().css('animation',aniOr0s);
+            });
+            //p1V11
+            $('#p1V11Dot').on('mouseover',function(){
+                $(this).css('background-color','#6cd5ff');
+                $(this).next().css('border',borCh);
+                $(this).next().css('animation',aniCh);
+            });
+            $('#p1V11Dot').on('mouseout',function(){
+                $(this).css('background-color','#fff');
+                $(this).next().css('border',borOr);
+                $(this).next().css('animation',aniOr3s);
+            });
+            //p1V12
+            $('#p1V12Dot').on('mouseover',function(){
+                $(this).css('background-color','#6cd5ff');
+                $(this).next().css('border',borCh);
+                $(this).next().css('animation',aniCh);
+            });
+            $('#p1V12Dot').on('mouseout',function(){
+                $(this).css('background-color','#fff');
+                $(this).next().css('border',borOr);
+                $(this).next().css('animation',aniOr6s);
+            });
+            //p1V13
+            $('#p1V13Dot').on('mouseover',function(){
+                $(this).css('background-color','#6cd5ff');
+                $(this).next().css('border',borCh);
+                $(this).next().css('animation',aniCh);
+            });
+            $('#p1V13Dot').on('mouseout',function(){
+                $(this).css('background-color','#fff');
+                $(this).next().css('border',borOr);
+                $(this).next().css('animation',aniOr0s);
+            });
+            //p1V14
+            $('#p1V14Dot').on('mouseover',function(){
+                $(this).css('background-color','#6cd5ff');
+                $(this).next().css('border',borCh);
+                $(this).next().css('animation',aniCh);
+            });
+            $('#p1V14Dot').on('mouseout',function(){
+                $(this).css('background-color','#fff');
+                $(this).next().css('border',borOr);
+                $(this).next().css('animation',aniOr3s);
             });
         });
     </script>

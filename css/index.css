@@ -247,14 +247,70 @@ nav img {
   position: absolute;
   top: 0; }
 
-#p1V1 {
-  position: relative;
-  top: 10%;
-  left: 25%;
+.p1V1, .p1V2, .p1V3, .p1V4, .p1V5, .p1V6, .p1V7, .p1V8, .p1V9,
+.p1V10, .p1V11, .p1V12, .p1V13, .p1V14 {
+  position: absolute;
   width: 10%;
   height: 10%; }
 
-.p1V1Dot {
+.p1V1 {
+  top: 10%;
+  left: 25%; }
+
+.p1V2 {
+  top: 20%;
+  left: 40%; }
+
+.p1V3 {
+  top: 60%;
+  left: 65%; }
+
+.p1V4 {
+  top: 32%;
+  left: 76%; }
+
+.p1V5 {
+  top: 80%;
+  left: 50%; }
+
+.p1V6 {
+  top: 66%;
+  left: 32%; }
+
+.p1V7 {
+  top: 49%;
+  left: 86%; }
+
+.p1V8 {
+  top: 6%;
+  left: 57%; }
+
+.p1V9 {
+  top: 34%;
+  left: 21%; }
+
+.p1V10 {
+  top: 28%;
+  left: 19%; }
+
+.p1V11 {
+  top: 42%;
+  left: 45%; }
+
+.p1V12 {
+  top: 74%;
+  left: 11%; }
+
+.p1V13 {
+  top: 39%;
+  left: 74%; }
+
+.p1V14 {
+  top: 54%;
+  left: 3%; }
+
+#p1V1Dot, #p1V2Dot, #p1V3Dot, #p1V4Dot, #p1V5Dot, #p1V6Dot, #p1V7Dot,
+#p1V8Dot, #p1V9Dot, #p1V10Dot, #p1V11Dot, #p1V12Dot, #p1V13Dot, #p1V14Dot {
   position: absolute;
   top: 35%;
   left: 35%;
@@ -271,16 +327,19 @@ nav img {
   height: 100%;
   left: 0;
   top: 0;
-  border: 6px solid #fff;
   border-radius: 30px;
   z-index: 5;
-  opacity: 0; }
+  opacity: 0;
+  border: 6px solid #fff; }
 
-.p1V1Dot:hover {
-  background-color: #f00; }
+.pulse0s {
+  animation: dotHover2 4.8s infinite; }
 
-.p1V1Dot:hover .pulse {
-  animation: dotHover 1.2s  infinite; }
+.pulse3s {
+  animation: dotHover2 4.8s 3s infinite; }
+
+.pulse6s {
+  animation: dotHover2 4.8s 6s infinite; }
 
 @keyframes dotHover {
   0% {
@@ -311,6 +370,44 @@ nav img {
     transform: scale(0.8);
     opacity: 0.4; }
   90% {
+    transform: scale(0.9);
+    opacity: 0.2; }
+  100% {
+    transform: scale(1);
+    opacity: 0; } }
+
+@keyframes dotHover2 {
+  0% {
+    transform: scale(0);
+    opacity: 0.0; }
+  75% {
+    transform: scale(0);
+    opacity: 0.0; }
+  77.5% {
+    transform: scale(0.1);
+    opacity: 0.2; }
+  80% {
+    transform: scale(0.2);
+    opacity: 0.4; }
+  82.5% {
+    transform: scale(0.3);
+    opacity: 0.6; }
+  85% {
+    transform: scale(0.4);
+    opacity: 0.8; }
+  87.5% {
+    transform: scale(0.5);
+    opacity: 1; }
+  90% {
+    transform: scale(0.6);
+    opacity: 0.8; }
+  92.5% {
+    transform: scale(0.7);
+    opacity: 0.6; }
+  95% {
+    transform: scale(0.8);
+    opacity: 0.4; }
+  97.5% {
     transform: scale(0.9);
     opacity: 0.2; }
   100% {
