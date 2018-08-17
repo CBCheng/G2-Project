@@ -23,7 +23,7 @@ a{
 @import "layout/desktop";
 
 *{
-    outline: 1px solid #f00;
+    // outline: 1px solid #f00;
     box-sizing: border-box;
 }
 nav{
@@ -170,14 +170,18 @@ nav img{
 }
 .bigPlt{
     width: 36%;
-    margin: auto;
-    margin-top: 8%;
-    position: relative;
+    position: absolute;
+    top: 21%;
+    left: 32%;
+    transition: .5s;
 }
 .bigPlt{
     img{
         width: 100%;
     }  
+}
+.bigPltSan,.bigPltTree{
+    transform: scale(0);
 }
 .viewDot{
     width: 100%;
@@ -185,70 +189,47 @@ nav img{
     position: absolute;
     top: 0; 
 }
-.p1V1,.p1V2,.p1V3,.p1V4,.p1V5,.p1V6,.p1V7,.p1V8,.p1V9,
-.p1V10,.p1V11,.p1V12,.p1V13,.p1V14{
+.pvAll{
     position: absolute;
     width: 10%;  
     height: 10%;
 }
-.p1V1{
-    top: 10%;
-    left: 25%;
-}
-.p1V2{
-    top: 20%;
-    left: 40%; 
-}
-.p1V3{
-    top: 60%;
-    left: 65%;
-}
-.p1V4{
-    top: 32%;
-    left: 76%;
-}
-.p1V5{
-    top: 80%;
-    left: 50%;
-}
-.p1V6{
-    top: 66%;
-    left: 32%;
-}
-.p1V7{
-    top: 49%;
-    left: 86%;
-}
-.p1V8{
-    top: 6%;
-    left: 57%;
-}
-.p1V9{
-    top: 34%;
-    left: 21%;
-}
-.p1V10{
-    top: 28%;
-    left: 19%;
-}
-.p1V11{
-    top: 42%;
-    left: 45%;
-}
-.p1V12{
-    top: 74%;
-    left: 11%;
-}
-.p1V13{
-    top: 39%;
-    left: 74%;
-}
-.p1V14{
-    top: 54%;
-    left: 3%;
-}
-#p1V1Dot,#p1V2Dot,#p1V3Dot,#p1V4Dot,#p1V5Dot,#p1V6Dot,#p1V7Dot,
-#p1V8Dot,#p1V9Dot,#p1V10Dot,#p1V11Dot,#p1V12Dot,#p1V13Dot,#p1V14Dot{
+.p1V1{top: 10%;left: 25%;}
+.p1V2{top: 20%;left: 40%;}
+.p1V3{top: 60%;left: 65%;}
+.p1V4{top: 32%;left: 76%;}
+.p1V5{top: 80%;left: 50%;}
+.p1V6{top: 66%;left: 32%;}
+.p1V7{top: 49%;left: 86%;}
+.p1V8{top: 6%;left: 57%;}
+.p1V9{top: 34%;left: 21%;}
+.p1V10{top: 28%;left: 19%;}
+.p1V11{top: 42%;left: 45%;}
+.p1V12{top: 74%;left: 11%;}
+.p1V13{top: 39%;left: 74%;}
+.p1V14{top: 54%;left: 3%;}
+.p2V1{top: 25%;left: 36%;}
+.p2V2{top: 77%;left: 49%;}
+.p2V3{top: 47%;left: 30%;}
+.p2V4{top: 52%;left: 15%;}
+.p2V5{top: 65%;left: 86%;}
+.p2V6{top: 17%;left: 40%;}
+.p2V7{top: 20%;left: 86%;}
+.p2V8{top: 35%;left: 75%;}
+.p2V9{top: 10%;left: 21%;}
+.p2V10{top: 50%;left: 50%;}
+.p3V1{top: 18%;left: 50%;}
+.p3V2{top: 24%;left: 82%;}
+.p3V3{top: 50%;left: 91%;}
+.p3V4{top: 42%;left: 9%;}
+.p3V5{top: 35%;left: 77%;}
+.p3V6{top: 52%;left: 43%;}
+.p3V7{top: 61%;left: 18%;}
+.p3V8{top: 10%;left: 28%;}
+.p3V9{top: 73%;left: 53%;}
+.p3V10{top: 33%;left: 70%;}
+
+.speed1,.speed2,.speed3{
     position: absolute;
     top: 35%;
     left: 35%;
@@ -259,6 +240,18 @@ nav img{
     z-index: 6;
     cursor: pointer;
 }
+// #p1V1Dot,#p1V2Dot,#p1V3Dot,#p1V4Dot,#p1V5Dot,#p1V6Dot,#p1V7Dot,
+// #p1V8Dot,#p1V9Dot,#p1V10Dot,#p1V11Dot,#p1V12Dot,#p1V13Dot,#p1V14Dot{
+//     position: absolute;
+//     top: 35%;
+//     left: 35%;
+//     width: 30%;  
+//     height: 30%;
+//     background-color: #fff; 
+//     border-radius: 20px;  
+//     z-index: 6;
+//     cursor: pointer;
+// }
 .pulse{
     position: absolute;  
     width: 100%;   
