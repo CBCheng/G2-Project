@@ -23,6 +23,7 @@
 <body>
     <!-- nav -->
     <nav>
+        <!-- desk -->
         <ul class="menu mRight">
             <li>
                 <a href="planning.html">開始冒險</a>
@@ -50,28 +51,52 @@
                 </a>
             </li>
             <li class="memberSign">
-                <a href="#"> | 登入</a>
+                <a href="#">登入</a>
             </li>
         </ul>
         <ul class="memberSelect">
             <li>Hi ~ 冒險者</li>
             <li>
-                <a href="mytrip.html">我的行程</a>
+                <a href="member_mytrip.html">我的行程</a>
             </li>
             <li>
-                <a href="mycollect.html">我的收藏</a>
+                <a href="member_favorite.html">我的收藏</a>
             </li>
             <li>
-                <a href="myorder.html">我的訂單</a>
+                <a href="member_order.html">我的訂單</a>
             </li>
             <li>
-                <a href="comment.html">專家評論</a>
+                <a href="member_comment.html">專家評論</a>
             </li>
             <li>
-                <a href="member.html">會員資料修改</a>
+                <a href="member_profile.html">會員資料修改</a>
             </li>
             <li>
                 <a href="sign.html">登出</a>
+            </li>
+        </ul>
+        <!-- mobile -->
+        <div class="hambger">
+            <div class="line"></div>
+        </div>
+        <ul class="menuMobile">
+            <li>
+                <a href="planning.html">開始冒險</a>
+            </li>
+            <li>
+                <a href="expert.html">專家帶你玩</a>
+            </li>
+            <li>
+                <a href="refer.html">別人怎麼玩</a>
+            </li>
+            <li>
+                <a href="shop.html">星際商城</a>
+            </li>
+            <li>
+                <a href="member.html">會員專區</a>
+            </li>
+            <li>
+                <a href="shop.html">購物車</a>
             </li>
         </ul>
     </nav>
@@ -86,86 +111,183 @@
         </div>
     </div>
 
+
+
+
     <div class="cloud_group">
         <img class="cloud1" src="img/cloud.png">
         <img class="cloud2" src="img/cloud.png">
     </div>
 
 
-    <!-- <div class="panell">
-        <div class="tab_group">
-            <a href="#" class="tab tab1 active">全部</a>
-            <a href="#" class="tab tab2">人氣</a>
-            <a href="#" class="tab tab3">瓦特星</a>
-            <a href="#" class="tab tab4">達沙星</a>
-            <a href="#" class="tab tab5">奧倫星</a>
-        </div>
-        <div class="content_group">
-            <div class="content content1 active">c1</div>
-            <div class="content content2">content2</div>
-            <div class="content content3">content3</div>
-        </div>
-    </div> -->
-    <div class="card blue">
-        <h2>瓦特星</h2>
-        <img src="img/emma.jpg" alt="emma">
-        <h3>妙麗</h3>
-        <div class="score">
-            <span>5</span>
-            <img src="img/star.png" alt="star">
-            <img src="img/star.png" alt="star">
-            <img src="img/star.png" alt="star">
-            <img src="img/star.png" alt="star">
-            <img src="img/star.png" alt="star">
-        </div>
-        <div class="mark">
-            <img src="img/comment.png" alt="comment">5
-            <img src="img/love.png" alt="love">20
-        </div>
-    </div>
 
 
-
-
+    <!-- filter -->
     <div class="panel">
         <div id="filters" class="button-group">
             <button class="button is-checked" data-filter="*">全部</button>
             <button class="button" data-filter=".popular">人氣</button>
-            <button class="button" data-filter=".A">瓦特星
+            <button class="button" data-filter=".blue">瓦特星
             </button>
-            <button class="button" data-filter=".B">達沙星</button>
-            <button class="button" data-filter=".C">奧倫星</button>
+            <button class="button" data-filter=".orange">達沙星</button>
+            <button class="button" data-filter=".green">奧倫星</button>
         </div>
 
         <div class="grid">
-            <div class="element-item A popular ">
-                A popular
+            <div class="element-item blue popular ">
+                <h2>瓦特星popu</h2>
+                <img src="img/emma.jpg" alt="emma">
+                <h3>妙麗</h3>
+                <div class="score">
+                    <span>5</span>
+                    <img src="img/star.png" alt="star">
+                    <img src="img/star.png" alt="star">
+                    <img src="img/star.png" alt="star">
+                    <img src="img/star.png" alt="star">
+                    <img src="img/star.png" alt="star">
+                </div>
+                <div class="mark">
+                    <img src="img/comment.png" alt="comment">5
+                    <img src="img/love.png" alt="love">20
+                </div>
             </div>
-            <div class="element-item A ">
-                A
+            <div class="element-item blue ">
+                <h2>瓦特星</h2>
+                <img src="img/emma.jpg" alt="emma">
+                <h3>妙麗</h3>
+                <div class="score">
+                    <span>5</span>
+                    <img src="img/star.png" alt="star">
+                    <img src="img/star.png" alt="star">
+                    <img src="img/star.png" alt="star">
+                    <img src="img/star.png" alt="star">
+                    <img src="img/star.png" alt="star">
+                </div>
+                <div class="mark">
+                    <img src="img/comment.png" alt="comment">5
+                    <img src="img/love.png" alt="love">20
+                </div>
             </div>
-            <div class="element-item A ">
-                A
+            <div class="element-item blue ">
+                <h2>瓦特星</h2>
+                <img src="img/emma.jpg" alt="emma">
+                <h3>妙麗</h3>
+                <div class="score">
+                    <span>5</span>
+                    <img src="img/star.png" alt="star">
+                    <img src="img/star.png" alt="star">
+                    <img src="img/star.png" alt="star">
+                    <img src="img/star.png" alt="star">
+                    <img src="img/star.png" alt="star">
+                </div>
+                <div class="mark">
+                    <img src="img/comment.png" alt="comment">5
+                    <img src="img/love.png" alt="love">20
+                </div>
             </div>
 
-            <div class="element-item B popular ">
-                B popular
+            <div class="element-item orange popular ">
+                <h2>達沙星popu</h2>
+                <img src="img/emma.jpg" alt="emma">
+                <h3>妙麗</h3>
+                <div class="score">
+                    <span>5</span>
+                    <img src="img/star.png" alt="star">
+                    <img src="img/star.png" alt="star">
+                    <img src="img/star.png" alt="star">
+                    <img src="img/star.png" alt="star">
+                    <img src="img/star.png" alt="star">
+                </div>
+                <div class="mark">
+                    <img src="img/comment.png" alt="comment">5
+                    <img src="img/love.png" alt="love">20
+                </div>
             </div>
-            <div class="element-item B ">
-                B
+            <div class="element-item orange ">
+                <h2>達沙星</h2>
+                <img src="img/emma.jpg" alt="emma">
+                <h3>妙麗</h3>
+                <div class="score">
+                    <span>5</span>
+                    <img src="img/star.png" alt="star">
+                    <img src="img/star.png" alt="star">
+                    <img src="img/star.png" alt="star">
+                    <img src="img/star.png" alt="star">
+                    <img src="img/star.png" alt="star">
+                </div>
+                <div class="mark">
+                    <img src="img/comment.png" alt="comment">5
+                    <img src="img/love.png" alt="love">20
+                </div>
             </div>
-            <div class="element-item B ">
-                B
+            <div class="element-item orange ">
+                <h2>達沙星</h2>
+                <img src="img/emma.jpg" alt="emma">
+                <h3>妙麗</h3>
+                <div class="score">
+                    <span>5</span>
+                    <img src="img/star.png" alt="star">
+                    <img src="img/star.png" alt="star">
+                    <img src="img/star.png" alt="star">
+                    <img src="img/star.png" alt="star">
+                    <img src="img/star.png" alt="star">
+                </div>
+                <div class="mark">
+                    <img src="img/comment.png" alt="comment">5
+                    <img src="img/love.png" alt="love">20
+                </div>
             </div>
 
-            <div class="element-item C popular ">
-                C popular
+            <div class="element-item green popular ">
+                <h2>奧倫星popu</h2>
+                <img src="img/emma.jpg" alt="emma">
+                <h3>妙麗</h3>
+                <div class="score">
+                    <span>5</span>
+                    <img src="img/star.png" alt="star">
+                    <img src="img/star.png" alt="star">
+                    <img src="img/star.png" alt="star">
+                    <img src="img/star.png" alt="star">
+                    <img src="img/star.png" alt="star">
+                </div>
+                <div class="mark">
+                    <img src="img/comment.png" alt="comment">5
+                    <img src="img/love.png" alt="love">20
+                </div>
             </div>
-            <div class="element-item C ">
-                C
+            <div class="element-item green ">
+                <h2>奧倫星</h2>
+                <img src="img/emma.jpg" alt="emma">
+                <h3>妙麗</h3>
+                <div class="score">
+                    <span>5</span>
+                    <img src="img/star.png" alt="star">
+                    <img src="img/star.png" alt="star">
+                    <img src="img/star.png" alt="star">
+                    <img src="img/star.png" alt="star">
+                    <img src="img/star.png" alt="star">
+                </div>
+                <div class="mark">
+                    <img src="img/comment.png" alt="comment">5
+                    <img src="img/love.png" alt="love">20
+                </div>
             </div>
-            <div class="element-item C ">
-                C
+            <div class="element-item green ">
+                <h2>奧倫星</h2>
+                <img src="img/emma.jpg" alt="emma">
+                <h3>妙麗</h3>
+                <div class="score">
+                    <span>5</span>
+                    <img src="img/star.png" alt="star">
+                    <img src="img/star.png" alt="star">
+                    <img src="img/star.png" alt="star">
+                    <img src="img/star.png" alt="star">
+                    <img src="img/star.png" alt="star">
+                </div>
+                <div class="mark">
+                    <img src="img/comment.png" alt="comment">5
+                    <img src="img/love.png" alt="love">20
+                </div>
             </div>
 
         </div>
@@ -183,11 +305,20 @@
 
     <!-- jquery -->
     <script>
-        //    登入下拉選單
+        //    桌機登入下拉選單
         $(function () {
             $('.memberSign').click(function () {
                 $('.memberSelect').toggle();
                 $('.memberSign a').toggleClass("active")
+            });
+        });
+        //   手機漢堡選單
+        $(function () {
+            $('.hambger').click(function () {
+                $('.menuMobile').toggleClass("activeM")
+            });
+            $('.menuMobile li').click(function () {
+                $('.menuMobile a').toggleClass("activeB")
             });
         });
     </script>
