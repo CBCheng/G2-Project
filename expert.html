@@ -92,7 +92,7 @@
     </div>
 
 
-    <div class="panel">
+    <!-- <div class="panell">
         <div class="tab_group">
             <a href="#" class="tab tab1 active">全部</a>
             <a href="#" class="tab tab2">人氣</a>
@@ -101,16 +101,73 @@
             <a href="#" class="tab tab5">奧倫星</a>
         </div>
         <div class="content_group">
-            <div class="content content1 active">
-                <div class="card">
-                    <h3>瓦特星</h3>
-                    <img src="img/emma.jpg" alt="">
-                    <h4>妙麗</h4>
-                </div>
-
-            </div>
+            <div class="content content1 active">c1</div>
             <div class="content content2">content2</div>
             <div class="content content3">content3</div>
+        </div>
+    </div> -->
+    <div class="card blue">
+        <h2>瓦特星</h2>
+        <img src="img/emma.jpg" alt="emma">
+        <h3>妙麗</h3>
+        <div class="score">
+            <span>5</span>
+            <img src="img/star.png" alt="star">
+            <img src="img/star.png" alt="star">
+            <img src="img/star.png" alt="star">
+            <img src="img/star.png" alt="star">
+            <img src="img/star.png" alt="star">
+        </div>
+        <div class="mark">
+            <img src="img/comment.png" alt="comment">5
+            <img src="img/love.png" alt="love">20
+        </div>
+    </div>
+
+
+
+
+    <div class="panel">
+        <div id="filters" class="button-group">
+            <button class="button is-checked" data-filter="*">全部</button>
+            <button class="button" data-filter=".popular">人氣</button>
+            <button class="button" data-filter=".A">瓦特星
+            </button>
+            <button class="button" data-filter=".B">達沙星</button>
+            <button class="button" data-filter=".C">奧倫星</button>
+        </div>
+
+        <div class="grid">
+            <div class="element-item A popular ">
+                A popular
+            </div>
+            <div class="element-item A ">
+                A
+            </div>
+            <div class="element-item A ">
+                A
+            </div>
+
+            <div class="element-item B popular ">
+                B popular
+            </div>
+            <div class="element-item B ">
+                B
+            </div>
+            <div class="element-item B ">
+                B
+            </div>
+
+            <div class="element-item C popular ">
+                C popular
+            </div>
+            <div class="element-item C ">
+                C
+            </div>
+            <div class="element-item C ">
+                C
+            </div>
+
         </div>
     </div>
 
@@ -138,6 +195,9 @@
 
     <!-- script -->
     <script src="js/tween.js"></script>
+    <script src="libs/isotope/isotope.pkgd.min.js"></script>
+    <script src="js/isotope.js"></script>
+    <script src="libs/jquery/dist/jquery.min.js"></script>
 </body>
 
 </html>

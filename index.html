@@ -7,9 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- css -->
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/fullpage.css">
     <!-- plugin -->
     <!-- <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script> -->
     <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="/libs/fullpage/fullpage.min.js"></script>
     <!-- <script src="libs/gsap/src/minified/TweenMax.min.js"></script>
     <script type="text/javascript" src="js/parallax.min.js"></script> -->
     <!-- scroll -->
@@ -49,32 +51,55 @@
         </ul>
     </nav>
     <!-- nav end-->
-    <div></div>
-    <!-- part1 start -->
-    <section class="part1">
-        <div class="wrap">
+
+    <div id="dowebok">
+        <!-- part1 start -->
+        <div class="section part1">
             <div class="choPlanet choPlt1">
                 <img class="planetBg" src="/img/planetBg.png">
                 <img src="/img/planetsan.png">
-                <!-- <span>達沙星</span> -->
+                <span>達沙星</span>
             </div>
             <div class="choPlanet choPlt2">
                 <img class="planetBg" src="/img/planetBg.png">
                 <img src="/img/planetwater.png">
+                <span>瓦特星</span>
             </div>
             <div class="choPlanet choPlt3">
                 <img class="planetBg" src="/img/planetBg.png">
                 <img src="/img/planettree.png">
+                <span>奧倫星</span>
             </div>
-            <div class="bigPlanet">
-                    <img src="/img/planetwater.png">
+            <div class="bigPlt bigPltWater">
+                <img src="img/planetwater.png">
+                <div class="viewDot">
+                    <div id="p1V1">
+                        <div class="p1V1Dot"></div>  
+                        <div class="pulse"></div>  
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
-    <section class="part2">
+        <!-- part1 end -->
+        <!-- part2 start -->
+        <div class="section part2">
+            
+        </div>
+        <!-- part2 end -->
+        <!-- part3 start -->
+        <div class="section part3">
+            
+        </div>
+        <!-- part3 end -->
+        <!-- part4 start -->
+        <div class="section part4">
+        
+        </div>
+        <!-- part4 end -->
+    </div>
+    
+    
 
-    </section>
-    <!-- part1 end -->
 
 
     
@@ -102,6 +127,41 @@
 
 
     <!-- script -->
+    <script>
+        $( "#dowebok" ).fullpage({
+            // 參數設定[註1]
+            navigation: true, // 顯示導行列
+            navigationPosition: "right" // 導行列位置
+        });
+    </script>
+    <script>
+        $(function(){
+            $('.choPlt1').on('click',function(){
+                $(this).css('left','5%');
+                $('.choPlt1 span').css('color','#fff');
+                $('.choPlt2').css('left','-5%');
+                $('.choPlt2 span').css('color','rgba(255, 255, 255, 0.5)');
+                $('.choPlt3').css('left','-5%');
+                $('.choPlt3 span').css('color','rgba(255, 255, 255, 0.5)');
+            });
+            $('.choPlt2').on('click',function(){
+                $(this).css('left','5%');
+                $('.choPlt2 span').css('color','#fff');
+                $('.choPlt1').css('left','-5%');
+                $('.choPlt1 span').css('color','rgba(255, 255, 255, 0.5)');
+                $('.choPlt3').css('left','-5%');
+                $('.choPlt3 span').css('color','rgba(255, 255, 255, 0.5)');
+            });
+            $('.choPlt3').on('click',function(){
+                $(this).css('left','5%');
+                $('.choPlt3 span').css('color','#fff');
+                $('.choPlt1').css('left','-5%');
+                $('.choPlt1 span').css('color','rgba(255, 255, 255, 0.5)');
+                $('.choPlt2').css('left','-5%');
+                $('.choPlt2 span').css('color','rgba(255, 255, 255, 0.5)');
+            });
+        });
+    </script>
     <!-- <script src="js/tween.js"></script> -->
 </body>
 
