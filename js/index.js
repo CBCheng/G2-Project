@@ -1,27 +1,15 @@
 $(function(){
-    $('.choPlt1').on('click',function(){
+    var colorOr = 'rgba(255, 255, 255, 0.5)';
+    $('.choPlanet').on('click',function(){
         $(this).css('left','5%');
-        $('.choPlt1 span').css('color','#fff');
-        $('.choPlt2').css('left','-5%');
-        $('.choPlt2 span').css('color','rgba(255, 255, 255, 0.5)');
-        $('.choPlt3').css('left','-5%');
-        $('.choPlt3 span').css('color','rgba(255, 255, 255, 0.5)');
-    });
-    $('.choPlt2').on('click',function(){
-        $(this).css('left','5%');
-        $('.choPlt2 span').css('color','#fff');
-        $('.choPlt1').css('left','-5%');
-        $('.choPlt1 span').css('color','rgba(255, 255, 255, 0.5)');
-        $('.choPlt3').css('left','-5%');
-        $('.choPlt3 span').css('color','rgba(255, 255, 255, 0.5)');
-    });
-    $('.choPlt3').on('click',function(){
-        $(this).css('left','5%');
-        $('.choPlt3 span').css('color','#fff');
-        $('.choPlt1').css('left','-5%');
-        $('.choPlt1 span').css('color','rgba(255, 255, 255, 0.5)');
-        $('.choPlt2').css('left','-5%');
-        $('.choPlt2 span').css('color','rgba(255, 255, 255, 0.5)');
+        $('.choPlanet').not(this).css('left','-5%');
+        $('.choPlanet span').css('color',colorOr);
+        $(this).children('span').css('color','#fff');
+        var num = $(this).index();
+        $('.bigPlt').css({'transform':'scale(0)',
+                        'z-index':'0'});
+        $('.bigPlt').eq(num).css({'transform':'scale(1)',
+                        'z-index':'2'});
     });
 });
 
@@ -32,159 +20,65 @@ $(function(){
     var aniOr0s = 'dotHover2 4.8s infinite';
     var aniOr6s = 'dotHover2 4.8s 6s infinite';
     var aniOr3s = 'dotHover2 4.8s 3s infinite';
+    //--------------
+    var speed1Divs = document.querySelectorAll(".viewDot div.speed1");
+    for(var i=0; i<speed1Divs.length; i++){
 
-    //p1V1
-    $('#p1V1Dot').on('mouseover',function(){
-        $(this).css('background-color','#6cd5ff');
-        $(this).next().css('border',borCh);
-        $(this).next().css('animation',aniCh);
-    });
-    $('#p1V1Dot').on('mouseout',function(){
-        $(this).css('background-color','#fff');
-        $(this).next().css('border',borOr);
-        $(this).next().css('animation',aniOr3s);
-    });
-    //p1V2
-    $('#p1V2Dot').on('mouseover',function(){
-        $(this).css('background-color','#6cd5ff');
-        $(this).next().css('border',borCh);
-        $(this).next().css('animation',aniCh);
-    });
-    $('#p1V2Dot').on('mouseout',function(){
-        $(this).css('background-color','#fff');
-        $(this).next().css('border',borOr);
-        $(this).next().css('animation',aniOr6s);
-    });
-    //p1V3
-    $('#p1V3Dot').on('mouseover',function(){
-        $(this).css('background-color','#6cd5ff');
-        $(this).next().css('border',borCh);
-        $(this).next().css('animation',aniCh);
-    });
-    $('#p1V3Dot').on('mouseout',function(){
-        $(this).css('background-color','#fff');
-        $(this).next().css('border',borOr);
-        $(this).next().css('animation',aniOr0s);
-    });
-    //p1V4
-    $('#p1V4Dot').on('mouseover',function(){
-        $(this).css('background-color','#6cd5ff');
-        $(this).next().css('border',borCh);
-        $(this).next().css('animation',aniCh);
-    });
-    $('#p1V4Dot').on('mouseout',function(){
-        $(this).css('background-color','#fff');
-        $(this).next().css('border',borOr);
-        $(this).next().css('animation',aniOr3s);
-    });
-    //p1V5
-    $('#p1V5Dot').on('mouseover',function(){
-        $(this).css('background-color','#6cd5ff');
-        $(this).next().css('border',borCh);
-        $(this).next().css('animation',aniCh);
-    });
-    $('#p1V5Dot').on('mouseout',function(){
-        $(this).css('background-color','#fff');
-        $(this).next().css('border',borOr);
-        $(this).next().css('animation',aniOr0s);
-    });
-    //p1V6
-    $('#p1V6Dot').on('mouseover',function(){
-        $(this).css('background-color','#6cd5ff');
-        $(this).next().css('border',borCh);
-        $(this).next().css('animation',aniCh);
-    });
-    $('#p1V6Dot').on('mouseout',function(){
-        $(this).css('background-color','#fff');
-        $(this).next().css('border',borOr);
-        $(this).next().css('animation',aniOr6s);
-    });
-    //p1V7
-    $('#p1V7Dot').on('mouseover',function(){
-        $(this).css('background-color','#6cd5ff');
-        $(this).next().css('border',borCh);
-        $(this).next().css('animation',aniCh);
-    });
-    $('#p1V7Dot').on('mouseout',function(){
-        $(this).css('background-color','#fff');
-        $(this).next().css('border',borOr);
-        $(this).next().css('animation',aniOr6s);
-    });
-    //p1V8
-    $('#p1V8Dot').on('mouseover',function(){
-        $(this).css('background-color','#6cd5ff');
-        $(this).next().css('border',borCh);
-        $(this).next().css('animation',aniCh);
-    });
-    $('#p1V8Dot').on('mouseout',function(){
-        $(this).css('background-color','#fff');
-        $(this).next().css('border',borOr);
-        $(this).next().css('animation',aniOr3s);
-    });
-    //p1V9
-    $('#p1V9Dot').on('mouseover',function(){
-        $(this).css('background-color','#6cd5ff');
-        $(this).next().css('border',borCh);
-        $(this).next().css('animation',aniCh);
-    });
-    $('#p1V9Dot').on('mouseout',function(){
-        $(this).css('background-color','#fff');
-        $(this).next().css('border',borOr);
-        $(this).next().css('animation',aniOr0s);
-    });
-    //p1V10
-    $('#p1V10Dot').on('mouseover',function(){
-        $(this).css('background-color','#6cd5ff');
-        $(this).next().css('border',borCh);
-        $(this).next().css('animation',aniCh);
-    });
-    $('#p1V10Dot').on('mouseout',function(){
-        $(this).css('background-color','#fff');
-        $(this).next().css('border',borOr);
-        $(this).next().css('animation',aniOr0s);
-    });
-    //p1V11
-    $('#p1V11Dot').on('mouseover',function(){
-        $(this).css('background-color','#6cd5ff');
-        $(this).next().css('border',borCh);
-        $(this).next().css('animation',aniCh);
-    });
-    $('#p1V11Dot').on('mouseout',function(){
-        $(this).css('background-color','#fff');
-        $(this).next().css('border',borOr);
-        $(this).next().css('animation',aniOr3s);
-    });
-    //p1V12
-    $('#p1V12Dot').on('mouseover',function(){
-        $(this).css('background-color','#6cd5ff');
-        $(this).next().css('border',borCh);
-        $(this).next().css('animation',aniCh);
-    });
-    $('#p1V12Dot').on('mouseout',function(){
-        $(this).css('background-color','#fff');
-        $(this).next().css('border',borOr);
-        $(this).next().css('animation',aniOr6s);
-    });
-    //p1V13
-    $('#p1V13Dot').on('mouseover',function(){
-        $(this).css('background-color','#6cd5ff');
-        $(this).next().css('border',borCh);
-        $(this).next().css('animation',aniCh);
-    });
-    $('#p1V13Dot').on('mouseout',function(){
-        $(this).css('background-color','#fff');
-        $(this).next().css('border',borOr);
-        $(this).next().css('animation',aniOr0s);
-    });
-    //p1V14
-    $('#p1V14Dot').on('mouseover',function(){
-        $(this).css('background-color','#6cd5ff');
-        $(this).next().css('border',borCh);
-        $(this).next().css('animation',aniCh);
-    });
-    $('#p1V14Dot').on('mouseout',function(){
-        $(this).css('background-color','#fff');
-        $(this).next().css('border',borOr);
-        $(this).next().css('animation',aniOr3s);
-    });
+        speed1Divs[i].onmouseover = function(e){
+
+            e.target.style.backgroundColor = "#6cd5ff";
+            var pulseEle = e.target.parentNode.getElementsByTagName("div")[1];
+            pulseEle.style.border = borCh;
+            pulseEle.style.animation = aniCh;
+        }
+
+        speed1Divs[i].onmouseout = function(e){
+
+            e.target.style.backgroundColor = "#fff";
+            var pulseEle = e.target.parentNode.getElementsByTagName("div")[1];
+            pulseEle.style.border = borOr;
+            pulseEle.style.animation = aniOr0s;
+        }
+    }
+    //--------------
+    var speed2Divs = document.querySelectorAll(".viewDot div.speed2");
+    for(var i=0; i<speed2Divs.length; i++){
+
+        speed2Divs[i].onmouseover = function(e){
+
+            e.target.style.backgroundColor = "#6cd5ff";
+            var pulseEle = e.target.parentNode.getElementsByTagName("div")[1];
+            pulseEle.style.border = borCh;
+            pulseEle.style.animation = aniCh;
+        }
+
+        speed2Divs[i].onmouseout = function(e){
+
+            e.target.style.backgroundColor = "#fff";
+            var pulseEle = e.target.parentNode.getElementsByTagName("div")[1];
+            pulseEle.style.border = borOr;
+            pulseEle.style.animation = aniOr3s;
+        }
+    }
+    //--------------
+    var speed3Divs = document.querySelectorAll(".viewDot div.speed3");
+    for(var i=0; i<speed3Divs.length; i++){
+
+        speed3Divs[i].onmouseover = function(e){
+
+            e.target.style.backgroundColor = "#6cd5ff";
+            var pulseEle = e.target.parentNode.getElementsByTagName("div")[1];
+            pulseEle.style.border = borCh;
+            pulseEle.style.animation = aniCh;
+        }
+
+        speed3Divs[i].onmouseout = function(e){
+
+            e.target.style.backgroundColor = "#fff";
+            var pulseEle = e.target.parentNode.getElementsByTagName("div")[1];
+            pulseEle.style.border = borOr;
+            pulseEle.style.animation = aniOr6s;
+        }
+    }
+
 });

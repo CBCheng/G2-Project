@@ -224,10 +224,12 @@ a {
                 padding-right: 5px;
             }
             img {
+                vertical-align: text-bottom;
                 width: 20px;
             }
         }
         .mark {
+            // outline: 1px solid #f00;
             font-size: 16px;
             color: #ffffff;
             img {
@@ -252,6 +254,51 @@ a {
         border: 3px solid rgba(128, 194, 105, 0.5);
         h2 {
             color: rgb(128, 194, 105);
+        }
+    }
+}
+
+#lightBox:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#lightBox {
+    width: 1200px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 3px solid rgba(108, 213, 255, 0.5);
+    img {
+        width: 50px;
+        float: right;
+    }
+    .expPic {
+        text-align: center;
+        h2 {
+            font-size: 26px;
+            color: $fontColorBlue;
+            margin: 50px;
+        }
+        .pic {
+            // outline: 1px solid #f00;
+            width: 200px;
+            margin: auto;
+            position: relative;
+            .attr {
+                position: absolute;
+                width: 65px;
+                height: 65px;
+                border-radius: 50%;
+                background-color: #094f91;
+                line-height: 65px;
+                font-size: 20px;
+                left: -20px;
+                top: -20px;
+            }
+            img {
+                width: 100%;
+            }
         }
     }
 }
