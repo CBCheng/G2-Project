@@ -37,7 +37,7 @@
             <img class="shoppingCarPic" src="img/shopping car.png" alt="">
             <!-- <img class="shoppingCarHover" src="img/shoppingCarHover.png" alt=""> -->
         </a></li>
-        <li class="memberSign" id="spanLogin"><a href="login.html">登入</a></li>
+        <li class="memberSign" id="spanLogin">登入</li>
     </ul>
     <ul class="memberSelect">
         <li>Hi ~ 冒險者</li>
@@ -61,7 +61,7 @@
         <li><a href="shop.html">購物車</a></li>
     </ul>
 </nav>
-    <div class="login_modal" id="lightBox" style="display: block;">
+    <div class="login_modal" id="lightBox" style="";>
         <div class="regist_box" style="display: none;">
             <div class="regist_content">
                 <span class="close">×</span>
@@ -158,11 +158,12 @@
       if (loginTitle == '登入') {
          document.getElementById("lightBox").style.display="block";
       } else {
-        document.getElementById("memName").innerText = '';
+        document.getElementById("memEmail").innerText = '';
         document.getElementById("spanLogin").innerText = '登入';
         window.alert('您已登出');
     
       }
+      return false;
     }//showLoginForm
     
     function sendForm(){
