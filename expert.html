@@ -8,6 +8,7 @@
     <!-- css -->
     <!-- <link rel="stylesheet" href="css/style.css"> -->
     <link rel="stylesheet" href="css/expert.css">
+    <link rel="stylesheet" href="libs/lity/lity.min.css">
     <!-- plugin -->
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script src="libs/jquery/dist/jquery.min.js"></script>
@@ -123,7 +124,7 @@
 
 
     <!-- filter -->
-    <div class="panel">
+    <section class="panel">
         <div id="filters" class="button-group">
             <button class="button is-checked" data-filter="*">全部</button>
             <button class="button" data-filter=".popular">人氣</button>
@@ -136,7 +137,9 @@
         <div class="grid">
             <div class="element-item blue popular ">
                 <h2>瓦特星popu</h2>
-                <img src="img/emma.jpg" alt="emma">
+                <a href="#lightBox" data-lity>
+                    <img src="img/emma.jpg" alt="emma">
+                </a>
                 <h3>妙麗</h3>
                 <div class="score">
                     <span>5</span>
@@ -291,7 +294,24 @@
             </div>
 
         </div>
-    </div>
+    </section>
+
+
+
+    <section id="lightBox">
+        <img src="img/close.png" alt="close">
+        <div class="expPic">
+            <h2>瓦特星專家</h2>
+            <div class="pic">
+                <div class="attr">知性</div>
+                <img src="img/emma.jpg" alt="emma">
+            </div>
+        </div>
+
+    </section>
+
+
+
 
     <!-- footer -->
     <footer>
@@ -329,6 +349,9 @@
     <script src="libs/isotope/isotope.pkgd.min.js"></script>
     <script src="js/isotope.js"></script>
     <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="libs/lity/jquery.js"></script>
+    <script src="libs/lity/lity.min.js"></script>
+
 </body>
 
 </html>
