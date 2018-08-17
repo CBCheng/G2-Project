@@ -297,6 +297,7 @@ nav {
         font-size: 16px;
         padding-right: 5px; }
       .grid .element-item .score img {
+        vertical-align: text-bottom;
         width: 20px; }
     .grid .element-item .mark {
       font-size: 16px;
@@ -316,6 +317,42 @@ nav {
     border: 3px solid rgba(128, 194, 105, 0.5); }
     .grid .element-item.green h2 {
       color: #80c269; }
+
+#lightBox:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+#lightBox {
+  width: 1200px;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 3px solid rgba(108, 213, 255, 0.5); }
+  #lightBox img {
+    width: 50px;
+    float: right; }
+  #lightBox .expPic {
+    text-align: center; }
+    #lightBox .expPic h2 {
+      font-size: 26px;
+      color: #6cd5ff;
+      margin: 50px; }
+    #lightBox .expPic .pic {
+      width: 200px;
+      margin: auto;
+      position: relative; }
+      #lightBox .expPic .pic .attr {
+        position: absolute;
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        background-color: #094f91;
+        line-height: 65px;
+        font-size: 20px;
+        left: -20px;
+        top: -20px; }
+      #lightBox .expPic .pic img {
+        width: 100%; }
 
 footer {
   width: 100%;
