@@ -73,9 +73,61 @@
             <div class="bigPlt bigPltWater">
                 <img src="img/planetwater.png">
                 <div class="viewDot">
-                    <div id="p1V1">
-                        <div class="p1V1Dot"></div>  
-                        <div class="pulse"></div>  
+                    <div class="p1V1">
+                        <div id="p1V1Dot"></div>  
+                        <div class="pulse pulse3s"></div>
+                    </div>
+                    <div class="p1V2">
+                        <div id="p1V2Dot"></div>  
+                        <div class="pulse pulse6s"></div>
+                    </div>
+                    <div class="p1V3">
+                        <div id="p1V3Dot"></div>  
+                        <div class="pulse pulse0s"></div>
+                    </div>
+                    <div class="p1V4">
+                        <div id="p1V4Dot"></div>  
+                        <div class="pulse pulse3s"></div>
+                    </div>
+                    <div class="p1V5">
+                        <div id="p1V5Dot"></div>  
+                        <div class="pulse pulse0s"></div>
+                    </div>
+                    <div class="p1V6">
+                        <div id="p1V6Dot"></div>  
+                        <div class="pulse pulse6s"></div>
+                    </div>
+                    <div class="p1V7">
+                        <div id="p1V7Dot"></div>  
+                        <div class="pulse pulse6s"></div>
+                    </div>
+                    <div class="p1V8">
+                        <div id="p1V8Dot"></div>  
+                        <div class="pulse pulse3s"></div>
+                    </div>
+                    <div class="p1V9">
+                        <div id="p1V9Dot"></div>  
+                        <div class="pulse pulse0s"></div>
+                    </div>
+                    <div class="p1V10">
+                        <div id="p1V10Dot"></div>  
+                        <div class="pulse pulse0s"></div>
+                    </div>
+                    <div class="p1V11">
+                        <div id="p1V11Dot"></div>  
+                        <div class="pulse pulse3s"></div>
+                    </div>
+                    <div class="p1V12">
+                        <div id="p1V12Dot"></div>  
+                        <div class="pulse pulse6s"></div>
+                    </div>
+                    <div class="p1V13">
+                        <div id="p1V13Dot"></div>  
+                        <div class="pulse pulse0s"></div>
+                    </div>
+                    <div class="p1V14">
+                        <div id="p1V14Dot"></div>  
+                        <div class="pulse pulse3s"></div>
                     </div>
                 </div>
             </div>
@@ -134,34 +186,8 @@
             navigationPosition: "right" // 導行列位置
         });
     </script>
-    <script>
-        $(function(){
-            $('.choPlt1').on('click',function(){
-                $(this).css('left','5%');
-                $('.choPlt1 span').css('color','#fff');
-                $('.choPlt2').css('left','-5%');
-                $('.choPlt2 span').css('color','rgba(255, 255, 255, 0.5)');
-                $('.choPlt3').css('left','-5%');
-                $('.choPlt3 span').css('color','rgba(255, 255, 255, 0.5)');
-            });
-            $('.choPlt2').on('click',function(){
-                $(this).css('left','5%');
-                $('.choPlt2 span').css('color','#fff');
-                $('.choPlt1').css('left','-5%');
-                $('.choPlt1 span').css('color','rgba(255, 255, 255, 0.5)');
-                $('.choPlt3').css('left','-5%');
-                $('.choPlt3 span').css('color','rgba(255, 255, 255, 0.5)');
-            });
-            $('.choPlt3').on('click',function(){
-                $(this).css('left','5%');
-                $('.choPlt3 span').css('color','#fff');
-                $('.choPlt1').css('left','-5%');
-                $('.choPlt1 span').css('color','rgba(255, 255, 255, 0.5)');
-                $('.choPlt2').css('left','-5%');
-                $('.choPlt2 span').css('color','rgba(255, 255, 255, 0.5)');
-            });
-        });
-    </script>
+
+    <script src="/js/index.js"></script>
     <!-- <script src="js/tween.js"></script> -->
 </body>
 
