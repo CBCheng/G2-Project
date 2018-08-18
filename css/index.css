@@ -99,6 +99,7 @@ footer {
   margin: auto; }
 
 * {
+  outline: 1px solid #f00;
   box-sizing: border-box; }
 
 nav {
@@ -177,11 +178,11 @@ nav img {
 
 .part1, .part2, .part3, .part4 {
   background-size: cover;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
 
 .part1 {
-  background-image: url("../img/indexBg-part1.jpg");
-  position: relative; }
+  background-image: url("../img/indexBg-part1.jpg"); }
 
 .part2 {
   background-image: url("../img/indexBg-part2.jpg"); }
@@ -210,6 +211,9 @@ nav img {
 .choPlt3 {
   top: 70%;
   left: -5%; }
+
+.choPlanet.active {
+  left: 5%; }
 
 .choPlanet img {
   height: 100%;
@@ -494,3 +498,55 @@ nav img {
   100% {
     transform: scale(1);
     opacity: 0; } }
+
+.pt2Title {
+  width: 20%;
+  margin: auto;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 99%, rgba(0, 0, 0, 0.65) 100%); }
+
+.pt2Title h2 {
+  display: block;
+  color: #fff;
+  margin-left: 5%;
+  line-height: 120%;
+  font-weight: bold; }
+
+.pt2Eng {
+  padding-top: 40%;
+  width: 40%; }
+
+.pt2Cn {
+  width: 60%;
+  padding: 5% 0% 10% 0%; }
+
+.yesNoImg {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition-timing-function: cubic-bezier(0.17, 0.67, 0.41, 0.96);
+  transition: 2s; }
+
+.noImg {
+  clip-path: circle(0% at 76.5% 70%); }
+
+.yesImg {
+  left: 0;
+  bottom: 0;
+  width: 110%;
+  height: 117%;
+  clip-path: circle(0% at 20.5% 68.5%); }
+
+.yesNo {
+  position: absolute;
+  top: 65%;
+  width: 15%;
+  border-radius: 50%;
+  padding-bottom: 15%;
+  transition: 1s; }
+
+.no {
+  left: 69%; }
+
+.yes {
+  left: 15%; }

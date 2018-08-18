@@ -1,16 +1,40 @@
 $(function(){
     var colorOr = 'rgba(255, 255, 255, 0.5)';
-    $('.choPlanet').on('click',function(){
+    $('.choPlanet').on('click',function(event){
+        event.stopPropagation();
         $(this).css('left','5%');
         $('.choPlanet').not(this).css('left','-5%');
         $('.choPlanet span').css('color',colorOr);
-        $(this).children('span').css('color','#fff');
+        $(this).children('span').css('color','rgb(255, 255, 255)');
         var num = $(this).index();
         $('.bigPlt').css({'transform':'scale(0)',
                         'z-index':'0'});
         $('.bigPlt').eq(num).css({'transform':'scale(1)',
                         'z-index':'2'});
+        $(this).unbind('mouseout');
     });
+    var ans = $('.choPlanet').parent().width()*5/100;
+        
+        $('.choPlanet').mouseover(function(e){
+            //console.log(ans);
+            //console.log($(this).css('left'));
+            if($(this).css('left')== ans+'px'){
+                return;
+            } else{
+                $(this).children('span').css('color','#fff');
+                $('.choPlanet').mouseout(function(){
+                    if($(this).css('left')> '-'+ans+'px'){
+                        $(this).children('span').css('color','#fff');
+                    }else{
+                        $(this).children('span').css('color',colorOr);
+                    }
+                    
+                });
+            }
+        });
+        
+       
+        
 });
 
 $(function(){
@@ -80,5 +104,22 @@ $(function(){
             pulseEle.style.animation = aniOr6s;
         }
     }
-
+});
+$(function(){
+    $('.no').on('mouseover',function(){
+        $('.noImg').css('clip-path','circle(110% at 76.5% 70%)');
+        $('.yes').css('opacity','0');
+    });
+    $('.no').on('mouseout',function(){
+        $('.noImg').css('clip-path','circle(0% at 76.5% 70%)');
+        $('.yes').css('opacity','1');
+    });
+    $('.yes').on('mouseover',function(){
+        $('.yesImg').css('clip-path','circle(100% at 20.5% 68.5%)');
+        $('.no').css('opacity','0');
+    });
+    $('.yes').on('mouseout',function(){
+        $('.yesImg').css('clip-path','circle(0% at 20.5% 68.5%)');
+        $('.no').css('opacity','1');
+    });
 });
