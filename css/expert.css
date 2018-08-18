@@ -285,7 +285,8 @@ nav {
       font-size: 22px;
       margin: 15px; }
     .grid .element-item img {
-      width: 160px; }
+      width: 160px;
+      cursor: pointer; }
     .grid .element-item h3 {
       color: #ffffff;
       font-size: 20px;
@@ -323,25 +324,32 @@ nav {
   display: block;
   clear: both; }
 
-#lightBox {
+#lightBox1 {
+  position: fixed;
+  top: 200px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 900;
   width: 1200px;
   margin: auto;
   background-color: rgba(0, 0, 0, 0.8);
   border: 3px solid rgba(108, 213, 255, 0.5); }
-  #lightBox img {
+  #lightBox1 #closeBtn {
     width: 50px;
-    float: right; }
-  #lightBox .expPic {
+    float: right;
+    cursor: pointer; }
+  #lightBox1 .expPic {
     text-align: center; }
-    #lightBox .expPic h2 {
+    #lightBox1 .expPic h2 {
       font-size: 26px;
       color: #6cd5ff;
       margin: 50px; }
-    #lightBox .expPic .pic {
+    #lightBox1 .expPic .pic {
       width: 200px;
       margin: auto;
       position: relative; }
-      #lightBox .expPic .pic .attr {
+      #lightBox1 .expPic .pic .attr {
         position: absolute;
         width: 65px;
         height: 65px;
@@ -351,7 +359,7 @@ nav {
         font-size: 20px;
         left: -20px;
         top: -20px; }
-      #lightBox .expPic .pic img {
+      #lightBox1 .expPic .pic img {
         width: 100%; }
 
 footer {
