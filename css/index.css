@@ -555,6 +555,13 @@ nav img {
     left: 20%;
     color: #fff;
     font: 5vw 微軟正黑體; }
+  .yesNo p {
+    position: absolute;
+    top: 28%;
+    left: 17%;
+    color: #fff;
+    font: 1.5vw 微軟正黑體;
+    text-align: center; }
 
 .no {
   left: 69.2%; }
