@@ -113,7 +113,7 @@ $(function(){
                     'box-shadow':boxSdoCh,
                     'z-index':'5'});
         $('.noImg').css({'clip-path':'circle(110% at 76.5% 70%)',
-                    'z-index':'5'});
+        'z-index':'5'});
         $('.yes').css('opacity','0');
     });
     $('.no').on('mouseout',function(){
@@ -121,7 +121,7 @@ $(function(){
                     'box-shadow':boxSdoOr,
                     'z-index':'0'});
         $('.noImg').css({'clip-path':'circle(0% at 76.5% 70%)',
-                    'z-index':'0'});
+        'z-index':'0'});
         $('.yes').css('opacity','1');
     });
     //--------------
