@@ -70,6 +70,24 @@ p {
 * {
   box-sizing: border-box; }
 
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+  background: #202164; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #95cce4;
+  border-radius: 10px; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2f83ad; }
+
 img {
   width: 100%;
   vertical-align: middle; }
@@ -242,8 +260,7 @@ nav {
 
 .panel {
   width: 1200px;
-  margin: auto;
-  margin-top: 100px; }
+  margin: 100px auto; }
 
 /* ---- button ---- */
 .button-group {
@@ -284,9 +301,22 @@ nav {
     .grid .element-item h2 {
       font-size: 22px;
       margin: 15px; }
-    .grid .element-item img {
+    .grid .element-item .pic {
       width: 160px;
+      margin: auto;
+      position: relative;
       cursor: pointer; }
+      .grid .element-item .pic .attr {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        line-height: 50px;
+        font-size: 16px;
+        left: -20px;
+        top: -10px; }
+      .grid .element-item .pic img {
+        width: 100%; }
     .grid .element-item h3 {
       color: #ffffff;
       font-size: 20px;
@@ -310,14 +340,20 @@ nav {
     border: 3px solid rgba(108, 213, 255, 0.5); }
     .grid .element-item.blue h2 {
       color: #6cd5ff; }
+    .grid .element-item.blue .pic .attr {
+      background-color: #094f91; }
   .grid .element-item.orange {
     border: 3px solid rgba(207, 169, 114, 0.5); }
     .grid .element-item.orange h2 {
       color: #cfa972; }
+    .grid .element-item.orange .pic .attr {
+      background-color: #ad7f43; }
   .grid .element-item.green {
     border: 3px solid rgba(128, 194, 105, 0.5); }
     .grid .element-item.green h2 {
       color: #80c269; }
+    .grid .element-item.green .pic .attr {
+      background-color: #486a00; }
 
 #lightBox:after {
   content: "";
@@ -325,42 +361,129 @@ nav {
   clear: both; }
 
 #lightBox1 {
-  position: fixed;
-  top: 200px;
-  left: 0;
-  right: 0;
-  margin: auto;
-  z-index: 900;
-  width: 1200px;
-  margin: auto;
-  background-color: rgba(0, 0, 0, 0.8);
+  width: 960px;
+  height: 600px;
+  overflow: auto;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.9);
   border: 3px solid rgba(108, 213, 255, 0.5); }
   #lightBox1 #closeBtn {
     width: 50px;
     float: right;
     cursor: pointer; }
-  #lightBox1 .expPic {
-    text-align: center; }
-    #lightBox1 .expPic h2 {
-      font-size: 26px;
-      color: #6cd5ff;
-      margin: 50px; }
-    #lightBox1 .expPic .pic {
+  #lightBox1 h1 {
+    color: #6cd5ff;
+    margin-top: 50px; }
+  #lightBox1 h2 {
+    margin-top: 30px; }
+  #lightBox1 .content {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; }
+    #lightBox1 .content .expPic {
+      margin: 0 50px;
       width: 200px;
-      margin: auto;
       position: relative; }
-      #lightBox1 .expPic .pic .attr {
+      #lightBox1 .content .expPic .attr {
         position: absolute;
         width: 65px;
         height: 65px;
-        border-radius: 50%;
         background-color: #094f91;
+        border-radius: 50%;
         line-height: 65px;
         font-size: 20px;
         left: -20px;
         top: -20px; }
-      #lightBox1 .expPic .pic img {
+      #lightBox1 .content .expPic img {
         width: 100%; }
+    #lightBox1 .content .data {
+      margin: 0 50px;
+      text-align: justify; }
+      #lightBox1 .content .data h3 {
+        font-size: 22px;
+        margin: 15px 0;
+        text-align: center; }
+      #lightBox1 .content .data .chart {
+        margin-top: 30px; }
+        #lightBox1 .content .data .chart span {
+          font-size: 18px;
+          margin-right: 10px;
+          line-height: 1.8; }
+        #lightBox1 .content .data .chart .line {
+          width: 50px;
+          height: 10px;
+          background-color: #aaa;
+          display: inline-block;
+          border-radius: 5px; }
+        #lightBox1 .content .data .chart .line.focus {
+          width: 100px;
+          background-color: #6cd5ff; }
+    #lightBox1 .content .collect, #lightBox1 .content .writeComment {
+      margin: 10px; }
+      #lightBox1 .content .collect #heart, #lightBox1 .content .collect #write, #lightBox1 .content .writeComment #heart, #lightBox1 .content .writeComment #write {
+        width: 28px;
+        height: 26px;
+        cursor: pointer; }
+      #lightBox1 .content .collect .txt, #lightBox1 .content .writeComment .txt {
+        font-size: 16px;
+        line-height: 2.5; }
+      #lightBox1 .content .collect #Cnum, #lightBox1 .content .collect #Wnum, #lightBox1 .content .writeComment #Cnum, #lightBox1 .content .writeComment #Wnum {
+        font-size: 14px;
+        color: #aaaaaa; }
+  #lightBox1 .comment {
+    width: 60%;
+    margin: 80px auto; }
+    #lightBox1 .comment h2 {
+      text-align: justify; }
+    #lightBox1 .comment .score {
+      text-align: right; }
+      #lightBox1 .comment .score p {
+        display: inline;
+        font-size: 20px;
+        padding-right: 10px; }
+      #lightBox1 .comment .score span {
+        font-size: 16px;
+        padding-right: 5px; }
+      #lightBox1 .comment .score img {
+        vertical-align: text-bottom;
+        width: 20px; }
+    #lightBox1 .comment .message {
+      border-bottom: 1px dashed rgba(108, 213, 255, 0.5);
+      margin: 20px auto 0;
+      padding-bottom: 20px;
+      width: 100%; }
+      #lightBox1 .comment .message .user {
+        width: 100%;
+        height: 80px;
+        position: relative; }
+        #lightBox1 .comment .message .user .name {
+          position: absolute;
+          left: 60px;
+          top: 10px;
+          width: 100px;
+          height: 34px;
+          background-color: #094f91;
+          font-size: 16px;
+          line-height: 34px;
+          letter-spacing: 2px; }
+        #lightBox1 .comment .message .user img {
+          position: absolute;
+          left: 0;
+          width: 80px;
+          border-radius: 50%; }
+        #lightBox1 .comment .message .user p {
+          position: absolute;
+          bottom: 0;
+          left: 90px;
+          font-size: 16px; }
+
+footer img {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0.5; }
 
 footer {
   width: 100%;
