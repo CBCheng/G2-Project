@@ -36,8 +36,8 @@ $(function(){
 
 //====== planet dot hover ======
 $(function(){
-    var borCh = '6px solid #6cd5ff';
-    var borOr = '6px solid #fff';
+    var borCh = '4px solid #6cd5ff';
+    var borOr = '4px solid #fff';
     var aniCh = 'dotHover 0.8s infinite';
     var aniOr0s = 'dotHover2 4.8s infinite';
     var aniOr6s = 'dotHover2 4.8s 6s infinite';
@@ -105,40 +105,40 @@ $(function(){
 });
 
 //====== yes&no hover ======
-$(function(){
-    var boxSdoCh = "0px 0px 30px 5px #000 inset";
-    var boxSdoOr = "0px 0px 0px 0px #000 inset";
-    $('.no').on('mouseover',function(){
-        $(this).css({'border':'2px solid #000',
-                    'box-shadow':boxSdoCh,
-                    'z-index':'5'});
-        $('.noImg').css({'clip-path':'circle(110% at 76.5% 70%)',
-        'z-index':'5'});
-        $('.yes').css('opacity','0');
-    });
-    $('.no').on('mouseout',function(){
-        $(this).css({'border':'2px solid #6cd5ff',
-                    'box-shadow':boxSdoOr,
-                    'z-index':'0'});
-        $('.noImg').css({'clip-path':'circle(0% at 76.5% 70%)',
-        'z-index':'0'});
-        $('.yes').css('opacity','1');
-    });
-    //--------------
-    $('.yes').on('mouseover',function(){
-        $(this).css({'border':'2px solid #000',
-                    'box-shadow':boxSdoCh,
-                    'z-index':'5'});
-        $('.yesImg').css({'clip-path':'circle(110% at 20.5% 68.5%)',
-                        'z-index':'5'});
-        $('.no').css('opacity','0');
-    });
-    $('.yes').on('mouseout',function(){
-        $(this).css({'border':'2px solid #6cd5ff',
-                    'box-shadow':boxSdoOr,
-                    'z-index':'0'});
-        $('.yesImg').css({'clip-path':'circle(0% at 20.5% 68.5%)',
-                        'z-index':'0'});
-        $('.no').css('opacity','1');
-    });
-});
+// $(function(){
+//     var boxSdoCh = "0px 0px 30px 5px #000 inset";
+//     var boxSdoOr = "0px 0px 0px 0px #000 inset";
+//     $('.no').on('mouseover',function(){
+//         // $(this).css({'border':'2px solid #000',
+//         //             'box-shadow':boxSdoCh,
+//         //             'z-index':'5'});
+//         $('.noImg').css({'clip-path':'circle(110% at 76.5% 70%)',
+//         'z-index':'5'});
+//         // $('.yes').css('opacity','0');
+//     });
+//     $('.no').on('mouseout',function(){
+//         // $(this).css({'border':'2px solid #6cd5ff',
+//         //             'box-shadow':boxSdoOr,
+//         //             'z-index':'0'});
+//         $('.noImg').css({'clip-path':'circle(0% at 76.5% 70%)',
+//         'z-index':'0'});
+//         // $('.yes').css('opacity','1');
+//     });
+//     //--------------
+//     $('.yes').on('mouseover',function(){
+//         // $(this).css({'border':'2px solid #000',
+//         //             'box-shadow':boxSdoCh,
+//         //             'z-index':'5'});
+//         $('.yesImg').css({'clip-path':'circle(110% at 20.5% 68.5%)',
+//                         'z-index':'5'});
+//         // $('.no').css('opacity','0');
+//     });
+//     $('.yes').on('mouseout',function(){
+//         // $(this).css({'border':'2px solid #6cd5ff',
+//         //             'box-shadow':boxSdoOr,
+//         //             'z-index':'0'});
+//         $('.yesImg').css({'clip-path':'circle(0% at 20.5% 68.5%)',
+//                         'z-index':'0'});
+//         // $('.no').css('opacity','1');
+//     });
+// });

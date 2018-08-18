@@ -23,7 +23,7 @@ a{
 @import "layout/desktop";
 
 *{
-    outline: 1px solid #f00;
+    // outline: 1px solid #f00;
     box-sizing: border-box;
 }
 nav{
@@ -103,10 +103,25 @@ nav img{
 .member a:hover,.menu a:hover,.memberSelect a:hover{
     color:$fontColorBlue;
 }
-.part1,.part2,.part3,.part4{
-    background-size: cover;
-    overflow: hidden;
+
+#section1{
+    width: 100%;
+    height: 0;
+    padding-bottom: 50%;
     position: relative;
+}
+#section2{
+    width: 100%;
+    height: 0;
+    padding-bottom: 50%;
+    position: relative;
+}
+.part1,.part2,.part3,.part4{
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
 }
 .part1{
     background-image: url("../img/indexBg-part1.jpg"); 
@@ -252,7 +267,7 @@ nav img{
     border-radius: 30px;  
     z-index: 5;  
     opacity: 0;
-    border: 6px solid #fff;
+    border: 4px solid #fff;
 }
 .pulse0s{
     animation: dotHover2 4.8s infinite;
@@ -387,24 +402,21 @@ nav img{
 .yesNoImg{
     position: absolute;
     width: 100%;
-    top: 0;
+    height: 110%;
+    top: -10%;
     left: 0;
     transition-timing-function:cubic-bezier(.17,.67,.41,.96);
     transition: 1s;
 }
 .noImg{
-    clip-path: circle(0% at 76.5% 70%);
+    clip-path: circle(100% at 76.5% 70%);
 }
 .yesImg{
-    // left: 0;
-    // bottom: 0;
-    // width: 110%;
-    // height: 117%;
     clip-path: circle(0% at 20.5% 68.5%);
 }
 .yesNo{
     position: absolute;
-    top: 64%;
+    top: 52.7%;
     width: 15%;
     border-radius: 50%;
     border: 2px solid #6cd5ff;
@@ -414,10 +426,20 @@ nav img{
     transition: 1s;
 }
 .no{
-    left: 69.5%;
+    left: 69.2%;
 }
 .yes{
     left: 13%;
+}
+.yesNo{
+    span{
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #fff;
+        font: 20px 微軟正黑體;
+        //font-size: 50px;
+    }
 }
 // <!-- part2 end -->
 // <!-- part1 end -->
