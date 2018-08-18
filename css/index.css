@@ -175,13 +175,27 @@ nav img {
 .member a:hover, .menu a:hover, .memberSelect a:hover {
   color: #6cd5ff; }
 
+#section1 {
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%;
+  position: relative; }
+
+#section2 {
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%;
+  position: relative; }
+
 .part1, .part2, .part3, .part4 {
-  background-size: cover;
-  overflow: hidden; }
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute; }
 
 .part1 {
-  background-image: url("../img/indexBg-part1.jpg");
-  position: relative; }
+  background-image: url("../img/indexBg-part1.jpg"); }
 
 .part2 {
   background-image: url("../img/indexBg-part2.jpg"); }
@@ -198,6 +212,20 @@ nav img {
   transition: .5s;
   cursor: pointer;
   position: absolute; }
+  .choPlanet img {
+    height: 100%;
+    position: absolute; }
+  .choPlanet .planetBg {
+    height: 180%;
+    top: -37%;
+    right: 10%; }
+  .choPlanet span {
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 40%;
+    right: -70%;
+    z-index: 5;
+    font: 250% 微軟正黑體; }
 
 .choPlt1 {
   top: 20%;
@@ -211,23 +239,6 @@ nav img {
   top: 70%;
   left: -5%; }
 
-.choPlanet img {
-  height: 100%;
-  position: absolute; }
-
-.choPlanet .planetBg {
-  height: 180%;
-  top: -37%;
-  right: 10%; }
-
-.choPlanet span {
-  color: rgba(255, 255, 255, 0.5);
-  position: absolute;
-  top: 40%;
-  right: -70%;
-  z-index: 5;
-  font: 250% 微軟正黑體; }
-
 .choPlt2 span {
   color: #fff; }
 
@@ -237,9 +248,8 @@ nav img {
   top: 21%;
   left: 32%;
   transition: .5s; }
-
-.bigPlt img {
-  width: 100%; }
+  .bigPlt img {
+    width: 100%; }
 
 .bigPltSan, .bigPltTree {
   transform: scale(0); }
@@ -411,7 +421,7 @@ nav img {
   border-radius: 30px;
   z-index: 5;
   opacity: 0;
-  border: 6px solid #fff; }
+  border: 4px solid #fff; }
 
 .pulse0s {
   animation: dotHover2 4.8s infinite; }
@@ -456,8 +466,6 @@ nav img {
   100% {
     transform: scale(1);
     opacity: 0; } }
-<<<<<<< HEAD
-=======
 
 @keyframes dotHover2 {
   0% {
@@ -496,4 +504,67 @@ nav img {
   100% {
     transform: scale(1);
     opacity: 0; } }
->>>>>>> 1ea17b408108070becde871862fada9807d71521
+
+.pt2Title {
+  width: 20%;
+  padding-top: 10%;
+  margin: auto;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 99%, rgba(0, 0, 0, 0.65) 100%); }
+
+.pt2Title h2 {
+  display: block;
+  color: #fff;
+  margin-left: 5%;
+  line-height: 120%;
+  font-weight: bold; }
+
+.pt2Eng {
+  padding-top: 40%;
+  width: 40%; }
+
+.pt2Cn {
+  width: 60%;
+  padding: 5% 0% 10% 0%; }
+
+.yesNoImg {
+  position: absolute;
+  width: 100%;
+  height: 110%;
+  top: -10%;
+  left: 0;
+  transition-timing-function: cubic-bezier(0.17, 0.67, 0.41, 0.96);
+  transition: 1s; }
+
+.noImg {
+  clip-path: circle(0% at 76.7% 71%); }
+
+.yesImg {
+  clip-path: circle(0% at 20.5% 70.9%); }
+
+.yesNo {
+  position: absolute;
+  top: 52.7%;
+  width: 15%;
+  border-radius: 50%;
+  border: 2px solid #6cd5ff;
+  padding-bottom: 15%;
+  transition: 1s; }
+  .yesNo span {
+    position: absolute;
+    top: 28%;
+    left: 20%;
+    color: #fff;
+    font: 5vw 微軟正黑體; }
+  .yesNo p {
+    position: absolute;
+    top: 28%;
+    left: 17%;
+    color: #fff;
+    font: 1.5vw 微軟正黑體;
+    text-align: center; }
+
+.no {
+  left: 69.2%; }
+
+.yes {
+  left: 13%; }
