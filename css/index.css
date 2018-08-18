@@ -212,6 +212,20 @@ nav img {
   transition: .5s;
   cursor: pointer;
   position: absolute; }
+  .choPlanet img {
+    height: 100%;
+    position: absolute; }
+  .choPlanet .planetBg {
+    height: 180%;
+    top: -37%;
+    right: 10%; }
+  .choPlanet span {
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 40%;
+    right: -70%;
+    z-index: 5;
+    font: 250% 微軟正黑體; }
 
 .choPlt1 {
   top: 20%;
@@ -225,26 +239,6 @@ nav img {
   top: 70%;
   left: -5%; }
 
-.choPlanet.active {
-  left: 5%; }
-
-.choPlanet img {
-  height: 100%;
-  position: absolute; }
-
-.choPlanet .planetBg {
-  height: 180%;
-  top: -37%;
-  right: 10%; }
-
-.choPlanet span {
-  color: rgba(255, 255, 255, 0.5);
-  position: absolute;
-  top: 40%;
-  right: -70%;
-  z-index: 5;
-  font: 250% 微軟正黑體; }
-
 .choPlt2 span {
   color: #fff; }
 
@@ -254,9 +248,8 @@ nav img {
   top: 21%;
   left: 32%;
   transition: .5s; }
-
-.bigPlt img {
-  width: 100%; }
+  .bigPlt img {
+    width: 100%; }
 
 .bigPltSan, .bigPltTree {
   transform: scale(0); }
@@ -514,6 +507,7 @@ nav img {
 
 .pt2Title {
   width: 20%;
+  padding-top: 10%;
   margin: auto;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 99%, rgba(0, 0, 0, 0.65) 100%); }
 
@@ -542,10 +536,10 @@ nav img {
   transition: 1s; }
 
 .noImg {
-  clip-path: circle(100% at 76.5% 70%); }
+  clip-path: circle(0% at 76.7% 71%); }
 
 .yesImg {
-  clip-path: circle(0% at 20.5% 68.5%); }
+  clip-path: circle(0% at 20.5% 70.9%); }
 
 .yesNo {
   position: absolute;
@@ -555,16 +549,15 @@ nav img {
   border: 2px solid #6cd5ff;
   padding-bottom: 15%;
   transition: 1s; }
+  .yesNo span {
+    position: absolute;
+    top: 28%;
+    left: 20%;
+    color: #fff;
+    font: 5vw 微軟正黑體; }
 
 .no {
   left: 69.2%; }
 
 .yes {
   left: 13%; }
-
-.yesNo span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: #fff;
-  font: 20px 微軟正黑體; }
