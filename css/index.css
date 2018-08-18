@@ -525,28 +525,25 @@ nav img {
   top: 0;
   left: 0;
   transition-timing-function: cubic-bezier(0.17, 0.67, 0.41, 0.96);
-  transition: 2s; }
+  transition: 1s; }
 
 .noImg {
   clip-path: circle(0% at 76.5% 70%); }
 
 .yesImg {
-  left: 0;
-  bottom: 0;
-  width: 110%;
-  height: 117%;
   clip-path: circle(0% at 20.5% 68.5%); }
 
 .yesNo {
   position: absolute;
-  top: 65%;
+  top: 64%;
   width: 15%;
   border-radius: 50%;
+  border: 2px solid #6cd5ff;
   padding-bottom: 15%;
   transition: 1s; }
 
 .no {
-  left: 69%; }
+  left: 69.5%; }
 
 .yes {
-  left: 15%; }
+  left: 13%; }

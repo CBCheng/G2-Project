@@ -1,3 +1,4 @@
+//====== planet move&hover ======
 $(function(){
     var colorOr = 'rgba(255, 255, 255, 0.5)';
     $('.choPlanet').on('click',function(event){
@@ -13,30 +14,27 @@ $(function(){
                         'z-index':'2'});
         $(this).unbind('mouseout');
     });
+
     var ans = $('.choPlanet').parent().width()*5/100;
-        
-        $('.choPlanet').mouseover(function(e){
-            //console.log(ans);
-            //console.log($(this).css('left'));
-            if($(this).css('left')== ans+'px'){
-                return;
-            } else{
-                $(this).children('span').css('color','#fff');
-                $('.choPlanet').mouseout(function(){
-                    if($(this).css('left')> '-'+ans+'px'){
-                        $(this).children('span').css('color','#fff');
-                    }else{
-                        $(this).children('span').css('color',colorOr);
-                    }
-                    
-                });
-            }
-        });
-        
-       
-        
+    $('.choPlanet').mouseover(function(e){
+        //console.log(ans);
+        //console.log($(this).css('left'));
+        if($(this).css('left')== ans+'px'){
+            return;
+        } else{
+            $(this).children('span').css('color','#fff');
+            $('.choPlanet').mouseout(function(){
+                if($(this).css('left')> '-'+ans+'px'){
+                    $(this).children('span').css('color','#fff');
+                }else{
+                    $(this).children('span').css('color',colorOr);
+                }
+            });
+        }
+    });
 });
 
+//====== planet dot hover ======
 $(function(){
     var borCh = '6px solid #6cd5ff';
     var borOr = '6px solid #fff';
@@ -105,21 +103,42 @@ $(function(){
         }
     }
 });
+
+//====== yes&no hover ======
 $(function(){
+    var boxSdoCh = "0px 0px 30px 5px #000 inset";
+    var boxSdoOr = "0px 0px 0px 0px #000 inset";
     $('.no').on('mouseover',function(){
-        $('.noImg').css('clip-path','circle(110% at 76.5% 70%)');
+        $(this).css({'border':'2px solid #000',
+                    'box-shadow':boxSdoCh,
+                    'z-index':'5'});
+        $('.noImg').css({'clip-path':'circle(110% at 76.5% 70%)',
+        'z-index':'5'});
         $('.yes').css('opacity','0');
     });
     $('.no').on('mouseout',function(){
-        $('.noImg').css('clip-path','circle(0% at 76.5% 70%)');
+        $(this).css({'border':'2px solid #6cd5ff',
+                    'box-shadow':boxSdoOr,
+                    'z-index':'0'});
+        $('.noImg').css({'clip-path':'circle(0% at 76.5% 70%)',
+        'z-index':'0'});
         $('.yes').css('opacity','1');
     });
+    //--------------
     $('.yes').on('mouseover',function(){
-        $('.yesImg').css('clip-path','circle(100% at 20.5% 68.5%)');
+        $(this).css({'border':'2px solid #000',
+                    'box-shadow':boxSdoCh,
+                    'z-index':'5'});
+        $('.yesImg').css({'clip-path':'circle(110% at 20.5% 68.5%)',
+                        'z-index':'5'});
         $('.no').css('opacity','0');
     });
     $('.yes').on('mouseout',function(){
-        $('.yesImg').css('clip-path','circle(0% at 20.5% 68.5%)');
+        $(this).css({'border':'2px solid #6cd5ff',
+                    'box-shadow':boxSdoOr,
+                    'z-index':'0'});
+        $('.yesImg').css({'clip-path':'circle(0% at 20.5% 68.5%)',
+                        'z-index':'0'});
         $('.no').css('opacity','1');
     });
 });
