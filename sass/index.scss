@@ -23,7 +23,7 @@ a{
 @import "layout/desktop";
 
 *{
-    // outline: 1px solid #f00;
+    outline: 1px solid #f00;
     box-sizing: border-box;
 }
 nav{
@@ -106,10 +106,10 @@ nav img{
 .part1,.part2,.part3,.part4{
     background-size: cover;
     overflow: hidden;
+    position: relative;
 }
 .part1{
-    background-image: url("../img/indexBg-part1.jpg");
-    position: relative;
+    background-image: url("../img/indexBg-part1.jpg"); 
 }
 .part2{
     background-image: url("../img/indexBg-part2.jpg");
@@ -139,6 +139,9 @@ nav img{
 .choPlt3{
     top: 70%;
     left: -5%;
+}
+.choPlanet.active{
+    left: 5%;
 }
 .choPlanet{
     img{
@@ -240,18 +243,6 @@ nav img{
     z-index: 6;
     cursor: pointer;
 }
-// #p1V1Dot,#p1V2Dot,#p1V3Dot,#p1V4Dot,#p1V5Dot,#p1V6Dot,#p1V7Dot,
-// #p1V8Dot,#p1V9Dot,#p1V10Dot,#p1V11Dot,#p1V12Dot,#p1V13Dot,#p1V14Dot{
-//     position: absolute;
-//     top: 35%;
-//     left: 35%;
-//     width: 30%;  
-//     height: 30%;
-//     background-color: #fff; 
-//     border-radius: 20px;  
-//     z-index: 6;
-//     cursor: pointer;
-// }
 .pulse{
     position: absolute;  
     width: 100%;   
@@ -318,8 +309,6 @@ nav img{
         opacity: 0;  
     }
 }
-<<<<<<< HEAD
-=======
 @keyframes dotHover2 { 
     0% {  
         transform: scale(0);  
@@ -370,5 +359,65 @@ nav img{
         opacity: 0;  
     }
 }
->>>>>>> 1ea17b408108070becde871862fada9807d71521
+// <!-- part1 end -->
+// <!-- part2 start -->
+.pt2Title{
+    width: 20%;
+    // height: 50%;
+    margin: auto;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 99%,rgba(0,0,0,0.65) 100%);
+}
+.pt2Title{
+    h2{
+        display: block;
+        color: #fff;
+        margin-left: 5%;
+        line-height: 120%;
+        font-weight: bold;
+    }
+}
+.pt2Eng{
+    padding-top: 40%;
+    width: 40%;
+}
+.pt2Cn{
+    width: 60%;
+    padding: 5% 0% 10% 0%;
+}
+.yesNoImg{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition-timing-function:cubic-bezier(.17,.67,.41,.96);
+    transition: 1s;
+}
+.noImg{
+    clip-path: circle(0% at 76.5% 70%);
+}
+.yesImg{
+    // left: 0;
+    // bottom: 0;
+    // width: 110%;
+    // height: 117%;
+    clip-path: circle(0% at 20.5% 68.5%);
+}
+.yesNo{
+    position: absolute;
+    top: 64%;
+    width: 15%;
+    border-radius: 50%;
+    border: 2px solid #6cd5ff;
+    //background-color: #000;
+    //box-shadow: 0px 0px 50px 20px black inset;
+    padding-bottom: 15%;
+    transition: 1s;
+}
+.no{
+    left: 69.5%;
+}
+.yes{
+    left: 13%;
+}
+// <!-- part2 end -->
 // <!-- part1 end -->
