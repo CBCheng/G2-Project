@@ -160,11 +160,6 @@ $(function(){
                                     'box-shadow':'0px 0px 20px 2px #000'});
         $(this).children('.scWhite').css('transform','scaleX(6.5)');
         $(this).children('.scBlack').css('transform','scaleX(4.5)');
-        // var exNum = $(this).index();
-        // $('.bigPlt').css({'transform':'scale(0)',
-        //                 'z-index':'0'});
-        // $('.bigPlt').eq(num).css({'transform':'scale(1)',
-        //                 'z-index':'2'});
     });
     $('.expertAll').on('mouseout',function(){
         $(this).css('z-index','5');
