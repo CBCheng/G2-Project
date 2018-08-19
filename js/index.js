@@ -112,33 +112,41 @@ $(function(){
         $(this).css({'border':'2px solid #000',
                     'box-shadow':boxSdoCh,
                     'z-index':'5'});
-        $('.noImg').css({'clip-path':'circle(110% at 76.5% 70%)',
+        $('.noImg').css({'clip-path':'circle(110% at 76.7% 71%)',
         'z-index':'5'});
         $('.yes').css('opacity','0');
+        $('.no span').css('opacity','0');
+        $('.no').children().not('span').css('opacity','1');
     });
     $('.no').on('mouseout',function(){
         $(this).css({'border':'2px solid #6cd5ff',
                     'box-shadow':boxSdoOr,
                     'z-index':'0'});
-        $('.noImg').css({'clip-path':'circle(0% at 76.5% 70%)',
+        $('.noImg').css({'clip-path':'circle(0% at 76.7% 71%)',
         'z-index':'0'});
         $('.yes').css('opacity','1');
+        $('.no span').css('opacity','1');
+        $('.no').children().not('span').css('opacity','0');
     });
     //--------------
     $('.yes').on('mouseover',function(){
         $(this).css({'border':'2px solid #000',
                     'box-shadow':boxSdoCh,
                     'z-index':'5'});
-        $('.yesImg').css({'clip-path':'circle(110% at 20.5% 68.5%)',
+        $('.yesImg').css({'clip-path':'circle(110% at 20.7% 70.4%)',
                         'z-index':'5'});
         $('.no').css('opacity','0');
+        $('.yes span').css('opacity','0');
+        $('.yes').children().not('span').css('opacity','1');
     });
     $('.yes').on('mouseout',function(){
         $(this).css({'border':'2px solid #6cd5ff',
                     'box-shadow':boxSdoOr,
                     'z-index':'0'});
-        $('.yesImg').css({'clip-path':'circle(0% at 20.5% 68.5%)',
+        $('.yesImg').css({'clip-path':'circle(0% at 20.7% 70.4%)',
                         'z-index':'0'});
         $('.no').css('opacity','1');
+        $('.yes span').css('opacity','1');
+        $('.yes').children().not('span').css('opacity','0');
     });
 });
