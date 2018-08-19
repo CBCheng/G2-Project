@@ -150,3 +150,23 @@ $(function(){
         $('.yes').children().not('span').css('opacity','0');
     });
 });
+
+//====== expert hover ======
+$(function(){
+    $('.expertAll').on('mouseover',function(){
+        $(this).css('z-index','5');
+        $('.expertAll').not(this).css('z-index','0');
+        $(this).children('img').css({'transform':'scale(1.1)',
+                                    'box-shadow':'0px 0px 20px 2px #000'});
+        $(this).children('.scWhite').css('transform','scaleX(6.5)');
+        $(this).children('.scBlack').css('transform','scaleX(4.5)');
+    });
+    $('.expertAll').on('mouseout',function(){
+        $(this).css('z-index','5');
+        $('.expertAll').not(this).css('z-index','0');
+        $(this).children('img').css({'transform':'scale(1)',
+                                    'box-shadow':'0px 0px 0px 0px #000'});
+        $(this).children('.scWhite').css('transform','scaleX(1)');
+        $(this).children('.scBlack').css('transform','scaleX(1)');
+    });
+});
