@@ -12,7 +12,9 @@ $attrBlue: #094f91;
 $attrOrange: #ad7f43;
 $attrGreen: #486a00;
 
-
+body{
+    // background-attachment: fixed;
+}
 
 * {
     // outline: 1px solid #f00;
@@ -55,14 +57,28 @@ a {
 }
 
 @import "layout/nav";
-@include respond(small) {}
+@include respond(small) {
+    .title{
+        top:100px;
+        h1{font-size: 20px;}
+    }
+}
 
-@include respond(medium) {}
+@include respond(medium) {
+    .title{
+        top: 200px;
+    }
+}
 
-@include respond(desktop) {}
+@include respond(desktop) {
+    .title{
+        top: 200px;
+        
+    }
+}
 
 .title {
-    top: 200px;
+    
     position: relative;
     margin: auto;
     width: 100%;
@@ -184,22 +200,25 @@ a {
     justify-content: space-around;
     align-items: center;
     .cloud1 {
-        width: 700px;
+        width: 50%;
+        min-width: 350px;
     }
     .cloud2 {
-        width: 500px;
+        width: 35%;
+        min-width: 250px;
     }
 }
 
-// .bgz{
-//     // background-image: url(../img/filterBg.png);
-//     background-size: cover;
-    
-// }
+
 .panel {
     // outline: 1px solid #fff;
     width: 1200px;
     margin: 100px auto;
+}
+@media screen and (max-width: 1200px){
+    .panel{
+        width: 90%;
+    }
 }
 
 /* ---- button ---- */
@@ -243,7 +262,7 @@ a {
         margin: 25px;
         border: 3px solid rgba(108, 213, 255, 0.5);
         box-shadow: 0 0 5px 3px rgba(255, 255, 255, 0.2);
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.8);
         text-align: center;
         h2 {
             font-size: 22px;

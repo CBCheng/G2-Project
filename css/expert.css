@@ -166,8 +166,21 @@ nav {
 .member a:hover, .menu a:hover, .memberSelect a:hover {
   color: #6cd5ff; }
 
+@media all and (max-width: 767px) {
+  .title {
+    top: 100px; }
+    .title h1 {
+      font-size: 20px; } }
+
+@media all and (min-width: 992px) {
+  .title {
+    top: 200px; } }
+
+@media all and (min-width: 1233px) {
+  .title {
+    top: 200px; } }
+
 .title {
-  top: 200px;
   position: relative;
   margin: auto;
   width: 100%; }
@@ -254,13 +267,19 @@ nav {
   justify-content: space-around;
   align-items: center; }
   .cloud_group .cloud1 {
-    width: 700px; }
+    width: 50%;
+    min-width: 350px; }
   .cloud_group .cloud2 {
-    width: 500px; }
+    width: 35%;
+    min-width: 250px; }
 
 .panel {
   width: 1200px;
   margin: 100px auto; }
+
+@media screen and (max-width: 1200px) {
+  .panel {
+    width: 90%; } }
 
 /* ---- button ---- */
 .button-group {
@@ -296,7 +315,7 @@ nav {
     margin: 25px;
     border: 3px solid rgba(108, 213, 255, 0.5);
     box-shadow: 0 0 5px 3px rgba(255, 255, 255, 0.2);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     text-align: center; }
     .grid .element-item h2 {
       font-size: 22px;
