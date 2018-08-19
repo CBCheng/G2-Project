@@ -2,9 +2,9 @@
 @import "base/reset";
 @import "mixin/mixin";
 @include body(12px);
-*{
-     outline: 1px solid #fff;
- }
+// *{
+//      outline: 1px solid #fff;
+//  }
 img{
     width: 100%;
     vertical-align: middle;
@@ -20,20 +20,45 @@ a {
     width: 100%;
     margin: auto;
 }
-// 分類
-.tripKind{
-    width: 80%;
+#canvas-container{
     text-align: center;
+    margin-top: 140px;
+  }
+// 分類
+.panel{
+    width: 80%;
     margin: auto;
+    margin-top: 100px;
 }
-.tripKind li{
+.button-group{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.button{
     display: inline-block;
+    padding: 8px 30px;
+    margin: 10px 20px;
+    background: transparent;
     border: 1px solid $fontColorBlue;
-    border-radius: 3px;
-    padding: 10px;
+    color: $fontColorBlue;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+}
+.button:hover {
+    background-color: $fontColorBlue;
+    color: #222;
+}
+.button:active,
+.button.is-checked {
+    background-color: $fontColorBlue;
+}
+.button.is-checked {
+    color:$fontColorBlack;
 }
 hr{
     width: 80%;
+    background: $fontColorBlack;
 }
 .tripWrap{
     width: 80%;
@@ -41,7 +66,58 @@ hr{
     margin: auto;
 }
 .tripBox{
-    width: 33.33%;
+    width: 31%;
+    flex-wrap: wrap;
+    border:1px solid $fontColorBlue;
+    margin: 1%;
+}
+.tripTag{
+    padding: 20px 15px 20px 15px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 0;
+}
+.tripPlanet,.tripKind{
+    font-size: 16px;
+    vertical-align: middle;
+    margin: 0 0 0 10px;
+    padding: 5px;
+    background-color:$fontColorBlue;
+    border-radius:3px; 
+}
+.blue{
+    background: $fontColorBlue;
+}
+.orange{
+    background: $sandPlanet; 
+}
+.tripTxt{
+    padding: 15px;
+    letter-spacing: 1px;
+    padding: 5px;
+    h4{
+        line-height: 30px;
+        padding: 10px;
+    }
+    p{
+        padding: 10px;
+    }
+}
+.tripIcon{
+    text-align: right;
+    div{
+        text-align: center;
+        display:inline-block;
+    }
+    img{
+        width: 25px;
+        padding: 5px;
+    }
+    p{
+        letter-spacing: 1px;
+        padding: 10px;
+    }
 }
 
 @import "layout/footer";
