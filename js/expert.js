@@ -33,5 +33,56 @@ function doSecond() {
 	context.stroke();
 
 }
+
 window.addEventListener('load', doFirst);
 window.addEventListener('load', doSecond);
+// window.onload = doFirst;
+// window.onload = doSecond;
+
+
+
+
+
+
+
+
+// $(function () {
+//     $("#box1").click(function () {
+//         $("#lightBox1").css('display', 'block');
+//     })
+// })
+
+// $(function () {
+//     $("#closeBtn").click(function () {
+//         $("#lightBox").hide();
+//     })
+// })
+
+
+// var lightBox1 = document.getElementById("lightBox1");
+// var closeBtn = document.getElementById("closeBtn");
+// function openBox() {
+// 	lightBox1.style.display = "block";
+// }
+// function closeBox() {
+// 	lightBox1.style.display = "none";
+// }
+// function init() {
+// 	document.getElementById("box1").onclick = openBox;
+// 	document.getElementById("closeBtn").onclick = closeBox;
+// };
+
+// window.addEventListener('load', init);
+window.onload = init;
+
+
+
+
+
+
+
+   	
+
+	
+
+
