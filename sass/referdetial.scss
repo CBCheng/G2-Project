@@ -15,17 +15,50 @@ a {
 }
 @import "layout/nav";
 @import "layout/nav-small";
+h3{
+    padding: 30px 0  10px 20px;
+    font-size: 20px;
+}
+// scrollbar
+::-webkit-scrollbar {
+    width: 15px;
+    background: #202164;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #95cce4;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2f83ad;
+}
 // content
 section {
     width: 100%;
     margin: auto;
 }
 .wrap{
-    width: 1200px;
+    width: 70%;
     margin: auto;
+    display: flex;
+    flex-wrap: wrap;
 }
 .leftWrip{
-    width: 60%;
+    width: 70%;
+}
+.rightWrip{
+    width: 30%;
 }
 .memberPic{
     display: inline-block;
@@ -57,6 +90,24 @@ section {
     display: flex;
     border-bottom: 1px solid $fontColorBlue;
 }
+.detitle{
+    position: relative;
+    h3{
+        display: inline-block;
+    }
+}
+.use{
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    button{
+        background: $fontColorBlue;
+        border-style:none; 
+        width: 100px;
+        height: 40px;
+    }
+}
 .tripDate{
     width: 100px;
     padding:  0 20px 0 0 ;
@@ -82,12 +133,11 @@ section {
         padding: 0 0 5px 0;
     }
 }
-
-// 留言板
-#commentArea{
-    margin: 20px;
-}
 // 留言列表
+.commentGroup{
+    height: 400px;
+    overflow: auto;
+}
 .commentWrip{
     padding: 20px 20px 20px 40px;
     display: flex;
@@ -113,6 +163,152 @@ section {
 }
 .memName{
     font-size: 20px;
+}
+// 留言板
+.commentStyle{
+    padding: 5px;
+    background-color:$fontColorBlue;
+    margin: 10px;
+}
+#commentArea{
+    width: 100%;
+    box-sizing: border-box;
+    border:2px solid $fontColorBlue;
+    padding: 10px;
+}
+.comment{
+    text-align: center;
+    padding: 20px 0 100px 0;
+    input{
+        border-style:none;
+        width: 100px;
+        height: 40px;
+        background-color:transparent;
+        font-size: 14PX;
+        letter-spacing: 2PX;
+        border: 1px solid $fontColorBlue;
+        color:$fontColorWhite;
+    }
+    input:hover{
+        background-color:$fontColorBlue;
+    }
+}
+
+// 行程專家
+.export{
+    margin: 20px;
+    padding: 10px;
+    background-color: $fontColorBlue;
+    display: flex;
+}
+.exportPic{
+    width: 50%;
+    padding: 10px;
+    img{
+        border-radius: 50%
+    }
+}
+.exportTxt{
+    width: 70%;
+    text-align: center;
+    position: relative;
+    padding: 0 5px 0 5px;
+    p{
+        font-size: 25px;
+        padding: 20px 0 20px 0;
+        text-align: left;
+    }
+    button{
+        border-style:none;
+        border:2px solid $fontColorWhite;
+        width: 100%;
+        height: 40px;
+        background-color:transparent;
+        border: 2px soild $fontColorWhite;
+        letter-spacing: 1px;
+        font-size: 14px;
+        color: $fontColorWhite;
+    }
+    button:hover{
+        background-color:$fontColorWhite;
+        color: $fontColorBlue;
+    }
+}
+// 其他行程
+.tripBox{
+    // background-color: #rgba();
+    border: 1px solid $fontColorBlue;
+    margin: 1%;
+    margin: 20px;
+}
+.tripTag{
+    padding: 20px 15px 20px 15px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 0;
+}
+.tripPlanet,.tripKind{
+    font-size: 16px;
+    vertical-align: middle;
+    margin: 0 0 0 10px;
+    padding: 5px;
+    background-color:$fontColorBlue;
+    border-radius:3px; 
+}
+// 屬性
+.tripPlanet.blue{
+    background: $fontColorBlue;
+}
+.tripPlanet.orange{
+    background: $sandPlanet; 
+}
+.tripPlanet.green{
+    background:$treePlanet;
+}
+.tripKind.adventure{
+    background: $adventure;
+}
+.tripKind.food{
+    background: $food;
+}
+.tripKind.culture{
+    background: $culture;
+}
+.tripKind.nalgene{
+    background: $nalgene;
+}
+.tripKind.technology{
+    background:$technology;
+}
+
+
+.tripTxt{
+    padding: 15px;
+    letter-spacing: 1px;
+    padding: 5px;
+    h4{
+        line-height: 30px;
+        padding: 10px;
+    }
+    p{
+        padding: 10px;
+    }
+}
+.tripIcon{
+    text-align: right;
+    div{
+        text-align: center;
+        display:inline-block;
+    }
+    img{
+        width: 20px;
+        padding: 5px;
+    }
+    p{
+        letter-spacing: 1px;
+        padding: 10px;
+    }
 }
 
 

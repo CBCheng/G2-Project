@@ -21,10 +21,50 @@ a {
     margin: auto;
     position: relative;
 }
+.searchTrip{
+    display: block;
+    input{
+        width: 200px;
+        height: 36px;
+        background-color:transparent;
+        border:2px solid $fontColorWhite;
+        border-radius: 3px;
+        color: $fontColorBlue;
+        display: inline-block;
+    } 
+    button{
+       border-style:none;
+       border: 2px solid $fontColorWhite;
+       border-radius:3px;  
+       width: 40px;
+       height: 41px;
+       background-color:transparent;
+       display: inline-block;
+       vertical-align:top;
+    }
+    button:hover{
+        background-color:$fontColorBlue;
+        border: 2px solid $fontColorBlue;
+    }
+}
+// #share{
+//     width: 100px;
+//     height: 36px;
+//     background-color:transparent;
+//     border:2px solid $fontColorWhite;
+//     border-radius: 3px;
+//     color: $fontColorBlue;
+//     display: inline-block;
+// }
 #canvas-container{
     text-align: center;
     position: absolute;
+    top:0;
+    right: 0;
+    left: 0;
+    z-index: 0;
   }
+
 // 分類
 .panel{
     width: 80%;
@@ -59,22 +99,20 @@ a {
 .button.is-checked {
     color:$fontColorBlack;
 }
-hr{
-    width: 80%;
-    background: $fontColorBlack;
-}
 // 分享行程
 .tripWrap{
     width: 1200px;
-    display: flex;
-    flex-wrap: wrap; 
     margin: auto;
+    border-top: 1px solid $fontColorBlue;
+    padding: 20px 0 20px 0;
 }
 .tripBox{
     width: 31%;
+    height: 350px;
     // background-color: #rgba();
-    border: 1px solid $fontColorBlue;
+    // border: 2px solid $borderColorGreen;
     margin: 1%;
+    position: relative;
 }
 .tripTag{
     padding: 20px 15px 20px 15px;
@@ -82,6 +120,11 @@ hr{
     top: 0;
     right: 0;
     font-size: 0;
+}
+.tripIcon{
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 .tripPlanet,.tripKind{
     font-size: 16px;
@@ -92,6 +135,15 @@ hr{
     border-radius:3px; 
 }
 // 屬性
+.blue{
+    border: 2px solid  $borderColorBlue;
+}
+.green{
+    border: 2px solid  $borderColorGreen;
+}
+.orange{
+    border: 2px solid $borderColorOrange;
+}
 .tripPlanet.blue{
     background: $fontColorBlue;
 }

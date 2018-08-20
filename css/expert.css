@@ -98,7 +98,7 @@ a {
 
 nav {
   width: 100%;
-  height: 100px;
+  height: 80px;
   box-sizing: content-box;
   padding: 20px 0 20px 0;
   background-image: linear-gradient(to top, rgba(0, 255, 255, 0.3), rgba(0, 183, 255, 0.3) 100%);
@@ -113,7 +113,7 @@ nav {
 .navColor {
   background-color: linear-gradient(to top, rgba(0, 255, 255, 0.3), rgba(0, 183, 255, 0.3) 100%);
   width: 100%;
-  height: 140px;
+  height: 120px;
   z-index: 80;
   position: fixed;
   top: 0;
@@ -122,7 +122,7 @@ nav {
 
 .logo {
   display: inline-block;
-  width: 100px; }
+  width: 80px; }
 
 .menu {
   display: inline-block;
@@ -144,7 +144,7 @@ nav {
 .member li {
   display: inline-block;
   vertical-align: middle;
-  padding: 60px 0 0 0; }
+  padding: 50px 0 0 0; }
 
 .memberSign a {
   border-left: 1px solid #fff;
@@ -291,7 +291,8 @@ nav {
   margin-bottom: 10px;
   padding-bottom: 20px;
   border-bottom: 2px solid #6cd5ff; }
-  .button-group .button-top, .button-group .button-down {
+  .button-group .button-top,
+  .button-group .button-down {
     display: inline-block; }
   .button-group .button {
     display: inline-block;
@@ -320,26 +321,27 @@ nav {
     font-size: 16px; } }
 
 @media screen and (max-width: 650px) {
-  .button-group .button-top, .button-group .button-down {
+  .button-group .button-top,
+  .button-group .button-down {
     display: block; } }
 
-/* ---- .element-item ---- */
-.grid .element-item {
+/* ---- .expertBox ---- */
+.grid .expertBox {
   width: 250px;
   margin: 25px;
   text-align: center; }
-  .grid .element-item h2 {
+  .grid .expertBox h2 {
     font-size: 22px;
     margin-top: 10px; }
-  .grid .element-item h3 {
+  .grid .expertBox h3 {
     font-size: 20px;
     margin: 10px; }
-  .grid .element-item .pic {
+  .grid .expertBox .pic {
     width: 160px;
     margin: auto;
     position: relative;
     cursor: pointer; }
-    .grid .element-item .pic .attr {
+    .grid .expertBox .pic .attr {
       position: absolute;
       width: 50px;
       height: 50px;
@@ -348,122 +350,121 @@ nav {
       font-size: 16px;
       left: -20px;
       top: -10px; }
-    .grid .element-item .pic img {
+    .grid .expertBox .pic img {
       width: 100%; }
-  .grid .element-item .score {
+  .grid .expertBox .score {
     margin-top: 10px; }
-    .grid .element-item .score span {
+    .grid .expertBox .score span {
       color: #ffffff;
       font-size: 16px;
       padding-right: 5px; }
-    .grid .element-item .score img {
+    .grid .expertBox .score img {
       vertical-align: text-bottom;
       width: 20px; }
-  .grid .element-item .mark {
+  .grid .expertBox .mark {
     font-size: 16px;
     color: #ffffff; }
-    .grid .element-item .mark img {
+    .grid .expertBox .mark img {
       width: 25px;
       margin: 10px; }
 
 @media screen and (max-width: 991px) {
-  .grid .element-item {
+  .grid .expertBox {
     width: 200px;
     margin: 15px; }
-    .grid .element-item h2 {
+    .grid .expertBox h2 {
       font-size: 20px; }
-    .grid .element-item .pic {
+    .grid .expertBox .pic {
       width: 130px; }
-      .grid .element-item .pic .attr {
+      .grid .expertBox .pic .attr {
         font-size: 15px;
         width: 45px;
         height: 45px;
         line-height: 45px; }
-    .grid .element-item h3 {
+    .grid .expertBox h3 {
       font-size: 16px; }
-    .grid .element-item .score {
+    .grid .expertBox .score {
       margin-top: 10px; }
-      .grid .element-item .score span {
+      .grid .expertBox .score span {
         font-size: 14px;
         padding-right: 2px; }
-      .grid .element-item .score img {
+      .grid .expertBox .score img {
         width: 15px; }
-    .grid .element-item .mark {
+    .grid .expertBox .mark {
       font-size: 14px; }
-      .grid .element-item .mark img {
+      .grid .expertBox .mark img {
         width: 20px;
         margin: 5px;
         margin-bottom: 10px; } }
 
 @media screen and (min-width: 650px) {
-  .grid .element-item {
+  .grid .expertBox {
     box-shadow: 0 0 5px 3px rgba(255, 255, 255, 0.2);
     background-color: rgba(0, 0, 0, 0.8); }
-  .grid .element-item.blue {
+  .grid .expertBox.blue {
     border: 3px solid rgba(108, 213, 255, 0.5); }
-  .grid .element-item.orange {
+  .grid .expertBox.orange {
     border: 3px solid rgba(207, 169, 114, 0.5); }
-  .grid .element-item.green {
+  .grid .expertBox.green {
     border: 3px solid rgba(128, 194, 105, 0.5); }
-  .grid .element-item .aside h3 {
+  .grid .expertBox .aside h3 {
     display: none; } }
 
 @media screen and (max-width: 650px) {
-  .grid .element-item:after {
+  .grid .expertBox:after {
     content: "";
     display: block;
     clear: both; }
-  .grid .element-item.blue {
+  .grid .expertBox.blue {
     border-bottom: 2px dashed rgba(108, 213, 255, 0.5); }
-  .grid .element-item.orange {
+  .grid .expertBox.orange {
     border-bottom: 2px dashed rgba(207, 169, 114, 0.5); }
-  .grid .element-item.green {
+  .grid .expertBox.green {
     border-bottom: 2px dashed rgba(128, 194, 105, 0.5); }
-  .grid .element-item {
+  .grid .expertBox {
     width: 90%;
     padding-bottom: 15px;
     margin: 15px 15px 5px; }
-    .grid .element-item h2 {
+    .grid .expertBox h2 {
       font-size: 18px;
       margin: 0 auto 10px; }
-    .grid .element-item h3 {
+    .grid .expertBox h3 {
       font-size: 16px;
       display: none; }
-    .grid .element-item .main {
-      float: left;
+    .grid .expertBox .main {
       width: 50%;
       display: inline-block; }
-      .grid .element-item .main .pic {
+      .grid .expertBox .main .pic {
         width: 100px; }
-    .grid .element-item .aside {
-      float: right;
+    .grid .expertBox .aside {
       width: 50%;
       display: inline-block;
       text-align: left;
       margin-top: 10px; }
-      .grid .element-item .aside h3 {
+      .grid .expertBox .aside h3 {
         display: block;
         padding-left: 20px;
         font-size: 18px; }
-      .grid .element-item .aside .score, .grid .element-item .aside .mark {
+      .grid .expertBox .aside .score,
+      .grid .expertBox .aside .mark {
         margin-top: 5px; } }
 
-.grid .element-item.blue h2 {
+.grid .expertBox.blue h2 {
   color: #6cd5ff; }
 
-.grid .element-item.blue .pic .attr {
+.grid .expertBox.blue .pic .attr {
   background-color: #094f91; }
 
-.grid .element-item.orange h2 {
+.grid .expertBox.orange h2 {
   color: #cfa972; }
 
-.grid .element-item.orange .pic .attr {
+.grid .expertBox.orange .pic .attr {
   background-color: #ad7f43; }
 
-.grid .element-item.green h2 {
+.grid .expertBox.green h2 {
   color: #80c269; }
 
-.grid .element-item.green .pic .attr {
+.grid .expertBox.green .pic .attr {
   background-color: #486a00; }
 
 #lightBox:after {
@@ -523,13 +524,13 @@ nav {
           font-size: 18px;
           margin-right: 10px;
           line-height: 1.8; }
-        #lightBox1 .content .data .chart .line {
-          width: 50px;
+        #lightBox1 .content .data .chart .value {
+          width: 80px;
           height: 10px;
           background-color: #aaa;
           display: inline-block;
           border-radius: 5px; }
-        #lightBox1 .content .data .chart .line.focus {
+        #lightBox1 .content .data .chart .value.focus {
           width: 100px;
           background-color: #6cd5ff; }
     #lightBox1 .content .record {
@@ -538,16 +539,24 @@ nav {
         float: left; }
       #lightBox1 .content .record .writeComment {
         float: right; }
-      #lightBox1 .content .record .collect, #lightBox1 .content .record .writeComment {
+      #lightBox1 .content .record .collect,
+      #lightBox1 .content .record .writeComment {
         margin: 10px; }
-        #lightBox1 .content .record .collect #heart, #lightBox1 .content .record .collect #write, #lightBox1 .content .record .writeComment #heart, #lightBox1 .content .record .writeComment #write {
+        #lightBox1 .content .record .collect #heart,
+        #lightBox1 .content .record .collect #write,
+        #lightBox1 .content .record .writeComment #heart,
+        #lightBox1 .content .record .writeComment #write {
           width: 28px;
           height: 26px;
           cursor: pointer; }
-        #lightBox1 .content .record .collect .txt, #lightBox1 .content .record .writeComment .txt {
+        #lightBox1 .content .record .collect .txt,
+        #lightBox1 .content .record .writeComment .txt {
           font-size: 16px;
           line-height: 2.5; }
-        #lightBox1 .content .record .collect #Cnum, #lightBox1 .content .record .collect #Wnum, #lightBox1 .content .record .writeComment #Cnum, #lightBox1 .content .record .writeComment #Wnum {
+        #lightBox1 .content .record .collect #Cnum,
+        #lightBox1 .content .record .collect #Wnum,
+        #lightBox1 .content .record .writeComment #Cnum,
+        #lightBox1 .content .record .writeComment #Wnum {
           font-size: 14px;
           color: #aaaaaa; }
   #lightBox1 .comment {
@@ -593,7 +602,8 @@ nav {
         margin-top: -10px;
         margin-left: 90px;
         font-size: 16px;
-        text-align: left; }
+        text-align: left;
+        line-height: 1.4; }
 
 @media screen and (max-width: 1000px) {
   #lightBox1 {
@@ -627,7 +637,8 @@ nav {
   #lightBox1 .content .record {
     margin: 10px auto 0;
     display: block; }
-    #lightBox1 .content .record .collect, #lightBox1 .content .record .writeComment {
+    #lightBox1 .content .record .collect,
+    #lightBox1 .content .record .writeComment {
       float: none;
       display: inline-block; }
   #lightBox1 .comment .score p {
@@ -656,20 +667,14 @@ footer img {
 
 footer {
   width: 100%;
-  position: relative;
-  z-index: -100;
-  text-align: center; }
+  text-align: center;
+  background-image: linear-gradient(to top, rgba(0, 183, 255, 0.3), rgba(0, 255, 255, 0.3) 100%); }
 
 .copyright {
   padding: 20px;
   font-size: 14px;
   font-weight: 600;
-  letter-spacing: 1px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto; }
+  letter-spacing: 1px; }
 
 @media all and (max-width: 767px) {
   nav {
