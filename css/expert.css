@@ -326,22 +326,22 @@ nav {
     display: block; } }
 
 /* ---- .element-item ---- */
-.grid .element-item {
+.grid .expertBox {
   width: 250px;
   margin: 25px;
   text-align: center; }
-  .grid .element-item h2 {
+  .grid .expertBox h2 {
     font-size: 22px;
     margin-top: 10px; }
-  .grid .element-item h3 {
+  .grid .expertBox h3 {
     font-size: 20px;
     margin: 10px; }
-  .grid .element-item .pic {
+  .grid .expertBox .pic {
     width: 160px;
     margin: auto;
     position: relative;
     cursor: pointer; }
-    .grid .element-item .pic .attr {
+    .grid .expertBox .pic .attr {
       position: absolute;
       width: 50px;
       height: 50px;
@@ -350,21 +350,21 @@ nav {
       font-size: 16px;
       left: -20px;
       top: -10px; }
-    .grid .element-item .pic img {
+    .grid .expertBox .pic img {
       width: 100%; }
-  .grid .element-item .score {
+  .grid .expertBox .score {
     margin-top: 10px; }
-    .grid .element-item .score span {
+    .grid .expertBox .score span {
       color: #ffffff;
       font-size: 16px;
       padding-right: 5px; }
-    .grid .element-item .score img {
+    .grid .expertBox .score img {
       vertical-align: text-bottom;
       width: 20px; }
-  .grid .element-item .mark {
+  .grid .expertBox .mark {
     font-size: 16px;
     color: #ffffff; }
-    .grid .element-item .mark img {
+    .grid .expertBox .mark img {
       width: 25px;
       margin: 10px; }
 
