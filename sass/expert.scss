@@ -2,9 +2,21 @@
 @import "base/reset";
 @import "mixin/mixin";
 @include body(10px);
-body {
-    // background-attachment: fixed;
-}
+$fontColorOrange: #cfa972;
+$fontColorGreen: #80c269;
+$borderColorBlue: rgba(108, 213, 255, 0.5);
+$borderColorOrange: rgba(207, 169, 114, 0.5);
+$borderColorGreen: rgba(128, 194, 105, 0.5);
+$attrBlue: #094f91;
+$attrOrange: #ad7f43;
+$attrGreen: #486a00;
+// body {
+//     // background-attachment: fixed;
+// }
+// body {
+//     // background-attachment: fixed;
+// }
+
 
 * {
     // outline: 1px solid #f00;
@@ -402,7 +414,7 @@ a {
                 display: none;
             }
             .main {
-                float: left;
+                // float: left;
                 width: 50%;
                 display: inline-block;
                 .pic {
@@ -410,7 +422,7 @@ a {
                 }
             }
             .aside {
-                float: right;
+                // float: right;
                 width: 50%;
                 display: inline-block;
                 text-align: left;
@@ -736,17 +748,17 @@ footer {
     }
 }
 
-@include respond(small) {
-    .title {}
-}
+// @include respond(small) {
+//     .title {}
+// }
 
-@include respond(medium) {
-    .title {}
-}
+// @include respond(medium) {
+//     .title {}
+// }
 
-@include respond(desktop) {
-    .title {}
-}
+// @include respond(desktop) {
+//     .title {}
+// }
 
 @import "layout/footer";
 @import "layout/nav-small";

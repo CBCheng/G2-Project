@@ -61,70 +61,211 @@
         <section class="wrap">
         <!-- convas -->
             <!-- banner -->
-             <img class="bannerPic" src="img/bgBanner.png" alt="">
+             <img class="bannerPic" src="img/refer/bgBanner-1.png" alt="">
              <div id="canvas-container" >
-                <canvas id="sineCanvas"  width="1024" height="400"></canvas>
+                <canvas id="sineCanvas"  width="800" height="400"></canvas>
+                <from class="searchTrip">
+                        <input type="text" name="search" placeholder="輸入行程名稱">
+                        <button type="submit">
+                            <img src="img/refer/search.png" alt="">
+                        </button>
+                        <!-- <input id="share" type="submit" value="我也要分享"> -->
+                   </from>
             </div>
-             <div class="searchTrip">
-                 <input type="text" name="search">
-                 <input type="submit" value="我也要分享">
-             </div>
              <!-- 分類 -->
              <div class="pennal">
              <div id="filters" class="button-group">
-                <button class="button is-checked" data-filter="*">最新</button>
-                <button class="button" data-filter=".tripBox">全部</button>
+                <button class="button is-checked" data-filter=".tripBox">全部</button>
+                <button class="button" data-filter=".new">最新</button>
                 <button class="button" data-filter=".popular">人氣</button>
-                <!-- <button class="button" data-filter=".blue">瓦特星
-                </button>
+                <button class="button" data-filter=".blue">瓦特星</button>
                 <button class="button" data-filter=".orange">達沙星</button>
-                <button class="button" data-filter=".green">奧倫星</button> -->
-                <button class="button" data-filter-by=".adventure">冒險</button>
-                <button class="button" data-filter-by=".food1">美食</button>
-                <button class="button" data-filter-by=".culture1">人文</button>
-                <button class="button" data-filter-by=".nalgene">知性</button>
-                <button class="button" data-filter-by=".technology">科技</button>
+                <button class="button" data-filter=".green">奧倫星</button>
             </div>
-            <!-- <div id="sorts" class="button-group">  
-                <button class="button is-checked" data-sort-by="adventure">冒險</button>
-                <button class="button" data-sort-by="food">美食</button>
-                <button class="button" data-sort-by="culture">人文</button>
-                <button class="button" data-sort-by="nalgene">知性</button>
-                <button class="button" data-sort-by="technology">科技</button>
-              </div> -->
-             <hr>
              <!-- 分享行程 -->
-             <div class="tripWrap grid">
-                 <div class="tripBox element-item popular">
-                    <a href="referdetial.html"> 
-                    <div class="tripPic">
-                        <img src="img/p1_v7/p1_v7_06.jpg">
-                        <div class="tripTag">
-                            <span class="tripPlanet blue">瓦特星</span>
-                            <span class="tripKind adventure">冒險</span>
-                        </div>
-                     </div>
-                     <div class="tripTxt">
-                         <h4>3天 ｜ 瓦特星挑戰極限</h4>
-                         <p>行程描述喔yaaaaaaaaaaa會不會切不完ㄋ哈哈哈哈哈哈</p>
-                     </div>
-                     <div class="tripIcon">
-                         <div class="tripMessage">
-                             <img src="img/comment.png">
-                             <p>9487留言</p>
-                         </div>
-                         <div class="tripCollect">
-                            <img src="img/love.png">
-                            <p>9487收藏</p>
-                         </div>
-                     </div>
-                     </a>
-                </div>
+             <div class="grid tripWrap">
+                    <div class="element-item tripBox popular blue">
+                            <a href="referdetial.html">
+                                <div class="tripPic">
+                               <img src="img/refer/p1_v7/p1_v7_06.jpg">
+                               <div class="tripTag">
+                                   <span class="tripPlanet blue">瓦特星</span>
+                                   <span class="tripKind adventure">冒險</span>
+                               </div>
+                            </div>
+                            <div class="tripTxt">
+                                <h4>3天 ｜ 瓦特星挑戰極限</h4>
+                                <p>行程描述喔yaaaaaaaaaaa會不會切不完ㄋ哈哈哈哈哈哈</p>
+                            </div>
+                            <div class="tripIcon">
+                                <div class="tripMessage">
+                                    <img src="img/refer/comment.png">
+                                    <p>9487留言</p>
+                                </div>
+                                <div class="tripCollect">
+                                   <img src="img/refer/love.png">
+                                   <p>9487收藏</p>
+                                </div>
+                            </div>
+                            </a>
+                       </div>
 
-                <div class="tripBox element-item popular">
+                <div class="element-item tripBox blue">
                     <a href="referdetial.html">
                         <div class="tripPic">
-                       <img src="img/p1_v7/p1_v7_06.jpg">
+                       <img src="img/refer/p1_v7/p1_v7_06.jpg">
+                       <div class="tripTag">
+                           <span class="tripPlanet blue">瓦特星</span>
+                           <span class="tripKind food">美食</span>
+                       </div>
+                    </div>
+                    <div class="tripTxt">
+                        <h4>3天 ｜ 瓦特星挑戰極限</h4>
+                        <p>行程描述喔yaaaaaaaaaaa會不會切不完ㄋ哈哈哈哈哈哈</p>
+                    </div>
+                    <div class="tripIcon">
+                        <div class="tripMessage">
+                            <img src="img/refer/comment.png">
+                            <p>9487留言</p>
+                        </div>
+                        <div class="tripCollect">
+                           <img src="img/refer/love.png">
+                           <p>9487收藏</p>
+                        </div>
+                    </div>
+                    </a>
+               </div>
+ 
+               <div class="element-item tripBox green">
+                    <a href="referdetial.html">
+                        <div class="tripPic">
+                       <img src="img/refer/p1_v7/p1_v7_06.jpg">
+                       <div class="tripTag">
+                           <span class="tripPlanet green">奧倫星</span>
+                           <span class="tripKind culture">人文</span>
+                       </div>
+                    </div>
+                    <div class="tripTxt">
+                        <h4>3天 ｜ 瓦特星挑戰極限</h4>
+                        <p>行程描述喔yaaaaaaaaaaa會不會切不完ㄋ哈哈哈哈哈哈</p>
+                    </div>
+                    <div class="tripIcon">
+                        <div class="tripMessage">
+                            <img src="img/refer/comment.png">
+                            <p>9487留言</p>
+                        </div>
+                        <div class="tripCollect">
+                           <img src="img/refer/love.png">
+                           <p>9487收藏</p>
+                        </div>
+                    </div>
+                    </a>
+               </div>
+
+               <div class="element-item tripBox popular green">
+                    <a href="referdetial.html">
+                        <div class="tripPic">
+                       <img src="img/refer/p1_v7/p1_v7_06.jpg">
+                       <div class="tripTag">
+                           <span class="tripPlanet green">奧倫興</span>
+                           <span class="tripKind adventure">冒險</span>
+                       </div>
+                    </div>
+                    <div class="tripTxt">
+                        <h4>3天 ｜ 瓦特星挑戰極限</h4>
+                        <p>行程描述喔yaaaaaaaaaaa會不會切不完ㄋ哈哈哈哈哈哈</p>
+                    </div>
+                    <div class="tripIcon">
+                        <div class="tripMessage">
+                            <img src="img/refer/comment.png">
+                            <p>9487留言</p>
+                        </div>
+                        <div class="tripCollect">
+                           <img src="img/refer/love.png">
+                           <p>9487收藏</p>
+                        </div>
+                    </div>
+                    </a>
+               </div>
+               <div class="element-item tripBox popular orange">
+                    <a href="referdetial.html">
+                        <div class="tripPic">
+                       <img src="img/refer/p1_v7/p1_v7_06.jpg">
+                       <div class="tripTag">
+                           <span class="tripPlanet orange">達沙星</span>
+                           <span class="tripKind technology">科技</span>
+                       </div>
+                    </div>
+                    <div class="tripTxt">
+                        <h4>3天 ｜ 瓦特星挑戰極限</h4>
+                        <p>行程描述喔yaaaaaaaaaaa會不會切不完ㄋ哈哈哈哈哈哈</p>
+                    </div>
+                    <div class="tripIcon">
+                        <div class="tripMessage">
+                            <img src="img/refer/comment.png">
+                            <p>9487留言</p>
+                        </div>
+                        <div class="tripCollect">
+                           <img src="img/refer/love.png">
+                           <p>9487收藏</p>
+                        </div>
+                    </div>
+                    </a>
+               </div>
+               <div class="element-item tripBox new orange">
+                    <a href="referdetial.html">
+                        <div class="tripPic">
+                       <img src="img/refer/p1_v7/p1_v7_06.jpg">
+                       <div class="tripTag">
+                           <span class="tripPlanet orange">達沙星</span>
+                           <span class="tripKind nalgene">知性</span>
+                       </div>
+                    </div>
+                    <div class="tripTxt">
+                        <h4>3天 ｜ 瓦特星挑戰極限</h4>
+                        <p>行程描述喔yaaaaaaaaaaa會不會切不完ㄋ哈哈哈哈哈哈</p>
+                    </div>
+                    <div class="tripIcon">
+                        <div class="tripMessage">
+                            <img src="img/refer/comment.png">
+                            <p>9487留言</p>
+                        </div>
+                        <div class="tripCollect">
+                           <img src="img/refer/love.png">
+                           <p>9487收藏</p>
+                        </div>
+                    </div>
+                    </a>
+               </div>
+               <div class="element-item tripBox new green">
+                    <a href="referdetial.html">
+                        <div class="tripPic">
+                       <img src="img/refer/p1_v7/p1_v7_06.jpg">
+                       <div class="tripTag">
+                           <span class="tripPlanet green">奧倫星</span>
+                           <span class="tripKind food">美食</span>
+                       </div>
+                    </div>
+                    <div class="tripTxt">
+                        <h4>3天 ｜ 瓦特星挑戰極限</h4>
+                        <p>行程描述喔yaaaaaaaaaaa會不會切不完ㄋ哈哈哈哈哈哈</p>
+                    </div>
+                    <div class="tripIcon">
+                        <div class="tripMessage">
+                            <img src="img/refer/comment.png">
+                            <p>9487留言</p>
+                        </div>
+                        <div class="tripCollect">
+                           <img src="img/refer/love.png">
+                           <p>9487收藏</p>
+                        </div>
+                    </div>
+                    </a>
+               </div>
+               <div class="element-item tripBox popular blue">
+                    <a href="referdetial.html">
+                        <div class="tripPic">
+                       <img src="img/refer/p1_v7/p1_v7_06.jpg">
                        <div class="tripTag">
                            <span class="tripPlanet blue">瓦特星</span>
                            <span class="tripKind adventure">冒險</span>
@@ -136,71 +277,48 @@
                     </div>
                     <div class="tripIcon">
                         <div class="tripMessage">
-                            <img src="img/comment.png">
+                            <img src="img/refer/comment.png">
                             <p>9487留言</p>
                         </div>
                         <div class="tripCollect">
-                           <img src="img/love.png">
+                           <img src="img/refer/love.png">
+                           <p>9487收藏</p>
+                        </div>
+                    </div>
+                    </a>
+               </div>
+               <div class="element-item tripBox popular blue">
+                    <a href="referdetial.html">
+                        <div class="tripPic">
+                       <img src="img/refer/p1_v7/p1_v7_06.jpg">
+                       <div class="tripTag">
+                           <span class="tripPlanet blue">瓦特星</span>
+                           <span class="tripKind adventure">冒險</span>
+                       </div>
+                    </div>
+                    <div class="tripTxt">
+                        <h4>3天 ｜ 瓦特星挑戰極限</h4>
+                        <p>行程描述喔yaaaaaaaaaaa會不會切不完ㄋ哈哈哈哈哈哈</p>
+                    </div>
+                    <div class="tripIcon">
+                        <div class="tripMessage">
+                            <img src="img/refer/comment.png">
+                            <p>9487留言</p>
+                        </div>
+                        <div class="tripCollect">
+                           <img src="img/refer/love.png">
                            <p>9487收藏</p>
                         </div>
                     </div>
                     </a>
                </div>
 
-               <div class="tripBox element-item popular">
-                <div class="tripPic">
-                   <img src="img/p1_v7/p1_v7_06.jpg">
-                   <div class="tripTag">
-                       <span class="tripPlanet blue">瓦特星</span>
-                       <span class="tripKind adventure">冒險</span>
-                   </div>
-                </div>
-                <div class="tripTxt">
-                    <h4>3天 ｜ 瓦特星挑戰極限</h4>
-                    <p>行程描述喔yaaaaaaaaaaa會不會切不完ㄋ哈哈哈哈哈哈</p>
-                </div>
-                <div class="tripIcon">
-                    <div class="tripMessage">
-                        <img src="img/comment.png">
-                        <p>9487留言</p>
-                    </div>
-                    <div class="tripCollect">
-                       <img src="img/love.png">
-                       <p>9487收藏</p>
-                    </div>
-                </div>
-           </div>
-
-           <div class="tripBox element-item popular">
-            <div class="tripPic">
-               <img src="img/p1_v7/p1_v7_06.jpg">
-               <div class="tripTag">
-                   <span class="tripPlanet blue">瓦特星</span>
-                   <span class="tripKind adventure">冒險</span>
-               </div>
-            </div>
-            <div class="tripTxt">
-                <h4>3天 ｜ 瓦特星挑戰極限</h4>
-                <p>行程描述喔yaaaaaaaaaaa會不會切不完ㄋ哈哈哈哈哈哈</p>
-            </div>
-            <div class="tripIcon">
-                <div class="tripMessage">
-                    <img src="img/comment.png">
-                    <p>9487留言</p>
-                </div>
-                <div class="tripCollect">
-                   <img src="img/love.png">
-                   <p>9487收藏</p>
-                </div>
-            </div>
-       </div>
-
             </div>
 
         </section>
         <!-- footer -->
         <footer>     
-            <img src="img/footerbg-1.png">
+            <!-- <img src="img/footerbg-1.png"> -->
             <div class="copyright">
                 <p>copyright@OhPlanets  2145</p>
             </div>           
