@@ -103,23 +103,34 @@ footer {
 
 nav {
   width: 100%;
-  height: 100px;
+  height: 90px;
   box-sizing: content-box;
   padding: 20px 0 20px 0;
-  background-image: linear-gradient(to top, rgba(64, 64, 64, 0.4), rgba(64, 64, 64, 0.3) 100%);
+  background-image: linear-gradient(to top, rgba(0, 255, 255, 0.3), rgba(0, 183, 255, 0.3) 100%);
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 100;
   text-align: center;
   letter-spacing: 2px;
-  font-size: 18px;
-  z-index: 99; }
+  font-size: 18px; }
+
+.navColor {
+  background-color: linear-gradient(to top, rgba(0, 255, 255, 0.3), rgba(0, 183, 255, 0.3) 100%);
+  width: 100%;
+  height: 130px;
+  z-index: 80;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: .5;
+  overflow: hidden; }
 
 .logo {
   display: inline-block;
   width: 100px; }
 
-nav img {
+.logo img {
   width: 100%; }
 
 .menu {
@@ -157,6 +168,9 @@ nav img {
 .shoppingCar {
   width: 25px; }
 
+.shoppingCarPic {
+  width: 100%; }
+
 .memberSelect {
   width: 200px;
   position: absolute;
@@ -173,6 +187,104 @@ nav img {
   display: none; }
 
 .member a:hover, .menu a:hover, .memberSelect a:hover {
+  color: #6cd5ff; }
+
+@media all and (max-width: 767px) {
+  nav {
+    width: 100%;
+    height: 50px;
+    box-sizing: content-box;
+    padding: 5px 0 5px 0;
+    background-image: linear-gradient(to top, rgba(0, 255, 255, 0.3), rgba(0, 183, 255, 0.3) 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    letter-spacing: 2px;
+    font-size: 18px; }
+  .navColor {
+    width: 100%;
+    height: 60px;
+    z-index: 80;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden; }
+  .logo {
+    width: 50px; }
+  .menu, .member {
+    display: none; }
+  .hambger {
+    width: 22px;
+    height: 20px;
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+    z-index: 110;
+    margin: auto; } }
+
+.line {
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50px;
+  background-color: #fff;
+  transform: translate(-50%, -50%) rotate(0deg);
+  transition: all ease 0.5s; }
+
+.line:before, .line:after {
+  content: "";
+  position: absolute;
+  height: inherit;
+  border-radius: inherit;
+  background-color: inherit;
+  margin: auto;
+  width: 50%;
+  transition: all ease 0.5s; }
+
+.line:before {
+  top: -8px;
+  left: 0;
+  transform-origin: left; }
+
+.line:after {
+  bottom: -8px;
+  right: 0;
+  transform-origin: right; }
+
+.open {
+  transform: translate(-50%, -50%) rotate(135deg); }
+
+.open:before {
+  top: 0;
+  transform: translateX(100%) rotate(-90deg); }
+
+.open:after {
+  bottom: 0;
+  transform: translateX(-100%) rotate(-90deg); }
+
+.menuMobile {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  line-height: 40px;
+  padding-top: 50px;
+  background-color: rgba(0, 255, 255, 0.3);
+  position: absolute;
+  top: 60px;
+  right: -100%;
+  transition: .8s; }
+
+.activeM {
+  position: absolute;
+  top: 60px;
+  right: 0; }
+
+.activeB {
   color: #6cd5ff; }
 
 #section1 {
@@ -212,6 +324,86 @@ nav img {
 .part4 {
   background-image: url("../img/indexBg-part4.jpg"); }
 
+.part1 h1 {
+  position: absolute;
+  top: 54%;
+  right: 15%;
+  font-size: 2.2vw;
+  color: #fff; }
+
+.part1 #haloItem {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 5; }
+
+.part1 .halo {
+  position: absolute; }
+
+.part1 #haloItem .halo6-2 {
+  top: 8% !important;
+  left: 80% !important;
+  width: 8%; }
+
+.part1 #haloItem .halo1 {
+  top: 7% !important;
+  left: 81% !important;
+  width: 8%;
+  opacity: .8; }
+
+.part1 #haloItem .halo3 {
+  top: 13% !important;
+  left: 78% !important;
+  width: 8%;
+  opacity: 0.5; }
+
+.part1 #haloItem .halo4 {
+  top: 11% !important;
+  left: 80% !important;
+  width: 7%;
+  opacity: 0.3; }
+
+.part1 #haloItem .halo5 {
+  top: 4% !important;
+  left: 78% !important;
+  width: 12%;
+  opacity: 0.5; }
+
+.part1 #haloItem .halo4Co1 {
+  top: 19.5% !important;
+  left: 80% !important;
+  width: 3%;
+  opacity: 0.3; }
+
+.part1 #haloItem .halo4Co2 {
+  top: 22% !important;
+  left: 79% !important;
+  width: 3%;
+  opacity: 0.5; }
+
+.part1 #haloItem .halo3Co1 {
+  top: 16% !important;
+  left: 75% !important;
+  width: 10%;
+  opacity: 0.5; }
+
+.part1 #haloItem .halo3Co2 {
+  top: 10.3% !important;
+  left: 71% !important;
+  width: 17%;
+  opacity: 0.5; }
+
+.part1 #haloItem .halo5Co1 {
+  top: 8.3% !important;
+  left: 64% !important;
+  width: 26%;
+  opacity: .5; }
+
+.part1 #planetsItem {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
 .choPlanet {
   width: 10%;
   height: 20%;
@@ -234,15 +426,15 @@ nav img {
     font: 250% 微軟正黑體; }
 
 .choPlt1 {
-  top: 20%;
+  top: 21%;
   left: -5%; }
 
 .choPlt2 {
-  top: 45%;
+  top: 46%;
   left: 5%; }
 
 .choPlt3 {
-  top: 70%;
+  top: 71%;
   left: -5%; }
 
 .choPlt2 span {
@@ -510,6 +702,59 @@ nav img {
   100% {
     transform: scale(1);
     opacity: 0; } }
+
+.viewBg {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: rotateX(90deg);
+  transition: 0.5s cubic-bezier(0.23, 1, 0.32, 1); }
+  .viewBg .viewItem {
+    position: relative;
+    width: 45%;
+    height: 60%;
+    margin: 13% auto auto;
+    background-image: url(/img/p1_v2_03.jpg);
+    background-size: 102%;
+    border: 2px solid #6cd5ff; }
+    .viewBg .viewItem h2 {
+      position: absolute;
+      bottom: 0;
+      display: block;
+      padding-left: 5%;
+      width: 100%;
+      height: 10%;
+      line-height: 3vw;
+      background-color: rgba(0, 0, 0, 0.5); }
+    .viewBg .viewItem a {
+      position: absolute;
+      text-align: center;
+      display: block;
+      font: 1vw/1.8vw 微軟正黑體;
+      width: 20%;
+      height: 7%;
+      bottom: 1.5%;
+      right: 0.7%;
+      border: 2px solid #6cd5ff; }
+    .viewBg .viewItem a:hover {
+      color: #000;
+      background-color: #6cd5ff; }
+    .viewBg .viewItem .exit {
+      position: absolute;
+      top: 1.5%;
+      right: 1%;
+      width: 8.7%;
+      height: 13%;
+      clip-path: polygon(100% 100%, 100% 0, 0 0);
+      background: #6cd5ff;
+      cursor: pointer; }
+    .viewBg .viewItem img {
+      position: absolute;
+      top: 12%;
+      right: 11%;
+      width: 32%; }
 
 .pt2Title {
   width: 20%;
@@ -802,3 +1047,238 @@ nav img {
 
 .expert4:hover span:nth-of-type(6) {
   width: 20%; }
+
+.clearfix {
+  clear: both; }
+
+.section4 {
+  position: relative;
+  width: 100%;
+  padding-bottom: 50%;
+  background-image: url(/img/part4Bg.jpg);
+  perspective: 800px;
+  perspective-origin: center center; }
+
+.leftPage {
+  position: absolute;
+  top: 45%;
+  left: 20%;
+  width: 4%;
+  cursor: pointer; }
+
+.rightPage {
+  position: absolute;
+  top: 45%;
+  right: 20%;
+  width: 4%;
+  cursor: pointer; }
+
+.travelGroup {
+  position: absolute;
+  width: 40%;
+  left: 0;
+  right: 0;
+  top: 25%;
+  margin: auto;
+  border: 2px solid rgba(0, 255, 255, 0.8);
+  box-sizing: border-box;
+  background-color: #FFF;
+  padding: 10px;
+  padding-top: 1%;
+  background-image: url(/img/section4pic1.png);
+  background-repeat: no-repeat;
+  background-size: 102%;
+  transform-style: preserve-3d;
+  /*min-width: 760px;*/ }
+
+.travelGroup {
+  display: none;
+  opacity: 1; }
+
+.travelGroup1 {
+  opacity: 1;
+  display: block;
+  transform: scale(1) translate3d(0px, 0px, 0px);
+  /*animation: groupFirst .3s;*/ }
+
+@keyframes groupFirstStop {
+  0% {
+    left: 0px; }
+  100% {
+    left: 50px; } }
+
+@keyframes groupFirst {
+  0% {
+    transform: scale(0.2) translate3d(0px, 0px, -800px);
+    opacity: 1; }
+  25% {
+    transform: scale(0.4) translate3d(200px, 50px, -600px);
+    opacity: 1; }
+  50% {
+    transform: scale(0.6) translate3d(400px, 80px, -400px);
+    opacity: 1; }
+  75% {
+    transform: scale(0.8) translate3d(200px, 100px, -200px);
+    opacity: 1; }
+  100% {
+    transform: scale(1) translate3d(0px, 0px, 0px);
+    opacity: 1; } }
+
+.travelGroup2 {
+  border: 2px solid #FAA;
+  animation: groupSecond .3s; }
+
+@keyframes groupSecond {
+  0% {
+    transform: scale(0.2) translate3d(0px, 0px, -800px);
+    opacity: 1; }
+  25% {
+    transform: scale(0.4) translate3d(-400px, -50px, -600px);
+    opacity: 1; }
+  50% {
+    transform: scale(0.6) translate3d(-800px, -80px, -400px);
+    opacity: 1; }
+  75% {
+    transform: scale(0.8) translate3d(-400px, -100px, -200px);
+    opacity: 1; }
+  100% {
+    transform: scale(1) translate3d(0px, 0px, 0px);
+    opacity: 1; } }
+
+.travelGroup3 {
+  border: 2px solid #AFA;
+  animation: groupThird .3s; }
+
+@keyframes groupThirdStop {
+  0% {
+    left: 0px; }
+  100% {
+    right: 50px; } }
+
+@keyframes groupThird {
+  0% {
+    transform: scale(0.2) translate3d(0px, 0px, -800px);
+    opacity: 1; }
+  25% {
+    transform: scale(0.4) translate3d(0px, -300px, -600px);
+    opacity: 1; }
+  50% {
+    transform: scale(0.6) translate3d(0px, -600px, -400px);
+    opacity: 1; }
+  75% {
+    transform: scale(0.8) translate3d(0px, -300px, -200px);
+    opacity: 1; }
+  100% {
+    transform: scale(1) translate3d(0px, 0px, 0px);
+    opacity: 1; } }
+
+.useTravel {
+  display: block;
+  width: 13%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 255, 255, 0.8);
+  float: right;
+  padding: 1.2%;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8vw;
+  text-decoration: none; }
+
+.travelPic,
+.travelTitle,
+.travelBtn {
+  float: left; }
+
+.travelTxtGroup {
+  margin-top: 50%;
+  position: relative;
+  color: rgba(255, 255, 255, 0.8);
+  box-sizing: border-box; }
+
+.travelTitle {
+  width: 40%; }
+
+.travelTitle h2, h1, p {
+  padding: 5px 0px;
+  font-family: '微軟正黑體'; }
+
+.travelTitle h2 {
+  font-size: 1vw;
+  font-weight: bold; }
+
+.travelTitle h1 {
+  font-size: 1.5vw;
+  font-weight: bold; }
+
+.travelTitle p {
+  font-size: 0.8vw;
+  line-height: 1.2em;
+  white-space: nowrap;
+  display: box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-clamp: 50;
+  box-orient: vertical; }
+
+.travelPic {
+  padding-left: 8%;
+  /*padding-top: 5%;*/
+  width: 40%;
+  position: relative;
+  font-size: 0px;
+  padding-top: 5%; }
+
+.travelPic:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 0px;
+  position: relative;
+  background-color: #000;
+  vertical-align: middle; }
+
+.travelDay {
+  width: 35%;
+  font-size: 1.8vw;
+  font-family: '微軟正黑體';
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+  position: relative;
+  border-right: 3px solid #FFF;
+  padding-right: 10px;
+  /*padding-top:10%;*/ }
+
+.travelPicGroup {
+  width: 60%;
+  display: inline-block;
+  vertical-align: middle; }
+
+.travelPic img {
+  width: 50%;
+  display: inline-block;
+  padding: 5%; }
+
+.travelBtn {
+  width: 20%;
+  /*background-color: #AFA;*/ }
+
+.lookTravelBtn, .allTravelBtn {
+  width: 13%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  padding: 1.2%;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  font-size: 0.8vw;
+  /*box-sizing: border-box;*/
+  text-decoration: none; }
+
+.lookTravelBtn {
+  right: 0px;
+  top: 0px; }
+
+.allTravelBtn {
+  right: 0px;
+  top: 50px; }
