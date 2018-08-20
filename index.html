@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- css -->
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/fullpage.css">
     <!-- plugin -->
     <!-- <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script> -->
     <script src="libs/jquery/dist/jquery.min.js"></script>
@@ -49,32 +50,320 @@
         </ul>
     </nav>
     <!-- nav end-->
-    <div></div>
-    <!-- part1 start -->
-    <section class="part1">
-        <div class="wrap">
+
+    <div id="section1">
+        <!-- part1 start -->
+        <div class="part1">
             <div class="choPlanet choPlt1">
                 <img class="planetBg" src="/img/planetBg.png">
                 <img src="/img/planetsan.png">
-                <!-- <span>達沙星</span> -->
+                <span>達沙星</span>
             </div>
             <div class="choPlanet choPlt2">
                 <img class="planetBg" src="/img/planetBg.png">
                 <img src="/img/planetwater.png">
+                <span>瓦特星</span>
             </div>
             <div class="choPlanet choPlt3">
                 <img class="planetBg" src="/img/planetBg.png">
                 <img src="/img/planettree.png">
+                <span>奧倫星</span>
             </div>
-            <div class="bigPlanet">
-                    <img src="/img/planetwater.png">
+            <div class="bigPlt bigPltSan">
+                <img src="img/planetsan.png">
+                <div class="viewDot">
+                        <div class="pvAll p2V1">
+                            <div id="p2V1Dot" class="speed1"></div>  
+                            <div class="pulse pulse3s"></div>
+                        </div>
+                        <div class="pvAll p2V2">
+                            <div id="p2V2Dot" class="speed1"></div>  
+                            <div class="pulse pulse6s"></div>
+                        </div>
+                        <div class="pvAll p2V3">
+                            <div id="p2V3Dot" class="speed1"></div>  
+                            <div class="pulse pulse0s"></div>
+                        </div>
+                        <div class="pvAll p2V4">
+                            <div id="p2V4Dot" class="speed2"></div>  
+                            <div class="pulse pulse3s"></div>
+                        </div>
+                        <div class="pvAll p2V5">
+                            <div id="p2V5Dot" class="speed2"></div>  
+                            <div class="pulse pulse6s"></div>
+                        </div>
+                        <div class="pvAll p2V6">
+                            <div id="p2V6Dot" class="speed2"></div>  
+                            <div class="pulse pulse0s"></div>
+                        </div>
+                        <div class="pvAll p2V7">
+                            <div id="p2V7Dot" class="speed3"></div>  
+                            <div class="pulse pulse3s"></div>
+                        </div>
+                        <div class="pvAll p2V8">
+                            <div id="p2V8Dot" class="speed3"></div>  
+                            <div class="pulse pulse6s"></div>
+                        </div>
+                        <div class="pvAll p2V9">
+                            <div id="p2V9Dot" class="speed3"></div>  
+                            <div class="pulse pulse0s"></div>
+                        </div>
+                        <div class="pvAll p2V10">
+                            <div id="p2V10Dot" class="speed3"></div>  
+                            <div class="pulse pulse3s"></div>
+                        </div>
+                </div>
+            </div>
+
+            <div class="bigPlt bigPltWater">
+                <img src="img/planetwater.png">
+                <div class="viewDot">
+                        <div class="pvAll p3V1">
+                            <div id="p1V1Dot" class="speed1"></div>  
+                            <div class="pulse pulse3s"></div>
+                        </div>
+                        <div class="pvAll p1V2">
+                            <div id="p1V2Dot" class="speed1"></div>  
+                            <div class="pulse pulse6s"></div>
+                        </div>
+                        <div class="pvAll p1V3">
+                            <div id="p1V3Dot" class="speed1"></div>  
+                            <div class="pulse pulse0s"></div>
+                        </div>
+                        <div class="pvAll p1V4">
+                            <div id="p1V4Dot" class="speed1"></div>  
+                            <div class="pulse pulse3s"></div>
+                        </div>
+                        <div class="pvAll p1V5">
+                            <div id="p1V5Dot" class="speed2"></div>  
+                            <div class="pulse pulse6s"></div>
+                        </div>
+                        <div class="pvAll p1V6">
+                            <div id="p1V6Dot" class="speed2"></div>  
+                            <div class="pulse pulse0s"></div>
+                        </div>
+                        <div class="pvAll p1V7">
+                            <div id="p1V7Dot" class="speed2"></div>  
+                            <div class="pulse pulse3s"></div>
+                        </div>
+                        <div class="pvAll p1V8">
+                            <div id="p1V8Dot" class="speed2"></div>  
+                            <div class="pulse pulse6s"></div>
+                        </div>
+                        <div class="pvAll p1V9">
+                            <div id="p1V9Dot" class="speed3"></div>  
+                            <div class="pulse pulse0s"></div>
+                        </div>
+                        <div class="pvAll p1V10">
+                            <div id="p1V10Dot" class="speed3"></div>  
+                            <div class="pulse pulse3s"></div>
+                        </div>
+                        <div class="pvAll p1V11">
+                            <div id="p1V11Dot" class="speed3"></div>  
+                            <div class="pulse pulse6s"></div>
+                        </div>
+                        <div class="pvAll p1V12">
+                            <div id="p1V12Dot" class="speed3"></div>  
+                            <div class="pulse pulse0s"></div>
+                        </div>
+                        <div class="pvAll p1V13">
+                            <div id="p1V13Dot" class="speed1"></div>  
+                            <div class="pulse pulse3s"></div>
+                        </div>
+                        <div class="pvAll p1V14">
+                            <div id="p1V14Dot" class="speed2"></div>  
+                            <div class="pulse pulse6s"></div>
+                        </div>
+                </div>
+            </div>
+
+            <div class="bigPlt bigPltTree">
+                <img src="/img/planettree.png">
+                <div class="viewDot">
+                    <div class="pvAll p3V1">
+                        <div id="p3V1Dot" class="speed1"></div>  
+                        <div class="pulse pulse3s"></div>
+                    </div>
+                    <div class="pvAll p3V2">
+                        <div id="p3V2Dot" class="speed1"></div>  
+                        <div class="pulse pulse6s"></div>
+                    </div>
+                    <div class="pvAll p3V3">
+                        <div id="p3V3Dot" class="speed1"></div>  
+                        <div class="pulse pulse0s"></div>
+                    </div>
+                    <div class="pvAll p3V4">
+                        <div id="p3V4Dot" class="speed2"></div>  
+                        <div class="pulse pulse3s"></div>
+                    </div>
+                    <div class="pvAll p3V5">
+                        <div id="p3V5Dot" class="speed2"></div>  
+                        <div class="pulse pulse6s"></div>
+                    </div>
+                    <div class="pvAll p3V6">
+                        <div id="p3V6Dot" class="speed2"></div>  
+                        <div class="pulse pulse0s"></div>
+                    </div>
+                    <div class="pvAll p3V7">
+                        <div id="p3V7Dot" class="speed3"></div>  
+                        <div class="pulse pulse3s"></div>
+                    </div>
+                    <div class="pvAll p3V8">
+                        <div id="p3V8Dot" class="speed3"></div>  
+                        <div class="pulse pulse6s"></div>
+                    </div>
+                    <div class="pvAll p3V9">
+                        <div id="p3V9Dot" class="speed3"></div>  
+                        <div class="pulse pulse0s"></div>
+                    </div>
+                    <div class="pvAll p3V10">
+                        <div id="p3V10Dot" class="speed3"></div>  
+                        <div class="pulse pulse3s"></div>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
-    <section class="part2">
+    </div>
+        <!-- part1 end -->
+        <!-- part2 start -->
+    <div id="section2">
+        <div class="part2">
+            <div class="pt2Title">
+                <h2 class="pt2Eng">CHOOSE ONE</h2>
+                <h2 class="pt2Cn">對於星球之旅有想法嗎</h2>
+            </div>
+            <img src="/img/indexpPt2Bg.jpg" class="yesNoImg noImg">
+            <img src="/img/indexpPt2Bg-2.jpg" class="yesNoImg yesImg">
+            <div class="yesNo no">
+                <span>NO</span>
+                <p>那就試試看<br>我們的測驗吧</p>
+                <a href="#">開始測驗</a>
+            </div>
+            <div class="yesNo yes">
+                <span>YES</span>
+                <p>現在就開始規劃<br>您的星球之旅吧</p>
+                <a href="#">開始規劃</a>
+            </div>
+        </div>
+    </div>
+        <!-- part2 end -->
+        <!-- part3 start -->
+    <div id="section3">
+        <div class="part3">
+            <h2>帶上我們的專家吧</h2>
+            <h3>他會讓您的旅途更加精采</h3>
+            <a href="#">查看所有專家</a>
+            <div class="expertAll expert1">
+                <div class="exScreen scWhite"></div>
+                <div class="exScreen scBlack"></div>
+                <img src="/img/expert1.jpg" alt="expert1">
+                <div class="exAllText exText1">
+                    <img src="/img/crown.png" alt="crown">
+                    <h3>奧倫星人氣專家</h3>
+                    <h3>May J Lee</h3>
+                    <p>人文</p>
+                    <span></span>
+                    <p>美食</p>
+                    <span></span>
+                    <p>科技</p>
+                    <span></span>
+                    <p>人氣</p>
+                    <span></span>
+                    <p>冒險</p>
+                    <span></span>
+                    <p>知性</p>
+                    <span></span>
+                    <a href="#">專家詳情</a>
+                </div>
+            </div>
+            <div class="expertAll expert2">
+                <div class="exScreen scWhite"></div>
+                <div class="exScreen scBlack"></div>
+                <img src="/img/expert2.jpg" alt="expert2">
+                <div class="exAllText exText2">
+                    <img src="/img/crown.png" alt="crown">
+                    <h3>瓦特星人氣專家</h3>
+                    <h3>Tom Jeson</h3>
+                    <p>人文</p>
+                    <span></span>
+                    <p>美食</p>
+                    <span></span>
+                    <p>科技</p>
+                    <span></span>
+                    <p>人氣</p>
+                    <span></span>
+                    <p>冒險</p>
+                    <span></span>
+                    <p>知性</p>
+                    <span></span>
+                    <a href="#">專家詳情</a>
+                </div>
+            </div>
+            <div class="expertAll expert3">
+                <div class="exScreen scWhite"></div>
+                <div class="exScreen scBlack"></div>
+                <img src="/img/expert3.jpg" alt="expert3">
+                <div class="exAllText exText3">
+                    <img src="/img/crown.png" alt="crown">
+                    <h3>奧倫星人氣專家</h3>
+                    <h3>Andy Lin</h3>
+                    <p>人文</p>
+                    <span></span>
+                    <p>美食</p>
+                    <span></span>
+                    <p>科技</p>
+                    <span></span>
+                    <p>人氣</p>
+                    <span></span>
+                    <p>冒險</p>
+                    <span></span>
+                    <p>知性</p>
+                    <span></span>
+                    <a href="#">專家詳情</a>
+                </div>
+            </div>
+            
+            <div class="expertAll expert4">
+                <div class="exScreen scWhite"></div>
+                <div class="exScreen scBlack"></div>
+                <img src="/img/expert4.jpg" alt="expert4">
+                <div class="exAllText exText4">
+                    <img src="/img/crown.png" alt="crown">
+                    <h3>達沙星人氣專家</h3>
+                    <h3>Steven Wang</h3>
+                    <p>人文</p>
+                    <span></span>
+                    <p>美食</p>
+                    <span></span>
+                    <p>科技</p>
+                    <span></span>
+                    <p>人氣</p>
+                    <span></span>
+                    <p>冒險</p>
+                    <span></span>
+                    <p>知性</p>
+                    <span></span>
+                    <a href="#">專家詳情</a>
+                </div>
+            </div>
+           
+            
+            <!-- <div class="exAllText exText2"></div>
+            <div class="exAllText exText3"></div>
+            <div class="exAllText exText4"></div> -->
+        </div>
+    </div>
+        
+        <!-- part3 end -->
+        <!-- part4 start -->
+        <!-- <div class="section part4">
+        
+        </div> -->
+        <!-- part4 end -->
+    
+    
+    
 
-    </section>
-    <!-- part1 end -->
 
 
     
@@ -102,6 +391,17 @@
 
 
     <!-- script -->
+    <!-- <script>
+        $( "#dowebok" ).fullpage({
+            // 參數設定[註1]
+            navigation: true, // 顯示導行列
+            navigationPosition: "right" // 導行列位置
+        });
+    </script> -->
+
+
+    <script src="/js/index.js"></script>
+
     <!-- <script src="js/tween.js"></script> -->
 </body>
 

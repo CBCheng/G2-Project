@@ -2,7 +2,7 @@
 @import "base/reset";
 @import "mixin/mixin";
 	
-	* {
+* {
     font-family: 'Microsoft JhengHei';
     font-weight: 500;
 }
@@ -455,10 +455,9 @@ figure {
 }
 .all_content {
 //   position: relative;
-  padding-top: 50px;
+  padding-top: 200px;
   padding-bottom: 100px;
   width: 100%;
-  background-image: url("../img/bg.png");
   background-size: 100%;
   background-attachment: fixed; }
   /*.all_content::before {
@@ -471,11 +470,11 @@ figure {
     z-index: 1;
     width: 100%;
     background-color: rgba(66, 66, 66, 0.7); }*/
-
+  
 .tabPage {
-  position: fixed;
-  top: 240px;
-  left: 510px;
+//   position: fixed;
+  top: 200px;
+  left: 500px;
   z-index: 4;
   box-sizing: border-size;
   border: 1px solid black;
@@ -484,7 +483,6 @@ figure {
   margin: auto;
   text-align: center;
   background-color: #08040f;
-  background-image: url("../img/menu/loginBg.png");
   background-size: cover; }
 
 .tabPage_border {
