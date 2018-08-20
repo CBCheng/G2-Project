@@ -16,7 +16,7 @@
     <script src="libs/gsap/src/minified/TweenMax.min.js"></script>
     <script type="text/javascript" src="js/parallax.min.js"></script>
     <!-- scroll -->
-    
+
     <!-- <script src="js/login.js"></script> -->
 
 
@@ -25,6 +25,9 @@
 
 <body>
     <!-- nav -->
+    <div class="navColor">
+        <img class="navPic" src="img/bg.png" alt="">
+    </div>
     <nav>
         <!-- desk -->
         <ul class="menu mRight">
@@ -105,7 +108,7 @@
     </nav>
 
 
-   
+
 
     <div class="title">
         <h1>專家帶你玩</h1>
@@ -132,13 +135,13 @@
     <section class="panel">
         <div id="filters" class="button-group">
             <div class="button-top">
-            <button class="button is-checked" data-filter="*">全部</button>
-            <button class="button" data-filter=".popular">人氣</button>
+                <button class="button is-checked" data-filter="*">全部</button>
+                <button class="button" data-filter=".popular">人氣</button>
             </div>
             <div class="button-down">
-            <button class="button" data-filter=".blue">瓦特星</button>
-            <button class="button" data-filter=".orange">達沙星</button>
-            <button class="button" data-filter=".green">奧倫星</button>
+                <button class="button" data-filter=".blue">瓦特星</button>
+                <button class="button" data-filter=".orange">達沙星</button>
+                <button class="button" data-filter=".green">奧倫星</button>
             </div>
         </div>
 
@@ -150,7 +153,7 @@
                     <div class="pic">
                         <div class="attr">人氣</div>
                         <a href="#lightBox1" data-lity>
-                            <img id="box1" src="img/emma.jpg" alt="emma" >
+                            <img id="box1" src="img/emma.jpg" alt="emma">
                         </a>
                     </div>
                 </div>
@@ -177,7 +180,7 @@
                     <div class="pic">
                         <div class="attr">人文</div>
                         <a href="#lightBox1" data-lity>
-                            <img id="box1" src="img/emma.jpg" alt="emma" >
+                            <img id="box1" src="img/emma.jpg" alt="emma">
                         </a>
                     </div>
                 </div>
@@ -204,7 +207,7 @@
                     <div class="pic">
                         <div class="attr">知性</div>
                         <a href="#lightBox1" data-lity>
-                            <img id="box1" src="img/emma.jpg" alt="emma" >
+                            <img id="box1" src="img/emma.jpg" alt="emma">
                         </a>
                     </div>
                 </div>
@@ -232,7 +235,7 @@
                     <div class="pic">
                         <div class="attr">人氣</div>
                         <a href="#lightBox1" data-lity>
-                            <img id="box1" src="img/emma.jpg" alt="emma" >
+                            <img id="box1" src="img/emma.jpg" alt="emma">
                         </a>
                     </div>
                 </div>
@@ -259,7 +262,7 @@
                     <div class="pic">
                         <div class="attr">科技</div>
                         <a href="#lightBox1" data-lity>
-                            <img id="box1" src="img/emma.jpg" alt="emma" >
+                            <img id="box1" src="img/emma.jpg" alt="emma">
                         </a>
                     </div>
                 </div>
@@ -286,7 +289,7 @@
                     <div class="pic">
                         <div class="attr">人文</div>
                         <a href="#lightBox1" data-lity>
-                            <img id="box1" src="img/emma.jpg" alt="emma" >
+                            <img id="box1" src="img/emma.jpg" alt="emma">
                         </a>
                     </div>
                 </div>
@@ -314,7 +317,7 @@
                     <div class="pic">
                         <div class="attr">人氣</div>
                         <a href="#lightBox1" data-lity>
-                            <img id="box1" src="img/emma.jpg" alt="emma" >
+                            <img id="box1" src="img/emma.jpg" alt="emma">
                         </a>
                     </div>
                 </div>
@@ -341,7 +344,7 @@
                     <div class="pic">
                         <div class="attr">知性</div>
                         <a href="#lightBox1" data-lity>
-                            <img id="box1" src="img/emma.jpg" alt="emma" >
+                            <img id="box1" src="img/emma.jpg" alt="emma">
                         </a>
                     </div>
                 </div>
@@ -368,7 +371,7 @@
                     <div class="pic">
                         <div class="attr">冒險</div>
                         <a href="#lightBox1" data-lity>
-                            <img id="box1" src="img/emma.jpg" alt="emma" >
+                            <img id="box1" src="img/emma.jpg" alt="emma">
                         </a>
                     </div>
                 </div>
@@ -390,15 +393,15 @@
             </div>
         </div>
     </section>
-<!-- ======filter===== -->
+    <!-- ======filter===== -->
 
 
 
 
-<!-- ======lightBox===== -->
+    <!-- ======lightBox===== -->
     <!-- <section id="lightBox1" style="display:none"> -->
     <section id="lightBox1" class="lity-hide">
-    <!-- <section id="lightBox1" > -->
+        <!-- <section id="lightBox1"> -->
         <!-- <img id="closeBtn" src="img/close.png" alt="close"> -->
         <h1>瓦特星專家</h1>
         <h2>妙麗</h2>
@@ -419,12 +422,24 @@
                 </div> -->
                 <div class="chart">
                     <h3>能力值</h3>
-                    <span>人氣</span><div class="line"></div><br>
-                    <span>美食</span><div class="line"></div><br>
-                    <span>知性</span><div class="line focus"></div><br>
-                    <span>人文</span><div class="line"></div><br>
-                    <span>冒險</span><div class="line"></div><br>
-                    <span>科技</span><div class="line"></div><br>
+                    <span>人氣</span>
+                    <div class="line"></div>
+                    <br>
+                    <span>美食</span>
+                    <div class="line"></div>
+                    <br>
+                    <span>知性</span>
+                    <div class="line focus"></div>
+                    <br>
+                    <span>人文</span>
+                    <div class="line"></div>
+                    <br>
+                    <span>冒險</span>
+                    <div class="line"></div>
+                    <br>
+                    <span>科技</span>
+                    <div class="line"></div>
+                    <br>
                 </div>
             </article>
             <div class="record">
@@ -455,7 +470,7 @@
                 <div class="user">
                     <div class="name">董董</div>
                     <img src="img/userPic.jpg" alt="user">
-                    
+
                 </div>
                 <p>妙麗超專業的，人很nice又漂亮，下次一定還要預約！</p>
             </div>
@@ -463,13 +478,13 @@
                 <div class="user">
                     <div class="name">董董</div>
                     <img src="img/userPic.jpg" alt="user">
-                    
+
                 </div>
                 <p>妙麗超專業的，人很nice又漂亮，下次一定還要預約！</p>
             </div>
         </div>
     </section>
-<!-- ======lightBox===== -->
+    <!-- ======lightBox===== -->
 
 
 
@@ -485,7 +500,7 @@
     </footer>
 
     <!-- jquery -->
-    <script>
+    <!-- <script>
         //    桌機登入下拉選單
         $(function () {
             $('.memberSign').click(function () {
@@ -502,12 +517,13 @@
                 $('.menuMobile a').toggleClass("activeB")
             });
         });
-    </script>
+    </script> -->
 
 
 
 
     <!-- script 引用-->
+    <script src="js/style.js"></script>
     <script src="js/expert.js"></script>
 
     <script src="js/tween.js"></script>

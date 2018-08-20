@@ -291,7 +291,8 @@ nav {
   margin-bottom: 10px;
   padding-bottom: 20px;
   border-bottom: 2px solid #6cd5ff; }
-  .button-group .button-top, .button-group .button-down {
+  .button-group .button-top,
+  .button-group .button-down {
     display: inline-block; }
   .button-group .button {
     display: inline-block;
@@ -320,7 +321,8 @@ nav {
     font-size: 16px; } }
 
 @media screen and (max-width: 650px) {
-  .button-group .button-top, .button-group .button-down {
+  .button-group .button-top,
+  .button-group .button-down {
     display: block; } }
 
 /* ---- .element-item ---- */
@@ -445,7 +447,8 @@ nav {
         display: block;
         padding-left: 20px;
         font-size: 18px; }
-      .grid .element-item .aside .score, .grid .element-item .aside .mark {
+      .grid .element-item .aside .score,
+      .grid .element-item .aside .mark {
         margin-top: 5px; } }
 
 .grid .element-item.blue h2 {
@@ -518,36 +521,42 @@ nav {
         margin: 15px 0;
         text-align: center; }
       #lightBox1 .content .data .chart {
+        outline: 1px solid #f00;
         margin-top: 30px; }
         #lightBox1 .content .data .chart span {
           font-size: 18px;
           margin-right: 10px;
           line-height: 1.8; }
         #lightBox1 .content .data .chart .line {
-          width: 50px;
+          width: 100px;
           height: 10px;
           background-color: #aaa;
           display: inline-block;
           border-radius: 5px; }
-        #lightBox1 .content .data .chart .line.focus {
-          width: 100px;
-          background-color: #6cd5ff; }
     #lightBox1 .content .record {
       display: inline-block; }
       #lightBox1 .content .record .collect {
         float: left; }
       #lightBox1 .content .record .writeComment {
         float: right; }
-      #lightBox1 .content .record .collect, #lightBox1 .content .record .writeComment {
+      #lightBox1 .content .record .collect,
+      #lightBox1 .content .record .writeComment {
         margin: 10px; }
-        #lightBox1 .content .record .collect #heart, #lightBox1 .content .record .collect #write, #lightBox1 .content .record .writeComment #heart, #lightBox1 .content .record .writeComment #write {
+        #lightBox1 .content .record .collect #heart,
+        #lightBox1 .content .record .collect #write,
+        #lightBox1 .content .record .writeComment #heart,
+        #lightBox1 .content .record .writeComment #write {
           width: 28px;
           height: 26px;
           cursor: pointer; }
-        #lightBox1 .content .record .collect .txt, #lightBox1 .content .record .writeComment .txt {
+        #lightBox1 .content .record .collect .txt,
+        #lightBox1 .content .record .writeComment .txt {
           font-size: 16px;
           line-height: 2.5; }
-        #lightBox1 .content .record .collect #Cnum, #lightBox1 .content .record .collect #Wnum, #lightBox1 .content .record .writeComment #Cnum, #lightBox1 .content .record .writeComment #Wnum {
+        #lightBox1 .content .record .collect #Cnum,
+        #lightBox1 .content .record .collect #Wnum,
+        #lightBox1 .content .record .writeComment #Cnum,
+        #lightBox1 .content .record .writeComment #Wnum {
           font-size: 14px;
           color: #aaaaaa; }
   #lightBox1 .comment {
@@ -627,7 +636,8 @@ nav {
   #lightBox1 .content .record {
     margin: 10px auto 0;
     display: block; }
-    #lightBox1 .content .record .collect, #lightBox1 .content .record .writeComment {
+    #lightBox1 .content .record .collect,
+    #lightBox1 .content .record .writeComment {
       float: none;
       display: inline-block; }
   #lightBox1 .comment .score p {

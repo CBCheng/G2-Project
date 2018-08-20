@@ -2,7 +2,6 @@
 @import "base/reset";
 @import "mixin/mixin";
 @include body(10px);
-
 $fontColorOrange: #cfa972;
 $fontColorGreen: #80c269;
 $borderColorBlue: rgba(108, 213, 255, 0.5);
@@ -11,8 +10,7 @@ $borderColorGreen: rgba(128, 194, 105, 0.5);
 $attrBlue: #094f91;
 $attrOrange: #ad7f43;
 $attrGreen: #486a00;
-
-body{
+body {
     // background-attachment: fixed;
 }
 
@@ -21,31 +19,34 @@ body{
     box-sizing: border-box;
 }
 
-
 // ========scrollBar change=========
 /* width */
+
 ::-webkit-scrollbar {
     width: 15px;
-    background: #202164; 
+    background: #202164;
 }
+
 /* Track */
+
 ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px grey;
 }
+
 /* Handle */
+
 ::-webkit-scrollbar-thumb {
-    background: #95cce4; 
+    background: #95cce4;
     border-radius: 10px;
 }
+
 /* Handle on hover */
+
 ::-webkit-scrollbar-thumb:hover {
     background: #2f83ad;
-} 
+}
+
 // ========scrollBar change=========
-
-
-
-
 img {
     width: 100%;
     vertical-align: middle;
@@ -57,8 +58,6 @@ a {
 }
 
 @import "layout/nav";
-
-
 .title {
     top: 200px;
     position: relative;
@@ -91,8 +90,8 @@ a {
     }
 }
 
-@media screen and (max-width: 767px){
-    .title{
+@media screen and (max-width: 767px) {
+    .title {
         top: 100px;
     }
 }
@@ -198,14 +197,14 @@ a {
     }
 }
 
-
 .panel {
     // outline: 1px solid #fff;
     width: 1200px;
     margin: 100px auto;
 }
-@media screen and (max-width: 1200px){
-    .panel{
+
+@media screen and (max-width: 1200px) {
+    .panel {
         width: 90%;
         margin: 80px auto;
     }
@@ -218,7 +217,8 @@ a {
     margin-bottom: 10px;
     padding-bottom: 20px;
     border-bottom: 2px solid $fontColorBlue;
-    .button-top,.button-down{
+    .button-top,
+    .button-down {
         display: inline-block;
     }
     .button {
@@ -246,30 +246,28 @@ a {
     }
 }
 
-@media screen and (max-width: 900px){
-    .button-group{
-        .button{
+@media screen and (max-width: 900px) {
+    .button-group {
+        .button {
             padding: 4px 20px;
             margin: 5px 10px;
             font-size: 16px;
         }
     }
 }
-@media screen and (max-width: 650px){
-    .button-group{
-        .button-top,.button-down{
+
+@media screen and (max-width: 650px) {
+    .button-group {
+        .button-top,
+        .button-down {
             display: block;
         }
     }
 }
 
-
-
-
 /* ---- .element-item ---- */
 
 .grid {
-    
     .element-item {
         width: 250px;
         margin: 25px;
@@ -278,7 +276,7 @@ a {
             font-size: 22px;
             margin-top: 10px;
         }
-        h3{
+        h3 {
             font-size: 20px;
             margin: 10px;
         }
@@ -324,22 +322,18 @@ a {
             }
         }
     }
-
-   
-
     @media screen and (max-width: 991px) {
-        .element-item{
+        .element-item {
             width: 200px;
             margin: 15px;
-            
             h2 {
                 font-size: 20px;
             }
-            .pic{
+            .pic {
                 width: 130px;
-                .attr{
+                .attr {
                     font-size: 15px;
-                    width: 45px; 
+                    width: 45px;
                     height: 45px;
                     line-height: 45px;
                 }
@@ -367,11 +361,8 @@ a {
             }
         }
     }
-    
-
-
     @media screen and (min-width:650px) {
-        .element-item{
+        .element-item {
             box-shadow: 0 0 5px 3px rgba(255, 255, 255, 0.2);
             background-color: rgba(0, 0, 0, 0.8);
         }
@@ -384,12 +375,11 @@ a {
         .element-item.green {
             border: 3px solid $borderColorGreen;
         }
-        .element-item  .aside h3{
+        .element-item .aside h3 {
             display: none;
         }
     }
-
-    @media screen and (max-width: 650px){
+    @media screen and (max-width: 650px) {
         .element-item:after {
             content: "";
             display: block;
@@ -404,44 +394,44 @@ a {
         .element-item.green {
             border-bottom: 2px dashed $borderColorGreen;
         }
-        .element-item{
+        .element-item {
             width: 90%;
             padding-bottom: 15px;
             margin: 15px 15px 5px;
-            h2{
+            h2 {
                 font-size: 18px;
                 margin: 0 auto 10px;
             }
-            h3{
+            h3 {
                 font-size: 16px;
                 display: none;
             }
-            .main{
+            .main {
                 float: left;
                 width: 50%;
                 display: inline-block;
-                .pic{
+                .pic {
                     width: 100px;
                 }
             }
-            .aside{
+            .aside {
                 float: right;
                 width: 50%;
                 display: inline-block;
                 text-align: left;
                 margin-top: 10px;
-                h3{
+                h3 {
                     display: block;
                     padding-left: 20px;
                     font-size: 18px;
                 }
-                .score,.mark{
+                .score,
+                .mark {
                     margin-top: 5px;
                 }
             }
         }
     }
-
     .element-item.blue {
         h2 {
             color: $fontColorBlue;
@@ -452,7 +442,6 @@ a {
             }
         }
     }
-    
     .element-item.orange {
         h2 {
             color: $fontColorOrange;
@@ -463,7 +452,6 @@ a {
             }
         }
     }
-
     .element-item.green {
         h2 {
             color: $fontColorGreen;
@@ -483,33 +471,31 @@ a {
 }
 
 #lightBox1 {
-    // position: fixed;
-    // top: 0px;
-    // left: 0;
-    // right: 0;
-    // z-index: 900;
+    // position: fixed; // top: 0px;
+// left: 0;
+// right: 0;
+// z-index: 900;
     margin: auto;
     width: 960px;
     height: 600px;
-    overflow: auto; 
+    overflow: auto;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.9);
     border: 3px solid rgba(108, 213, 255, 0.5);
     #closeBtn {
         width: 50px;
         float: right;
-        cursor: pointer;
-        // position: absolute;
+        cursor: pointer; // position: absolute;
         // top: 0;right: 0;
     }
     h1 {
         color: $fontColorBlue;
         margin-top: 50px;
     }
-    h2{
+    h2 {
         margin-top: 30px;
     }
-    .content{
+    .content {
         margin-top: 20px;
         .expPic {
             vertical-align: bottom;
@@ -533,16 +519,15 @@ a {
                 min-width: 100px;
             }
         }
-        .data{
+        .data {
             display: inline-block;
             margin: 0 50px;
             text-align: justify;
-            h3{
+            h3 {
                 font-size: 22px;
-                margin: 15px 0 ;
+                margin: 15px 0;
                 text-align: center;
-            }
-            // .score{
+            } // .score{
             //     span {
             //         font-size: 16px;
             //         padding-right: 5px;
@@ -552,61 +537,67 @@ a {
             //         width: 20px;
             //     }
             // }
-            .chart{
-                margin-top: 30px;
-                // padding-right: 30px;
-                span{
+            .chart {
+                outline: 1px solid #f00;
+                margin-top: 30px; // padding-right: 30px;
+                span {
                     font-size: 18px;
                     margin-right: 10px;
                     line-height: 1.8;
                 }
-                .line{
-                    width: 50px;height: 10px;
+                .line {
+                    // outline: 1px solid #fff; 
+                    width: 100px;
+                    height: 10px;
                     background-color: #aaa;
                     display: inline-block;
                     border-radius: 5px;
-                }
-                .line.focus{
-                    width: 100px;
-                    background-color: $fontColorBlue;
-                }
+                } // .line.focus {
+                //     width: 100px;
+                //     background-color: $fontColorBlue;
+                // }
             }
         }
-        .record{
+        .record {
             display: inline-block;
-            .collect{float: left; }
-            .writeComment{float: right;}
-            .collect,.writeComment{
+            .collect {
+                float: left;
+            }
+            .writeComment {
+                float: right;
+            }
+            .collect,
+            .writeComment {
                 // outline: 1px solid #f00;
                 margin: 10px;
-                #heart,#write{
+                #heart,
+                #write {
                     width: 28px;
                     height: 26px;
                     cursor: pointer;
                 }
-                .txt{
+                .txt {
                     font-size: 16px;
                     line-height: 2.5;
                 }
-                #Cnum,#Wnum{
+                #Cnum,
+                #Wnum {
                     font-size: 14px;
                     color: #aaaaaa;
                 }
             }
         }
-        
     }
-    .comment{
+    .comment {
         width: 60%;
         margin: 80px auto;
-        h2{
-            text-align: justify;
-            // display: inline;
+        h2 {
+            text-align: justify; // display: inline;
         }
-        .score{
+        .score {
             // display: inline-block;
             text-align: right;
-            p{
+            p {
                 display: inline;
                 font-size: 20px;
                 padding-right: 10px;
@@ -620,31 +611,33 @@ a {
                 width: 20px;
             }
         }
-        .message{
+        .message {
             // outline: 1px solid #ff0000;
             border-bottom: 1px dashed $borderColorBlue;
             margin: 20px auto 0;
             padding-bottom: 20px;
             width: 100%;
-            .user{
-                width: 100%; height: 80px;
+            .user {
+                width: 100%;
+                height: 80px;
                 position: relative;
-                .name{
+                .name {
                     position: absolute;
-                    left: 60px; top: 10px;
+                    left: 60px;
+                    top: 10px;
                     padding: 10px 25px;
                     background-color: $attrBlue;
                     font-size: 16px;
                     letter-spacing: 2px;
                 }
-                img{
+                img {
                     position: absolute;
                     left: 0;
                     width: 80px;
                     border-radius: 50%;
                 }
             }
-            p{
+            p {
                 margin-top: -10px;
                 margin-left: 90px;
                 font-size: 16px;
@@ -654,75 +647,92 @@ a {
     }
 }
 
-
-@media screen and (max-width: 1000px){
-    #lightBox1{width: 100%;}
+@media screen and (max-width: 1000px) {
+    #lightBox1 {
+        width: 100%;
+    }
 }
-@media screen and (max-width: 850px){
-    #lightBox1{
-        h1{margin-top: 30px;font-size: 24px;}
-        h2{margin-top: 20px;font-size: 22px;}
+
+@media screen and (max-width: 850px) {
+    #lightBox1 {
+        h1 {
+            margin-top: 30px;
+            font-size: 24px;
+        }
+        h2 {
+            margin-top: 20px;
+            font-size: 22px;
+        }
         .content {
             .expPic {
-                margin:10px;
+                margin: 10px;
                 width: 150px;
-                .attr{
-                    width:50px; 
+                .attr {
+                    width: 50px;
                     height: 50px;
                     font-size: 16px;
                     line-height: 50px;
                 }
             }
-            .data{
+            .data {
                 margin: 10px;
-                h3{
+                h3 {
                     font-size: 20px;
                     margin-bottom: 10px;
                 }
-                .chart{
+                .chart {
                     margin: auto;
-                    span{
-                       font-size: 16px;
-                        line-height: 1.5; 
+                    span {
+                        font-size: 16px;
+                        line-height: 1.5;
                     }
                 }
             }
-            .record{
+            .record {
                 margin: 10px auto 0;
                 display: block;
-                .collect,.writeComment{
+                .collect,
+                .writeComment {
                     float: none;
                     display: inline-block;
                 }
             }
         }
-        .comment{
-            .score{
-                p{font-size: 16px;
-                  padding-right: 5px;}
-                span{font-size: 15px;
-                    padding-right: 2px;}
-                img{width: 18px;}
+        .comment {
+            .score {
+                p {
+                    font-size: 16px;
+                    padding-right: 5px;
+                }
+                span {
+                    font-size: 15px;
+                    padding-right: 2px;
+                }
+                img {
+                    width: 18px;
+                }
             }
-            .message{
-                .user{
-                    .name{left: 45px;
-                          padding: 6px 25px;}
-                   img{width: 60px;} 
-                } 
-                p{
+            .message {
+                .user {
+                    .name {
+                        left: 45px;
+                        padding: 6px 25px;
+                    }
+                    img {
+                        width: 60px;
+                    }
+                }
+                p {
                     margin-top: 10px;
                     margin-left: 20px;
                 }
             }
         }
-    } 
+    }
 }
 
-
-
-footer{
-    img{
+footer {
+    img {
         position: fixed;
         bottom: 0;
         right: 0;
@@ -731,28 +741,17 @@ footer{
     }
 }
 
-
 @include respond(small) {
-    .title{
-       
-    }
+    .title {}
 }
 
 @include respond(medium) {
-    .title{
-        
-    }
+    .title {}
 }
 
 @include respond(desktop) {
-    .title{
-        
-        
-    }
+    .title {}
 }
-
-
-
 
 @import "layout/footer";
 @import "layout/nav-small";
