@@ -160,8 +160,8 @@
   color: #777; }
 
 .mW_delete:hover {
-  border: 2px solid #e16d6b;
-  color: #e16d6b; }
+  border: 2px solid #2C8DC7;
+  color: #2C8DC7; }
 
 .mW_delete i {
   text-align: center;
@@ -181,8 +181,8 @@
   right: 5px; }
 
 .mW_look:hover {
-  border: 2px solid #e16d6b;
-  color: #e16d6b; }
+  border: 2px solid #2C8DC7;
+  color: #2C8DC7; }
 
 .mW_edit {
   border: 2px solid #777;
