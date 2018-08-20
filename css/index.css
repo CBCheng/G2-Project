@@ -307,16 +307,16 @@ nav {
   position: absolute; }
 
 .part1 {
-  background-image: url("../img/indexBg-part1.jpg"); }
+  background-image: url("../img/index/indexBg-part1.jpg"); }
 
 .part2 {
-  background-image: url("../img/indexBg-part2.jpg"); }
+  background-image: url("../img/index/indexBg-part2.jpg"); }
 
 .part3 {
-  background-image: url("../img/indexBg-part3.jpg"); }
+  background-image: url("../img/index/indexBg-part3.jpg"); }
 
 .part4 {
-  background-image: url("../img/indexBg-part4.jpg"); }
+  background-image: url("../img/index/indexBg-part4.jpg"); }
 
 .part1 h1 {
   position: absolute;
@@ -710,7 +710,7 @@ nav {
     width: 45%;
     height: 60%;
     margin: 13% auto auto;
-    background-image: url(/img/p1_v2_03.jpg);
+    background-image: url(/img/index/p1_v2_03.jpg);
     background-size: 102%;
     border: 2px solid #6cd5ff; }
     .viewBg .viewItem h2 {
@@ -823,7 +823,9 @@ nav {
 
 .yesNo a:hover {
   box-shadow: 0px 0px 20px 2px #000;
-  background-color: #6cd5ff; }
+  background-color: #6cd5ff;
+  transition: 0s;
+  color: #000; }
 
 .no {
   left: 69.2%; }
@@ -1049,7 +1051,7 @@ nav {
   position: relative;
   width: 100%;
   padding-bottom: 50%;
-  background-image: url(/img/part4Bg.jpg);
+  background-image: url(/img/index/part4Bg.jpg);
   perspective: 800px;
   perspective-origin: center center; }
 
@@ -1079,7 +1081,7 @@ nav {
   background-color: #FFF;
   padding: 10px;
   padding-top: 1%;
-  background-image: url(/img/section4pic1.png);
+  background-image: url(/img/index/section4pic1.png);
   background-repeat: no-repeat;
   background-size: 102%;
   transform-style: preserve-3d;
@@ -1276,3 +1278,6 @@ nav {
 .allTravelBtn {
   right: 0px;
   top: 50px; }
+
+.copyright {
+  background-color: rgba(0, 0, 0, 0.5); }
