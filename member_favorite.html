@@ -2,16 +2,17 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="css/member.css">
-    <link rel="stylesheet" type="text/css" href="css/member_favorite.css">
-    <!-- <script src="js/member_like.js"></script> -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/member_like.js"></script>
-    <script src="js/member.js"></script>
-    <script src="js/jquery-3.3.1.min.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="css/member_mytrip.css">
+        <link rel="stylesheet" type="text/css" href="css/member.css">
+        <!-- <link rel="stylesheet" type="text/css" href="css/member.css"> -->
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/jquery-3.3.1.min.js"></script>
+          <script src="js/member_like.js"></script>
+          <script src="js/member.js"></script>
+          <script src="js/jquery-3.3.1.min.js"></script>
     <title>會員資訊</title>
     <style>
     
@@ -20,6 +21,53 @@
 </head>
 
 <body>
+
+    <!-- nav -->
+  <div class="navColor">
+        <img class="navPic" src="img/bg.png" alt=""> 
+    </div>
+    <nav>          
+        <!-- desk -->
+        <ul class="menu mRight">
+            <li><a href="planning.html">開始冒險</a></li>
+           <li><a href="expert.html">專家帶你玩</a></li>
+        </ul>
+            <a href="index.html" class="logo">
+                <img src="img/logo-1.png">
+            </a>
+        <ul class="menu mLeft">
+            <li><a href="refer.html">別人怎麼玩</a></li>
+            <li><a href="shop.html">星際商城</a></li>
+        </ul>
+        <ul class="member">
+            <li class="shoppingCar"><a href="#">
+                <img class="shoppingCarPic" src="img/shopping car.png" alt="">
+                <!-- <img class="shoppingCarHover" src="img/shoppingCarHover.png" alt=""> -->
+            </a></li>
+            <li class="memberSign"><a href="#">登入</a></li>
+        </ul>
+        <ul class="memberSelect">
+            <li>Hi ~ 冒險者</li>
+            <li><a href="member_mytrip.html">我的行程</a></li>
+            <li><a href="member_favorite.html">我的收藏</a></li>
+            <li><a href="member_order.html">我的訂單</a></li>
+            <li><a href="member_comment.html">專家評論</a></li>
+            <li><a href="member_profile.html">會員資料修改</a></li>
+            <li><a href="sign.html">登出</a></li>
+        </ul>
+        <!-- mobile -->
+        <div class="hambger">
+            <div class="line"></div>
+        </div>
+        <ul class="menuMobile">
+            <li><a href="planning.html">開始冒險</a></li>
+            <li><a href="expert.html">專家帶你玩</a></li>
+            <li><a href="refer.html">別人怎麼玩</a></li>
+            <li><a href="shop.html">星際商城</a></li>
+            <li><a href="member.html">會員專區</a></li>
+            <li><a href="shop.html">購物車</a></li>
+        </ul>
+    </nav>
     <div class="container">
         <div class="all_content ">
             <div class="sidebar memberPage">
@@ -84,55 +132,156 @@
                                     <!-- 分享行程開始 -->
                                     <tr>
                                        
-                                        <section class="cards">
-                                            <article class="card card--1">
-                                              <div class="card__info-hover">
-                                                <svg class="card__like"  viewBox="0 0 24 24">
-                                                <path fill="#000000" d="M12.1,18.55L12,18.65L11.89,18.55C7.14,14.24 4,11.39 4,8.5C4,6.5 5.5,5 7.5,5C9.04,5 10.54,6 11.07,7.36H12.93C13.46,6 14.96,5 16.5,5C18.5,5 20,6.5 20,8.5C20,11.39 16.86,14.24 12.1,18.55M16.5,3C14.76,3 13.09,3.81 12,5.08C10.91,3.81 9.24,3 7.5,3C4.42,3 2,5.41 2,8.5C2,12.27 5.4,15.36 10.55,20.03L12,21.35L13.45,20.03C18.6,15.36 22,12.27 22,8.5C22,5.41 19.58,3 16.5,3Z" />
-                                            </svg>
-                                                  <div class="card__clock-info">
-                                                    <svg class="card__clock"  viewBox="0 0 24 24"><path d="M12,20A7,7 0 0,1 5,13A7,7 0 0,1 12,6A7,7 0 0,1 19,13A7,7 0 0,1 12,20M19.03,7.39L20.45,5.97C20,5.46 19.55,5 19.04,4.56L17.62,6C16.07,4.74 14.12,4 12,4A9,9 0 0,0 3,13A9,9 0 0,0 12,22C17,22 21,17.97 21,13C21,10.88 20.26,8.93 19.03,7.39M11,14H13V8H11M15,1H9V3H15V1Z" />
-                                                    </svg><span class="card__time">15 min</span>
+                                        <div class="m_rightBox ch"><!-- 右邊程式編寫區塊 -->
+
+                                            <div class="mW_bigBox">
+                                                    <div class="mW_delete"><i class="icon-trash">刪</i></div>
+                                                    <div class="mW_box">
+                                                      <input type="hidden" value="30">
+                                                      <div class="mW_look">查看詳細</div>
+                                                      <div class="mW_edit">引用行程</div>
+                                                      <div class="mW_tabBox">
+                                                        <div class="line_tab pingC_tab">專家小陳</div>
+                                                        <div class="mW_imgBox">
+                                                          <img src="img/p3_v10_05.jpg">
+                                                        </div>
+                                                      </div>
+                                                      <div class="mW_txtBox">
+                                                        <p class="mW_day"><span>4</span>天</p>
+                                                        <p class="mW_title">瓦特星四日遊</p>
+                                                        <p class="mW_lorem">彩虹湖 &gt; 巧克力山 &gt; 黃龍風景區 &gt; 紅龜麵店 &gt; 平溪老街 &gt; 十分旅人民宿</p>
+                                                      </div>
+                                                      <div class="clearFix"></div>
+                                                    </div>
                                                   </div>
-                                                
-                                              </div>
-                                              <div class="card__img"></div>
-                                              <a href="#" class="card_link">
-                                                 <div class="card__img--hover"></div>
-                                               </a>
-                                              <div class="card__info">
-                                                <span class="card__category"> Recipe</span>
-                                                <h3 class="card__title">Crisp Spanish tortilla Matzo brei</h3>
-                                                <span class="card__by">by <a href="#" class="card__author" title="author">Celeste Mills</a></span>
-                                              </div>
-                                            </article>
-                                              
-                                              
-                                            <article class="card card--2">
-                                              <div class="card__info-hover">
-                                                <svg class="card__like"  viewBox="0 0 24 24">
-                                                <path fill="#000000" d="M12.1,18.55L12,18.65L11.89,18.55C7.14,14.24 4,11.39 4,8.5C4,6.5 5.5,5 7.5,5C9.04,5 10.54,6 11.07,7.36H12.93C13.46,6 14.96,5 16.5,5C18.5,5 20,6.5 20,8.5C20,11.39 16.86,14.24 12.1,18.55M16.5,3C14.76,3 13.09,3.81 12,5.08C10.91,3.81 9.24,3 7.5,3C4.42,3 2,5.41 2,8.5C2,12.27 5.4,15.36 10.55,20.03L12,21.35L13.45,20.03C18.6,15.36 22,12.27 22,8.5C22,5.41 19.58,3 16.5,3Z" />
-                                            </svg>
-                                                  <div class="card__clock-info">
-                                                    <svg class="card__clock"  viewBox="0 0 24 24"><path d="M12,20A7,7 0 0,1 5,13A7,7 0 0,1 12,6A7,7 0 0,1 19,13A7,7 0 0,1 12,20M19.03,7.39L20.45,5.97C20,5.46 19.55,5 19.04,4.56L17.62,6C16.07,4.74 14.12,4 12,4A9,9 0 0,0 3,13A9,9 0 0,0 12,22C17,22 21,17.97 21,13C21,10.88 20.26,8.93 19.03,7.39M11,14H13V8H11M15,1H9V3H15V1Z" />
-                                                    </svg><span class="card__time">5 min</span>
+                                                  <div class="mW_bigBox">
+                                                    <div class="mW_delete"><i class="icon-trash">刪</i></div>
+                                                    <div class="mW_box">
+                                                      <input type="hidden" value="68">
+                                                      <div class="mW_look">查看詳細</div>
+                                                      <div class="mW_edit">引用行程</div>
+                                                      <div class="mW_tabBox">
+                                                        <div class="line_tab neiWan_tab">專家小林</div>
+                                                        <div class="mW_imgBox">
+                                                          <img src="img/p3_v10_05.jpg">
+                                                        </div>
+                                                      </div>
+                                                      <div class="mW_txtBox">
+                                                        <p class="mW_day"><span>4</span>天</p>
+                                                        <p class="mW_title">瓦特星四日遊</p>
+                                                        <p class="mW_lorem">彩虹湖 &gt; 巧克力山 &gt; 黃龍風景區</p>
+                                                      </div>
+                                                      <div class="clearFix"></div>
+                                                    </div>
                                                   </div>
-                                                
-                                              </div>
-                                              <div class="card__img"></div>
-                                              <a href="#" class="card_link">
-                                                 <div class="card__img--hover"></div>
-                                               </a>
-                                              <div class="card__info">
-                                                <span class="card__category"> Travel</span>
-                                                <h3 class="card__title">Discover the sea</h3>
-                                                <span class="card__by">by <a href="#" class="card__author" title="author">John Doe</a></span>
-                                              </div>
-                                            </article>  
-                                              
-                                              
-                                              
-                                              </section>
+                                                  <div class="mW_bigBox">
+                                                    <div class="mW_delete"><i class="icon-trash">刪</i></div>
+                                                    <div class="mW_box">
+                                                      <input type="hidden" value="76">
+                                                      <div class="mW_look">查看詳細</div>
+                                                      <div class="mW_edit">引用行程</div>
+                                                      <div class="mW_tabBox">
+                                                        <div class="line_tab gigi_tab">專家小張</div>
+                                                        <div class="mW_imgBox">
+                                                          <img src="img/p3_v10_05.jpg">
+                                                        </div>
+                                                      </div>
+                                                      <div class="mW_txtBox">
+                                                        <p class="mW_day"><span>3</span>天</p>
+                                                        <p class="mW_title">瓦特星三日遊</p>
+                                                        <p class="mW_lorem">彩虹湖 &gt; 巧克力山 &gt; 黃龍風景區 &gt; 新高窯民宿 &gt; 八張隨意牛肉麵</p>
+                                                      </div>
+                                                      <div class="clearFix"></div>
+                                                    </div>
+                                                  </div>
+                                                  <div class="mW_bigBox">
+                                                    <div class="mW_delete"><i class="icon-trash">刪</i></div>
+                                                    <div class="mW_box">
+                                                      <input type="hidden" value="75">
+                                                      <div class="mW_look">查看詳細</div>
+                                                      <div class="mW_edit">引用行程</div>
+                                                      <div class="mW_tabBox">
+                                                        <div class="line_tab pingC_tab">專家小陳</div>
+                                                        <div class="mW_imgBox">
+                                                          <img src="img/p3_v10_05.jpg">
+                                                        </div>
+                                                      </div>
+                                                      <div class="mW_txtBox">
+                                                        <p class="mW_day"><span>3</span>天</p>
+                                                        <p class="mW_title">瓦特星三日遊</p>
+                                                        <p class="mW_lorem">彩虹湖 &gt; 巧克力山 &gt; 黃龍風景區</p>
+                                                      </div>
+                                                      <div class="clearFix"></div>
+                                                    </div>
+                                                  </div><div class="mW_bigBox">
+                                                    <div class="mW_delete"><i class="icon-trash">刪</i></div>
+                                                    <div class="mW_box">
+                                                      <input type="hidden" value="75">
+                                                      <div class="mW_look">查看詳細</div>
+                                                      <div class="mW_edit">引用行程</div>
+                                                      <div class="mW_tabBox">
+                                                        <div class="line_tab pingC_tab">專家小陳</div>
+                                                        <div class="mW_imgBox">
+                                                          <img src="img/p3_v10_05.jpg">
+                                                        </div>
+                                                      </div>
+                                                      <div class="mW_txtBox">
+                                                        <p class="mW_day"><span>5</span>天</p>
+                                                        <p class="mW_title">瓦特星五日遊</p>
+                                                        <p class="mW_lorem">彩虹湖 &gt; 巧克力山 &gt; 黃龍風景區</p>
+                                                      </div>
+                                                      <div class="clearFix"></div>
+                                                    </div>
+                                                  </div><div class="mW_bigBox">
+                                                    <div class="mW_delete"><i class="icon-trash">刪</i></div>
+                                                    <div class="mW_box">
+                                                      <input type="hidden" value="75">
+                                                      <div class="mW_look">查看詳細</div>
+                                                      <div class="mW_edit">引用行程</div>
+                                                      <div class="mW_tabBox">
+                                                        <div class="line_tab pingC_tab">專家小陳</div>
+                                                        <div class="mW_imgBox">
+                                                          <img src="img/p3_v10_05.jpg">
+                                                        </div>
+                                                      </div>
+                                                      <div class="mW_txtBox">
+                                                        <p class="mW_day"><span>3</span>天</p>
+                                                        <p class="mW_title">瓦特星三日遊</p>
+                                                        <p class="mW_lorem">彩虹湖 &gt; 巧克力山 &gt; 黃龍風景區</p>
+                                                      </div>
+                                                      <div class="clearFix"></div>
+                                                    </div>
+                                                  </div>		</div>
+                                      
+                                                  <div class="plightBox ch" style="display: none; width: 100%;">
+                                                      <div class="plightBoxAll" style="opacity: 0;">
+                                                        <div class="pexit"><i class="icon-cancel"></i></div>
+                                                        <div class="plightBoxContent">
+                                                          <div class="plBImg">
+                                                            <div>
+                                                              <img src="images/LM/53.jpg">
+                                                            </div>
+                                                          </div>
+                                                          <div class="plBTitle">
+                                                            
+                                                          <h2>遊台灣遊平溪</h2></div>
+                                                          <ul class="pchangeDay">
+                                                          <li class="dayStyle"><span class="pdayNumber">1</span></li></ul>
+                                                          <div class="plBTour">	
+                                                            <ul class="plBdotA"><li class="plBdotCenter"><span class="plBdot"><div class="ptourName">靜安吊橋</div></span><span class="plBline"></span><span class="plBdot"><div class="ptourName">平溪天燈節</div></span><span class="plBline"></span><span class="plBdot"><div class="ptourName">菁桐鐵道故事館</div></span><span class="plBline"></span><span class="plBdot"><div class="ptourName">紅龜麵店</div></span><span class="plBline"></span><span class="plBdot"><div class="ptourName">平溪老街</div></span><span class="plBline"></span><span class="plBdot"><div class="ptourName">十分旅人民宿</div></span></li></ul>
+                                                          </div>
+                                                          <ul class="phonechangeDay">
+                                                          </ul>
+                                                        </div>
+                                                        <!-- 手機端天數-->
+                                                        <!-- 手機端行程 -->
+                                                        <div class="plBphoneTour">
+                                                          <ul><li class="phonedayTour"><span class="plBphoneDot"><div class="plBphoneName">靜安吊橋</div></span><span class="plBphoneLine"></span><span class="plBphoneDot"><div class="plBphoneName">平溪天燈節</div></span><span class="plBphoneLine"></span><span class="plBphoneDot"><div class="plBphoneName">菁桐鐵道故事館</div></span><span class="plBphoneLine"></span><span class="plBphoneDot"><div class="plBphoneName">紅龜麵店</div></span><span class="plBphoneLine"></span><span class="plBphoneDot"><div class="plBphoneName">平溪老街</div></span><span class="plBphoneLine"></span><span class="plBphoneDot"><div class="plBphoneName">十分旅人民宿</div></span><span< li=""></span<></li></ul>
+                                                        </div>
+                                                      </div><!--plightBoxAll-->
+                                                    </div>  
+                                                  </div>
+                                                </div> 
 
                                         <!-- <td colspan="5">無分享行程</td> -->
                                     </tr>
@@ -146,6 +295,15 @@
             
         </div>
     </div>
+     <!-- footer -->
+     <footer>     
+            <img src="img/footerbg-1.png">
+            <div class="copyright">
+                <p>copyright@OhPlanets  2145</p>
+            </div>           
+        </footer>           
+      <!-- jquery -->
+       <script src="js/style.js"></script>
 </body>
 
 </html>
