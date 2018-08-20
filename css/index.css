@@ -187,6 +187,12 @@ nav img {
   padding-bottom: 50%;
   position: relative; }
 
+#section3 {
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%;
+  position: relative; }
+
 .part1, .part2, .part3, .part4 {
   background-size: 100% 100%;
   width: 100%;
@@ -574,7 +580,7 @@ nav img {
     cursor: pointer;
     box-shadow: 0px 0px 20px 2px #000;
     opacity: 0;
-    transition: 1s; }
+    transition: 0.5s; }
 
 .yesNo a:hover {
   box-shadow: 0px 0px 20px 2px #000;
@@ -597,3 +603,202 @@ nav img {
   .yes p {
     top: 28%;
     left: 15%; }
+
+.part3 h2 {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  font-size: 1.9vw; }
+
+.part3 h3 {
+  position: absolute;
+  top: 45%;
+  left: 10%;
+  font-size: 1.5vw; }
+
+.part3 a {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  display: block;
+  width: 8%;
+  height: 5%;
+  border: 1px solid #6cd5ff;
+  font: 1vw/2.3vw 微軟正黑體;
+  text-align: center; }
+
+.part3 a:hover {
+  background-color: #6cd5ff; }
+
+.expertAll {
+  position: absolute;
+  width: 15%;
+  top: 30%; }
+  .expertAll img {
+    width: 100%;
+    transform: scale(1);
+    transition: 1s; }
+  .expertAll .exScreen {
+    position: absolute;
+    width: 100%;
+    height: 100%; }
+  .expertAll .scWhite {
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: 1s;
+    transform-origin: right center; }
+  .expertAll .scBlack {
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: 1s;
+    transform-origin: left center; }
+
+.expert1 {
+  left: 35.1%; }
+
+.expert2 {
+  left: 50%; }
+
+.expert3 {
+  left: 65%; }
+
+.expert4 {
+  left: 80%; }
+
+.exAllText {
+  position: absolute;
+  width: 95%;
+  height: 100%;
+  top: 0%;
+  left: 2.5%;
+  opacity: 0;
+  transform: scale(1);
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 1s; }
+  .exAllText img {
+    position: relative;
+    left: 32.5%;
+    width: 35%; }
+  .exAllText h3 {
+    position: relative;
+    top: 0%;
+    left: 12.5%;
+    font: 1.5vw/2vw 微軟正黑體; }
+  .exAllText h3 + h3 {
+    left: 25.5%;
+    font: 1.5vw/2vw 微軟正黑體;
+    margin-bottom: 5%; }
+  .exAllText p {
+    position: relative;
+    top: 0%;
+    left: 12.5%;
+    font: 1vw/2vw 微軟正黑體; }
+  .exAllText a {
+    position: relative;
+    top: 4%;
+    left: 24%;
+    display: block;
+    width: 50%;
+    height: 8%;
+    border: 1px solid #6cd5ff;
+    font: 1vw/2vw 微軟正黑體;
+    text-align: center; }
+  .exAllText span {
+    position: absolute;
+    display: block;
+    background-color: #6cd5ff;
+    width: 1%;
+    height: 4%;
+    transition: 1s;
+    left: 30%; }
+
+.exText4 h3 + h3 {
+  left: 20%; }
+
+.exAllText span:nth-of-type(1) {
+  top: 37.5%; }
+
+.exAllText span:nth-of-type(2) {
+  top: 44.7%; }
+
+.exAllText span:nth-of-type(3) {
+  top: 52%; }
+
+.exAllText span:nth-of-type(4) {
+  top: 59.4%; }
+
+.exAllText span:nth-of-type(5) {
+  top: 66.6%; }
+
+.exAllText span:nth-of-type(6) {
+  top: 73.8%; }
+
+.expert1:hover span:nth-of-type(1) {
+  width: 10%; }
+
+.expert1:hover span:nth-of-type(2) {
+  width: 20%; }
+
+.expert1:hover span:nth-of-type(3) {
+  width: 39%; }
+
+.expert1:hover span:nth-of-type(4) {
+  width: 48%; }
+
+.expert1:hover span:nth-of-type(5) {
+  width: 22%; }
+
+.expert1:hover span:nth-of-type(6) {
+  width: 32%; }
+
+.expert2:hover span:nth-of-type(1) {
+  width: 18%; }
+
+.expert2:hover span:nth-of-type(2) {
+  width: 9%; }
+
+.expert2:hover span:nth-of-type(3) {
+  width: 25%; }
+
+.expert2:hover span:nth-of-type(4) {
+  width: 42%; }
+
+.expert2:hover span:nth-of-type(5) {
+  width: 32%; }
+
+.expert2:hover span:nth-of-type(6) {
+  width: 11%; }
+
+.expert3:hover span:nth-of-type(1) {
+  width: 35%; }
+
+.expert3:hover span:nth-of-type(2) {
+  width: 17%; }
+
+.expert3:hover span:nth-of-type(3) {
+  width: 22%; }
+
+.expert3:hover span:nth-of-type(4) {
+  width: 49%; }
+
+.expert3:hover span:nth-of-type(5) {
+  width: 40%; }
+
+.expert3:hover span:nth-of-type(6) {
+  width: 14%; }
+
+.expert4:hover span:nth-of-type(1) {
+  width: 36%; }
+
+.expert4:hover span:nth-of-type(2) {
+  width: 42%; }
+
+.expert4:hover span:nth-of-type(3) {
+  width: 18%; }
+
+.expert4:hover span:nth-of-type(4) {
+  width: 50%; }
+
+.expert4:hover span:nth-of-type(5) {
+  width: 30%; }
+
+.expert4:hover span:nth-of-type(6) {
+  width: 20%; }

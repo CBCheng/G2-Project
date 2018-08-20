@@ -150,3 +150,25 @@ $(function(){
         $('.yes').children().not('span').css('opacity','0');
     });
 });
+
+//====== expert hover ======
+$(function(){
+    $('.expertAll').on('mouseover',function(){
+        $(this).css('z-index','5');
+        $('.expertAll').not(this).css('z-index','0');
+        $(this).children('img').css({'transform':'scale(1.1)',
+                                    'box-shadow':'0px 0px 20px 2px #000'});
+        $(this).children('.scWhite').css('transform','scale(6.5,1)');
+        $(this).children('.scBlack').css('transform','scale(4.5,1)');
+       $(this).children('.exAllText').css('opacity','1');
+    });
+    $('.expertAll').on('mouseout',function(){
+        $(this).css('z-index','5');
+        $('.expertAll').not(this).css('z-index','0');
+        $(this).children('img').css({'transform':'scale(1)',
+                                    'box-shadow':'0px 0px 0px 0px #000'});
+        $(this).children('.scWhite').css('transform','scale(1)');
+        $(this).children('.scBlack').css('transform','scale(1)');
+        $(this).children('.exAllText').css('opacity','0');
+    });
+});
