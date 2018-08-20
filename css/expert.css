@@ -432,18 +432,11 @@ nav {
       font-size: 16px;
       display: none; }
     .grid .expertBox .main {
-
-
-      float: left;
-
       width: 50%;
       display: inline-block; }
       .grid .expertBox .main .pic {
         width: 100px; }
     .grid .expertBox .aside {
-
-      float: right;
-
       width: 50%;
       display: inline-block;
       text-align: left;

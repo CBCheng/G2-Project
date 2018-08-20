@@ -2,8 +2,6 @@
 @import "base/reset";
 @import "mixin/mixin";
 @include body(10px);
-<<<<<<< HEAD
-<<<<<<< HEAD
 $fontColorOrange: #cfa972;
 $fontColorGreen: #80c269;
 $borderColorBlue: rgba(108, 213, 255, 0.5);
@@ -19,13 +17,6 @@ $attrGreen: #486a00;
 //     // background-attachment: fixed;
 // }
 
-=======
-=======
->>>>>>> 9472d9649cae6727782a4d1234e7c037a02524f5
-body {
-    // background-attachment: fixed;
-}
->>>>>>> 9472d9649cae6727782a4d1234e7c037a02524f5
 
 * {
     // outline: 1px solid #f00;
