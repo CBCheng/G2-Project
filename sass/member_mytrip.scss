@@ -2,11 +2,11 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 
 .m_rightBox{
-	width: calc(100% - 190px);
-	float: left;
+	width: calc(100% - 10px);
+	// float: left;
 	box-sizing: border-box;
-	margin-left: 30px;
-	padding:3px 15px;
+	// margin-left: 100px;
+	padding:3px 0px;
 	/*border:3px solid hsla(1, 76%, 65%, .3);*/
 	border-radius: 5px;
 	min-height:410px;
@@ -34,9 +34,7 @@
     max-height: 100%;
     height: auto;
 }
-.m_nav{
-	/*background-color: #6495ed;*/
-}
+
 .m_nav ul{
 	width: 100%;
 	position: relative;
@@ -92,8 +90,9 @@
 	background-color:  hsla(1, 76%, 65%, 1);
 }
 
-/*è¡¨æ ¼è³‡æ–™ä¿®æ”¹*/
-/*-----------------åˆ†é å¤§æ¨™é¡Œ------------------*/
+
+
+
 .pH2{
 	color: #333;
 	width:100%;
@@ -104,7 +103,7 @@
 	margin-bottom:25px;
 	padding-bottom: 10px; 
 }
-/*-----------------éºµåŒ…å±‘-----------------*/
+/*----------------------------------*/
 
 .breadcrumb{
 	height: 50px;
@@ -125,9 +124,8 @@
 	padding-bottom: 1px;
 	border-bottom: 1px solid #999;
 }
-/*================ éºµåŒ…å±‘end ================*/
+/*================================*/
 
-/*è¡Œç¨‹æ¸…å–®*/
 .mW_bigBox{
 	position: relative;
 	width: 50%;
@@ -172,8 +170,8 @@
 }
 
 .mW_delete:hover{
-	border: 2px solid hsla(1, 66%, 65%, 1);
-	color: hsla(1, 66%, 65%, 1);
+	border: 2px solid #2C8DC7;
+	color: #2C8DC7;
 }
 
 .mW_delete i{
@@ -195,8 +193,8 @@
 }
 
 .mW_look:hover{
-	border: 2px solid hsla(1, 66%, 65%, 1);
-	color: hsla(1, 66%, 65%, 1);
+	border: 2px solid #2C8DC7;
+	color: #2C8DC7;
 }
 
 
@@ -274,7 +272,7 @@
     white-space: nowrap;
     overflow: hidden;
 }
-/*=====================è¡Œç¨‹æ¸…å–®end=========================*/
+/*=====================end=========================*/
 
 
 /*-------------------plightBox-------------*/
@@ -395,7 +393,7 @@
 	padding-left: 10px;
 }
 
-/*lightBoxæ¡Œæ©Ÿç«¯å¤©æ•¸*/
+/*lightBox*/
 .pchangeDay{
 	position: absolute;
 	top: 100px;
@@ -462,7 +460,7 @@
 .dayStyle:first-child .pdayNumber{
 	color:#35BFB3;
 }
-/*lightBoxçš„dotå’Œline*/
+/*lightBoxline*/
 .plBTour{
 	position: absolute;
 	top:200px;
@@ -523,7 +521,7 @@
 	height: 5px;
 	width:18%;
 }
-/*---------------------lightBoxæ‰‹æ©Ÿç«¯æŒ‰éˆ•-----------------*/
+/*---------------------lightBox•-----------------*/
 .plBphoneBtn{
 	display: block;
 	position: absolute;
@@ -571,7 +569,7 @@
 	color:#E83828;
 }
 
-/*----------------lightBoxæ‰‹æ©Ÿè¡Œç¨‹--------------------*/
+/*----------------lightBox--------------------*/
 .plBphoneTour{
 	width:100%;
 	height:50%;
@@ -645,7 +643,7 @@
 	box-shadow: 2px 0 0 1px #000;
 	cursor: pointer;
 }
-/*------------------æ‰‹æ©Ÿç«¯åˆ‡æ›æŒ‰éˆ•----------------------*/
+/*----------------------------------------*/
 .phonebtn{
 	font-size: 0;
 }
@@ -687,9 +685,9 @@
 		margin-bottom: 20px;
 	}
 	.m_rightBox{
-		min-height: 100px;
+		min-height: 900px;
 	}
-	/*è¡Œç¨‹å€å¡ŠRWD*/
+	/*RWD*/
 	.mW_bigBox{
 		width: 100%;
 		box-sizing: border-box;
@@ -738,7 +736,7 @@
 }
 
 @media screen and (min-width: 480px){
-	/*è¡Œç¨‹å€å¡ŠRWD*/
+	/*RWD*/
 	.mW_bigBox{
 		width: 90%;
 	}
@@ -767,7 +765,7 @@
 	.plBTour{
 		display: none;
 	}
-	/*æ‰‹æ©Ÿç«¯phonelightbox*/
+	/*phonelightbox*/
 	.plBphoneTour{
 		display: block;
 		height:50%;
@@ -775,7 +773,7 @@
 	.phonedayTour>span{
 		margin-right: 170px;
 	}
-	/*æ‰‹æ©Ÿç«¯æŒ‰éˆ•éš±è—*/
+	/*.........*/
 	.plBphoneBtn{
 		display: block;
 	}
@@ -785,7 +783,7 @@
 }
 
 @media screen and (min-width: 970px){
-	/*è¡Œç¨‹å€å¡ŠRWD*/
+	/*RWD*/
 	.mW_bigBox{
 		width: 70%;
 	}
@@ -807,18 +805,18 @@
 	.plBTour{
 		display: block;
 	}
-	/*æ‰‹æ©Ÿç«¯è¡Œç¨‹éš±è—*/
+	
 	.plBphoneTour{
 		display: none;
 	}
-	/*æ‰‹æ©Ÿç«¯æŒ‰éˆ•éš±è—*/
+	
 	.plBphoneBtn{
 		display: none;
 	}
 }
 
 @media screen and (min-width: 1170px){
-	/*è¡Œç¨‹å€å¡ŠRWD*/
+	/*RWD*/
 	.mW_bigBox{
 		width: 50%;
 		box-sizing: border-box;

@@ -2,11 +2,9 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
 .m_rightBox {
-  width: calc(100% - 190px);
-  float: left;
+  width: calc(100% - 10px);
   box-sizing: border-box;
-  margin-left: 30px;
-  padding: 3px 15px;
+  padding: 3px 0px;
   /*border:3px solid hsla(1, 76%, 65%, .3);*/
   border-radius: 5px;
   min-height: 410px;
@@ -33,9 +31,6 @@
   min-width: 100%;
   max-height: 100%;
   height: auto; }
-
-.m_nav {
-  /*background-color: #6495ed;*/ }
 
 .m_nav ul {
   width: 100%;
@@ -89,8 +84,6 @@
   width: 96%;
   background-color: #ea6462; }
 
-/*è¡¨æ ¼è³‡æ–™ä¿®æ”¹*/
-/*-----------------åˆ†é å¤§æ¨™é¡Œ------------------*/
 .pH2 {
   color: #333;
   width: 100%;
@@ -101,7 +94,7 @@
   margin-bottom: 25px;
   padding-bottom: 10px; }
 
-/*-----------------éºµåŒ…å±‘-----------------*/
+/*----------------------------------*/
 .breadcrumb {
   height: 50px;
   /*	margin-top: 50px;*/
@@ -121,8 +114,7 @@
   padding-bottom: 1px;
   border-bottom: 1px solid #999; }
 
-/*================ éºµåŒ…å±‘end ================*/
-/*è¡Œç¨‹æ¸…å–®*/
+/*================================*/
 .mW_bigBox {
   position: relative;
   width: 50%;
@@ -164,8 +156,8 @@
   color: #777; }
 
 .mW_delete:hover {
-  border: 2px solid #e16d6b;
-  color: #e16d6b; }
+  border: 2px solid #2C8DC7;
+  color: #2C8DC7; }
 
 .mW_delete i {
   text-align: center;
@@ -185,8 +177,8 @@
   right: 5px; }
 
 .mW_look:hover {
-  border: 2px solid #e16d6b;
-  color: #e16d6b; }
+  border: 2px solid #2C8DC7;
+  color: #2C8DC7; }
 
 .mW_edit {
   border: 2px solid #777;
@@ -251,7 +243,7 @@
   white-space: nowrap;
   overflow: hidden; }
 
-/*=====================è¡Œç¨‹æ¸…å–®end=========================*/
+/*=====================end=========================*/
 /*-------------------plightBox-------------*/
 .plightBox {
   bottom: 0;
@@ -366,7 +358,7 @@
   border-left: 3px solid #fff;
   padding-left: 10px; }
 
-/*lightBoxæ¡Œæ©Ÿç«¯å¤©æ•¸*/
+/*lightBox*/
 .pchangeDay {
   position: absolute;
   top: 100px;
@@ -433,7 +425,7 @@
 .dayStyle:first-child .pdayNumber {
   color: #35BFB3; }
 
-/*lightBoxçš„dotå’Œline*/
+/*lightBoxline*/
 .plBTour {
   position: absolute;
   top: 200px;
@@ -494,7 +486,7 @@
   height: 5px;
   width: 18%; }
 
-/*---------------------lightBoxæ‰‹æ©Ÿç«¯æŒ‰éˆ•-----------------*/
+/*---------------------lightBox•-----------------*/
 .plBphoneBtn {
   display: block;
   position: absolute;
@@ -540,7 +532,7 @@
 .plBphoneBtnAdd a .icon-heart {
   color: #E83828; }
 
-/*----------------lightBoxæ‰‹æ©Ÿè¡Œç¨‹--------------------*/
+/*----------------lightBox--------------------*/
 .plBphoneTour {
   width: 100%;
   height: 50%;
@@ -614,7 +606,7 @@
   box-shadow: 2px 0 0 1px #000;
   cursor: pointer; }
 
-/*------------------æ‰‹æ©Ÿç«¯åˆ‡æ›æŒ‰éˆ•----------------------*/
+/*----------------------------------------*/
 .phonebtn {
   font-size: 0; }
 
@@ -646,8 +638,8 @@
   .m_nav ul {
     margin-bottom: 20px; }
   .m_rightBox {
-    min-height: 100px; }
-  /*è¡Œç¨‹å€å¡ŠRWD*/
+    min-height: 900px; }
+  /*RWD*/
   .mW_bigBox {
     width: 100%;
     box-sizing: border-box;
@@ -683,7 +675,7 @@
     margin-top: -20px; } }
 
 @media screen and (min-width: 480px) {
-  /*è¡Œç¨‹å€å¡ŠRWD*/
+  /*RWD*/
   .mW_bigBox {
     width: 90%; }
   /*.lightBox*/
@@ -705,20 +697,20 @@
     display: none; }
   .plBTour {
     display: none; }
-  /*æ‰‹æ©Ÿç«¯phonelightbox*/
+  /*phonelightbox*/
   .plBphoneTour {
     display: block;
     height: 50%; }
   .phonedayTour > span {
     margin-right: 170px; }
-  /*æ‰‹æ©Ÿç«¯æŒ‰éˆ•éš±è—*/
+  /*.........*/
   .plBphoneBtn {
     display: block; }
   .breadcrumb {
     margin-top: 50px; } }
 
 @media screen and (min-width: 970px) {
-  /*è¡Œç¨‹å€å¡ŠRWD*/
+  /*RWD*/
   .mW_bigBox {
     width: 70%; }
   /*.lightBox*/
@@ -734,15 +726,13 @@
     display: block; }
   .plBTour {
     display: block; }
-  /*æ‰‹æ©Ÿç«¯è¡Œç¨‹éš±è—*/
   .plBphoneTour {
     display: none; }
-  /*æ‰‹æ©Ÿç«¯æŒ‰éˆ•éš±è—*/
   .plBphoneBtn {
     display: none; } }
 
 @media screen and (min-width: 1170px) {
-  /*è¡Œç¨‹å€å¡ŠRWD*/
+  /*RWD*/
   .mW_bigBox {
     width: 50%;
     box-sizing: border-box;
