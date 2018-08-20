@@ -325,7 +325,7 @@ nav {
   .button-group .button-down {
     display: block; } }
 
-/* ---- .element-item ---- */
+/* ---- .expertBox ---- */
 .grid .expertBox {
   width: 250px;
   margin: 25px;
@@ -369,104 +369,104 @@ nav {
       margin: 10px; }
 
 @media screen and (max-width: 991px) {
-  .grid .element-item {
+  .grid .expertBox {
     width: 200px;
     margin: 15px; }
-    .grid .element-item h2 {
+    .grid .expertBox h2 {
       font-size: 20px; }
-    .grid .element-item .pic {
+    .grid .expertBox .pic {
       width: 130px; }
-      .grid .element-item .pic .attr {
+      .grid .expertBox .pic .attr {
         font-size: 15px;
         width: 45px;
         height: 45px;
         line-height: 45px; }
-    .grid .element-item h3 {
+    .grid .expertBox h3 {
       font-size: 16px; }
-    .grid .element-item .score {
+    .grid .expertBox .score {
       margin-top: 10px; }
-      .grid .element-item .score span {
+      .grid .expertBox .score span {
         font-size: 14px;
         padding-right: 2px; }
-      .grid .element-item .score img {
+      .grid .expertBox .score img {
         width: 15px; }
-    .grid .element-item .mark {
+    .grid .expertBox .mark {
       font-size: 14px; }
-      .grid .element-item .mark img {
+      .grid .expertBox .mark img {
         width: 20px;
         margin: 5px;
         margin-bottom: 10px; } }
 
 @media screen and (min-width: 650px) {
-  .grid .element-item {
+  .grid .expertBox {
     box-shadow: 0 0 5px 3px rgba(255, 255, 255, 0.2);
     background-color: rgba(0, 0, 0, 0.8); }
-  .grid .element-item.blue {
+  .grid .expertBox.blue {
     border: 3px solid rgba(108, 213, 255, 0.5); }
-  .grid .element-item.orange {
+  .grid .expertBox.orange {
     border: 3px solid rgba(207, 169, 114, 0.5); }
-  .grid .element-item.green {
+  .grid .expertBox.green {
     border: 3px solid rgba(128, 194, 105, 0.5); }
-  .grid .element-item .aside h3 {
+  .grid .expertBox .aside h3 {
     display: none; } }
 
 @media screen and (max-width: 650px) {
-  .grid .element-item:after {
+  .grid .expertBox:after {
     content: "";
     display: block;
     clear: both; }
-  .grid .element-item.blue {
+  .grid .expertBox.blue {
     border-bottom: 2px dashed rgba(108, 213, 255, 0.5); }
-  .grid .element-item.orange {
+  .grid .expertBox.orange {
     border-bottom: 2px dashed rgba(207, 169, 114, 0.5); }
-  .grid .element-item.green {
+  .grid .expertBox.green {
     border-bottom: 2px dashed rgba(128, 194, 105, 0.5); }
-  .grid .element-item {
+  .grid .expertBox {
     width: 90%;
     padding-bottom: 15px;
     margin: 15px 15px 5px; }
-    .grid .element-item h2 {
+    .grid .expertBox h2 {
       font-size: 18px;
       margin: 0 auto 10px; }
-    .grid .element-item h3 {
+    .grid .expertBox h3 {
       font-size: 16px;
       display: none; }
-    .grid .element-item .main {
+    .grid .expertBox .main {
       float: left;
       width: 50%;
       display: inline-block; }
-      .grid .element-item .main .pic {
+      .grid .expertBox .main .pic {
         width: 100px; }
-    .grid .element-item .aside {
+    .grid .expertBox .aside {
       float: right;
       width: 50%;
       display: inline-block;
       text-align: left;
       margin-top: 10px; }
-      .grid .element-item .aside h3 {
+      .grid .expertBox .aside h3 {
         display: block;
         padding-left: 20px;
         font-size: 18px; }
-      .grid .element-item .aside .score,
-      .grid .element-item .aside .mark {
+      .grid .expertBox .aside .score,
+      .grid .expertBox .aside .mark {
         margin-top: 5px; } }
 
-.grid .element-item.blue h2 {
+.grid .expertBox.blue h2 {
   color: #6cd5ff; }
 
-.grid .element-item.blue .pic .attr {
+.grid .expertBox.blue .pic .attr {
   background-color: #094f91; }
 
-.grid .element-item.orange h2 {
+.grid .expertBox.orange h2 {
   color: #cfa972; }
 
-.grid .element-item.orange .pic .attr {
+.grid .expertBox.orange .pic .attr {
   background-color: #ad7f43; }
 
-.grid .element-item.green h2 {
+.grid .expertBox.green h2 {
   color: #80c269; }
 
-.grid .element-item.green .pic .attr {
+.grid .expertBox.green .pic .attr {
   background-color: #486a00; }
 
 #lightBox:after {
