@@ -153,35 +153,8 @@ nav {
 .hambger, .menuMobile {
   display: none; }
 
-section {
-  width: 80%;
-  margin: auto;
-  height: 3000px; }
-
 .member a:hover, .menu a:hover, .memberSelect a:hover {
   color: #6cd5ff; }
-
-section {
-  width: 80%;
-  height: 3000px;
-  margin: auto; }
-
-footer {
-  width: 100%;
-  position: relative;
-  z-index: -100;
-  text-align: center; }
-
-.copyright {
-  padding: 20px;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto; }
 
 @media all and (max-width: 767px) {
   nav {
@@ -280,3 +253,107 @@ footer {
 
 .activeB {
   color: #6cd5ff; }
+
+section {
+  width: 100%;
+  margin: auto; }
+
+.wrap {
+  width: 1200px;
+  margin: auto; }
+
+.leftWrip {
+  width: 60%; }
+
+.memberPic {
+  display: inline-block;
+  width: 160px;
+  margin-top: -50px;
+  padding: 20px; }
+
+.memberPic img {
+  border-radius: 50%; }
+
+.topic {
+  margin-bottom: 50px; }
+
+.tripTitle {
+  display: inline-block;
+  margin-top: -200px; }
+  .tripTitle p {
+    letter-spacing: 1px;
+    padding: 0 0 5px 0; }
+  .tripTitle h2 {
+    letter-spacing: 3px;
+    line-height: 30px; }
+
+.tripWrip {
+  padding: 20px 20px 20px 40px;
+  display: flex;
+  border-bottom: 1px solid #6cd5ff; }
+
+.tripDate {
+  width: 100px;
+  padding: 0 20px 0 0;
+  border-right: 1px solid #6cd5ff; }
+  .tripDate p {
+    text-align: center;
+    font-size: 30px;
+    width: 100px;
+    line-height: 100px;
+    background-color: #6cd5ff;
+    border-radius: 50%; }
+
+.tripContent {
+  padding: 0 0 0 20px; }
+  .tripContent h4 {
+    font-size: 18px;
+    padding: 5px 0 5px 0;
+    letter-spacing: 1px; }
+  .tripContent p {
+    letter-spacing: 1px;
+    padding: 0 0 5px 0; }
+
+#commentArea {
+  margin: 20px; }
+
+.commentWrip {
+  padding: 20px 20px 20px 40px;
+  display: flex;
+  border-bottom: 1px solid #6cd5ff; }
+
+.commentPic {
+  width: 100px;
+  padding: 0 20px 0 0;
+  border-right: 1px solid #6cd5ff; }
+  .commentPic img {
+    text-align: center;
+    width: 100px;
+    line-height: 100px;
+    border-radius: 50%; }
+
+.commentContent {
+  padding: 0 0 0 20px; }
+  .commentContent p {
+    letter-spacing: 1px;
+    padding: 0 0 5px 0; }
+
+.memName {
+  font-size: 20px; }
+
+footer {
+  width: 100%;
+  position: relative;
+  z-index: -100;
+  text-align: center; }
+
+.copyright {
+  padding: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto; }

@@ -542,10 +542,14 @@ nav img{
 }
 .exAllText{
     position: absolute;
-    width: 14.2%;
-    height: 54.5%;
-    top: 30%;
-    z-index: 5;
+    width: 95%;
+    height: 100%;
+    top: 0%;
+    left: 2.5%;
+    opacity: 0;
+    transform: scale(1);
+    background-color: rgba($color: #000, $alpha: .5);
+    transition: 1s;
     img{
         position: relative;
         left: 32.5%;
@@ -559,7 +563,8 @@ nav img{
     }
     h3+h3{
         left: 25.5%;
-        font: 1.5vw/3vw 微軟正黑體;
+        font: 1.5vw/2vw 微軟正黑體;
+        margin-bottom: 5%;
     }
     p{
         position: relative;
@@ -578,9 +583,110 @@ nav img{
         font: 1vw/2vw 微軟正黑體;
         text-align: center;
     }
+    span{
+        position: absolute;
+        display: block;
+        background-color: #6cd5ff;
+        width: 1%;
+        height: 4%;
+        transition: 1s;
+        left: 30%;
+    }
 }
-.exText1{
-    left: 50.8%;
-    //background: #ccc;
+.exText4 h3+h3{
+    left: 20%;
+}
+.exAllText span:nth-of-type(1){
+    top: 37.5%;
+}
+.exAllText span:nth-of-type(2){
+    top: 44.7%;
+}
+.exAllText span:nth-of-type(3){
+    top: 52%;
+}
+.exAllText span:nth-of-type(4){
+    top: 59.4%;
+}
+.exAllText span:nth-of-type(5){
+    top: 66.6%;
+}
+.exAllText span:nth-of-type(6){
+    top: 73.8%;
+}
+.expert1:hover span:nth-of-type(1){
+    width: 10%;
+}
+.expert1:hover span:nth-of-type(2){
+    width: 20%;
+}
+.expert1:hover span:nth-of-type(3){
+    width: 39%;
+}
+.expert1:hover span:nth-of-type(4){
+    width: 48%;
+}
+.expert1:hover span:nth-of-type(5){
+    width: 22%;
+}
+.expert1:hover span:nth-of-type(6){
+    width: 32%;
+}
+//----
+.expert2:hover span:nth-of-type(1){
+    width: 18%;
+}
+.expert2:hover span:nth-of-type(2){
+    width: 9%;
+}
+.expert2:hover span:nth-of-type(3){
+    width: 25%;
+}
+.expert2:hover span:nth-of-type(4){
+    width: 42%;
+}
+.expert2:hover span:nth-of-type(5){
+    width: 32%;
+}
+.expert2:hover span:nth-of-type(6){
+    width: 11%;
+}
+//------
+.expert3:hover span:nth-of-type(1){
+    width: 35%;
+}
+.expert3:hover span:nth-of-type(2){
+    width: 17%;
+}
+.expert3:hover span:nth-of-type(3){
+    width: 22%;
+}
+.expert3:hover span:nth-of-type(4){
+    width: 49%;
+}
+.expert3:hover span:nth-of-type(5){
+    width: 40%;
+}
+.expert3:hover span:nth-of-type(6){
+    width: 14%;
+}
+//------
+.expert4:hover span:nth-of-type(1){
+    width: 36%;
+}
+.expert4:hover span:nth-of-type(2){
+    width: 42%;
+}
+.expert4:hover span:nth-of-type(3){
+    width: 18%;
+}
+.expert4:hover span:nth-of-type(4){
+    width: 50%;
+}
+.expert4:hover span:nth-of-type(5){
+    width: 30%;
+}
+.expert4:hover span:nth-of-type(6){
+    width: 20%;
 }
 // <!-- part3 end -->

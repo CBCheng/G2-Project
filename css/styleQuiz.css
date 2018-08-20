@@ -145,11 +145,6 @@ nav {
 .hambger, .menuMobile {
   display: none; }
 
-section {
-  width: 80%;
-  margin: auto;
-  height: 3000px; }
-
 .member a:hover, .menu a:hover, .memberSelect a:hover {
   color: #6cd5ff; }
 
