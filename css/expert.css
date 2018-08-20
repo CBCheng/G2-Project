@@ -329,6 +329,7 @@ nav {
 .grid .expertBox {
   width: 250px;
   margin: 25px;
+  height: 337px;
   text-align: center; }
   .grid .expertBox h2 {
     font-size: 22px;
@@ -371,7 +372,8 @@ nav {
 @media screen and (max-width: 991px) {
   .grid .expertBox {
     width: 200px;
-    margin: 15px; }
+    margin: 15px;
+    height: 283px; }
     .grid .expertBox h2 {
       font-size: 20px; }
     .grid .expertBox .pic {
@@ -424,7 +426,8 @@ nav {
   .grid .expertBox {
     width: 90%;
     padding-bottom: 15px;
-    margin: 15px 15px 5px; }
+    margin: 15px 15px 5px;
+    height: 162px; }
     .grid .expertBox h2 {
       font-size: 18px;
       margin: 0 auto 10px; }
