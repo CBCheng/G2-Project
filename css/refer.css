@@ -153,11 +153,6 @@ nav {
 .hambger, .menuMobile {
   display: none; }
 
-section {
-  width: 80%;
-  margin: auto;
-  height: 3000px; }
-
 .member a:hover, .menu a:hover, .memberSelect a:hover {
   color: #6cd5ff; }
 
@@ -261,16 +256,19 @@ section {
 
 .wrap {
   width: 100%;
-  margin: auto; }
+  margin: auto;
+  position: relative; }
 
 #canvas-container {
   text-align: center;
-  margin-top: 140px; }
+  position: absolute; }
 
 .panel {
   width: 80%;
   margin: auto;
-  margin-top: 100px; }
+  margin-top: 100px;
+  position: absolute;
+  top: 600px; }
 
 .button-group {
   text-align: center;
@@ -303,13 +301,13 @@ hr {
   background: #000; }
 
 .tripWrap {
-  width: 80%;
+  width: 1200px;
   display: flex;
+  flex-wrap: wrap;
   margin: auto; }
 
 .tripBox {
   width: 31%;
-  flex-wrap: wrap;
   border: 1px solid #6cd5ff;
   margin: 1%; }
 
@@ -328,11 +326,29 @@ hr {
   background-color: #6cd5ff;
   border-radius: 3px; }
 
-.blue {
+.tripPlanet.blue {
   background: #6cd5ff; }
 
-.orange {
+.tripPlanet.orange {
   background: #cfa972; }
+
+.tripPlanet.green {
+  background: #80c269; }
+
+.tripKind.adventure {
+  background: #ff492b; }
+
+.tripKind.food {
+  background: #ffb22b; }
+
+.tripKind.culture {
+  background: #00c759; }
+
+.tripKind.nalgene {
+  background: #00c6c7; }
+
+.tripKind.technology {
+  background: #852bff; }
 
 .tripTxt {
   padding: 15px;
@@ -350,7 +366,7 @@ hr {
     text-align: center;
     display: inline-block; }
   .tripIcon img {
-    width: 25px;
+    width: 20px;
     padding: 5px; }
   .tripIcon p {
     letter-spacing: 1px;

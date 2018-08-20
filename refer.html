@@ -60,11 +60,11 @@
         <!-- content -->
         <section class="wrap">
         <!-- convas -->
-            <div id="canvas-container" >
-                <canvas id="sineCanvas"  width="1204 height="300"></canvas>
-            </div>
             <!-- banner -->
-             <!-- <img src="img/referbg.jpg" alt=""> -->
+             <img class="bannerPic" src="img/bgBanner.png" alt="">
+             <div id="canvas-container" >
+                <canvas id="sineCanvas"  width="1024" height="400"></canvas>
+            </div>
              <div class="searchTrip">
                  <input type="text" name="search">
                  <input type="submit" value="我也要分享">
@@ -73,17 +73,17 @@
              <div class="pennal">
              <div id="filters" class="button-group">
                 <button class="button is-checked" data-filter="*">最新</button>
-                <button class="button" data-filter="all">全部</button>
+                <button class="button" data-filter=".tripBox">全部</button>
                 <button class="button" data-filter=".popular">人氣</button>
                 <!-- <button class="button" data-filter=".blue">瓦特星
                 </button>
                 <button class="button" data-filter=".orange">達沙星</button>
                 <button class="button" data-filter=".green">奧倫星</button> -->
-                <button class="button" data-fliter-by=".adventure">冒險</button>
-                <button class="button" data-fliter-by=".food">美食</button>
-                <button class="button" data-fliter-by=".culture">人文</button>
-                <button class="button" data-fliter-by=".nalgene">知性</button>
-                <button class="button" data-fliter-by=".technology">科技</button>
+                <button class="button" data-filter-by=".adventure">冒險</button>
+                <button class="button" data-filter-by=".food1">美食</button>
+                <button class="button" data-filter-by=".culture1">人文</button>
+                <button class="button" data-filter-by=".nalgene">知性</button>
+                <button class="button" data-filter-by=".technology">科技</button>
             </div>
             <!-- <div id="sorts" class="button-group">  
                 <button class="button is-checked" data-sort-by="adventure">冒險</button>
@@ -95,12 +95,13 @@
              <hr>
              <!-- 分享行程 -->
              <div class="tripWrap grid">
-                 <div class="tripBox element-item green popular">
-                     <div class="tripPic">
-                        <img src="img/p1_v7/p1_v7_01.jpg">
+                 <div class="tripBox element-item popular">
+                    <a href="referdetial.html"> 
+                    <div class="tripPic">
+                        <img src="img/p1_v7/p1_v7_06.jpg">
                         <div class="tripTag">
                             <span class="tripPlanet blue">瓦特星</span>
-                            <span class="tripKind advan">冒險</span>
+                            <span class="tripKind adventure">冒險</span>
                         </div>
                      </div>
                      <div class="tripTxt">
@@ -114,54 +115,87 @@
                          </div>
                          <div class="tripCollect">
                             <img src="img/love.png">
-                            <p>9487</p>
+                            <p>9487收藏</p>
                          </div>
                      </div>
+                     </a>
                 </div>
 
-                <div class="tripBox element-item bule culture">
+                <div class="tripBox element-item popular">
+                    <a href="referdetial.html">
                         <div class="tripPic">
-                           <img src="img/p1_v7/p1_v7_01.jpg">
+                       <img src="img/p1_v7/p1_v7_06.jpg">
+                       <div class="tripTag">
+                           <span class="tripPlanet blue">瓦特星</span>
+                           <span class="tripKind adventure">冒險</span>
+                       </div>
+                    </div>
+                    <div class="tripTxt">
+                        <h4>3天 ｜ 瓦特星挑戰極限</h4>
+                        <p>行程描述喔yaaaaaaaaaaa會不會切不完ㄋ哈哈哈哈哈哈</p>
+                    </div>
+                    <div class="tripIcon">
+                        <div class="tripMessage">
+                            <img src="img/comment.png">
+                            <p>9487留言</p>
                         </div>
-                        <div class="tripTxt">
-                            <h4>3天 ｜ 瓦特星挑戰極限</h4>
-                            <p>行程描述喔yaaaaaaaaaaa會不會切不完ㄋ哈哈哈哈哈哈</p>
+                        <div class="tripCollect">
+                           <img src="img/love.png">
+                           <p>9487收藏</p>
                         </div>
-                        <div class="tripIcon">
-                            <div class="tripMessage">
-                                <img src="img/comment.png">
-                                <p>9487留言</p>
-                            </div>
-                            <div class="tripCollect">
-                               <img src="img/love.png">
-                               <p>9487</p>
-                            </div>
-                        </div>
+                    </div>
+                    </a>
+               </div>
+
+               <div class="tripBox element-item popular">
+                <div class="tripPic">
+                   <img src="img/p1_v7/p1_v7_06.jpg">
+                   <div class="tripTag">
+                       <span class="tripPlanet blue">瓦特星</span>
+                       <span class="tripKind adventure">冒險</span>
                    </div>
+                </div>
+                <div class="tripTxt">
+                    <h4>3天 ｜ 瓦特星挑戰極限</h4>
+                    <p>行程描述喔yaaaaaaaaaaa會不會切不完ㄋ哈哈哈哈哈哈</p>
+                </div>
+                <div class="tripIcon">
+                    <div class="tripMessage">
+                        <img src="img/comment.png">
+                        <p>9487留言</p>
+                    </div>
+                    <div class="tripCollect">
+                       <img src="img/love.png">
+                       <p>9487收藏</p>
+                    </div>
+                </div>
+           </div>
 
-                   <div class="tripBox element-item bule popular">
-                        <div class="tripPic">
-                           <img src="img/p1_v7/p1_v7_01.jpg">
-                        </div>
-                        <div class="tripTxt">
-                            <h4>3天 ｜ 瓦特星挑戰極限</h4>
-                            <p>行程描述喔yaaaaaaaaaaa會不會切不完ㄋ哈哈哈哈哈哈</p>
-                        </div>
-                        <div class="tripIcon">
-                            <div class="tripMessage">
-                                <img src="img/comment.png">
-                                <p>9487留言</p>
-                            </div>
-                            <div class="tripCollect">
-                               <img src="img/love.png">
-                               <p>9487</p>
-                            </div>
-                        </div>
-                   </div>
-             </div>
+           <div class="tripBox element-item popular">
+            <div class="tripPic">
+               <img src="img/p1_v7/p1_v7_06.jpg">
+               <div class="tripTag">
+                   <span class="tripPlanet blue">瓦特星</span>
+                   <span class="tripKind adventure">冒險</span>
+               </div>
+            </div>
+            <div class="tripTxt">
+                <h4>3天 ｜ 瓦特星挑戰極限</h4>
+                <p>行程描述喔yaaaaaaaaaaa會不會切不完ㄋ哈哈哈哈哈哈</p>
+            </div>
+            <div class="tripIcon">
+                <div class="tripMessage">
+                    <img src="img/comment.png">
+                    <p>9487留言</p>
+                </div>
+                <div class="tripCollect">
+                   <img src="img/love.png">
+                   <p>9487收藏</p>
+                </div>
+            </div>
+       </div>
 
-
-
+            </div>
 
         </section>
         <!-- footer -->
