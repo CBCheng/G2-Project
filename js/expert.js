@@ -73,7 +73,26 @@ window.addEventListener('load', doSecond);
 // };
 
 // window.addEventListener('load', init);
-window.onload = init;
+
+$(function () {
+	var grid = document.querySelector('.abc');
+	var xhr = new XMLHttpRequest();
+	xhr.onload = function () {
+		if (xhr.status == 200) {
+			var memRow = JSON.parse(xhr.responseText);
+			memRow.forEach(e => {
+				grid.innerHTML = e.expertNo;
+			});
+			alert('ok');
+		} else {
+			alert(xhr.status);
+		}
+	}
+
+	var url = "../php/expert.php";
+	xhr.open("Get", url, true);
+	xhr.send(null);
+})
 
 
 

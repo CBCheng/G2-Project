@@ -2,14 +2,6 @@
 @import "base/reset";
 @import "mixin/mixin";
 @include body(10px);
-$fontColorOrange: #cfa972;
-$fontColorGreen: #80c269;
-$borderColorBlue: rgba(108, 213, 255, 0.5);
-$borderColorOrange: rgba(207, 169, 114, 0.5);
-$borderColorGreen: rgba(128, 194, 105, 0.5);
-$attrBlue: #094f91;
-$attrOrange: #ad7f43;
-$attrGreen: #486a00;
 body {
     // background-attachment: fixed;
 }
@@ -472,9 +464,9 @@ a {
 
 #lightBox1 {
     // position: fixed; // top: 0px;
-// left: 0;
-// right: 0;
-// z-index: 900;
+    // left: 0;
+    // right: 0;
+    // z-index: 900;
     margin: auto;
     width: 960px;
     height: 600px;
@@ -496,6 +488,7 @@ a {
         margin-top: 30px;
     }
     .content {
+        // outline: 1px solid #fff;
         margin-top: 20px;
         .expPic {
             vertical-align: bottom;
@@ -538,24 +531,25 @@ a {
             //     }
             // }
             .chart {
-                outline: 1px solid #f00;
+                // outline: 1px solid #f00;
                 margin-top: 30px; // padding-right: 30px;
                 span {
                     font-size: 18px;
                     margin-right: 10px;
                     line-height: 1.8;
                 }
-                .line {
-                    // outline: 1px solid #fff; 
-                    width: 100px;
+                .value {
+                    // outline: 1px solid #fff;
+                    width: 80px;
                     height: 10px;
                     background-color: #aaa;
                     display: inline-block;
                     border-radius: 5px;
-                } // .line.focus {
-                //     width: 100px;
-                //     background-color: $fontColorBlue;
-                // }
+                }
+                .value.focus {
+                    width: 100px;
+                    background-color: $fontColorBlue;
+                }
             }
         }
         .record {
@@ -568,7 +562,6 @@ a {
             }
             .collect,
             .writeComment {
-                // outline: 1px solid #f00;
                 margin: 10px;
                 #heart,
                 #write {
@@ -592,10 +585,9 @@ a {
         width: 60%;
         margin: 80px auto;
         h2 {
-            text-align: justify; // display: inline;
+            text-align: justify;
         }
         .score {
-            // display: inline-block;
             text-align: right;
             p {
                 display: inline;
@@ -612,7 +604,6 @@ a {
             }
         }
         .message {
-            // outline: 1px solid #ff0000;
             border-bottom: 1px dashed $borderColorBlue;
             margin: 20px auto 0;
             padding-bottom: 20px;
@@ -642,6 +633,7 @@ a {
                 margin-left: 90px;
                 font-size: 16px;
                 text-align: left;
+                line-height: 1.4;
             }
         }
     }

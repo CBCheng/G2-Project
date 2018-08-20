@@ -521,18 +521,20 @@ nav {
         margin: 15px 0;
         text-align: center; }
       #lightBox1 .content .data .chart {
-        outline: 1px solid #f00;
         margin-top: 30px; }
         #lightBox1 .content .data .chart span {
           font-size: 18px;
           margin-right: 10px;
           line-height: 1.8; }
-        #lightBox1 .content .data .chart .line {
-          width: 100px;
+        #lightBox1 .content .data .chart .value {
+          width: 80px;
           height: 10px;
           background-color: #aaa;
           display: inline-block;
           border-radius: 5px; }
+        #lightBox1 .content .data .chart .value.focus {
+          width: 100px;
+          background-color: #6cd5ff; }
     #lightBox1 .content .record {
       display: inline-block; }
       #lightBox1 .content .record .collect {
@@ -602,7 +604,8 @@ nav {
         margin-top: -10px;
         margin-left: 90px;
         font-size: 16px;
-        text-align: left; }
+        text-align: left;
+        line-height: 1.4; }
 
 @media screen and (max-width: 1000px) {
   #lightBox1 {
