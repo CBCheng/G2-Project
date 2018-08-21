@@ -307,16 +307,16 @@ nav {
   position: absolute; }
 
 .part1 {
-  background-image: url("../img/indexBg-part1.jpg"); }
+  background-image: url("../img/index/indexBg-part1.jpg"); }
 
 .part2 {
-  background-image: url("../img/indexBg-part2.jpg"); }
+  background-image: url("../img/index/indexBg-part2.jpg"); }
 
 .part3 {
-  background-image: url("../img/indexBg-part3.jpg"); }
+  background-image: url("../img/index/indexBg-part3.jpg"); }
 
 .part4 {
-  background-image: url("../img/indexBg-part4.jpg"); }
+  background-image: url("../img/index/indexBg-part4.jpg"); }
 
 .part1 h1 {
   position: absolute;
@@ -710,7 +710,7 @@ nav {
     width: 45%;
     height: 60%;
     margin: 13% auto auto;
-    background-image: url(/img/p1_v2_03.jpg);
+    background-image: url("/img/index/p1_v2_03.jpg");
     background-size: 102%;
     border: 2px solid #6cd5ff; }
     .viewBg .viewItem h2 {
@@ -818,8 +818,7 @@ nav {
     height: 17%;
     cursor: pointer;
     box-shadow: 0px 0px 20px 2px #000;
-    opacity: 0;
-    transition: 0.5s; }
+    opacity: 0; }
 
 .yesNo a:hover {
   box-shadow: 0px 0px 20px 2px #000;
@@ -953,22 +952,22 @@ nav {
   left: 20%; }
 
 .exAllText span:nth-of-type(1) {
-  top: 37.5%; }
+  top: 38.5%; }
 
 .exAllText span:nth-of-type(2) {
-  top: 44.7%; }
+  top: 47.3%; }
 
 .exAllText span:nth-of-type(3) {
-  top: 52%; }
+  top: 57%; }
 
 .exAllText span:nth-of-type(4) {
-  top: 59.4%; }
+  top: 66%; }
 
 .exAllText span:nth-of-type(5) {
-  top: 66.6%; }
+  top: 75.4%; }
 
 .exAllText span:nth-of-type(6) {
-  top: 73.8%; }
+  top: 84.8%; }
 
 .expert1:hover span:nth-of-type(1) {
   width: 10%; }
@@ -1049,9 +1048,11 @@ nav {
   position: relative;
   width: 100%;
   padding-bottom: 50%;
-  background-image: url(/img/part4Bg.jpg);
+  background-image: url("/img/index/part4Bg.jpg");
   perspective: 800px;
-  perspective-origin: center center; }
+  perspective-origin: center center;
+  background-repeat: no-repeat;
+  background-size: 100%; }
 
 .leftPage {
   position: absolute;
@@ -1079,7 +1080,7 @@ nav {
   background-color: #FFF;
   padding: 10px;
   padding-top: 1%;
-  background-image: url(/img/section4pic1.png);
+  background-image: url("/img/index/section4pic1.png");
   background-repeat: no-repeat;
   background-size: 102%;
   transform-style: preserve-3d;
@@ -1178,6 +1179,9 @@ nav {
   font-size: 0.8vw;
   text-decoration: none; }
 
+.useTravel:hover {
+  background-color: #6cd5ff; }
+
 .travelPic,
 .travelTitle,
 .travelBtn {
@@ -1216,11 +1220,10 @@ nav {
 
 .travelPic {
   padding-left: 8%;
-  /*padding-top: 5%;*/
-  width: 40%;
+  width: 43%;
   position: relative;
   font-size: 0px;
-  padding-top: 5%; }
+  padding-top: 4.5%; }
 
 .travelPic:before {
   content: '';
@@ -1233,7 +1236,7 @@ nav {
 
 .travelDay {
   width: 35%;
-  font-size: 1.8vw;
+  font-size: 2vw;
   font-family: '微軟正黑體';
   display: inline-block;
   margin-right: 10px;
@@ -1249,7 +1252,7 @@ nav {
   vertical-align: middle; }
 
 .travelPic img {
-  width: 50%;
+  width: 42%;
   display: inline-block;
   padding: 5%; }
 
@@ -1276,3 +1279,14 @@ nav {
 .allTravelBtn {
   right: 0px;
   top: 50px; }
+
+.lookTravelBtn:hover {
+  background-color: #6cd5ff;
+  border: 1px solid #6cd5ff; }
+
+.allTravelBtn:hover {
+  background-color: #6cd5ff;
+  border: 1px solid #6cd5ff; }
+
+.copyright {
+  background-color: #515052; }
