@@ -4,65 +4,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/member.css">
     <link rel="stylesheet" href="css/style.css">
-   <!-- plugin -->
-   <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-   <script src="libs/jquery/dist/jquery.min.js"></script>
-   <script src="libs/gsap/src/minified/TweenMax.min.js"></script>
-   <script type="text/javascript" src="js/parallax.min.js"></script>
+    <!-- plugin -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="libs/gsap/src/minified/TweenMax.min.js"></script>
+    <script type="text/javascript" src="js/parallax.min.js"></script>
     <title>我的訂單</title>
     <style>
-    
-    
+
     </style>
 </head>
 
 <body>
-   <!-- nav -->
-   <nav>
-    <!-- desk -->
-    <ul class="menu mRight">
-        <li><a href="planning.html">開始冒險</a></li>
-        <li><a href="expert.html">專家帶你玩</a></li>
-    </ul>
+    <!-- nav -->
+    <div class="navColor">
+        <img class="navPic" src="img/bg.png" alt="">
+    </div>
+    <nav>
+        <!-- desk -->
+        <ul class="menu mRight">
+            <li><a href="planning.html">開始冒險</a></li>
+            <li><a href="expert.html">專家帶你玩</a></li>
+        </ul>
         <a href="index.html" class="logo">
             <img src="img/logo-1.png">
         </a>
-    <ul class="menu mLeft">
-        <li><a href="refer.html">別人怎麼玩</a></li>
-        <li><a href="shop.html">星際商城</a></li>
-    </ul>
-    <ul class="member">
-        <li class="shoppingCar"><a href="#">
-            <img class="shoppingCarPic" src="img/shopping car.png" alt="">
-            <!-- <img class="shoppingCarHover" src="img/shoppingCarHover.png" alt=""> -->
-        </a></li>
-        <li class="memberSign"><a href="#">登入</a></li>
-    </ul>
-    <ul class="memberSelect">
-        <li>Hi ~ 冒險者</li>
-        <li><a href="member_mytrip.html">我的行程</a></li>
-        <li><a href="member_favorite.html">我的收藏</a></li>
-        <li><a href="member_order.html">我的訂單</a></li>
-        <li><a href="member_comment.html">專家評論</a></li>
-        <li><a href="member_profile.html">會員資料修改</a></li>
-        <li><a href="sign.html">登出</a></li>
-    </ul>
-    <!-- mobile -->
-    <div class="hambger">
-        <div class="line"></div>
-    </div>
-    <ul class="menuMobile">
-        <li><a href="planning.html">開始冒險</a></li>
-        <li><a href="expert.html">專家帶你玩</a></li>
-        <li><a href="refer.html">別人怎麼玩</a></li>
-        <li><a href="shop.html">星際商城</a></li>
-        <li><a href="member.html">會員專區</a></li>
-        <li><a href="shop.html">購物車</a></li>
-    </ul>
-</nav>
+        <ul class="menu mLeft">
+            <li><a href="refer.html">別人怎麼玩</a></li>
+            <li><a href="shop.html">星際商城</a></li>
+        </ul>
+        <ul class="member">
+            <li class="shoppingCar">
+                <a href="#">
+                    <img class="shoppingCarPic" src="img/shopping car.png" alt="">
+                    <!-- <img class="shoppingCarHover" src="img/shoppingCarHover.png" alt=""> -->
+                </a>
+            </li>
+            <li class="memberSign"><a href="#">登入</a></li>
+        </ul>
+        <ul class="memberSelect">
+            <li>Hi ~ 冒險者</li>
+            <li><a href="member_mytrip.html">我的行程</a></li>
+            <li><a href="member_favorite.html">我的收藏</a></li>
+            <li><a href="member_order.html">我的訂單</a></li>
+            <li><a href="member_comment.html">專家評論</a></li>
+            <li><a href="member_profile.html">會員資料修改</a></li>
+            <li><a href="sign.html">登出</a></li>
+        </ul>
+        <!-- mobile -->
+        <div class="hambger">
+            <div class="line"></div>
+        </div>
+        <ul class="menuMobile">
+            <li><a href="planning.html">開始冒險</a></li>
+            <li><a href="expert.html">專家帶你玩</a></li>
+            <li><a href="refer.html">別人怎麼玩</a></li>
+            <li><a href="shop.html">星際商城</a></li>
+            <li><a href="member.html">會員專區</a></li>
+            <li><a href="shop.html">購物車</a></li>
+        </ul>
+    </nav>
     <div class="container">
         <div class="all_content ">
             <!-- <div class="sidebar memberPage">
@@ -82,12 +86,13 @@
                     </li>
                 </ul>
             </div> -->
-            
+
             <div id="order_mg" class="tabPage active" style="">
                 <div class="tabPage_border">
                     <div class="order_mg_box">
                         <div class="member_title">
-                            <h3>我的訂單</h3></div>
+                            <h3>我的訂單</h3>
+                        </div>
                         <div class="title_line clearfix">
                             <div class="title_circle big">
                                 <div class="title_circle small"></div>
@@ -146,32 +151,14 @@
     </div>
 
     <!-- footer -->
-    <footer>     
-        <img src="img/footerbg-1.png">
+    <footer>
+        <!-- <img src="img/footerbg-1.png"> -->
         <div class="copyright">
-            <p>copyright@OhPlanets  2145</p>
-        </div>           
+            <p>copyright@OhPlanets 2145</p>
+        </div>
     </footer>
-    
-        <!-- jquery -->
-   <script>
-    //    桌機登入下拉選單
-      $(function () {
-           $('.memberSign').click(function(){
-              $('.memberSelect').toggle();
-              $('.memberSign a').toggleClass("active")
-          });
-      });
-    //   手機漢堡選單
-    $(function () {
-           $('.hambger').click(function(){
-              $('.menuMobile').toggleClass("activeM")
-          });
-          $('.menuMobile li').click(function(){
-              $('.menuMobile a').toggleClass("activeB")
-          });
-      });
-   </script>
+    <!-- jquery -->
+    <script src="js/style.js"></script>
 </body>
 
 </html>
