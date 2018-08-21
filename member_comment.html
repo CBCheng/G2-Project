@@ -1,226 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" type="text/css" href="css/member_comment.css">
-  <link rel="stylesheet" type="text/css" href="css/member.css">
-  <!-- <link rel="stylesheet" type="text/css" href="css/member.css"> -->
-  <link rel="stylesheet" href="css/style.css">
-  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-  <script src="libs/jquery/dist/jquery.min.js"></script>
-  <script src="libs/gsap/src/minified/TweenMax.min.js"></script>
-  <script type="text/javascript" src="js/parallax.min.js"></script>
-	<title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/member_comment.css">
+    <link rel="stylesheet" type="text/css" href="css/member.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/member.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="libs/gsap/src/minified/TweenMax.min.js"></script>
+    <script type="text/javascript" src="js/parallax.min.js"></script>
+    <title>Document</title>
 </head>
+
 <body>
-	
-    <div id="order_mg" class="tabPage active" style="">
-        <div class="tabPage_border">
-            <div class="order_mg_box">
-                <div class="member_title">
-                    <h3>專家評論</h3></div>
-                <div class="title_line clearfix">
-                    <div class="title_circle big">
-                        <div class="title_circle small"></div>
+
+    <!-- nav -->
+    <div class="navColor">
+        <img class="navPic" src="img/bg.png" alt="">
+    </div>
+    <nav>
+        <!-- desk -->
+        <ul class="menu mRight">
+            <li><a href="planning.html">開始冒險</a></li>
+            <li><a href="expert.html">專家帶你玩</a></li>
+        </ul>
+        <a href="index.html" class="logo">
+            <img src="img/logo-1.png">
+        </a>
+        <ul class="menu mLeft">
+            <li><a href="refer.html">別人怎麼玩</a></li>
+            <li><a href="shop.html">星際商城</a></li>
+        </ul>
+        <ul class="member">
+            <li class="shoppingCar">
+                <a href="#">
+                    <img class="shoppingCarPic" src="img/shopping car.png" alt="">
+                    <!-- <img class="shoppingCarHover" src="img/shoppingCarHover.png" alt=""> -->
+                </a>
+            </li>
+            <li class="memberSign"><a href="#">登入</a></li>
+        </ul>
+        <ul class="memberSelect">
+            <li>Hi ~ 冒險者</li>
+            <li><a href="member_mytrip.html">我的行程</a></li>
+            <li><a href="member_favorite.html">我的收藏</a></li>
+            <li><a href="member_order.html">我的訂單</a></li>
+            <li><a href="member_comment.html">專家評論</a></li>
+            <li><a href="member_profile.html">會員資料修改</a></li>
+            <li><a href="sign.html">登出</a></li>
+        </ul>
+        <!-- mobile -->
+        <div class="hambger">
+            <div class="line"></div>
+        </div>
+        <ul class="menuMobile">
+            <li><a href="planning.html">開始冒險</a></li>
+            <li><a href="expert.html">專家帶你玩</a></li>
+            <li><a href="refer.html">別人怎麼玩</a></li>
+            <li><a href="shop.html">星際商城</a></li>
+            <li><a href="member.html">會員專區</a></li>
+            <li><a href="shop.html">購物車</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="all_content ">
+            <div id="comment_mg" class="tabPage active" style="">
+                <div class="tabPage_border">
+                    <div class="comment_mg_box">
+                        <div class="member_title">
+                            <h3>專家評論</h3>
+                        </div>
+                        <div class="title_line clearfix">
+                            <div class="title_circle big">
+                                <div class="title_circle small"></div>
+                            </div>
+                            <div class="title_center_line"></div>
+                        </div>
+
+
+
+
+                        <div class="m_rightBox ch">
+                            <!-- 右邊程式編寫區塊 -->
+
+                            <div class="mW_bigBox">
+                                <div class="mW_delete"><i class="icon-trash">刪</i></div>
+                                <div class="mW_box">
+                                    <input type="hidden" value="30">
+                                    <div class="mW_comment">我要評論</div>
+                                    <!-- <div class="mW_edit">轉為我的行程</div> -->
+                                    <div class="mW_tabBox">
+                                        <div class="line_tab pingC_tab">專家花輪</div>
+                                        <div class="mW_imgBox">
+                                            <img src="img/comment03.jpg">
+                                        </div>
+                                    </div>
+                                    <div class="mW_txtBox">
+                                        <p class="mW_day"><span>4</span>天</p>
+                                        <p class="mW_title">瓦特星</p>
+                                        <p class="mW_lorem">彩虹湖 &gt; 巧克力山 &gt; 黃龍風景區 &gt; 紅龜麵店 &gt; 平溪老街 &gt; 十分旅人民宿</p>
+                                    </div>
+                                    <div class="clearFix"></div>
+                                </div>
+                            </div>
+                            <div class="mW_bigBox">
+                                <div class="mW_delete"><i class="icon-trash">刪</i></div>
+                                <div class="mW_box">
+                                    <input type="hidden" value="68">
+                                    <div class="mW_comment">我要評論</div>
+                                    <!-- <div class="mW_edit">轉為我的行程</div> -->
+                                    <div class="mW_tabBox">
+                                        <div class="line_tab neiWan_tab">專家小林</div>
+                                        <div class="mW_imgBox">
+                                            <img src="img/comment02.jpg">
+                                        </div>
+                                    </div>
+                                    <div class="mW_txtBox">
+                                        <p class="mW_day"><span>4</span>天</p>
+                                        <p class="mW_title">瓦特星</p>
+                                        <p class="mW_lorem">彩虹湖 &gt; 巧克力山 &gt; 黃龍風景區</p>
+                                    </div>
+                                    <div class="clearFix"></div>
+                                </div>
+                            </div>
+                            <div class="mW_bigBox">
+                                <div class="mW_delete"><i class="icon-trash">刪</i></div>
+                                <div class="mW_box">
+                                    <input type="hidden" value="76">
+                                    <div class="mW_comment">我要評論</div>
+                                    <!-- <div class="mW_edit">轉為我的行程</div> -->
+                                    <div class="mW_tabBox">
+                                        <div class="line_tab gigi_tab">專家小張</div>
+                                        <div class="mW_imgBox">
+                                            <img src="img/comment03.jpg">
+                                        </div>
+                                    </div>
+                                    <div class="mW_txtBox">
+                                        <p class="mW_day"><span>3</span>天</p>
+                                        <p class="mW_title">瓦特星</p>
+                                        <p class="mW_lorem">彩虹湖 &gt; 巧克力山 &gt; 黃龍風景區 &gt; 新高窯民宿 &gt; 八張隨意牛肉麵</p>
+                                    </div>
+                                    <div class="clearFix"></div>
+                                </div>
+                            </div>
+                            <div class="mW_bigBox">
+                                <div class="mW_delete"><i class="icon-trash">刪</i></div>
+                                <div class="mW_box">
+                                    <input type="hidden" value="75">
+                                    <div class="mW_comment">我要評論</div>
+                                    <!-- <div class="mW_edit">轉為我的行程</div> -->
+                                    <div class="mW_tabBox">
+                                        <div class="line_tab pingC_tab">專家小陳</div>
+                                        <div class="mW_imgBox">
+                                            <img src="img/comment02.jpg">
+                                        </div>
+                                    </div>
+                                    <div class="mW_txtBox">
+                                        <p class="mW_day"><span>3</span>天</p>
+                                        <p class="mW_title">瓦特星</p>
+                                        <p class="mW_lorem">彩虹湖 &gt; 巧克力山 &gt; 黃龍風景區</p>
+                                    </div>
+                                    <div class="clearFix"></div>
+                                </div>
+                            </div>
+                            <div class="mW_bigBox">
+                                <div class="mW_delete"><i class="icon-trash">刪</i></div>
+                                <div class="mW_box">
+                                    <input type="hidden" value="75">
+                                    <div class="mW_comment">我要評論</div>
+                                    <!-- <div class="mW_edit">轉為我的行程</div> -->
+                                    <div class="mW_tabBox">
+                                        <div class="line_tab pingC_tab">專家小陳</div>
+                                        <div class="mW_imgBox">
+                                            <img src="img/comment03.jpg">
+                                        </div>
+                                    </div>
+                                    <div class="mW_txtBox">
+                                        <p class="mW_day"><span>5</span>天</p>
+                                        <p class="mW_title">瓦特星</p>
+                                        <p class="mW_lorem">彩虹湖 &gt; 巧克力山 &gt; 黃龍風景區</p>
+                                    </div>
+                                    <div class="clearFix"></div>
+                                </div>
+                            </div>
+                            <div class="mW_bigBox">
+                                <div class="mW_delete"><i class="icon-trash">刪</i></div>
+                                <div class="mW_box">
+                                    <input type="hidden" value="75">
+                                    <div class="mW_comment">我要評論</div>
+                                    <!-- <div class="mW_edit">轉為我的行程</div> -->
+                                    <div class="mW_tabBox">
+                                        <div class="line_tab pingC_tab">專家小陳</div>
+                                        <div class="mW_imgBox">
+                                            <img src="img/comment03.jpg">
+                                        </div>
+                                    </div>
+                                    <div class="mW_txtBox">
+                                        <p class="mW_day"><span>3</span>天</p>
+                                        <p class="mW_title">瓦特星</p>
+                                        <p class="mW_lorem">彩虹湖 &gt; 巧克力山 &gt; 黃龍風景區</p>
+                                    </div>
+                                    <div class="clearFix"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="plightBox ch" style="display: none; width: 100%;">
+                            <div class="plightBoxAll" style="opacity: 0;">
+                                <div class="pexit"><i class="icon-cancel"></i></div>
+                                <div class="plightBoxContent">
+                                    <div class="plBImg">
+                                        <div>
+                                            <img src="images/LM/53.jpg">
+                                        </div>
+                                    </div>
+                                    <div class="plBTitle">
+
+                                        <h2>遊台灣遊平溪</h2>
+                                    </div>
+                                    <ul class="pchangeDay">
+                                        <li class="dayStyle"><span class="pdayNumber">1</span></li>
+                                    </ul>
+                                    <div class="plBTour">
+                                        <ul class="plBdotA">
+                                            <li class="plBdotCenter"><span class="plBdot"><div class="ptourName">靜安吊橋</div></span><span class="plBline"></span><span class="plBdot"><div class="ptourName">平溪天燈節</div></span><span class="plBline"></span><span class="plBdot"><div class="ptourName">菁桐鐵道故事館</div></span>
+                                                <span class="plBline"></span><span class="plBdot"><div class="ptourName">紅龜麵店</div></span><span class="plBline"></span><span class="plBdot"><div class="ptourName">平溪老街</div></span><span class="plBline"></span>
+                                                <span class="plBdot">
+                                                    <div class="ptourName">十分旅人民宿</div>
+                                                    </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <ul class="phonechangeDay">
+                                    </ul>
+                                </div>
+                                <!-- 手機端天數-->
+                                <!-- 手機端行程 -->
+                                <div class="plBphoneTour">
+                                    <ul>
+                                        <li class="phonedayTour"><span class="plBphoneDot"><div class="plBphoneName">靜安吊橋</div></span><span class="plBphoneLine"></span><span class="plBphoneDot"><div class="plBphoneName">平溪天燈節</div></span><span class="plBphoneLine"></span>
+                                            <span class="plBphoneDot">
+                                                <div class="plBphoneName">菁桐鐵道故事館</div>
+                                                </span><span class="plBphoneLine"></span><span class="plBphoneDot"><div class="plBphoneName">紅龜麵店</div></span><span class="plBphoneLine"></span><span class="plBphoneDot"><div class="plBphoneName">平溪老街</div></span>
+                                            <span class="plBphoneLine"></span><span class="plBphoneDot"><div class="plBphoneName">十分旅人民宿</div></span>
+                                            <span< li=""></span<>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--plightBoxAll-->
+                        </div>
                     </div>
-                    <div class="title_center_line"></div>
                 </div>
-                
-            
-
-
-<div class="m_rightBox ch"><!-- 右邊程式編寫區塊 -->
-
-    <div class="mW_bigBox">
-            <div class="mW_delete"><i class="icon-trash">刪</i></div>
-            <div class="mW_box">
-              <input type="hidden" value="30">
-              <div class="mW_look">我要評論</div>
-              <!-- <div class="mW_edit">轉為我的行程</div> -->
-              <div class="mW_tabBox">
-                <div class="line_tab pingC_tab">專家小陳</div>
-                <div class="mW_imgBox">
-                  <img src="img/comment03.jpg">
-                </div>
-              </div>
-              <div class="mW_txtBox">
-                <p class="mW_day"><span>4</span>天</p>
-                <p class="mW_title">瓦特星</p>
-                <p class="mW_lorem">彩虹湖 &gt; 巧克力山 &gt; 黃龍風景區 &gt; 紅龜麵店 &gt; 平溪老街 &gt; 十分旅人民宿</p>
-              </div>
-              <div class="clearFix"></div>
             </div>
-          </div>
-          <div class="mW_bigBox">
-            <div class="mW_delete"><i class="icon-trash">刪</i></div>
-            <div class="mW_box">
-              <input type="hidden" value="68">
-              <div class="mW_look">我要評論</div>
-              <!-- <div class="mW_edit">轉為我的行程</div> -->
-              <div class="mW_tabBox">
-                <div class="line_tab neiWan_tab">專家小林</div>
-                <div class="mW_imgBox">
-                  <img src="img/comment02.jpg">
-                </div>
-              </div>
-              <div class="mW_txtBox">
-                <p class="mW_day"><span>4</span>天</p>
-                <p class="mW_title">瓦特星</p>
-                <p class="mW_lorem">彩虹湖 &gt; 巧克力山 &gt; 黃龍風景區</p>
-              </div>
-              <div class="clearFix"></div>
-            </div>
-          </div>
-          <div class="mW_bigBox">
-            <div class="mW_delete"><i class="icon-trash">刪</i></div>
-            <div class="mW_box">
-              <input type="hidden" value="76">
-              <div class="mW_look">我要評論</div>
-              <!-- <div class="mW_edit">轉為我的行程</div> -->
-              <div class="mW_tabBox">
-                <div class="line_tab gigi_tab">專家小張</div>
-                <div class="mW_imgBox">
-                  <img src="img/comment03.jpg">
-                </div>
-              </div>
-              <div class="mW_txtBox">
-                <p class="mW_day"><span>3</span>天</p>
-                <p class="mW_title">瓦特星</p>
-                <p class="mW_lorem">彩虹湖 &gt; 巧克力山 &gt; 黃龍風景區 &gt; 新高窯民宿 &gt; 八張隨意牛肉麵</p>
-              </div>
-              <div class="clearFix"></div>
-            </div>
-          </div>
-          <div class="mW_bigBox">
-            <div class="mW_delete"><i class="icon-trash">刪</i></div>
-            <div class="mW_box">
-              <input type="hidden" value="75">
-              <div class="mW_look">我要評論</div>
-              <!-- <div class="mW_edit">轉為我的行程</div> -->
-              <div class="mW_tabBox">
-                <div class="line_tab pingC_tab">專家小陳</div>
-                <div class="mW_imgBox">
-                  <img src="img/comment02.jpg">
-                </div>
-              </div>
-              <div class="mW_txtBox">
-                <p class="mW_day"><span>3</span>天</p>
-                <p class="mW_title">瓦特星</p>
-                <p class="mW_lorem">彩虹湖 &gt; 巧克力山 &gt; 黃龍風景區</p>
-              </div>
-              <div class="clearFix"></div>
-            </div>
-          </div><div class="mW_bigBox">
-            <div class="mW_delete"><i class="icon-trash">刪</i></div>
-            <div class="mW_box">
-              <input type="hidden" value="75">
-              <div class="mW_look">我要評論</div>
-              <!-- <div class="mW_edit">轉為我的行程</div> -->
-              <div class="mW_tabBox">
-                <div class="line_tab pingC_tab">專家小陳</div>
-                <div class="mW_imgBox">
-                  <img src="img/comment03.jpg">
-                </div>
-              </div>
-              <div class="mW_txtBox">
-                <p class="mW_day"><span>5</span>天</p>
-                <p class="mW_title">瓦特星</p>
-                <p class="mW_lorem">彩虹湖 &gt; 巧克力山 &gt; 黃龍風景區</p>
-              </div>
-              <div class="clearFix"></div>
-            </div>
-          </div><div class="mW_bigBox">
-            <div class="mW_delete"><i class="icon-trash">刪</i></div>
-            <div class="mW_box">
-              <input type="hidden" value="75">
-              <div class="mW_look">我要評論</div>
-              <!-- <div class="mW_edit">轉為我的行程</div> -->
-              <div class="mW_tabBox">
-                <div class="line_tab pingC_tab">專家小陳</div>
-                <div class="mW_imgBox">
-                  <img src="img/comment03.jpg">
-                </div>
-              </div>
-              <div class="mW_txtBox">
-                <p class="mW_day"><span>3</span>天</p>
-                <p class="mW_title">瓦特星</p>
-                <p class="mW_lorem">彩虹湖 &gt; 巧克力山 &gt; 黃龍風景區</p>
-              </div>
-              <div class="clearFix"></div>
-            </div>
-          </div>		</div>
-
-          <div class="plightBox ch" style="display: none; width: 100%;">
-              <div class="plightBoxAll" style="opacity: 0;">
-                <div class="pexit"><i class="icon-cancel"></i></div>
-                <div class="plightBoxContent">
-                  <div class="plBImg">
-                    <div>
-                      <img src="images/LM/53.jpg">
-                    </div>
-                  </div>
-                  <div class="plBTitle">
-                    
-                  <h2>遊台灣遊平溪</h2></div>
-                  <ul class="pchangeDay">
-                  <li class="dayStyle"><span class="pdayNumber">1</span></li></ul>
-                  <div class="plBTour">	
-                    <ul class="plBdotA"><li class="plBdotCenter"><span class="plBdot"><div class="ptourName">靜安吊橋</div></span><span class="plBline"></span><span class="plBdot"><div class="ptourName">平溪天燈節</div></span><span class="plBline"></span><span class="plBdot"><div class="ptourName">菁桐鐵道故事館</div></span><span class="plBline"></span><span class="plBdot"><div class="ptourName">紅龜麵店</div></span><span class="plBline"></span><span class="plBdot"><div class="ptourName">平溪老街</div></span><span class="plBline"></span><span class="plBdot"><div class="ptourName">十分旅人民宿</div></span></li></ul>
-                  </div>
-                  <ul class="phonechangeDay">
-                  </ul>
-                </div>
-                <!-- 手機端天數-->
-                <!-- 手機端行程 -->
-                <div class="plBphoneTour">
-                  <ul><li class="phonedayTour"><span class="plBphoneDot"><div class="plBphoneName">靜安吊橋</div></span><span class="plBphoneLine"></span><span class="plBphoneDot"><div class="plBphoneName">平溪天燈節</div></span><span class="plBphoneLine"></span><span class="plBphoneDot"><div class="plBphoneName">菁桐鐵道故事館</div></span><span class="plBphoneLine"></span><span class="plBphoneDot"><div class="plBphoneName">紅龜麵店</div></span><span class="plBphoneLine"></span><span class="plBphoneDot"><div class="plBphoneName">平溪老街</div></span><span class="plBphoneLine"></span><span class="plBphoneDot"><div class="plBphoneName">十分旅人民宿</div></span><span< li=""></span<></li></ul>
-                </div>
-              </div><!--plightBoxAll-->
-            </div>  
-          </div>
         </div>
     </div>
-</div>
-</div>  
-  
-  
-  
-  
-  
 
-
-                  
-                 
-             
-
-
-
-
-  
-
- <!-- <script>
- $(window).load(function() {
-  $('.post-module').hover(function() {
-    $(this).find('.description').stop().animate({
-      height: "toggle",
-      opacity: "toggle"
-    }, 300);
-  });
-});
- </script> -->
-          
-
-  <!-- footer -->
-  <!-- <footer>     
-    <img src="img/footerbg-1.png">
-    <div class="copyright">
-        <p>copyright@OhPlanets  2145</p>
-    </div>           
-</footer> -->
-
-<!-- jquery -->
+    <!-- footer -->
+    <footer>
+        <!-- <img src="img/footerbg-1.png"> -->
+        <div class="copyright">
+            <p>copyright@OhPlanets 2145</p>
+        </div>
+    </footer>
+    <!-- jquery -->
+    <script src="js/style.js"></script>
 
 </body>
+
 </html>

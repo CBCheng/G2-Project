@@ -145,7 +145,7 @@
 	transform-origin: top right;
 	transition: .7s;
 }
-.mW_bigBox .mW_delete,.mW_box .mW_look,.mW_box .mW_edit{
+.mW_bigBox .mW_delete,.mW_box .mW_comment,.mW_box .mW_edit{
 	position: absolute;
 	font-size:14px;
 	text-align: center; 
@@ -180,7 +180,7 @@
 	font-size: 18px;
 }
 
-.mW_look{
+.mW_comment{
 	border: 2px solid #777;
 	background-color: #fff;
     box-shadow: 0 1px 2px rgba(0,0,0,.2);
@@ -192,7 +192,7 @@
 	bottom: 5px; right: 5px;
 }
 
-.mW_look:hover{
+.mW_comment:hover{
 	border: 2px solid #2C8DC7;
 	color: #2C8DC7;
 }
@@ -211,8 +211,8 @@
 }
 
 .mW_edit:hover{
-	border: 2px solid hsla(1, 66%, 65%, 1);
-	color: hsla(1, 66%, 65%, 1);
+	border: 2px solid #2C8DC7;
+	color: #2C8DC7;
 }
 
 
@@ -698,7 +698,7 @@
 
 	.mW_imgBox img{
 		display: block;
-		width: 100%;
+		width: auto;
 		height: 100%;
 	}
 	/*=====.lightBox======*/
