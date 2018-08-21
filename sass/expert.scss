@@ -60,6 +60,7 @@ a {
 }
 
 @import "layout/nav";
+@import "layout/nav-small";
 .title {
     top: 200px;
     position: relative;
@@ -384,11 +385,6 @@ a {
         }
     }
     @media screen and (max-width: 650px) {
-        .expertBox:after {
-            content: "";
-            display: block;
-            clear: both;
-        }
         .expertBox.blue {
             border-bottom: 2px dashed $borderColorBlue;
         }
@@ -434,7 +430,14 @@ a {
                 .mark {
                     margin-top: 5px;
                 }
+                
+                
             }
+        }
+        .expertBox:after {
+            content: "";
+            display: block;
+            clear: both;
         }
     }
     .expertBox.blue {
@@ -736,6 +739,16 @@ a {
     }
 }
 
+// @include respond(small) {
+//     .title {}
+// }
+// @include respond(medium) {
+//     .title {}
+// }
+// @include respond(desktop) {
+//     .title {}
+// }
+@import "layout/footer";
 footer {
     img {
         position: fixed;
@@ -747,17 +760,5 @@ footer {
     }
     background-image: none;
 }
-
-// @include respond(small) {
-//     .title {}
-// }
-// @include respond(medium) {
-//     .title {}
-// }
-// @include respond(desktop) {
-//     .title {}
-// }
-@import "layout/footer";
-@import "layout/nav-small";
 @import "layout/medium";
 @import "layout/desktop";
