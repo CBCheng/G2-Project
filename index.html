@@ -7,11 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- css -->
     <link rel="stylesheet" href="css/index.css">
+    <!-- <link rel="stylesheet" href="css/fullpage.css"> -->
     <!-- plugin -->
     <!-- <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script> -->
     <script src="libs/jquery/dist/jquery.min.js"></script>
-    <!-- <script src="libs/gsap/src/minified/TweenMax.min.js"></script>
-    <script type="text/javascript" src="js/parallax.min.js"></script> -->
+    <script src="libs/gsap/src/minified/TweenMax.min.js"></script>
+    <script type="text/javascript" src="/libs/parallax/parallax.min.js"></script>
     <!-- scroll -->
 
     <title>Oh~ Planets!</title>
@@ -19,69 +20,479 @@
 
 <body>
     <!-- nav start-->
-    <nav>
+
+    <div class="navColor">
+        <img class="navPic" src="img/index/index/bg.png" alt=""> 
+    </div>
+    <nav>          
+        <!-- desk -->
         <ul class="menu mRight">
-            <li><a href="#">開始冒險</a></li>
-            <li><a href="#">專家帶你玩</a></li>
+            <li><a href="planning.html">開始冒險</a></li>
+           <li><a href="expert.html">專家帶你玩</a></li>
         </ul>
-            <a href="#" class="logo">
-                <img src="img/logo-1.png">
+            <a href="index.html" class="logo">
+                <img src="img/index/logo-1.png">
             </a>
         <ul class="menu mLeft">
-            <li><a href="#">別人怎麼玩</a></li>
-            <li><a href="#">星際商城</a></li>
+            <li><a href="refer.html">別人怎麼玩</a></li>
+            <li><a href="shop.html">星際商城</a></li>
         </ul>
         <ul class="member">
             <li class="shoppingCar"><a href="#">
-                <img class="shoppingCarPic" src="img/shopping car.png" alt="">
-                <!-- <img class="shoppingCarHover" src="img/shoppingCarHover.png" alt=""> -->
+                <img class="shoppingCarPic" src="img/index/shopping car.png" alt="">
+                <!-- <img class="shoppingCarHover" src="img/index/shoppingCarHover.png" alt=""> -->
             </a></li>
-            <li class="memberSign"><a href="#"> | 登入</a></li>
+            <li class="memberSign"><a href="#">登入</a></li>
         </ul>
         <ul class="memberSelect">
             <li>Hi ~ 冒險者</li>
-            <li><a href="#">我的行程</a></li>
-            <li><a href="#">我的收藏</a></li>
-            <li><a href="#">我的訂單</a></li>
-            <li><a href="#">專家評論</a></li>
-            <li><a href="#">會員資料修改</a></li>
-            <li><a href="#">登出</a></li>
+            <li><a href="member_mytrip.html">我的行程</a></li>
+            <li><a href="member_favorite.html">我的收藏</a></li>
+            <li><a href="member_order.html">我的訂單</a></li>
+            <li><a href="member_comment.html">專家評論</a></li>
+            <li><a href="member_profile.html">會員資料修改</a></li>
+            <li><a href="sign.html">登出</a></li>
+        </ul>
+        <!-- mobile -->
+        <div class="hambger">
+            <div class="line"></div>
+        </div>
+        <ul class="menuMobile">
+            <li><a href="planning.html">開始冒險</a></li>
+            <li><a href="expert.html">專家帶你玩</a></li>
+            <li><a href="refer.html">別人怎麼玩</a></li>
+            <li><a href="shop.html">星際商城</a></li>
+            <li><a href="member.html">會員專區</a></li>
+            <li><a href="shop.html">購物車</a></li>
         </ul>
     </nav>
+
     <!-- nav end-->
-    <div></div>
-    <!-- part1 start -->
-    <section class="part1">
-        <div class="wrap">
+
+    <div id="section1">
+        <!-- part1 start -->
+        <div class="part1">
             <div class="choPlanet choPlt1">
-                <img class="planetBg" src="/img/planetBg.png">
-                <img src="/img/planetsan.png">
-                <!-- <span>達沙星</span> -->
+                <img class="planetBg" src="img/index/planetBg.png">
+                <img src="img/index/planetsan.png">
+                <span>達沙星</span>
             </div>
             <div class="choPlanet choPlt2">
-                <img class="planetBg" src="/img/planetBg.png">
-                <img src="/img/planetwater.png">
+                <img class="planetBg" src="img/index/planetBg.png">
+                <img src="img/index/planetwater.png">
+                <span>瓦特星</span>
             </div>
             <div class="choPlanet choPlt3">
-                <img class="planetBg" src="/img/planetBg.png">
-                <img src="/img/planettree.png">
+                <img class="planetBg" src="img/index/planetBg.png">
+                <img src="img/index/planettree.png">
+                <span>奧倫星</span>
             </div>
-            <div class="bigPlanet">
-                    <img src="/img/planetwater.png">
+            
+                <div class="bigPlt bigPltSan">
+                    <img src="img/index/planetsan.png">
+                    <div class="viewDot">
+                            <div class="pvAll p2V1">
+                                <div id="p2V1Dot" class="speed1"></div>  
+                                <div class="pulse pulse3s"></div>
+                            </div>
+                            <div class="pvAll p2V2">
+                                <div id="p2V2Dot" class="speed1"></div>  
+                                <div class="pulse pulse6s"></div>
+                            </div>
+                            <div class="pvAll p2V3">
+                                <div id="p2V3Dot" class="speed1"></div>  
+                                <div class="pulse pulse0s"></div>
+                            </div>
+                            <div class="pvAll p2V4">
+                                <div id="p2V4Dot" class="speed2"></div>  
+                                <div class="pulse pulse3s"></div>
+                            </div>
+                            <div class="pvAll p2V5">
+                                <div id="p2V5Dot" class="speed2"></div>  
+                                <div class="pulse pulse6s"></div>
+                            </div>
+                            <div class="pvAll p2V6">
+                                <div id="p2V6Dot" class="speed2"></div>  
+                                <div class="pulse pulse0s"></div>
+                            </div>
+                            <div class="pvAll p2V7">
+                                <div id="p2V7Dot" class="speed3"></div>  
+                                <div class="pulse pulse3s"></div>
+                            </div>
+                            <div class="pvAll p2V8">
+                                <div id="p2V8Dot" class="speed3"></div>  
+                                <div class="pulse pulse6s"></div>
+                            </div>
+                            <div class="pvAll p2V9">
+                                <div id="p2V9Dot" class="speed3"></div>  
+                                <div class="pulse pulse0s"></div>
+                            </div>
+                            <div class="pvAll p2V10">
+                                <div id="p2V10Dot" class="speed3"></div>  
+                                <div class="pulse pulse3s"></div>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="bigPlt bigPltWater">
+                    <img src="img/index/planetwater.png">
+                    <div class="viewDot">
+                            <div class="pvAll p3V1">
+                                <div id="p1V1Dot" class="speed1"></div>  
+                                <div class="pulse pulse3s"></div>
+                            </div>
+                            <div class="pvAll p1V2">
+                                <div id="p1V2Dot" class="speed1"></div>  
+                                <div class="pulse pulse6s"></div>
+                            </div>
+                            <div class="pvAll p1V3">
+                                <div id="p1V3Dot" class="speed1"></div>  
+                                <div class="pulse pulse0s"></div>
+                            </div>
+                            <div class="pvAll p1V4">
+                                <div id="p1V4Dot" class="speed1"></div>  
+                                <div class="pulse pulse3s"></div>
+                            </div>
+                            <div class="pvAll p1V5">
+                                <div id="p1V5Dot" class="speed2"></div>  
+                                <div class="pulse pulse6s"></div>
+                            </div>
+                            <div class="pvAll p1V6">
+                                <div id="p1V6Dot" class="speed2"></div>  
+                                <div class="pulse pulse0s"></div>
+                            </div>
+                            <div class="pvAll p1V7">
+                                <div id="p1V7Dot" class="speed2"></div>  
+                                <div class="pulse pulse3s"></div>
+                            </div>
+                            <div class="pvAll p1V8">
+                                <div id="p1V8Dot" class="speed2"></div>  
+                                <div class="pulse pulse6s"></div>
+                            </div>
+                            <div class="pvAll p1V9">
+                                <div id="p1V9Dot" class="speed3"></div>  
+                                <div class="pulse pulse0s"></div>
+                            </div>
+                            <div class="pvAll p1V10">
+                                <div id="p1V10Dot" class="speed3"></div>  
+                                <div class="pulse pulse3s"></div>
+                            </div>
+                            <div class="pvAll p1V11">
+                                <div id="p1V11Dot" class="speed3"></div>  
+                                <div class="pulse pulse6s"></div>
+                            </div>
+                            <div class="pvAll p1V12">
+                                <div id="p1V12Dot" class="speed3"></div>  
+                                <div class="pulse pulse0s"></div>
+                            </div>
+                            <div class="pvAll p1V13">
+                                <div id="p1V13Dot" class="speed1"></div>  
+                                <div class="pulse pulse3s"></div>
+                            </div>
+                            <div class="pvAll p1V14">
+                                <div id="p1V14Dot" class="speed2"></div>  
+                                <div class="pulse pulse6s"></div>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="bigPlt bigPltTree">
+                    <img src="img/index/planettree.png">
+                    <div class="viewDot">
+                        <div class="pvAll p3V1">
+                            <div id="p3V1Dot" class="speed1"></div>  
+                            <div class="pulse pulse3s"></div>
+                        </div>
+                        <div class="pvAll p3V2">
+                            <div id="p3V2Dot" class="speed1"></div>  
+                            <div class="pulse pulse6s"></div>
+                        </div>
+                        <div class="pvAll p3V3">
+                            <div id="p3V3Dot" class="speed1"></div>  
+                            <div class="pulse pulse0s"></div>
+                        </div>
+                        <div class="pvAll p3V4">
+                            <div id="p3V4Dot" class="speed2"></div>  
+                            <div class="pulse pulse3s"></div>
+                        </div>
+                        <div class="pvAll p3V5">
+                            <div id="p3V5Dot" class="speed2"></div>  
+                            <div class="pulse pulse6s"></div>
+                        </div>
+                        <div class="pvAll p3V6">
+                            <div id="p3V6Dot" class="speed2"></div>  
+                            <div class="pulse pulse0s"></div>
+                        </div>
+                        <div class="pvAll p3V7">
+                            <div id="p3V7Dot" class="speed3"></div>  
+                            <div class="pulse pulse3s"></div>
+                        </div>
+                        <div class="pvAll p3V8">
+                            <div id="p3V8Dot" class="speed3"></div>  
+                            <div class="pulse pulse6s"></div>
+                        </div>
+                        <div class="pvAll p3V9">
+                            <div id="p3V9Dot" class="speed3"></div>  
+                            <div class="pulse pulse0s"></div>
+                        </div>
+                        <div class="pvAll p3V10">
+                            <div id="p3V10Dot" class="speed3"></div>  
+                            <div class="pulse pulse3s"></div>
+                        </div>
+                    </div>
+                </div>
+            
+            <!-- === 光暈 === -->
+            <div id="haloItem"  data-hover-only="true">
+                <img src="img/index/halo6-2.png" class="halo halo6-2">
+                <img src="img/index/halo1.png" class="halo halo1" data-depth="0.1">
+                <img src="img/index/halo3.png" class="halo halo3" data-depth="0.1">
+                <img src="img/index/halo4.png" class="halo halo4" data-depth="0.1">
+                <img src="img/index/halo5.png" class="halo halo5" data-depth="0.1">
+                <img src="img/index/halo4.png" class="halo halo4Co1" data-depth="0.2">
+                <img src="img/index/halo4.png" class="halo halo4Co2" data-depth="0.2">
+                <img src="img/index/halo3.png" class="halo halo3Co1" data-depth="0.3">
+                <img src="img/index/halo3.png" class="halo halo3Co2" data-depth="0.4">
+                <img src="img/index/halo5.png" class="halo halo5Co1" data-depth="0.5">
+            </div>
+            <h1>開始踏上旅程吧</h1>
+            <div class="viewBg">
+                <div class="viewItem">
+                    <div class="exit">
+                        <img src="img/index/cancel.png" alt="exit">
+                    </div>
+                    <h2>天空之鏡</h2>
+                    <a href="#">將景點加入行程</a>
+                </div>
             </div>
         </div>
-    </section>
-    <section class="part2">
+    </div>
+        <!-- part1 end -->
+        <!-- part2 start -->
+    <div id="section2">
+        <div class="part2">
+            <div class="pt2Title">
+                <h2 class="pt2Eng">CHOOSE ONE</h2>
+                <h2 class="pt2Cn">對於星球之旅有想法嗎</h2>
+            </div>
+            <img src="img/index/indexpPt2Bg.jpg" class="yesNoImg noImg">
+            <img src="img/index/indexpPt2Bg-2.jpg" class="yesNoImg yesImg">
+            <div class="yesNo no">
+                <span>NO</span>
+                <p>那就試試看<br>我們的測驗吧</p>
+                <a href="#">開始測驗</a>
+            </div>
+            <div class="yesNo yes">
+                <span>YES</span>
+                <p>現在就開始規劃<br>您的星球之旅吧</p>
+                <a href="#">開始規劃</a>
+            </div>
+        </div>
+    </div>
+        <!-- part2 end -->
+        <!-- part3 start -->
+    <div id="section3">
+        <div class="part3">
+            <h2>帶上我們的專家吧</h2>
+            <h3>他會讓您的旅途更加精采</h3>
+            <a href="/expert.html">查看所有專家</a>
+            <div class="expertAll expert1">
+                <div class="exScreen scWhite"></div>
+                <div class="exScreen scBlack"></div>
+                <img src="img/index/expert1.jpg" alt="expert1">
+                <div class="exAllText exText1">
+                    <img src="img/index/crown.png" alt="crown">
+                    <h3>奧倫星人氣專家</h3>
+                    <h3>May J Lee</h3>
+                    <p>人文</p>
+                    <span></span>
+                    <p>美食</p>
+                    <span></span>
+                    <p>科技</p>
+                    <span></span>
+                    <p>人氣</p>
+                    <span></span>
+                    <p>冒險</p>
+                    <span></span>
+                    <p>知性</p>
+                    <span></span>
+                    <a href="#">專家詳情</a>
+                </div>
+            </div>
+            <div class="expertAll expert2">
+                <div class="exScreen scWhite"></div>
+                <div class="exScreen scBlack"></div>
+                <img src="img/index/expert2.jpg" alt="expert2">
+                <div class="exAllText exText2">
+                    <img src="img/index/crown.png" alt="crown">
+                    <h3>瓦特星人氣專家</h3>
+                    <h3>Tom Jeson</h3>
+                    <p>人文</p>
+                    <span></span>
+                    <p>美食</p>
+                    <span></span>
+                    <p>科技</p>
+                    <span></span>
+                    <p>人氣</p>
+                    <span></span>
+                    <p>冒險</p>
+                    <span></span>
+                    <p>知性</p>
+                    <span></span>
+                    <a href="#">專家詳情</a>
+                </div>
+            </div>
+            <div class="expertAll expert3">
+                <div class="exScreen scWhite"></div>
+                <div class="exScreen scBlack"></div>
+                <img src="img/index/expert3.jpg" alt="expert3">
+                <div class="exAllText exText3">
+                    <img src="img/index/crown.png" alt="crown">
+                    <h3>奧倫星人氣專家</h3>
+                    <h3>Andy Lin</h3>
+                    <p>人文</p>
+                    <span></span>
+                    <p>美食</p>
+                    <span></span>
+                    <p>科技</p>
+                    <span></span>
+                    <p>人氣</p>
+                    <span></span>
+                    <p>冒險</p>
+                    <span></span>
+                    <p>知性</p>
+                    <span></span>
+                    <a href="#">專家詳情</a>
+                </div>
+            </div>
+            
+            <div class="expertAll expert4">
+                <div class="exScreen scWhite"></div>
+                <div class="exScreen scBlack"></div>
+                <img src="img/index/expert4.jpg" alt="expert4">
+                <div class="exAllText exText4">
+                    <img src="img/index/crown.png" alt="crown">
+                    <h3>達沙星人氣專家</h3>
+                    <h3>Steven Wang</h3>
+                    <p>人文</p>
+                    <span></span>
+                    <p>美食</p>
+                    <span></span>
+                    <p>科技</p>
+                    <span></span>
+                    <p>人氣</p>
+                    <span></span>
+                    <p>冒險</p>
+                    <span></span>
+                    <p>知性</p>
+                    <span></span>
+                    <a href="#">專家詳情</a>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+        
+        <!-- part3 end -->
+        <!-- part4 start -->
+    <section class="section4">
 
-    </section>
-    <!-- part1 end -->
+            <img class="leftPage" id="leftPage" src="img/index/back-arrow.png" alt="back-arrow">
+            <img class="rightPage" id="rightPage" src="img/index/forward-arrow.png" alt="forward-arrow">
+    
+                <div class="travelGroup travelGroup1">
+                    <a href="#" class="useTravel">引用行程</a>
+                    <div class="travelTxtGroup">
+                        <div class="travelTitle">
+                            <h2>行星之眼</h2>
+                            <h1>三天兩夜荒野之旅</h1>
+                            <p>
+                            烏尤尼鹽湖世界上最大的鹽湖，相當於三分之一台灣大小，在每年12月至隔年3月雨季期間，因湖面積水像是鏡子一般反射出天空的倒影，讓人如置身夢境一般，因此被稱為「天空之鏡」。烏尤尼鹽湖4至11月期間則是旱季，乾涸湖面變成一大片白色平原，別有一番風情。
+                            </p>
+                        </div>
+                        <div class="travelPic">
+                            <div class="travelDay">3天</div>
+                            <div class="travelPicGroup">
+                                <img src="img/index/designer9.png">
+                                <img src="img/index/designer10.png">
+                            </div>
+                        </div>
+                        <div class="travelBtn">
+                            <a href="#" class="lookTravelBtn">查看行程</a>
+                            <a href="/refer.html" class="allTravelBtn">所有行程</a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    
+                </div>	
+                <div class="clearfix"></div>
+    
+                <div class="travelGroup travelGroup2">
+                    <a href="#" class="useTravel">引用行程</a>
+                    <div class="travelTxtGroup">
+                        <div class="travelTitle">
+                            <h2>行星之眼</h2>
+                            <h1>三天兩夜荒野之旅</h1>
+                            <p>
+                            烏尤尼鹽湖世界上最大的鹽湖，相當於三分之一台灣大小，在每年12月至隔年3月雨季期間，因湖面積水像是鏡子一般反射出天空的倒影，讓人如置身夢境一般，因此被稱為「天空之鏡」。烏尤尼鹽湖4至11月期間則是旱季，乾涸湖面變成一大片白色平原，別有一番風情。
+                            </p>
+                        </div>
+                        <div class="travelPic">
+                            <div class="travelDay">3天</div>
+                            <div class="travelPicGroup">
+                                <img src="img/index/designer9.png">
+                                <img src="img/index/designer10.png">
+                            </div>
+                        </div>
+                        <div class="travelBtn">
+                            <a href="#" class="lookTravelBtn">查看行程</a>
+                            <a href="/refer.html" class="allTravelBtn">所有行程</a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    
+                </div>	
+                <div class="clearfix"></div> 
+    
+            <div class="travelGroup travelGroup3">
+                    <a href="#" class="useTravel">引用行程</a>
+                    <div class="travelTxtGroup">
+                        <div class="travelTitle">
+                            <h2>行星之眼</h2>
+                            <h1>三天兩夜荒野之旅</h1>
+                            <p>
+                            烏尤尼鹽湖世界上最大的鹽湖，相當於三分之一台灣大小，在每年12月至隔年3月雨季期間，因湖面積水像是鏡子一般反射出天空的倒影，讓人如置身夢境一般，因此被稱為「天空之鏡」。烏尤尼鹽湖4至11月期間則是旱季，乾涸湖面變成一大片白色平原，別有一番風情。
+                            </p>
+                        </div>
+                        <div class="travelPic">
+                            <div class="travelDay">3天</div>
+                            <div class="travelPicGroup">
+                                <img src="img/index/designer9.png">
+                                <img src="img/index/designer10.png">
+                            </div>
+                        </div>
+                        <div class="travelBtn">
+                            <a href="#" class="lookTravelBtn">查看行程</a>
+                            <a href="/refer.html" class="allTravelBtn">所有行程</a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    
+                </div>	
+                <div class="clearfix"></div> 
+        </section>
+        <!-- part4 end -->
+    
+    
+    
+
 
 
     
     <!-- footer start -->
     <footer>
         
-        <!-- <img src="img/footerbg-1.png"> -->
+        <!-- <img src="img/index/footerbg-1.png"> -->
         <div class="copyright">
             <p>copyright@OhPlanets  2145</p>
         </div>
@@ -89,19 +500,11 @@
     </footer>
     <!-- footer end -->     
 <!-- jquery -->
-   <script>
-    //    登入下拉選單
-      $(function () {
-           $('.memberSign').click(function(){
-              $('.memberSelect').toggle();
-              $('.memberSign a').toggleClass("active")
-          });
-      });
-   </script>
-            
+   
 
+    <script src="js/index.js"></script>
+    <script src="js/style.js"></script>
 
-    <!-- script -->
     <!-- <script src="js/tween.js"></script> -->
 </body>
 

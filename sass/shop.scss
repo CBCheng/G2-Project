@@ -1,0 +1,49 @@
+@import "base/var";
+@import "base/reset";
+@import "mixin/mixin";
+@include body(12px);
+//  *{
+//      outline: 1px solid #fff;
+//  }
+img{
+    width: 100%;
+    vertical-align: middle;
+}
+a {
+    text-decoration: none;
+    color: $fontColorWhite;
+}
+
+@import "layout/nav";
+@import "layout/nav-small";
+section {
+    width: 100%;
+    margin: auto;
+}
+.banner{
+    width:80%;
+    margin: auto;
+    margin-top: 100px;
+}
+.productGroup{
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+.productKind{
+    width: 28%;
+    margin: 1%
+}
+.productList{
+    width: 78%;
+    margin: 1%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.product{
+    width: 31.15%;
+    margin: 1%;
+}
+@import "layout/footer";
+@import "layout/medium";
+@import "layout/desktop";

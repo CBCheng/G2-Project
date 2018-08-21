@@ -10,11 +10,14 @@
 
 //body
 @include body(14px);
+img {width: 100%; vertical-align: middle;}
+
+a{text-decoration: none; color: #fff;}
 *{
     // outline: 1px solid #F00;
 }
 //nav
-@import 'layout/header';
+@import 'layout/nav';
 
 
 .full{

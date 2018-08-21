@@ -1,17 +1,11 @@
 footer{
     width: 100%;
-    position: relative;
-    z-index: -100;
     text-align: center;
+    background-image: $gradation2;
 }
 .copyright{
     padding: 20px;
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 1px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: auto;
 }
