@@ -307,16 +307,16 @@ nav {
   position: absolute; }
 
 .part1 {
-  background-image: url(../img/index/indexBg-part1.jpg); }
+  background-image: url(/img/index/indexBg-part1.jpg); }
 
 .part2 {
-  background-image: url(../img/index/indexBg-part2.jpg); }
+  background-image: url(/img/index/indexBg-part2.jpg); }
 
 .part3 {
-  background-image: url(../img/index/indexBg-part3.jpg); }
+  background-image: url(/img/index/indexBg-part3.jpg); }
 
 .part4 {
-  background-image: url(../img/index/indexBg-part4.jpg); }
+  background-image: url(/img/index/indexBg-part4.jpg); }
 
 .part1 h1 {
   position: absolute;
