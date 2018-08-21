@@ -104,6 +104,40 @@ $(function(){
     }
 });
 
+//====== planet dot click ======
+$(function(){
+    $('#p1V11Dot').on('click',function(){
+        $('.viewBg').css('transform','rotateX(0deg)');
+    });
+    $('.exit').on('click',function(){
+        $('.viewBg').css('transform','rotateX(90deg)');
+    });
+});
+
+//====== halo hover ======
+var scene = document.getElementById('haloItem');
+//把滾動視差加入場景
+var parallax = new Parallax(scene);
+
+var tl_para = new TimelineMax({
+    onComplete: parallax
+});
+
+tl_para.to('.part1 .halo5Co1', 1, {
+}).to('.part1 .halo1', 1, {
+}).to('.part1 .halo3', 1, {
+}).to('.part1 .halo4', 1, {
+}).to('.part1 .halo5', 1, {
+}).to('.part1 .halo4Co1', 1, {
+}).to('.part1 .halo4Co2', 1, {
+}).to('.part1 .halo3Co1', 1, {
+}).to('.part1 .halo3Co2', 1, {
+});
+
+
+
+
+
 //====== yes&no hover ======
 $(function(){
     var boxSdoCh = "0px 0px 30px 5px #000 inset";
@@ -172,3 +206,67 @@ $(function(){
         $(this).children('.exAllText').css('opacity','0');
     });
 });
+
+
+//-----------
+
+function doFirst(){
+	var leftPage = document.getElementById('leftPage');
+	var rightPage = document.getElementById('rightPage');
+	var travelGroup = document.querySelectorAll('.travelGroup');
+	var gFirst = window.getComputedStyle(travelGroup[0],null).getPropertyValue("display");
+	var gSecond = window.getComputedStyle(travelGroup[1],null).getPropertyValue("display");
+	var gThird = window.getComputedStyle(travelGroup[2],null).getPropertyValue("display");
+	leftPage.onclick = changeLeft;
+	rightPage.onclick = changeRight;
+
+}
+
+function changeLeft(){
+	var leftPage = document.getElementById('leftPage');
+	var rightPage = document.getElementById('rightPage');
+	var travelGroup = document.querySelectorAll('.travelGroup');
+	var gFirst = window.getComputedStyle(travelGroup[0],null).getPropertyValue("display");
+	var gSecond = window.getComputedStyle(travelGroup[1],null).getPropertyValue("display");
+	var gThird = window.getComputedStyle(travelGroup[2],null).getPropertyValue("display");
+	if(gFirst == 'none' &&  gThird == 'none'){
+		travelGroup[0].style.display = 'block';
+		travelGroup[0].style.animation = 'groupFirst'+''+'.3s';
+		travelGroup[1].style.display = 'none';
+		
+	}else if(gFirst == 'none' &&  gSecond == 'none'){
+		travelGroup[1].style.display = 'block';
+		travelGroup[1].style.animation = 'groupSecond'+''+'.3s';
+		travelGroup[2].style.display = 'none';
+		
+	}else{
+		travelGroup[0].style.animation = 'groupFirstStop'+''+'.3s';
+	}
+	
+};
+function changeRight(){
+	var leftPage = document.getElementById('leftPage');
+	var rightPage = document.getElementById('rightPage');
+	var travelGroup = document.querySelectorAll('.travelGroup');
+	var gFirst = window.getComputedStyle(travelGroup[0],null).getPropertyValue("display");
+	var gSecond = window.getComputedStyle(travelGroup[1],null).getPropertyValue("display");
+	var gThird = window.getComputedStyle(travelGroup[2],null).getPropertyValue("display");
+	if(gSecond == 'none' &&  gThird == 'none'){
+		travelGroup[0].style.display = 'none';
+		travelGroup[1].style.display = 'block';
+		travelGroup[1].style.animation = 'groupSecond'+''+'.3s';
+
+	}else if(gFirst == 'none' &&  gThird == 'none'){
+		travelGroup[1].style.display = 'none';
+		travelGroup[2].style.display = 'block';
+		travelGroup[2].style.animation = 'groupThird'+''+'.3s';
+		
+	}else{
+		
+			travelGroup[2].style.animation = 'groupThirdStop'+''+'.3s';
+			// travelGroup[2].addEventListener('webkitAnimationEnd',function(){
+			// 	travelGroup[2].style.animation = '';
+			// })
+	}
+};
+window.onload = doFirst;
