@@ -56,7 +56,8 @@ table {
 .regist_box {
   display: none; }
 
-.login_content, .regist_content {
+.login_content,
+.regist_content {
   /*   display: none; */
   position: absolute;
   top: 40%;
@@ -80,19 +81,24 @@ table {
 .regist_content {
   padding: 30px 0 170px 0; }
 
-.login_content .close, .regist_content .close {
+.login_content .close,
+.regist_content .close {
   position: absolute;
   top: 0;
   right: 10px;
   font-size: 30px; }
 
-.login_content .close:hover, .regist_content .close:hover {
+.login_content .close:hover,
+.regist_content .close:hover,
+.memberSign {
   cursor: pointer; }
 
-.login_content h3, .regist_content h3 {
+.login_content h3,
+.regist_content h3 {
   width: 100%; }
 
-.login_content img, .regist_content img {
+.login_content img,
+.regist_content img {
   position: absolute;
   bottom: -25px;
   width: 95px;
@@ -105,7 +111,8 @@ table {
   cursor: pointer; }
 
 /* ------登入頁測試----------*/
-.login_content h3, .regist_content h3 {
+.login_content h3,
+.regist_content h3 {
   width: 100%;
   padding-bottom: 20px;
   font-weight: 600; }
