@@ -146,7 +146,7 @@ function changeOpacity(){
 		clearInterval(timeId2);
 		section2.style.display = 'none';
 		section1.classList.add('activeDown');
-		particlesBg.style.backgroundImage = 'url("../img/quizResultBg.png")';
+		particlesBg.style.backgroundImage ='url("img/quizResultBg.png")';
 		
 		section1.addEventListener('webkitAnimationEnd',function(){
 			section1.style.top = 0;
