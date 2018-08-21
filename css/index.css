@@ -1080,7 +1080,7 @@ nav {
   background-color: #FFF;
   padding: 10px;
   padding-top: 1%;
-  background-image: url("/img/index/section4pic1.png");
+  background-image: url("../img/index/section4pic1.png");
   background-repeat: no-repeat;
   background-size: 102%;
   transform-style: preserve-3d;
