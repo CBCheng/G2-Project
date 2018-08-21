@@ -570,11 +570,6 @@ nav {
 .grid .expertBox.green .pic .attr {
   background-color: #486a00; }
 
-#lightBox:after {
-  content: "";
-  display: block;
-  clear: both; }
-
 #lightBox1 {
   margin: auto;
   width: 960px;
@@ -583,133 +578,139 @@ nav {
   text-align: center;
   background-color: rgba(0, 0, 0, 0.9);
   border: 3px solid rgba(108, 213, 255, 0.5); }
-  #lightBox1 #closeBtn {
-    width: 50px;
-    float: right;
-    cursor: pointer; }
-  #lightBox1 h1 {
-    color: #6cd5ff;
-    margin-top: 50px; }
-  #lightBox1 h2 {
-    margin-top: 30px; }
-  #lightBox1 .content {
-    margin-top: 20px; }
-    #lightBox1 .content .expPic {
-      vertical-align: bottom;
-      display: inline-block;
-      margin: 0 50px;
-      width: 200px;
+
+#lightBox:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+.content {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center; }
+  .content .conLeft {
+    width: 40%; }
+    .content .conLeft img {
+      width: 50px; }
+    .content .conLeft .expPic {
+      margin: auto;
+      width: 60%;
       position: relative; }
-      #lightBox1 .content .expPic .attr {
+      .content .conLeft .expPic .attr {
         position: absolute;
-        width: 65px;
-        height: 65px;
         background-color: #094f91;
-        border-radius: 50%;
-        line-height: 65px;
         font-size: 20px;
-        left: -20px;
-        top: -20px; }
-      #lightBox1 .content .expPic img {
+        padding: 5px 10px;
+        right: 10px;
+        top: 10px; }
+      .content .conLeft .expPic img {
         width: 100%;
         min-width: 100px; }
-    #lightBox1 .content .data {
-      display: inline-block;
-      margin: 0 50px;
+  .content .conRight {
+    margin-top: 10px;
+    width: 30%;
+    display: flex;
+    flex-direction: column; }
+    .content .conRight h1 {
+      color: #6cd5ff;
       text-align: justify; }
-      #lightBox1 .content .data h3 {
-        font-size: 22px;
-        margin: 15px 0;
-        text-align: center; }
-      #lightBox1 .content .data .chart {
+    .content .conRight h2 {
+      margin-top: 20px;
+      text-align: justify; }
+    .content .conRight .data {
+      text-align: justify; }
+      .content .conRight .data .score {
         margin-top: 30px; }
-        #lightBox1 .content .data .chart span {
+        .content .conRight .data .score h3 {
+          display: inline;
+          font-size: 20px;
+          padding-right: 10px; }
+        .content .conRight .data .score span {
+          font-size: 16px;
+          padding-right: 5px; }
+        .content .conRight .data .score img {
+          vertical-align: text-bottom;
+          width: 20px; }
+      .content .conRight .data .chart {
+        margin: 30px 0 20px;
+        text-align: justify; }
+        .content .conRight .data .chart h3 {
+          font-size: 22px;
+          margin-left: 25px;
+          margin-bottom: 10px; }
+        .content .conRight .data .chart span {
           font-size: 18px;
           margin-right: 10px;
           line-height: 1.8; }
-        #lightBox1 .content .data .chart .value {
+        .content .conRight .data .chart .value {
           width: 80px;
-          height: 10px;
+          height: 15px;
           background-color: #aaa;
-          display: inline-block;
-          border-radius: 5px; }
-        #lightBox1 .content .data .chart .value.focus {
+          display: inline-block; }
+        .content .conRight .data .chart .value.focus {
           width: 100px;
           background-color: #6cd5ff; }
-    #lightBox1 .content .record {
-      display: inline-block; }
-      #lightBox1 .content .record .collect {
-        float: left; }
-      #lightBox1 .content .record .writeComment {
-        float: right; }
-      #lightBox1 .content .record .collect,
-      #lightBox1 .content .record .writeComment {
+    .content .conRight .record {
+      align-self: flex-end; }
+      .content .conRight .record .collect {
+        display: inline-block; }
+      .content .conRight .record .writeComment {
+        display: inline-block; }
+      .content .conRight .record .collect,
+      .content .conRight .record .writeComment {
         margin: 10px; }
-        #lightBox1 .content .record .collect #heart,
-        #lightBox1 .content .record .collect #write,
-        #lightBox1 .content .record .writeComment #heart,
-        #lightBox1 .content .record .writeComment #write {
+        .content .conRight .record .collect #heart,
+        .content .conRight .record .collect #write,
+        .content .conRight .record .writeComment #heart,
+        .content .conRight .record .writeComment #write {
           width: 28px;
           height: 26px;
           cursor: pointer; }
-        #lightBox1 .content .record .collect .txt,
-        #lightBox1 .content .record .writeComment .txt {
+        .content .conRight .record .collect .txt,
+        .content .conRight .record .writeComment .txt {
           font-size: 16px;
           line-height: 2.5; }
-        #lightBox1 .content .record .collect #Cnum,
-        #lightBox1 .content .record .collect #Wnum,
-        #lightBox1 .content .record .writeComment #Cnum,
-        #lightBox1 .content .record .writeComment #Wnum {
+        .content .conRight .record .collect #Cnum,
+        .content .conRight .record .collect #Wnum,
+        .content .conRight .record .writeComment #Cnum,
+        .content .conRight .record .writeComment #Wnum {
           font-size: 14px;
           color: #aaaaaa; }
-  #lightBox1 .comment {
-    width: 60%;
-    margin: 80px auto; }
-    #lightBox1 .comment h2 {
-      text-align: justify; }
-    #lightBox1 .comment .score {
-      text-align: right; }
-      #lightBox1 .comment .score p {
-        display: inline;
-        font-size: 20px;
-        padding-right: 10px; }
-      #lightBox1 .comment .score span {
+
+.comment {
+  width: 60%;
+  margin: 60px auto 80px; }
+  .comment .message {
+    border-bottom: 1px dashed rgba(108, 213, 255, 0.5);
+    margin: 20px auto 0;
+    padding-bottom: 20px;
+    width: 100%; }
+    .comment .message .user {
+      width: 100%;
+      height: 80px;
+      position: relative; }
+      .comment .message .user .name {
+        position: absolute;
+        left: 60px;
+        top: 10px;
+        width: 86px;
+        line-height: 36px;
+        -webkit-clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+        clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+        background-color: #094f91;
         font-size: 16px;
-        padding-right: 5px; }
-      #lightBox1 .comment .score img {
-        vertical-align: text-bottom;
-        width: 20px; }
-    #lightBox1 .comment .message {
-      border-bottom: 1px dashed rgba(108, 213, 255, 0.5);
-      margin: 20px auto 0;
-      padding-bottom: 20px;
-      width: 100%; }
-      #lightBox1 .comment .message .user {
-        width: 100%;
-        height: 80px;
-        position: relative; }
-        #lightBox1 .comment .message .user .name {
-          position: absolute;
-          left: 60px;
-          top: 10px;
-          width: 86px;
-          line-height: 36px;
-          -webkit-clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
-          clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
-          background-color: #094f91;
-          font-size: 16px;
-          letter-spacing: 2px; }
-        #lightBox1 .comment .message .user img {
-          position: absolute;
-          left: 0;
-          width: 80px;
-          border-radius: 50%; }
-      #lightBox1 .comment .message p {
-        margin-top: -10px;
-        margin-left: 90px;
-        font-size: 16px;
-        text-align: left;
-        line-height: 1.4; }
+        letter-spacing: 2px; }
+      .comment .message .user img {
+        position: absolute;
+        left: 0;
+        width: 80px;
+        border-radius: 50%; }
+    .comment .message p {
+      margin-top: -10px;
+      margin-left: 90px;
+      font-size: 16px;
+      text-align: left;
+      line-height: 1.4; }
 
 @media screen and (max-width: 1000px) {
   #lightBox1 {
