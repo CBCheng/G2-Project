@@ -631,8 +631,8 @@ a {
                     top: 10px; // padding: 10px 25px;
                     width: 86px; // height: 36px;
                     line-height: 36px;
-                    -webkit-clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
-                    clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
+                    -webkit-clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+                    clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
                     background-color: $attrBlue;
                     font-size: 16px;
                     letter-spacing: 2px;
@@ -727,8 +727,8 @@ a {
                         width: 76px;
                         height: 28px;
                         line-height: 28px;
-                        -webkit-clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
-                        clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
+                        -webkit-clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+                        clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
                     }
                     img {
                         width: 60px;
