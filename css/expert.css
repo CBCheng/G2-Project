@@ -594,7 +594,10 @@ nav {
           position: absolute;
           left: 60px;
           top: 10px;
-          padding: 10px 25px;
+          width: 86px;
+          line-height: 36px;
+          -webkit-clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
           background-color: #094f91;
           font-size: 16px;
           letter-spacing: 2px; }
@@ -656,7 +659,11 @@ nav {
     width: 18px; }
   #lightBox1 .comment .message .user .name {
     left: 45px;
-    padding: 6px 25px; }
+    width: 76px;
+    height: 28px;
+    line-height: 28px;
+    -webkit-clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%); }
   #lightBox1 .comment .message .user img {
     width: 60px; }
   #lightBox1 .comment .message p {
