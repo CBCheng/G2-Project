@@ -258,6 +258,23 @@ h3 {
   padding: 30px 0  10px 20px;
   font-size: 20px; }
 
+::-webkit-scrollbar {
+  width: 15px;
+  background: #202164; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #95cce4;
+  border-radius: 10px; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2f83ad; }
+
 section {
   width: 100%;
   margin: auto; }
@@ -300,6 +317,22 @@ section {
   padding: 20px 20px 20px 40px;
   display: flex;
   border-bottom: 1px solid #6cd5ff; }
+
+.detitle {
+  position: relative; }
+  .detitle h3 {
+    display: inline-block; }
+
+.use {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  bottom: 0; }
+  .use button {
+    background: #6cd5ff;
+    border-style: none;
+    width: 100px;
+    height: 40px; }
 
 .tripDate {
   width: 100px;
@@ -364,7 +397,7 @@ section {
 
 .comment {
   text-align: center;
-  padding: 20px 0 20px 0; }
+  padding: 20px 0 100px 0; }
   .comment input {
     border-style: none;
     width: 100px;
@@ -480,17 +513,11 @@ section {
 
 footer {
   width: 100%;
-  position: relative;
-  z-index: -100;
-  text-align: center; }
+  text-align: center;
+  background-image: linear-gradient(to top, rgba(0, 183, 255, 0.3), rgba(0, 255, 255, 0.3) 100%); }
 
 .copyright {
   padding: 20px;
   font-size: 14px;
   font-weight: 600;
-  letter-spacing: 1px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto; }
+  letter-spacing: 1px; }

@@ -329,6 +329,7 @@ nav {
 .grid .expertBox {
   width: 250px;
   margin: 25px;
+  height: 337px;
   text-align: center; }
   .grid .expertBox h2 {
     font-size: 22px;
@@ -371,7 +372,8 @@ nav {
 @media screen and (max-width: 991px) {
   .grid .expertBox {
     width: 200px;
-    margin: 15px; }
+    margin: 15px;
+    height: 283px; }
     .grid .expertBox h2 {
       font-size: 20px; }
     .grid .expertBox .pic {
@@ -424,7 +426,8 @@ nav {
   .grid .expertBox {
     width: 90%;
     padding-bottom: 15px;
-    margin: 15px 15px 5px; }
+    margin: 15px 15px 5px;
+    height: 162px; }
     .grid .expertBox h2 {
       font-size: 18px;
       margin: 0 auto 10px; }
@@ -432,13 +435,11 @@ nav {
       font-size: 16px;
       display: none; }
     .grid .expertBox .main {
-      float: left;
       width: 50%;
       display: inline-block; }
       .grid .expertBox .main .pic {
         width: 100px; }
     .grid .expertBox .aside {
-      float: right;
       width: 50%;
       display: inline-block;
       text-align: left;
@@ -669,20 +670,14 @@ footer img {
 
 footer {
   width: 100%;
-  position: relative;
-  z-index: -100;
-  text-align: center; }
+  text-align: center;
+  background-image: linear-gradient(to top, rgba(0, 183, 255, 0.3), rgba(0, 255, 255, 0.3) 100%); }
 
 .copyright {
   padding: 20px;
   font-size: 14px;
   font-weight: 600;
-  letter-spacing: 1px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto; }
+  letter-spacing: 1px; }
 
 @media all and (max-width: 767px) {
   nav {

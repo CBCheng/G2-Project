@@ -19,6 +19,30 @@ h3{
     padding: 30px 0  10px 20px;
     font-size: 20px;
 }
+// scrollbar
+::-webkit-scrollbar {
+    width: 15px;
+    background: #202164;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #95cce4;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2f83ad;
+}
 // content
 section {
     width: 100%;
@@ -65,6 +89,24 @@ section {
     padding: 20px 20px 20px 40px;
     display: flex;
     border-bottom: 1px solid $fontColorBlue;
+}
+.detitle{
+    position: relative;
+    h3{
+        display: inline-block;
+    }
+}
+.use{
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    button{
+        background: $fontColorBlue;
+        border-style:none; 
+        width: 100px;
+        height: 40px;
+    }
 }
 .tripDate{
     width: 100px;
@@ -136,7 +178,7 @@ section {
 }
 .comment{
     text-align: center;
-    padding: 20px 0 20px 0;
+    padding: 20px 0 100px 0;
     input{
         border-style:none;
         width: 100px;
