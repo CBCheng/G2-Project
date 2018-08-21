@@ -77,6 +77,17 @@ window.addEventListener('load', doSecond);
 
 
 
+//愛心換圖
+$("#heart").click(function () {
+	$(this).attr("src", "../img/expertImg/heartRed.png");
+	$(".collect .txt").text('取消收藏');
+})
+// if ($(".collect .txt").text('取消收藏')) {
+// 	$("#heart").click(function () {
+// 		$(this).attr("src", "../img/expertImg/heartWhite.png");
+// 		$(".collect .txt").text('收藏專家');
+// 	})
+// }
 
 
 
