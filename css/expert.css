@@ -435,11 +435,13 @@ nav {
       font-size: 16px;
       display: none; }
     .grid .expertBox .main {
+      float: left;
       width: 50%;
       display: inline-block; }
       .grid .expertBox .main .pic {
         width: 100px; }
     .grid .expertBox .aside {
+      float: right;
       width: 50%;
       display: inline-block;
       text-align: left;
@@ -661,12 +663,15 @@ nav {
     margin-top: 10px;
     margin-left: 20px; } }
 
-footer img {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  opacity: 0.5; }
+footer {
+  background-image: none; }
+  footer img {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0.5;
+    z-index: -1; }
 
 footer {
   width: 100%;
