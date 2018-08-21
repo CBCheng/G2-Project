@@ -133,7 +133,7 @@
   transform-origin: top right;
   transition: .7s; }
 
-.mW_bigBox .mW_delete, .mW_box .mW_look, .mW_box .mW_edit {
+.mW_bigBox .mW_delete, .mW_box .mW_comment, .mW_box .mW_edit {
   position: absolute;
   font-size: 14px;
   text-align: center;
@@ -164,7 +164,7 @@
   font-weight: 600;
   font-size: 18px; }
 
-.mW_look {
+.mW_comment {
   border: 2px solid #777;
   background-color: #fff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
@@ -176,7 +176,7 @@
   bottom: 5px;
   right: 5px; }
 
-.mW_look:hover {
+.mW_comment:hover {
   border: 2px solid #2C8DC7;
   color: #2C8DC7; }
 
@@ -193,8 +193,8 @@
   right: 85px; }
 
 .mW_edit:hover {
-  border: 2px solid #e16d6b;
-  color: #e16d6b; }
+  border: 2px solid #2C8DC7;
+  color: #2C8DC7; }
 
 .mW_tabBox {
   position: relative;
@@ -648,7 +648,7 @@
     margin-bottom: 10px; }
   .mW_imgBox img {
     display: block;
-    width: 100%;
+    width: auto;
     height: 100%; }
   /*=====.lightBox======*/
   .plightBoxAll {

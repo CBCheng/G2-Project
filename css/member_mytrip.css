@@ -291,10 +291,15 @@
   right: 0px;
   color: #fff;
   z-index: 5;
-  cursor: pointer; }
+  cursor: pointer;
+  width: 30px; }
+
+.pexit img {
+  width: 30%; }
 
 .pexit i {
-  font-size: 30px; }
+  font-size: 30px;
+  width: 30%; }
 
 .plightBoxContent {
   width: 100%;
@@ -664,7 +669,8 @@
     padding-left: 20px; }
   .pexit {
     top: 25px;
-    right: 20px; }
+    right: 20px;
+    width: 30px; }
   .plBBtn {
     display: none; }
   .pchangeDay {
@@ -689,8 +695,9 @@
     padding-top: 15px;
     padding-left: 20px; }
   .pexit {
-    top: 25px;
-    right: 20px; }
+    top: 13px;
+    right: -16px;
+    width: 30px; }
   .plBBtn {
     display: none; }
   .pchangeDay {
