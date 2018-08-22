@@ -21,48 +21,56 @@ a {
     margin: auto;
     position: relative;
 }
-.searchTrip{
-    display: block;
-    input{
-        width: 200px;
-        height: 36px;
-        background-color:transparent;
-        border:2px solid $fontColorWhite;
-        border-radius: 3px;
-        color: $fontColorBlue;
-        display: inline-block;
-    } 
-    button{
-       border-style:none;
-       border: 2px solid $fontColorWhite;
-       border-radius:3px;  
-       width: 40px;
-       height: 41px;
-       background-color:transparent;
-       display: inline-block;
-       vertical-align:top;
+    // button{
+    //    border-style:none;
+    //    border: 2px solid $fontColorWhite;
+    //    border-radius:3px;  
+    //    width: 40px;
+    //    height: 41px;
+    //    background-color:transparent;
+    //    display: inline-block;
+    //    vertical-align:top;
+    // }
+    // button:hover{
+    //     background-color:$fontColorBlue;
+    //     border: 2px solid $fontColorBlue;
+    // }
+// }
+@keyframes circle{
+    0%{
+        transform: rotate(0dge);
     }
-    button:hover{
-        background-color:$fontColorBlue;
-        border: 2px solid $fontColorBlue;
+    100%{
+        transform: rotate(360dge);
     }
 }
-// #share{
-//     width: 100px;
-//     height: 36px;
-//     background-color:transparent;
-//     border:2px solid $fontColorWhite;
-//     border-radius: 3px;
-//     color: $fontColorBlue;
-//     display: inline-block;
-// }
-#canvas-container{
-    text-align: center;
+#anime{
+    width: 30%;
     position: absolute;
+    right: 0;
     top:0;
+    margin: auto;
+    z-index: 10;
+    animation: circle 1.5s infinite linear;
+}
+.bannerPic{
+    position: relative;
+}
+#canvas-container{
+    position: absolute;
+    bottom:0;
     right: 0;
     left: 0;
     z-index: 0;
+  }
+  .title{
+       position: absolute;
+       right: 0;
+       bottom: 0;
+       top: 50%;
+       left: 0;
+       margin: auto;
+       z-index: 50;
   }
 
 // 分類
@@ -74,15 +82,18 @@ a {
     top:600px;
 }
 .button-group{
-    text-align: center;
+    text-align: left;
+    width: 1200px;
+    margin: auto;
+    padding: 0 20px 0 0 ;
     margin-bottom: 20px;
 }
 .button{
     display: inline-block;
     padding: 8px 30px;
-    margin: 10px 20px;
+    margin: 0px 0px;
     background: transparent;
-    border: 1px solid $fontColorBlue;
+    border: 1px solid transparent;
     color: $fontColorBlue;
     font-size: 18px;
     cursor: pointer;
@@ -99,6 +110,12 @@ a {
 .button.is-checked {
     color:$fontColorBlack;
 }
+#tripShare{
+    border: 1px solid $fontColorBlue;
+    float: right;
+    padding: 8px 30px;
+    margin: 10px 20px;
+}
 // 分享行程
 .tripWrap{
     width: 1200px;
@@ -114,12 +131,21 @@ a {
     margin: 1%;
     position: relative;
 }
-.tripTag{
-    padding: 20px 15px 20px 15px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 0;
+ .tripTag{
+     padding: 20px 15px 20px 15px;
+     position: absolute;
+     top: 0;
+     right: 0;
+     font-size: 0;
+}
+.tripPic{
+	width: 90%;
+	margin: auto;
+	position: absolute;
+	top:6%;
+	left: 0;
+	right: 0;
+    bottom: 0;
 }
 .tripIcon{
     position: absolute;
@@ -135,15 +161,15 @@ a {
     border-radius:3px; 
 }
 // 屬性
-.blue{
-    border: 2px solid  $borderColorBlue;
-}
-.green{
-    border: 2px solid  $borderColorGreen;
-}
-.orange{
-    border: 2px solid $borderColorOrange;
-}
+// .blue{
+//     border: 2px solid  $borderColorBlue;
+// }
+// .green{
+//     border: 2px solid  $borderColorGreen;
+// }
+// .orange{
+//     border: 2px solid $borderColorOrange;
+// }
 .tripPlanet.blue{
     background: $fontColorBlue;
 }
