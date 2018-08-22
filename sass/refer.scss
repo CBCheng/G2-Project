@@ -38,10 +38,10 @@ a {
 // }
 @keyframes circle{
     0%{
-        transform: rotate(0dge);
+        transform: rotate(0deg);
     }
     100%{
-        transform: rotate(360dge);
+        transform: rotate(360deg);
     }
 }
 #anime{
@@ -51,7 +51,7 @@ a {
     top:0;
     margin: auto;
     z-index: 10;
-    animation: circle 1.5s infinite linear;
+    animation: circle 10s infinite linear;
 }
 .bannerPic{
     position: relative;
