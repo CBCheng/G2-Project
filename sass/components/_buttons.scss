@@ -92,13 +92,13 @@
 //一般按鈕狀態 (用在個別選項)
 @mixin skewBtn($skBtnW:145px, $skBtnH:45px) {
     transform: skewX(25deg);
-    display: block;
+    display: inline-block;
     width: $skBtnW;
     height: $skBtnH;
     color: #fff;
     font: 18px/34px 微軟正黑體;
     border: 0px solid #6cd5ff;
-    background-color: rgba(50, 50, 50, .5);
+    background-color: rgba(255, 255, 255, .5);
     text-align: center;
     cursor: pointer;
     border-radius: 7px;
@@ -107,13 +107,13 @@
 //ALL一般按鈕狀態 (用在所有選項)
 @mixin skewBtnAll($skBtnAllW:145px, $skBtnAllH:45px) {
     clip-path: polygon(0 0, 70% 0%, 100% 100%, 0% 100%);
-    display: block;
+    display: inline-block;
     width: $skBtnAllW;
     height: $skBtnAllH;
     color: #fff;
     font: 18px/34px 微軟正黑體;
     border: 0px solid #6cd5ff;
-    background-color: rgba(66, 134, 244, .5);
+    background-color: rgba(71, 138, 245, 0.6);
     text-align: center;
     cursor: pointer;
     border-radius: 7px;
@@ -128,7 +128,7 @@
 }
 
 //ALL文字一般狀態 針對button裡的span
-@mixin skewBtnText($skTeTop:4px, $skTeLeft:40px) {
+@mixin skewBtnTextAll($skTeTop:4px, $skTeLeft:40px) {
     position: absolute;
     top: $skTeTop;
     left: $skTeLeft;
@@ -136,7 +136,6 @@
 
 //按鈕hover狀態 針對button裡的span
 @mixin skewBtnHover() {
-    background-color: #fff;
     color: #000;
 }
 

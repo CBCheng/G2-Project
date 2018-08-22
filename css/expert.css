@@ -392,24 +392,66 @@ nav {
   .button-group .button-top,
   .button-group .button-down {
     display: inline-block; }
-  .button-group .button.all {
-    clip-path: polygon(0 0, 70% 0%, 100% 100%, 0% 100%);
-    display: block;
+  .button-group .button {
+    transform: skewX(25deg);
+    display: inline-block;
     width: 100px;
-    height: 35px;
+    height: 40px;
     color: #fff;
     font: 18px/34px 微軟正黑體;
     border: 0px solid #6cd5ff;
-    background-color: rgba(66, 134, 244, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    cursor: pointer;
+    border-radius: 7px;
+    cursor: pointer;
+    margin: 10px 15px; }
+    .button-group .button span {
+      position: absolute;
+      transform: skewX(-25deg);
+      top: 4px;
+      left: 25px; }
+  .button-group .button.popular {
+    transform: skewX(25deg);
+    display: inline-block;
+    width: 85px;
+    height: 40px;
+    color: #fff;
+    font: 18px/34px 微軟正黑體;
+    border: 0px solid #6cd5ff;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    cursor: pointer;
+    border-radius: 7px;
+    cursor: pointer; }
+    .button-group .button.popular span {
+      position: absolute;
+      transform: skewX(-25deg);
+      top: 4px;
+      left: 25px; }
+  .button-group .button.all {
+    clip-path: polygon(0 0, 70% 0%, 100% 100%, 0% 100%);
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    color: #fff;
+    font: 18px/34px 微軟正黑體;
+    border: 0px solid #6cd5ff;
+    background-color: rgba(71, 138, 245, 0.6);
     text-align: center;
     cursor: pointer;
     border-radius: 7px; }
+    .button-group .button.all span {
+      position: absolute;
+      top: 4px;
+      left: 28px; }
   .button-group .button:hover {
-    background-color: #B5E9F9;
+    color: #000;
+    background-color: #6cd5ff;
     color: #222; }
   .button-group .button:active,
   .button-group .button.is-checked {
-    background-color: #B5E9F9; }
+    background-color: #6cd5ff; }
   .button-group .button.is-checked {
     color: #000; }
 

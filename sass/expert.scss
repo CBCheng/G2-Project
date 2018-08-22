@@ -209,26 +209,38 @@ a {
     .button-down {
         display: inline-block;
     }
+    .button {
+        @include skewBtn(100px, 40px);
+        cursor: pointer;
+        margin: 10px 15px;
+        span {
+            @include skewBtnText(4px, 25px);
+        }
+    }
+    .button.popular {
+        @include skewBtn(85px, 40px);
+        cursor: pointer;
+        span {
+            @include skewBtnText(4px, 25px);
+        }
+    }
     .button.all {
-        // display: inline-block;
-        // padding: 8px 30px;
-        // margin: 10px 20px;
+        // padding: 8px 30px; // margin: 10px 20px;
         // background: transparent;
         // border: 1px solid $fontColorBlue;
-        // color: $fontColorBlue;
-        // font-family: $fontfamily;
-        // font-size: 18px;
-        // cursor: pointer;
-        // position: relative;
-        @include skewBtnAll(100px, 35px);
+        @include skewBtnAll(100px, 40px);
+        span {
+            @include skewBtnTextAll(4px, 28px);
+        }
     }
     .button:hover {
-        background-color: #B5E9F9;
+        @include skewBtnHover;
+        background-color: $bottomColor;
         color: #222;
     }
     .button:active,
     .button.is-checked {
-        background-color: #B5E9F9;
+        background-color: $bottomColor;
     }
     .button.is-checked {
         color: #000;
