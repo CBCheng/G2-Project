@@ -11,7 +11,8 @@ $fontWhiteContent:rgba(255,255,255,.7);
 }
 
 .userFull{
-    background-image: url('../img/backend-bg2.png');
+    font-family:$fontfamily;
+    background-image: url('../img/poa/backend-bg2.png');
     background-size: cover;
     background-repeat: no-repeat;
     width:100%;
@@ -102,8 +103,11 @@ nav{
     color:$fontWhiteTitle;
     
     .content{
+        width:95%;
+        margin:auto;
         border:1px solid #CCC;
         background-color:rgba(0,0,0,.7);
+        border:2px solid $bottomColor;
         h1{
             font:36px $fontfamily;
             padding: 50px;

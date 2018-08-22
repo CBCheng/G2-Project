@@ -11,7 +11,7 @@ $fontWhiteContent:rgba(255,255,255,.7);
 }
 
 .userFull{
-    background-image: url('../img/backend-bg2.png');
+    background-image: url('../img/poa/backend-bg2.png');
     background-size: cover;
     background-repeat: no-repeat;
     width:100%;
@@ -103,8 +103,11 @@ nav{
     
     
     .content{
+        width:95%;
+        margin:auto;
         border:1px solid #CCC;
         background-color:rgba(0,0,0,.7);
+        border:2px solid $bottomColor;
         h1{
             font:36px $fontfamily;
             padding: 50px;
@@ -120,15 +123,22 @@ nav{
             bottom:0;
             margin: auto;
             width:500px;
-            height:600px;
+            height:700px;
             overflow: auto;
             border: 1px solid $bottomColor;
+            h2{
+                font-size: 24px;
+                padding:20px;
+                font-family: '微軟正黑體';
+            }
             table{
+                margin: auto;
                 text-align: left;
                 tr,td{
                     padding:10px 20px;
                     vertical-align: middle;
                 }
+                
                 tr:last-child {
                     text-align: center;
                     td{

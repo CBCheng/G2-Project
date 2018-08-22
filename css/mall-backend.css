@@ -46,7 +46,7 @@ table {
   clear: both; }
 
 .userFull {
-  background-image: url("../img/backend-bg2.png");
+  background-image: url("../img/poa/backend-bg2.png");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -117,34 +117,47 @@ nav {
   padding: 10px;
   color: rgba(255, 255, 255, 0.8); }
   .wrapContent .content {
+    width: 95%;
     border: 1px solid #CCC;
-    background-color: rgba(0, 0, 0, 0.7); }
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid #6cd5ff;
+    margin: auto; }
+    .wrapContent .content .wrapChoice {
+      text-align: right;
+      padding: 20px; }
+      .wrapContent .content .wrapChoice button {
+        margin-left: 30px; }
     .wrapContent .content h1 {
       font: 36px "微軟正黑體", "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS", sans-serif;
       padding: 50px; }
-  .wrapContent .lightBox {
-    display: none;
-    background-color: #000;
-    height: 100px;
-    position: absolute;
-    left: 0;
-    top: 200px;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    width: 500px;
-    height: 600px;
-    overflow: auto;
-    border: 1px solid #6cd5ff; }
-    .wrapContent .lightBox table {
-      text-align: left; }
-      .wrapContent .lightBox table tr, .wrapContent .lightBox table td {
-        padding: 10px 20px;
-        vertical-align: middle; }
-      .wrapContent .lightBox table tr:last-child {
-        text-align: center; }
-        .wrapContent .lightBox table tr:last-child td {
-          padding-top: 50px; }
+    .wrapContent .content .lightBox {
+      display: none;
+      background-color: #000;
+      height: 100px;
+      position: absolute;
+      left: 0;
+      top: 100px;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      width: 500px;
+      height: 600px;
+      overflow: auto;
+      border: 1px solid #6cd5ff; }
+      .wrapContent .content .lightBox h2 {
+        font-size: 24px;
+        padding: 20px;
+        font-family: '微軟正黑體'; }
+      .wrapContent .content .lightBox table {
+        margin: auto;
+        text-align: left; }
+        .wrapContent .content .lightBox table tr, .wrapContent .content .lightBox table td {
+          padding: 10px 20px;
+          vertical-align: middle; }
+        .wrapContent .content .lightBox table tr:last-child {
+          text-align: center; }
+          .wrapContent .content .lightBox table tr:last-child td {
+            padding-top: 50px; }
 
 .userTable {
   width: 100%; }

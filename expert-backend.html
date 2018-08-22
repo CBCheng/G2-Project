@@ -12,14 +12,14 @@
         <nav>
             <div class="navUser">
                 <div class="logo">
-                    <img src="img/logo-backend.png" alt="LOGO">
+                    <img src="img/poa/logo-backend.png" alt="LOGO">
                 </div>
                 <div class="userName">
                     <h3>管理員X</h3>
                     <p>您好!</p>
                     <div class="loginOut">
                         <label for="logOutPic"></label>
-                        <img src="img/logout.png" alt="登出" >
+                        <img src="img/poa/logout.png" alt="登出" >
                         <a href="">登出</a>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
                         <td>2</td>
                         <td>3</td>
                         <td>
-                            <button>查看日期</button>
+                            <button id="dateBtn">查看日期</button>
                         </td>
                         
                         <td>
@@ -195,10 +195,61 @@
                                     <button>確認新增</button>
                                 </td>
                             </tr>
-                            
                         </table>
                     </div>
-
+                    <div class="lightBoxManagement" id="lightBoxManagement">
+                        <h2>專家日期管理</h2>
+                        
+                        <div class="expertInfo">
+                            <span class="expertMonth">2018  八月</span>
+                            <span class="expertName">A001  林小明</span>
+                            <div><img src="img/waterman.jpg" alt=""></div>
+                        </div>
+                        <table class="expertDated">
+                            <tr>
+                                <td>被預約的日期</td>
+                                <td>8/5~8/9</td>
+                                <td>+</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>8/15~8/20</td>
+                                <td>+</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><input type="text"></td>
+                                <td><button>確定</button></td>
+                            </tr>
+                        </table >
+                        <table class="expertDatedEmpty">
+                                <tr>
+                                    <td>尚有空的日期</td>
+                                    <td>8/5~8/9</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>8/15~8/20</td>
+                                    <td></td>
+                                </tr>
+                                
+                            </table >
+                            <div class="cancelBtnGroup">
+                                <button id="cancelDateBtn">取消</button>
+                                <button>確認修改</button>
+                            </div>
+                            
+                        <!-- <div class="expertDated">
+                            <div class="expertDatedL">被預約的日期</div>
+                            <div class="expertDatedR">
+                                <div>8/5~8/9</div>
+                                <div>8/15~8/20</div>
+                                <div><input type="text">確認</div>
+                            </div>
+                        </div>
+                        <div></div>
+                    </div> -->
             </div>
         </div>
     </div>
@@ -214,6 +265,16 @@
             })
             cancelBtn.addEventListener('click',function(){
                 lightBox.style.display = 'none';
+            })
+
+            var dateBtn = document.getElementById('dateBtn');
+            var lightBoxManagement = document.getElementById('lightBoxManagement');
+            var cancelDateBtn = document.getElementById('cancelDateBtn');
+            dateBtn.addEventListener('click',function(){
+                lightBoxManagement.style.display = 'block';
+            })
+            cancelDateBtn.addEventListener('click',function(){
+                lightBoxManagement.style.display = 'none';
             })
         }
         window.onload = doFirst;
