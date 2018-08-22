@@ -225,9 +225,6 @@ a {
         }
     }
     .button.all {
-        // padding: 8px 30px; // margin: 10px 20px;
-        // background: transparent;
-        // border: 1px solid $fontColorBlue;
         @include skewBtnAll(100px, 40px);
         span {
             @include skewBtnTextAll(4px, 28px);
@@ -290,13 +287,11 @@ a {
             cursor: pointer;
             .attr {
                 position: absolute;
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-                line-height: 50px;
-                font-size: 16px;
-                left: -20px;
-                top: -10px;
+                background-color: $attrBlue;
+                font-size: 18px;
+                padding: 5px 8px;
+                right: 5px;
+                top: 5px;
             }
             img {
                 width: 100%;
@@ -322,6 +317,13 @@ a {
                 width: 25px;
                 margin: 10px;
             }
+        }
+    }
+    .expertBox.aaa {
+        border: transparent;
+        box-shadow: none;
+        img {
+            width: 300px;
         }
     }
     @media screen and (max-width: 991px) {
@@ -595,9 +597,6 @@ a {
                 .value:nth-of-type(5) {
                     animation: value5 1.5s 0.5s 1 forwards;
                 }
-                .value:nth-of-type(6) {
-                    animation: value6 1.5s 0.5s 1 forwards;
-                }
             }
         }
         @keyframes value1 {
@@ -638,14 +637,6 @@ a {
             }
             100% {
                 width: 80px;
-            }
-        }
-        @keyframes value6 {
-            0% {
-                width: 0;
-            }
-            100% {
-                width: 40px;
             }
         }
         .record {

@@ -106,7 +106,7 @@
 
 //ALL一般按鈕狀態 (用在所有選項)
 @mixin skewBtnAll($skBtnAllW:145px, $skBtnAllH:45px) {
-    clip-path: polygon(0 0, 70% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 80% 0%, 100% 100%, 0% 100%);
     display: inline-block;
     width: $skBtnAllW;
     height: $skBtnAllH;
@@ -129,6 +129,7 @@
 
 //ALL文字一般狀態 針對button裡的span
 @mixin skewBtnTextAll($skTeTop:4px, $skTeLeft:40px) {
+    transform: skewX(0deg);
     position: absolute;
     top: $skTeTop;
     left: $skTeLeft;
