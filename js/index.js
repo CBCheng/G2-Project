@@ -115,24 +115,24 @@ $(function(){
 });
 
 //====== halo hover ======
-var scene = document.getElementById('haloItem');
-//把滾動視差加入場景
-var parallax = new Parallax(scene);
+// var scene = document.getElementById('haloItem');
+// //把滾動視差加入場景
+// var parallax = new Parallax(scene);
 
-var tl_para = new TimelineMax({
-    onComplete: parallax
-});
+// var tl_para = new TimelineMax({
+//     onComplete: parallax
+// });
 
-tl_para.to('.part1 .halo5Co1', 1, {
-}).to('.part1 .halo1', 1, {
-}).to('.part1 .halo3', 1, {
-}).to('.part1 .halo4', 1, {
-}).to('.part1 .halo5', 1, {
-}).to('.part1 .halo4Co1', 1, {
-}).to('.part1 .halo4Co2', 1, {
-}).to('.part1 .halo3Co1', 1, {
-}).to('.part1 .halo3Co2', 1, {
-});
+// tl_para.to('.part1 .halo5Co1', 1, {
+// }).to('.part1 .halo1', 1, {
+// }).to('.part1 .halo3', 1, {
+// }).to('.part1 .halo4', 1, {
+// }).to('.part1 .halo5', 1, {
+// }).to('.part1 .halo4Co1', 1, {
+// }).to('.part1 .halo4Co2', 1, {
+// }).to('.part1 .halo3Co1', 1, {
+// }).to('.part1 .halo3Co2', 1, {
+// });
 
 
 

@@ -121,7 +121,7 @@
         // Cache position of arrow on the circle
         var y = xAxis + (unitVal / 3) * Math.sin(t) * direction;
         var img = new Image();
-        img.src = "http://i.imgur.com/LsYmdkL.png";
+        img.src = "../img/refer/space-shuttle.png";
         //img.src = "https://i.imgur.com/bYuAw4C.png";
         // Draw yAxis bead
         context.beginPath();
