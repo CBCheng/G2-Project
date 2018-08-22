@@ -220,7 +220,7 @@ a {
         // font-size: 18px;
         // cursor: pointer;
         // position: relative;
-        @include skewBtnAll();
+        @include skewBtnAll(100px, 35px);
     }
     .button:hover {
         background-color: #B5E9F9;
