@@ -430,7 +430,7 @@ nav {
       top: 4px;
       left: 25px; }
   .button-group .button.all {
-    clip-path: polygon(0 0, 70% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 80% 0%, 100% 100%, 0% 100%);
     display: inline-block;
     width: 100px;
     height: 40px;
@@ -442,6 +442,7 @@ nav {
     cursor: pointer;
     border-radius: 7px; }
     .button-group .button.all span {
+      transform: skewX(0deg);
       position: absolute;
       top: 4px;
       left: 28px; }
@@ -485,13 +486,11 @@ nav {
     cursor: pointer; }
     .grid .expertBox .pic .attr {
       position: absolute;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      line-height: 50px;
-      font-size: 16px;
-      left: -20px;
-      top: -10px; }
+      background-color: #094f91;
+      font-size: 18px;
+      padding: 5px 8px;
+      right: 5px;
+      top: 5px; }
     .grid .expertBox .pic img {
       width: 100%; }
   .grid .expertBox .score {
@@ -509,6 +508,12 @@ nav {
     .grid .expertBox .mark img {
       width: 25px;
       margin: 10px; }
+
+.grid .expertBox.aaa {
+  border: transparent;
+  box-shadow: none; }
+  .grid .expertBox.aaa img {
+    width: 300px; }
 
 @media screen and (max-width: 991px) {
   .grid .expertBox {
@@ -702,8 +707,6 @@ nav {
           animation: value4 1.5s 0.5s 1 forwards; }
         .content .conRight .data .chart .value:nth-of-type(5) {
           animation: value5 1.5s 0.5s 1 forwards; }
-        .content .conRight .data .chart .value:nth-of-type(6) {
-          animation: value6 1.5s 0.5s 1 forwards; }
 
 @keyframes value1 {
   0% {
@@ -734,12 +737,6 @@ nav {
     width: 0; }
   100% {
     width: 80px; } }
-
-@keyframes value6 {
-  0% {
-    width: 0; }
-  100% {
-    width: 40px; } }
     .content .conRight .record {
       align-self: flex-end; }
       .content .conRight .record .collect {
