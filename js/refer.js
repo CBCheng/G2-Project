@@ -1,3 +1,14 @@
+// 行程分享
+$(function () {
+    $('.tripShare').click(function(){
+        $('.shareLightBox').show();
+    });
+    $('.close').click(function(){
+        $('.shareLightBox').hide();
+    });
+});
+
+
 (function () {
 
     var unit= 50,canvas, context, canvas2, context2,
