@@ -119,7 +119,7 @@
     border-radius: 7px;
 }
 
-//一般文字一般狀態
+//一般文字一般狀態 針對button裡的span
 @mixin skewBtnText($skTeTop:4px, $skTeLeft:40px){
     position: absolute;
     transform: skewX(-25deg);
@@ -127,15 +127,22 @@
     left: $skTeLeft;
 }
 
-//ALL文字一般狀態
+//ALL文字一般狀態 針對button裡的span
 @mixin skewBtnText($skTeTop:4px, $skTeLeft:40px){
     position: absolute;
     top: $skTeTop;
     left: $skTeLeft;
 }
 
-//按鈕hover狀態
+//按鈕hover狀態 針對button裡的span
 @mixin skewBtnHover(){
     background-color: #fff;
     color: #000;
 }
+//====== 注意寫法 =====
+//button裡面的文字要被span包住
+//藉此span改變文字樣式
+//<button>
+//   <span>我是文字</span>
+//</button>
+//====================
