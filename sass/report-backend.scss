@@ -102,7 +102,9 @@ nav{
     color:$fontWhiteTitle;
     
     .content{
-        border:1px solid #CCC;
+        width:95%;
+        margin:auto;
+        border:2px solid $bottomColor;
         background-color:rgba(0,0,0,.7);
         h1{
             font:36px $fontfamily;

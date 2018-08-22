@@ -46,6 +46,7 @@ table {
   clear: both; }
 
 .userFull {
+  font-family: "微軟正黑體", "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS", sans-serif;
   background-image: url("../img/backend-bg2.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -117,8 +118,10 @@ nav {
   padding: 10px;
   color: rgba(255, 255, 255, 0.8); }
   .wrapContent .content {
+    width: 95%;
+    margin: auto;
     text-align: left;
-    border: 1px solid #CCC;
+    border: 2px solid #6cd5ff;
     background-color: rgba(0, 0, 0, 0.7); }
     .wrapContent .content h1 {
       text-align: center;
@@ -127,21 +130,25 @@ nav {
     .wrapContent .content .addUser {
       margin-left: 70px;
       margin-bottom: 20px;
-      background-color: #9697df;
-      border: none;
+      background-color: black;
+      border: 1px solid cyan;
       border-radius: 3px;
       color: rgba(255, 255, 255, 0.8);
-      padding: 10px 20px;
+      padding: 5px 10px;
       text-align: center;
       text-decoration: none;
       display: inline-block;
       font-size: 16px;
       outline: none;
       cursor: pointer; }
+      .wrapContent .content .addUser:hover {
+        background-color: rgba(0, 255, 255, 0.8);
+        color: #000; }
 
 .userTable {
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  font-family: "微軟正黑體", "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS", sans-serif; }
   .userTable tr, .userTable td {
     padding: 10px; }
   .userTable .tableTitle {

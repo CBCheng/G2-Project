@@ -104,9 +104,12 @@ nav{
     color:$fontWhiteTitle;
     
     .content{
+        width:95%;
+        margin: auto;
         text-align: left;
         border:1px solid #CCC;
         background-color:rgba(0,0,0,.7);
+        border:2px solid $bottomColor;
         h1{
             font:36px $fontfamily;
             padding: 50px;
@@ -115,22 +118,25 @@ nav{
         .addUser{
             margin-left: 60px;
             margin-bottom: 20px;
-            background-color: rgb(150, 151, 223); 
-            border: none;
+            background-color: rgba(0, 0, 0,4); 
+            border: 1px solid rgba(0,255,255,1);
             border-radius: 3px;
             color: $fontWhiteTitle;
-            padding: 10px 20px;
+            padding: 5px 10px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
             outline: none;
             cursor: pointer;
+            &:hover{
+                background-color: rgba(0,255,255,.8); 
+                color:#000;
+            }
         }
         .lightBox{
             display:none;
             background-color: #000;
-            height:100px;
             position: absolute;
             left:0;
             top:0;
@@ -138,7 +144,7 @@ nav{
             bottom:0;
             margin: auto;
             width:500px;
-            height:700px;
+            height:650px;
             overflow: auto;
             border: 1px solid $bottomColor;
             h2{
@@ -148,6 +154,7 @@ nav{
                 padding: 10px;
             }
             table{
+                margin: auto;
                 text-align: left;
                 tr,td{
                     padding:10px 20px;
@@ -165,6 +172,84 @@ nav{
             }
         }
     }
+        .lightBoxManagement{
+            display:none;
+            background-color: #000;
+            position: absolute;
+            left:0;
+            top:0;
+            right:0;
+            bottom:0;
+            margin: auto;
+            width:700px;
+            height:550px;
+            overflow: auto;
+            border: 1px solid $bottomColor;
+            h2{
+                text-align: center;
+                padding:20px;
+                font-size:24px;
+                font-family: '微軟正黑體';
+            }
+            .expertInfo{
+                padding-bottom: 50px;
+                &:before{
+                    content: '';
+                    display:block;
+                    position: absolute;
+                    top:180px;
+                    left: 25px;
+                    width:650px;
+                    height:1px;
+                    background-color: rgba(147,147,147,.5);
+                }
+                .expertName{
+                    vertical-align: bottom;
+                    padding-right: 20px;
+                }
+                .expertMonth{
+                    padding:0px 180px 0px 150px;
+                    vertical-align: bottom;
+                }
+                div{
+                    position: relative;
+                    // left:100px;
+                    width:150px;
+                    display: inline-block;
+                    img{
+                        width:100%;
+                    }
+                }
+            }
+            .expertDated{
+                width:650px;
+                margin-left: 30px;
+                margin-bottom: 50px;
+                tr,td{
+                    padding:10px 0px;
+                }
+            }
+            .expertDatedEmpty{
+                width:340px;
+                margin-left: 30px;
+                margin-bottom: 30px;
+                tr,td{
+                    padding:10px 0px;
+                }
+            }
+            .cancelBtnGroup{
+                text-align: center;
+            }
+            // .expertDated{
+            //     font-size:0px;
+            //     .expertDatedL,
+            //     .expertDatedR{
+            //         float: left;
+            //         width:50%;
+            //         font-size:16px;
+            //     }
+            // }
+        }
 }
 .userTable{
     text-align: center;

@@ -12,6 +12,7 @@ $fontWhiteContent:rgba(255,255,255,.7);
 
 
 .userFull{
+    font-family:$fontfamily;
     background-image: url('../img/backend-bg2.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -103,8 +104,10 @@ nav{
     color:$fontWhiteTitle;
     
     .content{
+        width:95%;
+        margin: auto;
         text-align: left;
-        border:1px solid #CCC;
+        border:2px solid $bottomColor;
         background-color:rgba(0,0,0,.7);
         h1{
             text-align: center;
@@ -114,17 +117,21 @@ nav{
         .addUser{
             margin-left: 70px;
             margin-bottom: 20px;
-            background-color: rgb(150, 151, 223); 
-            border: none;
+            background-color: rgba(0, 0, 0,4); 
+            border: 1px solid rgba(0,255,255,1);
             border-radius: 3px;
             color: $fontWhiteTitle;
-            padding: 10px 20px;
+            padding: 5px 10px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
             outline: none;
             cursor: pointer;
+            &:hover{
+                background-color: rgba(0,255,255,.8); 
+                color:#000;
+            }
         }
         
     }
@@ -132,6 +139,7 @@ nav{
 .userTable{
     width:100%;
     text-align: center;
+    font-family:$fontfamily;
     tr,td{
         padding:10px;
     }

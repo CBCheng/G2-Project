@@ -102,17 +102,40 @@ nav{
     color:$fontWhiteTitle;
     
     .content{
-        border:1px solid #CCC;
+        width:95%;
+        margin:auto;
+        border:2px solid $bottomColor;
         background-color:rgba(0,0,0,.7);
+        text-align: left;
         h1{
+            text-align: center;
             font:36px $fontfamily;
             padding: 50px;
         }
-        
+        .addUser{
+            margin-left: 70px;
+            margin-bottom: 20px;
+            background-color: rgba(0, 0, 0,4); 
+            border: 1px solid rgba(0,255,255,1);
+            border-radius: 3px;
+            color: $fontWhiteTitle;
+            padding: 5px 10px;
+            text-align:center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            outline: none;
+            cursor: pointer;
+            &:hover{
+                background-color: rgba(0,255,255,.8); 
+                color:#000;
+            }
+        }
     }
 }
 .userTable{
     width:100%;
+    text-align: center;
     tr,td{
         padding:10px;
     }

@@ -117,9 +117,12 @@ nav {
   padding: 10px;
   color: rgba(255, 255, 255, 0.8); }
   .wrapContent .content {
+    width: 95%;
+    margin: auto;
     text-align: left;
     border: 1px solid #CCC;
-    background-color: rgba(0, 0, 0, 0.7); }
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid #6cd5ff; }
     .wrapContent .content h1 {
       font: 36px "微軟正黑體", "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS", sans-serif;
       padding: 50px;
@@ -127,21 +130,23 @@ nav {
     .wrapContent .content .addUser {
       margin-left: 60px;
       margin-bottom: 20px;
-      background-color: #9697df;
-      border: none;
+      background-color: black;
+      border: 1px solid cyan;
       border-radius: 3px;
       color: rgba(255, 255, 255, 0.8);
-      padding: 10px 20px;
+      padding: 5px 10px;
       text-align: center;
       text-decoration: none;
       display: inline-block;
       font-size: 16px;
       outline: none;
       cursor: pointer; }
+      .wrapContent .content .addUser:hover {
+        background-color: rgba(0, 255, 255, 0.8);
+        color: #000; }
     .wrapContent .content .lightBox {
       display: none;
       background-color: #000;
-      height: 100px;
       position: absolute;
       left: 0;
       top: 0;
@@ -149,7 +154,7 @@ nav {
       bottom: 0;
       margin: auto;
       width: 500px;
-      height: 700px;
+      height: 650px;
       overflow: auto;
       border: 1px solid #6cd5ff; }
       .wrapContent .content .lightBox h2 {
@@ -158,6 +163,7 @@ nav {
         text-align: center;
         padding: 10px; }
       .wrapContent .content .lightBox table {
+        margin: auto;
         text-align: left; }
         .wrapContent .content .lightBox table tr, .wrapContent .content .lightBox table td {
           padding: 10px 20px;
@@ -166,6 +172,61 @@ nav {
           text-align: center; }
           .wrapContent .content .lightBox table tr:last-child td {
             padding-top: 50px; }
+  .wrapContent .lightBoxManagement {
+    display: none;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 700px;
+    height: 550px;
+    overflow: auto;
+    border: 1px solid #6cd5ff; }
+    .wrapContent .lightBoxManagement h2 {
+      text-align: center;
+      padding: 20px;
+      font-size: 24px;
+      font-family: '微軟正黑體'; }
+    .wrapContent .lightBoxManagement .expertInfo {
+      padding-bottom: 50px; }
+      .wrapContent .lightBoxManagement .expertInfo:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 180px;
+        left: 25px;
+        width: 650px;
+        height: 1px;
+        background-color: rgba(147, 147, 147, 0.5); }
+      .wrapContent .lightBoxManagement .expertInfo .expertName {
+        vertical-align: bottom;
+        padding-right: 20px; }
+      .wrapContent .lightBoxManagement .expertInfo .expertMonth {
+        padding: 0px 180px 0px 150px;
+        vertical-align: bottom; }
+      .wrapContent .lightBoxManagement .expertInfo div {
+        position: relative;
+        width: 150px;
+        display: inline-block; }
+        .wrapContent .lightBoxManagement .expertInfo div img {
+          width: 100%; }
+    .wrapContent .lightBoxManagement .expertDated {
+      width: 650px;
+      margin-left: 30px;
+      margin-bottom: 50px; }
+      .wrapContent .lightBoxManagement .expertDated tr, .wrapContent .lightBoxManagement .expertDated td {
+        padding: 10px 0px; }
+    .wrapContent .lightBoxManagement .expertDatedEmpty {
+      width: 340px;
+      margin-left: 30px;
+      margin-bottom: 30px; }
+      .wrapContent .lightBoxManagement .expertDatedEmpty tr, .wrapContent .lightBoxManagement .expertDatedEmpty td {
+        padding: 10px 0px; }
+    .wrapContent .lightBoxManagement .cancelBtnGroup {
+      text-align: center; }
 
 .userTable {
   text-align: center;
