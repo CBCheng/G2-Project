@@ -325,79 +325,6 @@ nav {
   font-size: 2.2vw;
   color: #fff; }
 
-.part1 #haloItem {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 5; }
-
-.part1 .halo {
-  position: absolute; }
-
-.part1 #haloItem .halo6-2 {
-  top: 8% !important;
-  left: 80% !important;
-  width: 8%; }
-
-.part1 #haloItem .halo1 {
-  top: 7% !important;
-  left: 81% !important;
-  width: 8%;
-  opacity: .8; }
-
-.part1 #haloItem .halo3 {
-  top: 13% !important;
-  left: 78% !important;
-  width: 8%;
-  opacity: 0.5; }
-
-.part1 #haloItem .halo4 {
-  top: 11% !important;
-  left: 80% !important;
-  width: 7%;
-  opacity: 0.3; }
-
-.part1 #haloItem .halo5 {
-  top: 4% !important;
-  left: 78% !important;
-  width: 12%;
-  opacity: 0.5; }
-
-.part1 #haloItem .halo4Co1 {
-  top: 19.5% !important;
-  left: 80% !important;
-  width: 3%;
-  opacity: 0.3; }
-
-.part1 #haloItem .halo4Co2 {
-  top: 22% !important;
-  left: 79% !important;
-  width: 3%;
-  opacity: 0.5; }
-
-.part1 #haloItem .halo3Co1 {
-  top: 16% !important;
-  left: 75% !important;
-  width: 10%;
-  opacity: 0.5; }
-
-.part1 #haloItem .halo3Co2 {
-  top: 10.3% !important;
-  left: 71% !important;
-  width: 17%;
-  opacity: 0.5; }
-
-.part1 #haloItem .halo5Co1 {
-  top: 8.3% !important;
-  left: 64% !important;
-  width: 26%;
-  opacity: .5; }
-
-.part1 #planetsItem {
-  position: absolute;
-  width: 100%;
-  height: 100%; }
-
 .choPlanet {
   width: 10%;
   height: 20%;
@@ -599,7 +526,7 @@ nav {
   left: 35%;
   width: 30%;
   height: 30%;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 20px;
   z-index: 6;
   cursor: pointer; }
