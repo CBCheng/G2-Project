@@ -393,22 +393,66 @@ nav {
   .button-group .button-down {
     display: inline-block; }
   .button-group .button {
+    transform: skewX(25deg);
     display: inline-block;
-    padding: 8px 30px;
-    margin: 10px 20px;
-    background: transparent;
-    border: 1px solid #6cd5ff;
-    color: #6cd5ff;
-    font-family: "微軟正黑體", "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS", sans-serif;
-    font-size: 18px;
+    width: 100px;
+    height: 40px;
+    color: #fff;
+    font: 18px/34px 微軟正黑體;
+    border: 0px solid #6cd5ff;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
     cursor: pointer;
-    position: relative; }
+    border-radius: 7px;
+    cursor: pointer;
+    margin: 10px 15px; }
+    .button-group .button span {
+      position: absolute;
+      transform: skewX(-25deg);
+      top: 4px;
+      left: 25px; }
+  .button-group .button.popular {
+    transform: skewX(25deg);
+    display: inline-block;
+    width: 85px;
+    height: 40px;
+    color: #fff;
+    font: 18px/34px 微軟正黑體;
+    border: 0px solid #6cd5ff;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    cursor: pointer;
+    border-radius: 7px;
+    cursor: pointer; }
+    .button-group .button.popular span {
+      position: absolute;
+      transform: skewX(-25deg);
+      top: 4px;
+      left: 25px; }
+  .button-group .button.all {
+    clip-path: polygon(0 0, 80% 0%, 100% 100%, 0% 100%);
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    color: #fff;
+    font: 18px/34px 微軟正黑體;
+    border: 0px solid #6cd5ff;
+    background-color: rgba(71, 138, 245, 0.6);
+    text-align: center;
+    cursor: pointer;
+    border-radius: 7px; }
+    .button-group .button.all span {
+      transform: skewX(0deg);
+      position: absolute;
+      top: 4px;
+      left: 28px; }
   .button-group .button:hover {
-    background-color: #B5E9F9;
+    color: #000;
+    background-color: #6cd5ff;
     color: #222; }
   .button-group .button:active,
   .button-group .button.is-checked {
-    background-color: #B5E9F9; }
+    background-color: #6cd5ff; }
   .button-group .button.is-checked {
     color: #000; }
 
@@ -442,13 +486,11 @@ nav {
     cursor: pointer; }
     .grid .expertBox .pic .attr {
       position: absolute;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      line-height: 50px;
-      font-size: 16px;
-      left: -20px;
-      top: -10px; }
+      background-color: #094f91;
+      font-size: 18px;
+      padding: 5px 8px;
+      right: 5px;
+      top: 5px; }
     .grid .expertBox .pic img {
       width: 100%; }
   .grid .expertBox .score {
@@ -466,6 +508,12 @@ nav {
     .grid .expertBox .mark img {
       width: 25px;
       margin: 10px; }
+
+.grid .expertBox.aaa {
+  border: transparent;
+  box-shadow: none; }
+  .grid .expertBox.aaa img {
+    width: 300px; }
 
 @media screen and (max-width: 991px) {
   .grid .expertBox {
@@ -636,20 +684,59 @@ nav {
         text-align: justify; }
         .content .conRight .data .chart h3 {
           font-size: 22px;
-          margin-left: 25px;
+          margin-left: 35px;
           margin-bottom: 10px; }
         .content .conRight .data .chart span {
           font-size: 18px;
           margin-right: 10px;
           line-height: 1.8; }
         .content .conRight .data .chart .value {
-          width: 80px;
+          width: 0px;
           height: 15px;
           background-color: #aaa;
           display: inline-block; }
         .content .conRight .data .chart .value.focus {
-          width: 100px;
           background-color: #6cd5ff; }
+        .content .conRight .data .chart .value:nth-of-type(1) {
+          animation: value1 1.5s 0.5s 1 forwards; }
+        .content .conRight .data .chart .value:nth-of-type(2) {
+          animation: value2 1.5s 0.5s 1 forwards; }
+        .content .conRight .data .chart .value:nth-of-type(3) {
+          animation: value3 1.5s 0.5s 1 forwards; }
+        .content .conRight .data .chart .value:nth-of-type(4) {
+          animation: value4 1.5s 0.5s 1 forwards; }
+        .content .conRight .data .chart .value:nth-of-type(5) {
+          animation: value5 1.5s 0.5s 1 forwards; }
+
+@keyframes value1 {
+  0% {
+    width: 0; }
+  100% {
+    width: 100px; } }
+
+@keyframes value2 {
+  0% {
+    width: 0; }
+  100% {
+    width: 80px; } }
+
+@keyframes value3 {
+  0% {
+    width: 0; }
+  100% {
+    width: 50px; } }
+
+@keyframes value4 {
+  0% {
+    width: 0; }
+  100% {
+    width: 20px; } }
+
+@keyframes value5 {
+  0% {
+    width: 0; }
+  100% {
+    width: 80px; } }
     .content .conRight .record {
       align-self: flex-end; }
       .content .conRight .record .collect {

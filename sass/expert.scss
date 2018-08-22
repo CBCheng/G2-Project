@@ -1,21 +1,8 @@
 @import "base/var";
 @import "base/reset";
 @import "mixin/mixin";
+@import "components/buttons";
 @include body(10px);
-$fontColorOrange: #cfa972;
-$fontColorGreen: #80c269;
-$borderColorBlue: rgba(108, 213, 255, 0.5);
-$borderColorOrange: rgba(207, 169, 114, 0.5);
-$borderColorGreen: rgba(128, 194, 105, 0.5);
-$attrBlue: #094f91;
-$attrOrange: #ad7f43;
-$attrGreen: #486a00;
-// body {
-//     // background-attachment: fixed;
-// }
-// body {
-//     // background-attachment: fixed;
-// }
 * {
     box-sizing: border-box;
 }
@@ -223,24 +210,34 @@ a {
         display: inline-block;
     }
     .button {
-        display: inline-block;
-        padding: 8px 30px;
-        margin: 10px 20px;
-        background: transparent;
-        border: 1px solid $fontColorBlue;
-        color: $fontColorBlue;
-        font-family: $fontfamily;
-        font-size: 18px;
+        @include skewBtn(100px, 40px);
         cursor: pointer;
-        position: relative;
+        margin: 10px 15px;
+        span {
+            @include skewBtnText(4px, 25px);
+        }
+    }
+    .button.popular {
+        @include skewBtn(85px, 40px);
+        cursor: pointer;
+        span {
+            @include skewBtnText(4px, 25px);
+        }
+    }
+    .button.all {
+        @include skewBtnAll(100px, 40px);
+        span {
+            @include skewBtnTextAll(4px, 28px);
+        }
     }
     .button:hover {
-        background-color: #B5E9F9;
+        @include skewBtnHover;
+        background-color: $bottomColor;
         color: #222;
     }
     .button:active,
     .button.is-checked {
-        background-color: #B5E9F9;
+        background-color: $bottomColor;
     }
     .button.is-checked {
         color: #000;
@@ -290,13 +287,11 @@ a {
             cursor: pointer;
             .attr {
                 position: absolute;
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-                line-height: 50px;
-                font-size: 16px;
-                left: -20px;
-                top: -10px;
+                background-color: $attrBlue;
+                font-size: 18px;
+                padding: 5px 8px;
+                right: 5px;
+                top: 5px;
             }
             img {
                 width: 100%;
@@ -322,6 +317,13 @@ a {
                 width: 25px;
                 margin: 10px;
             }
+        }
+    }
+    .expertBox.aaa {
+        border: transparent;
+        box-shadow: none;
+        img {
+            width: 300px;
         }
     }
     @media screen and (max-width: 991px) {
@@ -428,8 +430,6 @@ a {
                 .mark {
                     margin-top: 5px;
                 }
-                
-                
             }
         }
         .expertBox:after {
@@ -470,8 +470,6 @@ a {
     }
 }
 
-
-
 #lightBox1 {
     // position: fixed; 
     // top: 0px;
@@ -484,8 +482,7 @@ a {
     overflow: auto;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.9);
-    border: 3px solid rgba(108, 213, 255, 0.5);
-    // #closeBtn {
+    border: 3px solid rgba(108, 213, 255, 0.5); // #closeBtn {
     //     width: 50px;
     //     float: right;
     //     cursor: pointer; 
@@ -493,20 +490,24 @@ a {
     //     top: 0;right: 0;
     // }
 }
+
 #lightBox:after {
     content: "";
     display: block;
     clear: both;
 }
+
 // lightBox的上方內容
 .content {
     // outline: 1px solid #fff;
     margin-top: 30px;
     display: flex;
     justify-content: center;
-    .conLeft{
+    .conLeft {
         width: 40%;
-        img{width: 50px;}
+        img {
+            width: 50px;
+        }
         .expPic {
             margin: auto;
             width: 60%;
@@ -516,7 +517,8 @@ a {
                 background-color: $attrBlue;
                 font-size: 20px;
                 padding: 5px 10px;
-                right: 10px; top: 10px;
+                right: 10px;
+                top: 10px;
             }
             img {
                 width: 100%;
@@ -524,21 +526,24 @@ a {
             }
         }
     }
-    .conRight{
+    .conRight {
         // outline: 1px solid #f00;
         margin-top: 10px;
         width: 30%;
         display: flex;
         flex-direction: column;
-        h1{color: $fontColorBlue;
-        text-align: justify;}
-        h2{margin-top: 20px; 
-            text-align: justify;}
+        h1 {
+            color: $fontColorBlue;
+            text-align: justify;
+        }
+        h2 {
+            margin-top: 20px;
+            text-align: justify;
+        }
         .data {
             text-align: justify;
-            
             .score {
-                margin-top: 30px; 
+                margin-top: 30px;
                 h3 {
                     display: inline;
                     font-size: 20px;
@@ -555,29 +560,84 @@ a {
             }
             .chart {
                 // align-self: center;
-                margin: 30px 0 20px; 
+                margin: 30px 0 20px;
                 text-align: justify;
-                h3{
+                h3 {
                     // text-align: center;
                     font-size: 22px;
-                    margin-left: 25px;
-                margin-bottom: 10px;}
+                    margin-left: 35px;
+                    margin-bottom: 10px;
+                }
                 span {
                     font-size: 18px;
                     margin-right: 10px;
                     line-height: 1.8;
                 }
                 .value {
-                    width: 80px;
+                    width: 0px;
                     height: 15px;
                     background-color: #aaa;
                     display: inline-block;
                 }
                 .value.focus {
-                    width: 100px;
                     background-color: $fontColorBlue;
                 }
-            }    
+                .value:nth-of-type(1) {
+                    animation: value1 1.5s 0.5s 1 forwards;
+                }
+                .value:nth-of-type(2) {
+                    animation: value2 1.5s 0.5s 1 forwards;
+                }
+                .value:nth-of-type(3) {
+                    animation: value3 1.5s 0.5s 1 forwards;
+                }
+                .value:nth-of-type(4) {
+                    animation: value4 1.5s 0.5s 1 forwards;
+                }
+                .value:nth-of-type(5) {
+                    animation: value5 1.5s 0.5s 1 forwards;
+                }
+            }
+        }
+        @keyframes value1 {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 100px;
+            }
+        }
+        @keyframes value2 {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 80px;
+            }
+        }
+        @keyframes value3 {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 50px;
+            }
+        }
+        @keyframes value4 {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 20px;
+            }
+        }
+        @keyframes value5 {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 80px;
+            }
         }
         .record {
             align-self: flex-end;
@@ -654,7 +714,6 @@ a {
         }
     }
 }
-
 
 @media screen and (max-width: 1000px) {
     #lightBox1 {
@@ -765,5 +824,6 @@ footer {
     }
     background-image: none;
 }
+
 @import "layout/medium";
 @import "layout/desktop";
