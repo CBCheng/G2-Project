@@ -226,6 +226,7 @@ a {
     }
     .button.all {
         @include skewBtnAll(100px, 40px);
+        background-color: rgba(255, 255, 255, .5);
         span {
             @include skewBtnTextAll(4px, 28px);
         }
@@ -235,16 +236,16 @@ a {
         background-color: $bottomColor;
         color: #222;
     }
-    .button.all:hover{
-        background-color:rgb(129, 162, 253);
+    .button.all:hover {
+        background-color: rgb(129, 162, 253);
     }
     .button:active,
     .button.is-checked {
         background-color: $bottomColor;
     }
     .button:active,
-    .button.is-checked.all{
-        background-color:rgb(129, 162, 253);
+    .button.is-checked.all {
+        background-color: rgb(129, 162, 253);
     }
     .button.is-checked {
         color: #000;
@@ -274,27 +275,36 @@ a {
 
 .grid {
     .expertBox {
-        background-image: url('../img/expertImg/techFrame-blue.png');
-        background-size: cover;
         width: 250px;
         margin: 25px;
         height: 400px;
         text-align: center;
         position: relative;
         overflow: hidden;
-        
-        .king{
+        .king {
             width: 50px;
             transform: rotate(-30deg);
             margin-left: -60px;
             margin-top: -20px;
         }
-        h2,h3 {
+        h2,
+        h3 {
             font-size: 22px;
             display: inline-block;
             margin: 40px 5px 10px;
         }
-        h3{font-size: 20px;}
+        h3 {
+            font-size: 20px;
+        }
+        .attr {
+            position: absolute;
+            background-color: $attrBlue;
+            font-size: 18px;
+            padding: 5px 8px;
+            right: 40px;
+            top: 75px;
+            z-index: 5;
+        }
         .pic {
             // outline: 1px solid #f00;
             width: 180px;
@@ -303,27 +313,19 @@ a {
             margin: auto;
             position: relative;
             cursor: pointer;
-            
-            .attr {
-                position: absolute;
-                background-color: $attrBlue;
-                font-size: 18px;
-                padding: 5px 8px;
-                right: 5px;
-                top: 5px;
-            }
             img {
                 width: 100%;
                 transform: scale(1);
                 transition: 0.5s;
             }
         }
-        .aside{
+        .aside {
             position: absolute;
-            left: 0; right: 0;
+            left: 0;
+            right: 0;
             bottom: 0px;
             margin: auto;
-            background: linear-gradient(to top, #000, rgba(0,0,0,0.2) 100%);
+            background: linear-gradient(to top, #000, rgba(0, 0, 0, 0.2) 100%);
             .score {
                 padding-top: 25px;
                 span {
@@ -346,29 +348,45 @@ a {
                 }
             }
         }
-        
     }
-    .expertBox:before{
-        content: '';
-	    display: block;
-	    position: absolute;
-        background-color: rgba(255, 255, 255,0.3);
-        z-index: 100;
-        width: 200px;height: 300px;
-        top: -65px;
-	    left: -300px;
-	    transition: 0.5s ease-out;
-	    transform: skewX(-50deg);
+    @media screen and (min-width:650px) {
+        .expertBox {
+            // box-shadow: 0 0 5px 3px rgba(255, 255, 255, 0.2);
+            // background-color: rgba(0, 0, 0, 0.6);
+        }
+        .expertBox.blue {
+            background-image: url('../img/expertImg/techFrame-blue.png');
+        }
+        .expertBox.orange {
+            background-image: url('../img/expertImg/techFrame-orange.png');
+        }
+        .expertBox.green {
+            background-image: url('../img/expertImg/techFrame-green.png');
+        }
+        .expertBox .aside h3 {
+            display: none;
+        }
+        .expertBox:before {
+            content: '';
+            display: block;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.3);
+            z-index: 100;
+            width: 200px;
+            height: 300px;
+            top: -65px;
+            left: -300px;
+            transition: 0.5s ease-out;
+            transform: skewX(-50deg);
+        }
+        .expertBox:hover:before {
+            left: 420px;
+            top: 120px;
+        }
+        .expertBox:hover a img {
+            transform: scale(1.2);
+        }
     }
-    .expertBox:hover:before{
-        left: 420px;
-        top: 120px;
-    }
-    .expertBox:hover a img{
-        transform: scale(1.2);
-    }
-    
-    
     @media screen and (max-width: 991px) {
         .expertBox {
             width: 200px;
@@ -407,24 +425,6 @@ a {
                     margin-bottom: 10px;
                 }
             }
-        }
-    }
-    @media screen and (min-width:650px) {
-        .expertBox {
-            // box-shadow: 0 0 5px 3px rgba(255, 255, 255, 0.2);
-            // background-color: rgba(0, 0, 0, 0.6);
-        }
-        // .expertBox.blue {
-        //     border: 3px solid $borderColorBlue;
-        // }
-        // .expertBox.orange {
-        //     border: 3px solid $borderColorOrange;
-        // }
-        // .expertBox.green {
-        //     border: 3px solid $borderColorGreen;
-        // }
-        .expertBox .aside h3 {
-            display: none;
         }
     }
     @media screen and (max-width: 650px) {
@@ -514,11 +514,14 @@ a {
 }
 
 #lightBox1 {
-    // position: fixed; 
-    // top: 0px;
-    // left: 0;
-    // right: 0;
-    // z-index: 900;
+    background-image: url(../img/expertImg/lineBg5.png); // background-size: cover;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    // position: fixed; // top: 0px;
+// left: 0;
+// right: 0;
+// z-index: 900;
     margin: auto;
     width: 960px;
     height: 600px;
@@ -542,19 +545,30 @@ a {
 
 // lightBox的上方內容
 .content {
-    // outline: 1px solid #fff;
-    margin-top: 30px;
+    // background-image: url(../img/expertImg/focus2.png);
+    background-repeat: no-repeat;
+    background-position: 340px -60px; // outline: 1px solid #fff;
     display: flex;
     justify-content: center;
     .conLeft {
+        // outline: 1px solid rgb(96, 224, 150);
         width: 40%;
-        img {
-            width: 50px;
+        position: relative;
+        .crown {
+            width: 80px;
+            position: absolute;
+            left: 40px;
+            top: 5px;
+            z-index: 5;
+            transform: rotate(-30deg);
         }
         .expPic {
-            margin: auto;
             width: 60%;
-            position: relative;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50px;
+            margin: auto;
             .attr {
                 position: absolute;
                 background-color: $attrBlue;
@@ -571,8 +585,8 @@ a {
     }
     .conRight {
         // outline: 1px solid #f00;
-        margin-top: 10px;
-        width: 30%;
+        margin-top: 50px;
+        width: 35%;
         display: flex;
         flex-direction: column;
         h1 {
@@ -586,7 +600,7 @@ a {
         .data {
             text-align: justify;
             .score {
-                margin-top: 30px;
+                margin-top: 60px;
                 h3 {
                     display: inline;
                     font-size: 20px;
@@ -698,13 +712,13 @@ a {
                     width: 28px;
                     height: 26px;
                     cursor: pointer;
-                }
-                .txt {
-                    font-size: 16px;
-                    line-height: 2.5;
-                }
+                } // .txt {
+                //     font-size: 15px;
+                //     line-height: 2.5;
+                // }
                 #Cnum,
                 #Wnum {
+                    margin-top: 10px;
                     font-size: 14px;
                     color: #aaaaaa;
                 }

@@ -431,6 +431,7 @@ nav {
       left: 25px; }
   .button-group .button.all {
     clip-path: polygon(0 0, 80% 0%, 100% 100%, 0% 100%);
+    transform: skewX(0deg);
     display: inline-block;
     width: 100px;
     height: 40px;
@@ -440,7 +441,8 @@ nav {
     background-color: rgba(71, 138, 245, 0.6);
     text-align: center;
     cursor: pointer;
-    border-radius: 7px; }
+    border-radius: 7px;
+    background-color: rgba(255, 255, 255, 0.5); }
     .button-group .button.all span {
       transform: skewX(0deg);
       position: absolute;
@@ -474,8 +476,6 @@ nav {
 
 /* ---- .expertBox ---- */
 .grid .expertBox {
-  background-image: url("../img/expertImg/techFrame-blue.png");
-  background-size: cover;
   width: 250px;
   margin: 25px;
   height: 400px;
@@ -487,12 +487,21 @@ nav {
     transform: rotate(-30deg);
     margin-left: -60px;
     margin-top: -20px; }
-  .grid .expertBox h2, .grid .expertBox h3 {
+  .grid .expertBox h2,
+  .grid .expertBox h3 {
     font-size: 22px;
     display: inline-block;
     margin: 40px 5px 10px; }
   .grid .expertBox h3 {
     font-size: 20px; }
+  .grid .expertBox .attr {
+    position: absolute;
+    background-color: #094f91;
+    font-size: 18px;
+    padding: 5px 8px;
+    right: 40px;
+    top: 75px;
+    z-index: 5; }
   .grid .expertBox .pic {
     width: 180px;
     height: 280px;
@@ -500,13 +509,6 @@ nav {
     margin: auto;
     position: relative;
     cursor: pointer; }
-    .grid .expertBox .pic .attr {
-      position: absolute;
-      background-color: #094f91;
-      font-size: 18px;
-      padding: 5px 8px;
-      right: 5px;
-      top: 5px; }
     .grid .expertBox .pic img {
       width: 100%;
       transform: scale(1);
@@ -534,25 +536,32 @@ nav {
         width: 25px;
         margin: 10px; }
 
-.grid .expertBox:before {
-  content: '';
-  display: block;
-  position: absolute;
-  background-color: rgba(255, 255, 255, 0.3);
-  z-index: 100;
-  width: 200px;
-  height: 300px;
-  top: -65px;
-  left: -300px;
-  transition: 0.5s ease-out;
-  transform: skewX(-50deg); }
-
-.grid .expertBox:hover:before {
-  left: 420px;
-  top: 120px; }
-
-.grid .expertBox:hover a img {
-  transform: scale(1.2); }
+@media screen and (min-width: 650px) {
+  .grid .expertBox.blue {
+    background-image: url("../img/expertImg/techFrame-blue.png"); }
+  .grid .expertBox.orange {
+    background-image: url("../img/expertImg/techFrame-orange.png"); }
+  .grid .expertBox.green {
+    background-image: url("../img/expertImg/techFrame-green.png"); }
+  .grid .expertBox .aside h3 {
+    display: none; }
+  .grid .expertBox:before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: 100;
+    width: 200px;
+    height: 300px;
+    top: -65px;
+    left: -300px;
+    transition: 0.5s ease-out;
+    transform: skewX(-50deg); }
+  .grid .expertBox:hover:before {
+    left: 420px;
+    top: 120px; }
+  .grid .expertBox:hover a img {
+    transform: scale(1.2); } }
 
 @media screen and (max-width: 991px) {
   .grid .expertBox {
@@ -583,10 +592,6 @@ nav {
         width: 20px;
         margin: 5px;
         margin-bottom: 10px; } }
-
-@media screen and (min-width: 650px) {
-  .grid .expertBox .aside h3 {
-    display: none; } }
 
 @media screen and (max-width: 650px) {
   .grid .expertBox.blue {
@@ -649,6 +654,10 @@ nav {
   background-color: #486a00; }
 
 #lightBox1 {
+  background-image: url(../img/expertImg/lineBg5.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   margin: auto;
   width: 960px;
   height: 600px;
@@ -663,17 +672,27 @@ nav {
   clear: both; }
 
 .content {
-  margin-top: 30px;
+  background-repeat: no-repeat;
+  background-position: 340px -60px;
   display: flex;
   justify-content: center; }
   .content .conLeft {
-    width: 40%; }
-    .content .conLeft img {
-      width: 50px; }
+    width: 40%;
+    position: relative; }
+    .content .conLeft .crown {
+      width: 80px;
+      position: absolute;
+      left: 40px;
+      top: 5px;
+      z-index: 5;
+      transform: rotate(-30deg); }
     .content .conLeft .expPic {
-      margin: auto;
       width: 60%;
-      position: relative; }
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50px;
+      margin: auto; }
       .content .conLeft .expPic .attr {
         position: absolute;
         background-color: #094f91;
@@ -685,8 +704,8 @@ nav {
         width: 100%;
         min-width: 100px; }
   .content .conRight {
-    margin-top: 10px;
-    width: 30%;
+    margin-top: 50px;
+    width: 35%;
     display: flex;
     flex-direction: column; }
     .content .conRight h1 {
@@ -698,7 +717,7 @@ nav {
     .content .conRight .data {
       text-align: justify; }
       .content .conRight .data .score {
-        margin-top: 30px; }
+        margin-top: 60px; }
         .content .conRight .data .score h3 {
           display: inline;
           font-size: 20px;
@@ -783,14 +802,11 @@ nav {
           width: 28px;
           height: 26px;
           cursor: pointer; }
-        .content .conRight .record .collect .txt,
-        .content .conRight .record .writeComment .txt {
-          font-size: 16px;
-          line-height: 2.5; }
         .content .conRight .record .collect #Cnum,
         .content .conRight .record .collect #Wnum,
         .content .conRight .record .writeComment #Cnum,
         .content .conRight .record .writeComment #Wnum {
+          margin-top: 10px;
           font-size: 14px;
           color: #aaaaaa; }
 
