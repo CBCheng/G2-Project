@@ -334,6 +334,7 @@ nav {
     left: 25px; }
   .button .button.all {
     clip-path: polygon(0 0, 80% 0%, 100% 100%, 0% 100%);
+    transform: skewX(0deg);
     display: inline-block;
     width: 100px;
     height: 40px;
