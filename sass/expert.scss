@@ -514,20 +514,19 @@ a {
 }
 
 #lightBox1 {
-    background-image: url(../img/expertImg/lineBg5.png); // background-size: cover;
+    background-image: url(../img/expertImg/lineBg7.png); 
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    // position: fixed; // top: 0px;
-// left: 0;
-// right: 0;
-// z-index: 900;
+    position: fixed; 
+    top: 0px;
+left: 0;
+right: 0;
+z-index: 900;
     margin: auto;
     width: 960px;
     height: 600px;
     overflow: auto;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 1);
     border: 3px solid rgba(108, 213, 255, 0.5); // #closeBtn {
     //     width: 50px;
     //     float: right;
@@ -545,9 +544,12 @@ a {
 
 // lightBox的上方內容
 .content {
-    // background-image: url(../img/expertImg/focus2.png);
+    // outline: 1px solid #fff;
+    // background-image: url(../img/expertImg/focus-0.png);
+    background-image: url(../img/expertImg/starBg.png);
+    background-position: center;
     background-repeat: no-repeat;
-    background-position: 340px -60px; // outline: 1px solid #fff;
+    // background-position: 375px -45px; 
     display: flex;
     justify-content: center;
     .conLeft {
@@ -593,14 +595,32 @@ a {
             color: $fontColorBlue;
             text-align: justify;
         }
+        
+        .rocket{
+            display: inline-block;
+            outline: 1px solid #f00;
+            width: 35px;
+            // position: absolute;
+            // top: 50px;
+            // left: 130px;
+            // animation: rocket 5s linear infinite;
+            // transform-origin: 60px 50px;
+        }
         h2 {
             margin-top: 20px;
             text-align: justify;
+            display: inline-block;
+        }
+        @keyframes rocket {
+            0%{transform: rotate(0deg);}
+            // 30%{transform: rotate(30deg);}
+            // 60%{transform: rotate(0deg);}
+            100%{transform: rotate(60deg);}
         }
         .data {
             text-align: justify;
             .score {
-                margin-top: 60px;
+                margin-top: 50px;
                 h3 {
                     display: inline;
                     font-size: 20px;
