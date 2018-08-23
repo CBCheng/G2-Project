@@ -46,6 +46,12 @@ table {
   font-family: 'Microsoft JhengHei';
   font-weight: 500; }
 
+.m_leftBox {
+  width: 160px;
+  text-align: center;
+  float: left;
+  font-size: 1rem; }
+
 .btn {
   background: #fff;
   cursor: pointer;

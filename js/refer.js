@@ -46,8 +46,8 @@ $(function () {
         
         // BLUE gradient
         grd = context.createLinearGradient(0.000, 0.000, 800.000, 0.000);
-        grd.addColorStop(0, 'rgba(189, 106, 155, 1.000)');
-        grd.addColorStop(1, 'rgba(189, 106, 155, 0.00)');
+        grd.addColorStop(0, 'rgba(108, 213, 255, 1.000)');
+        grd.addColorStop(1, 'rgba(108, 213, 255, 0.00)');
         context.strokeStyle = grd;
         context.lineWidth = 2;
         // BLUE sine
@@ -59,8 +59,8 @@ $(function () {
         
         //GREEN gradient
         grd = context.createLinearGradient(0.000, 0.000, 800.000, 0.000);
-        grd.addColorStop(0, 'rgba(151, 204, 18, 1.000)');
-        grd.addColorStop(1, 'rgba(151, 204, 18, 0.000)');
+        grd.addColorStop(0, 'rgba(128, 194, 105, 1.000)');
+        grd.addColorStop(1, 'rgba(128, 194, 105, 0.000)');
         context.strokeStyle = grd;
         // GREEN sine
         context.beginPath();
@@ -71,8 +71,8 @@ $(function () {
         
         //YELLOW Gradient
         grd = context.createLinearGradient(0.000, 0.000, 800.000, 0.000);
-        grd.addColorStop(0,  'rgba(245, 223, 22, 1.000)');
-        grd.addColorStop(1, 'rgba(245, 223, 22, 0.0)');
+        grd.addColorStop(0,  'rgba(255,178,43, 1.000)');
+        grd.addColorStop(1, 'rgba(255,178,43, 0.0)');
         context.strokeStyle = grd;
         //YELLOW sine
         context.beginPath();
@@ -132,11 +132,11 @@ $(function () {
         // Cache position of arrow on the circle
         var y = xAxis + (unitVal / 3) * Math.sin(t) * direction;
         var img = new Image();
-        img.src = "../img/refer/space-shuttle.png";
+        img.src = "../img/refer/1_f_sim_space_shuttle.png";
         //img.src = "https://i.imgur.com/bYuAw4C.png";
         // Draw yAxis bead
         context.beginPath();
-        context.drawImage(img, yAxis - 29  + offset , y - 16 );
+        context.drawImage(img, yAxis - 50  + offset , y - 22 );
         //context.arc(yAxis, y, 5, 0, 2*Math.PI, false);
         context.stroke();
     }

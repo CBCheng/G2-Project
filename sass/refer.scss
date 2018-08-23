@@ -2,6 +2,7 @@
 @import "base/reset";
 @import "mixin/mixin";
 @import "components/buttons";
+
 @include body(12px);
 // *{
 //      outline: 1px solid #fff;
@@ -20,24 +21,39 @@ a {
 .wrap {
     width: 100%;
     margin: auto;
+    overflow: hidden;
     position: relative;
 }
-    // button{
-    //    border-style:none;
-    //    border: 2px solid $fontColorWhite;
-    //    border-radius:3px;  
-    //    width: 40px;
-    //    height: 41px;
-    //    background-color:transparent;
-    //    display: inline-block;
-    //    vertical-align:top;
-    // }
-    // button:hover{
-    //     background-color:$fontColorBlue;
-    //     border: 2px solid $fontColorBlue;
-    // }
-// }
-@keyframes circle{
+.track1{
+    width: 120%;
+    position: absolute;
+    top: -10%;
+    left: 0;
+    right: -30%;
+    margin: auto;
+    opacity: .2;
+    animation: circleL 30s infinite linear;
+}
+.track2{
+    width: 120%;
+    position: absolute;
+    top: -10%;
+    left: 0;
+    right: -30%;
+    margin: auto;
+    opacity: .3;
+    animation: circleR 20s infinite linear;
+}
+// banner動畫
+@keyframes move{
+    0%{
+        transform: translate(200%,0);
+    }
+    100%{
+        transform: translate(-100%,0);
+    }
+}
+@keyframes circleL{
     0%{
         transform: rotate(0deg);
     }
@@ -45,26 +61,39 @@ a {
         transform: rotate(360deg);
     }
 }
-#anime{
-    width: 30%;
-    position: absolute;
-    right: 0;
-    top:0;
-    margin: auto;
-    z-index: 10;
-    animation: circle 10s infinite linear;
+@keyframes circleR{
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
 }
+// #anime{
+//     width: 30%;
+//     position: absolute;
+//     right: 0;
+//     top:0;
+//     margin: auto;
+//     z-index: 10;
+//     animation: circle 10s infinite linear;
+// }
+// banner
 .bannerPic{
     position: relative;
 }
 #canvas-container{
     position: absolute;
-    bottom:0;
+    bottom:15%;
     right: 0;
     left: 0;
     z-index: 0;
   }
+#sineCanvas{
+    animation: move 25s infinite linear;
+}
   .title{
+      text-align: center;
        position: absolute;
        right: 0;
        bottom: 0;
@@ -74,49 +103,48 @@ a {
        z-index: 50;
   }
 
-// 分類
-.panel{
-    width: 80%;
-    margin: auto;
-    margin-top: 100px;
-    position: absolute;
-    top:600px;
-}
-.button-group{
-    text-align: left;
+// content
+.content{
     width: 1200px;
     margin: auto;
+    display: flex;
+}
+
+
+
+//   分類按鈕
+// .buttonWrap{
+//     width: 80%;
+//     margin: auto;
+//     margin-top: 100px;
+//     position: absolute;
+//     top:600px;
+// }
+.button-group{
+    // width: 1200px;
+    width: 20%;
     padding: 0 20px 0 0 ;
-    margin-bottom: 20px;
+}
+// .buttonAll{
+//     position: fixed;
+//     top: 0;
+// }
+.button.all {
+    @include skewBtnAll(100px, 40px);
+    margin: 20px;
 }
 .button{
     @include skewBtn(100px,40px);
-    display: inline-block;
-    padding: 8px 30px;
-    margin: 0px 0px;
-    background: transparent;
-    // border: 1px solid transparent;
-    color: $fontColorBlue;
-    font-size: 18px;
-    cursor: pointer;
     position: relative;
+    margin: 20px;
+    display: block;
+    cursor: pointer; 
     span{
         @include skewBtnText(4px, 25px);
-    }
-.button.all {
-        // padding: 8px 30px; // margin: 10px 20px;
-        // background: transparent;
-        // border: 1px solid $fontColorBlue;
-        @include skewBtnAll(100px, 40px);
-        span {
-            @include skewBtnTextAll(4px, 28px);
-        }
-    }
-    
+    } 
 }
 .button:hover {
-    background-color: $fontColorBlue;
-    color: #222;
+    @include  btnHover() ;
 }
 .button:active,
 .button.is-checked {
@@ -125,25 +153,30 @@ a {
 .button.is-checked {
     color:$fontColorBlack;
 }
+// 分享按鈕
 #tripShare{
     border: 1px solid $fontColorBlue;
     float: right;
     padding: 8px 30px;
     margin: 10px 20px;
-}
-// 分享行程
+}  
+// 分享行程BOX
 .tripWrap{
-    width: 1200px;
+    // width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
     margin: auto;
-    border-top: 1px solid $fontColorBlue;
-    padding: 20px 0 20px 0;
+    // border-top: 1px solid $fontColorBlue;
+    padding: 15px;
 }
 .tripBox{
-    width: 31%;
-    height:300px;
-    // background-color: #rgba();
-    // border: 2px solid $borderColorGreen;
-    margin: 1%;
+    background-image: url(../img/refer/TES2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 400px;
+    height:280px;
+    margin: 30px;
     position: relative;
 }
  .tripTag{
@@ -154,7 +187,7 @@ a {
      font-size: 0;
 }
 .tripPic{
-	width: 90%;
+    width: 80%;
 	margin: auto;
 	position: absolute;
 	top:6%;
@@ -162,10 +195,51 @@ a {
 	right: 0;
     bottom: 0;
 }
+.tripPic img:after{
+    content: '';
+    display: block;
+    width: 100%;
+}
+.tripTxt{
+    letter-spacing: 1px;
+    padding: 10px 10px 10px 0;
+    h4{
+        line-height: 30px;
+    }
+    span{
+        padding: 0 10px 0 0 ;
+        margin: 0 10px 0 0 ;
+        border-right: 2px solid $fontColorWhite;
+    }
+}
 .tripIcon{
+    padding-top: 20px;
+    text-align: left;
     position: absolute;
-    bottom: 25%;
+    bottom: 63px;
     left: 0;
+    z-index: 5;
+    div{
+        text-align: center;
+        display:inline-block;
+    }
+    img{
+        width: 15px;
+    }
+    p{
+        letter-spacing: 1px;
+        padding: 5px 10px 10px 10px;
+    }
+}
+.grad{
+    display: block;
+    position: absolute;
+    bottom:63px;
+    left: 0;
+    z-index: 4;
+    width: 100%;
+    height: 62px;
+    background-image: linear-gradient(to top, rgba(0,0,0,.5) 0%,transparent 100%);
 }
 .tripPlanet,.tripKind{
     font-size: 16px;
@@ -175,16 +249,18 @@ a {
     background-color:$fontColorBlue;
     border-radius:3px; 
 }
-// 屬性
+// 星球屬性顏色
 // .blue{
-//     border: 2px solid  $borderColorBlue;
+//         color: $borderColorBlue;
 // }
-// .green{
-//     border: 2px solid  $borderColorGreen;
+// .green h4:hover{
+//     color:  $borderColorGreen;
 // }
-// .orange{
-//     border: 2px solid $borderColorOrange;
+// .orange h4:hover{
+//     color:  $borderColorOrange;
 // }
+
+// 行程屬性顏色
 .tripPlanet.blue{
     background: $fontColorBlue;
 }
@@ -208,35 +284,6 @@ a {
 }
 .tripKind.technology{
     background:$technology;
-}
-
-
-.tripTxt{
-    padding: 15px;
-    letter-spacing: 1px;
-    padding: 5px;
-    h4{
-        line-height: 30px;
-        padding: 10px;
-    }
-    p{
-        padding: 10px;
-    }
-}
-.tripIcon{
-    text-align: right;
-    div{
-        text-align: center;
-        display:inline-block;
-    }
-    img{
-        width: 20px;
-        padding: 5px;
-    }
-    p{
-        letter-spacing: 1px;
-        padding: 10px;
-    }
 }
 
 @import "layout/footer";
