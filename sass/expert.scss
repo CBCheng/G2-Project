@@ -235,9 +235,16 @@ a {
         background-color: $bottomColor;
         color: #222;
     }
+    .button.all:hover{
+        background-color:rgb(129, 162, 253);
+    }
     .button:active,
     .button.is-checked {
         background-color: $bottomColor;
+    }
+    .button:active,
+    .button.is-checked.all{
+        background-color:rgb(129, 162, 253);
     }
     .button.is-checked {
         color: #000;
@@ -267,24 +274,36 @@ a {
 
 .grid {
     .expertBox {
+        background-image: url('../img/expertImg/techFrame-blue.png');
+        background-size: cover;
         width: 250px;
         margin: 25px;
-        height: 337px;
+        height: 400px;
         text-align: center;
-        h2 {
+        position: relative;
+        overflow: hidden;
+        
+        .king{
+            width: 50px;
+            transform: rotate(-30deg);
+            margin-left: -60px;
+            margin-top: -20px;
+        }
+        h2,h3 {
             font-size: 22px;
-            margin-top: 10px;
+            display: inline-block;
+            margin: 40px 5px 10px;
         }
-        h3 {
-            font-size: 20px;
-            margin: 10px;
-        }
+        h3{font-size: 20px;}
         .pic {
             // outline: 1px solid #f00;
-            width: 160px;
+            width: 180px;
+            height: 280px;
+            overflow: hidden;
             margin: auto;
             position: relative;
             cursor: pointer;
+            
             .attr {
                 position: absolute;
                 background-color: $attrBlue;
@@ -295,37 +314,61 @@ a {
             }
             img {
                 width: 100%;
+                transform: scale(1);
+                transition: 0.5s;
             }
         }
-        .score {
-            margin-top: 10px;
-            span {
+        .aside{
+            position: absolute;
+            left: 0; right: 0;
+            bottom: 0px;
+            margin: auto;
+            background: linear-gradient(to top, #000, rgba(0,0,0,0.2) 100%);
+            .score {
+                padding-top: 25px;
+                span {
+                    color: #ffffff;
+                    font-size: 16px;
+                    padding-right: 5px;
+                }
+                img {
+                    vertical-align: text-bottom;
+                    width: 20px;
+                }
+            }
+            .mark {
+                // outline: 1px solid #f00;
+                font-size: 15px;
                 color: #ffffff;
-                font-size: 16px;
-                padding-right: 5px;
-            }
-            img {
-                vertical-align: text-bottom;
-                width: 20px;
+                img {
+                    width: 25px;
+                    margin: 10px;
+                }
             }
         }
-        .mark {
-            // outline: 1px solid #f00;
-            font-size: 16px;
-            color: #ffffff;
-            img {
-                width: 25px;
-                margin: 10px;
-            }
-        }
+        
     }
-    .expertBox.aaa {
-        border: transparent;
-        box-shadow: none;
-        img {
-            width: 300px;
-        }
+    .expertBox:before{
+        content: '';
+	    display: block;
+	    position: absolute;
+        background-color: rgba(255, 255, 255,0.3);
+        z-index: 100;
+        width: 200px;height: 300px;
+        top: -65px;
+	    left: -300px;
+	    transition: 0.5s ease-out;
+	    transform: skewX(-50deg);
     }
+    .expertBox:hover:before{
+        left: 420px;
+        top: 120px;
+    }
+    .expertBox:hover a img{
+        transform: scale(1.2);
+    }
+    
+    
     @media screen and (max-width: 991px) {
         .expertBox {
             width: 200px;
@@ -368,18 +411,18 @@ a {
     }
     @media screen and (min-width:650px) {
         .expertBox {
-            box-shadow: 0 0 5px 3px rgba(255, 255, 255, 0.2);
-            background-color: rgba(0, 0, 0, 0.8);
+            // box-shadow: 0 0 5px 3px rgba(255, 255, 255, 0.2);
+            // background-color: rgba(0, 0, 0, 0.6);
         }
-        .expertBox.blue {
-            border: 3px solid $borderColorBlue;
-        }
-        .expertBox.orange {
-            border: 3px solid $borderColorOrange;
-        }
-        .expertBox.green {
-            border: 3px solid $borderColorGreen;
-        }
+        // .expertBox.blue {
+        //     border: 3px solid $borderColorBlue;
+        // }
+        // .expertBox.orange {
+        //     border: 3px solid $borderColorOrange;
+        // }
+        // .expertBox.green {
+        //     border: 3px solid $borderColorGreen;
+        // }
         .expertBox .aside h3 {
             display: none;
         }

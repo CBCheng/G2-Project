@@ -1,6 +1,7 @@
 @import "base/var";
 @import "base/reset";
 @import "mixin/mixin";
+@import "components/buttons";
 @include body(12px);
 // *{
 //      outline: 1px solid #fff;
@@ -89,15 +90,29 @@ a {
     margin-bottom: 20px;
 }
 .button{
+    @include skewBtn(100px,40px);
     display: inline-block;
     padding: 8px 30px;
     margin: 0px 0px;
     background: transparent;
-    border: 1px solid transparent;
+    // border: 1px solid transparent;
     color: $fontColorBlue;
     font-size: 18px;
     cursor: pointer;
     position: relative;
+    span{
+        @include skewBtnText(4px, 25px);
+    }
+.button.all {
+        // padding: 8px 30px; // margin: 10px 20px;
+        // background: transparent;
+        // border: 1px solid $fontColorBlue;
+        @include skewBtnAll(100px, 40px);
+        span {
+            @include skewBtnTextAll(4px, 28px);
+        }
+    }
+    
 }
 .button:hover {
     background-color: $fontColorBlue;
@@ -125,7 +140,7 @@ a {
 }
 .tripBox{
     width: 31%;
-    height: 350px;
+    height:300px;
     // background-color: #rgba();
     // border: 2px solid $borderColorGreen;
     margin: 1%;
@@ -149,13 +164,13 @@ a {
 }
 .tripIcon{
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 25%;
+    left: 0;
 }
 .tripPlanet,.tripKind{
     font-size: 16px;
     vertical-align: middle;
-    margin: 0 0 0 10px;
+    margin: 0 0 0 5px;
     padding: 5px;
     background-color:$fontColorBlue;
     border-radius:3px; 
