@@ -5,8 +5,8 @@
 
 @include body(12px);
 // *{
-//      outline: 1px solid #fff;
-//  }
+//     outline: .3px solid #fff;
+// }
 img{
     width: 100%;
     vertical-align: middle;
@@ -16,7 +16,31 @@ a {
     color: $fontColorWhite;
 }
 @import "layout/nav";
-@import "layout/nav-small";
+@import "layout/nav-small";::-webkit-scrollbar {
+    width: 15px;
+    background: #202164;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #95cce4;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2f83ad;
+}
+// scrollBox
+
 // content
 .wrap {
     width: 100%;
@@ -30,6 +54,7 @@ a {
     top: -10%;
     left: 0;
     right: -30%;
+    z-index: -60;
     margin: auto;
     opacity: .2;
     animation: circleL 30s infinite linear;
@@ -40,6 +65,7 @@ a {
     top: -10%;
     left: 0;
     right: -30%;
+    z-index: -60;
     margin: auto;
     opacity: .3;
     animation: circleR 20s infinite linear;
@@ -69,22 +95,25 @@ a {
         transform: rotate(0deg);
     }
 }
-// #anime{
-//     width: 30%;
-//     position: absolute;
-//     right: 0;
-//     top:0;
-//     margin: auto;
-//     z-index: 10;
-//     animation: circle 10s infinite linear;
-// }
 // banner
 .bannerPic{
     position: relative;
 }
+.banner{
+    height: 447.09px;
+    img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -50;
+        margin: auto;
+    }
+}
 #canvas-container{
     position: absolute;
-    bottom:15%;
+    bottom:10%;
     right: 0;
     left: 0;
     z-index: 0;
@@ -97,7 +126,7 @@ a {
        position: absolute;
        right: 0;
        bottom: 0;
-       top: 50%;
+       top: 60%;
        left: 0;
        margin: auto;
        z-index: 50;
@@ -109,8 +138,6 @@ a {
     margin: auto;
     display: flex;
 }
-
-
 
 //   分類按鈕
 // .buttonWrap{
@@ -132,6 +159,9 @@ a {
 .button.all {
     @include skewBtnAll(100px, 40px);
     margin: 20px;
+    span{
+       @include skewBtnTextAll(4px, 25px); 
+    }
 }
 .button{
     @include skewBtn(100px,40px);
@@ -154,12 +184,139 @@ a {
     color:$fontColorBlack;
 }
 // 分享按鈕
+.shareBtn{
+    width: 1200px;
+    padding-right:80px; 
+    margin: auto;
+}
 #tripShare{
-    border: 1px solid $fontColorBlue;
+    background-image: url(../img/refer/shareBtn.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color:transparent;
+    border: none;
+    color:  #fff;
+    font-size: 20px;;
     float: right;
-    padding: 8px 30px;
-    margin: 10px 20px;
+    width: 150px;
+    height: 55px;
 }  
+#tripShare:hover{
+    color:$fontColorBlue;
+    background-image: url(../img/refer/shareBtn2.png);
+    border: none;
+}
+.shareBtn:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+// 行程分享跳窗
+.shareLightBg{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    z-index: 180;
+    background-color: rgba(0,0,0,.2);
+    display: none;
+}
+.shareLightBg.show{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    z-index: 180;
+    background-color: rgba(0,0,0,.2);
+    display: block
+}
+.lightBox{
+    width: 1000px;
+    height: 700px;
+    position: fixed;
+    top: 15%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background-image: url(../img/refer/lightboxbg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.close{
+    float: right;
+    margin: 20px;
+    img{
+        width: 20px;;
+    }
+}
+.close:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.shareContentBox{
+    margin: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mytripSocll{
+    box-sizing: border-box;
+    width: 35%;
+    height: 600px;
+    margin: auto;
+    padding: 10px;
+    overflow-y: scroll;
+    border: 1px solid $fontColorBlue;
+    overflow-x: hidden;
+}
+.mytrip{
+    font-size: 25px;
+    line-height: 30px;
+    margin:auto;
+    margin: 0 0 10px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid $fontColorBlue; 
+}
+.upload{
+    width: 60%;
+    height: 600px;
+    margin: auto;
+    text-align: center;
+    input{
+        width: 100%;
+        font-size: 25px;
+        color: $fontColorWhite;
+        border-style:none;
+        border: 1px solid $fontColorBlue;
+        padding: 5px;
+        box-sizing: border-box;
+        background:transparent; 
+    }
+    button{
+        @include btn(200px,60px);
+        margin: 20px 0 0 0;
+    }
+    button:hover{
+        @include aLinkBtnHover();
+    }
+}
+.uploadPic{
+    width: 100%;
+    height: 400px;
+    border: 1px solid $fontColorBlue;
+    margin: 40px 0 20px 0;
+}
+
+
+
+
 // 分享行程BOX
 .tripWrap{
     // width: 1200px;

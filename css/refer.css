@@ -254,6 +254,23 @@ nav {
 .activeB {
   color: #6cd5ff; }
 
+::-webkit-scrollbar {
+  width: 15px;
+  background: #202164; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #95cce4;
+  border-radius: 10px; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2f83ad; }
+
 .wrap {
   width: 100%;
   margin: auto;
@@ -266,6 +283,7 @@ nav {
   top: -10%;
   left: 0;
   right: -30%;
+  z-index: -60;
   margin: auto;
   opacity: .2;
   animation: circleL 30s infinite linear; }
@@ -276,6 +294,7 @@ nav {
   top: -10%;
   left: 0;
   right: -30%;
+  z-index: -60;
   margin: auto;
   opacity: .3;
   animation: circleR 20s infinite linear; }
@@ -301,9 +320,20 @@ nav {
 .bannerPic {
   position: relative; }
 
+.banner {
+  height: 447.09px; }
+  .banner img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -50;
+    margin: auto; }
+
 #canvas-container {
   position: absolute;
-  bottom: 15%;
+  bottom: 10%;
   right: 0;
   left: 0;
   z-index: 0; }
@@ -316,7 +346,7 @@ nav {
   position: absolute;
   right: 0;
   bottom: 0;
-  top: 50%;
+  top: 60%;
   left: 0;
   margin: auto;
   z-index: 50; }
@@ -344,6 +374,11 @@ nav {
   cursor: pointer;
   border-radius: 7px;
   margin: 20px; }
+  .button.all span {
+    transform: skewX(0deg);
+    position: absolute;
+    top: 4px;
+    left: 25px; }
 
 .button {
   transform: skewX(25deg);
@@ -378,11 +413,137 @@ nav {
 .button.is-checked {
   color: #000; }
 
+.shareBtn {
+  width: 1200px;
+  padding-right: 80px;
+  margin: auto; }
+
 #tripShare {
-  border: 1px solid #6cd5ff;
+  background-image: url(../img/refer/shareBtn.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 20px;
   float: right;
-  padding: 8px 30px;
-  margin: 10px 20px; }
+  width: 150px;
+  height: 55px; }
+
+#tripShare:hover {
+  color: #6cd5ff;
+  background-image: url(../img/refer/shareBtn2.png);
+  border: none; }
+
+.shareBtn:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.shareLightBg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 180;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: none; }
+
+.shareLightBg.show {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 180;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: block; }
+
+.lightBox {
+  width: 1000px;
+  height: 700px;
+  position: fixed;
+  top: 15%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background-image: url(../img/refer/lightboxbg.png);
+  background-repeat: no-repeat;
+  background-size: contain; }
+
+.close {
+  float: right;
+  margin: 20px; }
+  .close img {
+    width: 20px; }
+
+.close:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.shareContentBox {
+  margin: 50px;
+  display: flex;
+  flex-wrap: wrap; }
+
+.mytripSocll {
+  box-sizing: border-box;
+  width: 35%;
+  height: 600px;
+  margin: auto;
+  padding: 10px;
+  overflow-y: scroll;
+  border: 1px solid #6cd5ff;
+  overflow-x: hidden; }
+
+.mytrip {
+  font-size: 25px;
+  line-height: 30px;
+  margin: auto;
+  margin: 0 0 10px 0;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #6cd5ff; }
+
+.upload {
+  width: 60%;
+  height: 600px;
+  margin: auto;
+  text-align: center; }
+  .upload input {
+    width: 100%;
+    font-size: 25px;
+    color: #fff;
+    border-style: none;
+    border: 1px solid #6cd5ff;
+    padding: 5px;
+    box-sizing: border-box;
+    background: transparent; }
+  .upload button {
+    width: 200px;
+    height: 60px;
+    color: #fff;
+    font-size: 18px;
+    line-height: 34px;
+    border: 1px solid #6cd5ff;
+    background-color: transparent;
+    text-align: center;
+    cursor: pointer;
+    margin: 20px 0 0 0; }
+  .upload button:hover {
+    background-color: #6cd5ff;
+    color: #000; }
+
+.uploadPic {
+  width: 100%;
+  height: 400px;
+  border: 1px solid #6cd5ff;
+  margin: 40px 0 20px 0; }
 
 .tripWrap {
   display: flex;
