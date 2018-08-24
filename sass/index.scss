@@ -774,7 +774,36 @@ nav {
         opacity: 0;
         // transition: 0.5s;
     }
+ }   
+.yesInside{
+    position: absolute;
+    top: 53.1%;
+    left: 13.5%;
+    width: 15%;
+    animation: ynInRotate 12s infinite;
 }
+.yesOutside{
+    position: absolute;
+    top: 49.9%;
+    left: 12%;
+    width: 18%;
+    animation: ynOutRotate 6s linear infinite;
+}
+.NoInside{
+    position: absolute;
+    top: 53.1%;
+    left: 69.2%;
+    width: 15%;
+    animation: ynInRotate 12s infinite;
+}
+.NoOutside{
+    position: absolute;
+    top: 49.9%;
+    left: 67.7%;
+    width: 18%;
+    animation: ynOutRotate 6s linear infinite;
+}
+
 .yesNo a:hover{
     box-shadow: 0px 0px 20px 2px #000;
     background-color: #6cd5ff;
@@ -800,6 +829,23 @@ nav {
         top: 28%;
         left: 15%;
     }
+}
+
+@keyframes ynInRotate { 
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(0deg);}
+    33.3333% {transform: rotate(120deg);}
+    58.3333% {transform: rotate(120deg);}
+    66.6666% {transform: rotate(240deg);}
+    91.6666% {transform: rotate(240deg);}
+    100% {transform: rotate(360deg);}
+}
+@keyframes ynOutRotate { 
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(-180deg);}
+    50% {transform: rotate(-180deg);}
+    75% {transform: rotate(-360deg);}
+    100% {transform: rotate(-360deg);}
 }
 // <!-- part2 end -->
 // <!-- part3 start -->
