@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="css/member_comment.css">
+
+    
     <link rel="stylesheet" type="text/css" href="css/member.css">
-    <!-- <link rel="stylesheet" type="text/css" href="css/member.css"> -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/member_comment.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script src="libs/jquery/dist/jquery.min.js"></script>
     <script src="libs/gsap/src/minified/TweenMax.min.js"></script>
@@ -105,12 +106,12 @@
 
     <div class="container">
         <div class="all_content ">
-            <div class="sidebar memberPage">
+            <!-- <div class="sidebar memberPage">
                 <ul class="tab-grop">
                 </ul>
-            </div>
+            </div> -->
 
-            <div id="favorite" class="tabPage active" style="">
+            <div class="comContent">
                 <!-- <div class="tabPage_border"> -->
                 <div class="comment_mg_box">
                     <div class="member_title">
@@ -126,30 +127,31 @@
 
                     <!-- <button rel="favorite_recipe" class="favorite_tab btn active">收藏專家</button>
                         <button rel="favorite_prod" class="favorite_tab btn">收藏分享行程</button> -->
-                    <div id="favorite_recipe" class="favorite_page active">
+                    <div  class="favorite_page active">
                         <table>
                             <tbody>
                                 <tr>
-                                    <th class="mob_hidden">專家圖片</th>
+                                    <th>專家圖片</th>
                                     <th>專家姓名</th>
                                     <th>查看</th>
                                     <th>引用</th>
-                                    <th>刪除</th>
+                                    <th>評分</th>
                                 </tr>
 
                                 <!-- 專家收藏開始 -->
                                 <tr>
-                                    <td colspan="5">無收藏專家</td>
+                                    <!-- <td colspan="5">無收藏專家</td> -->
+                                    <td>專家圖片</td>
+                                    <td>專家姓名</td>
+                                    <td>查看</td>
+                                    <td>引用</td>
+                                    <td>評分</td>
                                 </tr>
                                 <!--專家收藏結束-->
                             </tbody>
                         </table>
                     </div>
-
                 </div>
-
-
-                <!-- </div> -->
             </div>
         </div>
     </div>

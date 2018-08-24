@@ -1,0 +1,48 @@
+@import "base/var";
+@import "base/reset";
+@import "mixin/mixin";
+// @include body(12px);
+// *{
+//     outline: 1px solid #fff;
+// }
+body{
+    background-image: url(../img/memComment/bg3.png);
+    // background-image: url(../img/memComment/bg1.png);
+    font-family: $fontfamily;
+     color:$fontColorWhite;
+}
+img{
+    width: 100%;
+    vertical-align: middle;
+}
+a {
+    text-decoration: none;
+    color: $fontColorWhite;
+}
+
+@import "layout/nav";
+
+.comContent {
+    max-width: 960px;
+    min-height: 500px;
+    margin: auto;
+    margin-bottom: 30px;
+    text-align: center;
+    background-color: rgba(0,0,0,0.9);
+    // top: 200px;
+    // left: 500px;
+    // z-index: 4;
+    // box-sizing: border-size;
+    // border: 1px solid black;
+    // padding: 1%;
+    // background-size: cover;
+    .comment_mg_box
+}
+
+
+
+
+@import "layout/footer";
+@import "layout/nav-small";
+@import "layout/medium";
+@import "layout/desktop";
