@@ -656,11 +656,6 @@ nav {
 #lightBox1 {
   background-image: url(../img/expertImg/lineBg7.png);
   background-repeat: no-repeat;
-  position: fixed;
-  top: 0px;
-  left: 0;
-  right: 0;
-  z-index: 900;
   margin: auto;
   width: 960px;
   height: 600px;
@@ -716,8 +711,7 @@ nav {
       color: #6cd5ff;
       text-align: justify; }
     .content .conRight .rocket {
-      display: inline-block;
-      outline: 1px solid #f00;
+      margin-left: 10px;
       width: 35px; }
     .content .conRight h2 {
       margin-top: 20px;
@@ -732,7 +726,7 @@ nav {
     .content .conRight .data {
       text-align: justify; }
       .content .conRight .data .score {
-        margin-top: 50px; }
+        margin-top: 30px; }
         .content .conRight .data .score h3 {
           display: inline;
           font-size: 20px;
