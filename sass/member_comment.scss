@@ -1,15 +1,13 @@
 @import "base/var";
 @import "base/reset";
 @import "mixin/mixin";
-// @include body(12px);
+@include body(12px);
 // *{
 //     outline: 1px solid #fff;
 // }
 body{
     background-image: url(../img/memComment/bg3.png);
-    // background-image: url(../img/memComment/bg1.png);
-    font-family: $fontfamily;
-     color:$fontColorWhite;
+    
 }
 img{
     width: 100%;
@@ -36,13 +34,60 @@ a {
     // border: 1px solid black;
     // padding: 1%;
     // background-size: cover;
-    .comment_mg_box
+    .comment_mg_box{
+        h4{
+            font-size: 20px;
+            margin-top: -10px;
+        }
+        .itemContent{
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            .comItem{
+                width: 45%;
+                border: 2px solid $borderColorBlue;
+                // background-color: $borderColorBlue;
+                padding: 10px;
+                .expImg{
+                    display: inline-block;
+                    width: 140px; height: 145px;
+                    overflow: hidden;
+                    vertical-align: text-top;
+                    img{
+                        width: 100%;
+                        margin-top: -10px;
+                    }
+                }
+                .itemTxt{
+                    display: inline-block;
+                    .commentBtn{
+                        color: #fff;
+                        font-size: 18px;
+                        line-height: 34px;
+                        border: 1px solid #6cd5ff;
+                        background-color: rgba(255, 255, 255, 0.5);
+                        text-align: center;
+                        cursor: pointer;
+                        padding: 5px 10px;
+                    }
+                }
+
+            }
+        }
+        
+    }
 }
 
 
 
 
 @import "layout/footer";
+footer{
+    // background-image: linear-gradient(to top,rgb(0, 0, 0), rgba(0, 0, 0, .5) 100%);
+    // background-image: linear-gradient(to top,rgba(0, 183, 255, .5), rgba(0, 255, 255, .5) 100%);
+    background-image: $gradation;
+}
 @import "layout/nav-small";
 @import "layout/medium";
 @import "layout/desktop";
