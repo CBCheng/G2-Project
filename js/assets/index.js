@@ -37,7 +37,7 @@ $(function(){
 //====== planet dot hover ======
 $(function(){
     var borCh = '4px solid #6cd5ff';
-    var borOr = '4px solid #fff';
+    var borOr = '4px solid rgba(255, 255, 255, .5)';
     var aniCh = 'dotHover 0.8s infinite';
     var aniOr0s = 'dotHover2 4.8s infinite';
     var aniOr6s = 'dotHover2 4.8s 6s infinite';
@@ -56,7 +56,7 @@ $(function(){
 
         speed1Divs[i].onmouseout = function(e){
 
-            e.target.style.backgroundColor = "#fff";
+            e.target.style.backgroundColor = "rgba(255, 255, 255, .5)";
             var pulseEle = e.target.parentNode.getElementsByTagName("div")[1];
             pulseEle.style.border = borOr;
             pulseEle.style.animation = aniOr0s;
@@ -76,7 +76,7 @@ $(function(){
 
         speed2Divs[i].onmouseout = function(e){
 
-            e.target.style.backgroundColor = "#fff";
+            e.target.style.backgroundColor = "rgba(255, 255, 255, .5)";
             var pulseEle = e.target.parentNode.getElementsByTagName("div")[1];
             pulseEle.style.border = borOr;
             pulseEle.style.animation = aniOr3s;
@@ -96,7 +96,7 @@ $(function(){
 
         speed3Divs[i].onmouseout = function(e){
 
-            e.target.style.backgroundColor = "#fff";
+            e.target.style.backgroundColor = "rgba(255, 255, 255, .5)";
             var pulseEle = e.target.parentNode.getElementsByTagName("div")[1];
             pulseEle.style.border = borOr;
             pulseEle.style.animation = aniOr6s;
@@ -150,6 +150,7 @@ $(function(){
         'z-index':'5'});
         $('.yes').css('opacity','0');
         $('.no span').css('opacity','0');
+        //$('.no img').css('opacity','0');
         $('.no').children().not('span').css('opacity','1');
     });
     $('.no').on('mouseout',function(){

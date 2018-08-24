@@ -1,4 +1,42 @@
-//套件JS
+//開場動畫JS
+// Wrap every letter in a span
+$('.ml11 .letters').each(function(){
+	$(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+  });
+  
+  anime.timeline({loop: false})
+	.add({
+	  targets: '.ml11 .mlline',
+	  scaleY: [0,1],
+	  opacity: [0.5,1],
+	  easing: "easeOutExpo",
+	  duration: 700
+	})
+	.add({
+	  targets: '.ml11 .mlline',
+	  translateX: [0,$(".ml11 .letters").width()],
+	  easing: "easeOutExpo",
+	  duration: 700,
+	  delay: 100
+	}).add({
+	  targets: '.ml11 .letter',
+	  opacity: [0,1],
+	  easing: "easeOutExpo",
+	  duration: 600,
+	  offset: '-=775',
+	  delay: function(el, i) {
+		return 34 * (i+1)
+	  }
+	}).add({
+	  targets: '.ml11',
+	  opacity: 0,
+	  duration: 1000,
+	  easing: "easeOutExpo",
+	  delay: 1000
+	});
+
+
+//套件JS==================================================================
 particlesJS("particles-js", 
 	{"particles":{"number":{"value":50,"density":{"enable":true,"value_area":800}},
 	 "color":{"value":"#FFF"},
@@ -27,6 +65,7 @@ var section4 = document.querySelectorAll('.sectionQuiz4')[0];
 var section3 = document.querySelectorAll('.sectionQuiz3')[0];
 var section2 = document.querySelectorAll('.sectionQuiz2')[0];
 var section1 = document.querySelectorAll('.sectionQuiz1')[0];
+// var section = document.querySelectorAll('.sectionQuiz')[0];
 var particlesBg = document.querySelector('#particles-js');
 var genderBtn =document.querySelectorAll('.gender div');
 var alienBtn = document.querySelectorAll('.alien div');
@@ -36,8 +75,14 @@ var timeId5,timeId4,timeId2;
 var scaleValue5 = 1;
 var scaleValue4 = 0;
 var opacityValue = 1;
+////延遲畫面開始================================================
 
 function doFirst(){
+	// section.style.display = 'none';
+	// setTimeout(function(){
+	// 	section5.style.display = 'block';
+		
+	// },3500)
     //quiz1->quiz2動畫
     for(var i=0;i<genderBtn.length;i++){
         genderBtn[i].onclick = changeSpeed;
@@ -74,8 +119,10 @@ function changefadeIn(){
             console.log(scaleValue4);
             clearInterval(timeId4);               
         }else{
+			section4.style.display = 'block';
             section4.style.opacity = 1;
-            section4.style.transform = 'scale('+scaleValue4+')';
+			section4.style.transform = 'scale('+scaleValue4+')';
+			section3.style.display = 'block';
         }
 }
 function changeSpeed(){
@@ -84,13 +131,14 @@ function changeSpeed(){
 
 //======================================================================='
 function movePositionL(){
-    // section3.style.display = 'block';
+    
     section3.style.left = 0;
     section3.style.top = 0;
     section3.style.transitionDuration = 0.5+'s';
     section4.style.left = '-'+100+'%';
     section4.style.top = 100+'%';
-    section4.style.transitionDuration = 0.5+'s';
+	section4.style.transitionDuration = 0.5+'s';
+	section2.style.display = 'block';
 }
 //=======================================================================
 function movePositionR(){
@@ -99,39 +147,49 @@ function movePositionR(){
     section2.style.transitionDuration = 0.5+'s';
     section3.style.left = 100+'%';
     section3.style.top = 100+'%';
-    section3.style.transitionDuration = 0.5+'s';
+	section3.style.transitionDuration = 0.5+'s';
+	section1.style.display = 'block';
 }
 //=========================================================================
 //quiz4 hover效果
 	//3天按鈕
 	var daysGroupBtn = document.querySelectorAll('.daysGroup')[0];
+	
 	daysGroupBtn.addEventListener('mouseenter',function(){
 		var cirCenter = document.querySelectorAll('.cirCenter')[0];
 		var cirMiddle = document.querySelectorAll('.cirMiddle')[0];
-		cirCenter.classList.add('hover1');
-		cirMiddle.classList.add('hover2');
+		var cirBorder = document.querySelectorAll('.cirBorder')[0];
+		cirCenter.classList.add('hoverCirCenter');
+		cirMiddle.classList.add('hoverCirMiddle');
+		cirBorder.classList.add('hoverCirBorder');
 		
 	})
 	daysGroupBtn.addEventListener('mouseleave',function(){
 		var cirCenter = document.querySelectorAll('.cirCenter')[0];
 		var cirMiddle = document.querySelectorAll('.cirMiddle')[0];
-		cirCenter.classList.remove('hover1');
-		cirMiddle.classList.remove('hover2');
+		var cirBorder = document.querySelectorAll('.cirBorder')[0];
+		cirCenter.classList.remove('hoverCirCenter');
+		cirMiddle.classList.remove('hoverCirMiddle');
+		cirBorder.classList.remove('hoverCirBorder');
 	})
 	//5天按鈕
 	var daysGroupBtn = document.querySelectorAll('.daysGroup')[1];
 	daysGroupBtn.addEventListener('mouseenter',function(){
 		var cirCenter = document.querySelectorAll('.cirCenter')[1];
 		var cirMiddle = document.querySelectorAll('.cirMiddle')[1];
-		cirCenter.classList.add('hover1');
-		cirMiddle.classList.add('hover2');
+		var cirBorder = document.querySelectorAll('.cirBorder')[1];
+		cirCenter.classList.add('hoverCirCenter');
+		cirMiddle.classList.add('hoverCirMiddle');
+		cirBorder.classList.add('hoverCirBorder');
 		
 	})
 	daysGroupBtn.addEventListener('mouseleave',function(){
 		var cirCenter = document.querySelectorAll('.cirCenter')[1];
 		var cirMiddle = document.querySelectorAll('.cirMiddle')[1];
-		cirCenter.classList.remove('hover1');
-		cirMiddle.classList.remove('hover2');
+		var cirBorder = document.querySelectorAll('.cirBorder')[1];
+		cirCenter.classList.remove('hoverCirCenter');
+		cirMiddle.classList.remove('hoverCirMiddle');
+		cirBorder.classList.remove('hoverCirBorder');
 	})
 //========================================================================
 // quiz4->quiz5
@@ -146,7 +204,7 @@ function changeOpacity(){
 		clearInterval(timeId2);
 		section2.style.display = 'none';
 		section1.classList.add('activeDown');
-		particlesBg.style.backgroundImage ='url("img/poa/quizResultBg.png")';
+		// particlesBg.style.backgroundImage ='url("img/poa/quizResultBg.png")';
 		
 		section1.addEventListener('webkitAnimationEnd',function(){
 			section1.style.top = 0;
