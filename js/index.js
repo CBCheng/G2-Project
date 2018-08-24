@@ -150,6 +150,7 @@ $(function(){
         'z-index':'5'});
         $('.yes').css('opacity','0');
         $('.no span').css('opacity','0');
+        //$('.no img').css('opacity','0');
         $('.no').children().not('span').css('opacity','1');
     });
     $('.no').on('mouseout',function(){
