@@ -654,16 +654,14 @@ nav {
   background-color: #486a00; }
 
 #lightBox1 {
-  background-image: url(../img/expertImg/lineBg5.png);
+  background-image: url(../img/expertImg/lineBg7.png);
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
   margin: auto;
   width: 960px;
   height: 600px;
   overflow: auto;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: black;
   border: 3px solid rgba(108, 213, 255, 0.5); }
 
 #lightBox:after {
@@ -672,8 +670,9 @@ nav {
   clear: both; }
 
 .content {
+  background-image: url(../img/expertImg/starBg.png);
+  background-position: center;
   background-repeat: no-repeat;
-  background-position: 340px -60px;
   display: flex;
   justify-content: center; }
   .content .conLeft {
@@ -711,13 +710,23 @@ nav {
     .content .conRight h1 {
       color: #6cd5ff;
       text-align: justify; }
+    .content .conRight .rocket {
+      margin-left: 10px;
+      width: 35px; }
     .content .conRight h2 {
       margin-top: 20px;
-      text-align: justify; }
+      text-align: justify;
+      display: inline-block; }
+
+@keyframes rocket {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(60deg); } }
     .content .conRight .data {
       text-align: justify; }
       .content .conRight .data .score {
-        margin-top: 60px; }
+        margin-top: 30px; }
         .content .conRight .data .score h3 {
           display: inline;
           font-size: 20px;

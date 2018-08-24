@@ -274,7 +274,67 @@
     overflow: hidden;
 }
 /*=====================end=========================*/
+.m_leftBox{
+	width: 160px;
+	text-align: center;
+	float: left;
+	font-size: 1rem;
+}
+.m_nav ul{
+	width: 100%;
+	position: relative;
+}
+.m_nav ul li{
+	display: inline-block;
+	margin: auto;
+	margin-bottom: 5px;
+	line-height:25px;
+	border-radius: 5px;
+	font-size: 18px;
+	text-shadow: 0 0 2px rgba(0,0,0,.2);
+	box-sizing: border-box;
+	background-image: -webkit-linear-gradient( -90deg, hsla(1, 76%, 65%, 1) 0%, hsla(1, 76%, 70%, .9) 100%);
+	background-image: -moz-linear-gradient( -90deg, hsla(1, 76%, 65%, 1) 0%, hsla(1, 76%, 70%, .9) 100%);
+	background-image: -ms-linear-gradient( -90deg, hsla(1, 76%, 65%, 1) 0%, hsla(1, 76%, 70%, .9) 100%);
+}
+.m_nav a{
+	display: block;
+	width:100%;
+	color:#fff;
+	padding:5px 10px;
+	border-radius: 5px;
+	box-sizing: border-box;
+	position: relative;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0);
+}
 
+.m_nav a:after{
+	content: '';
+	position: absolute;
+	bottom: 0;left: 0;right: 0;margin: auto;
+	width: 0%;
+	height: 3px;
+	background-color:  hsla(1, 76%, 65%, 0);
+	transition: .5s;
+}
+
+.m_nav a:hover{
+	box-shadow: 1px 1px 2px rgba(0,0,0,.3);
+}
+
+.m_nav a:hover:after{
+	width: 96%;
+	background-color:  hsla(1, 76%, 65%, 1);
+}
+
+.m_nav a.m_nav_active{
+	box-shadow: 1px 1px 2px rgba(0,0,0,.3);
+}
+
+.m_nav a.m_nav_active:after{
+	width: 96%;
+	background-color:  hsla(1, 76%, 65%, 1);
+}
 
 /*-------------------plightBox-------------*/
 .plightBox{
