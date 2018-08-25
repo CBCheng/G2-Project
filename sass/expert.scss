@@ -211,7 +211,6 @@ a {
     }
     .button {
         @include skewBtn(100px, 40px);
-        cursor: pointer;
         margin: 10px 15px;
         span {
             @include skewBtnText(4px, 25px);
@@ -219,7 +218,6 @@ a {
     }
     .button.popular {
         @include skewBtn(85px, 40px);
-        cursor: pointer;
         span {
             @include skewBtnText(4px, 25px);
         }
@@ -765,9 +763,8 @@ a {
             .name {
                 position: absolute;
                 left: 60px;
-                top: 10px; // padding: 10px 25px;
-                width: 86px; // height: 36px;
-                line-height: 36px;
+                top: 10px; 
+                padding: 10px 25px;
                 -webkit-clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
                 clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
                 background-color: $attrBlue;

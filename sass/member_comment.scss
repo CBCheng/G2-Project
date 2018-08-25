@@ -1,13 +1,16 @@
 @import "base/var";
 @import "base/reset";
 @import "mixin/mixin";
+@import "components/buttons";
+@import "components/lightBox";
 @include body(12px);
 // *{
 //     outline: 1px solid #fff;
 // }
 body{
     background-image: url(../img/memComment/bg3.png);
-    
+    background-size: cover;
+    background-attachment: fixed;
 }
 img{
     width: 100%;
@@ -35,25 +38,32 @@ a {
     // padding: 1%;
     // background-size: cover;
     .comment_mg_box{
-        h4{
-            font-size: 20px;
+        h2{font-size: 30px;
+            padding: 50px 2% 2% 2%;}
+        h3{
+            font-size: 22px;
+            text-align: justify;
             margin-top: -10px;
+            margin-left: 30px;
+            padding: 0;
         }
-        .itemContent{
-            margin-top: 20px;
+        #itemContent_no,#itemContent_al{
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
-            .comItem{
-                width: 45%;
+            .comItem_no,.comItem_al{
+                width: 40%;
                 border: 2px solid $borderColorBlue;
-                // background-color: $borderColorBlue;
                 padding: 10px;
+                margin: 20px 26px 0;
                 .expImg{
                     display: inline-block;
-                    width: 140px; height: 145px;
+                    width: 40%;
+                    // width: 130px;
+                    height: 145px;
                     overflow: hidden;
-                    vertical-align: text-top;
+                    vertical-align: top;
+                    margin-right: 10px;
+                    cursor: pointer;
                     img{
                         width: 100%;
                         margin-top: -10px;
@@ -61,15 +71,50 @@ a {
                 }
                 .itemTxt{
                     display: inline-block;
-                    .commentBtn{
-                        color: #fff;
+                    width: 55%;
+                    height: 100%;
+                    text-align: left;
+                    position: relative;
+                    h4{font-size: 20px;
+                        color: #ffffff;}
+                    h5{
                         font-size: 18px;
-                        line-height: 34px;
-                        border: 1px solid #6cd5ff;
-                        background-color: rgba(255, 255, 255, 0.5);
-                        text-align: center;
-                        cursor: pointer;
-                        padding: 5px 10px;
+                        letter-spacing: 1px;
+                        margin-top: 20px;
+                        color: #ffffff;
+                        overflow:hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
+                    p{
+                        font-size: 14px;
+                        margin-top: 20px;
+                        color: #ffffff;
+                        letter-spacing: 1px;
+                        overflow:hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
+                    .commentBtn{
+                        position: absolute;
+                        bottom: 0px; right: 10px;
+                        @include btn(60px,35px,18px,35px);
+                    }
+                    .commentBtn:hover{
+                        @include btnHover;
+                    }
+                    .score {
+                        position: absolute;
+                        bottom: 10px;
+                        span {
+                            color: #ffffff;
+                            font-size: 16px;
+                            padding-right: 5px;
+                        }
+                        img {
+                            vertical-align: text-bottom;
+                            width: 20px;
+                        }
                     }
                 }
 
@@ -79,15 +124,85 @@ a {
     }
 }
 
-
+#lightBox_com{
+    // position: absolute;
+    // top: 200px;
+    width: 600px;
+    margin: auto;
+    border: 2px solid #6cd5ff;
+    background-color: #333;
+    h1{font-size: 22px;}
+    .message {
+        // outline: 1px solid #f00;
+        width: 90%;
+        margin: 20px auto;
+        .user {
+            width: 100%;
+            height: 80px;
+            position: relative;
+            .name {
+                position: absolute;
+                left: 60px;
+                top: 10px; 
+                padding: 10px 25px;
+                -webkit-clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+                clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+                background-color: $attrBlue;
+                font-size: 16px;
+                letter-spacing: 2px;
+            }
+            img {
+                position: absolute;
+                left: 0;
+                width: 80px;
+                border-radius: 50%;
+            }
+        }
+        .score {
+            margin-left: 100px;
+            margin-top: -10px;
+            span {
+                color: #ffffff;
+                font-size: 18px;
+                padding-right: 5px;
+            }
+            img {
+                vertical-align: text-bottom;
+                width: 30px;
+            }
+        }
+        textarea{
+            width: 80%;
+            margin: 30px 0 0 60px;
+            border: 0;
+            border-bottom: 2px solid $borderColorBlue;
+            background-color: transparent;
+            resize: none;
+            word-wrap: break-word;
+            font-size: 16px;
+        }
+        textarea:focus{
+            border-bottom: 2px solid $borderColorBlue;
+            background-color: transparent;
+        }
+        p {
+            margin-left: 90px;
+            font-size: 16px;
+            text-align: left;
+            line-height: 1.4;
+        }
+    }
+    
+}
 
 
 @import "layout/footer";
 footer{
-    // background-image: linear-gradient(to top,rgb(0, 0, 0), rgba(0, 0, 0, .5) 100%);
+    background-image: linear-gradient(to top,rgba(0, 0, 0,0.8), rgba(0, 0, 0, .5) 100%);
     // background-image: linear-gradient(to top,rgba(0, 183, 255, .5), rgba(0, 255, 255, .5) 100%);
-    background-image: $gradation;
+    // background-color: ;
 }
+
 @import "layout/nav-small";
 @import "layout/medium";
 @import "layout/desktop";

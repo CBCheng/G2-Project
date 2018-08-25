@@ -8,7 +8,7 @@
 }
 
 //燈箱本體
-@mixin lIghtBoxFather($wi:45%, $he:60%, $mt:13%) {
+@mixin lIghtBox($wi:45%, $he:60%, $mt:13%) {
     position: relative;
     width: $wi;
     height: $he;
