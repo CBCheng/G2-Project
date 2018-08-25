@@ -763,9 +763,8 @@ a {
             .name {
                 position: absolute;
                 left: 60px;
-                top: 10px; // padding: 10px 25px;
-                width: 86px; // height: 36px;
-                line-height: 36px;
+                top: 10px; 
+                padding: 10px 25px;
                 -webkit-clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
                 clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
                 background-color: $attrBlue;
