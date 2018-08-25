@@ -211,7 +211,6 @@ a {
     }
     .button {
         @include skewBtn(100px, 40px);
-        cursor: pointer;
         margin: 10px 15px;
         span {
             @include skewBtnText(4px, 25px);
@@ -219,7 +218,6 @@ a {
     }
     .button.popular {
         @include skewBtn(85px, 40px);
-        cursor: pointer;
         span {
             @include skewBtnText(4px, 25px);
         }

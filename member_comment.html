@@ -10,11 +10,11 @@
     <link rel="stylesheet" type="text/css" href="css/member.css">
     <link rel="stylesheet" type="text/css" href="css/member_comment.css">
     <!-- <link rel="stylesheet" href="css/style.css"> -->
-    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
     <script src="libs/jquery/dist/jquery.min.js"></script>
     <script src="libs/gsap/src/minified/TweenMax.min.js"></script>
     <script type="text/javascript" src="js/parallax.min.js"></script>
-    <title>Document</title>
+    <title>專家評論</title>
 </head>
 
 <body>
@@ -75,7 +75,7 @@
         <div class="comContent">
             <div class="comment_mg_box">
                 <div class="member_title">
-                    <h3>專家評論</h3>
+                    <h2>專家評論</h2>
                 </div>
                 <div class="title_line">
                     <div class="title_circle big">
@@ -83,37 +83,52 @@
                     </div>
                     <div class="title_center_line"></div>
                 </div>
-                <h4>您遊玩過的專家</h4>
-
-                <!--<div  class="favorite_page active">
-                    <table>
-                        <tbody>
-                            <tr>
-                                <th>專家圖片</th>
-                                <th>專家姓名</th>
-                                <th>查看</th>
-                                <th>引用</th>
-                                <th>評分</th>
-                            </tr>
-                            <tr><td colspan="5">尚無專家</td></tr>
-                        </tbody>
-                    </table>
-                </div> -->
-                <div class="itemContent">
-                    <div class="comItem">
+                <h3>您遊玩過的專家</h3>
+                <button rel="itemContent_no" class="favorite_tab btn ">尚未評論</button>
+                <button rel="itemContent_al" class="favorite_tab btn active">已評論</button>
+                
+                <div id="itemContent_no" class="favorite_page active" style="display: none;">
+                    <div class="comItem_no">
                         <div class="expImg">
                             <img src="img/memComment/A01.jpg" alt="A01">
                         </div>
                         <div class="itemTxt">
-                            <h4>Alan</h4>
-                            <h5>三天兩夜荒野之旅</h5>
-                            <div class="commentBtn">
-                                    評論
-                                </div>
+                            <h4>瓦特星 Alan</h4>
+                            <h5>3天｜兩夜荒野爆炸之旅</h5>
+                            <div class="commentBtn">評論</div>
                         </div>
-                        
                     </div>
-                    <div class="comItem">
+                    <div class="comItem_no">
+                        <div class="expImg">
+                            <img src="img/memComment/A01.jpg" alt="A01">
+                        </div>
+                    </div>
+                    <div class="comItem_no">
+                        <div class="expImg">
+                            <img src="img/memComment/A01.jpg" alt="A01">
+                        </div>
+                    </div>
+                </div>
+                <div id="itemContent_al" class="favorite_page active" style="">
+                    <div class="comItem_al">
+                        <div class="expImg">
+                            <img src="img/memComment/A01.jpg" alt="A01">
+                        </div>
+                        <div class="itemTxt">
+                            <h4>瓦特星 Alan</h4>
+                            <h5>3天｜兩夜荒野爆炸之旅</h5>
+                            <p>Alan超帥超愛他,下次還要預約</p>
+                            <div class="score">
+                                <span>5</span>
+                                <img src="img/expertImg/star.png" alt="star">
+                                <img src="img/expertImg/star.png" alt="star">
+                                <img src="img/expertImg/star.png" alt="star">
+                                <img src="img/expertImg/star.png" alt="star">
+                                <img src="img/expertImg/star.png" alt="star">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comItem_al">
                         <div class="expImg">
                             <img src="img/memComment/A01.jpg" alt="A01">
                         </div>
@@ -125,7 +140,42 @@
 </div>
 
 
+<div id="lightBox_com">
+    
+</div>
 
+
+
+<script>
+    $('.favorite_tab').on('click',function(){
+
+            $('.favorite_tab').not(this).removeClass('active');
+            $(this).addClass('active');		
+
+        var tabPageToShow = $(this).attr('rel');		
+        $('.favorite_page.active').hide(0,showNextTabPage);
+
+        function showNextTabPage(){
+            $('#'+tabPageToShow).show(0,function(){
+                $(this).addClass('active');
+            })
+        }		
+    });
+
+
+
+    // $(function () {
+    //     $("#box1").click(function () {
+    //         $("#lightBox_com").css('display', 'block');
+    //     })
+    // })
+
+    // $(function () {
+    //     $("#closeBtn").click(function () {
+    //         $("#lightBox_com").hide();
+    //     })
+    // })
+</script>
 
 
 

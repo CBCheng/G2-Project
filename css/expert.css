@@ -404,7 +404,6 @@ nav {
     text-align: center;
     cursor: pointer;
     border-radius: 7px;
-    cursor: pointer;
     margin: 10px 15px; }
     .button-group .button span {
       position: absolute;
@@ -422,8 +421,7 @@ nav {
     background-color: rgba(255, 255, 255, 0.5);
     text-align: center;
     cursor: pointer;
-    border-radius: 7px;
-    cursor: pointer; }
+    border-radius: 7px; }
     .button-group .button.popular span {
       position: absolute;
       transform: skewX(-25deg);
