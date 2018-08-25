@@ -57,7 +57,7 @@ window.addEventListener('load', doSecond);
 //         $("#lightBox").hide();
 //     })
 // })
-
+ 
 
 // var lightBox1 = document.getElementById("lightBox1");
 // var closeBtn = document.getElementById("closeBtn");

@@ -213,83 +213,6 @@ nav {
       
       .activeB {
         color: #6cd5ff; }
-// nav{
-//     width: 100%;
-//     // height: 10.605%;
-//     height: 100px;
-//     box-sizing: content-box;
-//     padding: 20px 0 20px 0;
-//     background-image: linear-gradient(to top, rgba(64, 64, 64, 0.4), rgba(64, 64, 64, 0.3) 100%);
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     text-align: center;
-//     letter-spacing: 2px;
-//     font-size: 18px;
-//     z-index: 99;
-// }
-// .logo{
-//     display: inline-block;
-//     width: 100px;
-// }
-// nav img{
-//     width: 100%;
-// }
-// .menu{
-//     display: inline-block;
-//     vertical-align: middle; 
-//     text-align: center;
-// }
-// .menu li{
-//     display: inline-block;
-//     vertical-align: middle;
-//     padding: 50px 50px 0 50px; 
-//     transition: .5s;
-// }
-// .member{
-//     display: inline-block;
-//     vertical-align: middle; 
-//     position: absolute;
-//     right: 20px;
-// }
-// .member li{
-//     display: inline-block;
-//     vertical-align: middle;
-//     padding: 60px 0 0 0; 
-// }
-// .memberSign a {
-//     border-left: 1px solid $fontColorWhite;
-//     padding-left: 10px;
-// }
-// .active{
-//     color:$fontColorBlue;
-// }
-// .shoppingCar{
-//     margin-right: 8px;
-// }
-// .shoppingCar{
-//     width: 25px;
-// }
-// .memberSelect{
-//     width: 200px;
-//     position: absolute;
-//     top: 150px;
-//     right: 10px;
-//     text-align:left;
-//     background-color: $navColor;
-//     display: none;
-// }
-// .memberSelect li{
-//     padding: 10px; 
-// }
-// .hambger,.menuMobile{
-//     display: none;
-// }
-
-// // hover
-// .member a:hover,.menu a:hover,.memberSelect a:hover{
-//     color:$fontColorBlue;
-// }
 
 #section1{
     width: 100%;
@@ -873,6 +796,11 @@ nav {
         font: 1vw/2.3vw 微軟正黑體;
         text-align: center;
     }
+    .exTextBg{
+        position: absolute;
+        top: 29.4%;
+        width: 40.8%;
+    }
 }
 .part3 a:hover{
     background-color: #6cd5ff;
@@ -888,18 +816,31 @@ nav {
     }
     .exScreen{
         position: absolute;
+        top: 5%;
         width: 100%;
-        height: 100%;
+        height: 90%;
     }
     .scWhite{
         background-color: rgba($color: #fff, $alpha: .6);
         transition: 1s;
         transform-origin: right center;
+        // img{
+        //     position: absolute;
+        //     right: 15%;
+        //     top: 15%;
+        //     width: 25%;
+        //     height: 70%;
+        // }
     }
     .scBlack{
         background-color: rgba($color: #000, $alpha: .7);
         transition: 1s;
         transform-origin: left center;
+        // img{
+        //     width: 40%;
+        //     height: 70%;
+        //     margin: 25% 0% 0% 20%;
+        // }
     }
 }
 .expert1{

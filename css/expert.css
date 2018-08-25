@@ -404,7 +404,6 @@ nav {
     text-align: center;
     cursor: pointer;
     border-radius: 7px;
-    cursor: pointer;
     margin: 10px 15px; }
     .button-group .button span {
       position: absolute;
@@ -422,8 +421,7 @@ nav {
     background-color: rgba(255, 255, 255, 0.5);
     text-align: center;
     cursor: pointer;
-    border-radius: 7px;
-    cursor: pointer; }
+    border-radius: 7px; }
     .button-group .button.popular span {
       position: absolute;
       transform: skewX(-25deg);
@@ -835,8 +833,7 @@ nav {
         position: absolute;
         left: 60px;
         top: 10px;
-        width: 86px;
-        line-height: 36px;
+        padding: 10px 25px;
         -webkit-clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
         clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
         background-color: #094f91;
