@@ -271,3 +271,12 @@ function changeRight(){
 	}
 };
 window.onload = doFirst;
+
+// console.log($(document).width());
+
+// var bb;
+// $('.aaa').click(function(){
+//     // bb = $(this).index();
+//     // $(this).attr('herf','expert.html');
+//     $('goAllRefer').click();
+// });

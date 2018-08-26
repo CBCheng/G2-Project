@@ -1,14 +1,17 @@
-// 行程分享
-$(function () {
-    $('.tripShare').click(function(){
-        $('.shareLightBox').show();
+// 行程分享跳窗
+$(function(){
+    $('#tripShare').click(function(){
+        $('.shareLightBg').addClass('show')
     });
+});
+// hambager menu close
+$(function(){
     $('.close').click(function(){
-        $('.shareLightBox').hide();
+        $('.shareLightBg').removeClass('show')
     });
 });
 
-
+// convas動畫
 (function () {
 
     var unit= 50,canvas, context, canvas2, context2,
@@ -132,11 +135,11 @@ $(function () {
         // Cache position of arrow on the circle
         var y = xAxis + (unitVal / 3) * Math.sin(t) * direction;
         var img = new Image();
-        img.src = "../img/refer/1_f_sim_space_shuttle.png";
+        img.src = "../img/refer/shuttle.png";
         //img.src = "https://i.imgur.com/bYuAw4C.png";
         // Draw yAxis bead
         context.beginPath();
-        context.drawImage(img, yAxis - 50  + offset , y - 22 );
+        context.drawImage(img, yAxis - 43  + offset , y - 22 );
         //context.arc(yAxis, y, 5, 0, 2*Math.PI, false);
         context.stroke();
     }

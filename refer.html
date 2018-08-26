@@ -62,20 +62,22 @@
     <section class="wrap">
         <img class="track1" src="img/refer/track-1.png" alt="">
         <img class="track2" src="img/refer/track-2.png" alt="">
-        <!-- banner動畫 -->
-        <!-- <div id="anime">
-            <img src="img/refer/animation.png" alt="">
-        </div> -->
         <!-- banner -->
         <div class="bannerPic">
-            <img src="img/refer/bgBanner-1.png" alt="">
+            <div class="banner">
+            <img src="img/refer/bgBanner.png" alt="">
         <!-- convas -->
             <div id="canvas-container" >
                 <canvas id="sineCanvas"  width="800" height="200"></canvas>
             </div>
             <h3 class="title">不想自己安排行程，看看别人的吧!</h3>
+            </div>
         </div>
         <!-- content -->
+        <!-- 分享按鈕 -->
+        <div class="shareBtn">
+            <button id="tripShare" ><span>我要分享</span></button>
+        </div>
         <div class="content">
             <!-- 分類按鈕 -->
              <div id="filters" class="button-group">
@@ -87,26 +89,51 @@
                     <button class="button" data-filter=".orange"><span>達沙星</span></button>
                     <button class="button" data-filter=".green"><span>奧倫星</span></button>
                 <!-- </div>  -->
-                <!-- 分享按鈕 -->
-                <!-- <button id="tripShare" class="button" ><span>我要分享</span></button> -->
             </div>
         <!-- 我要分享跳窗 -->
-        <!-- <div class="shareLightBox">
-                <button class="close">關閉</button>
-                <div class="mytripSocll">
-                    <div class="mytrip"></div>
-                    <div class="mytrip"></div>
-                    <div class="mytrip"></div>
-                    <div class="mytrip"></div>
+        <div class="shareLightBg">
+            <div class="lightBox">
+                <div class="close">
+                    <img src="img/icon/clear-button-white.png">
                 </div>
-                <div class="upload">
-                    <input type="text" placeholder="請輸入行程名稱">
-                    <div class="uploadPic">
-                        <img src="" alt="">
+                <div class="shareContentBox">
+                    <div class="mytripSocll">
+                        <div class="mytrip">3天 ｜瓦特星大冒險</div>
+                        <div class="mytrip">3天 ｜瓦特星大冒險</div>
+                        <div class="mytrip">3天 ｜瓦特星大冒險</div>
+                        <div class="mytrip">3天 ｜瓦特星大冒險</div>
+                        <div class="mytrip">3天 ｜瓦特星大冒險</div>
+                        <div class="mytrip">3天 ｜瓦特星大冒險</div>
+                        <div class="mytrip">3天 ｜瓦特星大冒險</div>
+                        <div class="mytrip">3天 ｜瓦特星大冒險</div>                        <div class="mytrip">3天 ｜瓦特星大冒險</div>
+                        <div class="mytrip">3天 ｜瓦特星大冒險</div>
+                        <div class="mytrip">3天 ｜瓦特星大冒險</div>
+                        <div class="mytrip">3天 ｜瓦特星大冒險</div>                        <div class="mytrip">3天 ｜瓦特星大冒險</div>
+                        <div class="mytrip">3天 ｜瓦特星大冒險</div>
+                        <div class="mytrip">3天 ｜瓦特星大冒險</div>
+                        <div class="mytrip">3天 ｜瓦特星大冒險</div>                        <div class="mytrip">3天 ｜瓦特星大冒險</div>
+                        <div class="mytrip">3天 ｜瓦特星大冒險</div>
+                        <div class="mytrip">3天 ｜瓦特星大冒險</div>
+                        <div class="mytrip">3天 ｜瓦特星大冒險</div>                        <div class="mytrip">3天 ｜瓦特星大冒險</div>
+                        <div class="mytrip">3天 ｜瓦特星大冒險</div>
+                        <div class="mytrip">3天 ｜瓦特星大冒險</div>
+                        <div class="mytrip">3天 ｜瓦特星大冒險</div>                        <div class="mytrip">3天 ｜瓦特星大冒險</div>
+                        <div class="mytrip">3天 ｜瓦特星大冒險</div>
+                        <div class="mytrip">3天 ｜瓦特星大冒險</div>
+                        <div class="mytrip">3天 ｜瓦特星大冒險</div>
                     </div>
-                    <button>分享行程</button>
+                    <div class="upload">
+                        <input type="text" placeholder="請輸入行程名稱">
+                        <div class="uploadPic">
+                            <img src="img/icon/photo-camera.png" alt="">
+                        </div>
+                        <div>
+                        <button>分享行程</button>
+                        </div>
+                    </div>
                 </div>
-            </div> -->
+            </div>
+        </div>
         <!-- 分享行程 -->
         <div class="grid tripWrap">
             <div class="element-item tripBox new blue">
@@ -129,9 +156,9 @@
                         </div>
                     </div>
                     <a class="grad" href="referdetial.html"></a>
-                    <div class="tripTxt">
-                            <h4><span>3天</span>瓦特星挑戰極限</h4>
-                    </div>
+                </div>
+                <div class="tripTxt">
+                        <h4><span>3天</span>瓦特星挑戰極限</h4>
                 </div>
             </div>
 
@@ -155,9 +182,9 @@
                         </div>
                     </div>
                     <a class="grad" href="referdetial.html"></a>
-                    <div class="tripTxt">
-                            <h4><span>5天</span>舌尖上的奧倫</h4>
-                    </div>
+                </div>
+                <div class="tripTxt">
+                        <h4><span>5天</span>舌尖上的奧倫</h4>
                 </div>
             </div>
 
@@ -181,9 +208,9 @@
                         </div>
                     </div>
                     <a class="grad" href="referdetial.html"></a>
-                    <div class="tripTxt">
-                            <h4><span>5天</span>舌尖上的奧倫</h4>
-                    </div>
+                </div>
+                <div class="tripTxt">
+                        <h4><span>5天</span>舌尖上的奧倫</h4>
                 </div>
             </div>
 
@@ -207,9 +234,9 @@
                         </div>
                     </div>
                     <a class="grad" href="referdetial.html"></a>
-                    <div class="tripTxt">
-                            <h4><span>5天</span>舌尖上的奧倫</h4>
-                    </div>
+                </div>
+                <div class="tripTxt">
+                        <h4><span>5天</span>舌尖上的奧倫</h4>
                 </div>
             </div>
                 
@@ -233,9 +260,9 @@
                         </div>
                     </div>
                     <a class="grad" href="referdetial.html"></a>
-                    <div class="tripTxt">
-                            <h4><span>5天</span>舌尖上的奧倫</h4>
-                    </div>
+                </div>
+                <div class="tripTxt">
+                        <h4><span>5天</span>舌尖上的奧倫</h4>
                 </div>
             </div>
 
@@ -259,9 +286,9 @@
                         </div>
                     </div>
                     <a class="grad" href="referdetial.html"></a>
-                    <div class="tripTxt">
-                            <h4><span>5天</span>舌尖上的奧倫</h4>
-                    </div>
+                </div>
+                <div class="tripTxt">
+                        <h4><span>5天</span>舌尖上的奧倫</h4>
                 </div>
             </div>
 
@@ -285,9 +312,9 @@
                         </div>
                     </div>
                     <a class="grad" href="referdetial.html"></a>
-                    <div class="tripTxt">
-                            <h4><span>5天</span>舌尖上的奧倫</h4>
-                    </div>
+                </div>
+                <div class="tripTxt">
+                        <h4><span>5天</span>舌尖上的奧倫</h4>
                 </div>
             </div>
 
@@ -311,9 +338,9 @@
                         </div>
                     </div>
                     <a class="grad" href="referdetial.html"></a>
-                    <div class="tripTxt">
-                            <h4><span>5天</span>未來星球瓦特</h4>
-                    </div>
+                </div>
+                <div class="tripTxt">
+                        <h4><span>5天</span>未來星球瓦特</h4>
                 </div>
             </div>
 
@@ -337,9 +364,9 @@
                         </div>
                     </div>
                     <a class="grad" href="referdetial.html"></a>
-                    <div class="tripTxt">
-                            <h4><span>5天</span>舌尖上的奧倫</h4>
-                    </div>
+                </div>
+                <div class="tripTxt">
+                        <h4><span>5天</span>舌尖上的奧倫</h4>
                 </div>
             </div>
 
@@ -363,9 +390,9 @@
                         </div>
                     </div>
                     <a class="grad" href="referdetial.html"></a>
-                    <div class="tripTxt">
-                            <h4><span>5天</span>舌尖上的奧倫</h4>
-                    </div>
+                </div>
+                <div class="tripTxt">
+                        <h4><span>5天</span>舌尖上的奧倫</h4>
                 </div>
             </div>
 
@@ -389,9 +416,9 @@
                         </div>
                     </div>
                     <a class="grad" href="referdetial.html"></a>
-                    <div class="tripTxt">
-                            <h4><span>5天</span>進擊的奧倫</h4>
-                    </div>
+                </div>
+                <div class="tripTxt">
+                        <h4><span>5天</span>進擊的奧倫</h4>
                 </div>
             </div>
 
@@ -415,9 +442,9 @@
                         </div>
                     </div>
                     <a class="grad" href="referdetial.html"></a>
-                    <div class="tripTxt">
-                            <h4><span>5天</span>進擊的奧倫</h4>
-                    </div>
+                </div>
+                <div class="tripTxt">
+                        <h4><span>5天</span>進擊的奧倫</h4>
                 </div>
             </div>
 
