@@ -1128,7 +1128,6 @@ nav {
   border: 2px solid rgba(0, 255, 255, 0.8);
   box-sizing: border-box;
   background-color: #FFF;
-  background-image: url("../img/index/section4pic1.png");
   background-repeat: no-repeat;
   background-size: 102%;
   transform-style: preserve-3d; }
@@ -1147,6 +1146,7 @@ nav {
   opacity: 1;
   display: block;
   transform: scale(1) translate3d(0px, 0px, 0px);
+  background-image: url("../img/index/section4pic1.png");
   /*animation: groupFirst .3s;*/ }
 
 @keyframes groupFirstStop {
@@ -1174,7 +1174,8 @@ nav {
 
 .travelGroup2 {
   border: 2px solid rgba(0, 255, 255, 0.8);
-  animation: groupSecond .3s; }
+  animation: groupSecond .3s;
+  background-image: url("../img/index/p1_v8_04.jpg"); }
 
 @keyframes groupSecond {
   0% {
@@ -1195,7 +1196,8 @@ nav {
 
 .travelGroup3 {
   border: 2px solid rgba(0, 255, 255, 0.8);
-  animation: groupThird .3s; }
+  animation: groupThird .3s;
+  background-image: url("../img/index/p3_v2_01.jpg"); }
 
 @keyframes groupThirdStop {
   0% {
@@ -1220,18 +1222,19 @@ nav {
     transform: scale(1) translate3d(0px, 0px, 0px);
     opacity: 1; } }
 
-.travelPic, .travelTitle, .travelBtn {
-  float: left; }
-
 .travelTxtGroup {
+  width: 100%;
+  padding-bottom: 20%;
   position: absolute;
   bottom: 0;
   color: rgba(255, 255, 255, 0.8);
   box-sizing: border-box; }
 
 .travelTitle {
-  width: 17%;
-  margin: 0% 0% 1% 1%; }
+  width: 42%;
+  position: absolute;
+  bottom: 5%;
+  left: 2%; }
 
 .travelTitle h2, h1, p {
   padding: 5px 0px;
@@ -1247,7 +1250,7 @@ nav {
   font-weight: bold; }
 
 .travelTitle p {
-  margin-top: 4%;
+  margin-top: 2%;
   font-size: 0.8vw;
   line-height: 1.2em;
   white-space: nowrap;
@@ -1258,9 +1261,10 @@ nav {
   box-orient: vertical; }
 
 .travelPic {
-  margin: 2% 0% 0% 1%;
-  width: 15%;
-  position: relative;
+  width: 33%;
+  position: absolute;
+  bottom: 1%;
+  left: 49%;
   font-size: 0px; }
 
 .travelPic:before {
@@ -1295,7 +1299,10 @@ nav {
   padding: 5%; }
 
 .travelBtn {
-  width: 6.3%; }
+  position: absolute;
+  bottom: 9%;
+  left: 82.5%;
+  width: 16%; }
 
 .lookTravelBtn, .useTravelBtn {
   display: block;
