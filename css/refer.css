@@ -562,6 +562,9 @@ nav {
   margin: 30px;
   position: relative; }
 
+.tripBox:hover {
+  background-image: url(../img/refer/TES2-1.png); }
+
 .tripTag {
   padding: 20px 15px 20px 15px;
   position: absolute;
