@@ -10,14 +10,14 @@
 <script type="text/javascript"src="js/jquery-3.3.1.min.js"></script>
 <!-- <script src="libs/gsap/src/minified/TweenMax.min.js"></script> -->
 <script src="js/tween.js"></script>
-<script type="text/javascript" src="js/parallax.js"></script>
+<!-- <script type="text/javascript" src="js/parallax.js"></script> -->
 <script type="text/javascript" src="js/pignose.calendar.full.js"></script>
 <script type="text/javascript" src="js/planning.js"></script>
 <link rel="stylesheet" type="text/css" href="css/planning.css">
 <title>Examples</title>
-</head>
-<body > 
-<nav>
+</head> 
+<body >   
+<nav> 
         <ul class="menu mRight">
             <li><a href="planning.html">開始冒險</a></li>
             <li><a href="expert.html">專家帶你玩</a></li>
@@ -46,7 +46,7 @@
             <li><a href="#">登出</a></li>
         </ul>
 </nav>	
-<div class="space"></div> 
+<!-- <div class="space"></div>  -->
 <div class="planetFilter"> 
 
  
@@ -55,6 +55,9 @@
 		<div class="logoBar">
 			<div >
 				<img src="img/planning/logovb.png">
+				<span>
+					x
+				</span>
 			</div>
 		</div>
 		<div >
@@ -99,22 +102,98 @@
 
  
 <content>
-	<div class="planningTitle chinese">
+	<div class="stepBoxStyle chinese">
+		<div class="stepBox">
+			<div class="stepImg">
+			<img src="img/planning/aa.png">
+			</div>
+			<div class="step">
+				<div>
+					<p>
+						step 1
+					</p>
+					<p>
+						選擇日期天數
+					</p>
+				</div>
+				<div>
+					<p>
+						step 2
+					</p>
+					<p>
+						匯入行程
+					</p>
+				或
+					<p>
+						挑選景點
+					</p>
+				</div>
+				<div>
+					<p>
+						step 1
+					</p>
+							
+					<p>
+					建立行程名稱並儲存行程	
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- <div class="planningTitle chinese">
 		<h1>
 			<p>
-				沒離開過地球?
+				不知道該怎麼玩嗎?
 			</p>
-			<a href="#">
+			<a href="quiz.html">
 				前往測驗
 			</a>
 
 		</h1>
 
-	</div>	
-	
-				
-	<div class="planningContent">
+	</div>	 -->
 
+
+<ul>
+	<li  id="cloneDayLi" >
+						<div>
+							<span >
+								
+							</span>
+						</div>
+						<span class="chinese">尚未選擇日期</span>
+						<div>
+							<span >
+								
+							</span>
+							<div class="dayDel">
+								<img src="img/planning/trash.png">
+							</div>
+						</div>
+	</li>
+</ul>	
+
+<!-- 	<div class="searchSchdule chinese ">
+		<input  class="chinese" onfocus="this.select()" type="text" name="" maxlength="6" placeholder="建立行程名稱">
+		<p></p>
+		<div class="editImg">
+			<img src="img/planning/edit2.png">
+
+
+		</div>
+	</div> -->	
+
+	<div class="planningContent">
+		<div id="mobileBox">
+		</div>
+		
+	 <div class="mobilePlanningBox">
+		<div class="PlanningBtn chinese">
+			<div class="dayBtn borderStyle">天數<span class="daysCount">(3)</span></div>
+			<div class="schBtn borderStyle"><span class="dayNum">D1</span>行程<span class="viewsCount">(0)</span></div>
+			<div class="viewBtn borderStyle">景點</div>
+		</div>
+		
 		<div class="selectDaysGroup">
 					<!-- 月曆 -->
 				<div id="calendar" class="calendar chinese">
@@ -128,9 +207,10 @@
 
 			
 			</div>
-			<div class="borderStyle ">
+
+			<div id="dayParent" class="borderStyle ">
 				<ul id="day" class="day">
-					<li data-daybox="0" id="cloneDayLi" class="dayList">
+					<li data-daybox="0"  class="dayList">
 						<div>
 							<span class="resetDay">
 								D1
@@ -141,6 +221,9 @@
 							<span >
 								
 							</span>
+							<div class="dayDel">
+								<img src="img/planning/trash.png">
+							</div>
 						</div>
 					</li>
 					<li data-daybox="1" class="dayList">
@@ -154,6 +237,9 @@
 							<span>
 								
 							</span>
+							<div class="dayDel">
+								<img src="img/planning/trash.png">
+							</div>
 						</div>
 					</li>
 					<li data-daybox="2" class="dayList">
@@ -161,12 +247,16 @@
 							<span class="resetDay">
 								D3
 							</span>
+
 						</div>
 						<span class="date chinese">尚未選擇日期</span>
 						<div>
 							<span>
 								
 							</span>
+							<div class="dayDel">
+								<img src="img/planning/trash.png">
+							</div>
 						</div>
 					</li>
 
@@ -176,48 +266,45 @@
 				<div id="addNewDayBtn" class="Btn addDayStyle">+增加一天</div>
 			</div>
 		</div>
+
 		<div class="schduleList">
 			
-			<div class="searchSchdule chinese">
-				<input  onfocus="this.select()" type="text" name="" maxlength="5" placeholder="建立您的專屬行程名稱">
+			<div class="searchSchdule chinese ">
+				<input  class="chinese" onfocus="this.select()" type="text" name="" maxlength="6" placeholder="建立行程名稱">
 				<p></p>
-				<div>
-						<span class=" Btn">
-							確認
-						</span>
-						<span class=" Btn">
-							修改
-						</span>
+				<div class="editImg">
+					<img src="img/planning/edit2.png">
+						
 
 				</div>
 			</div>
 			<div class="getSchdule  chinese " href="#">
-				<span id="schduleTrig" class="Btn ">
-					引用行程
-				</span>
-				<div class="schduleIN borderStyle">
-					<div class="schduleINTitle">
-						<p>
-							我的收藏行程
-						</p>
-						
-					</div>
-					<div class="schduleINContent">
-							<p>無收藏行程</p>
-							<div>
-								<a href="#">
-									登入會員
-								</a>
-								<a href="#">
-									看看別人怎麼玩
-								</a>
-							</div>
+				<div class="schMoveInBox">
+					<span id="schduleTrig" class="Btn schMoveIn">
+						匯入行程
+					</span>
+					<div class="schduleIN borderStyle">
+						<div class="schduleINTitle">
+							<p>
+								我的收藏行程
+							</p>
+							
+						</div>
+						<div class="schduleINContent">
+								<p>無收藏行程</p>
+								<div>
+									<a href="#">
+										登入會員
+									</a>
+									<a href="refer.html">
+										看看別人怎麼玩
+									</a>
+								</div>
+						</div>
 					</div>
 				</div>
-			</div>
-			
-			
 
+			</div>
 			<div class="clearfix"></div>
 
 			<!-- clone樣板 -->
@@ -235,41 +322,49 @@
 			</li>
 			<!-- clone樣板 -->
 
-			<div class="borderStyle chinese">
+			<!-- clone樣板 -->
+			<ul  id="cloneSchUl"></ul>
+			<!-- clone樣板 -->
+
+			<div id="schduleBox" class="borderStyle chinese">
 				<ul class="day schduleDay">
 					<li>
 						<div>
-							<span id="copyDay"></span>
+							<span id="copyDay">D1</span>
 						</div>
-						<span id="copyDate" class="chinese"></span>
+						<span id="copyDate" class="chinese">尚未選擇日期</span>
 					</li>
 					<!-- id="schduleItems" -->
 				</ul>
 				<div class=" schduleEmptyTxt">
-					<p>今日尚未安排行程</p>
+					<p>今日尚未安排景點</p>
 				</div>
-				<ul data-schdulebox="0" id="schduleDay1" class="schduleItems list"></ul>
-				<ul data-schdulebox="1" id="schduleDay2" class="schduleItems list"></ul>
-				<ul data-schdulebox="2" id="schduleDay3" class="schduleItems list"></ul>
-				<ul data-schdulebox="3" id="schduleDay4" class="schduleItems list"></ul>
-				<ul data-schdulebox="4" id="schduleDay5" class="schduleItems list"></ul>			
+				<div id="schduleUl"><ul data-schdulebox="0" id="schduleDay1" class="schduleItems list"></ul><ul data-schdulebox="1" id="schduleDay2" class="schduleItems list"></ul><ul data-schdulebox="2" id="schduleDay3" class="schduleItems list"></ul></div>
+				
+				
 		
 			</div>
 		
 
 		</div>
 
-		<div class="selectViews">
-			<div class="planetName">
-				<span class="chinese">
-					瓦特星
-				</span>
+		<div class="selectViews ">
+			<div class="center setPlanet">
+				<div class="planetName ">
+					<span class="chinese">
+						　　　
+					</span>
+				</div>
+
+				<div class="editImg canselFloat editPlanets">
+					<img src="img/planning/edit2.png">
+				</div>
 			</div>
-			<div class="selectPlanets chinese " href="#">
+<!-- 			<div class="selectPlanets chinese " href="#">
 				<span>
 					選擇星球
 				</span>
-			</div>
+			</div> -->
 
 			<div class="clearfix"></div>
 			<div class="borderStyle chinese">
@@ -288,148 +383,252 @@
 			<div class="borderStyle transparentTop">
 				<div class="views chinese">
 					<ul class="aa">
-						<li data-view="1" class="viewLi">
-							<div class="imgBorderStyle">
+						<li data-view="1" class="viewLi ">
+							<div class="imgBorderStyle viewsBoxSetting">
 								<div class="viewContent">
 									<img src="img/planning/p1_v1_03.jpg">
 									<span class="tag int">知性</span>
 									<p class="viewTitle">太空清真寺</p>
 									<p>與太空最接近的寺</p>
 								</div>
-								<span class="chinese addSchdule">+加入行程</span>
+								<span class="chinese addSchdule">
+									+
+									<span class="mobiTxt">
+									加入景點
+									</span>
+								</span>
+								<span class="chinese viewInfo">
+									<img src="img/planning/info.png">
+								</span>
 							</div>
 						</li>
 						
-						<li data-view="2"  ="viewLi">
-							<div class="imgBorderStyle">
+						<li data-view="2"  class="viewLi">
+							<div class="imgBorderStyle viewsBoxSetting">
 								<div class="viewContent">
 									<img src="img/planning/p1_v1_03.jpg">
 									<span class="tag int">知性</span>
 									<p class="viewTitle">地心清真寺</p>
 									<p>與地心最接近的寺</p>
 								</div>
-								<span class="chinese addSchdule">+加入行程</span>
+								<span class="chinese addSchdule">
+									+
+									<span class="mobiTxt">
+									加入景點
+									</span>
+								</span>
+								<span class="chinese viewInfo">
+									<img src="img/planning/info.png">
+								</span>
 							</div>
 						</li>
 						<li data-view="3"  class="viewLi">
-							<div class="imgBorderStyle">
+							<div class="imgBorderStyle viewsBoxSetting">
 								<div class="viewContent">
 									<img src="img/planning/p1_v1_03.jpg">
 									<span class="tag adv">冒險</span>
 									<p class="viewTitle">天上清真寺</p>
 									<p>與天空最接近的寺</p>
 								</div>
-								<span class="chinese addSchdule">+加入行程</span>
+								<span class="chinese addSchdule">
+									+
+									<span class="mobiTxt">
+									加入景點
+									</span>
+								</span>
+								<span class="chinese viewInfo">
+									<img src="img/planning/info.png">
+								</span>
 							</div>
 						</li>
 						<li data-view="4"  class="viewLi">
-							<div class="imgBorderStyle">
+							<div class="imgBorderStyle viewsBoxSetting">
 								<div class="viewContent">
 									<img src="img/planning/p1_v1_03.jpg">
 									<span class="tag tec">科技</span>
 									<p class="viewTitle">水上清真寺</p>
 									<p>與水面最接近的寺</p>
 								</div>
-								<span class="chinese addSchdule">+加入行程</span>
+								<span class="chinese addSchdule">
+									+
+									<span class="mobiTxt">
+									加入景點
+									</span>
+								</span>
+								<span class="chinese viewInfo">
+									<img src="img/planning/info.png">
+								</span>
 							</div>
 						</li>
 						<li data-view="5"  class="viewLi">
-							<div class="imgBorderStyle">
+							<div class="imgBorderStyle viewsBoxSetting">
 								<div class="viewContent">
 									<img src="img/planning/p1_v1_03.jpg">
 									<span class="tag hum">人文</span>
 									<p class="viewTitle">地底清真寺</p>
 									<p>與地底最接近的寺</p>
 								</div>
-								<span class="chinese addSchdule">+加入行程</span>
+								<span class="chinese addSchdule">
+									+
+									<span class="mobiTxt">
+									加入景點
+									</span>
+								</span>
+								<span class="chinese viewInfo">
+									<img src="img/planning/info.png">
+								</span>
 							</div>
 						</li>
 						<li data-view="6"  class="viewLi">
-							<div class="imgBorderStyle">
+							<div class="imgBorderStyle viewsBoxSetting">
 								<div class="viewContent">
 									<img src="img/planning/p1_v1_03.jpg">
 									<span class="tag fod">美食</span>
 									<p class="viewTitle">地底清真寺</p>
 									<p>與地底最接近的寺</p>
 								</div>
-								<span class="chinese addSchdule">+加入行程</span>
+								<span class="chinese addSchdule">
+									+
+									<span class="mobiTxt">
+									加入景點
+									</span>
+								</span>
+								<span class="chinese viewInfo">
+									<img src="img/planning/info.png">
+								</span>
 							</div>
 						</li>
 						<li data-view="7"  class="viewLi">
-							<div class="imgBorderStyle">
+							<div class="imgBorderStyle viewsBoxSetting">
 								<div class="viewContent">
 									<img src="img/planning/p1_v1_03.jpg">
 									<span class="tag fod">美食</span>
 									<p class="viewTitle">地底清真寺</p>
 									<p>與地底最接近的寺</p>
 								</div>
-								<span class="chinese addSchdule">+加入行程</span>
+								<span class="chinese addSchdule">
+									+
+									<span class="mobiTxt">
+									加入景點
+									</span>
+								</span>
+								<span class="chinese viewInfo">
+									<img src="img/planning/info.png">
+								</span>
 							</div>
 						</li>
 						<li data-view="8"  class="viewLi">
-							<div class="imgBorderStyle">
+							<div class="imgBorderStyle viewsBoxSetting">
 								<div class="viewContent">
 									<img src="img/planning/p1_v1_03.jpg">
 									<span class="tag adv">冒險</span>
 									<p class="viewTitle">地底清真寺</p>
 									<p>與地底最接近的寺</p>
 								</div>
-								<span class="chinese addSchdule">+加入行程</span>
+								<span class="chinese addSchdule">
+									+
+									<span class="mobiTxt">
+									加入景點
+									</span>
+								</span>
+								<span class="chinese viewInfo">
+									<img src="img/planning/info.png">
+								</span>
 							</div>
 						</li>
 						<li data-view="9"  class="viewLi">
-							<div class="imgBorderStyle">
+							<div class="imgBorderStyle viewsBoxSetting">
 								<div class="viewContent">
 									<img src="img/planning/p1_v1_03.jpg">
 									<span class="tag tec">科技</span>
 									<p class="viewTitle">地底清真寺</p>
 									<p>與地底最接近的寺</p>
 								</div>
-								<span class="chinese addSchdule">+加入行程</span>
+								<span class="chinese addSchdule">
+									+
+									<span class="mobiTxt">
+									加入景點
+									</span>
+								</span>
+								<span class="chinese viewInfo">
+									<img src="img/planning/info.png">
+								</span>
 							</div>
 						</li>
 						<li data-view="10"  class="viewLi">
-							<div class="imgBorderStyle">
+							<div class="imgBorderStyle viewsBoxSetting">
 								<div class="viewContent">
 									<img src="img/planning/p1_v1_03.jpg">
 									<span class="tag hum">人文</span>
 									<p class="viewTitle">地底清真寺</p>
 									<p>與地底最接近的寺</p>
 								</div>
-								<span class="chinese addSchdule">+加入行程</span>
+								<span class="chinese addSchdule">
+									+
+									<span class="mobiTxt">
+									加入景點
+									</span>
+								</span>
+								<span class="chinese viewInfo">
+									<img src="img/planning/info.png">
+								</span>
 							</div>
 						</li>
 						<li data-view="11"  class="viewLi">
-							<div class="imgBorderStyle">
+							<div class="imgBorderStyle viewsBoxSetting">
 								<div class="viewContent">
 									<img src="img/planning/p1_v1_03.jpg">
 									<span class="tag int">知性</span>
 									<p class="viewTitle">地底清真寺</p>
 									<p>與地底最接近的寺</p>
 								</div>
-								<span class="chinese addSchdule">+加入行程</span>
+								<span class="chinese addSchdule">
+									+
+									<span class="mobiTxt">
+									加入景點
+									</span>
+								</span>
+								<span class="chinese viewInfo">
+									<img src="img/planning/info.png">
+								</span>
 							</div>
 						</li>
 						<li data-view="12"  class="viewLi">
-							<div class="imgBorderStyle">
+							<div class="imgBorderStyle viewsBoxSetting">
 								<div class="viewContent">
 									<img src="img/planning/p1_v1_03.jpg">
 									<span class="tag adv">冒險</span>
 									<p class="viewTitle">地底清真寺</p>
 									<p>與地底最接近的寺</p>
 								</div>
-								<span class="chinese addSchdule">+加入行程</span>
+								<span class="chinese addSchdule">
+									+
+									<span class="mobiTxt">
+									加入景點
+									</span>
+								</span>
+								<span class="chinese viewInfo">
+									<img src="img/planning/info.png">
+								</span>
 							</div>
 						</li>
 						<li data-view="13"  class="viewLi">
-							<div class="imgBorderStyle">
+							<div class="imgBorderStyle viewsBoxSetting">
 								<div class="viewContent">
 									<img src="img/planning/p1_v1_03.jpg">
 									<span class="tag tec">科技</span>
 									<p class="viewTitle">地底清真寺</p>
 									<p>與地底最接近的寺</p>
 								</div>
-								<span class="chinese addSchdule">+加入行程</span>
+								<span class="chinese addSchdule">
+									+
+									<span class="mobiTxt">
+									加入景點
+									</span>
+								</span>
+								<span class="chinese viewInfo">
+									<img src="img/planning/info.png">
+								</span>
 							</div>
 						</li>
 					</ul>
@@ -465,9 +664,7 @@
 							</div>
 							<div class="borderStyle viewDescrip chinese">
 								<p>簡介</p>
-								<p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis explicabo natus hic, sequi, nobis fugiat autem harum, blanditiis praesentium nemo facilis aliquid quasi voluptas error. Distinctio, deleniti repellat facilis eligendi!</span>
-								<span>Odit optio quisquam nihil fugiat voluptatum adipisci obcaecati ullam in hic quaerat expedita, facilis sed itaque! Accusantium, modi unde iste neque blanditiis voluptatem delectus veniam eos eligendi rerum expedita laboriosam!</span>
-								<span>Consectetur sunt maxime, ab asperiores quis veniam, voluptas inventore non tempore rem officia voluptatibus reiciendis voluptatem fugiat, nihil unde enim porro doloribus nulla qui mollitia natus ea perspiciatis! Impedit, deleniti?</span></p>
+								<p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis explicabo natus hic, sequi, nobis fugiat autem harum, blanditiis praesentium nemo facilis aliquid quasi voluptas error. Distinctio, deleniti repellat facilis eligendi!</span></p>
 							</div>
 						</div> 
 					</div>
@@ -477,28 +674,35 @@
 
 		</div>
 		<div class="clearfix"></div>
-		<div class="export">
-				<div class="chinese exportTitle">
+	 </div>
+	</div>
+
+
+ </content>
+<div class="expertFilter">	
+		<div class="expert">
+				
+				<div class="borderStyle expertBorder">
+					<div class="chinese expertTitle">
 					<span>
 						專家推薦
 					</span>
-				</div>
-				<div class="borderStyle exportBorder">
-					<div class="exportList">
+					</div>
+					<div class="expertList">
 						<ul>
 							<li>
 								<div class="positionRE">
-									<div class="exportImg">
+									<div class="expertImg">
 										<img src="img/planning/emma.jpg">
 									</div>
-									<div class="exportNameBG ">
+									<div class="expertNameBG ">
 										
 									</div>
-									<span class="exportName chinese">
+									<span class="expertName chinese">
 											火仙子
 									</span>
 
-									<div class="exportBtn">
+									<div class="expertBtn">
 										<span class="chinese">
 											選擇
 										</span>
@@ -508,17 +712,17 @@
 							
 							<li>
 								<div class="positionRE">
-									<div class="exportImg">
+									<div class="expertImg">
 										<img src="img/planning/emma.jpg">
 									</div>
-									<div class="exportNameBG ">
+									<div class="expertNameBG ">
 										
 									</div>
-									<span class="exportName chinese">
+									<span class="expertName chinese">
 											火仙子
 									</span>
 
-									<div class="exportBtn">
+									<div class="expertBtn">
 										<span class="chinese">
 											選擇
 										</span>
@@ -527,17 +731,17 @@
 							</li>
 							<li>
 								<div class="positionRE">
-									<div class="exportImg">
+									<div class="expertImg">
 										<img src="img/planning/emma.jpg">
 									</div>
-									<div class="exportNameBG ">
+									<div class="expertNameBG ">
 										
 									</div>
-									<span class="exportName chinese">
+									<span class="expertName chinese">
 											火仙子
 									</span>
 
-									<div class="exportBtn">
+									<div class="expertBtn">
 										<span class="chinese">
 											選擇
 										</span>
@@ -547,16 +751,13 @@
 						</ul>
 					</div>
 				</div>
-
+				<span class="cancelBtn chinese">x</span>
 			</div>
+</div>
 
-	</div>
-
-
- </content>
  <div class="clearfix"></div>
 <div class="chinese commit">
-	<span class="Btn">提交</span>
+	<span class="Btn  saveBtn">儲存行程</span>
 </div>
 
 <footer>
@@ -567,6 +768,58 @@
         </div>
         
 </footer>
+<script type="text/javascript">
+			var commitBtn = document.querySelector('.saveBtn');
+				commitBtn.addEventListener('click',function(){
+					var cc = confirm('行程已儲存\n"確定"後將根據您所選的行程安排適合的專家\n"取消"將移至會員行程頁面');
+					console.log(cc);
+					if(cc==true){
+					document.querySelector('.expertFilter').style.display ='block';			
+					}else{
+					alert('跳');
+					}
+			});
+var planetFilter = document.querySelector('.planetFilter');
+function getPlanetName(){
+		var planetName = document.querySelector('.planetName');
+		var txt = this.querySelector('p');
+		// console.log(txt.innerHTML);
+		sessionStorage.setItem("planet", txt.innerHTML);
+		var x =sessionStorage.getItem("planet");
+		// console.log(x);
+		
+		// planetName.style.fontFamily='微軟正黑體';
+		// planetName.style.lineHeight='35px';
+		
+		let a = confirm('更換星球將會重置所有安排')
+		if (a==true) {
+			planetName.innerHTML = x;
+			planetFilter.style.display='none';
+			window.location.reload();
+		}else{
+			planetFilter.style.display='none';
+			
+		}
+		
+		// console.log(cloneDayUl);
+		// console.log(getUl);
+		// var rep= sessionStorage.getItem("replace");
+
+		// dayParent.replaceChild(cloneDayUl,getUl);
+		// schduleBox.replaceChild(cloneSchUl,getSchUl);
+		
+		// reflashInfo();
+		// console.log(cloneDayUl);
+		// console.log(getUl);
+		 // cloneDayUl = getUl.cloneNode(true);
+		 // cloneSchUl = getSchUl.cloneNode(true);
+		// console.log(cloneDayUl);
+		// console.log(getUl);
+		// reflashInfo();
+
+}
+
+</script>
 <!-- 拖拉js -->
  <script type="text/javascript">
 	 Sortable.create(document.getElementById('day'), {
@@ -581,12 +834,7 @@
 	Sortable.create(document.getElementById('schduleDay3'), {
                                 animation: 150,
                             });
-	Sortable.create(document.getElementById('schduleDay4'), {
-                                animation: 150,
-                            });
-	Sortable.create(document.getElementById('schduleDay5'), {
-                                animation: 150,
-                            });
+
 </script>
 <!-- 月曆jquery -->
 <script type="text/javascript">
