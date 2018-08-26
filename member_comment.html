@@ -171,36 +171,7 @@
 <!-- ======lightBox===== -->
 
 
-<script>
-    $('.favorite_tab').on('click',function(){
 
-            $('.favorite_tab').not(this).removeClass('active');
-            $(this).addClass('active');		
-
-        var tabPageToShow = $(this).attr('rel');		
-        $('.favorite_page.active').hide(0,showNextTabPage);
-
-        function showNextTabPage(){
-            $('#'+tabPageToShow).show(0,function(){
-                $(this).addClass('active');
-            })
-        }		
-    });
-
-
-
-    $(function () {
-        $(".commentBtn").click(function () {
-            $("#lightBox_com_father").css('display', 'block');
-        })
-    })
-
-    $(function () {
-        $('input[type="button"]').click(function () {
-            $("#lightBox_com_father").hide();
-        })
-    })
-</script>
 
 
 
@@ -214,6 +185,7 @@
 </footer>
 <!-- jquery -->
 <script src="js/style.js"></script>
+<script src="js/member_comment.js"></script>
 
 </body>
 
