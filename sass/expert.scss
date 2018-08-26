@@ -280,39 +280,41 @@ a {
         position: relative;
         overflow: hidden;
         .king {
+            position: absolute;
+            left: 5px;
+            top: 10px;
             width: 50px;
             transform: rotate(-30deg);
-            margin-left: -60px;
-            margin-top: -20px;
+            
         }
-        h2,
-        h3 {
+        h2{
             font-size: 22px;
-            display: inline-block;
-            margin: 40px 5px 10px;
+            margin-top: 40px;
         }
         h3 {
             font-size: 20px;
+            margin: 10px 0;
         }
         .attr {
             position: absolute;
             background-color: $attrBlue;
             font-size: 18px;
             padding: 5px 8px;
-            right: 40px;
-            top: 75px;
+            right: 42px;
+            top: 108px;
             z-index: 5;
         }
         .pic {
             // outline: 1px solid #f00;
             width: 180px;
-            height: 280px;
+            height: 260px;
             overflow: hidden;
             margin: auto;
             position: relative;
             cursor: pointer;
             img {
                 width: 100%;
+                margin-top: -10px;
                 transform: scale(1);
                 transition: 0.5s;
             }
@@ -325,7 +327,7 @@ a {
             margin: auto;
             background: linear-gradient(to top, #000, rgba(0, 0, 0, 0.2) 100%);
             .score {
-                padding-top: 25px;
+                padding-top: 15px;
                 span {
                     color: #ffffff;
                     font-size: 16px;
@@ -333,7 +335,7 @@ a {
                 }
                 img {
                     vertical-align: text-bottom;
-                    width: 20px;
+                    width: 18px;
                 }
             }
             .mark {
@@ -341,17 +343,13 @@ a {
                 font-size: 15px;
                 color: #ffffff;
                 img {
-                    width: 25px;
+                    width: 22px;
                     margin: 10px;
                 }
             }
         }
     }
     @media screen and (min-width:650px) {
-        .expertBox {
-            // box-shadow: 0 0 5px 3px rgba(255, 255, 255, 0.2);
-            // background-color: rgba(0, 0, 0, 0.6);
-        }
         .expertBox.blue {
             background-image: url('../img/expertImg/techFrame-blue.png');
         }
@@ -389,22 +387,25 @@ a {
         .expertBox {
             width: 200px;
             margin: 15px;
-            height: 283px;
+            height: 320px;
+            background-size: cover;
+            
             h2 {
                 font-size: 20px;
+                margin-top: 30px;
+            }
+            h3{font-size: 18px;
+                margin: 7px 0;}
+            .attr {
+                font-size: 15px;
+                right: 37px;
+                top: 88px;
             }
             .pic {
-                width: 130px;
-                .attr {
-                    font-size: 15px;
-                    width: 45px;
-                    height: 45px;
-                    line-height: 45px;
-                }
+                width: 140px;
+                height: 210px;
             }
-            h3 {
-                font-size: 16px;
-            }
+            
             .score {
                 margin-top: 10px;
                 span {
@@ -436,48 +437,58 @@ a {
             border-bottom: 2px dashed $borderColorGreen;
         }
         .expertBox {
+            outline: 1px solid #fff;
             width: 90%;
             padding-bottom: 15px;
             margin: 15px 15px 5px;
             height: 162px;
+            position: relative;
+            .king{
+                z-index: 10;
+            }
+            h2,h3{
+                position: absolute;
+                left: 200px;
+            }
             h2 {
                 font-size: 18px;
-                margin: 0 auto 10px;
+                
             }
             h3 {
                 font-size: 16px;
-                display: none;
+                top: 48px;
             }
-            .main {
-                float: left;
-                width: 50%;
-                display: inline-block;
-                .pic {
-                    width: 100px;
+            .pic{
+                outline: 1px solid #f00;
+                width: 100%;
+                position: absolute;
+                top: 18px;
+                a{
+                    width: 50%;
+                    height: 135px;
+                    overflow: hidden;
+                    float: left;
+                    img{width: 120px;}
+                }
+                .aside {
+                    position: static;
+                    float: right;
+                    width: 50%;
+                    text-align: left;
+                    margin-top: 50px;
+                    background: transparent;
+                    .score,
+                    .mark {
+                    }
                 }
             }
-            .aside {
-                float: right;
-                width: 50%;
-                display: inline-block;
-                text-align: left;
-                margin-top: 10px;
-                h3 {
-                    display: block;
-                    padding-left: 20px;
-                    font-size: 18px;
-                }
-                .score,
-                .mark {
-                    margin-top: 5px;
-                }
+            .pic:after {
+                content: "";
+                display: block;
+                clear: both;
             }
         }
-        .expertBox:after {
-            content: "";
-            display: block;
-            clear: both;
-        }
+        
     }
     .expertBox.blue {
         h2 {
@@ -525,7 +536,8 @@ a {
     overflow: auto;
     text-align: center;
     background-color: rgba(0, 0, 0, 1);
-    border: 3px solid rgba(108, 213, 255, 0.5); // #closeBtn {
+    border: 3px solid rgba(108, 213, 255, 0.5);
+    // #closeBtn {
     //     width: 50px;
     //     float: right;
     //     cursor: pointer; 
