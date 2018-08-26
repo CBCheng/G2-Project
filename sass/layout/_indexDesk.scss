@@ -494,7 +494,8 @@ nav {
         color: #fff;
         margin-left: 5%;
         line-height: 120%;
-        font-weight: bold;
+        font-weight: 500;
+        font-size: 2vw;
     }
 }
 .pt2Eng{
@@ -502,10 +503,11 @@ nav {
     width: 40%;
 }
 .pt2Cn{
-    width: 60%;
-    padding: 5% 0% 10% 0%;
+    width: 62%;
+    padding: 5% 0% 5% 0%;
 }
 .yesNoImg{
+    display: block;
     position: absolute;
     width: 100%;
     height: 110%;
@@ -651,7 +653,6 @@ nav {
         left: 10%;
         display: block;
         width: 8%;
-        height: 5%;
         border: 1px solid #6cd5ff;
         font: 1vw/2.3vw 微軟正黑體;
         text-align: center;
@@ -683,12 +684,12 @@ nav {
     }
     .scWhite{
         background-color: rgba($color: #fff, $alpha: .6);
-        transition: 1s;
+        transition: .5s;
         transform-origin: right center;
     }
     .scBlack{
         background-color: rgba($color: #000, $alpha: .7);
-        transition: 1s;
+        transition: .5s;
         transform-origin: left center;
     }
 }
@@ -882,7 +883,6 @@ nav {
         margin: 1% 0% 0% 10%;
         display: block;
         width: 10%;
-        height: 5%;
         border: 1px solid #6cd5ff;
         font: 1vw/2.3vw 微軟正黑體;
         text-align: center;
@@ -1035,6 +1035,7 @@ nav {
     box-orient: vertical; 
 }
 .travelPic{
+    display: block;
 	width:33%;
     position: absolute;
     bottom: 1%;
@@ -1073,6 +1074,7 @@ nav {
 	padding:5%;
 }
 .travelBtn{
+    display: block;
     position: absolute;
     bottom: 9%;
     left: 82.5%;
@@ -1098,4 +1100,5 @@ nav {
 }
 .copyright{
     background-color: #515052;
+    padding: 15px;
 }
