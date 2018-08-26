@@ -481,34 +481,35 @@ nav {
   position: relative;
   overflow: hidden; }
   .grid .expertBox .king {
+    position: absolute;
+    left: 5px;
+    top: 10px;
     width: 50px;
-    transform: rotate(-30deg);
-    margin-left: -60px;
-    margin-top: -20px; }
-  .grid .expertBox h2,
-  .grid .expertBox h3 {
+    transform: rotate(-30deg); }
+  .grid .expertBox h2 {
     font-size: 22px;
-    display: inline-block;
-    margin: 40px 5px 10px; }
+    margin-top: 40px; }
   .grid .expertBox h3 {
-    font-size: 20px; }
+    font-size: 20px;
+    margin: 10px 0; }
   .grid .expertBox .attr {
     position: absolute;
     background-color: #094f91;
     font-size: 18px;
     padding: 5px 8px;
-    right: 40px;
-    top: 75px;
+    right: 42px;
+    top: 108px;
     z-index: 5; }
   .grid .expertBox .pic {
     width: 180px;
-    height: 280px;
+    height: 260px;
     overflow: hidden;
     margin: auto;
     position: relative;
     cursor: pointer; }
     .grid .expertBox .pic img {
       width: 100%;
+      margin-top: -10px;
       transform: scale(1);
       transition: 0.5s; }
   .grid .expertBox .aside {
@@ -519,19 +520,19 @@ nav {
     margin: auto;
     background: linear-gradient(to top, #000, rgba(0, 0, 0, 0.2) 100%); }
     .grid .expertBox .aside .score {
-      padding-top: 25px; }
+      padding-top: 15px; }
       .grid .expertBox .aside .score span {
         color: #ffffff;
         font-size: 16px;
         padding-right: 5px; }
       .grid .expertBox .aside .score img {
         vertical-align: text-bottom;
-        width: 20px; }
+        width: 18px; }
     .grid .expertBox .aside .mark {
       font-size: 15px;
       color: #ffffff; }
       .grid .expertBox .aside .mark img {
-        width: 25px;
+        width: 22px;
         margin: 10px; }
 
 @media screen and (min-width: 650px) {
@@ -565,18 +566,21 @@ nav {
   .grid .expertBox {
     width: 200px;
     margin: 15px;
-    height: 283px; }
+    height: 320px;
+    background-size: cover; }
     .grid .expertBox h2 {
-      font-size: 20px; }
-    .grid .expertBox .pic {
-      width: 130px; }
-      .grid .expertBox .pic .attr {
-        font-size: 15px;
-        width: 45px;
-        height: 45px;
-        line-height: 45px; }
+      font-size: 20px;
+      margin-top: 30px; }
     .grid .expertBox h3 {
-      font-size: 16px; }
+      font-size: 18px;
+      margin: 7px 0; }
+    .grid .expertBox .attr {
+      font-size: 15px;
+      right: 37px;
+      top: 88px; }
+    .grid .expertBox .pic {
+      width: 140px;
+      height: 210px; }
     .grid .expertBox .score {
       margin-top: 10px; }
       .grid .expertBox .score span {
@@ -599,39 +603,45 @@ nav {
   .grid .expertBox.green {
     border-bottom: 2px dashed rgba(128, 194, 105, 0.5); }
   .grid .expertBox {
+    outline: 1px solid #fff;
     width: 90%;
     padding-bottom: 15px;
     margin: 15px 15px 5px;
-    height: 162px; }
+    height: 162px;
+    position: relative; }
+    .grid .expertBox .king {
+      z-index: 10; }
+    .grid .expertBox h2, .grid .expertBox h3 {
+      position: absolute;
+      left: 200px; }
     .grid .expertBox h2 {
-      font-size: 18px;
-      margin: 0 auto 10px; }
+      font-size: 18px; }
     .grid .expertBox h3 {
       font-size: 16px;
-      display: none; }
-    .grid .expertBox .main {
-      float: left;
-      width: 50%;
-      display: inline-block; }
-      .grid .expertBox .main .pic {
-        width: 100px; }
-    .grid .expertBox .aside {
-      float: right;
-      width: 50%;
-      display: inline-block;
-      text-align: left;
-      margin-top: 10px; }
-      .grid .expertBox .aside h3 {
-        display: block;
-        padding-left: 20px;
-        font-size: 18px; }
-      .grid .expertBox .aside .score,
-      .grid .expertBox .aside .mark {
-        margin-top: 5px; }
-  .grid .expertBox:after {
-    content: "";
-    display: block;
-    clear: both; } }
+      top: 48px; }
+    .grid .expertBox .pic {
+      outline: 1px solid #f00;
+      width: 100%;
+      position: absolute;
+      top: 18px; }
+      .grid .expertBox .pic a {
+        width: 50%;
+        height: 135px;
+        overflow: hidden;
+        float: left; }
+        .grid .expertBox .pic a img {
+          width: 120px; }
+      .grid .expertBox .pic .aside {
+        position: static;
+        float: right;
+        width: 50%;
+        text-align: left;
+        margin-top: 50px;
+        background: transparent; }
+    .grid .expertBox .pic:after {
+      content: "";
+      display: block;
+      clear: both; } }
 
 .grid .expertBox.blue h2 {
   color: #6cd5ff; }
