@@ -9,7 +9,22 @@
         text-decoration: none; color: #fff;
     }
     
-    
+    ::-webkit-scrollbar {
+        width: 15px;
+        background: #202164; }
+      
+      /* Track */
+      ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey; }
+      
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #95cce4;
+        border-radius: 10px; }
+      
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #2f83ad; }
     .full{
         width:100%;
         overflow: hidden;
@@ -19,11 +34,11 @@
             width:80%;
             .wrapQuiz{
                 height: 700px;
-                min-height: 850px;
+                min-height: 880px;
                 position: relative;
                 width:100%;
                 .sectionQuiz{
-                    display: block;
+                    display: none;
                     height:100%;
                     width:100%;
                     text-align: center;
@@ -229,7 +244,6 @@
                 .sectionQuiz4{
                     width:100%;
                     display: none;
-                    // background-color: rgb(38, 132, 219);
                     top:0;
                     left:0;
                     opacity: 0;
@@ -387,12 +401,13 @@
         left:0;
         position:absolute; 
         width: 100%; 
-        height: 100%;
+        height: 150%;
         background-color: #232741; 
         /* background-image: url("http://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/1237px-NASA_logo.svg.png");  */
         background-image: url("../img/poa/bg11-2.png");
         background-repeat: no-repeat; 
         background-size: cover; 
+        background-position: 50% 50%;
         z-index: -1;
     } 
        

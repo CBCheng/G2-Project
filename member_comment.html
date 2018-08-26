@@ -72,6 +72,26 @@
 
 <div class="container">
     <div class="all_content ">
+            <div class="sidebar memberPage">
+                    <ul class="tab-grop">
+                        <h1 class="where">會員中心</h1>
+                        <li class="">
+                            <a data-toggle="tab" rel="trip" href="member_mytrip.html">我的行程</a>
+                        </li> 
+                         <li class="">
+                            <a data-toggle="tab" rel="favorite" href="member_favorite.html">我的收藏</a>
+                        </li> 
+                        <li class="default">
+                            <a data-toggle="tab" rel="score" href="member_comment.html">專家評論</a>
+                        </li>
+                        <li class="">
+                            <a data-toggle="tab" rel="order_mg" href="member_order.html">我的訂單</a>
+                        </li>
+                        <li class="">
+                            <a data-toggle="tab" rel="account" href="member_profile.html">會員資料修改</a>
+                        </li>
+                    </ul>
+                </div>
         <div class="comContent">
             <div class="comment_mg_box">
                 <div class="member_title">
@@ -84,10 +104,10 @@
                     <div class="title_center_line"></div>
                 </div>
                 <h3>您遊玩過的專家</h3>
-                <button rel="itemContent_no" class="favorite_tab btn ">尚未評論</button>
-                <button rel="itemContent_al" class="favorite_tab btn active">已評論</button>
+                <button rel="itemContent_no" class="favorite_tab btn active">尚未評論</button>
+                <button rel="itemContent_al" class="favorite_tab btn ">已評論</button>
                 
-                <div id="itemContent_no" class="favorite_page active" style="display: none;">
+                <div id="itemContent_no" class="favorite_page active" style="">
                     <div class="comItem_no">
                         <div class="expImg">
                             <img src="img/memComment/A01.jpg" alt="A01">
@@ -109,7 +129,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="itemContent_al" class="favorite_page active" style="">
+                <div id="itemContent_al" class="favorite_page active" style="display: none;">
                     <div class="comItem_al">
                         <div class="expImg">
                             <img src="img/memComment/A01.jpg" alt="A01">
@@ -140,6 +160,8 @@
 </div>
 
 
+<!-- ======lightBox===== -->
+<div id="lightBox_com_father">
 <div id="lightBox_com">
     <h1>瓦特星 Alan</h1>
     <div class="message">
@@ -155,43 +177,21 @@
             <img src="img/memComment/starWhite.png" alt="starWhite">
             <img src="img/memComment/starWhite.png" alt="starWhite">
         </div>
-        <textarea name="" id="" cols="" rows="" placeholder="詳細說明您對此專家的評論"></textarea>
+        <form action="member_comment.php" method="get">
+            <textarea name="" id="" cols="5" rows="5" placeholder="詳細說明您對此專家的評論"></textarea>
+            <br>
+            <div class="submit">
+                <input type="button" value="取消">
+                <input type="submit" value="發佈">
+             </div>
+        </form>         
     </div>
-    
 </div>
+</div>
+<!-- ======lightBox===== -->
 
 
 
-<script>
-    $('.favorite_tab').on('click',function(){
-
-            $('.favorite_tab').not(this).removeClass('active');
-            $(this).addClass('active');		
-
-        var tabPageToShow = $(this).attr('rel');		
-        $('.favorite_page.active').hide(0,showNextTabPage);
-
-        function showNextTabPage(){
-            $('#'+tabPageToShow).show(0,function(){
-                $(this).addClass('active');
-            })
-        }		
-    });
-
-
-
-    // $(function () {
-    //     $("#box1").click(function () {
-    //         $("#lightBox_com").css('display', 'block');
-    //     })
-    // })
-
-    // $(function () {
-    //     $("#closeBtn").click(function () {
-    //         $("#lightBox_com").hide();
-    //     })
-    // })
-</script>
 
 
 
@@ -205,6 +205,7 @@
 </footer>
 <!-- jquery -->
 <script src="js/style.js"></script>
+<script src="js/member_comment.js"></script>
 
 </body>
 
