@@ -777,7 +777,7 @@
 @media screen and (min-width: 970px) {
   /*RWD*/
   .mW_bigBox {
-    width: 70%; }
+    width: 100%; }
   /*.lightBox*/
   .plightBoxAll {
     bottom: 0;

@@ -18,31 +18,6 @@ a{
 }
 @import "layout/footer";
 
-::-webkit-scrollbar {
-    width: 15px;
-    background: #202164;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 0px grey;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #95cce4;
-    border-radius: 10px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #2f83ad;
-}
-
-*{
-    // outline: 1px solid #f00;
-    box-sizing: border-box;
-}
 
 nav {
     width: 100%;
@@ -56,20 +31,7 @@ nav {
     z-index: 100;
     text-align: center;
     letter-spacing: 2px;
-    font-size: 18px; 
-//----------------------
-    width: 100%;
-          height: 50px;
-          box-sizing: content-box;
-          padding: 5px 0 5px 0;
-          background-image: linear-gradient(to top, rgba(0, 255, 255, 0.3), rgba(0, 183, 255, 0.3) 100%);
-          position: fixed;
-          top: 0;
-          left: 0;
-          z-index: 100;
-          letter-spacing: 2px;
-          font-size: 18px;
-}
+    font-size: 18px; }
   
   .navColor {
     background-color: linear-gradient(to top, rgba(0, 255, 255, 0.3), rgba(0, 183, 255, 0.3) 100%);
@@ -80,23 +42,11 @@ nav {
     top: 0;
     left: 0;
     opacity: .5;
-    overflow: hidden; 
-    //-------------
-    width: 100%;
-          height: 60px;
-          z-index: 80;
-          position: fixed;
-          top: 0;
-          left: 0;
-          overflow: hidden;
-}
+    overflow: hidden; }
   
   .logo {
     display: inline-block;
-    width: 100px; 
-//----------
-width: 50px;
-}
+    width: 100px; }
   .logo img{
       width: 100%;
   }
@@ -151,104 +101,32 @@ width: 50px;
   .memberSelect li {
     padding: 10px; }
   
+  .hambger, .menuMobile {
+    display: none; }
+  
   .member a:hover, .menu a:hover, .memberSelect a:hover {
     color: #6cd5ff; }
-
-    .menu, .member {
-        display: none; }
-    .hambger {
-        width: 22px;
-        height: 20px;
-        display: inline-block;
-        position: absolute;
-        right: 10px;
-        top: 0;
-        bottom: 0;
-        z-index: 110;
-        margin: auto; } 
-      
-      .line {
-        width: 100%;
-        height: 3px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        border-radius: 50px;
-        background-color: #fff;
-        transform: translate(-50%, -50%) rotate(0deg);
-        transition: all ease 0.5s; }
-      
-      .line:before, .line:after {
-        content: "";
-        position: absolute;
-        height: inherit;
-        border-radius: inherit;
-        background-color: inherit;
-        margin: auto;
-        width: 50%;
-        transition: all ease 0.5s; }
-      
-      .line:before {
-        top: -8px;
-        left: 0;
-        transform-origin: left; }
-      
-      .line:after {
-        bottom: -8px;
-        right: 0;
-        transform-origin: right; }
-      
-      .open {
-        transform: translate(-50%, -50%) rotate(135deg); }
-      
-      .open:before {
-        top: 0;
-        transform: translateX(100%) rotate(-90deg); }
-      
-      .open:after {
-        bottom: 0;
-        transform: translateX(-100%) rotate(-90deg); }
-      
-      .menuMobile {
-        display: block;
-        width: 100%;
-        height: 100vh;
-        line-height: 40px;
-        padding-top: 50px;
-        background-color: rgba(0, 255, 255, 0.3);
-        position: absolute;
-        top: 60px;
-        right: -100%;
-        transition: .8s; }
-      
-      .activeM {
-        position: absolute;
-        top: 60px;
-        right: 0; }
-      
-      .activeB {
-        color: #6cd5ff; }
 
 #section1{
     width: 100%;
     height: 0;
-    padding-bottom: 150%;
+    padding-bottom: 50%;
     position: relative;
 }
 #section2{
     width: 100%;
     height: 0;
-    padding-bottom: 150%;
+    padding-bottom: 50%;
     position: relative;
 }
 #section3{
     width: 100%;
     height: 0;
-    padding-bottom: 150%;
+    padding-bottom: 50%;
     position: relative;
 }
 .part1,.part2,.part3,.part4{
-    background-size: auto 100%;
+    background-size: 100% 100%;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -268,12 +146,13 @@ width: 50px;
     h1{
         position: absolute;
         top: 54%;
-        right: 20%;
+        right: 15%;
+        font-size: 2.2vw;
         color: #fff;
     }
     .ml14 {
-        font-weight: 500;
-        font-size: 5vw;
+        font-weight: 200;
+        font-size: 2.2vw;
         .text-wrapper {
             position: relative;
             display: inline-block;
@@ -285,7 +164,7 @@ width: 50px;
             opacity: 0;
             position: absolute;
             left: 0;
-            height: 0.5px;
+            height: 2px;
             width: 100%;
             background-color: #fff;
             transform-origin: 100% 100%;
@@ -293,14 +172,14 @@ width: 50px;
         }
         .letter {
             display: inline-block;
-            line-height: 1.2em;
+            line-height: 1em;
         }
     }
     .part1H1Bg{
-        width: 75%;
+        width: 45%;
         position: absolute;
-        top: 50%;
-        right: 0%;
+        top: 43.5%;
+        right: 1%;
         animation: h1Bg 6s infinite;
     }
 }
@@ -317,33 +196,33 @@ width: 50px;
     cursor: pointer;
     position: absolute;
     img{
-        height: 50%;
+        height: 100%;
         position: absolute;
     }
     .planetBg{
-        height: 100%;
-        top: -22%;
-        right: -40%; 
+        height: 180%;
+        top: -37%;
+        right: 10%; 
     }
     span{
         color: rgba($color: #fff, $alpha: .5);
         position: absolute;
         top: 40%;
-        right: -100%;
+        right: -70%;
         z-index: 5;
-        font: 150% 微軟正黑體;
+        font: 250% 微軟正黑體;
     }
 }
 .choPlt1{
-    top: 55%;
+    top: 21%;
     left: -5%;
 }
 .choPlt2{
-    top: 70%;
+    top: 46%;
     left: 5%;
 }
 .choPlt3{
-    top: 85%;
+    top: 71%;
     left: -5%;
 }
 .choPlt2{
@@ -352,10 +231,10 @@ width: 50px;
     }
 }
 .bigPlt{
-    width: 50%;
+    width: 36%;
     position: absolute;
-    top: 15%;
-    left: 25%;
+    top: 21%;
+    left: 32%;
     transition: .5s;
     img{
         width: 100%;
@@ -430,7 +309,7 @@ width: 50px;
     border-radius: 30px;  
     z-index: 5;  
     opacity: 0;
-    border: 1px solid #fff;
+    border: 4px solid #fff;
 }
 .pulse0s{
     animation: dotHover2 4.8s infinite;
@@ -542,89 +421,69 @@ width: 50px;
     z-index: 10;
     width: 100%;
     height: 100%;
-    background-color: rgba($color: #000, $alpha: .7);
+    background-color: rgba($color: #000, $alpha: .5);
     transform: rotateX(90deg);
     transition: .5s cubic-bezier(0.23, 1, 0.32, 1);
     .viewItem{
         position: relative;
-        width: 70%;
+        width: 45%;
         height: 0%;
-        padding-bottom: 43%;
-        margin: 50% auto auto;
+        padding-bottom: 29%;
+        margin: 13% auto auto;
         background-image: url('../img/index/p1_v2_03.jpg');
         background-size: 102%;
-        border: 1px solid #6cd5ff;
+        border: 2px solid #6cd5ff;
         h2{
-            font-size: 5vw;
+            font-size: 2vw;
             position: absolute;
-            bottom: -18%;
+            bottom: 0;
             display: block;
-            padding-left: 0%;
+            padding-left: 5%;
             width: 100%;
             height: 10%;
             line-height: 3vw;
+            background-color: rgba($color: #000, $alpha: .5);
         }
         a{
             position: absolute;
             text-align: center;
             display: block;
-            font: 3.5vw/7vw 微軟正黑體;
-            width: 50%;
-            height: 17%;
-            bottom:-20%;
-            right: 0%;
-            border: 1px solid #6cd5ff;
+            font: 1vw/1.8vw 微軟正黑體;
+            width: 20%;
+            height: 7%;
+            bottom: 1.5%;
+            right: 0.7%;
+            border: 2px solid #6cd5ff;
+        }
+        a:hover{
+            color: #000;
+            background-color: #6cd5ff;
         }
         .exit{
             position: absolute;
-            top: -25%;
-            right: 0%;
-            width: 8%;
-            // height: 20%;
-            // clip-path: polygon(100% 100%, 100% 0, 0 0);
+            top: 1.5%;
+            right: 1%;
+            width: 8.7%;
+            height: 13%;
+            clip-path: polygon(100% 100%, 100% 0, 0 0);
             background: #6cd5ff;
             cursor: pointer;
         }
         img{
             position: absolute;
-            // top: 12%;
-            // right: 11%;
-            width: 100%;
+            top: 12%;
+            right: 11%;
+            width: 32%;
         }
     }  
 }
 .mobViewBox{
-    width: 65%;
-    padding-bottom: 50%;
-    position: absolute;
-    bottom: 5%;
-    right: 5%;
-    border: 1px solid #6cd5ff;
-    box-shadow: 0px 0px 5px 2px #9df4fff8;
-    .mobViewItem{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: rgba($color: #000, $alpha: .5);
-        overflow: auto;
-        padding: 2%;
-        span{
-            display: block;
-            width: 90%;
-            font-size: 4vw;
-            margin: 5% 2% 5% 2%;
-            padding: 3%;
-            border: 1px solid #6cd5ff;
-        }
-    }
-    .item1,.item3{
-        display: none;
-    }
+    display: none;
 }
 // <!-- part1 end -->
 // <!-- part2 start -->
 .pt2Title{
-    width: 80%;
+    width: 20%;
     padding-top: 10%;
     margin: auto;
     background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 99%,rgba(0,0,0,0.65) 100%);
@@ -636,19 +495,19 @@ width: 50px;
         margin-left: 5%;
         line-height: 120%;
         font-weight: 500;
-        font-size: 5vw;
+        font-size: 2vw;
     }
 }
 .pt2Eng{
-    padding-top: 30%;
+    padding-top: 40%;
     width: 40%;
 }
 .pt2Cn{
-    width: 50%;
-    padding: 5% 0% 10% 0%;
+    width: 62%;
+    padding: 5% 0% 5% 0%;
 }
 .yesNoImg{
-    display: none;
+    display: block;
     position: absolute;
     width: 100%;
     height: 110%;
@@ -666,10 +525,10 @@ width: 50px;
 .yesNo{
     position: absolute;
     top: 52.7%;
-    width: 30%;
+    width: 15%;
     border-radius: 50%;
-    border: 1px solid #6cd5ff;
-    padding-bottom: 30%;
+    border: 2px solid #6cd5ff;
+    padding-bottom: 15%;
     transition: 1s;
     span{
         position: absolute;
@@ -688,13 +547,13 @@ width: 50px;
     }
     a{
         position: absolute;
-        top: 0%;
-        left: 0%;
+        top: 61%;
+        left: 25%;
         display: block;
         font: 1.2vw/2.5vw 微軟正黑體;
         text-align: center;
-        width: 100%;
-        height: 100%;
+        width: 50%;
+        height: 17%;
         cursor: pointer;
         box-shadow: 0px 0px 20px 2px #000;
         opacity: 0;
@@ -703,29 +562,29 @@ width: 50px;
 .yesInside{
     position: absolute;
     top: 53.1%;
-    left: 11.2%;
-    width: 29.5%;
+    left: 13.5%;
+    width: 15%;
     animation: ynInRotate 12s infinite;
 }
 .yesOutside{
     position: absolute;
-    top: 50.9%;
-    left: 8%;
-    width: 36%;
+    top: 49.9%;
+    left: 12%;
+    width: 18%;
     animation: ynOutRotate 6s linear infinite;
 }
 .NoInside{
     position: absolute;
     top: 53.1%;
-    left: 60.3%;
-    width: 29.5%;
+    left: 69.2%;
+    width: 15%;
     animation: ynInRotate 12s infinite;
 }
 .NoOutside{
     position: absolute;
-    top: 50.9%;
-    left: 57%;
-    width: 36%;
+    top: 49.9%;
+    left: 67.7%;
+    width: 18%;
     animation: ynOutRotate 6s linear infinite;
 }
 
@@ -735,10 +594,10 @@ width: 50px;
     background-color: #6cd5ff;
 }
 .no{
-    left: 60%;
+    left: 69.2%;
     span{
-        top: 38%;
-        left: 36%;
+        top: 28%;
+        left: 23%;
     }
     p{
         top: 28%;
@@ -746,10 +605,10 @@ width: 50px;
     }
 }
 .yes{
-    left: 11%;
+    left: 13.5%;
     span{
-        top: 38%;
-        left: 32%;
+        top: 28%;
+        left: 20%;
     }
     p{
         top: 28%;
@@ -778,37 +637,40 @@ width: 50px;
 .part3{
     h2{
         position: absolute;
-        top: 15%;
+        top: 40%;
         left: 10%;
-        font-size: 5vw;
-        font-weight: 500;
+        font-size: 1.9vw;
     }
     h3{
         position: absolute;
-        top: 19%;
+        top: 45%;
         left: 10%;
-        font-size: 4vw;
+        font-size: 1.5vw;
     }
     a{
         position: absolute;
-        top: 25%;
+        top: 50%;
         left: 10%;
         display: block;
-        width: 30%;
+        width: 8%;
         border: 1px solid #6cd5ff;
-        font: 4vw/8vw 微軟正黑體;
+        font: 1vw/2.3vw 微軟正黑體;
         text-align: center;
     }
     .exTextBg{
         position: absolute;
-        top: 15%;
-        width: 100%;
+        top: 29.4%;
+        width: 40.8%;
     }
+}
+.part3 a:hover{
+    background-color: #6cd5ff;
+    color: #000;
 }
 .expertAll{
     position: absolute;
-    width: 25%;
-    top: 60%;
+    width: 15%;
+    top: 30%;
     img{
         width: 100%;
         transform: scale(1);
@@ -822,26 +684,26 @@ width: 50px;
     }
     .scWhite{
         background-color: rgba($color: #fff, $alpha: .6);
-        transition: 1s;
+        transition: .5s;
         transform-origin: right center;
     }
     .scBlack{
         background-color: rgba($color: #000, $alpha: .7);
-        transition: 1s;
+        transition: .5s;
         transform-origin: left center;
     }
 }
 .expert1{
-    left: 0%;
+    left: 35.1%;
 }
 .expert2{
-    left: 25%;
-}
-.expert3{
     left: 50%;
 }
+.expert3{
+    left: 65%;
+}
 .expert4{
-    left: 75%;
+    left: 80%;
 }
 .exAllText{
     position: absolute;
@@ -1001,57 +863,61 @@ width: 50px;
 .section4{
 	position: relative;
 	width:100%;
-	padding-bottom: 150%;
+	padding-bottom: 50%;
 	background-image: url('../img/index/part4Bg.jpg');
 	perspective: 800px;
     perspective-origin: center center;
     background-repeat: no-repeat;
-    background-size: auto  100%;
+    background-size: 100%;
 }
 .part4{
     h2{
-        margin: 15% 0% 0% 10%;
-        font-size: 5vw;
+        margin: 6% 0% 0% 10%;
+        font-size: 1.9vw;
     }
     h3{
-        margin: 1.2% 0% 0% 10%;
-        font-size: 4vw;
+        margin: 0.8% 0% 0% 10%;
+        font-size: 1.5vw;
     }
     .goAllRefer{
-        margin: 5% 0% 0% 10%;
+        margin: 1% 0% 0% 10%;
         display: block;
-        width: 40%;
+        width: 10%;
         border: 1px solid #6cd5ff;
-        font: 4vw/8vw 微軟正黑體;
+        font: 1vw/2.3vw 微軟正黑體;
         text-align: center;
+    }
+    .goAllRefer:hover{
+        background-color: #6cd5ff;
+        color: #000;
     }
 }
 .leftPage{
     position: absolute;
-    top: 78.8%;
-    left: 23%;
-    width: 20%;
+    top: 51.2%;
+    left: 16.6%;
+    width: 7%;
     cursor: pointer;
 }
 .backArrowBg{
     position: absolute;
-    top: 70%;
-    left: 5%;
-    width: 50%;
+    top: 31%;
+    left: 0%;
+    width: 32%;
     animation: leftRightBg 5s infinite;
 }
 .rightPage{
-    width: 20%;
+    width: 7%;
     position: absolute;
-    top: 78.8%;
-    right: 23%;
+    top: 51.2%;
+    right: 16.5%;
     cursor: pointer;
 }
 .forwardArrowBg{
     position: absolute;
-    top: 70%;
-    right: 5%;
-    width: 50%;
+    top: 31%;
+    right: 0%;
+    width: 32%;
     animation: leftRightBg 5s infinite;
 }
 @keyframes leftRightBg{
@@ -1061,12 +927,12 @@ width: 50px;
 }
 .travelGroup{
 	position: absolute;
-	width:80%;
+	width:40%;
 	left:0;
 	right:0;
-	top:35%;
+	top:30%;
     margin:auto;
-    padding-bottom: 50%;
+    padding-bottom: 25%;
 	border:2px solid rgba(0,255,255,.8);
 	box-sizing: border-box;
 	background-color: #FFF;
@@ -1074,11 +940,11 @@ width: 50px;
 	background-size: 102%;
 	transform-style: preserve-3d;
     .outerFrame{
-        width: 106%;
-        height: 112%;
+        width: 104%;
+        height: 110%;
         position: absolute;
-        top: -6%;
-        left: -3%;
+        top: -5%;
+        left: -2%;
     }
 }
 .travelGroup{
@@ -1139,9 +1005,9 @@ width: 50px;
 	box-sizing: border-box;
 }
 .travelTitle{
-    width: 45%;
+    width: 42%;
     position: absolute;
-    bottom: 10%;
+    bottom: 5%;
     left: 2%;
 }
 .travelTitle h2,h1,p{
@@ -1149,16 +1015,15 @@ width: 50px;
 	font-family: '微軟正黑體';
 }
 .travelTitle .trTitlePlanet{
-	font-size: 4vw;
+	font-size: 1vw;
 	font-weight: bold;
 }
 .travelTitle .trTitleName{
-    margin-top: 4%;
-	font-size: 3.5vw;
+    margin-top: 2%;
+	font-size: 1.5vw;
 	font-weight: bold;
 }
 .travelTitle p{
-    display: none;
     margin-top: 2%;
 	font-size: 0.8vw;
 	line-height: 1.2em;
@@ -1170,7 +1035,7 @@ width: 50px;
     box-orient: vertical; 
 }
 .travelPic{
-    display: none;
+    display: block;
 	width:33%;
     position: absolute;
     bottom: 1%;
@@ -1209,7 +1074,7 @@ width: 50px;
 	padding:5%;
 }
 .travelBtn{
-    display: none;
+    display: block;
     position: absolute;
     bottom: 9%;
     left: 82.5%;
@@ -1229,10 +1094,11 @@ width: 50px;
 .useTravelBtn{
 	margin-top: 12%;
 }
+.lookTravelBtn:hover,.useTravelBtn:hover{
+    color: #000;
+    background-color: #6cd5ff;
+}
 .copyright{
     background-color: #515052;
-    padding: 5px;
-}
-@media all and (min-width: 768px){
-    @import "layout/indexDesk";
+    padding: 15px;
 }
