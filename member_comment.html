@@ -84,10 +84,10 @@
                     <div class="title_center_line"></div>
                 </div>
                 <h3>您遊玩過的專家</h3>
-                <button rel="itemContent_no" class="favorite_tab btn ">尚未評論</button>
-                <button rel="itemContent_al" class="favorite_tab btn active">已評論</button>
+                <button rel="itemContent_no" class="favorite_tab btn active">尚未評論</button>
+                <button rel="itemContent_al" class="favorite_tab btn ">已評論</button>
                 
-                <div id="itemContent_no" class="favorite_page active" style="display: none;">
+                <div id="itemContent_no" class="favorite_page active" style="">
                     <div class="comItem_no">
                         <div class="expImg">
                             <img src="img/memComment/A01.jpg" alt="A01">
@@ -109,7 +109,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="itemContent_al" class="favorite_page active" style="">
+                <div id="itemContent_al" class="favorite_page active" style="display: none;">
                     <div class="comItem_al">
                         <div class="expImg">
                             <img src="img/memComment/A01.jpg" alt="A01">
@@ -140,6 +140,8 @@
 </div>
 
 
+<!-- ======lightBox===== -->
+<div id="lightBox_com_father">
 <div id="lightBox_com">
     <h1>瓦特星 Alan</h1>
     <div class="message">
@@ -155,11 +157,18 @@
             <img src="img/memComment/starWhite.png" alt="starWhite">
             <img src="img/memComment/starWhite.png" alt="starWhite">
         </div>
-        <textarea name="" id="" cols="" rows="" placeholder="詳細說明您對此專家的評論"></textarea>
+        <form action="member_comment.php" method="get">
+            <textarea name="" id="" cols="5" rows="5" placeholder="詳細說明您對此專家的評論"></textarea>
+            <br>
+            <div class="submit">
+                <input type="button" value="取消">
+                <input type="submit" value="發佈">
+             </div>
+        </form>         
     </div>
-    
 </div>
-
+</div>
+<!-- ======lightBox===== -->
 
 
 <script>
@@ -180,17 +189,17 @@
 
 
 
-    // $(function () {
-    //     $("#box1").click(function () {
-    //         $("#lightBox_com").css('display', 'block');
-    //     })
-    // })
+    $(function () {
+        $(".commentBtn").click(function () {
+            $("#lightBox_com_father").css('display', 'block');
+        })
+    })
 
-    // $(function () {
-    //     $("#closeBtn").click(function () {
-    //         $("#lightBox_com").hide();
-    //     })
-    // })
+    $(function () {
+        $('input[type="button"]').click(function () {
+            $("#lightBox_com_father").hide();
+        })
+    })
 </script>
 
 
