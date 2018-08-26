@@ -339,6 +339,45 @@ nav {
   font-size: 2.2vw;
   color: #fff; }
 
+.part1 .ml14 {
+  font-weight: 200;
+  font-size: 2.2vw; }
+  .part1 .ml14 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1em;
+    padding-right: 0.05em;
+    padding-bottom: 0.15em; }
+  .part1 .ml14 .under {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    transform-origin: 100% 100%;
+    bottom: 0; }
+  .part1 .ml14 .letter {
+    display: inline-block;
+    line-height: 1em; }
+
+.part1 .part1H1Bg {
+  width: 45%;
+  position: absolute;
+  top: 45%;
+  right: 1%;
+  animation: h1Bg 6s infinite; }
+
+@keyframes h1Bg {
+  0% {
+    opacity: 1; }
+  20% {
+    opacity: 1; }
+  50% {
+    opacity: .3; }
+  100% {
+    opacity: 1; } }
+
 .choPlanet {
   width: 10%;
   height: 20%;
@@ -1285,8 +1324,7 @@ nav {
   vertical-align: middle;
   position: relative;
   border-right: 3px solid #FFF;
-  padding-right: 10px;
-  /*padding-top:10%;*/ }
+  padding-right: 10px; }
 
 .travelPicGroup {
   width: 60%;
