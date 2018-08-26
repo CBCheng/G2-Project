@@ -6,22 +6,7 @@ section {
     width: 100%;
     margin: auto;
 }
-.wrap{
-    width: 1200px;
-    box-sizing: border-box; 
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 20px 0 20px;
-}
-.leftWrip{
-    width: 65%;
-    padding: 0 50px 0 50px;
-    box-sizing: border-box;
-}
-.rightWrip{
-    width: 30%;
-}
+// 會員頭像＆標題
  .topic{
      width: 1200px;
      margin: auto; 
@@ -43,7 +28,7 @@ section {
     display: inline;
     position: absolute;
     bottom: 20px;
-    left: 320px;;
+    left: 320px;
     p{
        letter-spacing: 1px;
        line-height: 30px;
@@ -96,6 +81,22 @@ section {
     }
 }
 
+.wrap{
+    width: 1200px;
+    box-sizing: border-box; 
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 20px 0 20px;
+}
+.leftWrip{
+    width: 65%;
+    padding: 0 50px 0 50px;
+    box-sizing: border-box;
+}
+.rightWrip{
+    width: 30%;
+}
 // 行程詳細
 .tripGroup{
     padding: 10px;
@@ -265,15 +266,6 @@ section {
     }
 }
 // 其他行程
-.tripWrap{
-    // width: 1200px;
-    display: flex;
-    flex-wrap: wrap;
-    width: 80%;
-    margin: auto;
-    // border-top: 1px solid $fontColorBlue;
-    padding: 15px;
-}
 .tripBox{
     background-image: url(../img/refer/TES2.png);
     background-size: contain;
