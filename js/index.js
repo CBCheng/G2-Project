@@ -108,7 +108,8 @@ $(function(){
 
 //====== planet dot click ======
 $(function(){
-    $('#p1V11Dot,.viewName').on('click',function(){
+    $('.plVi,.viewName').on('click',function(){
+        console.log(this.id);
         $('.viewBg').css('transform','rotateX(0deg)');
     });
     $('.exit').on('click',function(){
