@@ -144,12 +144,7 @@ section {
         font-size: 14px;
         line-height: 18px;
         padding: 0 0 5px 0;
-        display: none;
     }
-}
-.tripWrip:hover .tripContent p{
-    display: block;
-    transition: 5s;
 }
 .tripWrip:hover .tripDate img:nth-child(1){
     transform: rotate(-180deg);
