@@ -245,6 +245,11 @@ nav {
   top: 60px;
   right: -100%;
   transition: .8s; }
+  .menuMobile img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -200; }
 
 .activeM {
   position: absolute;
@@ -412,12 +417,7 @@ section {
     letter-spacing: 1px;
     font-size: 14px;
     line-height: 18px;
-    padding: 0 0 5px 0;
-    display: none; }
-
-.tripWrip:hover .tripContent p {
-  display: block;
-  transition: 5s; }
+    padding: 0 0 5px 0; }
 
 .tripWrip:hover .tripDate img:nth-child(1) {
   transform: rotate(-180deg); }
