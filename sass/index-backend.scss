@@ -53,9 +53,11 @@ $fontWhiteContent:rgba(255,255,255,.7);
         padding-top:10px;
         // padding-bottom:10px;
     }
-    input[type=text]{
+    input[type=text],
+    input[type=password]{
         font: 16px $fontfamily;
         width:250px;
+        color:#FFF;
         text-decoration: none;
         border:none;
         border-bottom: 1px solid rgba(147,147,147,.8);

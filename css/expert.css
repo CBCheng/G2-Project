@@ -300,10 +300,32 @@ nav {
     animation: aa 30s 0s infinite; }
   .title #canvas2 {
     animation: bb 30s 0s infinite; }
+  .title .hex {
+    display: none; }
 
 @media screen and (max-width: 767px) {
   .title {
-    top: 100px; } }
+    top: 100px; }
+    .title h1 {
+      font-size: 24px;
+      top: 65px; }
+    .title #can {
+      display: none; }
+    .title .hex {
+      display: block;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      text-align: center; }
+    .title .hexWhite {
+      width: inherit;
+      position: absolute;
+      animation: aa 30s 0s infinite; }
+    .title .hexBlue {
+      width: inherit;
+      animation: bb 30s 0s infinite; } }
 
 @keyframes aa {
   0% {
@@ -383,6 +405,10 @@ nav {
     width: 90%;
     margin: 80px auto; } }
 
+@media screen and (max-width: 650px) {
+  .panel {
+    margin: 50px auto; } }
+
 /* ---- button ---- */
 .button-group {
   text-align: center;
@@ -404,7 +430,6 @@ nav {
     text-align: center;
     cursor: pointer;
     border-radius: 7px;
-    cursor: pointer;
     margin: 10px 15px; }
     .button-group .button span {
       position: absolute;
@@ -422,8 +447,7 @@ nav {
     background-color: rgba(255, 255, 255, 0.5);
     text-align: center;
     cursor: pointer;
-    border-radius: 7px;
-    cursor: pointer; }
+    border-radius: 7px; }
     .button-group .button.popular span {
       position: absolute;
       transform: skewX(-25deg);
@@ -483,34 +507,35 @@ nav {
   position: relative;
   overflow: hidden; }
   .grid .expertBox .king {
+    position: absolute;
+    left: 5px;
+    top: 10px;
     width: 50px;
-    transform: rotate(-30deg);
-    margin-left: -60px;
-    margin-top: -20px; }
-  .grid .expertBox h2,
-  .grid .expertBox h3 {
+    transform: rotate(-30deg); }
+  .grid .expertBox .h2Desk {
     font-size: 22px;
-    display: inline-block;
-    margin: 40px 5px 10px; }
-  .grid .expertBox h3 {
-    font-size: 20px; }
+    margin-top: 40px; }
+  .grid .expertBox .h3Desk {
+    font-size: 20px;
+    margin: 8px 0; }
   .grid .expertBox .attr {
     position: absolute;
     background-color: #094f91;
     font-size: 18px;
     padding: 5px 8px;
-    right: 40px;
-    top: 75px;
+    right: 42px;
+    top: 108px;
     z-index: 5; }
   .grid .expertBox .pic {
     width: 180px;
-    height: 280px;
+    height: 260px;
     overflow: hidden;
     margin: auto;
     position: relative;
     cursor: pointer; }
     .grid .expertBox .pic img {
       width: 100%;
+      margin-top: -10px;
       transform: scale(1);
       transition: 0.5s; }
   .grid .expertBox .aside {
@@ -520,20 +545,22 @@ nav {
     bottom: 0px;
     margin: auto;
     background: linear-gradient(to top, #000, rgba(0, 0, 0, 0.2) 100%); }
+    .grid .expertBox .aside .h2Ph, .grid .expertBox .aside .h3Ph {
+      display: none; }
     .grid .expertBox .aside .score {
-      padding-top: 25px; }
+      padding-top: 15px; }
       .grid .expertBox .aside .score span {
         color: #ffffff;
         font-size: 16px;
         padding-right: 5px; }
       .grid .expertBox .aside .score img {
         vertical-align: text-bottom;
-        width: 20px; }
+        width: 18px; }
     .grid .expertBox .aside .mark {
       font-size: 15px;
       color: #ffffff; }
       .grid .expertBox .aside .mark img {
-        width: 25px;
+        width: 22px;
         margin: 10px; }
 
 @media screen and (min-width: 650px) {
@@ -567,18 +594,21 @@ nav {
   .grid .expertBox {
     width: 200px;
     margin: 15px;
-    height: 283px; }
-    .grid .expertBox h2 {
-      font-size: 20px; }
+    height: 320px;
+    background-size: cover; }
+    .grid .expertBox .h2Desk {
+      font-size: 20px;
+      margin-top: 30px; }
+    .grid .expertBox .h3Desk {
+      font-size: 18px;
+      margin: 7px 0; }
+    .grid .expertBox .attr {
+      font-size: 15px;
+      right: 37px;
+      top: 88px; }
     .grid .expertBox .pic {
-      width: 130px; }
-      .grid .expertBox .pic .attr {
-        font-size: 15px;
-        width: 45px;
-        height: 45px;
-        line-height: 45px; }
-    .grid .expertBox h3 {
-      font-size: 16px; }
+      width: 140px;
+      height: 210px; }
     .grid .expertBox .score {
       margin-top: 10px; }
       .grid .expertBox .score span {
@@ -602,38 +632,55 @@ nav {
     border-bottom: 2px dashed rgba(128, 194, 105, 0.5); }
   .grid .expertBox {
     width: 90%;
-    padding-bottom: 15px;
-    margin: 15px 15px 5px;
-    height: 162px; }
-    .grid .expertBox h2 {
-      font-size: 18px;
-      margin: 0 auto 10px; }
-    .grid .expertBox h3 {
-      font-size: 16px;
+    height: 160px;
+    position: relative;
+    margin-top: 15px;
+    overflow: visible; }
+    .grid .expertBox .king {
+      z-index: 10;
+      top: -20px;
+      left: 5px; }
+    .grid .expertBox .h2Desk, .grid .expertBox .h3Desk {
       display: none; }
-    .grid .expertBox .main {
-      float: left;
-      width: 50%;
-      display: inline-block; }
-      .grid .expertBox .main .pic {
-        width: 100px; }
-    .grid .expertBox .aside {
-      float: right;
-      width: 50%;
-      display: inline-block;
-      text-align: left;
-      margin-top: 10px; }
-      .grid .expertBox .aside h3 {
-        display: block;
-        padding-left: 20px;
-        font-size: 18px; }
-      .grid .expertBox .aside .score,
-      .grid .expertBox .aside .mark {
-        margin-top: 5px; }
-  .grid .expertBox:after {
-    content: "";
-    display: block;
-    clear: both; } }
+    .grid .expertBox .attr {
+      right: 5%;
+      top: 18px; }
+    .grid .expertBox .pic {
+      width: 100%;
+      position: absolute;
+      cursor: inherit; }
+      .grid .expertBox .pic a {
+        outline: none;
+        width: 50%;
+        height: 135px;
+        overflow: hidden;
+        float: left; }
+        .grid .expertBox .pic a img {
+          width: 120px; }
+      .grid .expertBox .pic .aside {
+        position: static;
+        float: right;
+        width: 50%;
+        text-align: left;
+        background: transparent; }
+        .grid .expertBox .pic .aside .h2Ph {
+          display: block;
+          font-size: 20px;
+          margin-top: 0; }
+        .grid .expertBox .pic .aside .h3Ph {
+          display: block;
+          font-size: 18px;
+          margin-top: 10px; }
+        .grid .expertBox .pic .aside .mark {
+          margin-top: 10px; }
+        .grid .expertBox .pic .aside .mark img {
+          margin: 0; }
+        .grid .expertBox .pic .aside .mark span {
+          margin-right: 10px; }
+    .grid .expertBox .pic:after {
+      content: "";
+      display: block;
+      clear: both; } }
 
 .grid .expertBox.blue h2 {
   color: #6cd5ff; }
@@ -654,8 +701,9 @@ nav {
   background-color: #486a00; }
 
 #lightBox1 {
-  background-image: url(../img/expertImg/lineBg7.png);
+  background-image: url(../img/expertImg/lineBg.png);
   background-repeat: no-repeat;
+  background-position: center;
   margin: auto;
   width: 960px;
   height: 600px;
@@ -717,12 +765,6 @@ nav {
       margin-top: 20px;
       text-align: justify;
       display: inline-block; }
-
-@keyframes rocket {
-  0% {
-    transform: rotate(0deg); }
-  100% {
-    transform: rotate(60deg); } }
     .content .conRight .data {
       text-align: justify; }
       .content .conRight .data .score {
@@ -835,8 +877,7 @@ nav {
         position: absolute;
         left: 60px;
         top: 10px;
-        width: 86px;
-        line-height: 36px;
+        padding: 10px 25px;
         -webkit-clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
         clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
         background-color: #094f91;
@@ -859,57 +900,8 @@ nav {
     width: 100%; } }
 
 @media screen and (max-width: 850px) {
-  #lightBox1 h1 {
-    margin-top: 30px;
-    font-size: 24px; }
-  #lightBox1 h2 {
-    margin-top: 20px;
-    font-size: 22px; }
-  #lightBox1 .content .expPic {
-    margin: 10px;
-    width: 150px; }
-    #lightBox1 .content .expPic .attr {
-      width: 50px;
-      height: 50px;
-      font-size: 16px;
-      line-height: 50px; }
-  #lightBox1 .content .data {
-    margin: 10px; }
-    #lightBox1 .content .data h3 {
-      font-size: 20px;
-      margin-bottom: 10px; }
-    #lightBox1 .content .data .chart {
-      margin: auto; }
-      #lightBox1 .content .data .chart span {
-        font-size: 16px;
-        line-height: 1.5; }
-  #lightBox1 .content .record {
-    margin: 10px auto 0;
-    display: block; }
-    #lightBox1 .content .record .collect,
-    #lightBox1 .content .record .writeComment {
-      float: none;
-      display: inline-block; }
-  #lightBox1 .comment .score p {
-    font-size: 16px;
-    padding-right: 5px; }
-  #lightBox1 .comment .score span {
-    font-size: 15px;
-    padding-right: 2px; }
-  #lightBox1 .comment .score img {
-    width: 18px; }
-  #lightBox1 .comment .message .user .name {
-    left: 45px;
-    width: 76px;
-    height: 28px;
-    line-height: 28px;
-    -webkit-clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%); }
-  #lightBox1 .comment .message .user img {
-    width: 60px; }
-  #lightBox1 .comment .message p {
-    margin-top: 10px;
-    margin-left: 20px; } }
+  .comment {
+    width: 90%; } }
 
 footer {
   width: 100%;

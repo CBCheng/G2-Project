@@ -65,6 +65,7 @@ var section4 = document.querySelectorAll('.sectionQuiz4')[0];
 var section3 = document.querySelectorAll('.sectionQuiz3')[0];
 var section2 = document.querySelectorAll('.sectionQuiz2')[0];
 var section1 = document.querySelectorAll('.sectionQuiz1')[0];
+var ml11 = document.querySelectorAll('.ml11')[0];
 // var section = document.querySelectorAll('.sectionQuiz')[0];
 var particlesBg = document.querySelector('#particles-js');
 var genderBtn =document.querySelectorAll('.gender div');
@@ -79,10 +80,12 @@ var opacityValue = 1;
 
 function doFirst(){
 	// section.style.display = 'none';
-	// setTimeout(function(){
-	// 	section5.style.display = 'block';
-		
-	// },3500)
+	setTimeout(function(){
+
+		// section5.style.display = 'block';
+		$('.sectionQuiz5').fadeIn(1000);
+		ml11.style.display = 'none';
+	},3500)
     //quiz1->quiz2動畫
     for(var i=0;i<genderBtn.length;i++){
         genderBtn[i].onclick = changeSpeed;
@@ -115,7 +118,7 @@ function changefadeOut(){
 
 function changefadeIn(){
         scaleValue4 += 0.05;
-        if(scaleValue4 >= 1 ){
+        if(scaleValue4 > 1.05 ){
             console.log(scaleValue4);
             clearInterval(timeId4);               
         }else{

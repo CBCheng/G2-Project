@@ -9,7 +9,6 @@
   border-radius: 5px;
   min-height: 410px;
   line-height: 25px;
-  background-color: rgba(255, 255, 255, 0.3);
   /*box-shadow: 0 0 2px rgba(0,0,0,.3) inset;*/ }
 
 .m_rightBox .m_color {
@@ -778,7 +777,7 @@
 @media screen and (min-width: 970px) {
   /*RWD*/
   .mW_bigBox {
-    width: 70%; }
+    width: 100%; }
   /*.lightBox*/
   .plightBoxAll {
     bottom: 0;
