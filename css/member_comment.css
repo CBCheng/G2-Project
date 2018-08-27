@@ -454,6 +454,11 @@ footer {
   top: 60px;
   right: -100%;
   transition: .8s; }
+  .menuMobile img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -200; }
 
 .activeM {
   position: absolute;
