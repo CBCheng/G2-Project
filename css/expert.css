@@ -545,7 +545,8 @@ nav {
     bottom: 0px;
     margin: auto;
     background: linear-gradient(to top, #000, rgba(0, 0, 0, 0.2) 100%); }
-    .grid .expertBox .aside .h2Ph, .grid .expertBox .aside .h3Ph {
+    .grid .expertBox .aside .h2Ph,
+    .grid .expertBox .aside .h3Ph {
       display: none; }
     .grid .expertBox .aside .score {
       padding-top: 15px; }
@@ -640,7 +641,8 @@ nav {
       z-index: 10;
       top: -20px;
       left: 5px; }
-    .grid .expertBox .h2Desk, .grid .expertBox .h3Desk {
+    .grid .expertBox .h2Desk,
+    .grid .expertBox .h3Desk {
       display: none; }
     .grid .expertBox .attr {
       right: 5%;
@@ -700,7 +702,24 @@ nav {
 .grid .expertBox.green .pic .attr {
   background-color: #486a00; }
 
-#lightBox1 {
+#lightBox_father {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 5000;
+  width: 100%;
+  background-color: rgba(66, 66, 66, 0.6); }
+
+#lightBox {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 900;
   background-image: url(../img/expertImg/lineBg.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -711,6 +730,13 @@ nav {
   text-align: center;
   background-color: black;
   border: 3px solid rgba(108, 213, 255, 0.5); }
+  #lightBox .fas {
+    font-size: 30px;
+    float: right;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px; }
 
 #lightBox:after {
   content: "";
