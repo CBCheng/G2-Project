@@ -195,15 +195,22 @@ nav {
     margin-top: -10px;
     margin-left: 30px;
     padding: 0; }
-  .comContent .comment_mg_box #itemContent_no, .comContent .comment_mg_box #itemContent_al {
+  .comContent .comment_mg_box #itemContent_no,
+  .comContent .comment_mg_box #itemContent_al {
     display: flex;
     flex-wrap: wrap; }
-    .comContent .comment_mg_box #itemContent_no .comItem_no, .comContent .comment_mg_box #itemContent_no .comItem_al, .comContent .comment_mg_box #itemContent_al .comItem_no, .comContent .comment_mg_box #itemContent_al .comItem_al {
+    .comContent .comment_mg_box #itemContent_no .comItem_no,
+    .comContent .comment_mg_box #itemContent_no .comItem_al,
+    .comContent .comment_mg_box #itemContent_al .comItem_no,
+    .comContent .comment_mg_box #itemContent_al .comItem_al {
       width: 40%;
       border: 2px solid rgba(108, 213, 255, 0.5);
       padding: 10px;
       margin: 20px 26px 0; }
-      .comContent .comment_mg_box #itemContent_no .comItem_no .expImg, .comContent .comment_mg_box #itemContent_no .comItem_al .expImg, .comContent .comment_mg_box #itemContent_al .comItem_no .expImg, .comContent .comment_mg_box #itemContent_al .comItem_al .expImg {
+      .comContent .comment_mg_box #itemContent_no .comItem_no .expImg,
+      .comContent .comment_mg_box #itemContent_no .comItem_al .expImg,
+      .comContent .comment_mg_box #itemContent_al .comItem_no .expImg,
+      .comContent .comment_mg_box #itemContent_al .comItem_al .expImg {
         display: inline-block;
         width: 40%;
         height: 145px;
@@ -211,19 +218,31 @@ nav {
         vertical-align: top;
         margin-right: 10px;
         cursor: pointer; }
-        .comContent .comment_mg_box #itemContent_no .comItem_no .expImg img, .comContent .comment_mg_box #itemContent_no .comItem_al .expImg img, .comContent .comment_mg_box #itemContent_al .comItem_no .expImg img, .comContent .comment_mg_box #itemContent_al .comItem_al .expImg img {
+        .comContent .comment_mg_box #itemContent_no .comItem_no .expImg img,
+        .comContent .comment_mg_box #itemContent_no .comItem_al .expImg img,
+        .comContent .comment_mg_box #itemContent_al .comItem_no .expImg img,
+        .comContent .comment_mg_box #itemContent_al .comItem_al .expImg img {
           width: 100%;
           margin-top: -10px; }
-      .comContent .comment_mg_box #itemContent_no .comItem_no .itemTxt, .comContent .comment_mg_box #itemContent_no .comItem_al .itemTxt, .comContent .comment_mg_box #itemContent_al .comItem_no .itemTxt, .comContent .comment_mg_box #itemContent_al .comItem_al .itemTxt {
+      .comContent .comment_mg_box #itemContent_no .comItem_no .itemTxt,
+      .comContent .comment_mg_box #itemContent_no .comItem_al .itemTxt,
+      .comContent .comment_mg_box #itemContent_al .comItem_no .itemTxt,
+      .comContent .comment_mg_box #itemContent_al .comItem_al .itemTxt {
         display: inline-block;
         width: 55%;
         height: 100%;
         text-align: left;
         position: relative; }
-        .comContent .comment_mg_box #itemContent_no .comItem_no .itemTxt h4, .comContent .comment_mg_box #itemContent_no .comItem_al .itemTxt h4, .comContent .comment_mg_box #itemContent_al .comItem_no .itemTxt h4, .comContent .comment_mg_box #itemContent_al .comItem_al .itemTxt h4 {
+        .comContent .comment_mg_box #itemContent_no .comItem_no .itemTxt h4,
+        .comContent .comment_mg_box #itemContent_no .comItem_al .itemTxt h4,
+        .comContent .comment_mg_box #itemContent_al .comItem_no .itemTxt h4,
+        .comContent .comment_mg_box #itemContent_al .comItem_al .itemTxt h4 {
           font-size: 20px;
           color: #ffffff; }
-        .comContent .comment_mg_box #itemContent_no .comItem_no .itemTxt h5, .comContent .comment_mg_box #itemContent_no .comItem_al .itemTxt h5, .comContent .comment_mg_box #itemContent_al .comItem_no .itemTxt h5, .comContent .comment_mg_box #itemContent_al .comItem_al .itemTxt h5 {
+        .comContent .comment_mg_box #itemContent_no .comItem_no .itemTxt h5,
+        .comContent .comment_mg_box #itemContent_no .comItem_al .itemTxt h5,
+        .comContent .comment_mg_box #itemContent_al .comItem_no .itemTxt h5,
+        .comContent .comment_mg_box #itemContent_al .comItem_al .itemTxt h5 {
           font-size: 18px;
           letter-spacing: 1px;
           margin-top: 20px;
@@ -231,7 +250,10 @@ nav {
           overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis; }
-        .comContent .comment_mg_box #itemContent_no .comItem_no .itemTxt p, .comContent .comment_mg_box #itemContent_no .comItem_al .itemTxt p, .comContent .comment_mg_box #itemContent_al .comItem_no .itemTxt p, .comContent .comment_mg_box #itemContent_al .comItem_al .itemTxt p {
+        .comContent .comment_mg_box #itemContent_no .comItem_no .itemTxt p,
+        .comContent .comment_mg_box #itemContent_no .comItem_al .itemTxt p,
+        .comContent .comment_mg_box #itemContent_al .comItem_no .itemTxt p,
+        .comContent .comment_mg_box #itemContent_al .comItem_al .itemTxt p {
           font-size: 14px;
           margin-top: 20px;
           color: #ffffff;
@@ -239,7 +261,10 @@ nav {
           overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis; }
-        .comContent .comment_mg_box #itemContent_no .comItem_no .itemTxt .commentBtn, .comContent .comment_mg_box #itemContent_no .comItem_al .itemTxt .commentBtn, .comContent .comment_mg_box #itemContent_al .comItem_no .itemTxt .commentBtn, .comContent .comment_mg_box #itemContent_al .comItem_al .itemTxt .commentBtn {
+        .comContent .comment_mg_box #itemContent_no .comItem_no .itemTxt .commentBtn,
+        .comContent .comment_mg_box #itemContent_no .comItem_al .itemTxt .commentBtn,
+        .comContent .comment_mg_box #itemContent_al .comItem_no .itemTxt .commentBtn,
+        .comContent .comment_mg_box #itemContent_al .comItem_al .itemTxt .commentBtn {
           position: absolute;
           bottom: 0px;
           right: 10px;
@@ -252,17 +277,29 @@ nav {
           background-color: transparent;
           text-align: center;
           cursor: pointer; }
-        .comContent .comment_mg_box #itemContent_no .comItem_no .itemTxt .commentBtn:hover, .comContent .comment_mg_box #itemContent_no .comItem_al .itemTxt .commentBtn:hover, .comContent .comment_mg_box #itemContent_al .comItem_no .itemTxt .commentBtn:hover, .comContent .comment_mg_box #itemContent_al .comItem_al .itemTxt .commentBtn:hover {
+        .comContent .comment_mg_box #itemContent_no .comItem_no .itemTxt .commentBtn:hover,
+        .comContent .comment_mg_box #itemContent_no .comItem_al .itemTxt .commentBtn:hover,
+        .comContent .comment_mg_box #itemContent_al .comItem_no .itemTxt .commentBtn:hover,
+        .comContent .comment_mg_box #itemContent_al .comItem_al .itemTxt .commentBtn:hover {
           background-color: #6cd5ff;
           color: #000; }
-        .comContent .comment_mg_box #itemContent_no .comItem_no .itemTxt .score, .comContent .comment_mg_box #itemContent_no .comItem_al .itemTxt .score, .comContent .comment_mg_box #itemContent_al .comItem_no .itemTxt .score, .comContent .comment_mg_box #itemContent_al .comItem_al .itemTxt .score {
+        .comContent .comment_mg_box #itemContent_no .comItem_no .itemTxt .score,
+        .comContent .comment_mg_box #itemContent_no .comItem_al .itemTxt .score,
+        .comContent .comment_mg_box #itemContent_al .comItem_no .itemTxt .score,
+        .comContent .comment_mg_box #itemContent_al .comItem_al .itemTxt .score {
           position: absolute;
           bottom: 10px; }
-          .comContent .comment_mg_box #itemContent_no .comItem_no .itemTxt .score span, .comContent .comment_mg_box #itemContent_no .comItem_al .itemTxt .score span, .comContent .comment_mg_box #itemContent_al .comItem_no .itemTxt .score span, .comContent .comment_mg_box #itemContent_al .comItem_al .itemTxt .score span {
+          .comContent .comment_mg_box #itemContent_no .comItem_no .itemTxt .score span,
+          .comContent .comment_mg_box #itemContent_no .comItem_al .itemTxt .score span,
+          .comContent .comment_mg_box #itemContent_al .comItem_no .itemTxt .score span,
+          .comContent .comment_mg_box #itemContent_al .comItem_al .itemTxt .score span {
             color: #ffffff;
             font-size: 16px;
             padding-right: 5px; }
-          .comContent .comment_mg_box #itemContent_no .comItem_no .itemTxt .score img, .comContent .comment_mg_box #itemContent_no .comItem_al .itemTxt .score img, .comContent .comment_mg_box #itemContent_al .comItem_no .itemTxt .score img, .comContent .comment_mg_box #itemContent_al .comItem_al .itemTxt .score img {
+          .comContent .comment_mg_box #itemContent_no .comItem_no .itemTxt .score img,
+          .comContent .comment_mg_box #itemContent_no .comItem_al .itemTxt .score img,
+          .comContent .comment_mg_box #itemContent_al .comItem_no .itemTxt .score img,
+          .comContent .comment_mg_box #itemContent_al .comItem_al .itemTxt .score img {
             vertical-align: text-bottom;
             width: 20px; }
 
@@ -289,6 +326,13 @@ nav {
   height: 400px;
   border: 2px solid #6cd5ff;
   background-color: rgba(20, 20, 20, 0.95); }
+  #lightBox_com .fas {
+    font-size: 30px;
+    float: right;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px; }
   #lightBox_com h1 {
     font-size: 26px;
     text-align: center;
@@ -454,6 +498,11 @@ footer {
   top: 60px;
   right: -100%;
   transition: .8s; }
+  .menuMobile img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -200; }
 
 .activeM {
   position: absolute;

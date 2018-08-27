@@ -46,18 +46,19 @@ window.addEventListener('load', doSecond);
 
 
 
-// $(function () {
-//     $("#box1").click(function () {
-//         $("#lightBox1").css('display', 'block');
-//     })
-// })
+$(function () {
+	$("#box").click(function () {
+		$("#lightBox_father").show(500);
+		// $("#lightBox_father").css(transform, 'scale(1)');
+	})
+})
 
-// $(function () {
-//     $("#closeBtn").click(function () {
-//         $("#lightBox").hide();
-//     })
-// })
- 
+$(function () {
+	$(".fas").click(function () {
+		$("#lightBox_father").hide(500);
+	})
+})
+
 
 // var lightBox1 = document.getElementById("lightBox1");
 // var closeBtn = document.getElementById("closeBtn");
@@ -77,17 +78,11 @@ window.addEventListener('load', doSecond);
 
 
 
-//愛心換圖
-// $("#heart").click(function () {
-// 	$(this).attr("src", "../img/expertImg/heartRed.png");
-// 	$(".collect .txt").text('取消收藏');
-// })
-// if ($(".collect .txt").text('取消收藏')) {
-// 	$("#heart").click(function () {
-// 		$(this).attr("src", "../img/expertImg/heartWhite.png");
-// 		$(".collect .txt").text('收藏專家');
-// 	})
-// }
+愛心換圖
+$("#heart").click(function () {
+	$(this).attr("src", "../img/expertImg/heartRed.png");
+})
+
 
 
 

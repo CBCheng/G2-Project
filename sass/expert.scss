@@ -77,18 +77,22 @@ a {
         // position: absolute;
         animation: bb 30s 0s infinite;
     }
-    .hex{display: none;}
+    .hex {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 767px) {
     .title {
         top: 100px;
-        h1{
+        h1 {
             font-size: 24px;
             top: 65px;
         }
-        #can{display: none;}
-       .hex {
+        #can {
+            display: none;
+        }
+        .hex {
             display: block;
             top: 0;
             bottom: 0;
@@ -107,7 +111,6 @@ a {
             animation: bb 30s 0s infinite;
         }
     }
-
 }
 
 @keyframes aa {
@@ -213,19 +216,17 @@ a {
 .panel {
     // outline: 1px solid #fff;
     width: 1200px;
-    margin: 100px auto;
+    margin: 30px auto 50px;
 }
 
 @media screen and (max-width: 1200px) {
     .panel {
         width: 90%;
-        margin: 80px auto;
     }
 }
+
 @media screen and (max-width: 650px) {
-    .panel {
-        margin: 50px auto;
-    }
+    .panel {}
 }
 
 /* ---- button ---- */
@@ -283,7 +284,6 @@ a {
 @media screen and (max-width: 900px) {
     .button-group {
         .button {
-            padding: 4px 20px;
             margin: 5px 10px;
             font-size: 16px;
         }
@@ -295,10 +295,27 @@ a {
         .button-top,
         .button-down {
             display: block;
+            .button {
+                width: 80px;
+                span {
+                    left: 18px;
+                }
+            }
+            .button.popular {
+                span {
+                    left: 23px;
+                }
+            }
         }
     }
 }
 
+// @media screen and (max-width: 400px) {
+//     .button-group .button-down .button {
+//         display: block;
+//         margin: 10px auto 0;
+//     }
+// }
 /* ---- .expertBox ---- */
 
 .grid {
@@ -315,15 +332,14 @@ a {
             top: 10px;
             width: 50px;
             transform: rotate(-30deg);
-            
         }
-        .h2Desk{
+        .h2Desk {
             font-size: 22px;
             margin-top: 40px;
         }
         .h3Desk {
             font-size: 20px;
-            margin: 8px 0 ;
+            margin: 8px 0;
         }
         .attr {
             position: absolute;
@@ -356,7 +372,8 @@ a {
             bottom: 0px;
             margin: auto;
             background: linear-gradient(to top, #000, rgba(0, 0, 0, 0.2) 100%);
-            .h2Ph,.h3Ph{
+            .h2Ph,
+            .h3Ph {
                 display: none;
             }
             .score {
@@ -422,13 +439,14 @@ a {
             margin: 15px;
             height: 320px;
             background-size: cover;
-            
             .h2Desk {
                 font-size: 20px;
                 margin-top: 30px;
             }
-            .h3Desk {font-size: 18px;
-                margin: 7px 0;}
+            .h3Desk {
+                font-size: 18px;
+                margin: 7px 0;
+            }
             .attr {
                 font-size: 15px;
                 right: 37px;
@@ -438,7 +456,6 @@ a {
                 width: 140px;
                 height: 210px;
             }
-            
             .score {
                 margin-top: 10px;
                 span {
@@ -475,30 +492,32 @@ a {
             position: relative;
             margin-top: 15px;
             overflow: visible;
-            .king{
+            .king {
                 z-index: 10;
                 top: -20px;
                 left: 5px;
             }
-            .h2Desk,.h3Desk{
+            .h2Desk,
+            .h3Desk {
                 display: none;
             }
-            .attr{
+            .attr {
                 right: 5%;
                 top: 18px;
             }
-            .pic{
+            .pic {
                 width: 100%;
-                position: absolute;
-                // top: 18px;
+                position: absolute; // top: 18px;
                 cursor: inherit;
-                a{
+                a {
                     outline: none;
                     width: 50%;
                     height: 135px;
                     overflow: hidden;
                     float: left;
-                    img{width: 120px;}
+                    img {
+                        width: 120px;
+                    }
                 }
                 .aside {
                     position: static;
@@ -516,14 +535,14 @@ a {
                         font-size: 18px;
                         margin-top: 10px;
                     }
-                    .mark{
+                    .mark {
                         margin-top: 10px;
                     }
-                    .mark img{
+                    .mark img {
                         margin: 0;
                     }
-                    .mark span{
-                        margin-right: 10px; 
+                    .mark span {
+                        margin-right: 10px;
                     }
                 }
             }
@@ -533,7 +552,6 @@ a {
                 clear: both;
             }
         }
-        
     }
     .expertBox.blue {
         h2 {
@@ -567,12 +585,25 @@ a {
     }
 }
 
-#lightBox1 {
-    // position: fixed;
-    // top: 0px;
-    // left: 0;
-    // right: 0;
-    // z-index: 900;
+#lightBox_father {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 5000;
+    width: 100%;
+    background-color: rgba(66, 66, 66, 0.6);
+}
+
+#lightBox {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 900;
     background-image: url(../img/expertImg/lineBg.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -583,22 +614,21 @@ a {
     text-align: center;
     background-color: rgba(0, 0, 0, 1);
     border: 3px solid rgba(108, 213, 255, 0.5);
-    // #closeBtn {
-    //     width: 50px;
-    //     float: right;
-    //     cursor: pointer; 
-    //     position: absolute;
-    //     top: 0;right: 0;
-    // }
+    .fas {
+        font-size: 30px;
+        float: right;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
 }
 
 #lightBox:after {
     content: "";
     display: block;
     clear: both;
-}
-
-// lightBox的上方內容
+} // lightBox的上方內容
 .content {
     // outline: 1px solid #fff;
     // background-image: url(../img/expertImg/focus-0.png);
@@ -652,14 +682,13 @@ a {
         }
         .rocket {
             margin-left: 10px;
-            width: 35px; 
+            width: 35px;
         }
         h2 {
             margin-top: 20px;
             text-align: justify;
             display: inline-block;
         }
-       
         .data {
             text-align: justify;
             .score {
@@ -786,9 +815,7 @@ a {
             }
         }
     }
-}
-
-// lightBox的評論
+} // lightBox的評論
 .comment {
     width: 60%;
     margin: 60px auto 80px;
@@ -807,7 +834,7 @@ a {
             .name {
                 position: absolute;
                 left: 60px;
-                top: 10px; 
+                top: 10px;
                 padding: 10px 25px;
                 -webkit-clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
                 clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
@@ -833,16 +860,19 @@ a {
 }
 
 @media screen and (max-width: 1000px) {
-    #lightBox1 {
+    #lightBox {
         width: 100%;
     }
 }
-@media screen and (max-width: 850px){
-    .comment{
+
+@media screen and (max-width: 850px) {
+    #lightBox {
+        height: 90%;
+    }
+    .comment {
         width: 90%;
     }
-}
-// @media screen and (max-width: 850px) {
+} // @media screen and (max-width: 850px) {
 //     #lightBox1 {
 //         h1 {
 //             margin-top: 30px;
@@ -923,7 +953,6 @@ a {
 //         }
 //     }
 // }
-
 @import "layout/footer";
 footer {
     img {
@@ -936,4 +965,3 @@ footer {
     }
     background-image: none;
 }
-
