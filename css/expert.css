@@ -403,16 +403,11 @@ nav {
 
 .panel {
   width: 1200px;
-  margin: 100px auto; }
+  margin: 30px auto 50px; }
 
 @media screen and (max-width: 1200px) {
   .panel {
-    width: 90%;
-    margin: 80px auto; } }
-
-@media screen and (max-width: 650px) {
-  .panel {
-    margin: 50px auto; } }
+    width: 90%; } }
 
 /* ---- button ---- */
 .button-group {
@@ -494,14 +489,22 @@ nav {
 
 @media screen and (max-width: 900px) {
   .button-group .button {
-    padding: 4px 20px;
     margin: 5px 10px;
     font-size: 16px; } }
 
 @media screen and (max-width: 650px) {
   .button-group .button-top,
   .button-group .button-down {
-    display: block; } }
+    display: block; }
+    .button-group .button-top .button,
+    .button-group .button-down .button {
+      width: 80px; }
+      .button-group .button-top .button span,
+      .button-group .button-down .button span {
+        left: 18px; }
+    .button-group .button-top .button.popular span,
+    .button-group .button-down .button.popular span {
+      left: 23px; } }
 
 /* ---- .expertBox ---- */
 .grid .expertBox {
@@ -927,10 +930,12 @@ nav {
       line-height: 1.4; }
 
 @media screen and (max-width: 1000px) {
-  #lightBox1 {
+  #lightBox {
     width: 100%; } }
 
 @media screen and (max-width: 850px) {
+  #lightBox {
+    height: 90%; }
   .comment {
     width: 90%; } }
 
