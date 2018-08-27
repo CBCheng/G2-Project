@@ -255,12 +255,8 @@ nav {
   color: #6cd5ff; }
 
 h3 {
-  padding: 100px 0  30px 0px;
-  font-size: 30px;
-  text-align: left; }
-
-h3:nth-child(1), h3:nth-child(4) {
-  padding: 50px 0  30px 0px; }
+  padding: 30px 0  10px 20px;
+  font-size: 20px; }
 
 ::-webkit-scrollbar {
   width: 15px;
@@ -284,158 +280,90 @@ section {
   margin: auto; }
 
 .wrap {
-  width: 1200px;
-  box-sizing: border-box;
+  width: 70%;
   margin: auto;
   display: flex;
-  flex-wrap: wrap;
-  padding: 0 20px 0 20px; }
+  flex-wrap: wrap; }
 
 .leftWrip {
-  width: 65%;
-  padding: 0 50px 0 50px;
-  box-sizing: border-box; }
+  width: 70%; }
 
 .rightWrip {
   width: 30%; }
 
-.topic {
-  width: 1200px;
-  margin: auto;
-  box-sizing: border-box;
-  padding: 0 100px 0 100px;
-  display: flex;
-  position: relative;
-  margin-bottom: 100px; }
-
 .memberPic {
-  width: 180px;
+  display: inline-block;
+  width: 160px;
+  margin-top: -50px;
   padding: 20px; }
-  .memberPic img {
-    border-radius: 50%;
-    margin-top: -80px; }
+
+.memberPic img {
+  border-radius: 50%; }
+
+.topic {
+  margin-bottom: 50px; }
 
 .tripTitle {
-  display: inline;
-  position: absolute;
-  bottom: 20px;
-  left: 320px; }
+  display: inline-block;
+  margin-top: -200px; }
   .tripTitle p {
     letter-spacing: 1px;
-    line-height: 30px;
-    font-size: 16px; }
+    padding: 0 0 5px 0; }
   .tripTitle h2 {
     letter-spacing: 3px;
-    line-height: 35px; }
-
-.detitle {
-  width: 1050px;
-  margin: auto;
-  box-sizing: border-box;
-  padding: 60px 0px 0 0px;
-  position: relative;
-  border-bottom: 1px solid #6cd5ff; }
-
-.topicIcon {
-  text-align: right;
-  position: absolute;
-  bottom: 0;
-  right: 100px;
-  margin: 20px; }
-  .topicIcon div {
-    text-align: center;
-    display: inline-block;
-    padding: 10px 0 0 0; }
-  .topicIcon img {
-    width: 25px; }
-  .topicIcon p {
-    letter-spacing: 1px;
-    font-size: 12px;
-    padding: 0px 10px 0px 10px; }
-
-.use {
-  position: absolute;
-  bottom: 0;
-  right: 0px;
-  margin-bottom: 20px; }
-  .use button {
-    width: 100px;
-    height: 45px;
-    color: #fff;
-    font-size: 18px;
-    line-height: 34px;
-    border: 1px solid #6cd5ff;
-    background-color: transparent;
-    text-align: center;
-    cursor: pointer; }
-  .use button:hover {
-    background-color: #6cd5ff;
-    color: #000; }
-
-.tripGroup {
-  padding: 10px;
-  box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 10px; }
+    line-height: 30px; }
 
 .tripWrip {
   padding: 20px 20px 20px 40px;
-  display: flex; }
+  display: flex;
+  border-bottom: 1px solid #6cd5ff; }
 
-.leftWrip .tripWrip ~ .tripWrip {
-  border-top: 1px solid #6cd5ff;
-  border-style: dashed; }
+.detitle {
+  position: relative; }
+  .detitle h3 {
+    display: inline-block; }
+
+.use {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  bottom: 0; }
+  .use button {
+    background: #6cd5ff;
+    border-style: none;
+    width: 100px;
+    height: 40px; }
 
 .tripDate {
-  width: 120px;
-  position: relative; }
+  width: 100px;
+  padding: 0 20px 0 0;
+  border-right: 1px solid #6cd5ff; }
   .tripDate p {
     text-align: center;
-    font-size: 32px;
-    width: 120px;
-    line-height: 120px;
+    font-size: 30px;
+    width: 100px;
+    line-height: 100px;
+    background-color: #6cd5ff;
     border-radius: 50%; }
-  .tripDate img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: .8s; }
 
 .tripContent {
   padding: 0 0 0 20px; }
   .tripContent h4 {
-    font-size: 25px;
-    padding: 10px 0 5px 0;
+    font-size: 18px;
+    padding: 5px 0 5px 0;
     letter-spacing: 1px; }
   .tripContent p {
     letter-spacing: 1px;
-    font-size: 14px;
-    line-height: 18px;
-    padding: 0 0 5px 0;
-    display: none; }
-
-.tripWrip:hover .tripContent p {
-  display: block;
-  transition: 5s; }
-
-.tripWrip:hover .tripDate img:nth-child(1) {
-  transform: rotate(-180deg); }
-
-.tripWrip:hover .tripDate img:nth-child(3) {
-  transform: rotate(180deg); }
+    padding: 0 0 5px 0; }
 
 .commentGroup {
   height: 400px;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 10px; }
+  overflow: auto; }
 
 .commentWrip {
   padding: 20px 20px 20px 40px;
-  display: flex; }
-
-.commentGroup .commentWrip ~ .commentWrip {
-  border-top: 1px solid #6cd5ff; }
+  display: flex;
+  border-bottom: 1px solid #6cd5ff; }
 
 .commentPic {
   width: 100px;
@@ -454,21 +382,18 @@ section {
     padding: 0 0 5px 0; }
 
 .memName {
-  font-size: 20px;
-  line-height: 30px; }
+  font-size: 20px; }
 
 .commentStyle {
   padding: 5px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #6cd5ff;
   margin: 10px; }
 
 #commentArea {
   width: 100%;
   box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0.5);
   border: 2px solid #6cd5ff;
-  padding: 10px;
-  color: #fff; }
+  padding: 10px; }
 
 .comment {
   text-align: center;
@@ -486,8 +411,9 @@ section {
     background-color: #6cd5ff; }
 
 .export {
+  margin: 20px;
   padding: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #6cd5ff;
   display: flex; }
 
 .exportPic {
@@ -511,7 +437,7 @@ section {
     width: 100%;
     height: 40px;
     background-color: transparent;
-    border: 2px solid #6cd5ff;
+    border: 2px soild #fff;
     letter-spacing: 1px;
     font-size: 14px;
     color: #fff; }
@@ -519,24 +445,10 @@ section {
     background-color: #fff;
     color: #6cd5ff; }
 
-.tripWrap {
-  display: flex;
-  flex-wrap: wrap;
-  width: 80%;
-  margin: auto;
-  padding: 15px; }
-
 .tripBox {
-  background-image: url(../img/refer/TES2.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 340px;
-  height: 240px;
-  margin: 30px 5px 30px 5px;
-  position: relative; }
-
-.tripBox:hover {
-  background-image: url(../img/refer/TES2-1.png); }
+  border: 1px solid #6cd5ff;
+  margin: 1%;
+  margin: 20px; }
 
 .tripTag {
   padding: 20px 15px 20px 15px;
@@ -545,60 +457,10 @@ section {
   right: 0;
   font-size: 0; }
 
-.tripPic {
-  width: 80%;
-  margin: auto;
-  position: absolute;
-  top: 6%;
-  left: 0;
-  right: 0; }
-
-.tripPic img:after {
-  content: '';
-  display: block;
-  width: 100%; }
-
-.tripTxt {
-  position: absolute;
-  bottom: 0;
-  letter-spacing: 1px;
-  padding: 10px 0 20px 40px; }
-  .tripTxt h4 {
-    line-height: 30px; }
-  .tripTxt span {
-    padding: 0 10px 0 0;
-    margin: 0 10px 0 0;
-    border-right: 2px solid #fff; }
-
-.tripIcon, .grad {
-  position: absolute;
-  bottom: 0;
-  left: 0; }
-
-.tripIcon {
-  padding-top: 20px;
-  text-align: left;
-  z-index: 5; }
-  .tripIcon div {
-    text-align: center;
-    display: inline-block; }
-  .tripIcon img {
-    width: 15px; }
-  .tripIcon p {
-    letter-spacing: 1px;
-    padding: 5px 10px 10px 10px; }
-
-.grad {
-  display: block;
-  z-index: 4;
-  width: 100%;
-  height: 62px;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, transparent 100%); }
-
 .tripPlanet, .tripKind {
   font-size: 16px;
   vertical-align: middle;
-  margin: 0 0 0 5px;
+  margin: 0 0 0 10px;
   padding: 5px;
   background-color: #6cd5ff;
   border-radius: 3px; }
@@ -626,6 +488,28 @@ section {
 
 .tripKind.technology {
   background: #852bff; }
+
+.tripTxt {
+  padding: 15px;
+  letter-spacing: 1px;
+  padding: 5px; }
+  .tripTxt h4 {
+    line-height: 30px;
+    padding: 10px; }
+  .tripTxt p {
+    padding: 10px; }
+
+.tripIcon {
+  text-align: right; }
+  .tripIcon div {
+    text-align: center;
+    display: inline-block; }
+  .tripIcon img {
+    width: 20px;
+    padding: 5px; }
+  .tripIcon p {
+    letter-spacing: 1px;
+    padding: 10px; }
 
 footer {
   width: 100%;
