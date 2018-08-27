@@ -21,21 +21,23 @@ section {
     margin: auto;
 }
 .banner{
-    width:80%;
+    width:70%;
     margin: auto;
     margin-top: 100px;
 }
 .productGroup{
-    width: 80%;
+    width: 70%;
     margin: auto;
     display: flex;
 }
+// 商品分類
 .productKind{
-    width: 28%;
+    width: 25%;
     margin: 1%
 }
+// 商品列表
 .productList{
-    width: 78%;
+    width: 70%;
     margin: 1%;
     display: flex;
     flex-wrap: wrap;
@@ -44,6 +46,21 @@ section {
     width: 31.15%;
     margin: 1%;
 }
+.productPic{
+    img{
+        border-radius: 10px;
+    }
+}
+.productTxt{
+    input{
+       width: 100%;
+       background-color: transparent;
+       border: 1px solid $fontColorWhite;
+       border-radius: 3px;
+       color: $fontColorWhite;
+    }
+}
+
 @import "layout/footer";
 @import "layout/medium";
 @import "layout/desktop";

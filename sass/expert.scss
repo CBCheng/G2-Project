@@ -216,20 +216,17 @@ a {
 .panel {
     // outline: 1px solid #fff;
     width: 1200px;
-    margin: 100px auto;
+    margin: 30px auto 50px;
 }
 
 @media screen and (max-width: 1200px) {
     .panel {
         width: 90%;
-        margin: 80px auto;
     }
 }
 
 @media screen and (max-width: 650px) {
-    .panel {
-        margin: 50px auto;
-    }
+    .panel {}
 }
 
 /* ---- button ---- */
@@ -287,7 +284,6 @@ a {
 @media screen and (max-width: 900px) {
     .button-group {
         .button {
-            padding: 4px 20px;
             margin: 5px 10px;
             font-size: 16px;
         }
@@ -299,10 +295,27 @@ a {
         .button-top,
         .button-down {
             display: block;
+            .button {
+                width: 80px;
+                span {
+                    left: 18px;
+                }
+            }
+            .button.popular {
+                span {
+                    left: 23px;
+                }
+            }
         }
     }
 }
 
+// @media screen and (max-width: 400px) {
+//     .button-group .button-down .button {
+//         display: block;
+//         margin: 10px auto 0;
+//     }
+// }
 /* ---- .expertBox ---- */
 
 .grid {
@@ -615,9 +628,7 @@ a {
     content: "";
     display: block;
     clear: both;
-}
-
-// lightBox的上方內容
+} // lightBox的上方內容
 .content {
     // outline: 1px solid #fff;
     // background-image: url(../img/expertImg/focus-0.png);
@@ -804,9 +815,7 @@ a {
             }
         }
     }
-}
-
-// lightBox的評論
+} // lightBox的評論
 .comment {
     width: 60%;
     margin: 60px auto 80px;
@@ -851,18 +860,19 @@ a {
 }
 
 @media screen and (max-width: 1000px) {
-    #lightBox1 {
+    #lightBox {
         width: 100%;
     }
 }
 
 @media screen and (max-width: 850px) {
+    #lightBox {
+        height: 90%;
+    }
     .comment {
         width: 90%;
     }
-}
-
-// @media screen and (max-width: 850px) {
+} // @media screen and (max-width: 850px) {
 //     #lightBox1 {
 //         h1 {
 //             margin-top: 30px;
