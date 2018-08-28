@@ -1,6 +1,6 @@
 <?php
 
-$thisId = $_REQUEST['thisId'];
+// $thisId = $_REQUEST['thisId'];
 	try {
 		$dsn = "mysql:host=localhost;port=3306;dbname=cd102g2;charset=utf8";
 		$user = "cheng2";
@@ -8,14 +8,14 @@ $thisId = $_REQUEST['thisId'];
 		$options = array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION);
 		$pdo = new PDO( $dsn, $user, $password, $options);  
 
-		// $thisId = 'p1_v1';
+		$thisId = 'p1_v1';
 		$sql = "select * from view where viewNo = :viewNo";
 		$view = $pdo->prepare($sql);
 
 		$view->bindValue(':viewNo',$thisId);
 		$view->execute();
 		$views = $view->fetch(PDO::FETCH_ASSOC);
-		echo $thisId;
+		echo $views['viewName'];
 ?>
 	
 
