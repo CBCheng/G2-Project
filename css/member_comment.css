@@ -195,113 +195,179 @@ nav {
     margin-top: -10px;
     margin-left: 30px;
     padding: 0; }
-  .comContent .comment_mg_box #itemContent_no,
-  .comContent .comment_mg_box #itemContent_al {
-    display: flex;
-    flex-wrap: wrap; }
-    .comContent .comment_mg_box #itemContent_no .comItem_no,
-    .comContent .comment_mg_box #itemContent_no .comItem_al,
-    .comContent .comment_mg_box #itemContent_al .comItem_no,
-    .comContent .comment_mg_box #itemContent_al .comItem_al {
+
+#itemContent_no,
+#itemContent_al {
+  display: flex;
+  flex-wrap: wrap; }
+  #itemContent_no .comItem_no,
+  #itemContent_no .comItem_al,
+  #itemContent_al .comItem_no,
+  #itemContent_al .comItem_al {
+    width: 44%;
+    border: 2px solid rgba(108, 213, 255, 0.5);
+    padding: 10px;
+    margin: 20px 0px 0 21px; }
+    #itemContent_no .comItem_no .expImg,
+    #itemContent_no .comItem_al .expImg,
+    #itemContent_al .comItem_no .expImg,
+    #itemContent_al .comItem_al .expImg {
+      display: inline-block;
       width: 40%;
-      border: 2px solid rgba(108, 213, 255, 0.5);
-      padding: 10px;
-      margin: 20px 26px 0; }
-      .comContent .comment_mg_box #itemContent_no .comItem_no .expImg,
-      .comContent .comment_mg_box #itemContent_no .comItem_al .expImg,
-      .comContent .comment_mg_box #itemContent_al .comItem_no .expImg,
-      .comContent .comment_mg_box #itemContent_al .comItem_al .expImg {
-        display: inline-block;
-        width: 40%;
-        height: 145px;
-        overflow: hidden;
-        vertical-align: top;
-        margin-right: 10px;
+      height: 150px;
+      overflow: hidden;
+      vertical-align: top;
+      margin-right: 10px;
+      cursor: pointer;
+      position: relative; }
+      #itemContent_no .comItem_no .expImg .expName,
+      #itemContent_no .comItem_al .expImg .expName,
+      #itemContent_al .comItem_no .expImg .expName,
+      #itemContent_al .comItem_al .expImg .expName {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: auto;
+        color: #ffffff;
+        font-size: 24px;
+        background-color: #094f91;
+        padding: 5px; }
+      #itemContent_no .comItem_no .expImg img,
+      #itemContent_no .comItem_al .expImg img,
+      #itemContent_al .comItem_no .expImg img,
+      #itemContent_al .comItem_al .expImg img {
+        width: 100%;
+        margin-top: -10px; }
+    #itemContent_no .comItem_no .itemTxt,
+    #itemContent_no .comItem_al .itemTxt,
+    #itemContent_al .comItem_no .itemTxt,
+    #itemContent_al .comItem_al .itemTxt {
+      display: inline-block;
+      width: 55%;
+      height: 100%;
+      text-align: left;
+      position: relative; }
+      #itemContent_no .comItem_no .itemTxt h4,
+      #itemContent_no .comItem_al .itemTxt h4,
+      #itemContent_al .comItem_no .itemTxt h4,
+      #itemContent_al .comItem_al .itemTxt h4 {
+        font-size: 18px;
+        color: #6cd5ff;
+        margin-bottom: 15px; }
+      #itemContent_no .comItem_no .itemTxt h5,
+      #itemContent_no .comItem_al .itemTxt h5,
+      #itemContent_al .comItem_no .itemTxt h5,
+      #itemContent_al .comItem_al .itemTxt h5 {
+        font-size: 18px;
+        letter-spacing: 1px;
+        line-height: 1.3;
+        color: #ffffff;
+        white-space: wrap; }
+      #itemContent_no .comItem_no .itemTxt .commentBtn,
+      #itemContent_no .comItem_al .itemTxt .commentBtn,
+      #itemContent_al .comItem_no .itemTxt .commentBtn,
+      #itemContent_al .comItem_al .itemTxt .commentBtn {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        width: 60px;
+        height: 35px;
+        color: #fff;
+        font-size: 18px;
+        line-height: 35px;
+        border: 1px solid #6cd5ff;
+        background-color: transparent;
+        text-align: center;
         cursor: pointer; }
-        .comContent .comment_mg_box #itemContent_no .comItem_no .expImg img,
-        .comContent .comment_mg_box #itemContent_no .comItem_al .expImg img,
-        .comContent .comment_mg_box #itemContent_al .comItem_no .expImg img,
-        .comContent .comment_mg_box #itemContent_al .comItem_al .expImg img {
-          width: 100%;
-          margin-top: -10px; }
-      .comContent .comment_mg_box #itemContent_no .comItem_no .itemTxt,
-      .comContent .comment_mg_box #itemContent_no .comItem_al .itemTxt,
-      .comContent .comment_mg_box #itemContent_al .comItem_no .itemTxt,
-      .comContent .comment_mg_box #itemContent_al .comItem_al .itemTxt {
-        display: inline-block;
-        width: 55%;
-        height: 100%;
-        text-align: left;
+      #itemContent_no .comItem_no .itemTxt .commentBtn:hover,
+      #itemContent_no .comItem_al .itemTxt .commentBtn:hover,
+      #itemContent_al .comItem_no .itemTxt .commentBtn:hover,
+      #itemContent_al .comItem_al .itemTxt .commentBtn:hover {
+        background-color: #6cd5ff;
+        color: #000; }
+      #itemContent_no .comItem_no .itemTxt .score,
+      #itemContent_no .comItem_al .itemTxt .score,
+      #itemContent_al .comItem_no .itemTxt .score,
+      #itemContent_al .comItem_al .itemTxt .score {
+        position: absolute;
+        bottom: 10px; }
+        #itemContent_no .comItem_no .itemTxt .score span,
+        #itemContent_no .comItem_al .itemTxt .score span,
+        #itemContent_al .comItem_no .itemTxt .score span,
+        #itemContent_al .comItem_al .itemTxt .score span {
+          color: #ffffff;
+          font-size: 16px;
+          padding-right: 5px; }
+        #itemContent_no .comItem_no .itemTxt .score img,
+        #itemContent_no .comItem_al .itemTxt .score img,
+        #itemContent_al .comItem_no .itemTxt .score img,
+        #itemContent_al .comItem_al .itemTxt .score img {
+          vertical-align: text-bottom;
+          width: 20px; }
+    #itemContent_no .comItem_no .message,
+    #itemContent_no .comItem_al .message,
+    #itemContent_al .comItem_no .message,
+    #itemContent_al .comItem_al .message {
+      width: 90%;
+      margin: auto;
+      border-top: 1px dashed rgba(108, 213, 255, 0.5);
+      padding: 15px 0 10px; }
+      #itemContent_no .comItem_no .message .user,
+      #itemContent_no .comItem_al .message .user,
+      #itemContent_al .comItem_no .message .user,
+      #itemContent_al .comItem_al .message .user {
+        width: 100%;
+        height: 80px;
         position: relative; }
-        .comContent .comment_mg_box #itemContent_no .comItem_no .itemTxt h4,
-        .comContent .comment_mg_box #itemContent_no .comItem_al .itemTxt h4,
-        .comContent .comment_mg_box #itemContent_al .comItem_no .itemTxt h4,
-        .comContent .comment_mg_box #itemContent_al .comItem_al .itemTxt h4 {
-          font-size: 20px;
+        #itemContent_no .comItem_no .message .user .name,
+        #itemContent_no .comItem_al .message .user .name,
+        #itemContent_al .comItem_no .message .user .name,
+        #itemContent_al .comItem_al .message .user .name {
+          position: absolute;
+          left: 60px;
+          top: 10px;
+          padding: 10px 25px;
+          -webkit-clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+          background-color: #094f91;
+          font-size: 16px;
+          letter-spacing: 2px;
           color: #ffffff; }
-        .comContent .comment_mg_box #itemContent_no .comItem_no .itemTxt h5,
-        .comContent .comment_mg_box #itemContent_no .comItem_al .itemTxt h5,
-        .comContent .comment_mg_box #itemContent_al .comItem_no .itemTxt h5,
-        .comContent .comment_mg_box #itemContent_al .comItem_al .itemTxt h5 {
-          font-size: 18px;
-          letter-spacing: 1px;
-          margin-top: 20px;
-          color: #ffffff;
-          overflow: hidden;
-          white-space: nowrap;
-          text-overflow: ellipsis; }
-        .comContent .comment_mg_box #itemContent_no .comItem_no .itemTxt p,
-        .comContent .comment_mg_box #itemContent_no .comItem_al .itemTxt p,
-        .comContent .comment_mg_box #itemContent_al .comItem_no .itemTxt p,
-        .comContent .comment_mg_box #itemContent_al .comItem_al .itemTxt p {
-          font-size: 14px;
-          margin-top: 20px;
-          color: #ffffff;
-          letter-spacing: 1px;
-          overflow: hidden;
-          white-space: nowrap;
-          text-overflow: ellipsis; }
-        .comContent .comment_mg_box #itemContent_no .comItem_no .itemTxt .commentBtn,
-        .comContent .comment_mg_box #itemContent_no .comItem_al .itemTxt .commentBtn,
-        .comContent .comment_mg_box #itemContent_al .comItem_no .itemTxt .commentBtn,
-        .comContent .comment_mg_box #itemContent_al .comItem_al .itemTxt .commentBtn {
+        #itemContent_no .comItem_no .message .user img,
+        #itemContent_no .comItem_al .message .user img,
+        #itemContent_al .comItem_no .message .user img,
+        #itemContent_al .comItem_al .message .user img {
           position: absolute;
-          bottom: 0px;
-          right: 10px;
-          width: 60px;
-          height: 35px;
-          color: #fff;
-          font-size: 18px;
-          line-height: 35px;
-          border: 1px solid #6cd5ff;
-          background-color: transparent;
-          text-align: center;
-          cursor: pointer; }
-        .comContent .comment_mg_box #itemContent_no .comItem_no .itemTxt .commentBtn:hover,
-        .comContent .comment_mg_box #itemContent_no .comItem_al .itemTxt .commentBtn:hover,
-        .comContent .comment_mg_box #itemContent_al .comItem_no .itemTxt .commentBtn:hover,
-        .comContent .comment_mg_box #itemContent_al .comItem_al .itemTxt .commentBtn:hover {
-          background-color: #6cd5ff;
-          color: #000; }
-        .comContent .comment_mg_box #itemContent_no .comItem_no .itemTxt .score,
-        .comContent .comment_mg_box #itemContent_no .comItem_al .itemTxt .score,
-        .comContent .comment_mg_box #itemContent_al .comItem_no .itemTxt .score,
-        .comContent .comment_mg_box #itemContent_al .comItem_al .itemTxt .score {
-          position: absolute;
-          bottom: 10px; }
-          .comContent .comment_mg_box #itemContent_no .comItem_no .itemTxt .score span,
-          .comContent .comment_mg_box #itemContent_no .comItem_al .itemTxt .score span,
-          .comContent .comment_mg_box #itemContent_al .comItem_no .itemTxt .score span,
-          .comContent .comment_mg_box #itemContent_al .comItem_al .itemTxt .score span {
-            color: #ffffff;
-            font-size: 16px;
-            padding-right: 5px; }
-          .comContent .comment_mg_box #itemContent_no .comItem_no .itemTxt .score img,
-          .comContent .comment_mg_box #itemContent_no .comItem_al .itemTxt .score img,
-          .comContent .comment_mg_box #itemContent_al .comItem_no .itemTxt .score img,
-          .comContent .comment_mg_box #itemContent_al .comItem_al .itemTxt .score img {
-            vertical-align: text-bottom;
-            width: 20px; }
+          left: 0;
+          width: 80px;
+          border-radius: 50%; }
+      #itemContent_no .comItem_no .message .score,
+      #itemContent_no .comItem_al .message .score,
+      #itemContent_al .comItem_no .message .score,
+      #itemContent_al .comItem_al .message .score {
+        margin: -20px 0 10px 100px; }
+        #itemContent_no .comItem_no .message .score span,
+        #itemContent_no .comItem_al .message .score span,
+        #itemContent_al .comItem_no .message .score span,
+        #itemContent_al .comItem_al .message .score span {
+          font-size: 16px;
+          padding-right: 2px;
+          color: #ffffff; }
+        #itemContent_no .comItem_no .message .score img,
+        #itemContent_no .comItem_al .message .score img,
+        #itemContent_al .comItem_no .message .score img,
+        #itemContent_al .comItem_al .message .score img {
+          width: 18px;
+          vertical-align: text-bottom; }
+      #itemContent_no .comItem_no .message p,
+      #itemContent_no .comItem_al .message p,
+      #itemContent_al .comItem_no .message p,
+      #itemContent_al .comItem_al .message p {
+        margin-left: 90px;
+        font-size: 16px;
+        text-align: left;
+        line-height: 1.4;
+        color: #ffffff; }
 
 #lightBox_com_father {
   display: none;
