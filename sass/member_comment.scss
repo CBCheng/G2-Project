@@ -52,9 +52,6 @@ a {
 
 // ========scrollBar change=========
 @import "layout/nav";
-
-
-
 .comContent {
     max-width: 960px;
     min-height: 500px;
@@ -87,25 +84,24 @@ a {
 #itemContent_no,
 #itemContent_al {
     display: flex;
-    flex-wrap: wrap;
-    // .comItem_al{height: 300px;}
+    flex-wrap: wrap; // .comItem_al{height: 300px;}
     .comItem_no,
     .comItem_al {
-        // position: relative;
+        position: relative;
         width: 44%;
         border: 2px solid $borderColorBlue;
         padding: 10px;
         margin: 20px 0px 0 21px;
         .expImg {
             display: inline-block;
-            width: 40%; // width: 130px;
+            width: 40%; 
             height: 150px;
             overflow: hidden;
             vertical-align: top;
             margin-right: 10px;
             cursor: pointer;
             position: relative;
-            .expName{
+            .expName {
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -120,12 +116,16 @@ a {
                 margin-top: -10px;
             }
         }
+        .commentBtn {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            @include btn(60px, 35px, 18px, 35px);
+        }
         .itemTxt {
             display: inline-block;
-            width: 55%;
-            height: 100%;
-            text-align: left;
-            position: relative;
+            width: 55%; 
+            text-align: left; 
             h4 {
                 font-size: 18px;
                 color: $fontColorBlue;
@@ -137,13 +137,6 @@ a {
                 line-height: 1.3;
                 color: #ffffff;
                 white-space: wrap;
-            }
-            
-            .commentBtn {
-                position: absolute;
-                bottom: 0px;
-                right: 0px;
-                @include btn(60px, 35px, 18px, 35px);
             }
             .commentBtn:hover {
                 @include btnHover;
@@ -164,10 +157,9 @@ a {
         }
         .message {
             width: 90%;
-            margin: auto;
+            margin: 20px auto 0;
             border-top: 1px dashed $borderColorBlue;
             padding: 15px 0 10px;
-            
             .user {
                 width: 100%;
                 height: 80px;
@@ -182,7 +174,7 @@ a {
                     background-color: $attrBlue;
                     font-size: 16px;
                     letter-spacing: 2px;
-                    color:#ffffff;
+                    color: #ffffff;
                 }
                 img {
                     position: absolute;
@@ -192,7 +184,7 @@ a {
                 }
             }
             .score {
-                margin: -20px 0 10px 100px;
+                margin: -20px 0 20px 100px;
                 span {
                     font-size: 16px;
                     padding-right: 2px;
@@ -204,8 +196,7 @@ a {
                 }
             }
             p {
-                
-                margin-left: 90px;
+                margin-left: 10px;
                 font-size: 16px;
                 text-align: left;
                 line-height: 1.4;
@@ -214,7 +205,6 @@ a {
         }
     }
 }
-
 
 #lightBox_com_father {
     display: none;

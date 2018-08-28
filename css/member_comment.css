@@ -204,6 +204,7 @@ nav {
   #itemContent_no .comItem_al,
   #itemContent_al .comItem_no,
   #itemContent_al .comItem_al {
+    position: relative;
     width: 44%;
     border: 2px solid rgba(108, 213, 255, 0.5);
     padding: 10px;
@@ -238,15 +239,29 @@ nav {
       #itemContent_al .comItem_al .expImg img {
         width: 100%;
         margin-top: -10px; }
+    #itemContent_no .comItem_no .commentBtn,
+    #itemContent_no .comItem_al .commentBtn,
+    #itemContent_al .comItem_no .commentBtn,
+    #itemContent_al .comItem_al .commentBtn {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      width: 60px;
+      height: 35px;
+      color: #fff;
+      font-size: 18px;
+      line-height: 35px;
+      border: 1px solid #6cd5ff;
+      background-color: transparent;
+      text-align: center;
+      cursor: pointer; }
     #itemContent_no .comItem_no .itemTxt,
     #itemContent_no .comItem_al .itemTxt,
     #itemContent_al .comItem_no .itemTxt,
     #itemContent_al .comItem_al .itemTxt {
       display: inline-block;
       width: 55%;
-      height: 100%;
-      text-align: left;
-      position: relative; }
+      text-align: left; }
       #itemContent_no .comItem_no .itemTxt h4,
       #itemContent_no .comItem_al .itemTxt h4,
       #itemContent_al .comItem_no .itemTxt h4,
@@ -263,22 +278,6 @@ nav {
         line-height: 1.3;
         color: #ffffff;
         white-space: wrap; }
-      #itemContent_no .comItem_no .itemTxt .commentBtn,
-      #itemContent_no .comItem_al .itemTxt .commentBtn,
-      #itemContent_al .comItem_no .itemTxt .commentBtn,
-      #itemContent_al .comItem_al .itemTxt .commentBtn {
-        position: absolute;
-        bottom: 0px;
-        right: 0px;
-        width: 60px;
-        height: 35px;
-        color: #fff;
-        font-size: 18px;
-        line-height: 35px;
-        border: 1px solid #6cd5ff;
-        background-color: transparent;
-        text-align: center;
-        cursor: pointer; }
       #itemContent_no .comItem_no .itemTxt .commentBtn:hover,
       #itemContent_no .comItem_al .itemTxt .commentBtn:hover,
       #itemContent_al .comItem_no .itemTxt .commentBtn:hover,
@@ -309,7 +308,7 @@ nav {
     #itemContent_al .comItem_no .message,
     #itemContent_al .comItem_al .message {
       width: 90%;
-      margin: auto;
+      margin: 20px auto 0;
       border-top: 1px dashed rgba(108, 213, 255, 0.5);
       padding: 15px 0 10px; }
       #itemContent_no .comItem_no .message .user,
@@ -345,7 +344,7 @@ nav {
       #itemContent_no .comItem_al .message .score,
       #itemContent_al .comItem_no .message .score,
       #itemContent_al .comItem_al .message .score {
-        margin: -20px 0 10px 100px; }
+        margin: -20px 0 20px 100px; }
         #itemContent_no .comItem_no .message .score span,
         #itemContent_no .comItem_al .message .score span,
         #itemContent_al .comItem_no .message .score span,
@@ -363,7 +362,7 @@ nav {
       #itemContent_no .comItem_al .message p,
       #itemContent_al .comItem_no .message p,
       #itemContent_al .comItem_al .message p {
-        margin-left: 90px;
+        margin-left: 10px;
         font-size: 16px;
         text-align: left;
         line-height: 1.4;
