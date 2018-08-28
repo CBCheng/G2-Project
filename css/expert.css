@@ -742,104 +742,104 @@ nav {
     font-size: 30px;
     float: right;
     cursor: pointer;
-    position: absolute;
-    top: 10px;
-    right: 10px; }
+    position: fixed;
+    top: 32px;
+    right: 16%; }
 
 #lightBox:after {
   content: "";
   display: block;
   clear: both; }
 
-.content {
+.content_desk {
   background-image: url(../img/expertImg/starBg.png);
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center; }
-  .content .conLeft {
+  .content_desk .conLeft {
     width: 40%;
     position: relative; }
-    .content .conLeft .crown {
+    .content_desk .conLeft .crown {
       width: 80px;
       position: absolute;
       left: 40px;
       top: 5px;
       z-index: 5;
       transform: rotate(-30deg); }
-    .content .conLeft .expPic {
+    .content_desk .conLeft .expPic {
       width: 60%;
       position: absolute;
       left: 0;
       right: 0;
       top: 50px;
       margin: auto; }
-      .content .conLeft .expPic .attr {
+      .content_desk .conLeft .expPic .attr {
         position: absolute;
         background-color: #094f91;
         font-size: 20px;
         padding: 5px 10px;
         right: 10px;
         top: 10px; }
-      .content .conLeft .expPic img {
+      .content_desk .conLeft .expPic img {
         width: 100%;
         min-width: 100px; }
-  .content .conRight {
+  .content_desk .conRight {
     margin-top: 50px;
     width: 35%;
     display: flex;
     flex-direction: column; }
-    .content .conRight h1 {
+    .content_desk .conRight h1 {
       color: #6cd5ff;
       text-align: justify; }
-    .content .conRight .rocket {
+    .content_desk .conRight .rocket {
       margin-left: 10px;
       width: 35px; }
-    .content .conRight h2 {
+    .content_desk .conRight h2 {
       margin-top: 20px;
       text-align: justify;
       display: inline-block; }
-    .content .conRight .data {
+    .content_desk .conRight .data {
       text-align: justify; }
-      .content .conRight .data .score {
+      .content_desk .conRight .data .score {
         margin-top: 30px; }
-        .content .conRight .data .score h3 {
+        .content_desk .conRight .data .score h3 {
           display: inline;
           font-size: 20px;
           padding-right: 10px; }
-        .content .conRight .data .score span {
+        .content_desk .conRight .data .score span {
           font-size: 16px;
           padding-right: 5px; }
-        .content .conRight .data .score img {
+        .content_desk .conRight .data .score img {
           vertical-align: text-bottom;
           width: 20px; }
-      .content .conRight .data .chart {
+      .content_desk .conRight .data .chart {
         margin: 30px 0 20px;
         text-align: justify; }
-        .content .conRight .data .chart h3 {
+        .content_desk .conRight .data .chart h3 {
           font-size: 22px;
           margin-left: 35px;
           margin-bottom: 10px; }
-        .content .conRight .data .chart span {
+        .content_desk .conRight .data .chart span {
           font-size: 18px;
           margin-right: 10px;
           line-height: 1.8; }
-        .content .conRight .data .chart .value {
+        .content_desk .conRight .data .chart .value {
           width: 0px;
           height: 15px;
           background-color: #aaa;
           display: inline-block; }
-        .content .conRight .data .chart .value.focus {
+        .content_desk .conRight .data .chart .value.focus {
           background-color: #6cd5ff; }
-        .content .conRight .data .chart .value:nth-of-type(1) {
+        .content_desk .conRight .data .chart .value:nth-of-type(1) {
           animation: value1 1.5s 0.5s 1 forwards; }
-        .content .conRight .data .chart .value:nth-of-type(2) {
+        .content_desk .conRight .data .chart .value:nth-of-type(2) {
           animation: value2 1.5s 0.5s 1 forwards; }
-        .content .conRight .data .chart .value:nth-of-type(3) {
+        .content_desk .conRight .data .chart .value:nth-of-type(3) {
           animation: value3 1.5s 0.5s 1 forwards; }
-        .content .conRight .data .chart .value:nth-of-type(4) {
+        .content_desk .conRight .data .chart .value:nth-of-type(4) {
           animation: value4 1.5s 0.5s 1 forwards; }
-        .content .conRight .data .chart .value:nth-of-type(5) {
+        .content_desk .conRight .data .chart .value:nth-of-type(5) {
           animation: value5 1.5s 0.5s 1 forwards; }
 
 @keyframes value1 {
@@ -871,26 +871,26 @@ nav {
     width: 0; }
   100% {
     width: 80px; } }
-    .content .conRight .record {
+    .content_desk .conRight .record {
       align-self: flex-end; }
-      .content .conRight .record .collect {
+      .content_desk .conRight .record .collect {
         display: inline-block; }
-      .content .conRight .record .writeComment {
+      .content_desk .conRight .record .writeComment {
         display: inline-block; }
-      .content .conRight .record .collect,
-      .content .conRight .record .writeComment {
+      .content_desk .conRight .record .collect,
+      .content_desk .conRight .record .writeComment {
         margin: 10px; }
-        .content .conRight .record .collect #heart,
-        .content .conRight .record .collect #write,
-        .content .conRight .record .writeComment #heart,
-        .content .conRight .record .writeComment #write {
+        .content_desk .conRight .record .collect #heart,
+        .content_desk .conRight .record .collect #write,
+        .content_desk .conRight .record .writeComment #heart,
+        .content_desk .conRight .record .writeComment #write {
           width: 28px;
           height: 26px;
           cursor: pointer; }
-        .content .conRight .record .collect #Cnum,
-        .content .conRight .record .collect #Wnum,
-        .content .conRight .record .writeComment #Cnum,
-        .content .conRight .record .writeComment #Wnum {
+        .content_desk .conRight .record .collect #Cnum,
+        .content_desk .conRight .record .collect #Wnum,
+        .content_desk .conRight .record .writeComment #Cnum,
+        .content_desk .conRight .record .writeComment #Wnum {
           margin-top: 10px;
           font-size: 14px;
           color: #aaaaaa; }
