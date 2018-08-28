@@ -117,6 +117,20 @@ $(function(){
     });
 });
 
+// $(function(){
+//     $('.plVi,.viewName').on('click',function(){
+//         $.ajax({
+//             url: 'load.php',				
+//             data: {name:'Anan',age:13},				
+//             type: 'POST',				
+//             dataType: 'text',			
+//             success: function(data){
+//                 $('#feedback').html('<h2>'+data+'</h2>');
+//             }
+//         });
+//     });
+// });
+
 // ====== part1 h1 anime ======
 // Wrap every letter in a span
 $('.ml14 .letters').each(function(){
