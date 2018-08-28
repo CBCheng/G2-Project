@@ -107,10 +107,36 @@ $(function(){
 });
 
 //====== planet dot click ======
+// $(function(){
+//     $('.plVi,.viewName').on('click',function(){
+//         console.log(this.id);
+//         $('.viewBg').css('transform','rotateX(0deg)');
+//     });
+//     $('.exit').on('click',function(){
+//         $('.viewBg').css('transform','rotateX(90deg)');
+//     });
+// });
+
 $(function(){
-    $('.plVi,.viewName').on('click',function(){
-        console.log(this.id);
-        $('.viewBg').css('transform','rotateX(0deg)');
+    $('.plVi').on('click',function(){
+        // var ids = $(this).id;
+        console.log($(this).attr("id"));
+        $.ajax({
+            url: 'indexViewAjax.php',
+            type: 'POST',	
+            dataType: 'text',   			
+            data: {
+                thisId:$(this).attr("id")
+            },				
+            success: function(data){
+                alert(data);
+                // $('.viewBg').html(data);
+                // $('.viewBg').css('transform','rotateX(0deg)');
+            },
+            error: function(){
+                alert('error');
+            }
+        });
     });
     $('.exit').on('click',function(){
         $('.viewBg').css('transform','rotateX(90deg)');
