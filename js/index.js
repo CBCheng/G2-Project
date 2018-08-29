@@ -120,14 +120,13 @@ $(function(){
 $(function(){
     $('.plVi').on('click',function(){
         // var ids = $(this).id;
-        console.log($(this).attr("id"));
+        // console.log($(this).attr("id"));
+        var thisId = $(this).attr("id");
         $.ajax({
-            url: 'indexViewAjax.php',
+            url: 'php/indexViewAjax.php',
             type: 'POST',	
             dataType: 'text',   			
-            data: {
-                thisId:$(this).attr("id")
-            },				
+            data: '&thisId=' + thisId,				
             success: function(data){
                 alert(data);
                 // $('.viewBg').html(data);

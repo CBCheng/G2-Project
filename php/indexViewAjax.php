@@ -8,7 +8,8 @@
 		$options = array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION);
 		$pdo = new PDO( $dsn, $user, $password, $options);  
 
-		$thisId = 'p1_v1';
+		$thisId = $_REQUEST['thisId'];
+		// $thisId = 'p1_v1';
 		$sql = "select * from view where viewNo = :viewNo";
 		$view = $pdo->prepare($sql);
 
