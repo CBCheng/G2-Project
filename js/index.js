@@ -125,22 +125,21 @@ $(function(){
         $.ajax({
             url: 'php/indexViewAjax.php',
             type: 'POST',	
-            dataType: 'text',   			
+            dataType: 'text',
             data: '&thisId=' + thisId,				
             success: function(data){
-                alert(data);
-                // $('.viewBg').html(data);
-                // $('.viewBg').css('transform','rotateX(0deg)');
+                // alert(data);
+                $('.viewBg').html(data);
+                $('.viewBg').css('transform','rotateX(0deg)');
             },
             error: function(){
                 alert('error');
             }
         });
-    });
-    $('.exit').on('click',function(){
-        $('.viewBg').css('transform','rotateX(90deg)');
+        // $('.viewBg').css('transform','rotateX(0deg)');
     });
 });
+
 
 // ====== part1 h1 anime ======
 // Wrap every letter in a span

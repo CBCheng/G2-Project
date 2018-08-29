@@ -16,10 +16,23 @@
 		$view->bindValue(':viewNo',$thisId);
 		$view->execute();
 		$views = $view->fetch(PDO::FETCH_ASSOC);
-		echo $views['viewName'];
+		// echo $views['viewName'];
+		// echo $views['viewImg1'];
 ?>
-	
 
+<div class="viewItem">
+    <img src="<?php echo $views['viewImg1']?>" alt="viewImg" class="viewImg">
+    <div class="exit">
+        <img src="img/index/cancel.png" alt="exit">
+    </div>
+    <h2><?php echo $views['viewName'] ?></h2>
+    <a href="planning.html">將景點加入行程</a>
+    <script type="text/javascript">
+    	$('.exit').on('click',function(){
+	        $('.viewBg').css('transform','rotateX(90deg)');
+	    });
+    </script>
+</div>
 <?php
 	} catch (PODException $e) {
 		echo "錯誤原因 : " , $e->getMessage(), "<br>";
