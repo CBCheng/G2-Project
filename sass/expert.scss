@@ -3,33 +3,30 @@
 @import "mixin/mixin";
 @import "components/buttons";
 @include body(10px);
+
 * {
     box-sizing: border-box;
 }
 
 // ========scrollBar change=========
 /* width */
-
 ::-webkit-scrollbar {
     width: 15px;
     background: #202164;
 }
 
 /* Track */
-
 ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px grey;
 }
 
 /* Handle */
-
 ::-webkit-scrollbar-thumb {
     background: #95cce4;
     border-radius: 10px;
 }
 
 /* Handle on hover */
-
 ::-webkit-scrollbar-thumb:hover {
     background: #2f83ad;
 }
@@ -47,11 +44,13 @@ a {
 
 @import "layout/nav";
 @import "layout/nav-small";
+
 .title {
     top: 200px;
     position: relative;
     margin: auto;
     width: 100%;
+
     h1 {
         position: absolute;
         text-align: center;
@@ -61,6 +60,7 @@ a {
         right: 0;
         left: 0;
     }
+
     #can {
         top: 0;
         bottom: 0;
@@ -69,14 +69,17 @@ a {
         margin: auto;
         text-align: center;
     }
+
     #canvas1 {
         position: absolute;
         animation: aa 30s 0s infinite;
     }
+
     #canvas2 {
         // position: absolute;
         animation: bb 30s 0s infinite;
     }
+
     .hex {
         display: none;
     }
@@ -85,13 +88,16 @@ a {
 @media screen and (max-width: 767px) {
     .title {
         top: 100px;
+
         h1 {
             font-size: 24px;
             top: 65px;
         }
+
         #can {
             display: none;
         }
+
         .hex {
             display: block;
             top: 0;
@@ -101,11 +107,13 @@ a {
             margin: auto;
             text-align: center;
         }
+
         .hexWhite {
             width: inherit;
             position: absolute;
             animation: aa 30s 0s infinite;
         }
+
         .hexBlue {
             width: inherit;
             animation: bb 30s 0s infinite;
@@ -117,39 +125,51 @@ a {
     0% {
         transform: rotate(0deg);
     }
+
     8.3333% {
         transform: rotate(30deg);
     }
+
     16.6667% {
         transform: rotate(60deg);
     }
+
     25% {
         transform: rotate(90deg);
     }
+
     33.3333% {
         transform: rotate(120deg);
     }
+
     41.6667% {
         transform: rotate(150deg);
     }
+
     50% {
         transform: rotate(180deg);
     }
+
     58.3333% {
         transform: rotate(210deg);
     }
+
     66.6667% {
         transform: rotate(240deg);
     }
+
     75% {
         transform: rotate(270deg);
     }
+
     83.3333% {
         transform: rotate(300deg);
     }
+
     91.6667% {
         transform: rotate(330deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
@@ -159,39 +179,51 @@ a {
     0% {
         transform: rotate(0deg);
     }
+
     8.3333% {
         transform: rotate(-30deg);
     }
+
     16.6667% {
         transform: rotate(-60deg);
     }
+
     25% {
         transform: rotate(-90deg);
     }
+
     33.3333% {
         transform: rotate(-120deg);
     }
+
     41.6667% {
         transform: rotate(-150deg);
     }
+
     50% {
         transform: rotate(-180deg);
     }
+
     58.3333% {
         transform: rotate(-210deg);
     }
+
     66.6667% {
         transform: rotate(-240deg);
     }
+
     75% {
         transform: rotate(-270deg);
     }
+
     83.3333% {
         transform: rotate(-300deg);
     }
+
     91.6667% {
         transform: rotate(-330deg);
     }
+
     100% {
         transform: rotate(-360deg);
     }
@@ -203,10 +235,12 @@ a {
     justify-content: space-around;
     align-items: center;
     overflow: hidden;
+
     .cloud1 {
         width: 50%;
         min-width: 300px;
     }
+
     .cloud2 {
         width: 35%;
         min-width: 200px;
@@ -230,52 +264,63 @@ a {
 }
 
 /* ---- button ---- */
-
 .button-group {
     text-align: center;
     margin-bottom: 10px;
     padding-bottom: 20px;
     border-bottom: 2px solid $fontColorBlue;
+
     .button-top,
     .button-down {
         display: inline-block;
     }
+
     .button {
         @include skewBtn(100px, 40px);
         margin: 10px 15px;
+
         span {
             @include skewBtnText(4px, 25px);
         }
     }
+
     .button.popular {
         @include skewBtn(85px, 40px);
+
         span {
             @include skewBtnText(4px, 25px);
         }
     }
+
     .button.all {
         @include skewBtnAll(100px, 40px);
         background-color: rgba(255, 255, 255, .5);
+
         span {
             @include skewBtnTextAll(4px, 28px);
         }
     }
+
     .button:hover {
         @include skewBtnHover;
         background-color: $bottomColor;
         color: #222;
     }
+
     .button.all:hover {
         background-color: rgb(129, 162, 253);
     }
+
     .button:active,
     .button.is-checked {
         background-color: $bottomColor;
     }
+
     .button:active,
     .button.is-checked.all {
         background-color: rgb(129, 162, 253);
     }
+
     .button.is-checked {
         color: #000;
     }
@@ -292,15 +337,19 @@ a {
 
 @media screen and (max-width: 650px) {
     .button-group {
+
         .button-top,
         .button-down {
             display: block;
+
             .button {
                 width: 80px;
+
                 span {
                     left: 18px;
                 }
             }
+
             .button.popular {
                 span {
                     left: 23px;
@@ -317,7 +366,6 @@ a {
 //     }
 // }
 /* ---- .expertBox ---- */
-
 .grid {
     .expertBox {
         width: 250px;
@@ -326,6 +374,7 @@ a {
         text-align: center;
         position: relative;
         overflow: hidden;
+
         .king {
             position: absolute;
             left: 5px;
@@ -333,14 +382,17 @@ a {
             width: 50px;
             transform: rotate(-30deg);
         }
+
         .h2Desk {
             font-size: 22px;
             margin-top: 40px;
         }
+
         .h3Desk {
             font-size: 20px;
             margin: 8px 0;
         }
+
         .attr {
             position: absolute;
             background-color: $attrBlue;
@@ -350,6 +402,7 @@ a {
             top: 108px;
             z-index: 5;
         }
+
         .pic {
             // outline: 1px solid #f00;
             width: 180px;
@@ -358,6 +411,7 @@ a {
             margin: auto;
             position: relative;
             cursor: pointer;
+
             img {
                 width: 100%;
                 margin-top: -10px;
@@ -365,6 +419,7 @@ a {
                 transition: 0.5s;
             }
         }
+
         .aside {
             position: absolute;
             left: 0;
@@ -372,26 +427,32 @@ a {
             bottom: 0px;
             margin: auto;
             background: linear-gradient(to top, #000, rgba(0, 0, 0, 0.2) 100%);
+
             .h2Ph,
             .h3Ph {
                 display: none;
             }
+
             .score {
                 padding-top: 15px;
+
                 span {
                     color: #ffffff;
                     font-size: 16px;
                     padding-right: 5px;
                 }
+
                 img {
                     vertical-align: text-bottom;
                     width: 18px;
                 }
             }
+
             .mark {
                 // outline: 1px solid #f00;
                 font-size: 15px;
                 color: #ffffff;
+
                 img {
                     width: 22px;
                     margin: 10px;
@@ -399,19 +460,24 @@ a {
             }
         }
     }
+
     @media screen and (min-width:650px) {
         .expertBox.blue {
             background-image: url('../img/expertImg/techFrame-blue.png');
         }
+
         .expertBox.orange {
             background-image: url('../img/expertImg/techFrame-orange.png');
         }
+
         .expertBox.green {
             background-image: url('../img/expertImg/techFrame-green.png');
         }
+
         .expertBox .aside h3 {
             display: none;
         }
+
         .expertBox:before {
             content: '';
             display: block;
@@ -425,49 +491,61 @@ a {
             transition: 0.5s ease-out;
             transform: skewX(-50deg);
         }
+
         .expertBox:hover:before {
             left: 420px;
             top: 120px;
         }
+
         .expertBox:hover a img {
             transform: scale(1.2);
         }
     }
+
     @media screen and (max-width: 991px) {
         .expertBox {
             width: 200px;
             margin: 15px;
             height: 320px;
             background-size: cover;
+
             .h2Desk {
                 font-size: 20px;
                 margin-top: 30px;
             }
+
             .h3Desk {
                 font-size: 18px;
                 margin: 7px 0;
             }
+
             .attr {
                 font-size: 15px;
                 right: 37px;
                 top: 88px;
             }
+
             .pic {
                 width: 140px;
                 height: 210px;
             }
+
             .score {
                 margin-top: 10px;
+
                 span {
                     font-size: 14px;
                     padding-right: 2px;
                 }
+
                 img {
                     width: 15px;
                 }
             }
+
             .mark {
                 font-size: 14px;
+
                 img {
                     width: 20px;
                     margin: 5px;
@@ -476,76 +554,93 @@ a {
             }
         }
     }
+
     @media screen and (max-width: 650px) {
         .expertBox.blue {
             border-bottom: 2px dashed $borderColorBlue;
         }
+
         .expertBox.orange {
             border-bottom: 2px dashed $borderColorOrange;
         }
+
         .expertBox.green {
             border-bottom: 2px dashed $borderColorGreen;
         }
+
         .expertBox {
             width: 90%;
             height: 160px;
             position: relative;
             margin-top: 15px;
             overflow: visible;
+
             .king {
                 z-index: 10;
                 top: -20px;
                 left: 5px;
             }
+
             .h2Desk,
             .h3Desk {
                 display: none;
             }
+
             .attr {
                 right: 5%;
                 top: 18px;
             }
+
             .pic {
                 width: 100%;
                 position: absolute; // top: 18px;
                 cursor: inherit;
+
                 a {
                     outline: none;
                     width: 50%;
                     height: 135px;
                     overflow: hidden;
                     float: left;
+
                     img {
                         width: 120px;
                     }
                 }
+
                 .aside {
                     position: static;
                     float: right;
                     width: 50%;
                     text-align: left;
                     background: transparent;
+
                     .h2Ph {
                         display: block;
                         font-size: 20px;
                         margin-top: 0;
                     }
+
                     .h3Ph {
                         display: block;
                         font-size: 18px;
                         margin-top: 10px;
                     }
+
                     .mark {
                         margin-top: 10px;
                     }
+
                     .mark img {
                         margin: 0;
                     }
+
                     .mark span {
                         margin-right: 10px;
                     }
                 }
             }
+
             .pic:after {
                 content: "";
                 display: block;
@@ -553,30 +648,36 @@ a {
             }
         }
     }
+
     .expertBox.blue {
         h2 {
             color: $fontColorBlue;
         }
+
         .pic {
             .attr {
                 background-color: $attrBlue;
             }
         }
     }
+
     .expertBox.orange {
         h2 {
             color: $fontColorOrange;
         }
+
         .pic {
             .attr {
                 background-color: $attrOrange;
             }
         }
     }
+
     .expertBox.green {
         h2 {
             color: $fontColorGreen;
         }
+
         .pic {
             .attr {
                 background-color: $attrGreen;
@@ -586,7 +687,6 @@ a {
 }
 
 #lightBox_father {
-    display: none;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -614,13 +714,13 @@ a {
     text-align: center;
     background-color: rgba(0, 0, 0, 1);
     border: 3px solid rgba(108, 213, 255, 0.5);
+
     .fas {
-        font-size: 30px;
-        float: right;
+        font-size: 30px; // float: right;
         cursor: pointer;
-        position: fixed;
-        top: 32px;
-        right: 16%;
+        position: absolute;
+        top: 10px;
+        right: 10px;
     }
 }
 
@@ -628,7 +728,9 @@ a {
     content: "";
     display: block;
     clear: both;
-} // lightBox的上方內容
+}
+
+// lightBox的上方內容
 .content_desk {
     // outline: 1px solid #fff;
     // background-image: url(../img/expertImg/focus-0.png);
@@ -637,10 +739,12 @@ a {
     background-repeat: no-repeat; // background-position: 375px -45px; 
     display: flex;
     justify-content: center;
+
     .conLeft {
         // outline: 1px solid rgb(96, 224, 150);
         width: 40%;
         position: relative;
+
         .crown {
             width: 80px;
             position: absolute;
@@ -649,6 +753,7 @@ a {
             z-index: 5;
             transform: rotate(-30deg);
         }
+
         .expPic {
             width: 60%;
             position: absolute;
@@ -656,6 +761,7 @@ a {
             right: 0;
             top: 50px;
             margin: auto;
+
             .attr {
                 position: absolute;
                 background-color: $attrBlue;
@@ -664,145 +770,182 @@ a {
                 right: 10px;
                 top: 10px;
             }
+
             img {
                 width: 100%;
                 min-width: 100px;
             }
         }
     }
+
     .conRight {
         // outline: 1px solid #f00;
         margin-top: 50px;
         width: 35%;
         display: flex;
         flex-direction: column; // position: relative;
+
         h1 {
             color: $fontColorBlue;
             text-align: justify;
         }
+
         .rocket {
             margin-left: 10px;
             width: 35px;
         }
+
         h2 {
             margin-top: 20px;
             text-align: justify;
             display: inline-block;
         }
+
         .data {
             text-align: justify;
+
             .score {
                 margin-top: 30px;
+
                 h3 {
                     display: inline;
                     font-size: 20px;
                     padding-right: 10px;
                 }
+
                 span {
                     font-size: 16px;
                     padding-right: 5px;
                 }
+
                 img {
                     vertical-align: text-bottom;
                     width: 20px;
                 }
             }
+
             .chart {
                 margin: 30px 0 20px;
                 text-align: justify;
+
                 h3 {
                     font-size: 22px;
                     margin-left: 35px;
                     margin-bottom: 10px;
                 }
+
                 span {
                     font-size: 18px;
                     margin-right: 10px;
                     line-height: 1.8;
                 }
+
                 .value {
                     width: 0px;
                     height: 15px;
                     background-color: #aaa;
                     display: inline-block;
                 }
+
                 .value.focus {
                     background-color: $fontColorBlue;
                 }
+
                 .value:nth-of-type(1) {
                     animation: value1 1.5s 0.5s 1 forwards;
                 }
+
                 .value:nth-of-type(2) {
                     animation: value2 1.5s 0.5s 1 forwards;
                 }
+
                 .value:nth-of-type(3) {
                     animation: value3 1.5s 0.5s 1 forwards;
                 }
+
                 .value:nth-of-type(4) {
                     animation: value4 1.5s 0.5s 1 forwards;
                 }
+
                 .value:nth-of-type(5) {
                     animation: value5 1.5s 0.5s 1 forwards;
                 }
             }
         }
+
         @keyframes value1 {
             0% {
                 width: 0;
             }
+
             100% {
                 width: 100px;
             }
         }
+
         @keyframes value2 {
             0% {
                 width: 0;
             }
+
             100% {
                 width: 80px;
             }
         }
+
         @keyframes value3 {
             0% {
                 width: 0;
             }
+
             100% {
                 width: 50px;
             }
         }
+
         @keyframes value4 {
             0% {
                 width: 0;
             }
+
             100% {
                 width: 20px;
             }
         }
+
         @keyframes value5 {
             0% {
                 width: 0;
             }
+
             100% {
                 width: 80px;
             }
         }
+
         .record {
             align-self: flex-end;
+
             .collect {
                 display: inline-block;
             }
+
             .writeComment {
                 display: inline-block;
             }
+
             .collect,
             .writeComment {
                 margin: 10px;
+
                 #heart,
                 #write {
                     width: 28px;
                     height: 26px;
                     cursor: pointer;
-                } // .txt {
+                }
+
+                // .txt {
                 //     font-size: 15px;
                 //     line-height: 2.5;
                 // }
@@ -815,22 +958,28 @@ a {
             }
         }
     }
-} // lightBox的評論
+}
+
+// lightBox的評論
 .comment {
     width: 60%;
     margin: 60px auto 80px;
+
     h2 {
         // text-align: justify;
     }
+
     .message {
         border-bottom: 1px dashed $borderColorBlue;
         margin: 20px auto 0;
         padding-bottom: 20px;
         width: 100%;
+
         .user {
             width: 100%;
             height: 80px;
             position: relative;
+
             .name {
                 position: absolute;
                 left: 60px;
@@ -842,6 +991,7 @@ a {
                 font-size: 16px;
                 letter-spacing: 2px;
             }
+
             img {
                 position: absolute;
                 left: 0;
@@ -849,6 +999,7 @@ a {
                 border-radius: 50%;
             }
         }
+
         p {
             margin-top: -10px;
             margin-left: 90px;
@@ -869,10 +1020,13 @@ a {
     #lightBox {
         height: 90%;
     }
+
     .comment {
         width: 90%;
     }
-} // @media screen and (max-width: 850px) {
+}
+
+// @media screen and (max-width: 850px) {
 //     #lightBox1 {
 //         h1 {
 //             margin-top: 30px;
@@ -954,6 +1108,7 @@ a {
 //     }
 // }
 @import "layout/footer";
+
 footer {
     img {
         position: fixed;
@@ -963,5 +1118,6 @@ footer {
         opacity: 0.5;
         z-index: -1;
     }
+
     background-image: none;
 }

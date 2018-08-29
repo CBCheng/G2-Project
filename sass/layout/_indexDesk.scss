@@ -425,12 +425,13 @@ nav {
     transform: rotateX(90deg);
     transition: .5s cubic-bezier(0.23, 1, 0.32, 1);
     .viewItem{
+        overflow: hidden;
         position: relative;
         width: 45%;
         height: 0%;
         padding-bottom: 29%;
         margin: 13% auto auto;
-        background-image: url('../img/index/p1_v2_03.jpg');
+        //background-image: url('../img/index/p1_v2_03.jpg');
         background-size: 102%;
         border: 2px solid #6cd5ff;
         h2{
@@ -474,6 +475,11 @@ nav {
             top: 12%;
             right: 11%;
             width: 32%;
+        }
+        .viewImg{
+            top: 0%;
+            right: 0%;
+            width: 100%;
         }
     }  
 }
