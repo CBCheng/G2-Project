@@ -11,10 +11,6 @@
     <!-- plugin -->
     <!-- <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script> -->
     <!-- <script src="libs/jquery/dist/jquery.min.js"></script> -->
-    <!-- <script
-  src="https://code.jquery.com/jquery-2.2.4.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="libs/anime/anime.min.js"></script>
     <!-- <script src="libs/gsap/src/minified/TweenMax.min.js"></script> -->
@@ -279,18 +275,21 @@
                     <span class="under"></span>
                 </span>
             </h1>
-            <!-- <h1>開始踏上旅程吧</h1> -->
+            
 
             <!-- 跳窗燈箱 -->
             <div class="viewBg">
-                <div class="viewItem">
+                <!-- <div class="viewItem">
+                    <img src="img/view/p1/v1/p1_v1_01.jpg" alt="viewImg" class="viewImg">
                     <div class="exit">
                         <img src="img/index/cancel.png" alt="exit">
                     </div>
                     <h2>天空之鏡</h2>
                     <a href="planning.html">將景點加入行程</a>
-                </div>
+                </div> -->
             </div>
+
+            <!-- 手機板景點選項 -->
             <div class="mobViewBox">
                 <div class="mobViewItem item1">
                     <span id="p2_v1" class="viewName">土樓城堡</span>
@@ -597,33 +596,7 @@
 
     <script src="js/index.js"></script>
     <script src="js/style.js"></script>
-    <!-- <script type="text/javascript">
-        $(function(){
-            $('.plVi').on('click',function(){
-                // var ids = $(this).id;
-                console.log($(this).attr("id"));
-                $.ajax({
-                    url: '',
-                    type: 'POST',
-                    dataType: 'text',
-                    data: {
-                        thisId:$(this).attr("id")
-                    },              
-                    success: function(data){
-                        alert(data);
-                        // $('.viewBg').html(data);
-                        // $('.viewBg').css('transform','rotateX(0deg)');
-                    },
-                    error: function(){
-                        alert('error');
-                    }
-                });
-            });
-            $('.exit').on('click',function(){
-                $('.viewBg').css('transform','rotateX(90deg)');
-            });
-        });
-    </script> -->
+    
 
     <!-- <script src="js/tween.js"></script> -->
 </body>

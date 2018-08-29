@@ -552,12 +552,13 @@ width: 50px;
     transform: rotateX(90deg);
     transition: .5s cubic-bezier(0.23, 1, 0.32, 1);
     .viewItem{
+        overflow: hidden;
         position: relative;
         width: 70%;
         height: 0%;
         padding-bottom: 43%;
         margin: 50% auto auto;
-        background-image: url('../img/index/p1_v2_03.jpg');
+        // background-image: url('../img/index/p1_v2_03.jpg');
         background-size: 102%;
         border: 1px solid #6cd5ff;
         h2{
@@ -595,6 +596,11 @@ width: 50px;
             position: absolute;
             // top: 12%;
             // right: 11%;
+            width: 100%;
+        }
+        .viewImg{
+            top: 0%;
+            right: 0%;
             width: 100%;
         }
     }  
