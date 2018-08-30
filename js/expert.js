@@ -139,10 +139,7 @@ $.ajax({
 	success: function (data) {
 		$('.grid').html(data);
 		alert('success');
-		console.log(1);
-
 		
-
 
 	},
 	error: function () {
