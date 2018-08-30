@@ -3,6 +3,8 @@
 
 // init Isotope
 // $(document).ready(function(){
+
+
 var $grid = $('.grid').isotope({
   itemSelector: '.element-item',
   layoutMode: 'fitRows',
