@@ -1949,9 +1949,11 @@ nav {
     transition-timing-function: cubic-bezier(0.17, 0.67, 0.41, 0.96);
     transition: 1s; }
   .noImg {
-    clip-path: circle(0% at 76.7% 71%); }
+    clip-path: circle(0% at 76.7% 71%);
+    -webkit-clip-path: circle(0% at 76.7% 71%); }
   .yesImg {
-    clip-path: circle(0% at 20.7% 70.4%); }
+    clip-path: circle(0% at 20.7% 70.4%);
+    -webkit-clip-path: circle(0% at 20.7% 70.4%); }
   .yesNo {
     position: absolute;
     top: 52.7%;

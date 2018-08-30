@@ -524,9 +524,11 @@ nav {
 }
 .noImg{
     clip-path: circle(0% at 76.7% 71%);
+    -webkit-clip-path: circle(0% at 76.7% 71%);
 }
 .yesImg{
     clip-path: circle(0% at 20.7% 70.4%);
+    -webkit-clip-path: circle(0% at 20.7% 70.4%);
 }
 .yesNo{
     position: absolute;
@@ -1074,7 +1076,6 @@ nav {
 	width:60%;
 	display: inline-block;
 	vertical-align: middle;
-
 }
 .travelPic img{
 	width:40%;
