@@ -46,23 +46,7 @@ window.addEventListener('load', doSecond);
 
 
 
-// =====跳窗開關=====
-$(function () {
-	$("#box").click(function () {
-		$("#lightBox_father").show(500);
-	})
-})
-//e.target觸發的物件 //e.currentTarget監聽的事件
-$("#lightBox_father").click(function (e) {
-	if (e.target == e.currentTarget)
-		$("#lightBox_father").hide(500);
-})
 
-$(function () {
-	$(".fas").click(function () {
-		$("#lightBox_father").hide(500);
-	})
-})
 
 
 
@@ -72,10 +56,10 @@ $(function () {
 //=====愛心換圖=====
 $("#heart").click(function () {
 	if (heart.title === "加入收藏") {
-		$(this).attr("src", "../img/expertImg/heartRed.png");
+		$(this).attr("src", "img/expertImg/heartRed.png");
 		$(this).attr("title", "取消收藏");
 	} else {
-		$(this).attr("src", "../img/expertImg/heartWhite.png");
+		$(this).attr("src", "img/expertImg/heartWhite.png");
 		$(this).attr("title", "加入收藏");
 	}
 })
@@ -153,9 +137,13 @@ $.ajax({
 	url: 'php/expert.php',
 	dataType: 'text',
 	success: function (data) {
-		$('.element-item.expertBox.blue.popular').append(data);
+		$('.grid').html(data);
 		alert('success');
 		console.log(1);
+
+		
+
+
 	},
 	error: function () {
 		alert('error');
