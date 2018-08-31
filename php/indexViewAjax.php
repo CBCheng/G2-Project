@@ -1,5 +1,6 @@
 <?php
-
+ob_start();
+session_start();
 	try {
 		$dsn = "mysql:host=localhost;port=3306;dbname=cd102g2;charset=utf8";
 		$user = "cheng2";
@@ -17,6 +18,8 @@
 		$views = $view->fetch(PDO::FETCH_ASSOC);
 		// echo $views['viewName'];
 		// echo $views['viewImg1'];
+		$SESSION["no"]=$views["viewNo"];
+		echo $SESSION["no"];
 ?>
 
 <div class="viewItem">
