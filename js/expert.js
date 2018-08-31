@@ -42,6 +42,23 @@ window.addEventListener('load', doSecond);
 
 
 
+// =====跳窗開關=====
+	$(function () {
+		$(".expertBox").click(function () {
+			$("#lightBox_father").show(500);
+		})
+	})
+	//e.target觸發的物件 //e.currentTarget監聽的事件
+	$("#lightBox_father").click(function (e) {
+		if (e.target == e.currentTarget)
+			$("#lightBox_father").hide(500);
+	})
+
+	$(function () {
+		$(".fas").click(function () {
+			$("#lightBox_father").hide(500);
+		})
+	})
 
 
 
@@ -133,16 +150,16 @@ $("#heart").click(function () {
 // })
 // =======抓資料庫=======
 
-$.ajax({
-	url: 'php/expert.php',
-	dataType: 'text',
-	success: function (data) {
-		$('.grid').html(data);
-		alert('success');
+// $.ajax({
+// 	url: 'php/expert.php',
+// 	dataType: 'text',
+// 	success: function (data) {
+// 		$('.grid').html(data);
+// 		alert('success');
 		
 
-	},
-	error: function () {
-		alert('error');
-	}
-});
+// 	},
+// 	error: function () {
+// 		alert('error');
+// 	}
+// });

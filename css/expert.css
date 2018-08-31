@@ -750,6 +750,9 @@ nav {
   display: block;
   clear: both; }
 
+.content_phone {
+  display: none; }
+
 .content_desk {
   background-image: url(../img/expertImg/starBg.png);
   background-position: center;
@@ -893,6 +896,12 @@ nav {
           margin-top: 10px;
           font-size: 14px;
           color: #aaaaaa; }
+
+@media screen and (max-width: 767px) {
+  .content_desk {
+    display: none; }
+  .content_phone {
+    display: block; } }
 
 .comment {
   width: 60%;
