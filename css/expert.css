@@ -529,12 +529,21 @@ nav {
     margin: 8px 0; }
   .grid .expertBox .attr {
     position: absolute;
-    background-color: #094f91;
     font-size: 18px;
     padding: 5px 8px;
     right: 42px;
     top: 108px;
     z-index: 5; }
+  .grid .expertBox .food {
+    background-color: #ffb22b; }
+  .grid .expertBox .human {
+    background-color: #00c759; }
+  .grid .expertBox .smart {
+    background-color: #00c6c7; }
+  .grid .expertBox .adven {
+    background-color: #ff492b; }
+  .grid .expertBox .tech {
+    background-color: #852bff; }
   .grid .expertBox .pic {
     width: 180px;
     height: 260px;

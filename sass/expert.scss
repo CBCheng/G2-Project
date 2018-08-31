@@ -395,13 +395,18 @@ a {
 
         .attr {
             position: absolute;
-            background-color: $attrBlue;
             font-size: 18px;
             padding: 5px 8px;
             right: 42px;
             top: 108px;
             z-index: 5;
         }
+        .food{background-color: $food;}
+        .human{background-color: $culture;}
+        .smart{background-color: $nalgene;}
+        .adven{background-color: $adventure;}
+        .tech{background-color: $technology;}
+        
 
         .pic {
             // outline: 1px solid #f00;

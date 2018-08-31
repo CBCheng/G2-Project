@@ -5,16 +5,61 @@ try {
     $members = $pdo->query($sql);
     $memRows = $members->fetchAll(PDO::FETCH_ASSOC);
     // echo json_encode($memRow);
+
+  
     foreach ($memRows as $memRow) {
+    	//判斷屬性
+    	$aa='';
+    	if($memRow["expFood"]==10){
+    		$memRow["expFood"]='美食';
+    		$aa .= '<div class="attr food">'.$memRow["expFood"].'</div>';
+    	}else{
+    		$memRow["expFood"]='';
+    	}
+
+    	if($memRow["expHuman"]==10){
+    		$memRow["expHuman"]='人文';
+    		$aa .= '<div class="attr human">'.$memRow["expHuman"].'</div>';
+    	}else{
+    		$memRow["expHuman"]='';
+    	}
+    	if($memRow["expSmart"]==10){
+    		$memRow["expSmart"]='知性';
+    		$aa .= '<div class="attr smart">'.$memRow["expSmart"].'</div>';
+    	}else{
+    		$memRow["expSmart"]='';
+    	}
+    	if($memRow["expAdven"]==10){
+    		$memRow["expAdven"]='冒險';
+    		$aa .= '<div class="attr adven">'.$memRow["expAdven"].'</div>';
+    	}else{
+    		$memRow["expAdven"]='';
+    	}
+    	if($memRow["expTech"]==10){
+    		$memRow["expTech"]='科技';
+    		$aa .= '<div class="attr tech">'.$memRow["expTech"].'</div>';
+    	}else{
+    		$memRow["expFood"]='';
+    	}
+
+
+    	//人氣加popular跟皇冠圖
+    	$bb = '';
+    	$cc ='';
+    	if($memRow["expertPopular"]>=30){
+    		$bb .= '<img class="king" src="img/expertImg/crown.png" alt="crown">';
+    		$cc .= 'popular';
+    	}
+    	
 ?>		
-		<div class="element-item expertBox blue popular ">
-            <img class="king" src="img/expertImg/crown.png" alt="crown">
+		<div class="element-item expertBox <?php echo $memRow["planetNo"] ;?> <?php echo $cc;?>">
+            <?php echo $bb ;?>
             <h2 class="h2Desk"><?php echo $memRow["planet"];?></h2>
             <h3 class="h3Desk"><?php echo $memRow["expertName"];?></h3>
-            <div class="attr">美食</div>
+            <?php echo $aa ;?> 
             <div class="pic">
                 <a>
-                    <img id="box" src="img/expertImg/expPic/101.jpg">
+                    <img id="box" src="<?php echo $memRow["expertPic"];?>">
                 </a>
                 <div class="aside">
                     <h2 class="h2Ph"><?php echo $memRow["planet"];?></h2>
@@ -40,7 +85,12 @@ try {
 
         
         <script type="text/javascript">
-    	// =====跳窗開關=====
+        	
+
+
+
+
+    	//=====跳窗開關=====
 			$(function () {
 				$(".expertBox").click(function () {
 					$("#lightBox_father").show(500);
@@ -117,15 +167,10 @@ try {
 			// });
 			  
 
+
+
         </script>
-
-		
-
-    	<!-- echo '<h2 class ="h2Desk">', $memRow['planet'], '</h2>',
-			 '<h3 class ="h3Desk">', $memRow['expertName'], '</h3>';
-			
-        echo '<h2 class ="h2Desk">', $memRow['planet'], '</h2>';
-        echo '<h3 class ="h3Desk">', $memRow['expertName'], '</h3>'; -->
+	
 <?php
     }
 } catch (PDOException $e) {
