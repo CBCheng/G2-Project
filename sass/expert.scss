@@ -247,6 +247,12 @@ a {
     }
 }
 
+@keyframes cloud1{
+    
+}
+
+
+
 .panel {
     // outline: 1px solid #fff;
     width: 1200px;
@@ -359,12 +365,7 @@ a {
     }
 }
 
-// @media screen and (max-width: 400px) {
-//     .button-group .button-down .button {
-//         display: block;
-//         margin: 10px auto 0;
-//     }
-// }
+
 /* ---- .expertBox ---- */
 .grid {
     .expertBox {
@@ -721,7 +722,7 @@ a {
     border: 3px solid rgba(108, 213, 255, 0.5);
 
     .fas {
-        font-size: 30px; // float: right;
+        font-size: 30px; 
         cursor: pointer;
         position: absolute;
         top: 10px;
@@ -738,36 +739,32 @@ a {
 // lightBox的上方內容
 .content_phone{ display: none;}
 .content_desk {
-    // outline: 1px solid #fff;
-    // background-image: url(../img/expertImg/focus-0.png);
     background-image: url(../img/expertImg/starBg.png);
     background-position: center;
-    background-repeat: no-repeat; // background-position: 375px -45px; 
+    background-repeat: no-repeat; 
     display: flex;
     justify-content: center;
 
     .conLeft {
-        // outline: 1px solid rgb(96, 224, 150);
         width: 40%;
         position: relative;
-
-        .crown {
-            width: 80px;
-            position: absolute;
-            left: 40px;
-            top: 5px;
-            z-index: 5;
-            transform: rotate(-30deg);
-        }
-
+        .crown_phone{display: none;}
         .expPic {
+            
             width: 60%;
             position: absolute;
             left: 0;
             right: 0;
             top: 50px;
             margin: auto;
-
+            .crown {
+                width: 80px;
+                position: absolute;
+                left: -30px;
+                top: -30px;
+                z-index: 5;
+                transform: rotate(-30deg);
+            }
             .attr {
                 position: absolute;
                 background-color: $attrBlue;
@@ -779,34 +776,30 @@ a {
 
             img {
                 width: 100%;
-                min-width: 100px;
             }
         }
     }
 
     .conRight {
-        // outline: 1px solid #f00;
         margin-top: 50px;
         width: 35%;
         display: flex;
-        flex-direction: column; // position: relative;
+        flex-direction: column; 
 
         h1 {
             color: $fontColorBlue;
             text-align: justify;
         }
-
-        .rocket {
-            margin-left: 10px;
-            width: 35px;
-        }
-
         h2 {
             margin-top: 20px;
             text-align: justify;
             display: inline-block;
+            .rocket {
+                margin-left: 10px;
+                width: 35px;
+            }
         }
-
+        .attr_phone{display: none;}
         .data {
             text-align: justify;
 
@@ -951,10 +944,7 @@ a {
                     cursor: pointer;
                 }
 
-                // .txt {
-                //     font-size: 15px;
-                //     line-height: 2.5;
-                // }
+                
                 #Cnum,
                 #Wnum {
                     margin-top: 10px;
@@ -966,12 +956,186 @@ a {
     }
 }
 
-@media screen and (max-width: 767px){
-    .content_desk{ display: none;}
-    .content_phone{
-        display: block;
+@media screen and (max-width: 860px) and (min-width: 670px){
+    .expPic{
+        min-width: 200px;
     }
 }
+
+@media screen and (max-width: 669px){
+.content_desk{ 
+    .conLeft{
+        .expPic{
+            width: 80%;
+            width: 150px;
+            .crown{
+                width: 55px;
+                left: -18px;
+                top: -32px;
+            }
+            .attr{
+                font-size: 17px;
+                right: 5px; top: 5px;
+            }
+        }
+    }
+    .conRight{
+        width: 45%;
+        h1{font-size: 24px;}
+        h2{
+            font-size: 20px;
+            margin-top: 10px;
+            .rocket{width: 25px;}
+        }
+        .data{
+            .score{
+                margin-top: 15px;
+                h3{font-size: 18px;}
+            }
+            .chart{
+                margin-top: 20px;
+                span{
+                    font-size: 17px;
+                    line-height: 1.5;
+                }
+                .value{
+                    height: 12px;
+                }
+            }
+        }
+    }
+}
+}
+
+@media screen and (max-width: 449px){
+    .chart, .record{
+        display: none;
+    }
+    .content_desk .conLeft .crown_phone{
+        display: block;
+        width: 50px;
+        position: absolute;
+        left: -6px;
+        top: 20px;
+        z-index: 5;
+        transform: rotate(-30deg);
+    }
+    .content_desk .conLeft .expPic{
+        width: 120px;
+        height: 170px;
+        overflow: hidden;
+        img{margin-top: -10px;}
+        .crown{display: none;}
+        .attr{display: none;}
+    }
+    .content_desk .conRight{
+        margin-left: 10px;
+        .attr_phone{
+            display: block;
+            background-color: $attrBlue;
+            font-size: 18px;
+            width: 50px; height: 30px;
+            line-height: 30px;
+            margin-top: 10px;
+        }
+        .data .score{
+            h3{display: block;}
+            span{
+                display: inline-block;
+                margin: 10px 0 10px 16px;
+                padding-right: 3px;
+            }
+            img{ width: 18px;}
+        }
+    }
+    
+    .content_phone{
+        display: block;
+        .chart_phone {
+            width: 50%;
+            display: inline-block;
+            margin-top: 20px;
+            margin-left: 15px;
+            text-align: justify;
+            h3 {
+                font-size: 20px;
+                margin-left: 35px;
+                margin-bottom: 10px;
+            }
+
+            span {
+                font-size: 17px;
+                margin-right: 10px;
+                line-height: 1.5;
+            }
+
+            .value {
+                width: 0px;
+                height: 12px;
+                background-color: #aaa;
+                display: inline-block;
+            }
+
+            .value.focus {
+                background-color: $fontColorBlue;
+            }
+
+            .value:nth-of-type(1) {
+                animation: value1 1.5s 0.5s 1 forwards;
+            }
+
+            .value:nth-of-type(2) {
+                animation: value2 1.5s 0.5s 1 forwards;
+            }
+
+            .value:nth-of-type(3) {
+                animation: value3 1.5s 0.5s 1 forwards;
+            }
+
+            .value:nth-of-type(4) {
+                animation: value4 1.5s 0.5s 1 forwards;
+            }
+
+            .value:nth-of-type(5) {
+                animation: value5 1.5s 0.5s 1 forwards;
+            }
+        }
+        .record_phone {
+            display: inline-block;
+            width: 40%;
+            .collect {
+                display: inline-block;
+            }
+
+            .writeComment {
+                display: inline-block;
+            }
+
+            .collect,
+            .writeComment {
+                margin: 10px;
+
+                #heart,
+                #write {
+                    width: 28px;
+                    height: 26px;
+                    cursor: pointer;
+                }
+                #Cnum,
+                #Wnum {
+                    margin-top: 10px;
+                    font-size: 14px;
+                    color: #aaaaaa;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
 
 // lightBox的評論
 .comment {
@@ -979,20 +1143,16 @@ a {
     margin: 60px auto 80px;
 
     h2 {
-        // text-align: justify;
     }
-
     .message {
         border-bottom: 1px dashed $borderColorBlue;
         margin: 20px auto 0;
         padding-bottom: 20px;
         width: 100%;
-
         .user {
             width: 100%;
             height: 80px;
             position: relative;
-
             .name {
                 position: absolute;
                 left: 60px;
@@ -1004,7 +1164,6 @@ a {
                 font-size: 16px;
                 letter-spacing: 2px;
             }
-
             img {
                 position: absolute;
                 left: 0;
@@ -1012,7 +1171,6 @@ a {
                 border-radius: 50%;
             }
         }
-
         p {
             margin-top: -10px;
             margin-left: 90px;
@@ -1029,7 +1187,7 @@ a {
     }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 767px) {
     #lightBox {
         height: 90%;
     }
@@ -1038,87 +1196,6 @@ a {
     }
 }
 
-// @media screen and (max-width: 850px) {
-//     #lightBox1 {
-//         h1 {
-//             margin-top: 30px;
-//             font-size: 24px;
-//         }
-//         h2 {
-//             margin-top: 20px;
-//             font-size: 22px;
-//         }
-//         .content {
-//             .expPic {
-//                 margin: 10px;
-//                 width: 150px;
-//                 .attr {
-//                     width: 50px;
-//                     height: 50px;
-//                     font-size: 16px;
-//                     line-height: 50px;
-//                 }
-//             }
-//             .data {
-//                 margin: 10px;
-//                 h3 {
-//                     font-size: 20px;
-//                     margin-bottom: 10px;
-//                 }
-//                 .chart {
-//                     margin: auto;
-//                     span {
-//                         font-size: 16px;
-//                         line-height: 1.5;
-//                     }
-//                 }
-//             }
-//             .record {
-//                 margin: 10px auto 0;
-//                 display: block;
-//                 .collect,
-//                 .writeComment {
-//                     float: none;
-//                     display: inline-block;
-//                 }
-//             }
-//         }
-//         .comment {
-//             .score {
-//                 p {
-//                     font-size: 16px;
-//                     padding-right: 5px;
-//                 }
-//                 span {
-//                     font-size: 15px;
-//                     padding-right: 2px;
-//                 }
-//                 img {
-//                     width: 18px;
-//                 }
-//             }
-//             .message {
-//                 .user {
-//                     .name {
-//                         left: 45px; // padding: 6px 25px;
-//                         width: 76px;
-//                         height: 28px;
-//                         line-height: 28px;
-//                         -webkit-clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
-//                         clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
-//                     }
-//                     img {
-//                         width: 60px;
-//                     }
-//                 }
-//                 p {
-//                     margin-top: 10px;
-//                     margin-left: 20px;
-//                 }
-//             }
-//         }
-//     }
-// }
 @import "layout/footer";
 
 footer {

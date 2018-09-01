@@ -85,10 +85,7 @@ try {
 
         
         <script type="text/javascript">
-        	
-
-
-
+        
 
     	//=====跳窗開關=====
 			$(function () {
@@ -107,6 +104,8 @@ try {
 					$("#lightBox_father").hide(500);
 				})
 			})
+
+
 
 
 
@@ -165,7 +164,7 @@ try {
 			  });
 			});
 			// });
-			  
+		// =====篩選套件isotope.js  over=====	  
 
 
 

@@ -13,7 +13,7 @@
     <!-- plugin -->
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script src="libs/jquery/dist/jquery.min.js"></script>
-    <!-- <script src="libs/gsap/src/minified/TweenMax.min.js"></script> -->
+    <script src="libs/gsap/src/minified/TweenMax.min.js"></script>
     <!-- <script type="text/javascript" src="js/parallax.min.js"></script> -->
     <!-- scroll -->
 
@@ -51,7 +51,6 @@
             <li class="shoppingCar">
                 <a href="#">
                     <img class="shoppingCarPic" src="img/shopping car.png" alt="">
-                    <!-- <img class="shoppingCarHover" src="img/shoppingCarHover.png" alt=""> -->
                 </a>
             </li>
             <li class="memberSign">
@@ -352,8 +351,9 @@
             <i class="fas fa-times"></i>
             <div class="content_desk">
                 <article class="conLeft">
-                    <img class="crown" src="img/expertImg/crown.png" alt="crown">
+                    <img class="crown_phone" src="img/expertImg/crown.png" alt="crown">
                     <div class="expPic">
+                        <img class="crown" src="img/expertImg/crown.png" alt="crown">
                         <div class="attr">美食</div>
                         <img src="img/expertImg/A01.jpg" alt="A01">
                     </div>
@@ -363,6 +363,7 @@
                     <h2>Alan
                         <img src="img/expertImg/rocket.png" class="rocket">
                     </h2>
+                    <div class="attr_phone">美食</div>
                     <div class="data">
                         <div class="score">
                             <h3>評價</h3>
@@ -395,20 +396,45 @@
                     <div class="record">
                         <div class="collect">
                             <img id="heart" src="img/expertImg/heartWhite.png" alt="heartWhite" title="加入收藏">
-                            <!-- <p class="txt">收藏專家</p> -->
                             <p id="Cnum">20人收藏</p>
                         </div>
                         <div class="writeComment">
                             <img id="write" src="img/expertImg/write.png" alt="write" title="撰寫評論">
-                            <!-- <p class="txt">評論專家</p> -->
                             <p id="Wnum">3則評論</p>
                         </div>
                     </div>
                 </article>
             </div>
-            <!-- content_desk結束 -->
+            <!-- content_phone改變能力值和收藏位置 -->
             <div class="content_phone">
-                
+                <div class="chart_phone">
+                    <h3>能力值</h3>
+                    <span>美食</span>
+                    <div class="value focus"></div>
+                    <br>
+                    <span>知性</span>
+                    <div class="value"></div>
+                    <br>
+                    <span>人文</span>
+                    <div class="value"></div>
+                    <br>
+                    <span>冒險</span>
+                    <div class="value"></div>
+                    <br>
+                    <span>科技</span>
+                    <div class="value"></div>
+                    <br>
+                </div>
+                <div class="record_phone">
+                    <div class="collect">
+                        <img id="heart" src="img/expertImg/heartWhite.png" alt="heartWhite" title="加入收藏">
+                        <p id="Cnum">20人收藏</p>
+                    </div>
+                    <div class="writeComment">
+                        <img id="write" src="img/expertImg/write.png" alt="write" title="撰寫評論">
+                        <p id="Wnum">3則評論</p>
+                    </div>
+                </div>
             </div>
             <div class="comment">
                 <h2>評論</h2>

@@ -255,6 +255,13 @@ nav {
       background-color: transparent;
       text-align: center;
       cursor: pointer; }
+    @media screen and (min-width: 768px) {
+      #itemContent_no .comItem_no .commentBtn:hover,
+      #itemContent_no .comItem_al .commentBtn:hover,
+      #itemContent_al .comItem_no .commentBtn:hover,
+      #itemContent_al .comItem_al .commentBtn:hover {
+        background-color: #6cd5ff;
+        color: #000; } }
     #itemContent_no .comItem_no .itemTxt,
     #itemContent_no .comItem_al .itemTxt,
     #itemContent_al .comItem_no .itemTxt,
@@ -278,12 +285,6 @@ nav {
         line-height: 1.3;
         color: #ffffff;
         white-space: wrap; }
-      #itemContent_no .comItem_no .itemTxt .commentBtn:hover,
-      #itemContent_no .comItem_al .itemTxt .commentBtn:hover,
-      #itemContent_al .comItem_no .itemTxt .commentBtn:hover,
-      #itemContent_al .comItem_al .itemTxt .commentBtn:hover {
-        background-color: #6cd5ff;
-        color: #000; }
       #itemContent_no .comItem_no .itemTxt .score,
       #itemContent_no .comItem_al .itemTxt .score,
       #itemContent_al .comItem_no .itemTxt .score,
@@ -368,8 +369,34 @@ nav {
         line-height: 1.4;
         color: #ffffff; }
 
+@media screen and (max-width: 960px) {
+  .comContent {
+    width: 90%; }
+  #itemContent_no .comItem_no, #itemContent_al .comItem_al {
+    width: 80%;
+    margin: 10px auto; } }
+
+@media screen and (max-width: 550px) {
+  .comment_mg_box {
+    padding: 0 5% 3% 5%; }
+  #itemContent_no .comItem_no, #itemContent_al .comItem_al {
+    width: 100%; }
+    #itemContent_no .comItem_no .expImg .expName, #itemContent_al .comItem_al .expImg .expName {
+      font-size: 20px; }
+    #itemContent_no .comItem_no .itemTxt h5, #itemContent_al .comItem_al .itemTxt h5 {
+      font-size: 16px; } }
+
+@media screen and (max-width: 370px) {
+  #itemContent_no .comItem_no .expImg, #itemContent_al .comItem_al .expImg {
+    width: 50%; }
+  #itemContent_no .comItem_no .itemTxt, #itemContent_al .comItem_al .itemTxt {
+    width: 70%;
+    margin-right: 60px; }
+    #itemContent_no .comItem_no .itemTxt h4, #itemContent_al .comItem_al .itemTxt h4 {
+      margin-bottom: 10px;
+      margin-top: 10px; } }
+
 #lightBox_com_father {
-  display: none;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -456,9 +483,28 @@ nav {
           border: 1px solid #6cd5ff78;
           color: #ffffff;
           cursor: pointer; }
-        #lightBox_com .message form .submit input:hover {
-          background-color: #6cd5ff;
-          color: #000; }
+        @media screen and (min-width: 768px) {
+          #lightBox_com .message form .submit input:hover {
+            background-color: #6cd5ff;
+            color: #000; } }
+
+@media screen and (max-width: 830px) {
+  #lightBox_com {
+    width: 100%;
+    height: 80%; } }
+
+@media screen and (max-width: 430px) {
+  #lightBox_com .message .user img {
+    width: 70px; }
+  #lightBox_com .message .user .name {
+    left: 53px; }
+  #lightBox_com .message form textarea {
+    width: 85%;
+    margin: 22px 0 50px 28px; }
+  #lightBox_com .message .score {
+    margin-left: 100px; }
+    #lightBox_com .message .score img {
+      width: 26px; } }
 
 footer {
   width: 100%;

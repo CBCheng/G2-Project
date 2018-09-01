@@ -39,8 +39,8 @@ window.addEventListener('load', doSecond);
 // window.onload = doFirst;
 // window.onload = doSecond;
 
-
-
+console.log("OK");
+TweenMax.fromTo('.cloud1', 3, { x: 0, y: 0 }, { x: 100, y: 100 });
 
 
 

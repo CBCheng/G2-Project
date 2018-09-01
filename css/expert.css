@@ -771,13 +771,8 @@ nav {
   .content_desk .conLeft {
     width: 40%;
     position: relative; }
-    .content_desk .conLeft .crown {
-      width: 80px;
-      position: absolute;
-      left: 40px;
-      top: 5px;
-      z-index: 5;
-      transform: rotate(-30deg); }
+    .content_desk .conLeft .crown_phone {
+      display: none; }
     .content_desk .conLeft .expPic {
       width: 60%;
       position: absolute;
@@ -785,6 +780,13 @@ nav {
       right: 0;
       top: 50px;
       margin: auto; }
+      .content_desk .conLeft .expPic .crown {
+        width: 80px;
+        position: absolute;
+        left: -30px;
+        top: -30px;
+        z-index: 5;
+        transform: rotate(-30deg); }
       .content_desk .conLeft .expPic .attr {
         position: absolute;
         background-color: #094f91;
@@ -793,8 +795,7 @@ nav {
         right: 10px;
         top: 10px; }
       .content_desk .conLeft .expPic img {
-        width: 100%;
-        min-width: 100px; }
+        width: 100%; }
   .content_desk .conRight {
     margin-top: 50px;
     width: 35%;
@@ -803,13 +804,15 @@ nav {
     .content_desk .conRight h1 {
       color: #6cd5ff;
       text-align: justify; }
-    .content_desk .conRight .rocket {
-      margin-left: 10px;
-      width: 35px; }
     .content_desk .conRight h2 {
       margin-top: 20px;
       text-align: justify;
       display: inline-block; }
+      .content_desk .conRight h2 .rocket {
+        margin-left: 10px;
+        width: 35px; }
+    .content_desk .conRight .attr_phone {
+      display: none; }
     .content_desk .conRight .data {
       text-align: justify; }
       .content_desk .conRight .data .score {
@@ -906,11 +909,139 @@ nav {
           font-size: 14px;
           color: #aaaaaa; }
 
-@media screen and (max-width: 767px) {
-  .content_desk {
+@media screen and (max-width: 860px) and (min-width: 670px) {
+  .expPic {
+    min-width: 200px; } }
+
+@media screen and (max-width: 669px) {
+  .content_desk .conLeft .expPic {
+    width: 80%;
+    width: 150px; }
+    .content_desk .conLeft .expPic .crown {
+      width: 55px;
+      left: -18px;
+      top: -32px; }
+    .content_desk .conLeft .expPic .attr {
+      font-size: 17px;
+      right: 5px;
+      top: 5px; }
+  .content_desk .conRight {
+    width: 45%; }
+    .content_desk .conRight h1 {
+      font-size: 24px; }
+    .content_desk .conRight h2 {
+      font-size: 20px;
+      margin-top: 10px; }
+      .content_desk .conRight h2 .rocket {
+        width: 25px; }
+    .content_desk .conRight .data .score {
+      margin-top: 15px; }
+      .content_desk .conRight .data .score h3 {
+        font-size: 18px; }
+    .content_desk .conRight .data .chart {
+      margin-top: 20px; }
+      .content_desk .conRight .data .chart span {
+        font-size: 17px;
+        line-height: 1.5; }
+      .content_desk .conRight .data .chart .value {
+        height: 12px; } }
+
+@media screen and (max-width: 449px) {
+  .chart, .record {
     display: none; }
+  .content_desk .conLeft .crown_phone {
+    display: block;
+    width: 50px;
+    position: absolute;
+    left: -6px;
+    top: 20px;
+    z-index: 5;
+    transform: rotate(-30deg); }
+  .content_desk .conLeft .expPic {
+    width: 120px;
+    height: 170px;
+    overflow: hidden; }
+    .content_desk .conLeft .expPic img {
+      margin-top: -10px; }
+    .content_desk .conLeft .expPic .crown {
+      display: none; }
+    .content_desk .conLeft .expPic .attr {
+      display: none; }
+  .content_desk .conRight {
+    margin-left: 10px; }
+    .content_desk .conRight .attr_phone {
+      display: block;
+      background-color: #094f91;
+      font-size: 18px;
+      width: 50px;
+      height: 30px;
+      line-height: 30px;
+      margin-top: 10px; }
+    .content_desk .conRight .data .score h3 {
+      display: block; }
+    .content_desk .conRight .data .score span {
+      display: inline-block;
+      margin: 10px 0 10px 16px;
+      padding-right: 3px; }
+    .content_desk .conRight .data .score img {
+      width: 18px; }
   .content_phone {
-    display: block; } }
+    display: block; }
+    .content_phone .chart_phone {
+      width: 50%;
+      display: inline-block;
+      margin-top: 20px;
+      margin-left: 15px;
+      text-align: justify; }
+      .content_phone .chart_phone h3 {
+        font-size: 20px;
+        margin-left: 35px;
+        margin-bottom: 10px; }
+      .content_phone .chart_phone span {
+        font-size: 17px;
+        margin-right: 10px;
+        line-height: 1.5; }
+      .content_phone .chart_phone .value {
+        width: 0px;
+        height: 12px;
+        background-color: #aaa;
+        display: inline-block; }
+      .content_phone .chart_phone .value.focus {
+        background-color: #6cd5ff; }
+      .content_phone .chart_phone .value:nth-of-type(1) {
+        animation: value1 1.5s 0.5s 1 forwards; }
+      .content_phone .chart_phone .value:nth-of-type(2) {
+        animation: value2 1.5s 0.5s 1 forwards; }
+      .content_phone .chart_phone .value:nth-of-type(3) {
+        animation: value3 1.5s 0.5s 1 forwards; }
+      .content_phone .chart_phone .value:nth-of-type(4) {
+        animation: value4 1.5s 0.5s 1 forwards; }
+      .content_phone .chart_phone .value:nth-of-type(5) {
+        animation: value5 1.5s 0.5s 1 forwards; }
+    .content_phone .record_phone {
+      display: inline-block;
+      width: 40%; }
+      .content_phone .record_phone .collect {
+        display: inline-block; }
+      .content_phone .record_phone .writeComment {
+        display: inline-block; }
+      .content_phone .record_phone .collect,
+      .content_phone .record_phone .writeComment {
+        margin: 10px; }
+        .content_phone .record_phone .collect #heart,
+        .content_phone .record_phone .collect #write,
+        .content_phone .record_phone .writeComment #heart,
+        .content_phone .record_phone .writeComment #write {
+          width: 28px;
+          height: 26px;
+          cursor: pointer; }
+        .content_phone .record_phone .collect #Cnum,
+        .content_phone .record_phone .collect #Wnum,
+        .content_phone .record_phone .writeComment #Cnum,
+        .content_phone .record_phone .writeComment #Wnum {
+          margin-top: 10px;
+          font-size: 14px;
+          color: #aaaaaa; } }
 
 .comment {
   width: 60%;
@@ -950,7 +1081,7 @@ nav {
   #lightBox {
     width: 100%; } }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 767px) {
   #lightBox {
     height: 90%; }
   .comment {

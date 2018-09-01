@@ -122,6 +122,12 @@ a {
             right: 10px;
             @include btn(60px, 35px, 18px, 35px);
         }
+        @media screen and (min-width: 768px) {
+            .commentBtn:hover{
+                @include btnHover;
+            }
+        }
+        
         .itemTxt {
             display: inline-block;
             width: 55%; 
@@ -137,9 +143,6 @@ a {
                 line-height: 1.3;
                 color: #ffffff;
                 white-space: wrap;
-            }
-            .commentBtn:hover {
-                @include btnHover;
             }
             .score {
                 position: absolute;
@@ -206,8 +209,45 @@ a {
     }
 }
 
+
+@media screen and (max-width: 960px){
+   .comContent{width: 90%;}
+   #itemContent_no .comItem_no, #itemContent_al .comItem_al{
+        width: 80%;
+        margin: 10px auto;
+   }
+}
+
+@media screen and (max-width: 550px){
+    .comment_mg_box{padding: 0 5% 3% 5%;}
+    #itemContent_no .comItem_no, #itemContent_al .comItem_al{
+        width: 100%;
+        // margin: 10px auto;
+        .expImg .expName{
+            font-size: 20px;
+        }
+        .itemTxt h5{
+            font-size: 16px;
+        }
+   }
+}
+@media screen and (max-width: 370px){
+    #itemContent_no .comItem_no, #itemContent_al .comItem_al {
+        .expImg{
+           width: 50%; 
+        }
+        .itemTxt{
+            width: 70%;
+            margin-right: 60px;
+            h4{
+                margin-bottom: 10px;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
 #lightBox_com_father {
-    display: none;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -306,18 +346,44 @@ a {
                     color: #ffffff;
                     cursor: pointer; // @include btn(60px,35px,18px,35px);
                 }
-                input:hover {
-                    @include btnHover;
+                @media screen and (min-width: 768px){
+                    input:hover {
+                        @include btnHover;
+                    }
                 }
             }
         }
     }
 }
+@media screen and (max-width: 830px) {
+   #lightBox_com {
+        width: 100%;
+        height: 80%;
+   }
+}
+@media screen and (max-width: 430px) {
+    #lightBox_com .message {
+        .user{
+            img{width: 70px;}
+            .name{left: 53px;}
+        } 
+        form textarea{
+            width: 85%;
+            margin: 22px 0 50px 28px;
+        }
+        .score{
+            margin-left: 100px;
+            img{
+                width: 26px;
+            }
+        }
+    }
+}
+
 
 @import "layout/footer";
 footer {
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, .5) 100%); // background-image: linear-gradient(to top,rgba(0, 183, 255, .5), rgba(0, 255, 255, .5) 100%);
-    // background-color: ;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, .5) 100%); 
 }
 
 @import "layout/nav-small";
