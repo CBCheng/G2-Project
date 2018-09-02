@@ -9,54 +9,57 @@ try {
   
     foreach ($memRows as $memRow) {
     	//判斷屬性
-    	$aa='';
+    	$attr='';
     	if($memRow["expFood"]==10){
     		$memRow["expFood"]='美食';
-    		$aa .= '<div class="attr food">'.$memRow["expFood"].'</div>';
+    		$attr .= '<div class="attr food">'.$memRow["expFood"].'</div>';
     	}else{
     		$memRow["expFood"]='';
     	}
 
     	if($memRow["expHuman"]==10){
     		$memRow["expHuman"]='人文';
-    		$aa .= '<div class="attr human">'.$memRow["expHuman"].'</div>';
+    		$attr .= '<div class="attr human">'.$memRow["expHuman"].'</div>';
     	}else{
     		$memRow["expHuman"]='';
     	}
     	if($memRow["expSmart"]==10){
     		$memRow["expSmart"]='知性';
-    		$aa .= '<div class="attr smart">'.$memRow["expSmart"].'</div>';
+    		$attr .= '<div class="attr smart">'.$memRow["expSmart"].'</div>';
     	}else{
     		$memRow["expSmart"]='';
     	}
     	if($memRow["expAdven"]==10){
     		$memRow["expAdven"]='冒險';
-    		$aa .= '<div class="attr adven">'.$memRow["expAdven"].'</div>';
+    		$attr .= '<div class="attr adven">'.$memRow["expAdven"].'</div>';
     	}else{
     		$memRow["expAdven"]='';
     	}
     	if($memRow["expTech"]==10){
     		$memRow["expTech"]='科技';
-    		$aa .= '<div class="attr tech">'.$memRow["expTech"].'</div>';
+    		$attr .= '<div class="attr tech">'.$memRow["expTech"].'</div>';
     	}else{
     		$memRow["expFood"]='';
     	}
 
 
     	//人氣加popular跟皇冠圖
-    	$bb = '';
-    	$cc ='';
+    	$crown = '';
+    	$popular ='';
     	if($memRow["expertPopular"]>=30){
-    		$bb .= '<img class="king" src="img/expertImg/crown.png" alt="crown">';
-    		$cc .= 'popular';
+    		$crown .= '<img class="king" src="img/expertImg/crown.png" alt="crown">';
+    		$popular .= 'popular';
     	}
     	
 ?>		
-		<div class="element-item expertBox <?php echo $memRow["planetNo"] ;?> <?php echo $cc;?>">
-            <?php echo $bb ;?>
+		<!-- 專家列表 -->
+
+		<div class="element-item expertBox <?php echo $memRow["planetNo"] ;?> <?php echo $popular;?>">
+			<input type="hidden" value="<?php echo $memRow['expertName'];?>" >
+            <?php echo $crown ;?>
             <h2 class="h2Desk"><?php echo $memRow["planet"];?></h2>
             <h3 class="h3Desk"><?php echo $memRow["expertName"];?></h3>
-            <?php echo $aa ;?> 
+            <?php echo $attr ;?> 
             <div class="pic">
                 <a>
                     <img id="box" src="<?php echo $memRow["expertPic"];?>">
@@ -83,28 +86,32 @@ try {
         </div>
 
 
+
+		
+
+
+
         
         <script type="text/javascript">
         
 
     	//=====跳窗開關=====
 			$(function () {
-				$(".expertBox").click(function () {
+				$(".element-item").click(function () {
 					$("#lightBox_father").show(500);
 				})
 			})
-			//e.target觸發的物件 //e.currentTarget監聽的事件
-			$("#lightBox_father").click(function (e) {
-				if (e.target == e.currentTarget)
-					$("#lightBox_father").hide(500);
-			})
+			// //e.target觸發的物件 //e.currentTarget監聽的事件
+			// $("#lightBox_father").click(function (e) {
+			// 	if (e.target == e.currentTarget)
+			// 		$("#lightBox_father").hide(500);
+			// })
 
-			$(function () {
-				$(".fas").click(function () {
-					$("#lightBox_father").hide(500);
-				})
-			})
-
+			// $(function () {
+			// 	$(".fas").click(function () {
+			// 		$("#lightBox_father").hide(500);
+			// 	})
+			// })
 
 
 

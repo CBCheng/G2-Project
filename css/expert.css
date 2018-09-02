@@ -401,7 +401,7 @@ nav {
     width: 35%;
     min-width: 200px; }
 
-.panel {
+@keyframes cloud1 {}.panel {
   width: 1200px;
   margin: 30px auto 50px; }
 
@@ -705,20 +705,11 @@ nav {
 .grid .expertBox.blue h2 {
   color: #6cd5ff; }
 
-.grid .expertBox.blue .pic .attr {
-  background-color: #094f91; }
-
 .grid .expertBox.orange h2 {
   color: #cfa972; }
 
-.grid .expertBox.orange .pic .attr {
-  background-color: #ad7f43; }
-
 .grid .expertBox.green h2 {
   color: #80c269; }
-
-.grid .expertBox.green .pic .attr {
-  background-color: #486a00; }
 
 #lightBox_father {
   position: fixed;
@@ -745,14 +736,22 @@ nav {
   height: 600px;
   overflow: auto;
   text-align: center;
-  background-color: black;
-  border: 3px solid rgba(108, 213, 255, 0.5); }
+  background-color: black; }
   #lightBox .fas {
     font-size: 30px;
     cursor: pointer;
     position: absolute;
     top: 10px;
     right: 10px; }
+
+.boxBlue {
+  border: 3px solid rgba(108, 213, 255, 0.5); }
+
+.boxOrange {
+  border: 3px solid rgba(207, 169, 114, 0.5); }
+
+.boxGreen {
+  border: 3px solid rgba(128, 194, 105, 0.5); }
 
 #lightBox:after {
   content: "";
@@ -789,11 +788,20 @@ nav {
         transform: rotate(-30deg); }
       .content_desk .conLeft .expPic .attr {
         position: absolute;
-        background-color: #094f91;
         font-size: 20px;
         padding: 5px 10px;
         right: 10px;
         top: 10px; }
+      .content_desk .conLeft .expPic .food {
+        background-color: #ffb22b; }
+      .content_desk .conLeft .expPic .human {
+        background-color: #00c759; }
+      .content_desk .conLeft .expPic .smart {
+        background-color: #00c6c7; }
+      .content_desk .conLeft .expPic .adven {
+        background-color: #ff492b; }
+      .content_desk .conLeft .expPic .tech {
+        background-color: #852bff; }
       .content_desk .conLeft .expPic img {
         width: 100%; }
   .content_desk .conRight {
@@ -802,8 +810,13 @@ nav {
     display: flex;
     flex-direction: column; }
     .content_desk .conRight h1 {
-      color: #6cd5ff;
       text-align: justify; }
+    .content_desk .conRight h1.plBlue {
+      color: #6cd5ff; }
+    .content_desk .conRight h1.plOrange {
+      color: #cfa972; }
+    .content_desk .conRight h1.plGreen {
+      color: #80c269; }
     .content_desk .conRight h2 {
       margin-top: 20px;
       text-align: justify;
@@ -842,19 +855,10 @@ nav {
           width: 0px;
           height: 15px;
           background-color: #aaa;
-          display: inline-block; }
+          display: inline-block;
+          transition: 1s; }
         .content_desk .conRight .data .chart .value.focus {
           background-color: #6cd5ff; }
-        .content_desk .conRight .data .chart .value:nth-of-type(1) {
-          animation: value1 1.5s 0.5s 1 forwards; }
-        .content_desk .conRight .data .chart .value:nth-of-type(2) {
-          animation: value2 1.5s 0.5s 1 forwards; }
-        .content_desk .conRight .data .chart .value:nth-of-type(3) {
-          animation: value3 1.5s 0.5s 1 forwards; }
-        .content_desk .conRight .data .chart .value:nth-of-type(4) {
-          animation: value4 1.5s 0.5s 1 forwards; }
-        .content_desk .conRight .data .chart .value:nth-of-type(5) {
-          animation: value5 1.5s 0.5s 1 forwards; }
 
 @keyframes value1 {
   0% {

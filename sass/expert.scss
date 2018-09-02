@@ -247,7 +247,7 @@ a {
     }
 }
 
-TweenMax.fromTo(.cloud1, 3, { x: 0, y: 0 }, { x: 100, y: 100 });
+
 
 @keyframes cloud1{
 
@@ -658,39 +658,33 @@ TweenMax.fromTo(.cloud1, 3, { x: 0, y: 0 }, { x: 100, y: 100 });
     }
 
     .expertBox.blue {
-        h2 {
-            color: $fontColorBlue;
-        }
+        h2 {color: $fontColorBlue;}
 
-        .pic {
-            .attr {
-                background-color: $attrBlue;
-            }
-        }
+        // .pic {
+        //     .attr {
+        //         background-color: $attrBlue;
+        //     }
+        // }
     }
 
     .expertBox.orange {
-        h2 {
-            color: $fontColorOrange;
-        }
+        h2 {color: $fontColorOrange;}
 
-        .pic {
-            .attr {
-                background-color: $attrOrange;
-            }
-        }
+        // .pic {
+        //     .attr {
+        //         background-color: $attrOrange;
+        //     }
+        // }
     }
 
     .expertBox.green {
-        h2 {
-            color: $fontColorGreen;
-        }
+        h2 {color: $fontColorGreen;}
 
-        .pic {
-            .attr {
-                background-color: $attrGreen;
-            }
-        }
+        // .pic {
+        //     .attr {
+        //         background-color: $attrGreen;
+        //     }
+        // }
     }
 }
 
@@ -721,7 +715,7 @@ TweenMax.fromTo(.cloud1, 3, { x: 0, y: 0 }, { x: 100, y: 100 });
     overflow: auto;
     text-align: center;
     background-color: rgba(0, 0, 0, 1);
-    border: 3px solid rgba(108, 213, 255, 0.5);
+    
 
     .fas {
         font-size: 30px; 
@@ -731,6 +725,9 @@ TweenMax.fromTo(.cloud1, 3, { x: 0, y: 0 }, { x: 100, y: 100 });
         right: 10px;
     }
 }
+.boxBlue{border: 3px solid $borderColorBlue;}
+.boxOrange{border: 3px solid $borderColorOrange;}
+.boxGreen{border: 3px solid $borderColorGreen;}
 
 #lightBox:after {
     content: "";
@@ -769,12 +766,16 @@ TweenMax.fromTo(.cloud1, 3, { x: 0, y: 0 }, { x: 100, y: 100 });
             }
             .attr {
                 position: absolute;
-                background-color: $attrBlue;
                 font-size: 20px;
                 padding: 5px 10px;
                 right: 10px;
                 top: 10px;
             }
+            .food{background-color: $food;}
+            .human{background-color: $culture;}
+            .smart{background-color: $nalgene;}
+            .adven{background-color: $adventure;}
+            .tech{background-color: $technology;}
 
             img {
                 width: 100%;
@@ -789,9 +790,11 @@ TweenMax.fromTo(.cloud1, 3, { x: 0, y: 0 }, { x: 100, y: 100 });
         flex-direction: column; 
 
         h1 {
-            color: $fontColorBlue;
             text-align: justify;
         }
+        h1.plBlue{color: $fontColorBlue;}
+        h1.plOrange{color: $fontColorOrange;}
+        h1.plGreen{color: $fontColorGreen;}
         h2 {
             margin-top: 20px;
             text-align: justify;
@@ -846,31 +849,33 @@ TweenMax.fromTo(.cloud1, 3, { x: 0, y: 0 }, { x: 100, y: 100 });
                     height: 15px;
                     background-color: #aaa;
                     display: inline-block;
+                    transition:1s;
                 }
+
 
                 .value.focus {
                     background-color: $fontColorBlue;
                 }
 
-                .value:nth-of-type(1) {
-                    animation: value1 1.5s 0.5s 1 forwards;
-                }
+                // .value:nth-of-type(1) {
+                //     animation: value1 1.5s 0.5s 1 forwards;
+                // }
 
-                .value:nth-of-type(2) {
-                    animation: value2 1.5s 0.5s 1 forwards;
-                }
+                // .value:nth-of-type(2) {
+                //     animation: value2 1.5s 0.5s 1 forwards;
+                // }
 
-                .value:nth-of-type(3) {
-                    animation: value3 1.5s 0.5s 1 forwards;
-                }
+                // .value:nth-of-type(3) {
+                //     animation: value3 1.5s 0.5s 1 forwards;
+                // }
 
-                .value:nth-of-type(4) {
-                    animation: value4 1.5s 0.5s 1 forwards;
-                }
+                // .value:nth-of-type(4) {
+                //     animation: value4 1.5s 0.5s 1 forwards;
+                // }
 
-                .value:nth-of-type(5) {
-                    animation: value5 1.5s 0.5s 1 forwards;
-                }
+                // .value:nth-of-type(5) {
+                //     animation: value5 1.5s 0.5s 1 forwards;
+                // }
             }
         }
 
