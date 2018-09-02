@@ -9,7 +9,7 @@
     
 </head>
 <body>
-<form action="indexBackendLogin.php" method="get" >
+<form action="indexBackendLogin.php" method="post" >
     <div class="backendFull">
         <div class="mask">
             <div class="wrapPanel">

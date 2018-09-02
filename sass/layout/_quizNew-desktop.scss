@@ -41,7 +41,7 @@
                             width:20%;
                             margin:auto;
                             position: relative;
-                            cursor: pointer;
+                            
                             .ansTxtGroup{
                                 position: absolute;
                                 left:0;
@@ -65,7 +65,8 @@
                                 top:-20%;
                                 left:25%;
                                 position: absolute;
-                                
+                                box-shadow: 2px 2px 3px rgba(0,0,0,.6) ;
+                                border-radius: 50%;
                             } 
                             .sandPic{
                                 display:block;
@@ -114,7 +115,7 @@
                             width:50%;
                             float: left;
                             .daysGroup{
-                                cursor: pointer;
+                                
                                 width:129px;
                                 margin:auto;
                                 position: relative;
@@ -131,6 +132,7 @@
                                     top:-25%;
                                 }
                                 .days3,.days5{
+                                    cursor: pointer;
                                     margin:auto;
                                     position: relative;
                                     top:40px;
@@ -167,7 +169,7 @@
                             width:60%;
                             margin:auto;
                             padding: 10px;
-                            cursor: pointer;
+                            
                             .landPicBorder{
                                 width:90%;
                                 display:block;
@@ -186,6 +188,7 @@
                             right:0;
                             margin:auto;
                             h5{
+                                cursor: pointer;
                                 font-size:16px;
                                 font-family: $fontChinese;
                             }
@@ -219,7 +222,7 @@
                                 width:60%;
                                 margin:auto;
                                 padding: 10px;
-                                cursor: pointer;
+                                
                                 .alienPicBorder{
                                     width:80%;
                                     display:block;
@@ -238,6 +241,7 @@
                                 right:0;
                                 margin:auto;
                                 h5{
+                                    cursor: pointer;
                                     font-size:16px;
                                     font-family: $fontChinese;
                                 }
@@ -277,7 +281,7 @@
                                 padding:10px;
                                 width:30%;
                                 margin: auto;
-                                cursor: pointer;
+                                
                                 overflow: hidden;
                                 .genderBorderL,.genderBorderR{
                                     width:45%;
@@ -296,6 +300,7 @@
                                 right:0;
                                 margin:auto;
                                 h5{
+                                    cursor: pointer;
                                     font-size:16px;
                                     font-family: $fontChinese;
                                 }

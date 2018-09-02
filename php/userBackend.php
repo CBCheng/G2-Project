@@ -87,6 +87,7 @@ if($_SESSION["mgrAccess"]=="一般"){
                         <td>權限</td>
                         <td>確認修改</td>
                     </tr>
+
 <?php
 
 try {
@@ -94,15 +95,53 @@ try {
         $sql ="select * from bgmgr";
         $bgmgr = $pdo->query($sql);
     while($bgmgrRow = $bgmgr->fetch(PDO::FETCH_ASSOC)){
+        echo "<form action='userUpdateBackend.php' method='post'>";
+        echo "<input type='hidden' name='mgrNo' value=".$bgmgrRow["mgrNo"].">";
         echo "<tr>";
             echo "<td>",$bgmgrRow["mgrNo"],"</td>";
-            echo "<td>",$bgmgrRow["mgrName"],"</td>";
-            echo "<td>",$bgmgrRow["mgrId"],"</td>";
-            echo "<td>",$bgmgrRow["mgrPsw"],"</td>";
-            echo "<td>",$bgmgrRow["mgrAccess"],"</td>";
-            echo "<td>",$bgmgrRow["mgrStatus"],"</td>";
-            echo "<td><button>修改</button></td>";
+            echo "<td><input type='text' name='mgrName' value=",$bgmgrRow["mgrName"],"></td>";
+            echo "<td><input type='text' name='mgrId' value=",$bgmgrRow["mgrId"],"></td>";
+            echo "<td><input type='text' name='mgrPsw' value=",$bgmgrRow["mgrPsw"],"></td>";
+            if($bgmgrRow["mgrStatus"]=="啟用"){
+                echo "<td><select name='mgrStatus'>";
+                echo "<option value='啟用' selected>啟用</option>";
+                echo "<option value='停用'>停用</option>";
+                echo "</select></td>";
+            }else{
+                echo "<td><select name='mgrStatus'>";
+                echo "<option value='啟用'>啟用</option>";
+                echo "<option value='停用' selected>停用</option>";
+                echo "</select></td>";
+            }
+            
+            switch($bgmgrRow["mgrAccess"]){
+                case "最高":
+                    echo "<td><select name='mgrAccess'>";
+                    echo "<option value='最高' selected>最高</option>";
+                    echo "<option value='一般'>一般</option>";
+                    echo "<option value='專家'>專家</option>";
+                    echo "</select></td>";
+                    break;
+                case "一般":
+                    echo "<td><select name='mgrAccess'>";
+                    echo "<option value='最高'>最高</option>";
+                    echo "<option value='一般' selected>一般</option>";
+                    echo "<option value='專家'>專家</option>";
+                    echo "</select></td>";
+                    break;
+                case "專家":
+                    echo "<td><select name='mgrAccess'>";
+                    echo "<option value='最高'>最高</option>";
+                    echo "<option value='一般'>一般</option>";
+                    echo "<option value='專家' selected>專家</option>";
+                    echo "</select></td>";
+                    break;
+            }
+        
+            
+            echo "<td><input type='submit' value='儲存修改'></td>";
         echo "</tr>";
+    echo "</form>";
     }
                                 
 ?>   
@@ -119,6 +158,6 @@ try {
     </div>
     <div class="clearfix"></div>      
 
-
+<script src="js/userBackend.js"></script>
 </body>
 </html>

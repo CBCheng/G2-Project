@@ -18,6 +18,7 @@ echo "id : ", session_id() ,"<br>";
 // echo "email : ", $_SESSION["email"] ,"<br>";
 echo "姓名 : ", $_SESSION["mgrName"] ,"<br>";
 echo "權限 : ", $_SESSION["mgrAccess"] ,"<br>";
+// echo "狀態 : ", $_SESSION["mgrStatus"] ,"<br>";
 ?>	
 
 </body>
