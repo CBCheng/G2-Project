@@ -26,23 +26,28 @@ try{
 		// $_SESSION["memId"] = $memRow["memId"];
 		$_SESSION["mgrName"]= $bgmgrRow["mgrName"];
 		$_SESSION["mgrAccess"]= $bgmgrRow["mgrAccess"];
+		// $_SESSION["mgrStatus"]= $bgmgrRow["mgrStatus"];
 		// $_SESSION["email"] = $memRow["email"];
 		// echo "<a href='userBackend.php'></a> ";
-		if($_SESSION["mgrAccess"]=="一般"){
-			header("location:menberBackend.php");
-		}else if($_SESSION["mgrAccess"]=="專家"){
-			header("location:expertBackend.php");
+		if($bgmgrRow["mgrStatus"]=="啟用"){
+			if($_SESSION["mgrAccess"]=="一般"){
+				header("location:menberBackend.php");
+			}else if($_SESSION["mgrAccess"]=="專家"){
+				header("location:expertBackend.php");
+			}else{
+				header("location:userBackend.php");
+			}
 		}else{
-			header("location:userBackend.php");
+			echo "此帳密已停權";
 		}
-		
 	}else{
 		echo "查無此帳密，請重新登入";
 		// echo "<script>";
 		// echo "alert('查無此帳密，請重新登入')";
 		// echo "</script>";
 	}
-}catch(PDOException $ex){
+		}
+catch(PDOException $ex){
 	echo "資料庫操作失敗,原因：",$ex->getMessage(),"<br>";
 	echo "行號：",$ex->getLine(),"<br>";
 }

@@ -1,4 +1,4 @@
-//開場動畫JS
+//開場打字動畫JS
 // Wrap every letter in a span
 $('.ml11 .letters').each(function(){
 	$(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
@@ -36,7 +36,7 @@ $('.ml11 .letters').each(function(){
 	});
 
 
-//套件JS==================================================================
+//星星套件JS==================================================================
 particlesJS("particles-js", 
 	{"particles":{"number":{"value":50,"density":{"enable":true,"value_area":800}},
 	 "color":{"value":"#FFF"},
@@ -58,7 +58,7 @@ particlesJS("particles-js",
 	 "repulse":{"distance":400,"duration":0.4},
 	 "push":{"particles_nb":4},
 	 "remove":{"particles_nb":2}}},"retina_detect":true});
-
+//===============================================================================================================================
 //選取物件
 var section5 = document.querySelectorAll('.sectionQuiz5')[0];
 var section4 = document.querySelectorAll('.sectionQuiz4')[0];
@@ -68,10 +68,10 @@ var section1 = document.querySelectorAll('.sectionQuiz1')[0];
 var ml11 = document.querySelectorAll('.ml11')[0];
 // var section = document.querySelectorAll('.sectionQuiz')[0];
 var particlesBg = document.querySelector('#particles-js');
-var genderBtn =document.querySelectorAll('.gender div');
-var alienBtn = document.querySelectorAll('.alien div');
-var landscapeBtn = document.querySelectorAll('.landscape div');
-var daysBtn = document.querySelectorAll('.daysGroup');
+var genderBtn =document.querySelectorAll('.genderBtn h5');
+var alienBtn = document.querySelectorAll('.alienBtn h5');
+var landscapeBtn = document.querySelectorAll('.landscape h5');
+// var daysBtn = document.querySelectorAll('.daysGroup');
 var timeId5,timeId4,timeId2;
 var scaleValue5 = 1;
 var scaleValue4 = 0;
@@ -95,16 +95,19 @@ function doFirst(){
         alienBtn[i].onclick = movePositionL;
     }
     //quiz3->quiz4動畫
-    for(var i=0;i<landscapeBtn.length;i++){
-        landscapeBtn[i].onclick = movePositionR;
+    var theLands = document.querySelectorAll(".theLands");
+    for(var i=0;i<theLands.length;i++){
+        theLands[i].onclick = movePositionR;
 	}
 	//quiz4->quiz5動畫
-	for(var i=0;i<daysBtn.length;i++){
-		daysBtn[i].onclick = changeOpacitySpeed;
+	var thedays = document.querySelectorAll(".thedays");
+	for(var i=0;i<thedays.length;i++){
+		thedays[i].onclick = changeOpacitySpeed;
 	}
+
     
 }
-//================================================================
+//quiz1->quiz2過場動畫================================================================
 function changefadeOut(){
     scaleValue5 -=  0.05;
      if(scaleValue5 < 0.1){
@@ -132,7 +135,7 @@ function changeSpeed(){
     timeId5 = setInterval(changefadeOut,10);
 }
 
-//======================================================================='
+//quiz2->quiz3過場動畫======================================================================='
 function movePositionL(){
     
     section3.style.left = 0;
@@ -143,8 +146,14 @@ function movePositionL(){
 	section4.style.transitionDuration = 0.5+'s';
 	section2.style.display = 'block';
 }
-//=======================================================================
-function movePositionR(){
+//quiz3->quiz4過場動畫=======================================================================
+function movePositionR(e){
+	//取得quiz3的值
+ 	var land = e.target.dataset.set;
+ 	document.getElementById("landValue").value = land;
+	console.log(document.getElementById("landValue").value);
+	
+	// quiz3->quiz4過場動畫
     section2.style.left = 0;
     section2.style.top = 0;
     section2.style.transitionDuration = 0.5+'s';
@@ -156,9 +165,9 @@ function movePositionR(){
 //=========================================================================
 //quiz4 hover效果
 	//3天按鈕
-	var daysGroupBtn = document.querySelectorAll('.daysGroup')[0];
 	
-	daysGroupBtn.addEventListener('mouseenter',function(){
+	var thedays3 = document.querySelectorAll(".thedays")[0];
+	thedays3.addEventListener('mouseenter',function(){
 		var cirCenter = document.querySelectorAll('.cirCenter')[0];
 		var cirMiddle = document.querySelectorAll('.cirMiddle')[0];
 		var cirBorder = document.querySelectorAll('.cirBorder')[0];
@@ -167,7 +176,7 @@ function movePositionR(){
 		cirBorder.classList.add('hoverCirBorder');
 		
 	})
-	daysGroupBtn.addEventListener('mouseleave',function(){
+	thedays3.addEventListener('mouseleave',function(){
 		var cirCenter = document.querySelectorAll('.cirCenter')[0];
 		var cirMiddle = document.querySelectorAll('.cirMiddle')[0];
 		var cirBorder = document.querySelectorAll('.cirBorder')[0];
@@ -176,8 +185,8 @@ function movePositionR(){
 		cirBorder.classList.remove('hoverCirBorder');
 	})
 	//5天按鈕
-	var daysGroupBtn = document.querySelectorAll('.daysGroup')[1];
-	daysGroupBtn.addEventListener('mouseenter',function(){
+	var thedays5 = document.querySelectorAll(".thedays")[1];
+	thedays5.addEventListener('mouseenter',function(){
 		var cirCenter = document.querySelectorAll('.cirCenter')[1];
 		var cirMiddle = document.querySelectorAll('.cirMiddle')[1];
 		var cirBorder = document.querySelectorAll('.cirBorder')[1];
@@ -186,7 +195,7 @@ function movePositionR(){
 		cirBorder.classList.add('hoverCirBorder');
 		
 	})
-	daysGroupBtn.addEventListener('mouseleave',function(){
+	thedays5.addEventListener('mouseleave',function(){
 		var cirCenter = document.querySelectorAll('.cirCenter')[1];
 		var cirMiddle = document.querySelectorAll('.cirMiddle')[1];
 		var cirBorder = document.querySelectorAll('.cirBorder')[1];
@@ -195,10 +204,63 @@ function movePositionR(){
 		cirBorder.classList.remove('hoverCirBorder');
 	})
 //========================================================================
-// quiz4->quiz5
-function changeOpacitySpeed(){
+function showQuiz(jsonStr){
+		var scheduleRow = JSON.parse(jsonStr);
+		console.log(scheduleRow.schPlanet);
+		//星球結果
+		var resultPlanet= document.getElementById("resultPlanet");
+		resultPlanet.innerHTML=scheduleRow.schPlanet;
+		//行程名稱結果
+		var resultName= document.getElementById("resultName");
+		resultName.innerHTML=scheduleRow.schName;
+		//行程星球圖片
+		// var resultPlanetPic= document.getElementById("resultPlanetPic").src;
+		
+		// document.getElementById("resultPlanetPic").src.replace("resultSan","");
+		// document.getElementById("resultPlanetPic").src="http://127.0.0.1/phpLab/G2-Project/img/poa/resultWater.png";
+		document.getElementById("resultPlanetPic").setAttribute("src","img/poa/"+scheduleRow.quizPlanetPic+".png");
+		console.log(document.getElementById("resultPlanetPic").src);
+		// resultPlanetPic.replace(/resultSan/,'resultWater');
+
+		//行程背景圖片
+		document.getElementById("resultPic").setAttribute("src","img/poa/"+scheduleRow.quizPic+".jpg");
+		console.log(document.getElementById("resultPic").src);
+		
+}
+//========================================================================
+// quiz4->quiz5過場動畫
+function changeOpacitySpeed(e){
+    if( e.target.nodeName == "SPAN"){
+    	var day = e.target.parentNode.dataset.set;
+    }else{
+    	var day = e.target.dataset.set;
+    }
+	
+	console.log("=========", day)
 	timeId2 = setInterval(changeOpacity,50);
-	console.log('ok');
+
+	//quiz4的ajax
+	var xhr = new XMLHttpRequest();
+	xhr.onload = function(){
+		if(xhr.status == 200){
+			// alert(xhr.responseText);
+			//問題1==================================================================
+			// document.getElementById("wrapQuiz").appendChild(xhr.responseText);
+			//問題1==================================================================
+			console.log(xhr.responseText);
+			showQuiz(xhr.responseText);
+
+
+
+		}else{
+			alert(xhr.status);
+		}
+	}
+	var land = document.getElementById("landValue").value;
+	xhr.open("post","php/quizNew.php",true);
+	xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+	var data_info = "schFullDay=" + day +"&schPlanet=" + land;
+	xhr.send(data_info);
 }
 function changeOpacity(){
 	opacityValue -= 0.03
@@ -216,5 +278,8 @@ function changeOpacity(){
 		section2.style.opacity = opacityValue;
 	}
 }
+
+
+
 
 window.onload = doFirst;

@@ -66,7 +66,7 @@
                             width:20%;
                             margin:auto;
                             position: relative;
-                            cursor: pointer;
+                            
                             .ansTxtGroup{
                                 position: absolute;
                                 left:0;
@@ -90,7 +90,8 @@
                                 top:-20%;
                                 left:25%;
                                 position: absolute;
-                                
+                                box-shadow: 2px 2px 3px rgba(0,0,0,.6) ;
+                                border-radius: 50%;
                             } 
                             .sandPic{
                                 display:block;
@@ -142,7 +143,7 @@
                             width:50%;
                             float: left;
                             .daysGroup{
-                                cursor: pointer;
+                                
                                 width:129px;
                                 margin:auto;
                                 position: relative;
@@ -160,6 +161,7 @@
                                     top:-25%;
                                 }
                                 .days3,.days5{
+                                    cursor: pointer;
                                     margin:auto;
                                     // padding-top:30px;
                                     position: relative;
@@ -201,7 +203,7 @@
                             margin:auto;
                             padding: 10px;
                             // border:1px solid #FFF; 
-                            cursor: pointer;
+                            
                             .landPicBorder{
                                 width:90%;
                                 display:block;
@@ -220,6 +222,7 @@
                             right:0;
                             margin:auto;
                             h5{
+                                cursor: pointer;
                                 font-size:16px;
                                 font-family: $fontChinese;
                             }
@@ -255,7 +258,7 @@
                                 margin:auto;
                                 padding: 10px;
                                 // border:1px solid #FFF; 
-                                cursor: pointer;
+                                
                                 .alienPicBorder{
                                     width:80%;
                                     display:block;
@@ -276,6 +279,7 @@
                                 h5{
                                     font-size:16px;
                                     font-family: $fontChinese;
+                                    cursor: pointer;
                                 }
                                 @include btn($wi:100px, $he:34px, $fs:18px, $lh:34px);
                                 &:hover{
@@ -314,7 +318,7 @@
                                 // border:1px solid #FFF;
                                 width:30%;
                                 margin: auto;
-                                cursor: pointer;
+                                
                                 overflow: hidden;
                                 .genderBorderL,.genderBorderR{
                                     width:45%;
@@ -335,6 +339,7 @@
                                 h5{
                                     font-size:16px;
                                     font-family: $fontChinese;
+                                    cursor: pointer;
                                 }
                                 @include btn($wi:100px, $he:34px, $fs:18px, $lh:34px);
                                 &:hover{

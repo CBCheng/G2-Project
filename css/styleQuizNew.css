@@ -308,8 +308,7 @@ p {
             .full .slider .wrapQuiz .sectionQuiz1 .ansTrip .recommendTrip {
               width: 50%;
               margin: auto;
-              position: relative;
-              cursor: pointer; }
+              position: relative; }
               .full .slider .wrapQuiz .sectionQuiz1 .ansTrip .recommendTrip .ansTxtGroup {
                 position: absolute;
                 left: 0;
@@ -328,7 +327,10 @@ p {
                 width: 50%;
                 top: -20%;
                 left: 25%;
-                position: absolute; }
+                position: absolute;
+                display: block;
+                box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+                border-radius: 50%; }
               .full .slider .wrapQuiz .sectionQuiz1 .ansTrip .recommendTrip .sandPic {
                 display: block; }
               .full .slider .wrapQuiz .sectionQuiz1 .ansTrip .recommendTrip .sandBorder {
@@ -379,7 +381,6 @@ p {
               padding-bottom: 35%;
               margin: auto; }
               .full .slider .wrapQuiz .sectionQuiz2 .quiz4 .days .daysGroup {
-                cursor: pointer;
                 width: 129px;
                 margin: auto;
                 position: relative;
@@ -394,6 +395,7 @@ p {
                   left: -25%;
                   top: -25%; }
                 .full .slider .wrapQuiz .sectionQuiz2 .quiz4 .days .daysGroup .days3, .full .slider .wrapQuiz .sectionQuiz2 .quiz4 .days .daysGroup .days5 {
+                  cursor: pointer;
                   margin: auto;
                   position: relative;
                   top: 40px;
@@ -423,8 +425,7 @@ p {
               .full .slider .wrapQuiz .sectionQuiz3 .quiz3 .landscape .landscapePic {
                 width: 50%;
                 margin: auto;
-                padding: 10px;
-                cursor: pointer; }
+                padding: 10px; }
                 .full .slider .wrapQuiz .sectionQuiz3 .quiz3 .landscape .landscapePic .landPicBorder {
                   width: 70%;
                   display: block;
@@ -449,7 +450,8 @@ p {
                 cursor: pointer; }
                 .full .slider .wrapQuiz .sectionQuiz3 .quiz3 .landscape .landscapeBtn h5 {
                   font-size: 16px;
-                  font-family: "微軟正黑體"; }
+                  font-family: "微軟正黑體";
+                  cursor: pointer; }
                 .full .slider .wrapQuiz .sectionQuiz3 .quiz3 .landscape .landscapeBtn:hover {
                   background-color: #6cd5ff;
                   color: #000; }
@@ -473,8 +475,7 @@ p {
               .full .slider .wrapQuiz .sectionQuiz4 .quiz2 .alien .alienPic {
                 width: 35%;
                 margin: auto;
-                padding: 10px;
-                cursor: pointer; }
+                padding: 10px; }
                 .full .slider .wrapQuiz .sectionQuiz4 .quiz2 .alien .alienPic .alienPicBorder {
                   width: 50%;
                   display: block;
@@ -499,7 +500,8 @@ p {
                 cursor: pointer; }
                 .full .slider .wrapQuiz .sectionQuiz4 .quiz2 .alien .alienBtn h5 {
                   font-size: 16px;
-                  font-family: "微軟正黑體"; }
+                  font-family: "微軟正黑體";
+                  cursor: pointer; }
         .full .slider .wrapQuiz .sectionQuiz5 {
           width: 100%;
           transform: scale(1);
@@ -522,7 +524,6 @@ p {
                 padding: 10px;
                 width: 30%;
                 margin: auto;
-                cursor: pointer;
                 overflow: hidden; }
                 .full .slider .wrapQuiz .sectionQuiz5 .quiz1 .gender .genderPic .genderBorderL, .full .slider .wrapQuiz .sectionQuiz5 .quiz1 .gender .genderPic .genderBorderR {
                   width: 50%;
@@ -549,7 +550,8 @@ p {
                 cursor: pointer; }
                 .full .slider .wrapQuiz .sectionQuiz5 .quiz1 .gender .genderBtn h5 {
                   font-size: 16px;
-                  font-family: "微軟正黑體"; }
+                  font-family: "微軟正黑體";
+                  cursor: pointer; }
   .activeDown {
     animation: quiz1 2s cubic-bezier(0.41, 1.6, 0.42, 0.66); }
   @keyframes quiz1 {
@@ -684,8 +686,7 @@ p {
             .full .slider .wrapQuiz .sectionQuiz1 .ansTrip .recommendTrip {
               width: 20%;
               margin: auto;
-              position: relative;
-              cursor: pointer; }
+              position: relative; }
               .full .slider .wrapQuiz .sectionQuiz1 .ansTrip .recommendTrip .ansTxtGroup {
                 position: absolute;
                 left: 0;
@@ -704,7 +705,9 @@ p {
                 width: 50%;
                 top: -20%;
                 left: 25%;
-                position: absolute; }
+                position: absolute;
+                box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+                border-radius: 50%; }
               .full .slider .wrapQuiz .sectionQuiz1 .ansTrip .recommendTrip .sandPic {
                 display: block; }
               .full .slider .wrapQuiz .sectionQuiz1 .ansTrip .recommendTrip .sandBorder {
@@ -752,7 +755,6 @@ p {
               width: 50%;
               float: left; }
               .full .slider .wrapQuiz .sectionQuiz2 .quiz4 .days .daysGroup {
-                cursor: pointer;
                 width: 129px;
                 margin: auto;
                 position: relative;
@@ -767,6 +769,7 @@ p {
                   left: -25%;
                   top: -25%; }
                 .full .slider .wrapQuiz .sectionQuiz2 .quiz4 .days .daysGroup .days3, .full .slider .wrapQuiz .sectionQuiz2 .quiz4 .days .daysGroup .days5 {
+                  cursor: pointer;
                   margin: auto;
                   position: relative;
                   top: 40px;
@@ -795,8 +798,7 @@ p {
               .full .slider .wrapQuiz .sectionQuiz3 .quiz3 .landscape .landscapePic {
                 width: 60%;
                 margin: auto;
-                padding: 10px;
-                cursor: pointer; }
+                padding: 10px; }
                 .full .slider .wrapQuiz .sectionQuiz3 .quiz3 .landscape .landscapePic .landPicBorder {
                   width: 90%;
                   display: block;
@@ -821,6 +823,7 @@ p {
                 text-align: center;
                 cursor: pointer; }
                 .full .slider .wrapQuiz .sectionQuiz3 .quiz3 .landscape .landscapeBtn h5 {
+                  cursor: pointer;
                   font-size: 16px;
                   font-family: "微軟正黑體"; }
                 .full .slider .wrapQuiz .sectionQuiz3 .quiz3 .landscape .landscapeBtn:hover {
@@ -845,8 +848,7 @@ p {
               .full .slider .wrapQuiz .sectionQuiz4 .quiz2 .alien .alienPic {
                 width: 60%;
                 margin: auto;
-                padding: 10px;
-                cursor: pointer; }
+                padding: 10px; }
                 .full .slider .wrapQuiz .sectionQuiz4 .quiz2 .alien .alienPic .alienPicBorder {
                   width: 80%;
                   display: block;
@@ -872,7 +874,8 @@ p {
                 cursor: pointer; }
                 .full .slider .wrapQuiz .sectionQuiz4 .quiz2 .alien .alienBtn h5 {
                   font-size: 16px;
-                  font-family: "微軟正黑體"; }
+                  font-family: "微軟正黑體";
+                  cursor: pointer; }
                 .full .slider .wrapQuiz .sectionQuiz4 .quiz2 .alien .alienBtn:hover {
                   background-color: #6cd5ff;
                   color: #000; }
@@ -897,7 +900,6 @@ p {
                 padding: 10px;
                 width: 30%;
                 margin: auto;
-                cursor: pointer;
                 overflow: hidden; }
                 .full .slider .wrapQuiz .sectionQuiz5 .quiz1 .gender .genderPic .genderBorderL, .full .slider .wrapQuiz .sectionQuiz5 .quiz1 .gender .genderPic .genderBorderR {
                   width: 45%;
@@ -924,7 +926,8 @@ p {
                 cursor: pointer; }
                 .full .slider .wrapQuiz .sectionQuiz5 .quiz1 .gender .genderBtn h5 {
                   font-size: 16px;
-                  font-family: "微軟正黑體"; }
+                  font-family: "微軟正黑體";
+                  cursor: pointer; }
                 .full .slider .wrapQuiz .sectionQuiz5 .quiz1 .gender .genderBtn:hover {
                   background-color: #6cd5ff;
                   color: #000; }
@@ -1038,8 +1041,7 @@ p {
           .full .slider .wrapQuiz .sectionQuiz1 .ansTrip .recommendTrip {
             width: 20%;
             margin: auto;
-            position: relative;
-            cursor: pointer; }
+            position: relative; }
             .full .slider .wrapQuiz .sectionQuiz1 .ansTrip .recommendTrip .ansTxtGroup {
               position: absolute;
               left: 0;
@@ -1058,7 +1060,9 @@ p {
               width: 50%;
               top: -20%;
               left: 25%;
-              position: absolute; }
+              position: absolute;
+              box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+              border-radius: 50%; }
             .full .slider .wrapQuiz .sectionQuiz1 .ansTrip .recommendTrip .sandPic {
               display: block; }
             .full .slider .wrapQuiz .sectionQuiz1 .ansTrip .recommendTrip .sandBorder {
@@ -1106,7 +1110,6 @@ p {
             width: 50%;
             float: left; }
             .full .slider .wrapQuiz .sectionQuiz2 .quiz4 .days .daysGroup {
-              cursor: pointer;
               width: 129px;
               margin: auto;
               position: relative;
@@ -1121,6 +1124,7 @@ p {
                 left: -25%;
                 top: -25%; }
               .full .slider .wrapQuiz .sectionQuiz2 .quiz4 .days .daysGroup .days3, .full .slider .wrapQuiz .sectionQuiz2 .quiz4 .days .daysGroup .days5 {
+                cursor: pointer;
                 margin: auto;
                 position: relative;
                 top: 40px;
@@ -1149,8 +1153,7 @@ p {
             .full .slider .wrapQuiz .sectionQuiz3 .quiz3 .landscape .landscapePic {
               width: 60%;
               margin: auto;
-              padding: 10px;
-              cursor: pointer; }
+              padding: 10px; }
               .full .slider .wrapQuiz .sectionQuiz3 .quiz3 .landscape .landscapePic .landPicBorder {
                 width: 90%;
                 display: block;
@@ -1175,6 +1178,7 @@ p {
               text-align: center;
               cursor: pointer; }
               .full .slider .wrapQuiz .sectionQuiz3 .quiz3 .landscape .landscapeBtn h5 {
+                cursor: pointer;
                 font-size: 16px;
                 font-family: "微軟正黑體"; }
               .full .slider .wrapQuiz .sectionQuiz3 .quiz3 .landscape .landscapeBtn:hover {
@@ -1199,8 +1203,7 @@ p {
             .full .slider .wrapQuiz .sectionQuiz4 .quiz2 .alien .alienPic {
               width: 60%;
               margin: auto;
-              padding: 10px;
-              cursor: pointer; }
+              padding: 10px; }
               .full .slider .wrapQuiz .sectionQuiz4 .quiz2 .alien .alienPic .alienPicBorder {
                 width: 80%;
                 display: block;
@@ -1225,6 +1228,7 @@ p {
               text-align: center;
               cursor: pointer; }
               .full .slider .wrapQuiz .sectionQuiz4 .quiz2 .alien .alienBtn h5 {
+                cursor: pointer;
                 font-size: 16px;
                 font-family: "微軟正黑體"; }
               .full .slider .wrapQuiz .sectionQuiz4 .quiz2 .alien .alienBtn:hover {
@@ -1251,7 +1255,6 @@ p {
               padding: 10px;
               width: 30%;
               margin: auto;
-              cursor: pointer;
               overflow: hidden; }
               .full .slider .wrapQuiz .sectionQuiz5 .quiz1 .gender .genderPic .genderBorderL, .full .slider .wrapQuiz .sectionQuiz5 .quiz1 .gender .genderPic .genderBorderR {
                 width: 45%;
@@ -1277,6 +1280,7 @@ p {
               text-align: center;
               cursor: pointer; }
               .full .slider .wrapQuiz .sectionQuiz5 .quiz1 .gender .genderBtn h5 {
+                cursor: pointer;
                 font-size: 16px;
                 font-family: "微軟正黑體"; }
               .full .slider .wrapQuiz .sectionQuiz5 .quiz1 .gender .genderBtn:hover {
