@@ -107,14 +107,39 @@ $(function(){
 });
 
 //====== planet dot click ======
+// $(function(){
+//     $('.plVi,.viewName').on('click',function(){
+//         console.log(this.id);
+//         $('.viewBg').css('transform','rotateX(0deg)');
+//     });
+//     $('.exit').on('click',function(){
+//         $('.viewBg').css('transform','rotateX(90deg)');
+//     });
+// });
+
 $(function(){
-    $('#p1V11Dot,.viewName').on('click',function(){
-        $('.viewBg').css('transform','rotateX(0deg)');
-    });
-    $('.exit').on('click',function(){
-        $('.viewBg').css('transform','rotateX(90deg)');
+    $('.plVi').on('click',function(){
+        // var ids = $(this).id;
+        // console.log($(this).attr("id"));
+        var thisId = $(this).attr("id");
+        $.ajax({
+            url: 'php/indexViewAjax.php',
+            type: 'POST',	
+            dataType: 'text',
+            data: '&thisId=' + thisId,				
+            success: function(data){
+                // alert(data);
+                $('.viewBg').html(data);
+                $('.viewBg').css('transform','rotateX(0deg)');
+            },
+            error: function(){
+                alert('error');
+            }
+        });
+        // $('.viewBg').css('transform','rotateX(0deg)');
     });
 });
+
 
 // ====== part1 h1 anime ======
 // Wrap every letter in a span

@@ -14,53 +14,53 @@ var storage = sessionStorage;
 
     // 確認登入狀態並更改會員顯示
 
-    //   if (storage.getItem('memEmail')){
+      if (storage.getItem('memEmail')){
 
-    //           var xhr = new XMLHttpRequest();
-    //           xhr.onload = function (){
-    //             if( xhr.status == 200){
-    //                 var memString = xhr.responseText;
-    //                 var memArr = JSON.parse(memString);
-    //                 storage.setItem('mempic', memArr["mempic"] );
-    //                 storage.setItem('memNo', memArr["memNo"] );
+              var xhr = new XMLHttpRequest();
+              xhr.onload = function (){
+                if( xhr.status == 200){
+                    var memString = xhr.responseText;
+                    var memArr = JSON.parse(memString);
+                    storage.setItem('mempic', memArr["mempic"] );
+                    storage.setItem('memNo', memArr["memNo"] );
 
-    //                 var wdt = $( document ).width();
-    //                 if(wdt>768){ 
+                    var wdt = $( document ).width();
+                    if(wdt>768){ 
 
-    //                     $('.memberLogin').css('top','-9px');
+                        $('.memberLogin').css('top','-9px');
 
-    //                 };
+                    };
                     
-    //                 // $('.memberLogin').css('display','none');
-    //                 $('#logOut_btn').text('登出');
-    //                 $('#greeting_btn').text('你好!')
-    //                 $('#logOut_xs').html('<a href="#">登出</a>');
-    //                 //換大頭貼
-    //                 $('.menu-icon-user img').attr('src','images/member/'+memArr["mempic"]);
+                    // $('.memberLogin').css('display','none');
+                    $('#logOut_btn').text('登出');
+                    $('#greeting_btn').text('你好!')
+                    $('#logOut_xs').html('<a href="#">登出</a>');
+                    //換大頭貼
+                    $('.menu-icon-user img').attr('src','images/member/'+memArr["mempic"]);
                      
-    //                 $('.memberLogin a').attr('href','member.php');
+                    $('.memberLogin a').attr('href','member.php');
                  
-    //             }else{
-    //               alert( xhr.status);
-    //             }
-    //           }
+                }else{
+                  alert( xhr.status);
+                }
+              }
 
              
-    //         var login_info = {};
-    //           login_info.memEmail = storage.getItem('memEmail');
-    //           var url = "member_ck.php?login_info=" + JSON.stringify( login_info );
-    //           xhr.open("get", url, true);
-    //           xhr.send( null );            
+            var login_info = {};
+              login_info.memEmail = storage.getItem('memEmail');
+              var url = "member_ck.php?login_info=" + JSON.stringify( login_info );
+              xhr.open("get", url, true);
+              xhr.send( null );            
               
-    //       };
+          };
 
 
-    //     $('#menu-xs').click(function(){
-    //         $('.menu-xs-icon').toggleClass('active');
-    //         $('.menu-list-content-xs').toggleClass('active');
-    //         $('.menu-xs-icon img').attr('src','images/menu/icon-6.png');
-    //         $('.menu-xs-icon.active img').attr('src','images/menu/icon-03.png');
-    //     });
+        $('#menu-xs').click(function(){
+            $('.menu-xs-icon').toggleClass('active');
+            $('.menu-list-content-xs').toggleClass('active');
+            $('.menu-xs-icon img').attr('src','images/menu/icon-6.png');
+            $('.menu-xs-icon.active img').attr('src','images/menu/icon-03.png');
+        });
         //----------------註冊 start---------------------// 
       $('.memberLogin').click(function(){ 
         // if( $('#logOut_btn').text() =="" || $('#logOut_xs').text()=="" ){
@@ -282,45 +282,45 @@ var storage = sessionStorage;
             logOut();  
       });
       
-    //   function logOut (){
+      function logOut (){
 
-    //       let xhr = new XMLHttpRequest();
-    //       xhr.onload = function (){
-    //         if( xhr.status == 200){
-    //           if( xhr.responseText == "ok"){ 
-    //             alert("登出成功");
-    //             //拿掉登出
-    //             $('#logOut_btn').text('');
-    //             //換回會員圖
-    //             $('.menu-icon-user img').attr('src','images/menu/icon-01-1.png');
-    //             //將會員ICON連結改掉
-    //             $('.memberLogin a').attr('href','#');
+          let xhr = new XMLHttpRequest();
+          xhr.onload = function (){
+            if( xhr.status == 200){
+              if( xhr.responseText == "ok"){ 
+                alert("登出成功");
+                //拿掉登出
+                $('#logOut_btn').text('');
+                //換回會員圖
+                $('.menu-icon-user img').attr('src','images/menu/icon-01-1.png');
+                //將會員ICON連結改掉
+                $('.memberLogin a').attr('href','#');
                 
-    //              // 判斷是否為會員頁
+                 // 判斷是否為會員頁
 
-    //             if(locationReload[lenLocation-1].match("member") != null){
-    //               window.location.href = "indexMySiCook.php";
-    //             }else if(locationReload[lenLocation-1].match("shopping") != null){
-    //               window.location.href = "shoppingCart.php";
-    //             }else{
-    //               window.location.href = locationReload[lenLocation-1];
-    //               window.location.reload();
-    //             }
+                if(locationReload[lenLocation-1].match("member") != null){
+                  window.location.href = "indexMySiCook.php";
+                }else if(locationReload[lenLocation-1].match("shopping") != null){
+                  window.location.href = "shoppingCart.php";
+                }else{
+                  window.location.href = locationReload[lenLocation-1];
+                  window.location.reload();
+                }
 
                 
-    //             storage.removeItem('memEmail');
-    //             storage.removeItem('mempic');
-    //             storage.removeItem('memNo');
+                storage.removeItem('memEmail');
+                storage.removeItem('mempic');
+                storage.removeItem('memNo');
 
-    //           }
-    //         }else{
-    //           alert( xhr.status)
-    //         }             
-    //       }
-    //       let url = "log_out.php";
-    //       xhr.open("get", url, true);
-    //       xhr.send( null);                
-    // };
+              }
+            }else{
+              alert( xhr.status)
+            }             
+          }
+          let url = "log_out.php";
+          xhr.open("get", url, true);
+          xhr.send( null);                
+    };
             
 
 
@@ -329,23 +329,23 @@ var storage = sessionStorage;
        //---------------登出 end---------------------//  
     });
 
-    // function $id(id){
-    //   return document.getElementById(id);
-    // }
-    // window.onscroll = function(){
+    function $id(id){
+      return document.getElementById(id);
+    }
+    window.onscroll = function(){
           
-    //         if(document.documentElement.scrollTop > 100){ 
-    //           $("#menu").addClass("menu-flex"); 
-    //           $("#menu-bg").addClass("menu-bg-flex"); 
-    //           $("#menu-logo").addClass("menu-logo-flex"); 
-    //           $("#menu-logo").removeClass("menu-logo"); 
-    //           $("#box-line").addClass("box-line-none"); 
-    //         }else{ 
-    //           $id("menu").className = "menu"; 
-    //           $("#menu-bg").removeClass("menu-bg-flex"); 
-    //           $("#menu-logo").removeClass("menu-logo-flex"); 
-    //           $("#menu-logo").addClass("menu-logo"); 
-    //           $("#box-line").removeClass("box-line-none"); 
-    //         } 
+            if(document.documentElement.scrollTop > 100){ 
+              $("#menu").addClass("menu-flex"); 
+              $("#menu-bg").addClass("menu-bg-flex"); 
+              $("#menu-logo").addClass("menu-logo-flex"); 
+              $("#menu-logo").removeClass("menu-logo"); 
+              $("#box-line").addClass("box-line-none"); 
+            }else{ 
+              $id("menu").className = "menu"; 
+              $("#menu-bg").removeClass("menu-bg-flex"); 
+              $("#menu-logo").removeClass("menu-logo-flex"); 
+              $("#menu-logo").addClass("menu-logo"); 
+              $("#box-line").removeClass("box-line-none"); 
+            } 
            
-    //   }
+      }

@@ -403,16 +403,11 @@ nav {
 
 .panel {
   width: 1200px;
-  margin: 100px auto; }
+  margin: 30px auto 50px; }
 
 @media screen and (max-width: 1200px) {
   .panel {
-    width: 90%;
-    margin: 80px auto; } }
-
-@media screen and (max-width: 650px) {
-  .panel {
-    margin: 50px auto; } }
+    width: 90%; } }
 
 /* ---- button ---- */
 .button-group {
@@ -494,14 +489,22 @@ nav {
 
 @media screen and (max-width: 900px) {
   .button-group .button {
-    padding: 4px 20px;
     margin: 5px 10px;
     font-size: 16px; } }
 
 @media screen and (max-width: 650px) {
   .button-group .button-top,
   .button-group .button-down {
-    display: block; } }
+    display: block; }
+    .button-group .button-top .button,
+    .button-group .button-down .button {
+      width: 80px; }
+      .button-group .button-top .button span,
+      .button-group .button-down .button span {
+        left: 18px; }
+    .button-group .button-top .button.popular span,
+    .button-group .button-down .button.popular span {
+      left: 23px; } }
 
 /* ---- .expertBox ---- */
 .grid .expertBox {
@@ -510,7 +513,8 @@ nav {
   height: 400px;
   text-align: center;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  cursor: pointer; }
   .grid .expertBox .king {
     position: absolute;
     left: 5px;
@@ -525,12 +529,21 @@ nav {
     margin: 8px 0; }
   .grid .expertBox .attr {
     position: absolute;
-    background-color: #094f91;
     font-size: 18px;
     padding: 5px 8px;
     right: 42px;
     top: 108px;
     z-index: 5; }
+  .grid .expertBox .food {
+    background-color: #ffb22b; }
+  .grid .expertBox .human {
+    background-color: #00c759; }
+  .grid .expertBox .smart {
+    background-color: #00c6c7; }
+  .grid .expertBox .adven {
+    background-color: #ff492b; }
+  .grid .expertBox .tech {
+    background-color: #852bff; }
   .grid .expertBox .pic {
     width: 180px;
     height: 260px;
@@ -708,7 +721,6 @@ nav {
   background-color: #486a00; }
 
 #lightBox_father {
-  display: none;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -737,7 +749,6 @@ nav {
   border: 3px solid rgba(108, 213, 255, 0.5); }
   #lightBox .fas {
     font-size: 30px;
-    float: right;
     cursor: pointer;
     position: absolute;
     top: 10px;
@@ -748,95 +759,101 @@ nav {
   display: block;
   clear: both; }
 
-.content {
+.content_phone {
+  display: none; }
+
+.content_desk {
   background-image: url(../img/expertImg/starBg.png);
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center; }
-  .content .conLeft {
+  .content_desk .conLeft {
     width: 40%;
     position: relative; }
-    .content .conLeft .crown {
-      width: 80px;
-      position: absolute;
-      left: 40px;
-      top: 5px;
-      z-index: 5;
-      transform: rotate(-30deg); }
-    .content .conLeft .expPic {
+    .content_desk .conLeft .crown_phone {
+      display: none; }
+    .content_desk .conLeft .expPic {
       width: 60%;
       position: absolute;
       left: 0;
       right: 0;
       top: 50px;
       margin: auto; }
-      .content .conLeft .expPic .attr {
+      .content_desk .conLeft .expPic .crown {
+        width: 80px;
+        position: absolute;
+        left: -30px;
+        top: -30px;
+        z-index: 5;
+        transform: rotate(-30deg); }
+      .content_desk .conLeft .expPic .attr {
         position: absolute;
         background-color: #094f91;
         font-size: 20px;
         padding: 5px 10px;
         right: 10px;
         top: 10px; }
-      .content .conLeft .expPic img {
-        width: 100%;
-        min-width: 100px; }
-  .content .conRight {
+      .content_desk .conLeft .expPic img {
+        width: 100%; }
+  .content_desk .conRight {
     margin-top: 50px;
     width: 35%;
     display: flex;
     flex-direction: column; }
-    .content .conRight h1 {
+    .content_desk .conRight h1 {
       color: #6cd5ff;
       text-align: justify; }
-    .content .conRight .rocket {
-      margin-left: 10px;
-      width: 35px; }
-    .content .conRight h2 {
+    .content_desk .conRight h2 {
       margin-top: 20px;
       text-align: justify;
       display: inline-block; }
-    .content .conRight .data {
+      .content_desk .conRight h2 .rocket {
+        margin-left: 10px;
+        width: 35px; }
+    .content_desk .conRight .attr_phone {
+      display: none; }
+    .content_desk .conRight .data {
       text-align: justify; }
-      .content .conRight .data .score {
+      .content_desk .conRight .data .score {
         margin-top: 30px; }
-        .content .conRight .data .score h3 {
+        .content_desk .conRight .data .score h3 {
           display: inline;
           font-size: 20px;
           padding-right: 10px; }
-        .content .conRight .data .score span {
+        .content_desk .conRight .data .score span {
           font-size: 16px;
           padding-right: 5px; }
-        .content .conRight .data .score img {
+        .content_desk .conRight .data .score img {
           vertical-align: text-bottom;
           width: 20px; }
-      .content .conRight .data .chart {
+      .content_desk .conRight .data .chart {
         margin: 30px 0 20px;
         text-align: justify; }
-        .content .conRight .data .chart h3 {
+        .content_desk .conRight .data .chart h3 {
           font-size: 22px;
           margin-left: 35px;
           margin-bottom: 10px; }
-        .content .conRight .data .chart span {
+        .content_desk .conRight .data .chart span {
           font-size: 18px;
           margin-right: 10px;
           line-height: 1.8; }
-        .content .conRight .data .chart .value {
+        .content_desk .conRight .data .chart .value {
           width: 0px;
           height: 15px;
           background-color: #aaa;
           display: inline-block; }
-        .content .conRight .data .chart .value.focus {
+        .content_desk .conRight .data .chart .value.focus {
           background-color: #6cd5ff; }
-        .content .conRight .data .chart .value:nth-of-type(1) {
+        .content_desk .conRight .data .chart .value:nth-of-type(1) {
           animation: value1 1.5s 0.5s 1 forwards; }
-        .content .conRight .data .chart .value:nth-of-type(2) {
+        .content_desk .conRight .data .chart .value:nth-of-type(2) {
           animation: value2 1.5s 0.5s 1 forwards; }
-        .content .conRight .data .chart .value:nth-of-type(3) {
+        .content_desk .conRight .data .chart .value:nth-of-type(3) {
           animation: value3 1.5s 0.5s 1 forwards; }
-        .content .conRight .data .chart .value:nth-of-type(4) {
+        .content_desk .conRight .data .chart .value:nth-of-type(4) {
           animation: value4 1.5s 0.5s 1 forwards; }
-        .content .conRight .data .chart .value:nth-of-type(5) {
+        .content_desk .conRight .data .chart .value:nth-of-type(5) {
           animation: value5 1.5s 0.5s 1 forwards; }
 
 @keyframes value1 {
@@ -868,29 +885,163 @@ nav {
     width: 0; }
   100% {
     width: 80px; } }
-    .content .conRight .record {
+    .content_desk .conRight .record {
       align-self: flex-end; }
-      .content .conRight .record .collect {
+      .content_desk .conRight .record .collect {
         display: inline-block; }
-      .content .conRight .record .writeComment {
+      .content_desk .conRight .record .writeComment {
         display: inline-block; }
-      .content .conRight .record .collect,
-      .content .conRight .record .writeComment {
+      .content_desk .conRight .record .collect,
+      .content_desk .conRight .record .writeComment {
         margin: 10px; }
-        .content .conRight .record .collect #heart,
-        .content .conRight .record .collect #write,
-        .content .conRight .record .writeComment #heart,
-        .content .conRight .record .writeComment #write {
+        .content_desk .conRight .record .collect #heart,
+        .content_desk .conRight .record .collect #write,
+        .content_desk .conRight .record .writeComment #heart,
+        .content_desk .conRight .record .writeComment #write {
           width: 28px;
           height: 26px;
           cursor: pointer; }
-        .content .conRight .record .collect #Cnum,
-        .content .conRight .record .collect #Wnum,
-        .content .conRight .record .writeComment #Cnum,
-        .content .conRight .record .writeComment #Wnum {
+        .content_desk .conRight .record .collect #Cnum,
+        .content_desk .conRight .record .collect #Wnum,
+        .content_desk .conRight .record .writeComment #Cnum,
+        .content_desk .conRight .record .writeComment #Wnum {
           margin-top: 10px;
           font-size: 14px;
           color: #aaaaaa; }
+
+@media screen and (max-width: 860px) and (min-width: 670px) {
+  .expPic {
+    min-width: 200px; } }
+
+@media screen and (max-width: 669px) {
+  .content_desk .conLeft .expPic {
+    width: 80%;
+    width: 150px; }
+    .content_desk .conLeft .expPic .crown {
+      width: 55px;
+      left: -18px;
+      top: -32px; }
+    .content_desk .conLeft .expPic .attr {
+      font-size: 17px;
+      right: 5px;
+      top: 5px; }
+  .content_desk .conRight {
+    width: 45%; }
+    .content_desk .conRight h1 {
+      font-size: 24px; }
+    .content_desk .conRight h2 {
+      font-size: 20px;
+      margin-top: 10px; }
+      .content_desk .conRight h2 .rocket {
+        width: 25px; }
+    .content_desk .conRight .data .score {
+      margin-top: 15px; }
+      .content_desk .conRight .data .score h3 {
+        font-size: 18px; }
+    .content_desk .conRight .data .chart {
+      margin-top: 20px; }
+      .content_desk .conRight .data .chart span {
+        font-size: 17px;
+        line-height: 1.5; }
+      .content_desk .conRight .data .chart .value {
+        height: 12px; } }
+
+@media screen and (max-width: 449px) {
+  .chart, .record {
+    display: none; }
+  .content_desk .conLeft .crown_phone {
+    display: block;
+    width: 50px;
+    position: absolute;
+    left: -6px;
+    top: 20px;
+    z-index: 5;
+    transform: rotate(-30deg); }
+  .content_desk .conLeft .expPic {
+    width: 120px;
+    height: 170px;
+    overflow: hidden; }
+    .content_desk .conLeft .expPic img {
+      margin-top: -10px; }
+    .content_desk .conLeft .expPic .crown {
+      display: none; }
+    .content_desk .conLeft .expPic .attr {
+      display: none; }
+  .content_desk .conRight {
+    margin-left: 10px; }
+    .content_desk .conRight .attr_phone {
+      display: block;
+      background-color: #094f91;
+      font-size: 18px;
+      width: 50px;
+      height: 30px;
+      line-height: 30px;
+      margin-top: 10px; }
+    .content_desk .conRight .data .score h3 {
+      display: block; }
+    .content_desk .conRight .data .score span {
+      display: inline-block;
+      margin: 10px 0 10px 16px;
+      padding-right: 3px; }
+    .content_desk .conRight .data .score img {
+      width: 18px; }
+  .content_phone {
+    display: block; }
+    .content_phone .chart_phone {
+      width: 50%;
+      display: inline-block;
+      margin-top: 20px;
+      margin-left: 15px;
+      text-align: justify; }
+      .content_phone .chart_phone h3 {
+        font-size: 20px;
+        margin-left: 35px;
+        margin-bottom: 10px; }
+      .content_phone .chart_phone span {
+        font-size: 17px;
+        margin-right: 10px;
+        line-height: 1.5; }
+      .content_phone .chart_phone .value {
+        width: 0px;
+        height: 12px;
+        background-color: #aaa;
+        display: inline-block; }
+      .content_phone .chart_phone .value.focus {
+        background-color: #6cd5ff; }
+      .content_phone .chart_phone .value:nth-of-type(1) {
+        animation: value1 1.5s 0.5s 1 forwards; }
+      .content_phone .chart_phone .value:nth-of-type(2) {
+        animation: value2 1.5s 0.5s 1 forwards; }
+      .content_phone .chart_phone .value:nth-of-type(3) {
+        animation: value3 1.5s 0.5s 1 forwards; }
+      .content_phone .chart_phone .value:nth-of-type(4) {
+        animation: value4 1.5s 0.5s 1 forwards; }
+      .content_phone .chart_phone .value:nth-of-type(5) {
+        animation: value5 1.5s 0.5s 1 forwards; }
+    .content_phone .record_phone {
+      display: inline-block;
+      width: 40%; }
+      .content_phone .record_phone .collect {
+        display: inline-block; }
+      .content_phone .record_phone .writeComment {
+        display: inline-block; }
+      .content_phone .record_phone .collect,
+      .content_phone .record_phone .writeComment {
+        margin: 10px; }
+        .content_phone .record_phone .collect #heart,
+        .content_phone .record_phone .collect #write,
+        .content_phone .record_phone .writeComment #heart,
+        .content_phone .record_phone .writeComment #write {
+          width: 28px;
+          height: 26px;
+          cursor: pointer; }
+        .content_phone .record_phone .collect #Cnum,
+        .content_phone .record_phone .collect #Wnum,
+        .content_phone .record_phone .writeComment #Cnum,
+        .content_phone .record_phone .writeComment #Wnum {
+          margin-top: 10px;
+          font-size: 14px;
+          color: #aaaaaa; } }
 
 .comment {
   width: 60%;
@@ -927,10 +1078,12 @@ nav {
       line-height: 1.4; }
 
 @media screen and (max-width: 1000px) {
-  #lightBox1 {
+  #lightBox {
     width: 100%; } }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 767px) {
+  #lightBox {
+    height: 90%; }
   .comment {
     width: 90%; } }
 

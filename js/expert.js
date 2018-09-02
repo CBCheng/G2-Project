@@ -15,6 +15,7 @@ function doFirst() {
 
 	context.stroke();
 }
+
 function doSecond() {
 	var canvas = document.getElementById('canvas2');
 	var context = canvas.getContext('2d');
@@ -41,46 +42,39 @@ window.addEventListener('load', doSecond);
 
 
 
-
-
-
-
-
-$(function () {
-	$("#box").click(function () {
-		$("#lightBox_father").show(500);
-		// $("#lightBox_father").css(transform, 'scale(1)');
+// =====跳窗開關=====
+	$(function () {
+		$(".element-item").click(function () {
+			$("#lightBox_father").show(500);
+		})
 	})
-})
-
-$(function () {
-	$(".fas").click(function () {
-		$("#lightBox_father").hide(500);
+	//e.target觸發的物件 //e.currentTarget監聽的事件
+	$("#lightBox_father").click(function (e) {
+		if (e.target == e.currentTarget)
+			$("#lightBox_father").hide(500);
 	})
-})
 
-
-// var lightBox1 = document.getElementById("lightBox1");
-// var closeBtn = document.getElementById("closeBtn");
-// function openBox() {
-// 	lightBox1.style.display = "block";
-// }
-// function closeBox() {
-// 	lightBox1.style.display = "none";
-// }
-// function init() {
-// 	document.getElementById("box1").onclick = openBox;
-// 	document.getElementById("closeBtn").onclick = closeBox;
-// };
-
-// window.addEventListener('load', init);
+	$(function () {
+		$(".fas").click(function () {
+			$("#lightBox_father").hide(500);
+		})
+	})
 
 
 
 
-愛心換圖
+
+
+
+//=====愛心換圖=====
 $("#heart").click(function () {
-	$(this).attr("src", "../img/expertImg/heartRed.png");
+	if (heart.title === "加入收藏") {
+		$(this).attr("src", "img/expertImg/heartRed.png");
+		$(this).attr("title", "取消收藏");
+	} else {
+		$(this).attr("src", "img/expertImg/heartWhite.png");
+		$(this).attr("title", "加入收藏");
+	}
 })
 
 
@@ -88,84 +82,19 @@ $("#heart").click(function () {
 
 
 
-
 // =======抓資料庫=======
-// $(function () {
-// 	var grid = document.querySelector('.grid');
-// 	var xhr = new XMLHttpRequest();
-// 	xhr.onload = function () {
-// 		if (xhr.status == 200) {
-// 			var memRow = JSON.parse(xhr.responseText);
-// 			memRow.forEach(e => {
-// 				grid.innerHTML += `<div class="element-item">
-//                 <h2 data-pop="${e.expertPopular}">${e.planet}</h2>
-//                 <h3>${e.expertName}</h3>
-//                 <div class="main">
-//                     <div class="pic">
-//                         <div class="attr">人氣</div>
-//                         <a href="#lightBox1" data-lity>
-//                             <img id="box1" src="img/expertImg/${e.expertPic}.jpg" alt="emma">
-//                         </a>
-//                     </div>
-//                 </div>
-//                 <div class="aside">
-//                     <h3>${e.expertName}</h3>
-//                     <div class="score">
-//                         <span>5</span>
-//                         <img src="img/expertImg/star.png" alt="star">
-//                         <img src="img/expertImg/star.png" alt="star">
-//                         <img src="img/expertImg/star.png" alt="star">
-//                         <img src="img/expertImg/star.png" alt="star">
-//                         <img src="img/expertImg/star.png" alt="star">
-//                     </div>
-//                     <div class="mark">
-//                         <img src="img/expertImg/comment.png" alt="comment">5
-//                         <img src="img/expertImg/love.png" alt="love">20
-//                     </div>
-//                 </div>
-// 			</div>`;
 
+// $.ajax({
+// 	url: 'php/expert.php',
+// 	dataType: 'text',
+// 	success: function (data) {
+// 		$('.grid').html(data);
+// 		alert('ok');
 
-
-// 			});
-// 			$('.element-item h2').each(function () {
-// 				if ($(this).html() == '瓦特星') {
-// 					$(this).parent().addClass('blue');
-// 				}
-// 				else if ($(this).html() == '達沙星') {
-// 					$(this).parent().addClass('orange');
-// 				}
-// 				else {
-// 					$(this).parent().addClass('green');
-// 				}
-
-// 				// if ($(this).data("pop") > 20) {
-// 				// 	$(this).parent().addClass('popular');
-// 				// }
-
-
-// 			})
-
-
-// 		} else {
-// 			alert(xhr.status);
-// 		}
+// 	},
+// 	error: function () {
+// 		alert('error');
 // 	}
-
-// 	var url = "php/expert.php";
-// 	xhr.open("Get", url, true);
-// 	xhr.send(null);
-// })
-// =======抓資料庫=======
-
-
-
-
-
-
-
-
-
-
+// });
 
 

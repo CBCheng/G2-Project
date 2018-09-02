@@ -12,11 +12,13 @@
 <script src="js/tween.js"></script>
 <!-- <script type="text/javascript" src="js/parallax.js"></script> -->
 <script type="text/javascript" src="js/pignose.calendar.full.js"></script>
+<!-- <script type="text/javascript" src="js/planning2.js"></script> -->
 <script type="text/javascript" src="js/planning.js"></script>
+
 <link rel="stylesheet" type="text/css" href="css/planning.css">
 <title>Examples</title>
-</head> 
-<body >   
+</head>  
+<body >    
 <nav> 
         <ul class="menu mRight">
             <li><a href="planning.html">開始冒險</a></li>
@@ -51,15 +53,15 @@
 
  
 <!-- 進入選星球 -->
-	<div class="planetLightBox chinese">
+	<div class="planetLightBox chinese borderStyle viewBorderStyle">
 		<div class="logoBar">
 			<div >
 				<img src="img/planning/logovb.png">
 				<span>
-					x
+					<img src="img/planning/clear-button-blue.png">
 				</span>
 			</div>
-		</div>
+		</div> 
 		<div >
 			<p class="selectPlanetTitle">
 				請選擇想去的星球
@@ -95,7 +97,15 @@
 </div>	
 <!-- 進入選星球 -->
 
-
+<div class="deldayFilter">
+	<div class="delBox borderStyle chinese viewBorderStyle">
+		<p>確定要刪除這天嗎?</p>
+		<div class="btnBox">
+			<div class="yesBtn">確定</div>
+			<div class="noBtn">取消</div>
+		</div>
+	</div>
+</div>
 
  <!-- <nav class="navbar"></nav> -->
 
@@ -109,33 +119,43 @@
 			</div>
 			<div class="step">
 				<div>
-					<p>
+					<p class="stepNum">
 						step 1
 					</p>
-					<p>
+					<p class="stepTxt">
+						選擇星球
+					</p>
+					&
+					<p class="stepTxt">
 						選擇日期天數
 					</p>
 				</div>
 				<div>
-					<p>
+					<p class="stepNum">
 						step 2
 					</p>
-					<p>
+					<p class="stepTxt">
 						匯入行程
 					</p>
-				或
-					<p>
+				&
+					<p class="stepTxt">
 						挑選景點
 					</p>
 				</div>
 				<div>
-					<p>
-						step 1
+					<p class="stepNum">
+						step 3
 					</p>
 							
-					<p>
-					建立行程名稱並儲存行程	
+					<p class="stepTxt">
+					建立行程名稱
 					</p>
+					&
+					<p class="stepTxt">
+					儲存行程後挑選專家
+					</p>
+					
+
 				</div>
 			</div>
 		</div>
@@ -274,17 +294,18 @@
 				<p></p>
 				<div class="editImg">
 					<img src="img/planning/edit2.png">
-						
-
 				</div>
 			</div>
-			<div class="getSchdule  chinese " href="#">
-				<div class="schMoveInBox">
+			<div class="getSchdule  chinese" href="#">
+				<div class="schMoveInBox chinese">
 					<span id="schduleTrig" class="Btn schMoveIn">
 						匯入行程
 					</span>
 					<div class="schduleIN borderStyle">
 						<div class="schduleINTitle">
+							<div class="schduleINDel">
+								<img src="img/planning/clear-button-black.png">
+							</div>
 							<p>
 								我的收藏行程
 							</p>
@@ -313,7 +334,7 @@
 							<p class=" ItemName">
 								水上清真寺
 							</p>
-							
+							<span></span>
 							<span class="deleteIcon">
 								<img src="img/planning/trash.png">
 							</span>
@@ -392,7 +413,8 @@
 									<p>與太空最接近的寺</p>
 								</div>
 								<span class="chinese addSchdule">
-									+
+									+<input type="radio" name="views" id="view1">
+									
 									<span class="mobiTxt">
 									加入景點
 									</span>
@@ -652,22 +674,25 @@
 					</div> -->
 
 				</div>
-				<div class="borderStyle viewIntroduce ">
+			<div class="viewFilter">
+				<div class="borderStyle viewIntroduce viewBorderStyle">
 						<div class="viewName chinese">
-							<span>X</span>
+							
 							<p >水上清真寺</p>
-							<span>+</span>
+							<span><img src="img/planning/clear-button-blue.png"></span>
 						</div>
 						<div>
 							<div class="borderStyle viewImg">
 								<img src="img/planning/p1_v1_03.jpg">
-							</div>
+								<label for="view1"><div class="addViewImg"><img src="img/planning/add-button-inside-black-circle-blue.png"></div>
+							</div></label>
 							<div class="borderStyle viewDescrip chinese">
 								<p>簡介</p>
 								<p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis explicabo natus hic, sequi, nobis fugiat autem harum, blanditiis praesentium nemo facilis aliquid quasi voluptas error. Distinctio, deleniti repellat facilis eligendi!</span></p>
 							</div>
 						</div> 
-					</div>
+				</div>
+			</div>
 			</div>
 
 				
@@ -682,7 +707,7 @@
 <div class="expertFilter">	
 		<div class="expert">
 				
-				<div class="borderStyle expertBorder">
+				<div class="borderStyle expertBorder viewBorderStyle">
 					<div class="chinese expertTitle">
 					<span>
 						專家推薦
@@ -768,63 +793,50 @@
         </div>
         
 </footer>
-<script type="text/javascript">
-			var commitBtn = document.querySelector('.saveBtn');
-				commitBtn.addEventListener('click',function(){
-					var cc = confirm('行程已儲存\n"確定"後將根據您所選的行程安排適合的專家\n"取消"將移至會員行程頁面');
-					console.log(cc);
-					if(cc==true){
-					document.querySelector('.expertFilter').style.display ='block';			
-					}else{
-					alert('跳');
-					}
-			});
-var planetFilter = document.querySelector('.planetFilter');
-function getPlanetName(){
-		var planetName = document.querySelector('.planetName');
-		var txt = this.querySelector('p');
-		// console.log(txt.innerHTML);
-		sessionStorage.setItem("planet", txt.innerHTML);
-		var x =sessionStorage.getItem("planet");
-		// console.log(x);
-		
-		// planetName.style.fontFamily='微軟正黑體';
-		// planetName.style.lineHeight='35px';
-		
-		let a = confirm('更換星球將會重置所有安排')
-		if (a==true) {
-			planetName.innerHTML = x;
-			planetFilter.style.display='none';
-			window.location.reload();
-		}else{
-			planetFilter.style.display='none';
-			
-		}
-		
-		// console.log(cloneDayUl);
-		// console.log(getUl);
-		// var rep= sessionStorage.getItem("replace");
 
-		// dayParent.replaceChild(cloneDayUl,getUl);
-		// schduleBox.replaceChild(cloneSchUl,getSchUl);
-		
-		// reflashInfo();
-		// console.log(cloneDayUl);
-		// console.log(getUl);
-		 // cloneDayUl = getUl.cloneNode(true);
-		 // cloneSchUl = getSchUl.cloneNode(true);
-		// console.log(cloneDayUl);
-		// console.log(getUl);
-		// reflashInfo();
-
-}
-
-</script>
 <!-- 拖拉js -->
  <script type="text/javascript">
-	 Sortable.create(document.getElementById('day'), {
+
+	
+
+	if(window.innerWidth<1000){
+	Sortable.create(document.getElementById('day'), {
+                                animation: 150,
+                                delay: 300,
+                            });	
+	Sortable.create(document.getElementById('schduleDay1'), {
+                                animation: 150,
+                                delay: 300,
+                            });
+	Sortable.create(document.getElementById('schduleDay2'), {
+                                animation: 150,
+                                delay: 300,
+                            });
+	Sortable.create(document.getElementById('schduleDay3'), {
+                                animation: 150,
+                                delay: 300,
+                            });
+
+
+	}else{
+			Sortable.create(document.getElementById('day'), {
+                                animation: 150,
+                            });	
+			Sortable.create(document.getElementById('schduleDay1'), {
                                 animation: 150,
                             });
+			Sortable.create(document.getElementById('schduleDay2'), {
+                                animation: 150,
+                            });
+			Sortable.create(document.getElementById('schduleDay3'), {
+                                animation: 150,
+                            });
+	}
+
+				
+		
+
+	 
 	Sortable.create(document.getElementById('schduleDay1'), {
                                 animation: 150,
                             });
@@ -851,7 +863,9 @@ function getPlanetName(){
 });
 </script>
 <script type="text/javascript">
+		// window.addEventListener('load',doFirst2);
           window.addEventListener('load',doFirst);
+          
 </script>
 <script>
     //    登入下拉選單

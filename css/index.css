@@ -486,6 +486,30 @@ nav {
   top: 54%;
   left: 3%; }
 
+.p1V15 {
+  top: 7%;
+  left: 27%; }
+
+.p1V16 {
+  top: 22%;
+  left: 35%; }
+
+.p1V17 {
+  top: 45%;
+  left: 63%; }
+
+.p1V18 {
+  top: 21%;
+  left: 13%; }
+
+.p1V19 {
+  top: 19%;
+  left: 82%; }
+
+.p1V20 {
+  top: 76%;
+  left: 54%; }
+
 .p2V1 {
   top: 25%;
   left: 36%; }
@@ -679,12 +703,12 @@ nav {
   transform: rotateX(90deg);
   transition: 0.5s cubic-bezier(0.23, 1, 0.32, 1); }
   .viewBg .viewItem {
+    overflow: hidden;
     position: relative;
     width: 70%;
     height: 0%;
     padding-bottom: 43%;
     margin: 50% auto auto;
-    background-image: url("../img/index/p1_v2_03.jpg");
     background-size: 102%;
     border: 1px solid #6cd5ff; }
     .viewBg .viewItem h2 {
@@ -692,7 +716,7 @@ nav {
       position: absolute;
       bottom: -18%;
       display: block;
-      padding-left: 0%;
+      padding-left: 2%;
       width: 100%;
       height: 10%;
       line-height: 3vw; }
@@ -715,6 +739,10 @@ nav {
       cursor: pointer; }
     .viewBg .viewItem img {
       position: absolute;
+      width: 100%; }
+    .viewBg .viewItem .viewImg {
+      top: 0%;
+      right: 0%;
       width: 100%; }
 
 .mobViewBox {
@@ -1842,12 +1870,12 @@ nav {
     transform: rotateX(90deg);
     transition: 0.5s cubic-bezier(0.23, 1, 0.32, 1); }
     .viewBg .viewItem {
+      overflow: hidden;
       position: relative;
       width: 45%;
       height: 0%;
       padding-bottom: 29%;
       margin: 13% auto auto;
-      background-image: url("../img/index/p1_v2_03.jpg");
       background-size: 102%;
       border: 2px solid #6cd5ff; }
       .viewBg .viewItem h2 {
@@ -1855,7 +1883,7 @@ nav {
         position: absolute;
         bottom: 0;
         display: block;
-        padding-left: 5%;
+        padding-left: 2%;
         width: 100%;
         height: 10%;
         line-height: 3vw;
@@ -1887,6 +1915,10 @@ nav {
         top: 12%;
         right: 11%;
         width: 32%; }
+      .viewBg .viewItem .viewImg {
+        top: 0%;
+        right: 0%;
+        width: 100%; }
   .mobViewBox {
     display: none; }
   .pt2Title {
@@ -1917,9 +1949,11 @@ nav {
     transition-timing-function: cubic-bezier(0.17, 0.67, 0.41, 0.96);
     transition: 1s; }
   .noImg {
-    clip-path: circle(0% at 76.7% 71%); }
+    clip-path: circle(0% at 76.7% 71%);
+    -webkit-clip-path: circle(0% at 76.7% 71%); }
   .yesImg {
-    clip-path: circle(0% at 20.7% 70.4%); }
+    clip-path: circle(0% at 20.7% 70.4%);
+    -webkit-clip-path: circle(0% at 20.7% 70.4%); }
   .yesNo {
     position: absolute;
     top: 52.7%;
@@ -2362,6 +2396,7 @@ nav {
     font-size: 1.5vw;
     font-weight: bold; }
   .travelTitle p {
+    display: block;
     margin-top: 2%;
     font-size: 0.8vw;
     line-height: 1.2em;
