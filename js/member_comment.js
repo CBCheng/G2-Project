@@ -1,4 +1,5 @@
 
+// =====尚未評論、已評論 切換=====
 $('.favorite_tab').on('click', function () {
 
     $('.favorite_tab').not(this).removeClass('active');
@@ -16,7 +17,7 @@ $('.favorite_tab').on('click', function () {
 
 
 
-
+// =====跳窗開關=====
 $(".commentBtn").click(function () {
     $("#lightBox_com_father").show(500);
 })
@@ -30,3 +31,5 @@ $('.fas').click(function () {
 })
 
 
+
+// =====評分=====

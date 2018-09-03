@@ -302,9 +302,9 @@ nav {
     text-align: center; }
   .title #canvas1 {
     position: absolute;
-    animation: aa 30s 0s infinite; }
+    animation: clockTrue 30s 0s infinite; }
   .title #canvas2 {
-    animation: bb 30s 0s infinite; }
+    animation: clockFalse 30s 0s infinite; }
   .title .hex {
     display: none; }
 
@@ -327,12 +327,12 @@ nav {
     .title .hexWhite {
       width: inherit;
       position: absolute;
-      animation: aa 30s 0s infinite; }
+      animation: clockTrue 30s 0s infinite; }
     .title .hexBlue {
       width: inherit;
-      animation: bb 30s 0s infinite; } }
+      animation: clockFalse 30s 0s infinite; } }
 
-@keyframes aa {
+@keyframes clockTrue {
   0% {
     transform: rotate(0deg); }
   8.3333% {
@@ -360,7 +360,7 @@ nav {
   100% {
     transform: rotate(360deg); } }
 
-@keyframes bb {
+@keyframes clockFalse {
   0% {
     transform: rotate(0deg); }
   8.3333% {
@@ -401,7 +401,7 @@ nav {
     width: 35%;
     min-width: 200px; }
 
-@keyframes cloud1 {}.panel {
+.panel {
   width: 1200px;
   margin: 30px auto 50px; }
 
@@ -717,8 +717,9 @@ nav {
   bottom: 0;
   right: 0;
   left: 0;
-  z-index: 5000;
+  z-index: 800;
   width: 100%;
+  height: 100vh;
   background-color: rgba(66, 66, 66, 0.6); }
 
 #lightBox {
@@ -859,36 +860,6 @@ nav {
           transition: 1s; }
         .content_desk .conRight .data .chart .value.focus {
           background-color: #6cd5ff; }
-
-@keyframes value1 {
-  0% {
-    width: 0; }
-  100% {
-    width: 100px; } }
-
-@keyframes value2 {
-  0% {
-    width: 0; }
-  100% {
-    width: 80px; } }
-
-@keyframes value3 {
-  0% {
-    width: 0; }
-  100% {
-    width: 50px; } }
-
-@keyframes value4 {
-  0% {
-    width: 0; }
-  100% {
-    width: 20px; } }
-
-@keyframes value5 {
-  0% {
-    width: 0; }
-  100% {
-    width: 80px; } }
     .content_desk .conRight .record {
       align-self: flex-end; }
       .content_desk .conRight .record .collect {
@@ -898,9 +869,9 @@ nav {
       .content_desk .conRight .record .collect,
       .content_desk .conRight .record .writeComment {
         margin: 10px; }
-        .content_desk .conRight .record .collect #heart,
+        .content_desk .conRight .record .collect .heart,
         .content_desk .conRight .record .collect #write,
-        .content_desk .conRight .record .writeComment #heart,
+        .content_desk .conRight .record .writeComment .heart,
         .content_desk .conRight .record .writeComment #write {
           width: 28px;
           height: 26px;
@@ -975,12 +946,21 @@ nav {
     margin-left: 10px; }
     .content_desk .conRight .attr_phone {
       display: block;
-      background-color: #094f91;
       font-size: 18px;
       width: 50px;
       height: 30px;
       line-height: 30px;
       margin-top: 10px; }
+    .content_desk .conRight .attr_phone.food {
+      background-color: #ffb22b; }
+    .content_desk .conRight .attr_phone.human {
+      background-color: #00c759; }
+    .content_desk .conRight .attr_phone.smart {
+      background-color: #00c6c7; }
+    .content_desk .conRight .attr_phone.adven {
+      background-color: #ff492b; }
+    .content_desk .conRight .attr_phone.tech {
+      background-color: #852bff; }
     .content_desk .conRight .data .score h3 {
       display: block; }
     .content_desk .conRight .data .score span {
@@ -1009,19 +989,10 @@ nav {
         width: 0px;
         height: 12px;
         background-color: #aaa;
-        display: inline-block; }
+        display: inline-block;
+        transition: 1s; }
       .content_phone .chart_phone .value.focus {
         background-color: #6cd5ff; }
-      .content_phone .chart_phone .value:nth-of-type(1) {
-        animation: value1 1.5s 0.5s 1 forwards; }
-      .content_phone .chart_phone .value:nth-of-type(2) {
-        animation: value2 1.5s 0.5s 1 forwards; }
-      .content_phone .chart_phone .value:nth-of-type(3) {
-        animation: value3 1.5s 0.5s 1 forwards; }
-      .content_phone .chart_phone .value:nth-of-type(4) {
-        animation: value4 1.5s 0.5s 1 forwards; }
-      .content_phone .chart_phone .value:nth-of-type(5) {
-        animation: value5 1.5s 0.5s 1 forwards; }
     .content_phone .record_phone {
       display: inline-block;
       width: 40%; }
@@ -1032,9 +1003,9 @@ nav {
       .content_phone .record_phone .collect,
       .content_phone .record_phone .writeComment {
         margin: 10px; }
-        .content_phone .record_phone .collect #heart,
+        .content_phone .record_phone .collect .heart,
         .content_phone .record_phone .collect #write,
-        .content_phone .record_phone .writeComment #heart,
+        .content_phone .record_phone .writeComment .heart,
         .content_phone .record_phone .writeComment #write {
           width: 28px;
           height: 26px;
