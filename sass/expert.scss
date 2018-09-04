@@ -72,12 +72,12 @@ a {
 
     #canvas1 {
         position: absolute;
-        animation: aa 30s 0s infinite;
+        animation: clockTrue 30s 0s infinite;
     }
 
     #canvas2 {
         // position: absolute;
-        animation: bb 30s 0s infinite;
+        animation: clockFalse 30s 0s infinite;
     }
 
     .hex {
@@ -111,122 +111,70 @@ a {
         .hexWhite {
             width: inherit;
             position: absolute;
-            animation: aa 30s 0s infinite;
+            animation: clockTrue 30s 0s infinite;
         }
 
         .hexBlue {
             width: inherit;
-            animation: bb 30s 0s infinite;
+            animation: clockFalse 30s 0s infinite;
         }
     }
 }
 
-@keyframes aa {
-    0% {
-        transform: rotate(0deg);
-    }
+@keyframes clockTrue {
+    0% {transform: rotate(0deg);}
 
-    8.3333% {
-        transform: rotate(30deg);
-    }
+    8.3333% {transform: rotate(30deg);}
 
-    16.6667% {
-        transform: rotate(60deg);
-    }
+    16.6667% {transform: rotate(60deg);}
 
-    25% {
-        transform: rotate(90deg);
-    }
+    25% {transform: rotate(90deg);}
 
-    33.3333% {
-        transform: rotate(120deg);
-    }
+    33.3333% {transform: rotate(120deg);}
 
-    41.6667% {
-        transform: rotate(150deg);
-    }
+    41.6667% {transform: rotate(150deg);}
 
-    50% {
-        transform: rotate(180deg);
-    }
+    50% {transform: rotate(180deg);}
 
-    58.3333% {
-        transform: rotate(210deg);
-    }
+    58.3333% {transform: rotate(210deg);}
 
-    66.6667% {
-        transform: rotate(240deg);
-    }
+    66.6667% {transform: rotate(240deg);}
 
-    75% {
-        transform: rotate(270deg);
-    }
+    75% {transform: rotate(270deg);}
 
-    83.3333% {
-        transform: rotate(300deg);
-    }
+    83.3333% {transform: rotate(300deg);}
 
-    91.6667% {
-        transform: rotate(330deg);
-    }
+    91.6667% {transform: rotate(330deg); }
 
-    100% {
-        transform: rotate(360deg);
-    }
+    100% {transform: rotate(360deg);}
 }
 
-@keyframes bb {
-    0% {
-        transform: rotate(0deg);
-    }
+@keyframes clockFalse {
+    0% {transform: rotate(0deg);}
 
-    8.3333% {
-        transform: rotate(-30deg);
-    }
+    8.3333% {transform: rotate(-30deg);}
 
-    16.6667% {
-        transform: rotate(-60deg);
-    }
+    16.6667% {transform: rotate(-60deg);}
 
-    25% {
-        transform: rotate(-90deg);
-    }
+    25% {transform: rotate(-90deg);}
 
-    33.3333% {
-        transform: rotate(-120deg);
-    }
+    33.3333% {transform: rotate(-120deg);}
 
-    41.6667% {
-        transform: rotate(-150deg);
-    }
+    41.6667% {transform: rotate(-150deg);}
 
-    50% {
-        transform: rotate(-180deg);
-    }
+    50% {transform: rotate(-180deg);}
 
-    58.3333% {
-        transform: rotate(-210deg);
-    }
+    58.3333% {transform: rotate(-210deg);}
 
-    66.6667% {
-        transform: rotate(-240deg);
-    }
+    66.6667% {transform: rotate(-240deg);}
 
-    75% {
-        transform: rotate(-270deg);
-    }
+    75% {transform: rotate(-270deg);}
 
-    83.3333% {
-        transform: rotate(-300deg);
-    }
+    83.3333% {transform: rotate(-300deg);}
 
-    91.6667% {
-        transform: rotate(-330deg);
-    }
+    91.6667% {transform: rotate(-330deg);}
 
-    100% {
-        transform: rotate(-360deg);
-    }
+    100% {transform: rotate(-360deg);}
 }
 
 .cloud_group {
@@ -248,10 +196,6 @@ a {
 }
 
 
-
-@keyframes cloud1{
-
-}
 
 
 
@@ -659,32 +603,14 @@ a {
 
     .expertBox.blue {
         h2 {color: $fontColorBlue;}
-
-        // .pic {
-        //     .attr {
-        //         background-color: $attrBlue;
-        //     }
-        // }
     }
 
     .expertBox.orange {
         h2 {color: $fontColorOrange;}
-
-        // .pic {
-        //     .attr {
-        //         background-color: $attrOrange;
-        //     }
-        // }
     }
 
     .expertBox.green {
         h2 {color: $fontColorGreen;}
-
-        // .pic {
-        //     .attr {
-        //         background-color: $attrGreen;
-        //     }
-        // }
     }
 }
 
@@ -694,8 +620,9 @@ a {
     bottom: 0;
     right: 0;
     left: 0;
-    z-index: 5000;
+    z-index: 800;
     width: 100%;
+    height: 100vh;
     background-color: rgba(66, 66, 66, 0.6);
 }
 
@@ -879,55 +806,12 @@ a {
             }
         }
 
-        @keyframes value1 {
-            0% {
-                width: 0;
-            }
-
-            100% {
-                width: 100px;
-            }
-        }
-
-        @keyframes value2 {
-            0% {
-                width: 0;
-            }
-
-            100% {
-                width: 80px;
-            }
-        }
-
-        @keyframes value3 {
-            0% {
-                width: 0;
-            }
-
-            100% {
-                width: 50px;
-            }
-        }
-
-        @keyframes value4 {
-            0% {
-                width: 0;
-            }
-
-            100% {
-                width: 20px;
-            }
-        }
-
-        @keyframes value5 {
-            0% {
-                width: 0;
-            }
-
-            100% {
-                width: 80px;
-            }
-        }
+        // @keyframes value1 {0% {width: 0;} 100% { width: 100px;}}
+        // @keyframes value2 {0% {width: 0;} 100% { width: 20px;}}
+        // @keyframes value3 {0% {width: 0;} 100% { width: 50px;}}
+        // @keyframes value4 {0% {width: 0;} 100% { width: 80px;}}
+        // @keyframes value5 {0% {width: 0;} 100% { width: 40px;}}
+        
 
         .record {
             align-self: flex-end;
@@ -944,7 +828,7 @@ a {
             .writeComment {
                 margin: 10px;
 
-                #heart,
+                .heart,
                 #write {
                     width: 28px;
                     height: 26px;
@@ -1039,12 +923,16 @@ a {
         margin-left: 10px;
         .attr_phone{
             display: block;
-            background-color: $attrBlue;
             font-size: 18px;
             width: 50px; height: 30px;
             line-height: 30px;
             margin-top: 10px;
         }
+        .attr_phone.food{background-color: $food;}
+        .attr_phone.human{background-color: $culture;}
+        .attr_phone.smart{background-color: $nalgene;}
+        .attr_phone.adven{background-color: $adventure;}
+        .attr_phone.tech{background-color: $technology;}
         .data .score{
             h3{display: block;}
             span{
@@ -1081,31 +969,32 @@ a {
                 height: 12px;
                 background-color: #aaa;
                 display: inline-block;
+                transition: 1s;
             }
 
             .value.focus {
                 background-color: $fontColorBlue;
             }
 
-            .value:nth-of-type(1) {
-                animation: value1 1.5s 0.5s 1 forwards;
-            }
+            // .value:nth-of-type(1) {
+            //     animation: value1 1.5s 0.5s 1 forwards;
+            // }
 
-            .value:nth-of-type(2) {
-                animation: value2 1.5s 0.5s 1 forwards;
-            }
+            // .value:nth-of-type(2) {
+            //     animation: value2 1.5s 0.5s 1 forwards;
+            // }
 
-            .value:nth-of-type(3) {
-                animation: value3 1.5s 0.5s 1 forwards;
-            }
+            // .value:nth-of-type(3) {
+            //     animation: value3 1.5s 0.5s 1 forwards;
+            // }
 
-            .value:nth-of-type(4) {
-                animation: value4 1.5s 0.5s 1 forwards;
-            }
+            // .value:nth-of-type(4) {
+            //     animation: value4 1.5s 0.5s 1 forwards;
+            // }
 
-            .value:nth-of-type(5) {
-                animation: value5 1.5s 0.5s 1 forwards;
-            }
+            // .value:nth-of-type(5) {
+            //     animation: value5 1.5s 0.5s 1 forwards;
+            // }
         }
         .record_phone {
             display: inline-block;
@@ -1122,7 +1011,7 @@ a {
             .writeComment {
                 margin: 10px;
 
-                #heart,
+                .heart,
                 #write {
                     width: 28px;
                     height: 26px;

@@ -4,7 +4,6 @@ try {
     $sql = "select * from expert";
     $members = $pdo->query($sql);
     $memRows = $members->fetchAll(PDO::FETCH_ASSOC);
-    // echo json_encode($memRow);
 
   
     foreach ($memRows as $memRow) {
@@ -54,7 +53,7 @@ try {
 ?>		
 		<!-- 專家列表 -->
 
-		<div class="element-item expertBox <?php echo $memRow["planetNo"] ;?> <?php echo $popular;?>">
+		<div data-no="<?php echo $memRow['expertNo'];?>" class="element-item expertBox <?php echo $memRow["planetNo"] ;?> <?php echo $popular;?>">
 			<input type="hidden" value="<?php echo $memRow['expertName'];?>" >
             <?php echo $crown ;?>
             <h2 class="h2Desk"><?php echo $memRow["planet"];?></h2>
@@ -95,26 +94,13 @@ try {
         <script type="text/javascript">
         
 
-    	//=====跳窗開關=====
+    	//=====跳窗打開=====
 			$(function () {
 				$(".element-item").click(function () {
 					$("#lightBox_father").show(500);
 				})
 			})
-			// //e.target觸發的物件 //e.currentTarget監聽的事件
-			// $("#lightBox_father").click(function (e) {
-			// 	if (e.target == e.currentTarget)
-			// 		$("#lightBox_father").hide(500);
-			// })
-
-			// $(function () {
-			// 	$(".fas").click(function () {
-			// 		$("#lightBox_father").hide(500);
-			// 	})
-			// })
-
-
-
+			
 
     	// =====篩選套件isotope.js=====
 			var $grid = $('.grid').isotope({

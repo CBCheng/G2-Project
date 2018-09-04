@@ -2,10 +2,21 @@
 try {
     require_once("connectExpert.php");
     $expertName = $_REQUEST['expertName'];
+    $expertNo = $_REQUEST['expertNo'];
+    $memNo = '1';
     $sql = "select * from expert where expertName = '$expertName'";
+
     $members = $pdo->query($sql);
     $memRows = $members->fetchAll(PDO::FETCH_ASSOC);
     // echo json_encode($memRow);
+
+
+
+    $sql1 = "select * from expertcollect where memNo = $memNo and expertNo = $expertNo;";
+    $members1 = $pdo->query($sql1);
+    $memRows1 = $members1->fetchAll(PDO::FETCH_ASSOC);
+
+    
 
   
     foreach ($memRows as $memRow) {
@@ -39,7 +50,7 @@ try {
     	if($memRow["expSmart"]==10){
     		$memRow["expSmart"]='知性';
     		$attr .= '<div class="attr smart">'.$memRow["expSmart"].'</div>';
-    		$attr_phone .= '<div class="attr_phone smart">'.$memRow["expHuman"].'</div>';
+    		$attr_phone .= '<div class="attr_phone smart">'.$memRow["expSmart"].'</div>';
     	}else{
     		$memRow["expSmart"]='';
     	}
@@ -79,7 +90,6 @@ try {
                     <?php echo $crown_phone ;?>
                     <div class="expPic">
                         <?php echo $crown ;?>
-                        <!-- <div class="attr">美食</div> -->
                         <?php echo $attr ;?> 
                         <img src="<?php echo $memRow["expertPic"];?>">
                     </div>
@@ -89,7 +99,6 @@ try {
                     <h2><?php echo $memRow["expertName"];?>
                         <img src="img/expertImg/rocket.png" class="rocket">
                     </h2>
-                    <div class="attr_phone">美食</div>
                     <?php echo $attr_phone ;?>
                     <div class="data">
                         <div class="score">
@@ -107,7 +116,7 @@ try {
                     </div>
                     <div class="record">
                         <div class="collect">
-                            <img id="heart" src="img/expertImg/heartWhite.png" alt="heartWhite" title="加入收藏">
+                            <img class="heart" src="img/expertImg/heartWhite.png" alt="heartWhite" title="加入收藏" data-expert='<?php echo $memRow["expertNo"];?>'>
                             <p id="Cnum">20人收藏</p>
                         </div>
                         <div class="writeComment">
@@ -120,26 +129,11 @@ try {
             <!-- content_phone改變能力值和收藏位置 -->
             <div class="content_phone">
                 <div class="chart_phone">
-                    <h3>能力值</h3>
-                    <span>美食</span>
-                    <div class="value focus"></div>
-                    <br>
-                    <span>人文</span>
-                    <div class="value"></div>
-                    <br>
-                    <span>知性</span>
-                    <div class="value"></div>
-                    <br>
-                    <span>冒險</span>
-                    <div class="value"></div>
-                    <br>
-                    <span>科技</span>
-                    <div class="value"></div>
-                    <br>
+                    
                 </div>
                 <div class="record_phone">
                     <div class="collect">
-                        <img id="heart" src="img/expertImg/heartWhite.png" alt="heartWhite" title="加入收藏">
+                        <img class="heart" src="img/expertImg/heartWhite.png" alt="heartWhite" title="加入收藏" data-expert='<?php echo $memRow["expertNo"];?>'>
                         <p id="Cnum">20人收藏</p>
                     </div>
                     <div class="writeComment">
@@ -172,12 +166,7 @@ try {
         
         <script type="text/javascript">
         
-        	// =====跳窗開關=====
-   //      	$(function () {
-			// 	$(".element-item").click(function () {
-			// 		$("#lightBox_father").show(500);
-			// 	})
-			// })
+        	// =====跳窗關閉=====
 			//e.target觸發的物件 //e.currentTarget監聽的事件
 			$("#lightBox_father").click(function (e) {
 				if (e.target == e.currentTarget)
@@ -191,18 +180,36 @@ try {
 			})
 
 
-			//=====愛心換圖=====
-			$("#heart").click(function () {
-				if (heart.title === "加入收藏") {
-					$(this).attr("src", "img/expertImg/heartRed.png");
-					$(this).attr("title", "取消收藏");
-				} else {
-					$(this).attr("src", "img/expertImg/heartWhite.png");
-					$(this).attr("title", "加入收藏");
-				}
-			})
+			//=====愛心換圖JS=====
+            function switchFavorite(){
+                if(this.title === "加入收藏"){  
+                //if判斷的地方不可含有路徑的問題
+                    this.src = "img/expertImg/heartRed.png";
+                    this.title = "取消收藏";
+                }
+                else{
+                    this.src = "img/expertImg/heartWhite.png";
+                    this.title = "加入收藏";
+                }
+            }
+              var heart1 = document.getElementsByClassName("heart")[0];
+              var heart2 = document.getElementsByClassName("heart")[1];
+              
+            heart1.addEventListener("click", switchFavorite, false);
+            heart2.addEventListener("click", switchFavorite, false);
 
-
+            // if($memRows1->rowCount() == 0) {
+            //     heart1.src = "img/expertImg/heartWhite.png";
+            //     heart2.src = "img/expertImg/heartWhite.png";
+            //     heart1.title = "加入收藏";
+            //     heart2.title = "加入收藏";
+            // } else {
+            //     heart1.src = "img/expertImg/heartRed.png";
+            //     heart2.src = "img/expertImg/heartRed.png";
+            //     heart1.title = "取消收藏";
+            //     heart2.title = "取消收藏";
+            // }
+              
         </script>
 	
 <?php
