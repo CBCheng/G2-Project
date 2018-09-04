@@ -43,6 +43,7 @@ try{
 
 <!-- <div class="element-item tripBox new blue"> -->
         <div class="element-item tripBox <?php echo $refPlanet; echo $pop;?>">
+            <input type="hidden" name="scheduleNo" value="<?php echo $refRow["scheduleNo"] ?>">
             <div class="tripPic">
                 <a href="referdetial.html">
                     <img src="<?php echo $refRow["ItineraryPic"] ?>">
