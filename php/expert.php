@@ -97,7 +97,7 @@ try {
     	//=====跳窗打開=====
 			$(function () {
 				$(".element-item").click(function () {
-					$("#lightBox_father").show(500);
+					$("#lightBox_father").show(800);
 				})
 			})
 			
