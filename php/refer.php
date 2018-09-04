@@ -45,13 +45,14 @@ try{
         <div class="element-item tripBox <?php echo $refPlanet; echo $pop;?>">
             <input type="hidden" name="scheduleNo" value="<?php echo $refRow["scheduleNo"] ?>">
             <div class="tripPic">
-                <a href="referdetial.html">
-                    <img src="<?php echo $refRow["ItineraryPic"] ?>">
-                </a>
+                <a href="referdetial.php?psn=<?php echo $refRow["scheduleNo"] ?>">
+                    <img src="img/shareUpload/<?php echo $refRow["ItineraryPic"] ?>">
                 <div class="tripTag">
                     <span class="tripPlanet <?php echo $refPlanet ?>"><?php echo $refRow["planetName"] ?></span>
                     <!-- <span class="tripKind adventure">冒險</span> -->
                 </div>
+                
+                
                 <div class="tripIcon">
                     <div class="tripMessage">
                         <img src="img/icon/speech-bubbles-comment-option-blue.png">
@@ -62,6 +63,7 @@ try{
                         <p><?php echo $refRow["collectNum"] ?>收藏</p>
                     </div>
                 </div>
+                </a>
                 <a class="grad" href="referdetial.html"></a>
             </div>
             <div class="tripTxt">

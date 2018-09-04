@@ -171,21 +171,16 @@ $.ajax({
 	}
 });
 
-//===== 抓行程名稱 ======
-// $('.mytrip').on('click',function(){
-//     var tripId = $(this).children().val();
-//     alert(tripId);
-//     // $.ajax({
-//     //     url: 'php/refer.php',
-//     //     dataType: 'text',
-//     //     success: function (data) {
-//     //         $('.grid').html(data);
-//     //         // alert('ok');
-//     //     },
-//     //     error: function () {
-//     //         alert('error');
-//     //     }
-//     // });
-// });
+//===== 上傳圖片欄位換圖 =====
+window.addEventListener("load",function(){
+	document.getElementById("upFile").onchange=function(e){
+		var file = e.target.files[0];
+		var reader = new FileReader();
+		reader.onload = function(){
+			document.getElementById("imgView").src = reader.result;
+		}
+		reader.readAsDataURL(file);
+	};
+},false);
 
 
