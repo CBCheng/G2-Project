@@ -165,11 +165,11 @@
     <!-- jquery -->
     
   
-    <footer>
+    <!-- <footer>
         <div class="copyright">
             <p>copyright@OhPlanets 2145</p>
         </div>
-    </footer>
+    </footer> -->
     <script src="../js/style.js"></script>
     <script type="text/javascript" src="../js/login.js"></script>
 </body>
