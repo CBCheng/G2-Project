@@ -14,14 +14,15 @@ try{
 
   // 抓MEM_NAME  ID PSW SESSION
  	// 註冊成功發送註冊完成訊息 跳轉頁面
-
-
-  $sql = "select * from member where MEM_EMAIL = :MEM_EMAIL and MEM_PSW = :MEM_PSW";
-  $member = $pdo->prepare($sql);
-  $member -> bindValue(":MEM_EMAIL",$_REQUEST["regist_email"]);
-  $member -> bindValue(":MEM_PSW",$_REQUEST["memPsw_input"]);
-  $member -> execute();
-
+          //將登入資訊寫入session
+  $_SESSION["MEM_NO"] = $MEM_NO;
+  $_SESSION["MEM_PSW"] = $_REQUEST["memPsw_input"];
+  $_SESSION["MEM_NAME"] = $_REQUEST["regist_name"];
+  $_SESSION["MEM_EMAIL"] = $_REQUEST["regist_email"];
+  // $_SESSION["MEM_IMG"] = $memRow["MEM_IMG"];
+        //跳轉頁面
+    //echo "<a href='member_profile.php'>會員專區</a> ";
+  header("location:member_profile.php");  
   if( $member->rowCount() !=0 ){
       $memRow = $member->fetch(PDO::FETCH_ASSOC);
   
@@ -30,10 +31,10 @@ try{
       $_SESSION["MEM_PSW"] = $memRow["MEM_PSW"];
       $_SESSION["MEM_NAME"] = $memRow["MEM_NAME"];
       $_SESSION["MEM_EMAIL"] = $memRow["MEM_EMAIL"];
-        $_SESSION["MEM_IMG"] = $memRow["MEM_IMG"];
+      $_SESSION["MEM_IMG"] = $memRow["MEM_IMG"];
         //跳轉頁面
-    echo "<a href='member_profile.php'>會員專區</a> ";
-
+    //echo "<a href='member_profile.php'>會員專區</a> ";
+      header("location:member_profile.php");  
   }else{
     echo "註冊失敗";
   }
@@ -46,7 +47,8 @@ try{
 
 
 }catch(PDOException $e){
-  echo $e->getMessage();
+  echo $e->getMessage(),"<br>";
+  echo $e->getLine(),"<br>";
 }
 
 
@@ -55,6 +57,6 @@ try{
 
 
 
-header("location:member_profile.php");
+
 
 ?>

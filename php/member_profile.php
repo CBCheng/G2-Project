@@ -111,7 +111,7 @@ if ($_REQUEST['isModified'] == true) {
 
             		
 <?php
-$member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
+//$member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 ?>
             <div id="account" class="tabPage active" style="">
                 <div class="tabPage_border clearfix">
@@ -252,9 +252,9 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
 
 
 
-	<script src="../js/upfile.js"></script>
-	<script src="../js/update_phone_psw.js"></script>
-	<script src="../js/member.js"></script>
+	<!-- <script src="../js/upfile.js"></script> -->
+	<!-- <script src="../js/update_phone_psw.js"></script> -->
+	<!-- <script src="../js/member.js"></script> -->
     <script src="../js/login.js"></script>
 
 </body>
