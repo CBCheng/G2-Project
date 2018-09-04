@@ -34,7 +34,7 @@
             </li>
         </ul>
         <a href="index.html" class="logo">
-            <img src="img/logo-1.png">
+            <img src="../img/logo-1.png">
         </a>
         <ul class="menu mLeft">
             <li>
@@ -94,7 +94,7 @@
                 <a href="shop.html">星際商城</a>
             </li>
             <li>
-                <a href="member.html">會員專區</a>
+                <a href="member_profile.php">會員專區</a>
             </li>
             <li>
                 <a href="shop.html">購物車</a>
@@ -136,7 +136,7 @@
                 </form>
 
 
-                <img src="img/login/login.png">
+                <img src="../img/login/login.png">
             </div>
 
         </div>
@@ -156,7 +156,7 @@
                     <button class="btn btn-o-nb" id="login_send">送出</button>
                 </div>
                 <span>還不是會員，立馬<span class="registBtn"> 註冊 </span></span>
-                <img src="img/login/login.png">
+                <img src="../img/login/login.png">
             </div>
         </div>
     </div>
