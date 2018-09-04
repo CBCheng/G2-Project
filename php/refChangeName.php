@@ -6,8 +6,7 @@ try{
     $options = array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION);
     $pdo = new PDO( $dsn, $user, $password, $options);
 
-    $tripId = $_REQUEST['tripId'];
-    //$tripId = 1;
+    $tripId = $_REQUEST['tripName'];
     $sql = "select * from myschedule where scheduleNo = :scheduleNo";
     $trip = $pdo->prepare($sql);
 
@@ -16,7 +15,8 @@ try{
     $tripRows = $trip->fetch(PDO::FETCH_ASSOC);
 ?>
 
-<input id="tripName" type="text" placeholder="<?php echo $tripRows["scheduleName"] ?>">
+<input id="tripName" name="scheduleName" type="text" placeholder="<?php echo $tripRows["scheduleName"] ?>">
+<input type="hidden" name="scheduleNo" value="<?php echo $tripRows["scheduleNo"] ?>">
      
 <?php  
 } catch (PODException $e) {
