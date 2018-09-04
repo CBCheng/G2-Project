@@ -108,7 +108,7 @@
                 <span class="close">×</span>
                 <h3>註冊會員</h3>
 
-                <form method="get" action="enroll.php">
+                <form method="post" action="enroll.php">
 
                     <div>
                         <div class="login_input">
