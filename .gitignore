@@ -6,3 +6,4 @@ package.json
 package-lock.json
 /img/*
 .DS_Store
+php/connectCd102g2.php
