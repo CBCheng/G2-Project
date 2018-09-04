@@ -653,7 +653,7 @@ nav {
     width: 90%;
     height: 160px;
     position: relative;
-    margin-top: 15px;
+    margin-top: 25px;
     overflow: visible; }
     .grid .expertBox .king {
       z-index: 10;
@@ -723,7 +723,7 @@ nav {
   background-color: rgba(66, 66, 66, 0.6); }
 
 #lightBox {
-  position: fixed;
+  position: absolute;
   top: 0px;
   left: 0;
   right: 0;

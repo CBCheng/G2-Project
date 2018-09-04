@@ -1,4 +1,5 @@
 function doFirst() {
+
 	var canvas = document.getElementById('canvas1');
 	var context = canvas.getContext('2d');
 
@@ -55,7 +56,7 @@ TweenMax.fromTo('.cloud2', 3, { x: -200, y: 0 }, { x: 30, y: 0 });
 	// 		$("#lightBox_father").show(500);
 	// 	})
 	// })
-	// //e.target觸發的物件 //e.currentTarget監聽的事件
+	// // e.target觸發的物件 //e.currentTarget監聽的事件
 	// $("#lightBox_father").click(function (e) {
 	// 	if (e.target == e.currentTarget)
 	// 		$("#lightBox_father").hide(500);
@@ -80,7 +81,6 @@ TweenMax.fromTo('.cloud2', 3, { x: -200, y: 0 }, { x: 30, y: 0 });
 // })
 
 
-
 // =======抓資料庫=======
 
 //抓列表
@@ -103,7 +103,7 @@ $.ajax({
 $(document).on('click', '.element-item', function(){
 	var expertName = $(this).find('input').val();
 	var expertNo = $(this).data('no');
-	console.log(expertName);
+	// console.log(expertName);
 	$.ajax({
 		url: 'php/expert_lightBox.php',
 		type: 'POST',	
@@ -197,6 +197,8 @@ $(document).on('click', '.element-item', function(){
 					// console.log('科技:'+$('.ch_tech').val());
 				},
 			});
+
+			
 		},
 		error: function () {
 			alert('errorerror');

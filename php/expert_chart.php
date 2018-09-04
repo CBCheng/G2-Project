@@ -13,7 +13,7 @@ try {
     	
 ?>		
 		<!-- 能力值內容 -->
-		<input type="hidden" value="<?php echo $memRow['expertName'];?>" >
+		
 		<h3>能力值</h3>
         <span>美食</span>
         <input class="ch_food" type="hidden" value="<?php echo $memRow["expFood"] ;?>">

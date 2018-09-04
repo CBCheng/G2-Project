@@ -4,21 +4,20 @@ try {
     $expertName = $_REQUEST['expertName'];
     $expertNo = $_REQUEST['expertNo'];
     $memNo = '1';
-    $sql = "select * from expert where expertName = '$expertName'";
 
+    $sql = "select * from expert where expertName = '$expertName'";
     $members = $pdo->query($sql);
     $memRows = $members->fetchAll(PDO::FETCH_ASSOC);
-    // echo json_encode($memRow);
 
-
-
-    $sql1 = "select * from expertcollect where memNo = $memNo and expertNo = $expertNo;";
+    $sql1 = "select * from expertcollect where memNo = '$memNo' and expertNo = '$expertNo'";
     $members1 = $pdo->query($sql1);
     $memRows1 = $members1->fetchAll(PDO::FETCH_ASSOC);
 
-    
+    $sql2 = "select * from expertcollect where expertNo = '$expertNo'";
+    $members2 = $pdo->query($sql1);
+    $memRows2 = $members2->fetchAll(PDO::FETCH_ASSOC);
 
-  
+    
     foreach ($memRows as $memRow) {
     	//判斷人氣
     	$crown = '';
@@ -116,13 +115,28 @@ try {
                     </div>
                     <div class="record">
                         <div class="collect">
-                            <img class="heart" src="img/expertImg/heartWhite.png" alt="heartWhite" title="加入收藏" data-expert='<?php echo $memRow["expertNo"];?>'>
-                            <p id="Cnum">20人收藏</p>
+                            <img class="heart" src=
+                            <?php 
+                                if($members1->rowCount() == 0) {
+                                    echo'img/expertImg/heartWhite.png';
+                                } else {
+                                    echo'img/expertImg/heartRed.png';
+                                }
+                            ?>
+                             alt="heartWhite" title=
+                             <?php 
+                                if($members1->rowCount() == 0) {
+                                    echo '加入收藏';
+                                } else {
+                                    echo '取消收藏';
+                                }
+                            ?> data-expert='<?php echo $memRow["expertNo"];?>'>
+                            <p id="Cnum"><?php echo $members2->rowCount();?>人收藏</p>
                         </div>
-                        <div class="writeComment">
+                       <!--  <div class="writeComment">
                             <img id="write" src="img/expertImg/write.png" alt="write" title="撰寫評論">
                             <p id="Wnum">3則評論</p>
-                        </div>
+                        </div> -->
                     </div>
                 </article>
             </div>
@@ -133,16 +147,31 @@ try {
                 </div>
                 <div class="record_phone">
                     <div class="collect">
-                        <img class="heart" src="img/expertImg/heartWhite.png" alt="heartWhite" title="加入收藏" data-expert='<?php echo $memRow["expertNo"];?>'>
-                        <p id="Cnum">20人收藏</p>
+                        <img class="heart" src=
+                            <?php 
+                                if($members1->rowCount() == 0) {
+                                    echo'img/expertImg/heartWhite.png';
+                                } else {
+                                    echo'img/expertImg/heartRed.png';
+                                }
+                            ?>
+                             alt="heartWhite" title=
+                             <?php 
+                                if($members1->rowCount() == 0) {
+                                    echo '加入收藏';
+                                } else {
+                                    echo '取消收藏';
+                                }
+                            ?> data-expert='<?php echo $memRow["expertNo"];?>'>
+                            <p id="Cnum"><?php echo $members2->rowCount();?>人收藏</p>
                     </div>
-                    <div class="writeComment">
+                    <!-- <div class="writeComment">
                         <img id="write" src="img/expertImg/write.png" alt="write" title="撰寫評論">
                         <p id="Wnum">3則評論</p>
-                    </div>
+                    </div> -->
                 </div>
             </div>
-            <div class="comment">
+            <!-- <div class="comment">
                 <h2>評論</h2>
                 <div class="message">
                     <div class="user">
@@ -159,7 +188,7 @@ try {
                     </div>
                     <p>妙麗超專業的，人很nice又漂亮，下次一定還要預約！</p>
                 </div>
-            </div>
+            </div> -->
         </section>
 
 
@@ -197,19 +226,7 @@ try {
               
             heart1.addEventListener("click", switchFavorite, false);
             heart2.addEventListener("click", switchFavorite, false);
-
-            // if($memRows1->rowCount() == 0) {
-            //     heart1.src = "img/expertImg/heartWhite.png";
-            //     heart2.src = "img/expertImg/heartWhite.png";
-            //     heart1.title = "加入收藏";
-            //     heart2.title = "加入收藏";
-            // } else {
-            //     heart1.src = "img/expertImg/heartRed.png";
-            //     heart2.src = "img/expertImg/heartRed.png";
-            //     heart1.title = "取消收藏";
-            //     heart2.title = "取消收藏";
-            // }
-              
+            
         </script>
 	
 <?php
