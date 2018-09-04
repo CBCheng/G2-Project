@@ -34,7 +34,7 @@ $(document).ready(function(){
 //--------我的收藏頁籤 start-----//
 
 	$('.favorite_tab').on('click',function(){
-
+    
         $('.favorite_tab').not(this).removeClass('active');
         $(this).addClass('active');		
 
@@ -47,6 +47,18 @@ $(document).ready(function(){
 			})
 		}		
 	});
+
+  // 收藏分享行程ajax
+    $.ajax({
+        url:'php/favorite_travel_btn.php',               
+        dataType: 'text',           
+        success: function(data){
+            $('#m_rightBox').html(data);
+        }
+    });
+  //刪除收藏分享行程
+    
+
 //--------我的收藏頁籤 end-----//
 
 //-------會員修改 start------//

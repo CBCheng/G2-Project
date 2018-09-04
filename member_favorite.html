@@ -10,10 +10,6 @@
     <!-- <link rel="stylesheet" type="text/css" href="css/member.css"> -->
     <!-- <link rel="stylesheet" href="css/style.css"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/member_like.js"></script>
-    <script src="js/member.js"></script>
-    <script src="js/jquery-3.3.1.min.js"></script>
     <title>會員資訊</title>
     <style>
 
@@ -106,7 +102,7 @@
                             <div class="title_center_line"></div>
                         </div>
                         <button rel="favorite_recipe" class="favorite_tab btn active">收藏專家</button>
-                        <button rel="favorite_prod" class="favorite_tab btn">收藏分享行程</button>
+                        <button rel="favorite_prod" class="favorite_tab btn" id="favorite_travel_btn">收藏分享行程</button>
                         <div id="favorite_recipe" class="favorite_page active" style="">
                             <table>
                                 <tbody>
@@ -146,7 +142,10 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div id="favorite_prod" class="favorite_page active" style="display: none;">
+                        <!-- 收藏行程分享 -->
+
+                        <div id="favorite_prod" class="favorite_page" >
+                            
                             <table>
                                 <tbody>
                                     <!-- <tr>
@@ -159,10 +158,9 @@
                                     <!-- 分享行程開始 -->
                                     <tr>
 
-                                        <div class="m_rightBox ch">
-                                            <!-- 右邊程式編寫區塊 -->
-
-                                            <div class="mW_bigBox">
+                                        <div class="m_rightBox ch" id="m_rightBox">
+                                        <!-- 收藏分享行程 -->
+                                            <!-- <div class="mW_bigBox">
                                                 <div class="mW_delete"><i class="fas fa-trash-alt"></i></div>
                                                 <div class="mW_box">
                                                     <input type="hidden" value="30">
@@ -305,9 +303,9 @@
                                                     </div>
                                                     <div class="clearFix"></div>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                         </div>
-
+                                        <!-- ================================================================== -->
                                         <div class="plightBox ch" style="display: none; width: 100%;">
                                             <div class="plightBoxAll" style="opacity: 0;">
                                                 <div class="pexit"><i class="icon-cancel"></i></div>
@@ -379,6 +377,9 @@
         </div>
     </footer>
     <!-- jquery -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/member_like.js"></script>
+    <script src="js/member.js"></script>
     <script src="js/style.js"></script>
 </body>
 
