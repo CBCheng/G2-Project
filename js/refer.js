@@ -170,3 +170,22 @@ $.ajax({
 		alert('error');
 	}
 });
+
+//===== 抓行程名稱 ======
+// $('.mytrip').on('click',function(){
+//     var tripId = $(this).children().val();
+//     alert(tripId);
+//     // $.ajax({
+//     //     url: 'php/refer.php',
+//     //     dataType: 'text',
+//     //     success: function (data) {
+//     //         $('.grid').html(data);
+//     //         // alert('ok');
+//     //     },
+//     //     error: function () {
+//     //         alert('error');
+//     //     }
+//     // });
+// });
+
+
