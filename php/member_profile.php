@@ -50,7 +50,7 @@ function updateMember ($pdo, $memPWD, $member_add, $member_phone, $member_bd, $m
 }
 
 //control whether modify member
-if ($_REQUEST['isModified'] == true) {
+if (@$_REQUEST['isModified'] == true) {
 	echo 'modify memberInfo';
 	updateMember($pdo, $_REQUEST['new_psw'], $_REQUEST['mem_Add'], $_REQUEST['mem_number'], $_REQUEST['mem_Bir'], $_SESSION['MEM_NO']);
 	
@@ -111,7 +111,7 @@ if ($_REQUEST['isModified'] == true) {
 
             		
 <?php
-$member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
+$member_pic = 'member_pic/'.@$_SESSION["MEM_IMG"];
 ?>
             <div id="account" class="tabPage active" style="">
                 <div class="tabPage_border clearfix">
@@ -139,7 +139,7 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
                                         <button type="button" class="btn btn-o-nb" id="member_pic" style="display: block;">上傳</button>
                                     </div>
                                 </form>
-                                <div id="show_name"><?php echo $_SESSION['MEM_ID']; ?></div>
+                                <div id="show_name"><?php echo @$_SESSION['MEM_ID']; ?></div>
                             </div>
                             <div class="col-sm-6 col-xs-12 member_form ">
                             	<form method="post" action="member_profile.php">
@@ -150,7 +150,7 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
                                             <th class="mob_hidden">姓名 :</th>
                                             <td>
                                                 <?php echo $memberInfo["MEM_NAME"]?>
-                                                <!-- <input id="clear_border" type="text" value="<?php echo$_SESSION['MEM_ID']; ?>" readonly="readonly"> -->
+                                                
                                             </td>
                                         </tr>
                                         <tr>
