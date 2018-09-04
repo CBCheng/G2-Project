@@ -532,7 +532,7 @@ figure {
 figure img {
   width: 100%; }
 
-#img_update_btn {
+#member_pic {
   display: none; }
 
 .all_content {
@@ -718,7 +718,7 @@ figure img {
 .member_buy img {
   width: 100%; }
 
-#memUpdate_psw_span {
+#new_ps1_span {
   color: red; }
 
 @media screen and (max-width: 767px) {

@@ -524,7 +524,7 @@ a {
             width: 90%;
             height: 160px;
             position: relative;
-            margin-top: 15px;
+            margin-top: 25px;
             overflow: visible;
 
             .king {
@@ -627,7 +627,7 @@ a {
 }
 
 #lightBox {
-    position: fixed;
+    position: absolute;
     top: 0px;
     left: 0;
     right: 0;

@@ -68,16 +68,16 @@ $(document).ready(function(){
 		$('.member_info').css('display','none');
 		$('.member_mod').css('display','block');
 		$('.member_img #member_img_upload').attr('type','file');
-    $('#img_update_btn').css('display','block');
+    $('#member_pic').css('display','block');
 	
 	});
 	// 取消修改
-	// $('#cxl_btn').on('click',function(){
-	// 	$('.member_mod input').val(null);
-	// 	$('.member_info').css('display','block');
-	// 	$('.member_mod').css('display','none');
-	// 	$('.member_img input').attr('type','hidden');
-	// }) 
+	$('#cxl_btn').on('click',function(){
+		$('.member_mod input').val(null);
+		$('.member_info').css('display','block');
+		$('.member_mod').css('display','none');
+		$('.member_img input').attr('type','hidden');
+	}) 
 
 
     //上傳會員照片即時顯示
@@ -105,7 +105,7 @@ $(document).ready(function(){
 
     //上傳會員大頭貼 ajax 
 
-      $('#img_update_btn').click(function(event){
+      $('#member_pic').click(function(event){
 
         xhr.onload = function (){
           if( xhr.status == 200){

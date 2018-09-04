@@ -4,8 +4,6 @@ try {
     $memNo = $_REQUEST["memNo"];
     $expertNo = $_REQUEST["expertNo"];
 
-    // $memNo = '1';
-    // $expertNo = '103';
 
     $sql1 = "select * from expertcollect where memNo = $memNo and expertNo = $expertNo;";
     $members = $pdo->query($sql1);

@@ -7,6 +7,10 @@ var storage = sessionStorage;
   var lenLocation = locationReload.length;
 
 
+
+
+
+
    $(document).ready(function(){
 
 
@@ -170,41 +174,40 @@ var storage = sessionStorage;
                         }
                     });// 確認格式都正確的each結束
 
-                    if( error == false){
+                    // if( error == false){
 
-                          let xhr = new XMLHttpRequest();
-                          xhr.onload = function (){
+                    //       let xhr = new XMLHttpRequest();
+                    //       xhr.onload = function (){
 
-                              if( xhr.status == 200){
-                                if( xhr.responseText.indexOf("OK") != -1){
-                                // var memString = xhr.responseText;
-                                //  // alert(memString);
-                                // var memArr = JSON.parse(memString);
-                                console.log(xhr.responseText );
-                                var memNo = xhr.responseText.substr(2);
-                                storage.setItem('memEmail', regist_info.memEmail);
-                                storage.setItem('mempic', regist_info.mempic );
-                                storage.setItem('memNo', memNo);
-                                storage.setItem('memCoupon',100);
+                    //           if( xhr.status == 200){
+                    //             if( xhr.responseText.indexOf("OK") != -1){
+                    //             // var memString = xhr.responseText;
+                    //             //  // alert(memString);
+                    //             // var memArr = JSON.parse(memString);
+                    //             console.log(xhr.responseText );
+                    //             var memNo = xhr.responseText.substr(2);
+                    //             storage.setItem('memEmail', regist_info.memEmail);
+                    //             storage.setItem('mempic', regist_info.mempic );
+                    //             storage.setItem('memNo', memNo);
 
-                                alert("註冊成功，現已登入");
-                                window.location.reload();
-                                }
-                              }else{
-                                alert( xhr.status)
-                              }
-                          }//onload
+                    //             alert("註冊成功，現已登入");
+                    //             window.location.reload();
+                    //             }
+                    //           }else{
+                    //             alert( xhr.status)
+                    //           }
+                    //       }//onload
 
-                          var regist_info = {};
-                          regist_info.memeName = $("#regist_name").val();
-                          regist_info.memPsw = $("#memPsw_2nd_input").val();
-                          regist_info.memEmail = $("#regist_email").val();
+                    //       var regist_info = {};
+                    //       regist_info.memeName = $("#regist_name").val();
+                    //       regist_info.memPsw = $("#memPsw_2nd_input").val();
+                    //       regist_info.memEmail = $("#regist_email").val();
                           
 
-                          var url = "regist.php?regist_info=" + JSON.stringify( regist_info );
-                          xhr.open("get", url, true);
-                          xhr.send( null );               
-                    }
+                    //       var url = "../php/enroll.php?regist_info=" + JSON.stringify( regist_info );
+                    //       xhr.open("get", url, true);
+                    //       xhr.send( null );               
+                    // }
                       
               }//test()
                     
@@ -218,109 +221,12 @@ var storage = sessionStorage;
         
       //----------------註冊 end---------------------//
 
-      //---------------登入 start---------------------//
-
-       $('#login_send').click(function(){
-              
-              var xhr = new XMLHttpRequest();
-              xhr.onload = function (){
-
-                if( xhr.status == 200){
-
-                      if( xhr.responseText == "error"){ //查無此人
-                        alert("帳密錯誤，請重新輸入");
-
-                      }else if( xhr.responseText == "suspend"){
-
-                        alert('抱歉，您已被停權，請聯絡客服人員');
-                        window.location.reload();
-                      }
-                      else{//登入成功
-
-                        //接php傳回會員資料轉成js可讀的json檔
-                         var memString = xhr.responseText;
-                         var memArr = JSON.parse(memString);
-
-
-                          alert("登入成功");
-                          window.location.reload();
-                                                   
-                          //將會員資料存入storage
-                          storage.setItem('memEmail', memArr["memEmail"] );
-                          storage.setItem('mempic', memArr["mempic"] );
-                          storage.setItem('memNo', memArr["memNo"] )
-                      
-                      }
-
-                }else{
-                  alert( xhr.status);
-                }
-              }
-  
-          var login_info = {};
-            login_info.memEmail = $("#memEmail").val();
-            login_info.memPsw = $("#memPsw").val();
-
-            var url = "login_in.php?login_info=" + JSON.stringify( login_info );
-            xhr.open("get", url, true);
-            xhr.send( null );
-
-       })
-
-
-      //---------------登入 end---------------------//
+     
 
 
       //---------------登出 start---------------------//
 
-      //桌機登出
-      document.getElementById('logOut_btn').addEventListener('click',logOut);
       
-       //手機板登出
-      $('#logOut_xs').click(function(){
-
-            logOut();  
-      });
-      
-      function logOut (){
-
-          let xhr = new XMLHttpRequest();
-          xhr.onload = function (){
-            if( xhr.status == 200){
-              if( xhr.responseText == "ok"){ 
-                alert("登出成功");
-                //拿掉登出
-                $('#logOut_btn').text('');
-                //換回會員圖
-                $('.menu-icon-user img').attr('src','images/menu/icon-01-1.png');
-                //將會員ICON連結改掉
-                $('.memberLogin a').attr('href','#');
-                
-                 // 判斷是否為會員頁
-
-                if(locationReload[lenLocation-1].match("member") != null){
-                  window.location.href = "indexMySiCook.php";
-                }else if(locationReload[lenLocation-1].match("shopping") != null){
-                  window.location.href = "shoppingCart.php";
-                }else{
-                  window.location.href = locationReload[lenLocation-1];
-                  window.location.reload();
-                }
-
-                
-                storage.removeItem('memEmail');
-                storage.removeItem('mempic');
-                storage.removeItem('memNo');
-
-              }
-            }else{
-              alert( xhr.status)
-            }             
-          }
-          let url = "log_out.php";
-          xhr.open("get", url, true);
-          xhr.send( null);                
-    };
             
 
 
@@ -329,23 +235,126 @@ var storage = sessionStorage;
        //---------------登出 end---------------------//  
     });
 
-    function $id(id){
+    // function $id(id){
+    //   return document.getElementById(id);
+    // }
+    // window.onscroll = function(){
+          
+    //         if(document.documentElement.scrollTop > 100){ 
+    //           $("#menu").addClass("menu-flex"); 
+    //           $("#menu-bg").addClass("menu-bg-flex"); 
+    //           $("#menu-logo").addClass("menu-logo-flex"); 
+    //           $("#menu-logo").removeClass("menu-logo"); 
+    //           $("#box-line").addClass("box-line-none"); 
+    //         }else{ 
+    //           $id("menu").className = "menu"; 
+    //           $("#menu-bg").removeClass("menu-bg-flex"); 
+    //           $("#menu-logo").removeClass("menu-logo-flex"); 
+    //           $("#menu-logo").addClass("menu-logo"); 
+    //           $("#box-line").removeClass("box-line-none"); 
+    //         } 
+           
+    //   }
+
+
+
+function $id(id){
+ return document.getElementById(id);
+} 
+function $id(id){
       return document.getElementById(id);
     }
-    window.onscroll = function(){
-          
-            if(document.documentElement.scrollTop > 100){ 
-              $("#menu").addClass("menu-flex"); 
-              $("#menu-bg").addClass("menu-bg-flex"); 
-              $("#menu-logo").addClass("menu-logo-flex"); 
-              $("#menu-logo").removeClass("menu-logo"); 
-              $("#box-line").addClass("box-line-none"); 
-            }else{ 
-              $id("menu").className = "menu"; 
-              $("#menu-bg").removeClass("menu-bg-flex"); 
-              $("#menu-logo").removeClass("menu-logo-flex"); 
-              $("#menu-logo").addClass("menu-logo"); 
-              $("#box-line").removeClass("box-line-none"); 
-            } 
-           
+    function showLoginForm(){
+      //檢查登入bar面版上 spanLogin 的字是登入或登出
+      //如果是登入，就顯示登入用的燈箱(lightBox)
+      //如果是登出
+      //將登入bar面版上，登入者資料清空 
+      //spanLogin的字改成登入
+      //將頁面上的使用者資料清掉
+      if($id('spanLogin').innerHTML == "登入"){
+        $id('lightBox').style.display = 'block';
+      }else{  //登出
+        var xhr = new XMLHttpRequest();
+        xhr.onload = function(){
+          if( xhr.status == 200){
+            $id('memName').innerHTML = '&nbsp';
+            $id('spanLogin').innerHTML = '登入';             
+          }else{
+            alert( xhr.status);
+          }
+         
+        }
+        xhr.open("get","logout.php",true);
+        xhr.send(null);
+
       }
+
+    }//showLoginForm
+
+    function sendForm(){
+      //=====使用Ajax 回server端,取回登入者姓名, 放到頁面上    
+      var xhr = new XMLHttpRequest();
+
+      xhr.onload = function(){
+        if( xhr.status == 200){  
+          if( xhr.responseText == "NG"){
+            alert("帳密錯誤");
+          }else{
+            document.getElementById("memName").innerHTML = xhr.responseText;
+            document.getElementById("spanLogin").innerHTML = "登出";  
+          }
+
+        }else{
+          alert(xhr.status);
+        }
+      }
+
+      xhr.open("Post", "ajax_login.php", true);
+      xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
+      var data_info = "memEmail=" + document.getElementById("memEmail").value 
+                    + "&memPsw="+ document.getElementById("memPsw").value;
+      xhr.send(data_info);
+
+      //將登入表單上的資料清空，並隱藏起來
+      $id('lightBox').style.display = 'none';
+      $id('memEmail').value = '';
+      $id('memPsw').value = '';
+      
+    }
+
+    function cancelLogin(){
+      //將登入表單上的資料清空，並將燈箱隱藏起來
+      $id('lightBox').style.display = 'none';
+      $id('memEmail').value = '';
+      $id('memPsw').value = '';
+    }
+
+    function init(){
+      //===設定spanLogin.onclick 事件處理程序是 showLoginForm
+
+      $id('spanLogin').onclick = showLoginForm;
+
+      //===設定btnLogin.onclick 事件處理程序是 sendForm
+      $id('login_send').onclick = sendForm;
+
+      //===設定btnLoginCancel.onclick 事件處理程序是 cancelLogin
+      // $id('btnLoginCancel').onclick = cancelLogin;
+
+      //檢查是否已登入
+      var xhr = new XMLHttpRequest();
+      xhr.onload = function(){
+        if(xhr.status == 200){
+          if( xhr.responseText !=""){ //己登入
+            document.getElementById("memName").innerHTML = xhr.responseText;
+            document.getElementById("spanLogin").innerHTML = "登出";  
+          }
+          
+        }else{
+          alert( xhr.status);
+        }
+      }
+      xhr.open("get", "getLoginInfo.php", true);
+      xhr.send(null);
+    }; //window.onload
+    
+    window.onload=init;
