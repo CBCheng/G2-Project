@@ -149,12 +149,8 @@ $member_pic = 'member_pic/'.@$_SESSION["MEM_IMG"];
                                         <tr>
                                             <th class="mob_hidden">姓名 :</th>
                                             <td>
-<<<<<<< HEAD
+
                                                 <?php echo @$memberInfo["MEM_NAME"]?>
-=======
-                                                <?php echo $memberInfo["MEM_NAME"]?>
-                                                
->>>>>>> 0f0bf121fe3374001811a5e588a8affd61dbb6d5
                                             </td>
                                         </tr>
                                         <tr>
