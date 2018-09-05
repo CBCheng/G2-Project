@@ -48,7 +48,7 @@
         <ul class="member">
             <li class="shoppingCar">
                 <a href="#">
-                    <img class="shoppingCarPic" src="../img/shopping car.png" alt="">
+                    <img class="shoppingCarPic" src="img/shopping car.png" alt="">
                     <!-- <img class="shoppingCarHover" src="img/shoppingCarHover.png" alt=""> -->
                 </a>
             </li>
