@@ -32,7 +32,7 @@ function getMemberInfo($pdo, $mId) {
     }
 } 
 
-$memberInfo = getMemberInfo($pdo, $_SESSION['MEM_NO']);
+$memberInfo = getMemberInfo($pdo, @$_SESSION['MEM_NO']);
 
 function updateMember ($pdo, $memPWD, $member_add, $member_phone, $member_bd, $member_id) {
 	$sql = "UPDATE member SET MEM_PSW = :MEM_PSW, MEM_ADDRESS = :MEM_ADDRESS, MEM_PHONE = :MEM_PHONE, MEM_BD = :MEM_BD WHERE MEM_NO = :MEM_NO";	
@@ -50,7 +50,7 @@ function updateMember ($pdo, $memPWD, $member_add, $member_phone, $member_bd, $m
 }
 
 //control whether modify member
-if ($_REQUEST['isModified'] == true) {
+if (@$_REQUEST['isModified'] == true) {
 	echo 'modify memberInfo';
 	updateMember($pdo, $_REQUEST['new_psw'], $_REQUEST['mem_Add'], $_REQUEST['mem_number'], $_REQUEST['mem_Bir'], $_SESSION['MEM_NO']);
 	
@@ -111,7 +111,7 @@ if ($_REQUEST['isModified'] == true) {
 
             		
 <?php
-$member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
+$member_pic = 'member_pic/'.@$_SESSION["MEM_IMG"];
 ?>
             <div id="account" class="tabPage active" style="">
                 <div class="tabPage_border clearfix">
@@ -139,7 +139,7 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
                                         <button type="button" class="btn btn-o-nb" id="member_pic" style="display: block;">上傳</button>
                                     </div>
                                 </form>
-                                <div id="show_name"><?php echo $_SESSION['MEM_ID']; ?></div>
+                                <div id="show_name"><?php echo @$_SESSION['MEM_ID']; ?></div>
                             </div>
                             <div class="col-sm-6 col-xs-12 member_form ">
                             	<form method="post" action="member_profile.php">
@@ -149,8 +149,7 @@ $member_pic = 'member_pic/'.$_SESSION["MEM_IMG"];
                                         <tr>
                                             <th class="mob_hidden">姓名 :</th>
                                             <td>
-                                                <?php echo $memberInfo["MEM_NAME"]?>
-                                                <!-- <input id="clear_border" type="text" value="<?php echo$_SESSION['MEM_ID']; ?>" readonly="readonly"> -->
+                                                <?php echo @$memberInfo["MEM_NAME"]?>
                                             </td>
                                         </tr>
                                         <tr>
