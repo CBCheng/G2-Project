@@ -130,15 +130,20 @@
                         <div class="mytrip">3天 ｜瓦特星大冒險</div>
                         <div class="mytrip">3天 ｜瓦特星大冒險</div> -->
                     </div>
-                    <div class="upload">
-                        <input id="tripName" type="text" placeholder="請輸入行程名稱">
-                        <div class="uploadPic">
-                            <img src="img/icon/photo-camera.png" alt="">
-                        </div>
-                        <div>
-                        <button>分享行程</button>
-                        </div>
-                    </div>
+                    <form class="upload" action="php/shareUpload.php" method="post" enctype="multipart/form-data">
+                        <!-- <div class="upload"> -->
+                            <input id="tripName" type="text" placeholder="請輸入行程名稱">
+                            <div class="uploadPic">
+                                <label>
+                                    <input type="file" name="upFile" id="upFile">
+                                    <img id="imgView" src="img/icon/photo-camera.png">
+                                </label>
+                            </div>
+                            <div>
+                                <input type="submit" value="分享行程">
+                            </div>
+                        <!-- </div> -->
+                    </form>
                 </div>
             </div>
         </div>

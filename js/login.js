@@ -174,40 +174,40 @@ var storage = sessionStorage;
                         }
                     });// 確認格式都正確的each結束
 
-                    if( error == false){
+                    // if( error == false){
 
-                          let xhr = new XMLHttpRequest();
-                          xhr.onload = function (){
+                    //       let xhr = new XMLHttpRequest();
+                    //       xhr.onload = function (){
 
-                              if( xhr.status == 200){
-                                if( xhr.responseText.indexOf("OK") != -1){
-                                // var memString = xhr.responseText;
-                                //  // alert(memString);
-                                // var memArr = JSON.parse(memString);
-                                console.log(xhr.responseText );
-                                var memNo = xhr.responseText.substr(2);
-                                storage.setItem('memEmail', regist_info.memEmail);
-                                storage.setItem('mempic', regist_info.mempic );
-                                storage.setItem('memNo', memNo);
+                    //           if( xhr.status == 200){
+                    //             if( xhr.responseText.indexOf("OK") != -1){
+                    //             // var memString = xhr.responseText;
+                    //             //  // alert(memString);
+                    //             // var memArr = JSON.parse(memString);
+                    //             console.log(xhr.responseText );
+                    //             var memNo = xhr.responseText.substr(2);
+                    //             storage.setItem('memEmail', regist_info.memEmail);
+                    //             storage.setItem('mempic', regist_info.mempic );
+                    //             storage.setItem('memNo', memNo);
 
-                                alert("註冊成功，現已登入");
-                                window.location.reload();
-                                }
-                              }else{
-                                alert( xhr.status)
-                              }
-                          }//onload
+                    //             alert("註冊成功，現已登入");
+                    //             window.location.reload();
+                    //             }
+                    //           }else{
+                    //             alert( xhr.status)
+                    //           }
+                    //       }//onload
 
-                          var regist_info = {};
-                          regist_info.memeName = $("#regist_name").val();
-                          regist_info.memPsw = $("#memPsw_2nd_input").val();
-                          regist_info.memEmail = $("#regist_email").val();
+                    //       var regist_info = {};
+                    //       regist_info.memeName = $("#regist_name").val();
+                    //       regist_info.memPsw = $("#memPsw_2nd_input").val();
+                    //       regist_info.memEmail = $("#regist_email").val();
                           
 
-                          var url = "../php/enroll.php?regist_info=" + JSON.stringify( regist_info );
-                          xhr.open("get", url, true);
-                          xhr.send( null );               
-                    }
+                    //       var url = "../php/enroll.php?regist_info=" + JSON.stringify( regist_info );
+                    //       xhr.open("get", url, true);
+                    //       xhr.send( null );               
+                    // }
                       
               }//test()
                     
