@@ -1395,6 +1395,9 @@ nav {
   background-color: #515052;
   padding: 5px; }
 
+.login_box .login_content {
+  min-height: 320px; }
+
 @media all and (min-width: 768px) {
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -2462,4 +2465,6 @@ nav {
     background-color: #6cd5ff; }
   .copyright {
     background-color: #515052;
-    padding: 15px; } }
+    padding: 15px; }
+  .login_content {
+    min-height: 320px; } }

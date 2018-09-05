@@ -18,8 +18,8 @@ session_start();
 		$views = $view->fetch(PDO::FETCH_ASSOC);
 		// echo $views['viewName'];
 		// echo $views['viewImg1'];
-		$SESSION["indexViewNo"]=$views["viewNo"];
-		echo $SESSION["indexViewNo"];
+		$_SESSION["indexViewNo"]=$views["viewNo"];
+		echo $_SESSION["indexViewNo"];
 ?>
 
 <div class="viewItem">
