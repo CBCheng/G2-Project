@@ -103,7 +103,7 @@ $.ajax({
 $(document).on('click', '.element-item', function(){
 	var expertName = $(this).find('input').val();
 	var expertNo = $(this).data('no');
-	// console.log(expertName);
+	console.log(expertNo);
 	$.ajax({
 		url: 'php/expert_lightBox.php',
 		type: 'POST',	
