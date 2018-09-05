@@ -101,7 +101,7 @@ try {
     	//=====跳窗打開=====
 			$(function () {
 				$(".element-item").click(function () {
-					$("#lightBox_father").show(800);
+					$("#exp_lightBox_father").show(800);
 				})
 			})
 			

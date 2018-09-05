@@ -53,18 +53,18 @@ TweenMax.fromTo('.cloud2', 3, { x: -200, y: 0 }, { x: 30, y: 0 });
 // =====跳窗開關=====
 	// $(function () {
 	// 	$(".element-item").click(function () {
-	// 		$("#lightBox_father").show(500);
+	// 		$("#exp_lightBox_father").show(500);
 	// 	})
 	// })
 	// // e.target觸發的物件 //e.currentTarget監聽的事件
-	// $("#lightBox_father").click(function (e) {
+	// $("#exp_lightBox_father").click(function (e) {
 	// 	if (e.target == e.currentTarget)
-	// 		$("#lightBox_father").hide(500);
+	// 		$("#exp_lightBox_father").hide(500);
 	// })
 
 	// $(function () {
 	// 	$(".fas").click(function () {
-	// 		$("#lightBox_father").hide(500);
+	// 		$("#exp_lightBox_father").hide(500);
 	// 	})
 	// })
 
@@ -113,17 +113,17 @@ $(document).on('click', '.element-item', function(){
 			expertNo:expertNo
 		},			
 		success: function(data){
-			$('#lightBox_father').html(data);
+			$('#exp_lightBox_father').html(data);
 
-			//依星球判斷lightBox外框色
-			if($('#lightBox h1').hasClass('plBlue')){
-				$('#lightBox').addClass('boxBlue');
+			//依星球判斷exp_lightBox外框色
+			if($('#exp_lightBox h1').hasClass('plBlue')){
+				$('#exp_lightBox').addClass('boxBlue');
 			}
-			if($('#lightBox h1').hasClass('plOrange')){
-				$('#lightBox').addClass('boxOrange');
+			if($('#exp_lightBox h1').hasClass('plOrange')){
+				$('#exp_lightBox').addClass('boxOrange');
 			}
-			if($('#lightBox h1').hasClass('plGreen')){
-				$('#lightBox').addClass('boxGreen');
+			if($('#exp_lightBox h1').hasClass('plGreen')){
+				$('#exp_lightBox').addClass('boxGreen');
 			}
 
 

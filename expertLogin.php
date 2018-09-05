@@ -22,73 +22,10 @@
 </head>
 
 <body>
-    <!-- nav -->
-    <!-- <div class="navColor">
-        <img class="navPic" src="img/bg.png" alt="">
-    </div> -->
-    <!-- <nav> -->
-        <!-- desk -->
-      <!--   <ul class="menu mRight">
-            <li>
-                <a href="planning.html">開始冒險</a>
-            </li>
-            <li>
-                <a href="refer.html">別人怎麼玩</a>
-            </li>
-        </ul>
-        <a href="index.html" class="logo">
-            <img src="img/logo-1.png">
-        </a>
-        <ul class="menu mLeft">
-            <li>
-                <a href="expert.html">專家帶你玩</a>
-            </li>
-            <li>
-                <a href="shop.html">星際商城</a>
-            </li>
-        </ul>
-        <ul class="member">
-            <li class="shoppingCar">
-                <a href="#">
-                    <img class="shoppingCarPic" src="img/shopping car.png" alt="">
-                </a>
-            </li>
-            <li class="memberSign">
-                <a href="member_mytrip.html">登入</a>
-            </li>
-        </ul>
-        <div class="hambger">
-            <div class="line"></div>
-        </div>
-        <ul class="menuMobile">
-            <img class="navPic" src="img/bgM.png" alt="">
-            <li>
-                <a href="planning.html">開始冒險</a>
-            </li>
-            <li>
-                <a href="expert.html">專家帶你玩</a>
-            </li>
-            <li>
-                <a href="refer.html">別人怎麼玩</a>
-            </li>
-            <li>
-                <a href="shop.html">星際商城</a>
-            </li>
-            <li>
-                <a href="member.html">會員專區</a>
-            </li>
-            <li>
-                <a href="shop.html">購物車</a>
-            </li>
-
-        </ul>
-    </nav> -->
+   
     <header>
         <?php include 'login.php';?>
     </header>
-
-
-    
 
 
 
@@ -172,35 +109,6 @@
                     </div>
                 </div> 
             </div> -->
-            <!-- <div class="element-item expertBox blue ">
-                <h2 class="h2Desk">瓦特星</h2>
-                <h3 class="h3Desk">Alan</h3>
-                <div class="attr">美食</div>
-                <div class="pic">
-                    <a>
-                        <img id="box" src="img/expertImg/A01.jpg">
-                    </a>
-                    <div class="aside">
-                        <h2 class="h2Ph">瓦特星</h2>
-                        <h3 class="h3Ph">Christina</h3>
-                        <div class="score">
-                            <span>5</span>
-                            <img src="img/expertImg/star.png" alt="star">
-                            <img src="img/expertImg/star.png" alt="star">
-                            <img src="img/expertImg/star.png" alt="star">
-                            <img src="img/expertImg/star.png" alt="star">
-                            <img src="img/expertImg/star.png" alt="star">
-                        </div>
-                        <div class="mark">
-                            <img src="img/expertImg/comment.png" alt="comment">
-                            <span>5</span>
-                            <img src="img/expertImg/love.png" alt="love">
-                            <span>20</span>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            
             <!-- <div class="element-item expertBox orange popular ">
                 <img class="king" src="img/expertImg/crown.png" alt="crown">
                 <h2 class="h2Desk">瓦特星</h2>
@@ -323,9 +231,9 @@
 
 
 
-    <!-- ======lightBox===== -->
-    <div id="lightBox_father" style="display: none;">
-        <!-- <section id="lightBox">
+    <!-- ======exp_lightBox===== -->
+    <div id="exp_lightBox_father" style="display: none;">
+        <!-- <section id="exp_lightBox">
             <i class="fas fa-times"></i>
             <div class="content_desk">
                 <article class="conLeft">
@@ -434,7 +342,7 @@
             </div>
         </section> -->
     </div>
-    <!-- ======lightBox===== -->
+    <!-- ======exp_lightBox===== -->
 
 
 

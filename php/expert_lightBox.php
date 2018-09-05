@@ -82,7 +82,7 @@ try {
 	
 
 		<!-- 專家跳窗介紹 -->
-		<section id="lightBox" >
+		<section id="exp_lightBox" >
             <i class="fas fa-times"></i>
             <div class="content_desk">
                 <article class="conLeft">
@@ -197,14 +197,14 @@ try {
         
         	// =====跳窗關閉=====
 			//e.target觸發的物件 //e.currentTarget監聽的事件
-			$("#lightBox_father").click(function (e) {
+			$("#exp_lightBox_father").click(function (e) {
 				if (e.target == e.currentTarget)
-					$("#lightBox_father").hide(500);
+					$("#exp_lightBox_father").hide(500);
 			})
 
 			$(function () {
 				$(".fas").click(function () {
-					$("#lightBox_father").hide(500);
+					$("#exp_lightBox_father").hide(500);
 				})
 			})
 

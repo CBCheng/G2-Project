@@ -17,6 +17,7 @@ try{
     $dayArr = explode("@",$day);
     // print $dayArr[1];
 
+    
     //印出所有分享行程
     $sql = "select * from myschedule where share = 1 ORDER BY scheduleNo DESC";
     $refers = $pdo->query($sql);
