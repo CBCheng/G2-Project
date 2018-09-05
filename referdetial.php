@@ -297,7 +297,7 @@ try {
                 </div>
                 <script>
                         $('.reportBtn').on('click',function(){
-                            var commentNo = $(this).parent().children().val();
+                            var commentNo = $(this).prev().prev().prev().prev().val();
                             $.ajax({
                                 url: 'php/reportMessage.php',                
                                 data: {no:commentNo},             
@@ -305,8 +305,10 @@ try {
                                 dataType: 'text',           
                                 success: function(data){
                                     console.log(data);
+                                    console.log(commentNo);
                                 }
                             });
+
                         })
 
                         $('.writeMessage').on('click',function(){

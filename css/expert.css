@@ -546,41 +546,36 @@ nav {
     background-color: #852bff; }
   .grid .expertBox .pic {
     width: 180px;
-    height: 260px;
+    height: 264px;
     overflow: hidden;
     margin: auto;
     position: relative;
     cursor: pointer; }
-    .grid .expertBox .pic img {
+    .grid .expertBox .pic .box {
       width: 100%;
       margin-top: -10px;
       transform: scale(1);
       transition: 0.5s; }
   .grid .expertBox .aside {
     position: absolute;
-    left: 0;
-    right: 0;
     bottom: 0px;
-    margin: auto;
+    width: 100%;
     background: linear-gradient(to top, #000, rgba(0, 0, 0, 0.2) 100%); }
     .grid .expertBox .aside .h2Ph,
     .grid .expertBox .aside .h3Ph {
       display: none; }
-    .grid .expertBox .aside .score {
-      padding-top: 15px; }
-      .grid .expertBox .aside .score span {
-        color: #ffffff;
-        font-size: 16px;
-        padding-right: 5px; }
-      .grid .expertBox .aside .score img {
-        vertical-align: text-bottom;
-        width: 18px; }
     .grid .expertBox .aside .mark {
-      font-size: 15px;
-      color: #ffffff; }
-      .grid .expertBox .aside .mark img {
-        width: 22px;
-        margin: 10px; }
+      float: right;
+      margin: 10px; }
+      .grid .expertBox .aside .mark span {
+        font-size: 14px;
+        color: #eeeeee; }
+      .grid .expertBox .aside .mark .love {
+        width: 25px;
+        bottom: 5px;
+        right: 5px;
+        vertical-align: bottom;
+        margin-right: 5px; }
 
 @media screen and (min-width: 650px) {
   .grid .expertBox.blue {
@@ -627,20 +622,7 @@ nav {
       top: 88px; }
     .grid .expertBox .pic {
       width: 140px;
-      height: 210px; }
-    .grid .expertBox .score {
-      margin-top: 10px; }
-      .grid .expertBox .score span {
-        font-size: 14px;
-        padding-right: 2px; }
-      .grid .expertBox .score img {
-        width: 15px; }
-    .grid .expertBox .mark {
-      font-size: 14px; }
-      .grid .expertBox .mark img {
-        width: 20px;
-        margin: 5px;
-        margin-bottom: 10px; } }
+      height: 210px; } }
 
 @media screen and (max-width: 650px) {
   .grid .expertBox.blue {
@@ -675,7 +657,7 @@ nav {
         height: 135px;
         overflow: hidden;
         float: left; }
-        .grid .expertBox .pic a img {
+        .grid .expertBox .pic a .box {
           width: 120px; }
       .grid .expertBox .pic .aside {
         position: static;
@@ -692,7 +674,7 @@ nav {
           font-size: 18px;
           margin-top: 10px; }
         .grid .expertBox .pic .aside .mark {
-          margin-top: 10px; }
+          margin-top: 63px; }
         .grid .expertBox .pic .aside .mark img {
           margin: 0; }
         .grid .expertBox .pic .aside .mark span {
@@ -745,13 +727,13 @@ nav {
     top: 10px;
     right: 10px; }
 
-.boxBlue {
+#lightBox.boxBlue {
   border: 3px solid rgba(108, 213, 255, 0.5); }
 
-.boxOrange {
+#lightBox.boxOrange {
   border: 3px solid rgba(207, 169, 114, 0.5); }
 
-.boxGreen {
+#lightBox.boxGreen {
   border: 3px solid rgba(128, 194, 105, 0.5); }
 
 #lightBox:after {

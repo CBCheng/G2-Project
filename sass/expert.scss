@@ -358,13 +358,12 @@ a {
         .pic {
             // outline: 1px solid #f00;
             width: 180px;
-            height: 260px;
+            height: 264px;
             overflow: hidden;
             margin: auto;
             position: relative;
             cursor: pointer;
-
-            img {
+            .box {
                 width: 100%;
                 margin-top: -10px;
                 transform: scale(1);
@@ -374,10 +373,8 @@ a {
 
         .aside {
             position: absolute;
-            left: 0;
-            right: 0;
             bottom: 0px;
-            margin: auto;
+            width: 100%;
             background: linear-gradient(to top, #000, rgba(0, 0, 0, 0.2) 100%);
 
             .h2Ph,
@@ -385,29 +382,34 @@ a {
                 display: none;
             }
 
-            .score {
-                padding-top: 15px;
+            // .score {
+            //     padding-top: 15px;
 
-                span {
-                    color: #ffffff;
-                    font-size: 16px;
-                    padding-right: 5px;
-                }
+            //     span {
+            //         color: #ffffff;
+            //         font-size: 16px;
+            //         padding-right: 5px;
+            //     }
 
-                img {
-                    vertical-align: text-bottom;
-                    width: 18px;
-                }
-            }
+            //     img {
+            //         vertical-align: text-bottom;
+            //         width: 18px;
+            //     }
+            // }
 
             .mark {
-                // outline: 1px solid #f00;
-                font-size: 15px;
-                color: #ffffff;
-
-                img {
-                    width: 22px;
-                    margin: 10px;
+                float: right;
+                margin: 10px;
+                span{
+                    font-size: 14px;
+                    color: #eeeeee;
+                }
+                .love{
+                    width: 25px;
+                    bottom: 5px;
+                    right: 5px;
+                    vertical-align: bottom;
+                    margin-right: 5px;
                 }
             }
         }
@@ -482,28 +484,18 @@ a {
                 height: 210px;
             }
 
-            .score {
-                margin-top: 10px;
+            // .score {
+            //     margin-top: 10px;
 
-                span {
-                    font-size: 14px;
-                    padding-right: 2px;
-                }
+            //     span {
+            //         font-size: 14px;
+            //         padding-right: 2px;
+            //     }
 
-                img {
-                    width: 15px;
-                }
-            }
-
-            .mark {
-                font-size: 14px;
-
-                img {
-                    width: 20px;
-                    margin: 5px;
-                    margin-bottom: 10px;
-                }
-            }
+            //     img {
+            //         width: 15px;
+            //     }
+            // }
         }
     }
 
@@ -555,7 +547,7 @@ a {
                     overflow: hidden;
                     float: left;
 
-                    img {
+                    .box {
                         width: 120px;
                     }
                 }
@@ -580,7 +572,7 @@ a {
                     }
 
                     .mark {
-                        margin-top: 10px;
+                        margin-top: 63px;
                     }
 
                     .mark img {
@@ -652,9 +644,9 @@ a {
         right: 10px;
     }
 }
-.boxBlue{border: 3px solid $borderColorBlue;}
-.boxOrange{border: 3px solid $borderColorOrange;}
-.boxGreen{border: 3px solid $borderColorGreen;}
+#lightBox.boxBlue{border: 3px solid $borderColorBlue;}
+#lightBox.boxOrange{border: 3px solid $borderColorOrange;}
+#lightBox.boxGreen{border: 3px solid $borderColorGreen;}
 
 #lightBox:after {
     content: "";

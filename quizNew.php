@@ -6,13 +6,29 @@
     <!-- <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"> -->
     <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
     <title>Oh!planet!quiz</title>
-    <link rel="stylesheet" href="css/styleQuizNew.css">
     <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="css/member.css">
+    
+    <link rel="stylesheet" href="css/expert.css">
+    <link rel="stylesheet" href="css/styleQuizNew.css">
+    
+
+
+
 
 
 </head>
 <body>
 <!-- 開場動畫 -->
+
+<header>
+        <?php include 'php/login.php';?>
+</header>
+
+
+
+
+
 
 <h1 class="ml11">
         <span class="text-wrapper">
@@ -20,14 +36,12 @@
         <span class="letters">歡迎使用旅行測驗</span>
         </span>
     </h1>
-
-
     <!-- nav -->
-    <div class="navColor">
+    <!-- <div class="navColor">
             <img class="navPic" src="img/bg.png" alt="">
         </div>
         <nav>
-            <!-- desk -->
+           
             <ul class="menu mRight">
                 <li><a href="planning.html">開始冒險</a></li>
                 <li><a href="expert.html">專家帶你玩</a></li>
@@ -43,7 +57,7 @@
                 <li class="shoppingCar">
                     <a href="#">
                         <img class="shoppingCarPic" src="img/shopping car.png" alt="">
-                        <!-- <img class="shoppingCarHover" src="img/shoppingCarHover.png" alt=""> -->
+                        
                     </a>
                 </li>
                 <li class="memberSign"><a href="#">登入</a></li>
@@ -57,7 +71,7 @@
                 <li><a href="member_profile.html">會員資料修改</a></li>
                 <li><a href="sign.html">登出</a></li>
             </ul>
-            <!-- mobile -->
+           
             <div class="hambger">
                 <div class="line"></div>
             </div>
@@ -69,7 +83,7 @@
                 <li><a href="member.html">會員專區</a></li>
                 <li><a href="shop.html">購物車</a></li>
             </ul>
-        </nav>
+        </nav> -->
 
 
 
@@ -225,11 +239,12 @@
 
 <div id="particles-js"></div>
 
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/style.js"></script>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+
 <script src="js/particles.min.js"></script>
 <script src="libs/anime/anime.min.js"></script>
-<script src="js/login.js"></script>
+
 <script src="js/quizNew.js"></script>
+
 </body>
 </html>
