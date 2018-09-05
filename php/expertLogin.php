@@ -6,29 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- css -->
-    <link rel="stylesheet" href="css/expert.css">
+    <link rel="stylesheet" href="../css/expert.css">
     <!-- <link rel="stylesheet" href="libs/lity/lity.css"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
     <!-- plugin -->
-    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-    <script src="libs/jquery/dist/jquery.min.js"></script>
-    <script src="libs/gsap/src/minified/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../libs/jquery/dist/jquery.min.js"></script>
+    <script src="../libs/gsap/src/minified/TweenMax.min.js"></script>
     <!-- <script type="text/javascript" src="js/parallax.min.js"></script> -->
     <!-- scroll -->
 
-    <link rel="icon" type="text/css" href="img/logovb.png">
+    <link rel="icon" type="text/css" href="../img/logovb.png">
     <title>OH~PLANETS! | 專家帶你玩</title>
 </head>
 
 <body>
     <!-- nav -->
-    <div class="navColor">
+    <!-- <div class="navColor">
         <img class="navPic" src="img/bg.png" alt="">
-    </div>
-     <nav>
+    </div> -->
+    <!-- <nav> -->
         <!-- desk -->
-       <ul class="menu mRight">
+      <!--   <ul class="menu mRight">
             <li>
                 <a href="planning.html">開始冒險</a>
             </li>
@@ -82,10 +82,10 @@
             </li>
 
         </ul>
-    </nav>
-    <!-- <header>
+    </nav> -->
+    <header>
         <?php include 'login.php';?>
-    </header> -->
+    </header>
 
 
     
@@ -110,8 +110,8 @@
 
 
     <div class="cloud_group">
-        <img class="cloud1" src="img/expertImg/cloud.png">
-        <img class="cloud2" src="img/expertImg/cloud.png">
+        <img class="cloud1" src="../img/expertImg/cloud.png">
+        <img class="cloud2" src="../img/expertImg/cloud.png">
     </div>
 
 
@@ -469,7 +469,7 @@
     <!-- footer -->
     <footer>
 
-        <img src="img/expertImg/footerbg-3.png">
+        <img src="../img/expertImg/footerbg-3.png">
         <div class="copyright">
             <p>copyright@OhPlanets 2145</p>
         </div>
@@ -485,12 +485,12 @@
     <!-- <script src="libs/jquery/dist/jquery.min.js"></script> -->
 
     <!-- <script src="js/tween.js"></script> -->
-    <script src="libs/isotope/isotope.pkgd.min.js"></script>
+    <script src="../libs/isotope/isotope.pkgd.min.js"></script>
     <!-- <script src="js/isotope.js"></script> -->
     
-    <script src="js/style.js"></script>
-    <script src="js/expert.js"></script>
-    <script src="js/login.js"></script>
+    <script src="../js/style.js"></script>
+    <script src="../js/expert.js"></script>
+    <script src="../js/login.js"></script>
 </body>
 
 </html>

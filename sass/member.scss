@@ -23,6 +23,9 @@ a {
     color: $fontColorWhite;
 }
 
+@import "layout/nav";
+@import "layout/nav-small";
+
 // ========scrollBar change=========
 
 /* width */
@@ -503,7 +506,7 @@ figure img {
     width: 100%;
 }
 
-#img_update_btn {
+#member_pic {
     display: none;
 }
 
@@ -724,7 +727,7 @@ figure img {
     width: 100%;
 }
 
-#memUpdate_psw_span {
+#new_ps1_span {
     color: red;
 }
 
@@ -912,12 +915,13 @@ div[class^=col-] {
     }
 }
 
-@import "layout/footer";
+
 footer {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, .5) 100%); // background-image: linear-gradient(to top,rgba(0, 183, 255, .5), rgba(0, 255, 255, .5) 100%);
     // background-color: ;
 }
 
-@import "layout/nav-small";
-@import "layout/medium";
-@import "layout/desktop";
+
+// @import "layout/medium";
+// @import "layout/desktop";
+@import "layout/footer";

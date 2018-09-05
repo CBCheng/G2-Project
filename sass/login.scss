@@ -1,6 +1,19 @@
 @import "base/var";
 @import "base/reset";
 @import "mixin/mixin";
+@include body(12px);
+
+img{
+    width: 100%;
+    vertical-align: middle;
+}
+a {
+    text-decoration: none;
+    color: $fontColorWhite;
+}
+@import "layout/nav";
+@import "layout/nav-small";
+
 .login_modal {
     display: none;
     position: fixed;
@@ -129,3 +142,5 @@
 .login_content span {
     padding-top: 10px;
 }
+
+@import "layout/footer";

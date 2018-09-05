@@ -118,7 +118,7 @@ $(function(){
 // });
 
 $(function(){
-    $('.plVi').on('click',function(){
+    $('.plVi,.viewName').on('click',function(){
         // var ids = $(this).id;
         // console.log($(this).attr("id"));
         var thisId = $(this).attr("id");

@@ -63,7 +63,7 @@ try {
                 <a>
                     <img id="box" src="<?php echo $memRow["expertPic"];?>">
                 </a>
-                <div class="aside">
+                <!-- <div class="aside">
                     <h2 class="h2Ph"><?php echo $memRow["planet"];?></h2>
                     <h3 class="h3Ph"><?php echo $memRow["expertName"];?></h3>
                     <div class="score">
@@ -80,7 +80,7 @@ try {
                         <img src="img/expertImg/love.png" alt="love">
                         <span>20</span>
                     </div>
-                </div>
+                </div> -->
             </div> 
         </div>
 
@@ -97,7 +97,7 @@ try {
     	//=====跳窗打開=====
 			$(function () {
 				$(".element-item").click(function () {
-					$("#lightBox_father").show(500);
+					$("#lightBox_father").show(800);
 				})
 			})
 			

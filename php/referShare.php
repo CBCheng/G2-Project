@@ -25,21 +25,16 @@ try{
 ?>    
     <script>
         $('.mytrip').on('click',function(){
-            var $tripId = $(this).children().val();
-            // var newInput = $('<input id="tripName" type="text" placeholder="">');
-            // alert(tripId);
-            // $('#tripName').remove();
-            // $('.upload').prepend(newInput);
+            var tripId = $(this).children().val();
             $.ajax({
                 url: 'php/refChangeName.php',
+                data: {tripName:tripId},
                 type: 'POST',
                 dataType: 'text',
-                date: $tripId,
                 success: function (data) {
-                    alert(data);
-                    // $('#tripName').remove();
-                    // $('.upload').prepend(data);
-                    // alert('ok');
+                    // alert(data);
+                    $('#tripName').remove();
+                    $('.upload').prepend(data);
                 },
                 error: function () {
                     alert('error');
