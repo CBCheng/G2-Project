@@ -32,7 +32,7 @@ function getMemberInfo($pdo, $mId) {
     }
 } 
 
-$memberInfo = getMemberInfo($pdo, $_SESSION['MEM_NO']);
+$memberInfo = getMemberInfo($pdo, @$_SESSION['MEM_NO']);
 
 function updateMember ($pdo, $memPWD, $member_add, $member_phone, $member_bd, $member_id) {
 	$sql = "UPDATE member SET MEM_PSW = :MEM_PSW, MEM_ADDRESS = :MEM_ADDRESS, MEM_PHONE = :MEM_PHONE, MEM_BD = :MEM_BD WHERE MEM_NO = :MEM_NO";	
@@ -149,8 +149,8 @@ $member_pic = 'member_pic/'.@$_SESSION["MEM_IMG"];
                                         <tr>
                                             <th class="mob_hidden">姓名 :</th>
                                             <td>
-                                                <?php echo $memberInfo["MEM_NAME"]?>
-                                                
+
+                                                <?php echo @$memberInfo["MEM_NAME"]?>
                                             </td>
                                         </tr>
                                         <tr>
