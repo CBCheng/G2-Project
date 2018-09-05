@@ -7,12 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="../css/login.css">
     <link rel="stylesheet" type="text/css" href="../css/member.css">
-    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="stylesheet" href="../css/expert.css">
     <!-- plugin -->
     <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
     <script src="../libs/jquery/dist/jquery.min.js"></script>
-    <script src="../libs/gsap/src/minified/TweenMax.min.js"></script>
-    <script type="text/javascript" src="../js/parallax.min.js"></script>
+    <!-- <script src="../libs/gsap/src/minified/TweenMax.min.js"></script> -->
+    <!-- <script type="text/javascript" src="../js/parallax.min.js"></script> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>login</title>
@@ -34,7 +35,7 @@
             </li>
         </ul>
         <a href="index.html" class="logo">
-            <img src="img/logo-1.png">
+            <img src="../img/logo-1.png">
         </a>
         <ul class="menu mLeft">
             <li>
@@ -47,7 +48,7 @@
         <ul class="member">
             <li class="shoppingCar">
                 <a href="#">
-                    <img class="shoppingCarPic" src="img/shopping car.png" alt="">
+                    <img class="shoppingCarPic" src="../img/shopping car.png" alt="">
                     <!-- <img class="shoppingCarHover" src="img/shoppingCarHover.png" alt=""> -->
                 </a>
             </li>
