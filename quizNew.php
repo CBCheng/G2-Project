@@ -8,8 +8,6 @@
     <title>Oh!planet!quiz</title>
     <link rel="stylesheet" type="text/css" href="css/login.css">
     <link rel="stylesheet" type="text/css" href="css/member.css">
-    
-    <link rel="stylesheet" href="css/expert.css">
     <link rel="stylesheet" href="css/styleQuizNew.css">
     
 
@@ -19,72 +17,20 @@
 
 </head>
 <body>
-<!-- 開場動畫 -->
 
+<!-- nav -->
 <header>
-        <?php include 'php/login.php';?>
+        <?php include 'login.php';?>
 </header>
 
 
-
-
-
-
+<!-- 開場動畫 -->
 <h1 class="ml11">
         <span class="text-wrapper">
         <span class="mlline mlline1"></span>
         <span class="letters">歡迎使用旅行測驗</span>
         </span>
     </h1>
-    <!-- nav -->
-    <!-- <div class="navColor">
-            <img class="navPic" src="img/bg.png" alt="">
-        </div>
-        <nav>
-           
-            <ul class="menu mRight">
-                <li><a href="planning.html">開始冒險</a></li>
-                <li><a href="expert.html">專家帶你玩</a></li>
-            </ul>
-            <a href="index.html" class="logo">
-                <img src="img/logo-1.png">
-            </a>
-            <ul class="menu mLeft">
-                <li><a href="refer.html">別人怎麼玩</a></li>
-                <li><a href="shop.html">星際商城</a></li>
-            </ul>
-            <ul class="member">
-                <li class="shoppingCar">
-                    <a href="#">
-                        <img class="shoppingCarPic" src="img/shopping car.png" alt="">
-                        
-                    </a>
-                </li>
-                <li class="memberSign"><a href="#">登入</a></li>
-            </ul>
-            <ul class="memberSelect">
-                <li>Hi ~ 冒險者</li>
-                <li><a href="member_mytrip.html">我的行程</a></li>
-                <li><a href="member_favorite.html">我的收藏</a></li>
-                <li><a href="member_order.html">我的訂單</a></li>
-                <li><a href="member_comment.html">專家評論</a></li>
-                <li><a href="member_profile.html">會員資料修改</a></li>
-                <li><a href="sign.html">登出</a></li>
-            </ul>
-           
-            <div class="hambger">
-                <div class="line"></div>
-            </div>
-            <ul class="menuMobile">
-                <li><a href="planning.html">開始冒險</a></li>
-                <li><a href="expert.html">專家帶你玩</a></li>
-                <li><a href="refer.html">別人怎麼玩</a></li>
-                <li><a href="shop.html">星際商城</a></li>
-                <li><a href="member.html">會員專區</a></li>
-                <li><a href="shop.html">購物車</a></li>
-            </ul>
-        </nav> -->
-
 
 
 
@@ -243,8 +189,10 @@
 
 <script src="js/particles.min.js"></script>
 <script src="libs/anime/anime.min.js"></script>
-
+<!-- <script src="js/style.js"></script>
+<script type="text/javascript" src="js/login.js"></script> -->
 <script src="js/quizNew.js"></script>
+
 
 </body>
 </html>

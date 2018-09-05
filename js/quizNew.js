@@ -282,4 +282,4 @@ function changeOpacity(){
 
 
 
-window.onload = doFirst;
+window.addEventListener('load',doFirst,false);
