@@ -137,7 +137,7 @@
                 </form>
 
 
-                <img src="../img/login/login.png">
+                <img src="img/login/login.png">
             </div>
 
         </div>
