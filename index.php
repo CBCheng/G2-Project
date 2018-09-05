@@ -133,7 +133,7 @@
             <div class="line"></div>
         </div>
         <ul class="menuMobile">
-            <img class="navPic" src="img/bgM.png" alt="">
+            <!-- <img class="navPic" src="img/bgM.png" alt=""> -->
             <li>
                 <a href="planning.html">開始冒險</a>
             </li>
@@ -161,7 +161,7 @@
                 <span class="close">×</span>
                 <h3>註冊會員</h3>
 
-                <form method="post" action="enroll.php">
+                <form method="post" action="php/enroll.php">
 
                     <div>
                         <div class="login_input">
@@ -742,13 +742,14 @@
     </footer>
     <!-- footer end -->     
 <!-- jquery -->
-   
-<script src="js/style.js"></script>
+    
+    <script src="js/style.js"></script>
     
     
-    <script type="text/javascript" src="js/login.js"></script>
-    
-<script src="js/index.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/login.js"></script>
+
+
     <!-- <script src="js/tween.js"></script> -->
 </body>
 
