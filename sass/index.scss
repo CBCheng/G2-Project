@@ -1246,6 +1246,11 @@ width: 50px;
     background-color: #515052;
     padding: 5px;
 }
+// ===== 修飾SCSS =====
+.login_box .login_content {
+    min-height: 320px;
+}
+
 @media all and (min-width: 768px){
     @import "layout/indexDesk";
 }
