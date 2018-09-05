@@ -23,9 +23,9 @@
 
 <body>
     <!-- nav -->
-    <div class="navColor">
+    <!-- <div class="navColor">
         <img class="navPic" src="img/bg.png" alt="">
-    </div>
+    </div> -->
     <!-- <nav> -->
         <!-- desk -->
       <!--   <ul class="menu mRight">
@@ -92,7 +92,7 @@
 
 
 
-   <!--  <div class="title">
+    <div class="title">
         <h1>專家帶你玩</h1>
         <div id="can">
             <canvas id="canvas1" width="245" height="210">
@@ -104,14 +104,14 @@
             <img class="hexWhite" src="img/expertImg/hexWhite.png" alt="hexWhite">
             <img class="hexBlue" src="img/expertImg/hexBlue.png" alt="hexBlue">
         </div>
-    </div> -->
+    </div>
 
 
 
 
     <div class="cloud_group">
-        <img class="cloud1" src="img/expertImg/cloud.png">
-        <img class="cloud2" src="img/expertImg/cloud.png">
+        <img class="cloud1" src="../img/expertImg/cloud.png">
+        <img class="cloud2" src="../img/expertImg/cloud.png">
     </div>
 
 
@@ -469,7 +469,7 @@
     <!-- footer -->
     <footer>
 
-        <img src="img/expertImg/footerbg-3.png">
+        <img src="../img/expertImg/footerbg-3.png">
         <div class="copyright">
             <p>copyright@OhPlanets 2145</p>
         </div>

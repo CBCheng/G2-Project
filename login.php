@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="../css/login.css">
-    <link rel="stylesheet" type="text/css" href="../css/member.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="css/member.css">
+
+    <!-- <link rel="stylesheet" href="css/expert.css"> -->
     <!-- plugin -->
-    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
-    <script src="../libs/jquery/dist/jquery.min.js"></script>
-    <script src="../libs/gsap/src/minified/TweenMax.min.js"></script>
-    <script type="text/javascript" src="../js/parallax.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <!-- <script src="../libs/gsap/src/minified/TweenMax.min.js"></script> -->
+    <!-- <script type="text/javascript" src="../js/parallax.min.js"></script> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>login</title>
@@ -21,7 +22,7 @@
 <body>
     <!-- nav -->
     <div class="navColor">
-        <img class="navPic" src="../img/bg.png" alt="">
+        <img class="navPic" src="img/bg.png" alt="">
     </div>
     <nav>
         <!-- desk -->
@@ -47,7 +48,7 @@
         <ul class="member">
             <li class="shoppingCar">
                 <a href="#">
-                    <img class="shoppingCarPic" src="img/shopping car.png" alt="">
+                    <img class="shoppingCarPic" src="../img/shopping car.png" alt="">
                     <!-- <img class="shoppingCarHover" src="img/shoppingCarHover.png" alt=""> -->
                 </a>
             </li>
@@ -108,7 +109,7 @@
                 <span class="close">×</span>
                 <h3>註冊會員</h3>
 
-                <form method="post" action="enroll.php">
+                <form method="post" action="php/enroll.php">
 
                     <div>
                         <div class="login_input">
@@ -130,13 +131,13 @@
                             <label class="login_lable" style="top: 18px; color: grey;">*電子信箱 </label>
                             <span class="inputErr_notice">非電子信箱</span>
                         </div>
-                        <button type="submit" id="regist_btn" class="btn btn-o-nb">送出</button>
+                        <input type="submit" id="regist_btn" class="btn btn-o-nb" value="送出">
 
                     </div>
                 </form>
 
 
-                <img src="img/login/login.png">
+                <img src="../img/login/login.png">
             </div>
 
         </div>
@@ -170,8 +171,8 @@
             <p>copyright@OhPlanets 2145</p>
         </div>
     </footer>
-    <script src="../js/style.js"></script>
-    <script type="text/javascript" src="../js/login.js"></script>
+    <script src="js/style.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
 </body>
 
 </html>
