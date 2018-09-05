@@ -1,9 +1,16 @@
 function doFirst(){   
 
+
+
+// console.log(aa);
+// getDates(aa);
+
+		// sessionStorage.setItem("planet", '瓦特星');
 		//天數區 
 		var getUl = document.getElementById('day');
 		var getTxt = document.querySelectorAll('.getDay');
 		var getDay = getUl.querySelectorAll('li');
+		// console.log(getDay);
 		var copyDay = document.getElementById('copyDay');
 		var copyDate = document.getElementById('copyDate');
 		var addNewDay = document.getElementById('addNewDayBtn');
@@ -31,10 +38,10 @@ function doFirst(){
 
 		}
 		//移除天數
-		let confirmBox = document.querySelector('.deldayFilter');
+		let confirmBox = document.querySelector('.deleteBox');
 		var dayDel = document.querySelectorAll('.dayDel');
-		var yesBtn = document.querySelector('.yesBtn');
-		var noBtn = document.querySelector('.noBtn');
+		var yesBtn = document.querySelector('.dayyesBtn');
+		var noBtn = document.querySelector('.daynoBtn');
 		for(let i=0;i<dayDel.length;i++){
 			dayDel[i].addEventListener('click',confirmDay);
 		}
@@ -96,7 +103,7 @@ function doFirst(){
 			// for(i=0;i<getSchduleUls.length;i++){
 			// console.log(getSchduleUls[i].childNodes.length);}
 		//景點區
-		intr();
+		// intr();
 
 		// var getViewLi = document.querySelectorAll('.viewLi');
 		var getViewData = document.querySelectorAll('[data-view]');
@@ -108,14 +115,14 @@ function doFirst(){
 		var viewImg = document.querySelectorAll('.viewInfo');
 
 		for(var i=0;i<getViewData.length;i++){
-			viewImg[i].addEventListener('click', intr);
+			// viewImg[i].addEventListener('click', intr);
 		}
 		for(var i=0; i<addSchdule.length;i++){
 			addSchdule[i].addEventListener('click', addSchduleList);
 			// addSchdule[i].addEventListener('click', delView);
 		}
-		var viewName = document.querySelector('.viewName span');
-		viewName.addEventListener('click', closeViewInt);
+		// var viewName = document.querySelector('.viewName span');
+		// viewName.addEventListener('click', closeViewInt);
 
 
 			//選擇星球 planetFilter editPlanets
@@ -139,14 +146,14 @@ function doFirst(){
 				
 			var planetBtn = document.querySelector('.planetName');
 			var planetEdit = document.querySelector('.editPlanets');
-			planetBtn.addEventListener('click',selectPlanet);
-			planetEdit.addEventListener('click',selectPlanet);
+			// planetBtn.addEventListener('click',selectPlanet);
+			// planetEdit.addEventListener('click',selectPlanet);
 			var planetFilter = document.querySelector('.planetFilter');
 			var selectP = document.querySelector('.planetLightBox');
 			var txt = selectP.querySelectorAll('li');
-			for(var i=0;i<txt.length;i++){
-				txt[i].addEventListener('click',getPlanetName);
-			}
+			// for(var i=0;i<txt.length;i++){
+			// 	txt[i].addEventListener('click',getPlanetName);
+			// }
 			var closePlanetIcon = document.querySelector('.logoBar div span');
 				closePlanetIcon.addEventListener('click', function(){
 						planetFilter.style.display='none';
@@ -161,6 +168,7 @@ function doFirst(){
 
 			//景點分類
 			var allTag = document.querySelectorAll('.tag');
+			// console.log(allTag.length);
 			var int = document.querySelectorAll('.int');
 			var adv = document.querySelectorAll('.adv');
 			var tec = document.querySelectorAll('.tec');
@@ -178,7 +186,7 @@ function doFirst(){
 				if (window.innerWidth<1000){
 					let viewContent = document.querySelectorAll('.viewContent');
 						for(let i=0;i<viewContent.length;i++){
-							viewContent[i].addEventListener('click',intr);
+							// viewContent[i].addEventListener('click',intr);
 						}
 						
 					 let mobileBox = document.getElementById('mobileBox');
@@ -230,9 +238,9 @@ function doFirst(){
 					
 				if (window.innerWidth<1000){
 					let viewContent = document.querySelectorAll('.viewContent');
-						for(let i=0;i<viewContent.length;i++){
-							viewContent[i].addEventListener('click',intr);
-						}
+						// for(let i=0;i<viewContent.length;i++){
+						// 	// viewContent[i].addEventListener('click',intr);
+						// }
 					 let mobileBox = document.getElementById('mobileBox');
 					 let searchSchdule = document.querySelector('.searchSchdule');
 					 let schMoveInBox =	document.querySelector('.schMoveInBox');
@@ -283,6 +291,15 @@ function doFirst(){
 	// 	// delDay(data);
 	// 	confirmBox.style.display='none';
 	// }
+// 	var schMoveIn =	document.querySelector('.schMoveInBox');
+// 		schMoveIn.addEventListener('click',moveIn);
+// function moveIn(){
+
+// }
+					//儲存行程燈箱
+		var saveDataBox= document.querySelector('.saveDataBox');
+
+
 
 function confirmDay(){
 		if(getDay.length==3){
@@ -321,12 +338,16 @@ function delDay(data){
 					// console.log(data.parentNode.parentNode.dataset.daybox,getSchduleUls[i].dataset.schdulebox);
 							// console.log(getSchduleUls[1].parentNode.childNodes.length);
 							// console.log(getSchduleUls.length);
+
+							console.log(data.parentNode.parentNode.dataset.daybox);
 						for(var j=0;j<getSchduleUls[0].parentNode.childNodes.length;j++){
-						// 	console.log(getSchduleUls[i].parentNode.childNodes[j].dataset.schdulebox);
-							// console.log(data.parentNode.parentNode.dataset.daybox);
-							if(data.parentNode.parentNode.dataset.daybox == getSchduleUls[i].parentNode.childNodes[j].dataset.schdulebox){
+							console.log(getSchduleUls[i].parentNode);
+							var setSchdulebox =getSchduleUls[i].parentNode.querySelectorAll('ul');
+
+							// console.log(setSchdulebox[1].dataset.daybox);
+							if(data.parentNode.parentNode.dataset.daybox == setSchdulebox[j].dataset.schdulebox){
 						
-							getSchduleUls[i].parentNode.removeChild(getSchduleUls[i].parentNode.childNodes[j]);
+							getSchduleUls[i].parentNode.removeChild(setSchdulebox[j]);
 							data.parentNode.parentNode.parentNode.removeChild(data.parentNode.parentNode);
 								
 								if(window.innerWidth<1000){
@@ -351,7 +372,8 @@ function delDay(data){
 			
 			}
 			// alert('1');
-	resetDays();		
+	resetDays();
+		
 }			// setTimeout(newDates,2000);
 
 function delay(){
@@ -409,7 +431,7 @@ function schName(){
 		// confirmSchBtn[1].style.display='block';
 
 	}
-	
+		
 }
 
 
@@ -434,7 +456,7 @@ function confirm(e){
 			// console.log(e.target.parentNode.dataset.date);
 			// console.log(e.target.parentNode);
 			if(e.target.parentNode.classList.contains('pignose-calendar-unit-first-active')==true){
-			getDates(e.target.parentNode);
+			getDates(e.target.parentNode.dataset.date);
 			}else{
 				return;
 			}
@@ -449,8 +471,18 @@ function confirm(e){
 }
 //確定日期後帶入日期
 function getDates(data){
-			reflashInfo();					
-			var x=data.dataset.date;
+			reflashInfo();	
+
+			// console.log(data);	
+			// if(data){
+			// 	alert('1');
+			// 	
+			// }else{
+			// 	alert('2');
+			// }			
+			var x=data;
+			sessionStorage.setItem("date",x);
+			
 			// console.log(x);
 			var currentDate =new Date();
 			var curYears = currentDate.getFullYear();
@@ -470,6 +502,7 @@ function getDates(data){
 							var nextDay = days+counts;
 							var num =getDate.length-nextDay;
 									if(num>=0){
+										// console.log(upDate[i]);
 									upDate[i].innerHTML = '2018年'+mons+'月'+nextDay+'日';
 									counts+=1;
 									}
@@ -512,13 +545,13 @@ function dateLightBoxTri(){
 	}
 }
 
-function selectPlanet(){
-	const planetLightBoxInfo = document.querySelector('.selectPlanetTitle');
-	planetLightBoxInfo.innerHTML = '請選擇想去的星球';
-	// planetLightBoxInfo.innerHTML = '請選擇想去的星球<br><span>(更換星球將清除未儲存紀錄)</span>';
-	planetFilter.style.display='block';
+// function selectPlanet(){
+// 	const planetLightBoxInfo = document.querySelector('.selectPlanetTitle');
+// 	planetLightBoxInfo.innerHTML = '請選擇想去的星球';
+// 	// planetLightBoxInfo.innerHTML = '請選擇想去的星球<br><span>(更換星球將清除未儲存紀錄)</span>';
+// 	planetFilter.style.display='block';
 
-}
+// }
 
 
 
@@ -530,6 +563,13 @@ function changeColorAndFilter(){
 	// 	console.log(getSchduleUls[x]);
 	// }
 // }
+// for(var p=0;p<getViewData.length;p++){
+// 	if(getViewData[p].style.display=='inline-block'){
+// 		getViewData[p].style.top='0px';
+// 	}
+	
+// }
+
 	//focus標籤
 	this.classList.add('focusStyle');
 
@@ -550,7 +590,12 @@ function changeColorAndFilter(){
 
 	if(this.innerHTML=='全部'){
 		for(let o=0;o<getViewData.length;o++){
-				getViewData[o].style.display='inline-block';
+
+				
+					getViewData[o].style.display='inline-block';
+				
+				
+				// console.log(getViewData);
 			}
 			// getSchduleUls = document.querySelectorAll('.list');
 			for(let a=0;a<getSchduleUls.length;a++){
@@ -587,30 +632,54 @@ function changeColorAndFilter(){
 
 		}
 		else{
-			for(var i=0;i<allTag.length;i++){
-				
-					allTag[i].parentNode.parentNode.parentNode.style.display='inline-block';
-				
-				
-					if(this.innerHTML!=allTag[i].innerHTML){
+			for(var i=0;i<getViewData.length;i++){
+					
+					getViewData[i].style.display='none';
+					var getTagBox = document.querySelectorAll('.viewLi .tagBox');
+					var getSpan = getTagBox[i].querySelectorAll('span');
 
-					allTag[i].parentNode.parentNode.parentNode.style.display='none';
+					// console.log(getViewData[i],getTagBox[i].parentNode.parentNode.parentNode);
+					if(getSpan.length==2){
+							// getTagBox[i].parentNode.parentNode.parentNode.style.display='none';
+						if(this.innerHTML==getSpan[0].innerHTML || this.innerHTML== getSpan[1].innerHTML){
+							getViewData[i].style.display='inline-block';
+							// getViewData[i].style.top='0px';
+							// console.log(i,getViewData[i].dataset.view,this.innerHTML,getSpan[0].innerHTML,getSpan[1].innerHTML);
+							// console.log(getTagBox[i].parentNode.parentNode.parentNode);
+						}
+					}
+					else if(getSpan.length==1){
+							// console.log(getSpan[0].innerHTML);
+						if(this.innerHTML==getSpan[0].innerHTML){
+							getViewData[i].style.display='inline-block';
+								}
+
+					// 		console.log(allTag[i].innerHTML,this.innerHTML);
+					// 		console.log(this.innerHTML);
+					// 		console.log(allTag[i].parentNode.parentNode.parentNode.parentNode);
+					// allTag[i].parentNode.parentNode.parentNode.parentNode.style.display='none';
 						
+						//偵測景點是否被加入 是的話就隱藏
 						for(let a=0;a<getSchduleUls.length;a++){
 							if(getSchduleUls[a].style.display=='block'){
 								var lis = getSchduleUls[a].querySelectorAll('li');
 							for(let j=0;j<lis.length;j++){
 								let num =lis[j].dataset.schdule;
 								let tempLi=document.querySelector('[data-view="'+num+'"]');
-								console.log(tempLi);
+								// console.log(tempLi);
 								tempLi.style.display='none';
 
-							}
+										}
+									}
+
+								}
+							
 						}
 
-					}
+
 				
-			}	
+
+						
 
 		}	
 	}
@@ -642,27 +711,27 @@ function changeColorAndFilter(){
 
 }
 
-var addViewImg = document.querySelector('.addViewImg');
-addViewImg.addEventListener('click',intr);
-function intr(){
-	var intr=document.querySelector('.viewFilter');
-	if(intr.style.display=='none'){
-		intr.style.display='block';
-	}else{
-		intr.style.display='none';
-	}
+// var addViewImg = document.querySelector('.addViewImg');
+// addViewImg.addEventListener('click',intr);
+// function intr(){
+// 	var intr=document.querySelector('.viewFilter');
+// 	if(intr.style.display=='none'){
+// 		intr.style.display='block';
+// 	}else{
+// 		intr.style.display='none';
+// 	}
 
-	// viewName.addEventListener('click', closeViewInt);
+// 	// viewName.addEventListener('click', closeViewInt);
 
-}
-function closeViewInt(){
-		var intr=document.querySelector('.viewFilter');
-	if(intr.style.display=='block'){
-		intr.style.display='none';
-	}else{
-		intr.style.display='block';
-	}
-}
+// }
+// function closeViewInt(){
+// 		var intr=document.querySelector('.viewFilter');
+// 	if(intr.style.display=='block'){
+// 		intr.style.display='none';
+// 	}else{
+// 		intr.style.display='block';
+// 	}
+// }
 function reflashInfo(){
 				//天數區
 				 getUl = document.getElementById('day');
@@ -675,6 +744,7 @@ function reflashInfo(){
 
 				getSchduleUl1 = document.getElementById('schduleDay1');
 				getSchduleUls = document.querySelectorAll('.list');
+
 			// var getSchduleUl = document.querySelector('[data-list="1"]');
 			// var getSchduleUl2 = document.querySelector('[data-list="2"]');
 			// var getSchduleUl3 = document.querySelector('[data-list="3"]');
@@ -693,7 +763,7 @@ function resetDays(){
 
 		
 			for(var i=0;i<getDay.length;i++){
-				
+				console.log(getTxt[i].innerHTML);
 				getTxt[i].innerHTML = 'D'+parseInt(i+1);
 			
 
@@ -799,7 +869,11 @@ function upDateCopy(){
 	reflashInfo();
 	var getSchduleUls = document.querySelectorAll('.list');
 	for(var i=0;i<getDayLis.length;i++){
+		// console.log(i);
+		// console.log(getDayLis.length);
 			getDayLis[i].index=i;
+			// console.log(getDayLis.length);
+			// console.log(getSchduleUls.length);
 			getSchduleUls[i].index=i;
 		if(getSchduleUls[i].style.display=='block'){
 			for(var j=0;j<getDayLis.length;j++){
@@ -853,7 +927,8 @@ function copyToSchdule(){
 
 							// if(window.innerWidth<1000){
 						lis = getSchduleUls[i].querySelectorAll('li');
-						viewsCount.innerHTML='('+lis.length+')';
+						console.log(lis.length);
+						viewsCount.innerHTML='('+(lis.length)+')';
 						getDayLis = document.querySelectorAll('.dayList');
 						// if(getDayLis[i]==this){
 						// 	dayNum.innerHTML='D'+(i+1);
@@ -866,7 +941,14 @@ function copyToSchdule(){
 						
 							// }
 				// console.log(getSchduleUls[i].childNodes.length);
-					if(getSchduleUls[i].childNodes.length!=0){
+		// 		if((tmp.length-1)==0){
+		// 	console.log((tmp.length-1));
+		// schduleEmptyTxt.style.display='block';
+
+		// }		
+		console.log(getSchduleUls[i]);
+		var li = getSchduleUls[i].querySelectorAll('li');
+					if(li.length!=0){
 						schduleEmptyTxt.style.display='none';
 						
 							//偵測各天的景點
@@ -905,10 +987,15 @@ function copyToSchdule(){
 
 
 //增加行程天數
-var num = 3;
-var ulnum= 4;
-var uldataset=3;
+// function getval(num,ulnum,uldataset){
+
+
+var num = 6;
+var ulnum= 7;
+var uldataset=6;
 function addDay(){
+	// var num = 3;
+	// var uldataset=3;
 	var getDayDatas = document.querySelectorAll('[data-daybox]');
 	var cloneDayLi = document.getElementById('cloneDayLi');
 	var addLi = cloneDayLi.cloneNode(true);
@@ -966,6 +1053,7 @@ function addDay(){
 		num+=1;
 		ulnum+=1;
 		uldataset+=1;
+
 }
 //引入行程燈箱開關
 function schduleTrigger(){
@@ -980,56 +1068,94 @@ function schduleTrigger(){
 
 //移除行程內景點，並恢復成原景點
 function restoreView(){
- var tmp = this.parentNode.parentNode.parentNode;
+var tmp = this.parentNode.parentNode.parentNode.querySelectorAll('li');
 
-	this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode);//移除行程內景點li
-
+	// this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode);//移除行程內景點li
+ 	
+  // console.log(tmp.length);
 	var schduleDataNum= this.parentNode.parentNode.dataset.schdule;//找到點擊移除icon所在的父層li的dataset值
 
 	var getData = document.querySelector('[data-view="'+schduleDataNum+'"]');//將值帶回原景點，兩邊的dataset值是一樣的，所以可以找回相同dataset的原景點li
 	var viewsCount = document.querySelector('.viewsCount');	
-	var blockTag = this.parentNode.querySelector('span:nth-of-type(1)');
-	// console.log(this.parentNode);
+	var tagBox = this.parentNode.querySelectorAll('.tagBox span');
+	// console.log(tagBox[0]);
+	// if(tagBox.length==1){
+		// var blockTag1 = this.parentNode.querySelector('span:nth-of-type(1)');
+	// }else{
+		// var blockTag1 = this.parentNode.querySelector('span:nth-of-type(1)');
+		// var blockTag2 = this.parentNode.querySelector('span:nth-of-type(2)');
+	// }
+
+	// console.log(tagBox.length);
+	// console.log(tagBox);
+	// console.log(tagBox[0]);
+	// console.log(tagBox[1]);
+
 	// console.log(blockTag);
 
 	//顯現隱藏的原景點li
-	for(var i=0;i<tagListLi.length;i++){
-		// console.log(tagListLi[i].innerHTML);
-		// console.log(blockTag.innerHTML);
+	for(let b =0;b<tagBox.length;b++){
+		console.log(tagBox.length);
+	// if(tagBox.length==1){
+		for(let i=0;i<tagListLi.length;i++){ //跑標簽數
+		//如果是選到的標籤，就比對已加入行程內的景點的標籤，標籤一樣的話加回去時就會顯現，標籤不一樣就不會
 		if(tagListLi[i].classList.contains('focusStyle') 
-			&& tagListLi[i].innerHTML == blockTag.innerHTML 
+			&& (tagListLi[i].innerHTML == tagBox[b].innerHTML)
 			|| tagListLi[i].classList.contains('focusStyle') 
-			&& tagListLi[i].innerHTML == '全部'){
-		console.log(tagListLi[i].innerHTML);
-		console.log(blockTag.innerHTML);
-		getData.style.display='inline-block';
+
+			&& tagListLi[i].innerHTML =='全部'){
+
+			getData.style.display='inline-block';
+		
 		}
-	}
-	// getData.style.display='inline-block';
+	  }
+}
+
+	// }else if(tagBox.length==2){
+	// 	for(var i=0;i<tagListLi.length;i++){ //跑標簽數
+	// 	//如果是選到的標籤，就比對已加入行程內的景點的標籤，標籤一樣的話加回去時就會顯現，標籤不一樣就不會
+	// 	if(tagListLi[i].classList.contains('focusStyle') 
+	// 		&& (tagListLi[i].innerHTML == tagBox[0].innerHTML 
+	// 			|| 
+	// 			tagListLi[i].innerHTML == tagBox[1].innerHTML)
+	// 		|| tagListLi[i].classList.contains('focusStyle') 
+
+	// 		&& tagListLi[i].innerHTML =='全部'){
+	// 		// console.log(tagListLi[i].innerHTML);
+	// 		// console.log(blockTag1.innerHTML,blockTag2.innerHTML);
+
+	// 		getData.style.display='inline-block';
+		
+	// 	}
+	//   }
+	// }
+	
 	
 
-
-	// console.log(tmp.childNodes.length);
-		if(tmp.childNodes.length==0){
-
-			
+		this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode);
+		if((tmp.length-1)==0){
+			console.log((tmp.length-1));
 		schduleEmptyTxt.style.display='block';
 		}
 		for(var i=0;i<getSchduleUls.length;i++){
 			lis = getSchduleUls[i].querySelectorAll('li');
+			console.log(lis.length);
 			if(window.innerWidth<1000 && getSchduleUls[i].style.display=='block'){
 				
 				
 				viewsCount.innerHTML='('+lis.length+')';
 				}
 		}	
+		
 
-}	
+		
+// var tmp = this.parentNode.parentNode.parentNode.querySelectorAll('li');
+}
+
 // var counts = 0;
 //將景點加入行程
 function addSchduleList(){
 			reflashInfo(); //加入前檢查目前li數量
-	// getSchduleLi = getSchduleUl.querySelectorAll('li');
 	var copyLiStyle = document.getElementById('copyLiStyle');//抓到樣板
 	var ItemName = copyLiStyle.querySelector('.ItemName');//抓取移除icon的位置
 	
@@ -1068,14 +1194,19 @@ function addSchduleList(){
 					}
 					else{
 					getSchduleUls[i].appendChild(addLi);
+					$('.viewIntroduce').remove(); //jquery
 					schduleEmptyTxt.style.display='none';
 					// counts+=1;
 					// viewsCount.innerHTML=counts;
 					if(window.innerWidth<1000){
 						lis = getSchduleUls[i].querySelectorAll('li');
 						viewsCount.innerHTML='('+lis.length+')';
-		}
+						}
+
+						
 					this.parentNode.parentNode.style.display='none';
+						
+					
 					}	
 			}
 		}
@@ -1101,41 +1232,42 @@ function addSchduleList(){
 // 		}	
 
 
-// 	}
+// 	}	
 
+				
 
+			// var commitBtn = document.querySelector('.saveBtn');
+			// 	commitBtn.addEventListener('click',function(){
 
-			var commitBtn = document.querySelector('.saveBtn');
-				commitBtn.addEventListener('click',function(){
-					var cc = window.confirm('行程已儲存\n"確定"後將根據您所選的行程安排適合的專家\n"取消"將移至會員行程頁面');
-					console.log(cc);
-					if(cc==true){
-					document.querySelector('.expertFilter').style.display ='block';			
-					}else{
-					alert('跳');
-					}
-			});
-var planetFilter = document.querySelector('.planetFilter');
-function getPlanetName(){
-		var planetName = document.querySelector('.planetName');
-		var txt = this.querySelector('p');
-		// console.log(txt.innerHTML);
-		sessionStorage.setItem("planet", txt.innerHTML);
-		var x =sessionStorage.getItem("planet");
-		// console.log(x);
+			// 		var cc = window.confirm('行程已儲存\n"確定"後將根據您所選的行程安排適合的專家\n"取消"將移至會員行程頁面');
+			// 		console.log(cc);
+			// 		if(cc==true){
+			// 		document.querySelector('.expertFilter').style.display ='block';			
+			// 		}else{
+			// 		alert('跳');
+			// 		}
+			// });
+// var planetFilter = document.querySelector('.planetFilter');
+// function getPlanetName(){
+// 		var planetName = document.querySelector('.planetName');
+// 		var txt = this.querySelector('p');
+// 		// console.log(txt.innerHTML);
+// 		sessionStorage.setItem("planet", txt.innerHTML);
+// 		var x =sessionStorage.getItem("planet");
+// 		// console.log(x);
 		
-		// planetName.style.fontFamily='微軟正黑體';
-		// planetName.style.lineHeight='35px';
+// 		// planetName.style.fontFamily='微軟正黑體';
+// 		// planetName.style.lineHeight='35px';
 		
-		let a = window.confirm('更換星球將會重置所有安排')
-		if (a==true) {
-			planetName.innerHTML = x;
-			planetFilter.style.display='none';
-			window.location.reload();
-		}else{
-			planetFilter.style.display='none';
+// 		let a = window.confirm('更換星球將會重置所有安排')
+// 		if (a==true) {
+// 			planetName.innerHTML = x;
+// 			planetFilter.style.display='none';
+// 			window.location.reload();
+// 		}else{
+// 			planetFilter.style.display='none';
 			
-		}
+// 		}
 		
 		// console.log(cloneDayUl);
 		// console.log(getUl);
@@ -1153,6 +1285,291 @@ function getPlanetName(){
 		// console.log(getUl);
 		// reflashInfo();
 
+// }
+// var a=document.querySelector('.mySchduleList');
+// console.log(a);
+
+  // $('#schduleTrig').click(function(){
+
+// setTimeout()
+// setTimeout(function(){
+// var a=document.querySelector('.mySchduleList');
+// console.log(a);
+
+	// $('.mySchduleList').find('li').click(function(){
+
+		// alert('1');indexViewNo
+		// sessionStorage.getItem('viewNo')
+
+		//匯入首頁單個景點
+		// console.log(sessionStorage.getItem('indexViewNo'));
+if (sessionStorage.getItem('indexViewNo')!=null &&sessionStorage.getItem('indexViewNo')!='') {
+	var $indexViewNo = sessionStorage.getItem('indexViewNo');
+
+
+	
+	$.ajax({
+					url: 'php/addSingleView.php',
+					dataType:'text',
+					type:'POST',
+					// async: false,
+					data:{
+							viewNo:$indexViewNo,
+							
+							},
+					success:function(data){
+						$('#schduleDay1').append(data);
+
+						reflashInfo();
+   				// for(var i=0;i<getSchduleUls.length;i++){
+   					// console.log(getSchduleUls.length);
+   				lis = getSchduleUls[0].querySelectorAll('li');
+   				// console.log(lis);
+   				if(getSchduleUls[0].childNodes.length!=0){
+						schduleEmptyTxt.style.display='none';
+						
+							//偵測各天的景點
+							for(let k=0;k<getViewData.length;k++){
+								getViewData[k].style.display='inline-block';
+								// console.log(getViewData.length);
+							}
+							for(let j=0;j<lis.length;j++){
+									let num =lis[j].dataset.schdule;
+
+									// console.log(i,num);
+									let tempLi=document.querySelector('[data-view="'+num+'"]');
+									// console.log(tempLi);
+									tempLi.style.display='none';
+									// console.log(tempLi);
+							}
+					}else{
+						schduleEmptyTxt.style.display='block';
+						for(let k=0;k<getViewData.length;k++){
+							getViewData[k].style.display='inline-block';
+							}
+					}
+				// }
+
+
+
+			for(var i=1;i<$('#schduleUl ul').length;i++){
+				Sortable.create(document.getElementById('schduleDay'+i), {
+                                animation: 150,
+                     });
+
+			}
+				$('.deleteIcon').on('click',restoreView);
+
+				// getval();
+
+				// var ulnum= document.querySelectorAll('.list').length;
+				// console.log(ulnum);
+
+				var moveInTime =sessionStorage.getItem("date");
+				if(moveInTime!=null){
+				getDates(moveInTime);
+				console.log(moveInTime);
+
+				}
+
+
+
+
+						},
+
+					error:function(xhr, ajaxOptions, thrownError)
+					{ 
+					alert("error");
+					alert(xhr.status); 
+					alert(thrownError);  
+					}
+
+
+				});
 }
+
+//匯入分享的景點
+if(sessionStorage.getItem('scheduleNo')!=null&&sessionStorage.getItem('indexViewNo')!=''){
+	$takeData=sessionStorage.getItem("schduleNo");
+	console.log($takeData);
+		$.ajax({
+			url: 'php/takeData.php',
+			dataType:'text',
+			type:'POST',
+			// async : false,
+			data:{
+					takeData:$takeData,
+					
+					},
+			success:function(data){
+				// $('#day li').remove();
+				// $('#day').append
+				$('#schduleUl ul').remove();
+				$('#schduleUl').append(data);
+
+				// var $schUl = $('#schduleUl ul');
+				// console.log($schUl.length);
+
+
+
+					// var $transJson=JSON.parse(data);
+					// console.log($('#schduleUl ul').length);
+				// $('.schduleEmptyTxt').css('display','none');	
+				$('#schduleUl ul:nth-of-type(1)').css('display','block');
+					// console.log($('#schduleUl ul'));
+			// Sortable.create(document.getElementById('day'), {
+   //                              animation: 150,
+   //                          });	
+   				reflashInfo();
+   				// for(var i=0;i<getSchduleUls.length;i++){
+   					// console.log(getSchduleUls.length);
+   				lis = getSchduleUls[0].querySelectorAll('li');
+   				// console.log(lis);
+   				if(getSchduleUls[0].childNodes.length!=0){
+						schduleEmptyTxt.style.display='none';
+						
+							//偵測各天的景點
+							for(let k=0;k<getViewData.length;k++){
+								getViewData[k].style.display='inline-block';
+								// console.log(getViewData.length);
+							}
+							for(let j=0;j<lis.length;j++){
+									let num =lis[j].dataset.schdule;
+
+									// console.log(i,num);
+									let tempLi=document.querySelector('[data-view="'+num+'"]');
+									// console.log(tempLi);
+									tempLi.style.display='none';
+									// console.log(tempLi);
+							}
+					}else{
+						schduleEmptyTxt.style.display='block';
+						for(let k=0;k<getViewData.length;k++){
+							getViewData[k].style.display='inline-block';
+							}
+					}
+				// }
+
+
+
+			for(var i=1;i<$('#schduleUl ul').length;i++){
+				Sortable.create(document.getElementById('schduleDay'+i), {
+                                animation: 150,
+                     });
+
+			}
+				$('.deleteIcon').on('click',restoreView);
+
+				// getval();
+
+				// var ulnum= document.querySelectorAll('.list').length;
+				// console.log(ulnum);
+
+				var moveInTime =sessionStorage.getItem("date");
+				if(moveInTime!=null){
+				getDates(moveInTime);
+				console.log(moveInTime);
+
+				}
+				var lis = document.querySelectorAll('#schduleDay1 li');
+				var viewsCount = document.querySelector('.viewsCount');
+				viewsCount.innerHTML='('+(lis.length)+')';
+
+				var daylis = document.querySelectorAll('#day li');
+				var daysCount = document.querySelector('.daysCount');
+				daysCount.innerHTML='('+daylis.length+')';
+				
+
+				},
+
+			error:function(xhr, ajaxOptions, thrownError)
+			{ 
+			alert("error");
+			alert(xhr.status); 
+			alert(thrownError);  
+			}
+
+
+
+
+		});
+
+	}
+	
+//儲存取值
+
+// var ss = document.querySelector('.ss');
+// ss.addEventListener('click',submit);
+// function submit(){
+// 	var sch={};
+// 	var dateSpan = document.querySelectorAll('.date');
+					
+// 			var firstDay = dateSpan[0].innerHTML;
+// 				firstDay = firstDay.replace("年","-");
+// 				firstDay = firstDay.replace("月","-");
+// 				firstDay = firstDay.replace("日","");
+// 			var num = dateSpan.length-1;
+// 			var lastDay = dateSpan[num].innerHTML;
+// 				lastDay = lastDay.replace("年","-");
+// 				lastDay = lastDay.replace("月","-");
+// 				lastDay = lastDay.replace("日","");
+// 				// console.log(firstDay);
+// 				// console.log(lastDay);
+// 	var schName=document.querySelector('.searchSchdule p').innerHTML;
+// 	var planetName = document.querySelector('.planetName').innerHTML;
+// 	var schViewUls = document.querySelectorAll('.list');
+// 	var dayLiOrder = document.querySelectorAll('#day li');
+// 	sch.name = schName;
+// 	sch.depTime = firstDay;
+// 	sch.arrTime = lastDay;
+// 	sch.planetName = planetName.trim();
+// 	sch.share=0;
+// 	sch.memNo = 2;
+// 	sch.expertNo= 102;
+// 	sch.itineraryPic='p1_v1_03.jpg';
+// 	sch.daysData=[];
+
+// 	for(var i =0;i<schViewUls.length;i++){
+		
+// 		var dayLiSet = dayLiOrder[i].dataset.daybox;
+// 		// console.log(dayLiSet);
+// 		var schViews = document.querySelectorAll('[data-schdulebox="'+dayLiSet+'"] li p');
+// 		// console.log(schViews);
+// 			sch.daysData[i]=[];
+// 			for(var j=0;j<schViews.length;j++){
+				
+// 			sch.daysData[i][j]=schViews[j].innerHTML;
+			
+// 			}
+			
+		
+// 	}
+// 	console.log(sch);
+// 	send();
+// 	function send(){
+// 		if (sch.arrTime=='尚未選擇期' || sch.name=='' ){
+// 			alert('請確認日期、行程名稱已填寫');
+// 		}else{
+// 			var jsonStr = JSON.stringify(sch);
+//  	  // document.write(jsonStr);
+//     var xhr=new XMLHttpRequest();
+//     xhr.onload=function (){
+//        if( xhr.status == 200 ){
+//        	alert('儲存成功');
+// 	       	}else{
+// 	          alert( xhr.status );
+// 	       	}
+//   		}	
+
+// 	    xhr.open("POST", "php/scheduleAdd.php",true);
+// 	    xhr.setRequestHeader("content-type","application/x-www-form-urlencoded"); 
+// 	    xhr.send("schedules="+jsonStr);
+
+//  		}
+// 	}
+// }
+ 	
+
+
 
 }

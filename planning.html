@@ -17,6 +17,9 @@
 
 <link rel="stylesheet" type="text/css" href="css/planning.css">
 <title>Examples</title>
+
+
+
 </head>  
 <body >    
 <nav> 
@@ -26,7 +29,7 @@
         </ul>
             <a href="index.html" class="logo">
                 <img src="img/planning/logo-1.png">
-            </a>
+            </a> 
         <ul class="menu mLeft">
             <li><a href="refer.html">別人怎麼玩</a></li>
             <li><a href="shop.html">星際商城</a></li>
@@ -67,27 +70,27 @@
 				請選擇想去的星球
 			</p>
 			<ul>
-				<li>
+				<li class="selectPlanet">
 					<div>
 						<img src="img/planning/planetwater.png">
 					</div>
-					<p>
+					<p >
 						瓦特星
 					</p>
 				</li>
-				<li>
+				<li class="selectPlanet">
 					<div>
 						<img src="img/planning/planetsan.png">
 					</div>
-					<p>
+					<p >
 						達沙星
 					</p>
 				</li>
-				<li>
+				<li class="selectPlanet">
 					<div>
 						<img src="img/planning/planettree.png">
 					</div>
-					<p>
+					<p >
 						奧倫星
 					</p>
 				</li>
@@ -97,21 +100,41 @@
 </div>	
 <!-- 進入選星球 -->
 
-<div class="deldayFilter">
+<div class="Filter deleteBox">
 	<div class="delBox borderStyle chinese viewBorderStyle">
 		<p>確定要刪除這天嗎?</p>
 		<div class="btnBox">
-			<div class="yesBtn">確定</div>
-			<div class="noBtn">取消</div>
+			<div class="dayyesBtn yesBtn">確定</div>
+			<div class="daynoBtn noBtn">取消</div>
 		</div>
 	</div>
 </div>
-
+<!-- <div class="Filter saveDataBox">
+	<div class="sizeSetting borderStyle chinese viewBorderStyle saveData">
+		<p>儲存成功</p>
+		<p>"確認"後將根據行此程安排適合的專家</p>
+		<p>進入會員專區請按"取消"</p>
+		<div class="btnBox">
+			<div class="saveDatayesBtn yesBtn">確定</div>
+			<div class="saveDatanoBtn noBtn">取消</div>
+		</div>
+	</div>
+</div> -->
+<div class="Filter confirmPlanetBox">
+	<div class="sizeSetting borderStyle chinese viewBorderStyle planetSelect">
+		<p>更換星球將會重置所有天數、景點與行程</p>
+		<div class="btnBox">
+			<div class="planetyesBtn yesBtn">確定</div>
+			<div class="planetnoBtn noBtn">取消</div>
+		</div>
+	</div>
+</div>
  <!-- <nav class="navbar"></nav> -->
 
 
  
 <content>
+	<div class="input"></div>
 	<div class="stepBoxStyle chinese">
 		<div class="stepBox">
 			<div class="stepImg">
@@ -189,6 +212,9 @@
 							<div class="dayDel">
 								<img src="img/planning/trash.png">
 							</div>
+							<div class="moveIcon"id="moveIcon">
+								<img src="img/planning/helf-arrow-blue.png">
+							</div>
 						</div>
 	</li>
 </ul>	
@@ -244,6 +270,9 @@
 							<div class="dayDel">
 								<img src="img/planning/trash.png">
 							</div>
+							<div class="moveIcon" id="moveIcon">
+								<img src="img/planning/helf-arrow-blue.png">
+							</div>
 						</div>
 					</li>
 					<li data-daybox="1" class="dayList">
@@ -259,6 +288,9 @@
 							</span>
 							<div class="dayDel">
 								<img src="img/planning/trash.png">
+							</div>
+							<div class="moveIcon "id="moveIcon">
+								<img src="img/planning/helf-arrow-blue.png">
 							</div>
 						</div>
 					</li>
@@ -277,6 +309,9 @@
 							<div class="dayDel">
 								<img src="img/planning/trash.png">
 							</div>
+							<div class="moveIcon"id="moveIcon">
+								<img src="img/planning/helf-arrow-blue.png">
+							</div>
 						</div>
 					</li>
 
@@ -290,7 +325,7 @@
 		<div class="schduleList">
 			
 			<div class="searchSchdule chinese ">
-				<input  class="chinese" onfocus="this.select()" type="text" name="" maxlength="6" placeholder="建立行程名稱">
+				<input  class="chinese" onfocus="this.select()" type="text" name="" maxlength="6" placeholder="行程名稱(enter)">
 				<p></p>
 				<div class="editImg">
 					<img src="img/planning/edit2.png">
@@ -309,18 +344,21 @@
 							<p>
 								我的收藏行程
 							</p>
-							
 						</div>
 						<div class="schduleINContent">
-								<p>無收藏行程</p>
-								<div>
+							<ul class="mySchduleList">
+								
+							</ul>
+						
+								<!-- <p>無收藏行程</p> -->
+								<!-- <div class="loginBox">
 									<a href="#">
 										登入會員
 									</a>
 									<a href="refer.html">
 										看看別人怎麼玩
 									</a>
-								</div>
+								</div> -->
 						</div>
 					</div>
 				</div>
@@ -371,8 +409,8 @@
 
 		<div class="selectViews ">
 			<div class="center setPlanet">
-				<div class="planetName ">
-					<span class="chinese">
+				<div class="planetName "><!-- 選擇星球 -->
+					<span class="chinese" id="planet">
 						　　　
 					</span>
 				</div>
@@ -388,7 +426,7 @@
 			</div> -->
 
 			<div class="clearfix"></div>
-			<div class="borderStyle chinese">
+			<div class="borderStyle chinese tagsBox">
 				<div class="tagList">
 					<ul id="taglist">
 						<li class="focusStyle">全部</li>
@@ -401,15 +439,20 @@
 				</div>
 			</div>
 
-			<div class="borderStyle transparentTop">
+			<div class="borderStyle transparentTop viewsBox">
 				<div class="views chinese">
-					<ul class="aa">
-						<li data-view="1" class="viewLi ">
+					<ul id="viewsUl" class="aa">
+						<!-- <li data-view="1" class="viewLi ">
 							<div class="imgBorderStyle viewsBoxSetting">
 								<div class="viewContent">
+									<div class="viewImgBox">
 									<img src="img/planning/p1_v1_03.jpg">
-									<span class="tag int">知性</span>
-									<p class="viewTitle">太空清真寺</p>
+									</div>
+									<div class="tagBox">
+										<span class="tag int">知性</span>
+										<span class="tag fod">美食</span>
+									</div>
+									<p class="viewTitle" >太空清真寺</p>
 									<p>與太空最接近的寺</p>
 								</div>
 								<span class="chinese addSchdule">
@@ -423,236 +466,8 @@
 									<img src="img/planning/info.png">
 								</span>
 							</div>
-						</li>
+						</li> -->
 						
-						<li data-view="2"  class="viewLi">
-							<div class="imgBorderStyle viewsBoxSetting">
-								<div class="viewContent">
-									<img src="img/planning/p1_v1_03.jpg">
-									<span class="tag int">知性</span>
-									<p class="viewTitle">地心清真寺</p>
-									<p>與地心最接近的寺</p>
-								</div>
-								<span class="chinese addSchdule">
-									+
-									<span class="mobiTxt">
-									加入景點
-									</span>
-								</span>
-								<span class="chinese viewInfo">
-									<img src="img/planning/info.png">
-								</span>
-							</div>
-						</li>
-						<li data-view="3"  class="viewLi">
-							<div class="imgBorderStyle viewsBoxSetting">
-								<div class="viewContent">
-									<img src="img/planning/p1_v1_03.jpg">
-									<span class="tag adv">冒險</span>
-									<p class="viewTitle">天上清真寺</p>
-									<p>與天空最接近的寺</p>
-								</div>
-								<span class="chinese addSchdule">
-									+
-									<span class="mobiTxt">
-									加入景點
-									</span>
-								</span>
-								<span class="chinese viewInfo">
-									<img src="img/planning/info.png">
-								</span>
-							</div>
-						</li>
-						<li data-view="4"  class="viewLi">
-							<div class="imgBorderStyle viewsBoxSetting">
-								<div class="viewContent">
-									<img src="img/planning/p1_v1_03.jpg">
-									<span class="tag tec">科技</span>
-									<p class="viewTitle">水上清真寺</p>
-									<p>與水面最接近的寺</p>
-								</div>
-								<span class="chinese addSchdule">
-									+
-									<span class="mobiTxt">
-									加入景點
-									</span>
-								</span>
-								<span class="chinese viewInfo">
-									<img src="img/planning/info.png">
-								</span>
-							</div>
-						</li>
-						<li data-view="5"  class="viewLi">
-							<div class="imgBorderStyle viewsBoxSetting">
-								<div class="viewContent">
-									<img src="img/planning/p1_v1_03.jpg">
-									<span class="tag hum">人文</span>
-									<p class="viewTitle">地底清真寺</p>
-									<p>與地底最接近的寺</p>
-								</div>
-								<span class="chinese addSchdule">
-									+
-									<span class="mobiTxt">
-									加入景點
-									</span>
-								</span>
-								<span class="chinese viewInfo">
-									<img src="img/planning/info.png">
-								</span>
-							</div>
-						</li>
-						<li data-view="6"  class="viewLi">
-							<div class="imgBorderStyle viewsBoxSetting">
-								<div class="viewContent">
-									<img src="img/planning/p1_v1_03.jpg">
-									<span class="tag fod">美食</span>
-									<p class="viewTitle">地底清真寺</p>
-									<p>與地底最接近的寺</p>
-								</div>
-								<span class="chinese addSchdule">
-									+
-									<span class="mobiTxt">
-									加入景點
-									</span>
-								</span>
-								<span class="chinese viewInfo">
-									<img src="img/planning/info.png">
-								</span>
-							</div>
-						</li>
-						<li data-view="7"  class="viewLi">
-							<div class="imgBorderStyle viewsBoxSetting">
-								<div class="viewContent">
-									<img src="img/planning/p1_v1_03.jpg">
-									<span class="tag fod">美食</span>
-									<p class="viewTitle">地底清真寺</p>
-									<p>與地底最接近的寺</p>
-								</div>
-								<span class="chinese addSchdule">
-									+
-									<span class="mobiTxt">
-									加入景點
-									</span>
-								</span>
-								<span class="chinese viewInfo">
-									<img src="img/planning/info.png">
-								</span>
-							</div>
-						</li>
-						<li data-view="8"  class="viewLi">
-							<div class="imgBorderStyle viewsBoxSetting">
-								<div class="viewContent">
-									<img src="img/planning/p1_v1_03.jpg">
-									<span class="tag adv">冒險</span>
-									<p class="viewTitle">地底清真寺</p>
-									<p>與地底最接近的寺</p>
-								</div>
-								<span class="chinese addSchdule">
-									+
-									<span class="mobiTxt">
-									加入景點
-									</span>
-								</span>
-								<span class="chinese viewInfo">
-									<img src="img/planning/info.png">
-								</span>
-							</div>
-						</li>
-						<li data-view="9"  class="viewLi">
-							<div class="imgBorderStyle viewsBoxSetting">
-								<div class="viewContent">
-									<img src="img/planning/p1_v1_03.jpg">
-									<span class="tag tec">科技</span>
-									<p class="viewTitle">地底清真寺</p>
-									<p>與地底最接近的寺</p>
-								</div>
-								<span class="chinese addSchdule">
-									+
-									<span class="mobiTxt">
-									加入景點
-									</span>
-								</span>
-								<span class="chinese viewInfo">
-									<img src="img/planning/info.png">
-								</span>
-							</div>
-						</li>
-						<li data-view="10"  class="viewLi">
-							<div class="imgBorderStyle viewsBoxSetting">
-								<div class="viewContent">
-									<img src="img/planning/p1_v1_03.jpg">
-									<span class="tag hum">人文</span>
-									<p class="viewTitle">地底清真寺</p>
-									<p>與地底最接近的寺</p>
-								</div>
-								<span class="chinese addSchdule">
-									+
-									<span class="mobiTxt">
-									加入景點
-									</span>
-								</span>
-								<span class="chinese viewInfo">
-									<img src="img/planning/info.png">
-								</span>
-							</div>
-						</li>
-						<li data-view="11"  class="viewLi">
-							<div class="imgBorderStyle viewsBoxSetting">
-								<div class="viewContent">
-									<img src="img/planning/p1_v1_03.jpg">
-									<span class="tag int">知性</span>
-									<p class="viewTitle">地底清真寺</p>
-									<p>與地底最接近的寺</p>
-								</div>
-								<span class="chinese addSchdule">
-									+
-									<span class="mobiTxt">
-									加入景點
-									</span>
-								</span>
-								<span class="chinese viewInfo">
-									<img src="img/planning/info.png">
-								</span>
-							</div>
-						</li>
-						<li data-view="12"  class="viewLi">
-							<div class="imgBorderStyle viewsBoxSetting">
-								<div class="viewContent">
-									<img src="img/planning/p1_v1_03.jpg">
-									<span class="tag adv">冒險</span>
-									<p class="viewTitle">地底清真寺</p>
-									<p>與地底最接近的寺</p>
-								</div>
-								<span class="chinese addSchdule">
-									+
-									<span class="mobiTxt">
-									加入景點
-									</span>
-								</span>
-								<span class="chinese viewInfo">
-									<img src="img/planning/info.png">
-								</span>
-							</div>
-						</li>
-						<li data-view="13"  class="viewLi">
-							<div class="imgBorderStyle viewsBoxSetting">
-								<div class="viewContent">
-									<img src="img/planning/p1_v1_03.jpg">
-									<span class="tag tec">科技</span>
-									<p class="viewTitle">地底清真寺</p>
-									<p>與地底最接近的寺</p>
-								</div>
-								<span class="chinese addSchdule">
-									+
-									<span class="mobiTxt">
-									加入景點
-									</span>
-								</span>
-								<span class="chinese viewInfo">
-									<img src="img/planning/info.png">
-								</span>
-							</div>
-						</li>
 					</ul>
 					<!-- <div class="borderStyle viewIntroduce ">
 						<div class="viewName chinese">
@@ -674,28 +489,10 @@
 					</div> -->
 
 				</div>
-			<div class="viewFilter">
-				<div class="borderStyle viewIntroduce viewBorderStyle">
-						<div class="viewName chinese">
-							
-							<p >水上清真寺</p>
-							<span><img src="img/planning/clear-button-blue.png"></span>
-						</div>
-						<div>
-							<div class="borderStyle viewImg">
-								<img src="img/planning/p1_v1_03.jpg">
-								<label for="view1"><div class="addViewImg"><img src="img/planning/add-button-inside-black-circle-blue.png"></div>
-							</div></label>
-							<div class="borderStyle viewDescrip chinese">
-								<p>簡介</p>
-								<p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis explicabo natus hic, sequi, nobis fugiat autem harum, blanditiis praesentium nemo facilis aliquid quasi voluptas error. Distinctio, deleniti repellat facilis eligendi!</span></p>
-							</div>
-						</div> 
+				<div class="viewFilter">
+					
 				</div>
 			</div>
-			</div>
-
-				
 
 		</div>
 		<div class="clearfix"></div>
@@ -715,10 +512,10 @@
 					</div>
 					<div class="expertList">
 						<ul>
-							<li>
+						<!-- 	<li>
 								<div class="positionRE">
 									<div class="expertImg">
-										<img src="img/planning/emma.jpg">
+										<img src="img/expPic/103.jpg">
 									</div>
 									<div class="expertNameBG ">
 										
@@ -728,27 +525,27 @@
 									</span>
 
 									<div class="expertBtn">
-										<span class="chinese">
+										<span class="chinese" data-expert="101">
 											選擇
 										</span>
 									</div>
 								</div>
-							</li>
+							</li> -->
 							
-							<li>
+							<!-- <li>
 								<div class="positionRE">
 									<div class="expertImg">
-										<img src="img/planning/emma.jpg">
+										<img src="img/expPic/102.jpg">
 									</div>
 									<div class="expertNameBG ">
 										
 									</div>
 									<span class="expertName chinese">
-											火仙子
+											水仙子
 									</span>
 
 									<div class="expertBtn">
-										<span class="chinese">
+										<span class="chinese" data-expert="102">
 											選擇
 										</span>
 									</div>
@@ -757,22 +554,22 @@
 							<li>
 								<div class="positionRE">
 									<div class="expertImg">
-										<img src="img/planning/emma.jpg">
+										<img src="img/expPic/101.jpg">
 									</div>
 									<div class="expertNameBG ">
 										
 									</div>
 									<span class="expertName chinese">
-											火仙子
+											水仙子
 									</span>
 
 									<div class="expertBtn">
-										<span class="chinese">
+										<span class="chinese" data-expert="103">
 											選擇
 										</span>
 									</div>
 								</div>
-							</li>
+							</li> -->
 						</ul>
 					</div>
 				</div>
@@ -782,7 +579,7 @@
 
  <div class="clearfix"></div>
 <div class="chinese commit">
-	<span class="Btn  saveBtn">儲存行程</span>
+	<span class="Btn  saveBtn">挑選專家</span>
 </div>
 
 <footer>
@@ -822,30 +619,30 @@
 			Sortable.create(document.getElementById('day'), {
                                 animation: 150,
                             });	
-			Sortable.create(document.getElementById('schduleDay1'), {
-                                animation: 150,
-                            });
-			Sortable.create(document.getElementById('schduleDay2'), {
-                                animation: 150,
-                            });
-			Sortable.create(document.getElementById('schduleDay3'), {
-                                animation: 150,
-                            });
+			// Sortable.create(document.getElementById('schduleDay1'), {
+   //                              animation: 150,
+   //                          });
+			// Sortable.create(document.getElementById('schduleDay2'), {
+   //                              animation: 150,
+   //                          });
+			// Sortable.create(document.getElementById('schduleDay3'), {
+   //                              animation: 150,
+   //                          });
 	}
 
 				
 		
 
 	 
-	Sortable.create(document.getElementById('schduleDay1'), {
-                                animation: 150,
-                            });
-	Sortable.create(document.getElementById('schduleDay2'), {
-                                animation: 150,
-                            });
-	Sortable.create(document.getElementById('schduleDay3'), {
-                                animation: 150,
-                            });
+	// Sortable.create(document.getElementById('schduleDay1'), {
+ //                                animation: 150,
+ //                            });
+	// Sortable.create(document.getElementById('schduleDay2'), {
+ //                                animation: 150,
+ //                            });
+	// Sortable.create(document.getElementById('schduleDay3'), {
+ //                                animation: 150,
+ //                            });
 
 </script>
 <!-- 月曆jquery -->
@@ -881,6 +678,699 @@
     <!-- script -->
     <script src="js/tween.js"></script>
 
+<script>
+var planetFilter = document.querySelector('.planetFilter');
+var selectP = document.querySelector('.planetLightBox');
+var txt = selectP.querySelectorAll('li');
 
+$('.planetName').click(function(){
+	var planetName = document.querySelector('.planetName');
+	
+		$('.confirmPlanetBox').css('display','block');
+	var x =sessionStorage.getItem("planet");
+
+	// var a = confirm('更換星球將會重置所有天數、景點與行程');
+
+		$('.planetyesBtn').click(function(){
+			$('.confirmPlanetBox').css('display','none');
+			$('.planetFilter').css('display','block');
+			
+
+			$('.selectPlanet').click(function(){
+
+				
+			// var $txt = $(this).find('p').text();
+			// sessionStorage.setItem("planet", $txt);
+			var txt = this.querySelector('p');
+			sessionStorage.setItem("planet", txt.innerHTML);
+
+			planetName.innerHTML = x;
+			// planetFilter.style.display='none';
+			window.location.reload();
+
+				});
+
+
+
+		
+			
+		});
+		$('.planetnoBtn').click(function(){
+			$('.confirmPlanetBox').css('display','none');
+			});
+
+});
+
+
+
+
+
+//確認會員編號
+	// var memNo =1;
+// $('#schduleTrig').click(function(){
+// 	$('.mySchduleList li').remove();
+// 	var $memNo =1;
+// 	// alert($memNo);
+
+// 		if($memNo !=null){
+
+// $.ajax({
+// 			url: 'php/takeMemberSch.php',
+// 			dataType:'text',
+// 			type:'POST',
+// 			// async: false,
+// 			data:{
+// 					memNo:$memNo,
+// 					},
+// 			success:function(data){
+
+// 				$('.mySchduleList').append(data);
+
+
+// 				//點選匯入天數OR日期
+// 				$('.mySchduleList').find('li').click(function(){
+// 					$scheduleNo=$('.mySchduleList').find(this).data('num');
+// 					// console.log($a);
+// 						$.ajax({
+// 					url: 'php/takeDays.php',
+// 					dataType:'text',
+// 					type:'POST',
+// 					// async: false,
+// 					data:{
+// 							scheduleNo:$scheduleNo,
+							
+// 							},
+// 					success:function(data){
+// 						console.log($scheduleNo);
+// 						$('#day li').remove();
+// 						$('#day').append(data);
+						
+
+						
+// 						sessionStorage.setItem('date',$('#depTime').val());
+// 						sessionStorage.setItem('planetName',$('#planetNA').val());
+// 						sessionStorage.setItem('schduleNo',$scheduleNo);
+// 						console.log($('#depTime').val());
+// 						console.log($('#planetNA').val());
+// 						$('#depTime').remove();
+// 						$('.schduleIN').css('display','none');
+
+// 						},
+
+// 					error:function(xhr, ajaxOptions, thrownError)
+// 					{ 
+// 					alert("error");
+// 					alert(xhr.status); 
+// 					alert(thrownError);  
+// 					}
+
+
+// 				});
+
+						
+
+
+// 				});
+				
+
+//取php session
+	
+
+
+
+
+
+
+
+
+
+
+// 				},
+
+// 			error:function(xhr, ajaxOptions, thrownError)
+// 			{ 
+// 			alert("error");
+// 			alert(xhr.status); 
+// 			alert(thrownError);  
+// 			}
+
+
+// 		});
+
+
+// 	}
+	// window.onbeforeunload
+// window.onunload = function(){
+	// let confirm=window.confirm('重新整理將遺失所有紀錄');
+// 	if(confirm==true){
+// 		sessionStorage.setItem("planet", '瓦特星');	
+// 	sessionStorage.removeItem("scheduleNo");
+// };
+
+	// var confirm = window.confirm('重新整理將遺失所有紀錄');
+// };
+window.onbeforeunload = function(){
+	// let confirm = window.confirm('重新整理將遺失所有紀錄');
+	// if(confirm==true){
+		
+		
+		var aa=document.querySelector('.planetFilter');
+		// $('.confirmPlanetBox').css('display','block');
+		if(aa.style.display!='block'){
+			sessionStorage.setItem("planet", '瓦特星');
+			
+			sessionStorage.removeItem("viewNo");	
+			sessionStorage.removeItem("scheduleNo");
+			sessionStorage.removeItem("indexViewNo");
+			return '';
+		}else{
+			sessionStorage.removeItem("viewNo");
+			sessionStorage.removeItem("scheduleNo");
+			sessionStorage.removeItem("indexViewNo");
+		}
+		
+};
+
+
+$.ajax({
+					url: 'php/getSession.php',
+					dataType:'text',
+					type:'POST',
+					async: false,
+					
+					success:function(data){
+						// console.log(data);
+						$('.input').append(data);
+						console.log($('.input input')[0]);
+						console.log($('.input input')[1]);
+						console.log($('.input input')[2]);
+						if($('.input .indexViewNo').val()!=''){
+							sessionStorage.setItem("indexViewNo", $('.input .indexViewNo').val());
+							
+							}
+						if($('.input .scheduleNo').val()!=''){
+							sessionStorage.setItem("scheduleNo", $('.input .scheduleNo').val());
+							
+							
+							}
+						if($('.input .planet').val()!=''){
+							sessionStorage.setItem("planet", $('.input .planet').val());
+							console.log($('.input .planet').val());
+							
+							}
+						},
+
+					error:function(xhr, ajaxOptions, thrownError)
+					{ 
+					alert("error");
+					alert(xhr.status); 
+					alert(thrownError);  
+					}
+
+
+				});
+
+// };
+	// console.log($('.schdule1').data("num"));
+	// console.log($(this).data("num"));
+	// var dataNum = document.querySelectorAll('[data-num="''"]')
+	// $('[data-set]')
+	//首頁插入1個景點
+// if (sessionStorage.getItem('viewNo')!=null) {
+// 	var $scheduleNo = sessionStorage.getItem('scheduleNo');
+
+
+	
+// 	$.ajax({
+// 					url: 'php/view.php',
+// 					dataType:'text',
+// 					type:'POST',
+// 					// async: false,
+// 					data:{
+// 							viewNo:$viewNo,
+							
+// 							},
+// 					success:function(data){
+// 						// sessionStorage.setItem("view", data);
+
+// 						},
+
+// 					error:function(xhr, ajaxOptions, thrownError)
+// 					{ 
+// 					alert("error");
+// 					alert(xhr.status); 
+// 					alert(thrownError);  
+// 					}
+
+
+// 				});
+// }
+
+if (sessionStorage.getItem('scheduleNo')!=null &&sessionStorage.getItem('scheduleNo')!='') {
+	var $scheduleNo = sessionStorage.getItem('scheduleNo');
+
+
+	
+	$.ajax({
+					url: 'php/getPlanet.php',
+					dataType:'text',
+					type:'POST',
+					async: false,
+					data:{
+							scheduleNo:$scheduleNo,
+							
+							},
+					success:function(data){
+						sessionStorage.setItem("planet", data);
+
+						},
+
+					error:function(xhr, ajaxOptions, thrownError)
+					{ 
+					alert("error");
+					alert(xhr.status); 
+					alert(thrownError);  
+					}
+
+
+				});
+}
+
+if(sessionStorage.getItem("planet")==null ||sessionStorage.getItem("planet")==''){
+		sessionStorage.setItem("planet", '瓦特星');
+	}
+	
+	var $planet =sessionStorage.getItem("planet");
+	console.log($planet);
+	// var $scheduleNo =sessionStorage.getItem("scheduleNo");
+		$.ajax({
+
+
+
+			url: 'php/getViews.php',
+			dataType:'text',
+			type:'POST',
+			data:{
+					planet:$planet,
+					
+					},
+			success:function(data){
+
+				$('#viewsUl').append(data);
+
+
+
+
+
+
+				//取景點資訊
+			$('.viewInfo').click(function(){
+
+				$('.viewFilter').css('display','block');
+			
+
+			$viewName = $(this).parent().find('.viewTitle').text();
+
+			console.log($viewName);
+
+		$.ajax({
+			url: 'php/getViewsInfo.php',
+			dataType:'text',
+			type:'POST',
+			data:{
+					viewName:$viewName,
+					
+					},
+			success:function(data){
+
+				$('.viewFilter').append(data);
+				$('.addViewImg').click(function(){
+					$('.viewFilter').css('display','none');
+					// $('.viewIntroduce').remove();
+				});
+
+				$('.viewName span').click(function(){	
+					$('.viewFilter').css('display','none');
+					$('.viewIntroduce').remove();
+					});
+
+				},
+
+			error:function(xhr, ajaxOptions, thrownError)
+			{ 
+			alert("error");
+			alert(xhr.status); 
+			alert(thrownError);  
+			}
+
+
+		});
+	});
+
+//取景點資訊
+			//mobile查看景點
+
+			if (window.innerWidth<1000){
+			$('.viewContent').click(function(){
+
+				$('.viewFilter').css('display','block');
+			
+
+			$viewName = $(this).parent().find('.viewTitle').text();
+
+			console.log($viewName);
+
+		$.ajax({
+			url: 'php/getViewsInfo.php',
+			dataType:'text',
+			type:'POST',
+			data:{
+					viewName:$viewName,
+					
+					},
+			success:function(data){
+
+				$('.viewFilter').append(data);
+				$('.addViewImg').click(function(){
+					$('.viewFilter').css('display','none');
+				});
+
+				$('.viewName span').click(function(){	
+					$('.viewFilter').css('display','none');
+					});
+
+				},
+
+			error:function(xhr, ajaxOptions, thrownError)
+			{ 
+			alert("error");
+			alert(xhr.status); 
+			alert(thrownError);  
+			}
+
+
+		});
+	});
+
+}
+
+		
+
+
+			},
+
+			error:function(xhr, ajaxOptions, thrownError)
+			{ 
+			alert("error");
+			alert(xhr.status); 
+			alert(thrownError);  
+			}
+
+
+	});
+
+
+
+	// var schMoveIn =	document.querySelector('.schMoveInBox');
+	// var $memNo =sessionStorage.getItem("memNo");
+
+	//行程匯入
+	// $('.schMoveInBox').click(function(){
+		// $takeData = 3;
+		// $.ajax({
+		// 	url: 'php/takeData.php',
+		// 	dataType:'text',
+		// 	type:'POST',
+		// 	data:{
+		// 			takeData:$takeData,
+					
+		// 			},
+		// 	success:function(data){
+		// 		$('#schduleUl ul').remove();
+		// 		$('#schduleUl').append(data);
+		// 		var $schUl = $('#schduleUl ul');
+		// 			// var $transJson=JSON.parse(data);
+		// 			console.log($('#schduleUl ul').length);
+		// 		$('.schduleEmptyTxt').css('display','none');	
+		// 			// console.log($('#schduleUl ul'));
+		// 	// Sortable.create(document.getElementById('day'), {
+  //  //                              animation: 150,
+  //  //                          });	
+		// 	for(var i=1;i<$('#schduleUl ul').length;i++){
+		// 		Sortable.create(document.getElementById('schduleDay'+i), {
+  //                               animation: 150,
+  //                    });
+
+		// 	}
+		// 		$('.deleteIcon').on('click',restoreView);
+
+		// 		},
+
+		// 	error:function(xhr, ajaxOptions, thrownError)
+		// 	{ 
+		// 	alert("error");
+		// 	alert(xhr.status); 
+		// 	alert(thrownError);  
+		// 	}
+
+
+		// });
+
+
+	// });
+	
+	//引入專家.saveBtn
+	$('.saveBtn').click(function(){
+		
+		var sch={};
+										var dateSpan = document.querySelectorAll('.date');
+														
+												var firstDay = dateSpan[0].innerHTML;
+													firstDay = firstDay.replace("年","-");
+													firstDay = firstDay.replace("月","-");
+													firstDay = firstDay.replace("日","");
+												var num = dateSpan.length-1;
+												var lastDay = dateSpan[num].innerHTML;
+													lastDay = lastDay.replace("年","-");
+													lastDay = lastDay.replace("月","-");
+													lastDay = lastDay.replace("日","");
+													// console.log(firstDay);
+													// console.log(lastDay);
+										var schName=document.querySelector('.searchSchdule p').innerHTML;
+										var planetName = document.querySelector('.planetName').innerHTML;
+										var schViewUls = document.querySelectorAll('.list');
+										var dayLiOrder = document.querySelectorAll('#day li');
+										sch.name = schName;
+										sch.depTime = firstDay;
+										sch.arrTime = lastDay;
+										sch.planetName = planetName.trim();
+										sch.share=0;
+										sch.memNo = 2;
+										
+										sch.itineraryPic='p1_v1_03.jpg';
+										sch.daysData=[];
+
+										for(var i =0;i<schViewUls.length;i++){
+											
+											var dayLiSet = dayLiOrder[i].dataset.daybox;
+											// console.log(dayLiSet);
+											var schViews = document.querySelectorAll('[data-schdulebox="'+dayLiSet+'"] li p');
+											// console.log(schViews);
+												sch.daysData[i]=[];
+												for(var j=0;j<schViews.length;j++){
+													
+												sch.daysData[i][j]=schViews[j].innerHTML.trim();
+												
+												}
+												
+											
+										}
+										console.log(sch);
+
+
+										if (sch.arrTime=='尚未選擇期' || sch.name=='' ){
+												alert('請確認日期、行程名稱已填寫');
+											}else{
+
+
+											
+
+
+
+
+
+
+				$('.expertFilter').css('display','block');
+				$('.expertBtn span').click(function(){
+					
+					// alert($(this).data('expert'));
+					var $expertNo = $(this).data('expert');
+					// console.log($expertNo);
+				});
+				
+					$.ajax({
+								url: 'php/expert.php',
+								dataType:'text',
+								type:'POST',
+								// data:{
+								// 		expertNo:$expertNo,
+										
+								// 		},
+								success:function(data){
+									
+									$('.expertList ul').append(data);
+
+									$('.expertBtn span').click(function(){
+										sch.expertNo= $(this).data('expert');
+										console.log(sch);
+											
+										
+											
+										var jsonStr = JSON.stringify(sch);
+									 	  // document.write(jsonStr);
+									    var xhr=new XMLHttpRequest();
+									    xhr.onload=function (){
+									       if( xhr.status == 200 ){
+									       	alert('儲存成功');
+										       	}else{
+										          alert( xhr.status );
+										       	}
+									  		}	
+
+										    xhr.open("POST", "php/scheduleAdd.php",true);
+										    xhr.setRequestHeader("content-type","application/x-www-form-urlencoded"); 
+										    xhr.send("schedules="+jsonStr);
+
+									 		
+										
+
+									});
+
+
+
+
+
+
+
+
+
+									},
+
+								error:function(xhr, ajaxOptions, thrownError)
+								{ 
+								alert("error");
+								alert(xhr.status); 
+								alert(thrownError);  
+								}
+
+
+							});
+						}
+			// 	$('.saveDataBox').css('display','none');			
+			// });
+
+			$('.saveDatanoBtn').click(function(){
+
+
+				$('.saveDataBox').css('display','none');
+			});
+
+		
+
+	});
+		
+// $takeData = 3;
+// $.ajax({
+// 					url: 'php/takeDays.php',
+// 					dataType:'text',
+// 					type:'POST',
+// 					data:{
+// 							takeData:$takeData,
+							
+// 							},
+// 					success:function(data){
+// 						$('#day li').remove();
+// 						$('#day').append(data);
+// 						console.log($('#depTime').val());
+
+						
+// 						sessionStorage.setItem('date',$('#depTime').val());
+						
+// 						},
+
+// 					error:function(xhr, ajaxOptions, thrownError)
+// 					{ 
+// 					alert("error");
+// 					alert(xhr.status); 
+// 					alert(thrownError);  
+// 					}
+
+
+// 				});
+
+// sessionStorage.setItem("scheduleNo", 3);
+// if(sessionStorage.getItem('scheduleNo')!=null){
+// 	var $scheduleNo = sessionStorage.getItem('scheduleNo');
+
+// }
+
+//引入天數
+if(sessionStorage.getItem('scheduleNo')!=null&&sessionStorage.getItem('scheduleNo')!=''){
+
+	var $scheduleNo = sessionStorage.getItem('scheduleNo');
+console.log($scheduleNo);
+$.ajax({
+					url: 'php/takeDays.php',
+					dataType:'text',
+					type:'POST',
+					// async: false,
+					data:{
+							scheduleNo:$scheduleNo,
+							
+							},
+					success:function(data){
+						console.log($scheduleNo);
+						$('#day li').remove();
+						$('#day').append(data);
+						
+
+						
+						// sessionStorage.setItem('date',$('#depTime').val());
+						// sessionStorage.setItem('planetName',$('#planetNA').val());
+						sessionStorage.setItem('schduleNo',$scheduleNo);
+						// console.log($('#depTime').val());
+						// console.log($('#planetNA').val());
+						// $('#depTime').remove();
+						// $('.schduleIN').css('display','none');
+
+						},
+
+					error:function(xhr, ajaxOptions, thrownError)
+					{ 
+					alert("error");
+					alert(xhr.status); 
+					alert(thrownError);  
+					}
+
+
+				});
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
 </body>
 </html>
