@@ -28,7 +28,7 @@ session_start();
         <img src="img/index/cancel.png" alt="exit">
     </div>
     <h2><?php echo $views['viewName'] ?></h2>
-    <a href="planning.html">將景點加入行程</a>
+    <a href="planning.php">將景點加入行程</a>
     <script type="text/javascript">
     	$('.exit').on('click',function(){
 	        $('.viewBg').css('transform','rotateX(90deg)');
