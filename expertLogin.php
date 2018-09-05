@@ -6,18 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- css -->
-    <link rel="stylesheet" href="../css/expert.css">
+    <link rel="stylesheet" href="css/expert.css">
     <!-- <link rel="stylesheet" href="libs/lity/lity.css"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
     <!-- plugin -->
-    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
-    <script src="../libs/jquery/dist/jquery.min.js"></script>
-    <script src="../libs/gsap/src/minified/TweenMax.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="libs/gsap/src/minified/TweenMax.min.js"></script>
     <!-- <script type="text/javascript" src="js/parallax.min.js"></script> -->
     <!-- scroll -->
 
-    <link rel="icon" type="text/css" href="../img/logovb.png">
+    <link rel="icon" type="text/css" href="img/logovb.png">
     <title>OH~PLANETS! | 專家帶你玩</title>
 </head>
 
@@ -110,8 +110,8 @@
 
 
     <div class="cloud_group">
-        <img class="cloud1" src="../img/expertImg/cloud.png">
-        <img class="cloud2" src="../img/expertImg/cloud.png">
+        <img class="cloud1" src="img/expertImg/cloud.png">
+        <img class="cloud2" src="img/expertImg/cloud.png">
     </div>
 
 
@@ -200,34 +200,7 @@
                     </div>
                 </div>
             </div> -->
-            <!-- <div class="element-item expertBox blue ">
-                <h2 class="h2Desk">瓦特星</h2>
-                <h3 class="h3Desk">Amos</h3>
-                <div class="attr">美食</div>
-                <div class="pic">
-                    <a>
-                        <img id="box" src="img/expertImg/A01.jpg">
-                    </a>
-                    <div class="aside">
-                        <h2 class="h2Ph">瓦特星</h2>
-                        <h3 class="h3Ph">Christina</h3>
-                        <div class="score">
-                            <span>5</span>
-                            <img src="img/expertImg/star.png" alt="star">
-                            <img src="img/expertImg/star.png" alt="star">
-                            <img src="img/expertImg/star.png" alt="star">
-                            <img src="img/expertImg/star.png" alt="star">
-                            <img src="img/expertImg/star.png" alt="star">
-                        </div>
-                        <div class="mark">
-                            <img src="img/expertImg/comment.png" alt="comment">
-                            <span>5</span>
-                            <img src="img/expertImg/love.png" alt="love">
-                            <span>20</span>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
+            
             <!-- <div class="element-item expertBox orange popular ">
                 <img class="king" src="img/expertImg/crown.png" alt="crown">
                 <h2 class="h2Desk">瓦特星</h2>
@@ -469,7 +442,7 @@
     <!-- footer -->
     <footer>
 
-        <img src="../img/expertImg/footerbg-3.png">
+        <img src="img/expertImg/footerbg-3.png">
         <div class="copyright">
             <p>copyright@OhPlanets 2145</p>
         </div>
@@ -485,12 +458,12 @@
     <!-- <script src="libs/jquery/dist/jquery.min.js"></script> -->
 
     <!-- <script src="js/tween.js"></script> -->
-    <script src="../libs/isotope/isotope.pkgd.min.js"></script>
+    <script src="libs/isotope/isotope.pkgd.min.js"></script>
     <!-- <script src="js/isotope.js"></script> -->
     
-    <script src="../js/style.js"></script>
-    <script src="../js/expert.js"></script>
-    <script src="../js/login.js"></script>
+    <script src="js/style.js"></script>
+    <script src="js/expert.js"></script>
+    <script src="js/login.js"></script>
 </body>
 
 </html>

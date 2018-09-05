@@ -85,7 +85,7 @@ TweenMax.fromTo('.cloud2', 3, { x: -200, y: 0 }, { x: 30, y: 0 });
 
 //抓列表
 $.ajax({
-	url: 'expert.php',
+	url: 'php/expert.php',
 	dataType: 'text',
 	success: function (data) {
 		$('.grid').html(data);
@@ -105,7 +105,7 @@ $(document).on('click', '.element-item', function(){
 	var expertNo = $(this).data('no');
 	// console.log(expertName);
 	$.ajax({
-		url: 'expert_lightBox.php',
+		url: 'php/expert_lightBox.php',
 		type: 'POST',	
 		dataType: 'text',
 		data: {
@@ -130,7 +130,7 @@ $(document).on('click', '.element-item', function(){
 			//點擊愛心收藏專家→insert into一筆資料
 			$('.heart').click(function(){
                 $.ajax({
-                    url: 'expert_collect.php',
+                    url: 'php/expert_collect.php',
                     type: 'POST',
                     dataType: 'text',
                     data: {
@@ -148,7 +148,7 @@ $(document).on('click', '.element-item', function(){
 
 
 			$.ajax({
-				url: 'expert_chart.php',
+				url: 'php/expert_chart.php',
 				type: 'POST',
 				dataType: 'text',
 				data: {expertName:expertName},

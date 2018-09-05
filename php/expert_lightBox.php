@@ -100,7 +100,7 @@ try {
                     </h2>
                     <?php echo $attr_phone ;?>
                     <div class="data">
-                        <div class="score">
+                        <!-- <div class="score">
                             <h3>評價</h3>
                             <span>5</span>
                             <img src="img/expertImg/star.png" alt="star">
@@ -108,7 +108,7 @@ try {
                             <img src="img/expertImg/star.png" alt="star">
                             <img src="img/expertImg/star.png" alt="star">
                             <img src="img/expertImg/star.png" alt="star">
-                        </div>
+                        </div> -->
                         <div class="chart">
                             
                         </div>

@@ -1,3 +1,4 @@
+
 /node_modules/*
 .bowerrc
 bower.json
@@ -6,5 +7,5 @@ package.json
 package-lock.json
 /img/*
 .DS_Store
-php/connectCd102g2.php
-php/connect_g2.php
+/php/connectCd102g2.php
+/php/connect_g2.php
