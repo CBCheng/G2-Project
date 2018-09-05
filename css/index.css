@@ -381,6 +381,7 @@ nav {
     height: 50%;
     position: absolute; }
   .choPlanet .planetBg {
+    width: 150%;
     height: 100%;
     top: -22%;
     right: -40%; }

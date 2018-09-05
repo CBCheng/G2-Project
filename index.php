@@ -744,11 +744,8 @@
 <!-- jquery -->
     
     <script src="js/style.js"></script>
-    
-    
     <script src="js/index.js"></script>
     <script src="js/login.js"></script>
-
 
     <!-- <script src="js/tween.js"></script> -->
 </body>
