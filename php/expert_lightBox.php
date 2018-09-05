@@ -3,7 +3,7 @@ try {
     require_once("connectExpert.php");
     $expertName = $_REQUEST['expertName'];
     $expertNo = $_REQUEST['expertNo'];
-    $memNo = '1';
+    // $memNo = $_SESSION['MEM_NO'];
 
     $sql = "select * from expert where expertName = '$expertName'";
     $members = $pdo->query($sql);
@@ -82,7 +82,7 @@ try {
 	
 
 		<!-- 專家跳窗介紹 -->
-		<section id="lightBox" >
+		<section id="exp_lightBox" >
             <i class="fas fa-times"></i>
             <div class="content_desk">
                 <article class="conLeft">
@@ -100,7 +100,7 @@ try {
                     </h2>
                     <?php echo $attr_phone ;?>
                     <div class="data">
-                        <div class="score">
+                        <!-- <div class="score">
                             <h3>評價</h3>
                             <span>5</span>
                             <img src="img/expertImg/star.png" alt="star">
@@ -108,7 +108,7 @@ try {
                             <img src="img/expertImg/star.png" alt="star">
                             <img src="img/expertImg/star.png" alt="star">
                             <img src="img/expertImg/star.png" alt="star">
-                        </div>
+                        </div> -->
                         <div class="chart">
                             
                         </div>
@@ -197,14 +197,14 @@ try {
         
         	// =====跳窗關閉=====
 			//e.target觸發的物件 //e.currentTarget監聽的事件
-			$("#lightBox_father").click(function (e) {
+			$("#exp_lightBox_father").click(function (e) {
 				if (e.target == e.currentTarget)
-					$("#lightBox_father").hide(500);
+					$("#exp_lightBox_father").hide(500);
 			})
 
 			$(function () {
 				$(".fas").click(function () {
-					$("#lightBox_father").hide(500);
+					$("#exp_lightBox_father").hide(500);
 				})
 			})
 

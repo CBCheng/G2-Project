@@ -1,8 +1,8 @@
 <?php
 try{
     $dsn = "mysql:host=localhost;port=3306;dbname=cd102g2;charset=utf8";
-    $user = "bombx15130";
-    $password = "123456";
+    $user = "cheng2";
+    $password = "9453";
     $options = array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION);
     $pdo = new PDO( $dsn, $user, $password, $options);
     
@@ -17,6 +17,7 @@ try{
     $dayArr = explode("@",$day);
     // print $dayArr[1];
 
+    
     //印出所有分享行程
     $sql = "select * from myschedule where share = 1 ORDER BY scheduleNo DESC";
     $refers = $pdo->query($sql);
@@ -45,7 +46,7 @@ try{
         <div class="element-item tripBox <?php echo $refPlanet; echo $pop;?>">
             <input type="hidden" name="scheduleNo" value="<?php echo $refRow["scheduleNo"] ?>">
             <div class="tripPic">
-                <a href="referdetial.php?psn=<?php echo $refRow["scheduleNo"] ?>">
+                <a href="referdetial.php?scheduleNo=<?php echo $refRow["scheduleNo"] ?>">
                     <img src="img/shareUpload/<?php echo $refRow["ItineraryPic"] ?>">
                 <div class="tripTag">
                     <span class="tripPlanet <?php echo $refPlanet ?>"><?php echo $refRow["planetName"] ?></span>
