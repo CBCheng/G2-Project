@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="../css/login.css">
-    <link rel="stylesheet" type="text/css" href="../css/member.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="css/member.css">
+
+    <!-- <link rel="stylesheet" href="css/expert.css"> -->
     <!-- plugin -->
-    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
-    <script src="../libs/jquery/dist/jquery.min.js"></script>
-    <script src="../libs/gsap/src/minified/TweenMax.min.js"></script>
-    <script type="text/javascript" src="../js/parallax.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <!-- <script src="../libs/gsap/src/minified/TweenMax.min.js"></script> -->
+    <!-- <script type="text/javascript" src="../js/parallax.min.js"></script> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>login</title>
@@ -21,7 +22,7 @@
 <body>
     <!-- nav -->
     <div class="navColor">
-        <img class="navPic" src="../img/bg.png" alt="">
+        <img class="navPic" src="img/bg.png" alt="">
     </div>
     <nav>
         <!-- desk -->
@@ -54,6 +55,8 @@
             <li class="memberSign">
                 
       <?php
+        ob_start();
+        session_start();
             //檢查是否已登入
         if( isset($_SESSION["MEM_NAME"]) === true ){ //已登入
         echo '<span id="memName">', $_SESSION["MEM_NAME"], '</span>';
@@ -108,7 +111,7 @@
                 <span class="close">×</span>
                 <h3>註冊會員</h3>
 
-                <form method="post" action="enroll.php">
+                <form method="post" action="php/enroll.php">
 
                     <div>
                         <div class="login_input">
@@ -130,7 +133,7 @@
                             <label class="login_lable" style="top: 18px; color: grey;">*電子信箱 </label>
                             <span class="inputErr_notice">非電子信箱</span>
                         </div>
-                        <button type="submit" id="regist_btn" class="btn btn-o-nb">送出</button>
+                        <input type="submit" id="regist_btn" class="btn btn-o-nb" value="送出">
 
                     </div>
                 </form>
@@ -169,9 +172,15 @@
         <div class="copyright">
             <p>copyright@OhPlanets 2145</p>
         </div>
+<<<<<<< HEAD:php/login.php
     </footer> -->
     <script src="../js/style.js"></script>
     <script type="text/javascript" src="../js/login.js"></script>
+=======
+    </footer>
+    <script src="js/style.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+>>>>>>> 320add1e1740daaf109d60ec46b86f52326b7ccc:login.php
 </body>
 
 </html>

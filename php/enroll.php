@@ -2,6 +2,8 @@
 ob_start();
 session_start();
 
+
+
 try{
   require_once("connect_g2.php");
   $sql = "insert into member (MEM_PSW, MEM_NAME,MEM_EMAIL) VALUES (:MEM_PSW, :MEM_NAME,:MEM_EMAIL)";
@@ -9,6 +11,7 @@ try{
   $member->bindValue(":MEM_PSW", $_REQUEST["memPsw_input"]);
   $member->bindValue(":MEM_NAME", $_REQUEST["regist_name"]);
   $member->bindValue(":MEM_EMAIL", $_REQUEST["regist_email"]);
+
   $member->execute();
   $MEM_NO = $pdo->lastInsertId();
 
@@ -32,7 +35,7 @@ try{
       $_SESSION["MEM_EMAIL"] = $memRow["MEM_EMAIL"];
         $_SESSION["MEM_IMG"] = $memRow["MEM_IMG"];
         //跳轉頁面
-    echo "<a href='member_profile.php'>會員專區</a> ";
+    echo "<a href='../member_profile.php'>會員專區</a> ";
 
   }else{
     echo "註冊失敗";
@@ -55,6 +58,6 @@ try{
 
 
 
-header("location:member_profile.php");
+header("location:../member_profile.php");
 
 ?>

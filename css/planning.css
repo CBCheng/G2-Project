@@ -416,22 +416,34 @@ footer{
 	height: 30px;
 	transition: .3s;
 	opacity: 0;
+	/*padding-right:10px ;*/
+	/*margin-right: 25px;*/
+
+}
+.moveIcon{
+
+	display: block;
+	width: 30px;
+	height: 30px;
+	transition: .3s;
+	opacity: 1;
 
 }
 #cloneDayLi{
 	display: none;
 }
 
-@media screen and (min-width: 1000px){
-	.dayList:hover .dayDel {
-		opacity: 1;
-	}	
-}
+
 
 .dayDel img{
 	width: 100%;
 	height: 100%;
 	vertical-align: middle;
+}
+.moveIcon img{
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;	
 }
 .selectDaysGroup li{
 	position: relative;
@@ -456,6 +468,11 @@ footer{
 	float:left;
 
 }
+#dayParent,.tagsBox,#schduleBox,.viewsBox{
+	background-color: rgba(0,0,0,.2);
+}
+
+
 .day div:nth-child(3){
  
 	width: 30px;
@@ -468,6 +485,24 @@ footer{
 	margin:auto;
 	cursor:pointer;
 }
+@media screen and (min-width: 1000px){
+	.dayList:hover .dayDel {
+		opacity: 1;
+	}
+		.dayList:hover .moveIcon {
+		opacity: 0;
+		z-index: -1;
+	}	
+	.moveIcon{
+	float: right;
+	}	
+	.day div:nth-child(3){
+ 
+
+	right: 5px;
+
+	}
+}
 @media screen  and (max-width: 1200px){
 	.day div:nth-child(3){
 		right: 10px;
@@ -475,7 +510,7 @@ footer{
 }
 @media screen  and (max-width: 999px){
 	.day div:nth-child(3){
-		right: 10px;
+		/*right: 10px;*/
 		left: 260px;
 	}
 }
@@ -522,9 +557,16 @@ footer{
 		padding-left:20px;
 
 }
-@media screen and (max-width: 1400px){
+@media screen and (max-width: 1700px){
 	.day span:nth-child(2){
 		font-size:16px;
+			
+	}
+
+}
+@media screen and (max-width: 1400px){
+	.day span:nth-child(2){
+		
 		padding-left:10px;		
 	}
 
@@ -627,6 +669,7 @@ footer{
 	/*width: 220px;*/
 	float: left;
 	height: 55px;
+	margin-left: 30%;
 
 }
 
@@ -749,19 +792,45 @@ footer{
 .Itemcontent{
 	position: relative;
 }
-.Itemcontent span:nth-of-type(1){
+.Itemcontent .tagBox{
 	position: absolute;
-	top: -3px;
+	top:-4px;
+	left: 38%;
+		/*right: 60%;*/
+}
+.Itemcontent span:nth-of-type(1){
+	/*position: absolute;*/
+	display: inline-block;
+	/*top: 0px;*/
 	/*right: 0;*/
 	/*right: 60%;*/
-	left: 40%;
-	font-size: 16px;
+	/*left: 40%;*/
+	font-size: 14px;
+}
+.Itemcontent span:nth-of-type(2){
+	/*position: absolute;*/
+	display: inline-block;
+	/*top: 0px;*/
+	/*right: 0;*/
+	/*right: 60%;*/
+	/*left: 40%;*/
+	font-size: 14px;
+}
+@media screen and (max-width: 1500px){
+	.Itemcontent .tagBox{
+		left:140px;
+	}
+	.tagBox span:nth-of-type(1){
+		margin-right: 5px;
+	}
 }
 @media screen and (max-width: 1400px){
 	.Itemcontent span:nth-of-type(1){
-		left: 50%;
+		/*left: 50%;*/
 	}
+
 }
+
 .deleteIcon{
 	font-size:30px;
 	display: block;
@@ -811,6 +880,7 @@ footer{
 	position: absolute;
 	top: 10px;
 	right: 10px;
+	cursor: pointer;
 }
 .schduleINDel img{
 	width: 100%;
@@ -840,6 +910,41 @@ footer{
 	background-color: #5df;
 	margin-right:10px ;
 }
+.mySchduleList li{
+	cursor: pointer;
+	position: relative;
+	text-align: left;
+	padding: 20px 10px;
+	margin: 5px;
+}
+.mySchduleList li p{
+	display: inline-block;
+	padding: 0 30px;
+
+}
+.mySchduleList li p:nth-of-type(1){
+	width: 140px;
+}
+
+.mySchduleList li div{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top: 0;
+	right: 20px;
+	bottom: 0;
+	margin: auto;
+
+
+}
+.mySchduleList li div img{
+	width: 100%;
+	vertical-align: middle;
+}
+.mySchduleList li:hover{
+	background-color: rgba(255,255,255,.5);
+}
+
 /*引入行程燈箱end*/
 
 
@@ -857,6 +962,28 @@ footer{
 }
 #replaceDays{
 	display: none;
+}
+.confirmPlanetBox{
+	display: none;
+}
+.planetSelect p:nth-of-type(1){
+	text-align: left;
+	width: 80%;
+	font-size: 24px;
+	padding: 50px ;
+	line-height: 30px;
+
+}
+
+.confirmPlanetBox p:nth-of-type(1){
+	font-size: 24px;
+}
+.confirmPlanetBox p{
+	/*text-align: left;*/
+	font-size: 20px;
+	line-height: 150px;
+	color: #ccc;
+	font-weight: 700;
 }
 /*星球燈箱start*/
 .planetFilter{
@@ -881,7 +1008,7 @@ footer{
 	right: 0;
 	bottom: 0;
 	margin: auto;
-	background-color: rgba(0,0,0,1);
+	background-color: rgba(0,0,0,.6);
 	/*background-color: #888;*/
 	color: #ccc;
 
@@ -1035,10 +1162,12 @@ footer{
  
 
 .views li{
+	position: relative;
 	width: 30%;
-	/*min-width: 175px;*/
 	margin:15px 15px 15px 0;
 	display: inline-block;	
+	/*transition:5s;*/
+	left: 0;
 }
 @media screen and (max-width: 1600px){
 	.views li{
@@ -1052,7 +1181,7 @@ footer{
 	borderStyle 
 	}
 }
-.views img{
+.viewImgBox img{
 	/*min-width: 170px;*/
 	width: 100%;
 
@@ -1064,6 +1193,7 @@ footer{
 	color:#ccc;
 }
 .views p:nth-of-type(1){
+	margin-top:10px ;
 	font-size:23px;
 }
 .viewsBoxSetting{
@@ -1079,6 +1209,9 @@ footer{
 	cursor: pointer;
 
 }
+#schduleTrig{
+		display: none;
+	}
 
 @media screen and (min-width: 1000px){
 	.viewsBoxSetting:hover .viewContent{
@@ -1149,17 +1282,33 @@ footer{
 
 .viewContent{
 	width: 100%;
-	height: 100%;
+	/*height: 100%;*/
 	position: relative;	
 	cursor:pointer;
 }
-
-
-.tag{
-	padding:5px 10px;
+.viewImgBox{
+	position: relative;
+	width: 100%;
+	padding-bottom: 65%;
+	overflow: hidden;
+}
+.viewImgBox img{
+	width: 105%;
+	position: absolute;
+}
+.tagBox{
 	position: absolute;
 	top: 10px;
 	left: 10px;
+	/*width: 50%;*/
+}
+.tag{
+	padding:5px 10px;
+	margin-right: 10px;
+	display: inline-block;
+	/*position: absolute;*/
+	/*top: 10px;*/
+	/*left: 10px;*/
 	color:#333;
 	background-color:#5df;
 }
@@ -1192,7 +1341,8 @@ footer{
 .viewIntroduce{
 
 	width: 600px;
-	height: 900px;
+	min-height: 600px;
+	height: 90%;
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -1200,7 +1350,7 @@ footer{
 	bottom: 0;
 
 
-	background-color: rgba(0,0,0,.8);
+	background-color: rgba(0,0,0,.6);
 	padding: 0;
 	margin: auto;
 	z-index: 5;
@@ -1219,7 +1369,7 @@ footer{
 }
 .viewName p{
 	text-align:center;
-	font-size:23px;
+	font-size:28px;
 	color:#ccc;
 	padding:20px;
 	font-weight:700;
@@ -1259,15 +1409,20 @@ footer{
 	margin:10px auto;
 	width: 85%;	
 }
+.viewDescrip p:nth-of-type(1){
+	font-weight: 700;
+}
 .viewDescrip p{
 	color:#ccc;
 }
 .viewDescrip p:nth-child(1){
 	font-size:23px;
 	padding: 10px 0;
+
 }
 .viewDescrip p:nth-child(2){
 	line-height:30px;
+			font-weight: 700;
 }
 /*景點介紹燈箱end*/
 .expertFilter{
@@ -1290,7 +1445,7 @@ footer{
 
 	/*padding-right:90px;*/
 
-	width: 790px;
+	width: 820px;
 	z-index: 7;
 }
 .positionRE{
@@ -1337,7 +1492,7 @@ footer{
 	width: 180px;
 	height: 40px;
 	top: 15px;
-	left: 30px;
+	left: 60px;
 	z-index:0;
 	background-color:rgba(91,189,228);
 	transform:skewX(-30deg);
@@ -1398,9 +1553,11 @@ footer{
 .dayBtn,.schBtn,.viewBtn{
 		display: none;
 }
-
-.deldayFilter{
+.deleteBox{
 	display: none;
+}
+.Filter{
+
 	width: 100%;
 	height: 100%;
 	position: fixed;
@@ -1419,17 +1576,45 @@ footer{
 	height: 300px;
 	margin: auto;
 	text-align: center;
-	background-color: rgba(0,0,0,.8);
+	background-color: rgba(0,0,0,.6);
 
 }
+.sizeSetting{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	width: 500px;
+	height: 300px;
+	margin: auto;
+	text-align: center;
+	background-color: rgba(0,0,0,.6);
+
+}
+.saveDataBox{
+	display: none;
+}
+.saveDataBox p:nth-of-type(1){
+	font-size: 24px;
+}
+.saveData p{
+	/*text-align: left;*/
+	font-size: 20px;
+	line-height: 55px;
+	color: #ccc;
+	font-weight: 700;
+}
+
+
 .delBox p{
-font-size: 26px;
+font-size: 24px;
 line-height: 150px;
 color: #ccc;
 font-weight: 700;
 }
 .btnBox{
-	/*margin-top: 50px;*/
+	margin-top: 30px;
 	/*padding:50px; */
 }
 .yesBtn,.noBtn{
@@ -1468,6 +1653,7 @@ font-weight: 700;
 	.day div:nth-child(1){
 		margin-left:-60px ;
 	}
+
 	.schMoveInBox{
 		margin: 30px 0;
 	}
@@ -1500,6 +1686,7 @@ font-weight: 700;
 	}
 	.selectDaysGroup{
 		margin: 0;
+
 	}
 	.selectDaysGroup li{
 		margin: 0;
@@ -1728,7 +1915,7 @@ font-weight: 700;
 		right: 0;
 		bottom: 0;
 		margin: auto;
-		background-color: rgba(0,0,0,1);
+		background-color: rgba(0,0,0,.6);
 		/*background-color: #888;*/
 		color: #ccc;
 
@@ -1791,19 +1978,53 @@ font-weight: 700;
 		cursor:pointer;
 
 	}
-
+	.Itemcontent .tagBox{
+		/*width: 50%;*/
+		left: 150px;
+	}
 	.Itemcontent span:nth-of-type(1){
-		position: absolute;
+		/*position: absolute;*/
 		top: -3px;
-		left: 130px;
-		/*right: 250px;*/
+		display: inline-block;
+		/*left: 180px;*/
+		right: -10px;
+		padding: 5px;
+		margin-right: 4px;
 		/*left: 0;*/
 		font-size: 16px;
 	}
 
+	.Itemcontent span:nth-of-type(2){
+		/*position: absolute;*/
+		top: -3px;
+		display: inline-block;
+		/*left: 130px;*/
+		/*right: 250px;*/
+		/*left: 0;*/
+				padding: 5px;
 
+		font-size: 16px;
+	}
+	#moveIcon{
+		position: absolute;
+		left: -530px;
+	}
+
+	.sizeSetting{
+	width: 90%;
+	}
+	.sizeSetting p{
+	font-size: 18px;
+	}
+	.saveDataBox p:nth-of-type(1){
+	font-size: 24px;
+	}
+	.planetSelect p:nth-of-type(1){
+		font-size: 20px;
+	}
 
 }
+
 @media screen and (max-width: 765px){
 	.views li{
 		font-size: 18px;
@@ -1821,7 +2042,10 @@ font-weight: 700;
 		width: 80%;
 
 	}
-
+	.addViewImg{
+	width: 50px;
+	height: 50px;
+	}
 
 
 }

@@ -196,10 +196,12 @@ nav {
     cursor: pointer;
     position: absolute;
     img{
+        width: 100%;
         height: 100%;
         position: absolute;
     }
     .planetBg{
+        width: 160%;
         height: 180%;
         top: -37%;
         right: 10%; 
@@ -1110,4 +1112,9 @@ nav {
 .copyright{
     background-color: #515052;
     padding: 15px;
+}
+
+// ===== 修飾SCSS =====
+.login_content {
+    min-height: 320px;
 }

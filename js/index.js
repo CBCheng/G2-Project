@@ -277,7 +277,9 @@ $(function(){
 
 //-----------
 
-function doFirst(){
+
+
+function doPoa(){
 	var leftPage = document.getElementById('leftPage');
 	var rightPage = document.getElementById('rightPage');
 	var travelGroup = document.querySelectorAll('.travelGroup');
@@ -336,8 +338,9 @@ function changeRight(){
 			// })
 	}
 };
-window.onload = doFirst;
 
+//window.onload = doPoa;
+window.addEventListener("load", doPoa, false);
 // console.log($(document).width());
 
 // var bb;
@@ -346,3 +349,7 @@ window.onload = doFirst;
 //     // $(this).attr('herf','expert.html');
 //     $('goAllRefer').click();
 // });
+$('.btn1').on('click',function(){
+    sessionStorage.setItem('scheduleNo',1);
+    console.log(sessionStorage.getItem('scheduleNo'));
+});

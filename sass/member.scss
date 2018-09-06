@@ -22,9 +22,16 @@ a {
     text-decoration: none;
     color: $fontColorWhite;
 }
+<<<<<<< HEAD
 .login_box img{
     width: 95px;
 }
+=======
+
+@import "layout/nav";
+@import "layout/nav-small";
+
+>>>>>>> 320add1e1740daaf109d60ec46b86f52326b7ccc
 // ========scrollBar change=========
 
 /* width */
@@ -914,12 +921,13 @@ div[class^=col-] {
     }
 }
 
-@import "layout/footer";
+
 footer {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, .5) 100%); // background-image: linear-gradient(to top,rgba(0, 183, 255, .5), rgba(0, 255, 255, .5) 100%);
     // background-color: ;
 }
 
-@import "layout/nav-small";
-@import "layout/medium";
-@import "layout/desktop";
+
+// @import "layout/medium";
+// @import "layout/desktop";
+@import "layout/footer";

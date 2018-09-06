@@ -60,27 +60,31 @@ try {
             <h3 class="h3Desk"><?php echo $memRow["expertName"];?></h3>
             <?php echo $attr ;?> 
             <div class="pic">
+                
                 <a>
-                    <img id="box" src="<?php echo $memRow["expertPic"];?>">
+                    <img class="box" src="<?php echo $memRow["expertPic"];?>">
                 </a>
-                <!-- <div class="aside">
+                <div class="aside">
                     <h2 class="h2Ph"><?php echo $memRow["planet"];?></h2>
                     <h3 class="h3Ph"><?php echo $memRow["expertName"];?></h3>
-                    <div class="score">
+                    <!-- <div class="score">
                         <span>5</span>
                         <img src="img/expertImg/star.png" alt="star">
                         <img src="img/expertImg/star.png" alt="star">
                         <img src="img/expertImg/star.png" alt="star">
                         <img src="img/expertImg/star.png" alt="star">
                         <img src="img/expertImg/star.png" alt="star">
-                    </div>
+                    </div> -->
                     <div class="mark">
-                        <img src="img/expertImg/comment.png" alt="comment">
+
+                        <img class="love" src="img/expertImg/heartRed.png">
+                        <span>1人收藏</span>
+                        <!-- <img src="../img/expertImg/comment.png" alt="comment">
                         <span>5</span>
-                        <img src="img/expertImg/love.png" alt="love">
-                        <span>20</span>
+                        <img src="../img/expertImg/love.png" alt="love">
+                        <span>20</span> -->
                     </div>
-                </div> -->
+                </div>
             </div> 
         </div>
 
@@ -97,7 +101,7 @@ try {
     	//=====跳窗打開=====
 			$(function () {
 				$(".element-item").click(function () {
-					$("#lightBox_father").show(800);
+					$("#exp_lightBox_father").show(800);
 				})
 			})
 			

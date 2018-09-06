@@ -42,7 +42,7 @@ var storage = sessionStorage;
                     //換大頭貼
                     $('.menu-icon-user img').attr('src','images/member/'+memArr["mempic"]);
                      
-                    $('.memberLogin a').attr('href','member.php');
+                    $('.memberLogin a').attr('href','php/member.php');
                  
                 }else{
                   alert( xhr.status);
@@ -62,8 +62,8 @@ var storage = sessionStorage;
         $('#menu-xs').click(function(){
             $('.menu-xs-icon').toggleClass('active');
             $('.menu-list-content-xs').toggleClass('active');
-            $('.menu-xs-icon img').attr('src','images/menu/icon-6.png');
-            $('.menu-xs-icon.active img').attr('src','images/menu/icon-03.png');
+            // $('.menu-xs-icon img').attr('src','images/menu/icon-6.png');
+            // $('.menu-xs-icon.active img').attr('src','images/menu/icon-03.png');
         });
         //----------------註冊 start---------------------// 
       $('.memberLogin').click(function(){ 
@@ -284,7 +284,7 @@ function $id(id){
           }
          
         }
-        xhr.open("get","logout.php",true);
+        xhr.open("get","php/logout.php",true);
         xhr.send(null);
 
       }
@@ -309,7 +309,7 @@ function $id(id){
         }
       }
 
-      xhr.open("Post", "ajax_login.php", true);
+      xhr.open("Post", "php/ajax_login.php", true);
       xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
       var data_info = "memEmail=" + document.getElementById("memEmail").value 
                     + "&memPsw="+ document.getElementById("memPsw").value;
@@ -353,7 +353,7 @@ function $id(id){
           alert( xhr.status);
         }
       }
-      xhr.open("get", "getLoginInfo.php", true);
+      xhr.open("get", "php/getLoginInfo.php", true);
       xhr.send(null);
     }; //window.onload
     

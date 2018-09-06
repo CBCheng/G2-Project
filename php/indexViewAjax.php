@@ -18,8 +18,10 @@ session_start();
 		$views = $view->fetch(PDO::FETCH_ASSOC);
 		// echo $views['viewName'];
 		// echo $views['viewImg1'];
-		$SESSION["indexViewNo"]=$views["viewNo"];
-		echo $SESSION["indexViewNo"];
+		$_SESSION["indexViewNo"]=$views["viewNo"];
+		$_SESSION["planet"]=$views["planet"];
+		echo $_SESSION["indexViewNo"];
+		echo $_SESSION["planet"];
 ?>
 
 <div class="viewItem">
@@ -28,7 +30,7 @@ session_start();
         <img src="img/index/cancel.png" alt="exit">
     </div>
     <h2><?php echo $views['viewName'] ?></h2>
-    <a href="planning.html">將景點加入行程</a>
+    <a href="planning.php">將景點加入行程</a>
     <script type="text/javascript">
     	$('.exit').on('click',function(){
 	        $('.viewBg').css('transform','rotateX(90deg)');

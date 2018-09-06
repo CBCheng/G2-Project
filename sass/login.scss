@@ -1,6 +1,19 @@
 @import "base/var";
 @import "base/reset";
 @import "mixin/mixin";
+@include body(12px);
+
+img{
+    width: 100%;
+    vertical-align: middle;
+}
+a {
+    text-decoration: none;
+    color: $fontColorWhite;
+}
+@import "layout/nav";
+@import "layout/nav-small";
+
 .login_modal {
     display: none;
     position: fixed;
@@ -28,7 +41,7 @@
     margin: auto;
     z-index: 15;
     width: 300px;
-    min-height: 200px;
+    
     border-radius: 10px;
     background-color: #08040f;
     display: flex;
@@ -38,11 +51,13 @@
 }
 
 .login_content {
-    padding: 30px 0 130px 0;
+    padding-top: 30px;
+    min-height: 320px;
 }
 
 .regist_content {
-    padding: 30px 0 170px 0;
+    padding-top: 30px;
+    min-height: 400px;
 }
 
 .login_content .close,
@@ -86,7 +101,7 @@
 .login_content h3,
 .regist_content h3 {
     width: 100%;
-    padding-bottom: 20px;
+    // padding-bottom: 20px;
     font-weight: 600;
 }
 
@@ -129,3 +144,5 @@
 .login_content span {
     padding-top: 10px;
 }
+
+@import "layout/footer";
