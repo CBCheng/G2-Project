@@ -439,8 +439,8 @@ function schName(){
 
 
 
-		var no  = document.querySelector('.pignose-calendar-button-cancel');
-		no.addEventListener('click',cancel);
+		// var no  = document.querySelector('.pignose-calendar-button-cancel');
+		// no.addEventListener('click',cancel);
 function cancel(){
 	 document.getElementById('calendar').style.display='none';
 }
