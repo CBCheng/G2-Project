@@ -7,6 +7,13 @@ try {
 
   
     foreach ($memRows as $memRow) {
+
+        $No = $memRow['expertNo'];
+        $sql2 = "select * from expertcollect where expertNo = $No;";
+        $members2 = $pdo->query($sql2);
+        $memRows2 = $members2->fetchAll(PDO::FETCH_ASSOC);
+
+
     	//判斷屬性
     	$attr='';
     	if($memRow["expFood"]==10){
@@ -60,29 +67,19 @@ try {
             <h3 class="h3Desk"><?php echo $memRow["expertName"];?></h3>
             <?php echo $attr ;?> 
             <div class="pic">
-                
                 <a>
                     <img class="box" src="<?php echo $memRow["expertPic"];?>">
                 </a>
                 <div class="aside">
                     <h2 class="h2Ph"><?php echo $memRow["planet"];?></h2>
                     <h3 class="h3Ph"><?php echo $memRow["expertName"];?></h3>
-                    <!-- <div class="score">
-                        <span>5</span>
-                        <img src="img/expertImg/star.png" alt="star">
-                        <img src="img/expertImg/star.png" alt="star">
-                        <img src="img/expertImg/star.png" alt="star">
-                        <img src="img/expertImg/star.png" alt="star">
-                        <img src="img/expertImg/star.png" alt="star">
-                    </div> -->
                     <div class="mark">
-
                         <img class="love" src="img/expertImg/heartRed.png">
-                        <span>1人收藏</span>
-                        <!-- <img src="../img/expertImg/comment.png" alt="comment">
-                        <span>5</span>
-                        <img src="../img/expertImg/love.png" alt="love">
-                        <span>20</span> -->
+                        <span>
+                            <?php
+                                echo $members2->rowCount();
+                            ?>
+                        人收藏</span>
                     </div>
                 </div>
             </div> 
@@ -91,9 +88,6 @@ try {
 
 
 		
-
-
-
         
         <script type="text/javascript">
         
