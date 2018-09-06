@@ -1,3 +1,19 @@
+<?php 
+ob_start();
+session_start();
+if(isset($_SESSION["indexViewNo"])==false){
+	$_SESSION["indexViewNo"]='';
+	
+}
+if(isset($_SESSION["planet"])==false){
+$_SESSION["planet"]='';	
+}
+
+if(isset($_SESSION["scheduleNo"])==false){
+	$_SESSION["scheduleNo"]='';
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,20 +30,19 @@
 <script type="text/javascript" src="js/pignose.calendar.full.js"></script>
 <!-- <script type="text/javascript" src="js/planning2.js"></script> -->
 <script type="text/javascript" src="js/planning.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/login.css">
-    <link rel="stylesheet" type="text/css" href="css/member.css">
+<link rel="stylesheet" type="text/css" href="css/planningnavcss/login.css">
+<link rel="stylesheet" type="text/css" href="css/planningnavcss/member.css">
 <link rel="stylesheet" type="text/css" href="css/planning.css">
 <title>Examples</title>
-
 
 
 </head>  
 <body >    
 	<header>
 <!-- nav -->
-    <div class="navColor">
-        <!-- <img class="navPic" src="img/bg.png" alt=""> -->
-    </div>
+    <!-- <div class="navColor">
+        <img class="navPic" src="img/bg.png" alt="">
+    </div> -->
     <nav>
         <!-- desk -->
         <ul class="menu mRight">
@@ -65,7 +80,7 @@
         echo '<span id="spanLogin">登出</span>';
       }else{
         echo '<span id="memName">&nbsp;</span>';
-        echo '<span id="spanLogin">登入</span>';
+        echo '<span id="spanLogin" class="chinese">登入</span>';
       }
       ?> 
                 
@@ -273,7 +288,7 @@
 						step 2
 					</p>
 					<p class="stepTxt">
-						匯入行程
+						建立行程名稱
 					</p>
 				&
 					<p class="stepTxt">
@@ -286,11 +301,11 @@
 					</p>
 							
 					<p class="stepTxt">
-					建立行程名稱
+					挑選專家
 					</p>
 					&
 					<p class="stepTxt">
-					儲存行程後挑選專家
+					儲存行程
 					</p>
 					
 
@@ -711,39 +726,7 @@
 
 	
 
-	if(window.innerWidth<1000){
-	Sortable.create(document.getElementById('day'), {
-                                animation: 150,
-                                delay: 300,
-                            });	
-	Sortable.create(document.getElementById('schduleDay1'), {
-                                animation: 150,
-                                delay: 300,
-                            });
-	Sortable.create(document.getElementById('schduleDay2'), {
-                                animation: 150,
-                                delay: 300,
-                            });
-	Sortable.create(document.getElementById('schduleDay3'), {
-                                animation: 150,
-                                delay: 300,
-                            });
-
-
-	}else{
-			Sortable.create(document.getElementById('day'), {
-                                animation: 150,
-                            });	
-			// Sortable.create(document.getElementById('schduleDay1'), {
-   //                              animation: 150,
-   //                          });
-			// Sortable.create(document.getElementById('schduleDay2'), {
-   //                              animation: 150,
-   //                          });
-			// Sortable.create(document.getElementById('schduleDay3'), {
-   //                              animation: 150,
-   //                          });
-	}
+	
 
 				
 		
@@ -798,7 +781,7 @@ var planetFilter = document.querySelector('.planetFilter');
 var selectP = document.querySelector('.planetLightBox');
 var txt = selectP.querySelectorAll('li');
 
-$('.planetName').click(function(){
+$('.setPlanet').click(function(){
 	var planetName = document.querySelector('.planetName');
 	
 		$('.confirmPlanetBox').css('display','block');
@@ -957,15 +940,20 @@ window.onbeforeunload = function(){
 			sessionStorage.removeItem("viewNo");	
 			sessionStorage.removeItem("scheduleNo");
 			sessionStorage.removeItem("indexViewNo");
+			sessionStorage.removeItem('date');
+				console.log(sessionStorage.getItem('date'));
+
 			return '';
 		}else{
 			sessionStorage.removeItem("viewNo");
 			sessionStorage.removeItem("scheduleNo");
 			sessionStorage.removeItem("indexViewNo");
+			sessionStorage.removeItem('date');
+				console.log(sessionStorage.getItem('date'));
+
 		}
 		
 };
-
 
 $.ajax({
 					url: 'php/getSession.php',
@@ -976,9 +964,12 @@ $.ajax({
 					success:function(data){
 						// console.log(data);
 						$('.input').append(data);
-						console.log($('.input input')[0]);
-						console.log($('.input input')[1]);
-						console.log($('.input input')[2]);
+						// console.log($('.input input')[0]);
+						// console.log($('.input input')[1]);
+						// console.log($('.input input')[2]);
+						
+
+						
 						if($('.input .indexViewNo').val()!=''){
 							sessionStorage.setItem("indexViewNo", $('.input .indexViewNo').val());
 							
@@ -993,6 +984,7 @@ $.ajax({
 							console.log($('.input .planet').val());
 							
 							}
+						
 						},
 
 					error:function(xhr, ajaxOptions, thrownError)
@@ -1040,7 +1032,7 @@ $.ajax({
 
 // 				});
 // }
-
+//獲得星球匯入景點
 if (sessionStorage.getItem('scheduleNo')!=null &&sessionStorage.getItem('scheduleNo')!='') {
 	var $scheduleNo = sessionStorage.getItem('scheduleNo');
 
@@ -1085,6 +1077,7 @@ if(sessionStorage.getItem("planet")==null ||sessionStorage.getItem("planet")==''
 			url: 'php/getViews.php',
 			dataType:'text',
 			type:'POST',
+			async: false,
 			data:{
 					planet:$planet,
 					
@@ -1112,6 +1105,7 @@ if(sessionStorage.getItem("planet")==null ||sessionStorage.getItem("planet")==''
 			url: 'php/getViewsInfo.php',
 			dataType:'text',
 			type:'POST',
+			async: false,
 			data:{
 					viewName:$viewName,
 					
@@ -1457,7 +1451,7 @@ $.ajax({
 						// console.log($('#planetNA').val());
 						// $('#depTime').remove();
 						// $('.schduleIN').css('display','none');
-
+							
 						},
 
 					error:function(xhr, ajaxOptions, thrownError)
@@ -1486,6 +1480,38 @@ $.ajax({
 
 
 
+</script>
+<script type="text/javascript">
+	var daycount = document.querySelectorAll('#day li').length;
+	console.log(daycount);
+	if(window.innerWidth<1000){
+	Sortable.create(document.getElementById('day'), {
+                                animation: 150,
+                                delay: 300,
+                            });	
+	for(var i=1;i<daycount;i++){
+		Sortable.create(document.getElementById('schduleDay'+i), {
+                                animation: 150,
+                                delay: 300,
+                            });
+		
+                           
+		}
+
+
+
+	}else{
+			Sortable.create(document.getElementById('day'), {
+                                animation: 150,
+                            });	
+			for(var i=1;i<=daycount;i++){
+		Sortable.create(document.getElementById('schduleDay'+i), {
+                                animation: 150,
+                                delay: 300,
+                            });
+		console.log(i);
+		}
+}
 </script>
    <script src="js/style.js"></script>
     <script type="text/javascript" src="js/login.js"></script>
