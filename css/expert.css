@@ -601,7 +601,7 @@ nav {
   .grid .expertBox:hover:before {
     left: 420px;
     top: 120px; }
-  .grid .expertBox:hover a img {
+  .grid .expertBox:hover a .box {
     transform: scale(1.2); } }
 
 @media screen and (max-width: 991px) {

@@ -55,6 +55,8 @@
             <li class="memberSign">
                 
       <?php
+        ob_start();
+        session_start();
             //檢查是否已登入
         if( isset($_SESSION["MEM_NAME"]) === true ){ //已登入
         echo '<span id="memName">', $_SESSION["MEM_NAME"], '</span>';
