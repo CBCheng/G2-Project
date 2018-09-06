@@ -9,7 +9,8 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/landScapeBackend.css">
-    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <title>景點管理</title>
 </head>
 <body>
     <div class="userFull">
@@ -79,25 +80,94 @@ if($_SESSION["mgrAccess"]=="一般"){
                         <td>景點狀態</td>
                         <td>修改</td>
                     </tr>
+
+<?php
+try{
+    $dsn = "mysql:host=localhost;port=3306;dbname=cd102g2;charset=utf8";
+    $user = "cheng2";
+    $password = "9453";
+    $options = array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION);
+    $pdo = new PDO( $dsn, $user, $password, $options);
+
+    $sql = "select * from view";
+    $views = $pdo->query($sql);
+    $viRows = $views->fetchAll(PDO::FETCH_ASSOC);
+
+
+
+    foreach ($viRows as $viRow){
+        $viType = '';
+        if($viRow["viewFood"] == 1){
+            $viRow["viewFood"] = '　'.'美食';
+            $viType.= $viRow["viewFood"];
+        }
+        if($viRow["viewHuman"] == 1){
+            $viRow["viewHuman"] = '　'.'人文';
+            $viType.= $viRow["viewHuman"];
+        }
+        if($viRow["viewSmart"] == 1){
+            $viRow["viewSmart"] = '　'.'知性';
+            $viType.= $viRow["viewSmart"];
+        }
+        if($viRow["viewAdven"] == 1){
+            $viRow["viewAdven"] = '　'.'冒險';
+            $viType.= $viRow["viewAdven"];
+        }
+        if($viRow["viewTech"] == 1){
+            $viRow["viewTech"] = '　'.'科技';
+            $viType.= $viRow["viewTech"];
+        }
+        $viTy = substr($viType,3,strlen($viType));
+
+        $upDown = '';
+        if($viRow["viewStatus"] == '1'){
+            $upDown = '顯示';
+        }else{
+            $upDown = '隱藏';
+        }
+
+?>
                     <tr>
-                        <td>1</td>
-                        <td>羅賴奧林山</td>
+                        <td><?php echo $viRow["viewNo"]?></td>
+                        <td><?php echo $viRow["viewName"]?></td>
                         <td>
-                            奧倫星
+                        <?php echo $viRow["planet"]?>
                         </td>
                         <td>
-                            冒險
+                        <?php echo $viTy?>
                         </td>
                         <td>
-                            <img src="img/poa/fireman.jpg" alt="">
+                            <img src="../<?php echo $viRow["viewImg1"]?>" alt="景點代表圖">
                         </td>
                         <td>
-                            隱藏
+                        <?php echo $upDown?>
                         </td>
-                        <td><button id="lightBoxBtn">修改</button></td>
+                        <td><button class="lightBoxBtn" value="<?php echo $viRow["viewNo"]?>">修改</button></td>
                     </tr>
+                    <!-- <script>
+                    $(function(){
+                        $('#lightBoxBtn').on('click',function(){
+                            $('.lightBox').css('display','block');
+                        });
+                        $('#cancelBtn').on('click',function(){
+                            $('.lightBox').css('display','none');
+                        });
+                    });
+                    </script> -->
+
+
+<?php
+    }
+} catch (PODException $e) {
+    echo "錯誤原因 : " , $e->getMessage(), "<br>";
+    echo "錯誤行號 : " , $e->getLine(), "<br>";	
+}
+?>
+
                 </table>
-                <div class="lightBox" id="lightBox">
+
+
+                <!-- <form class="lightBox" id="lightBox">
                     <h2>修改景點資料</h2>
                         <table border="1">
                             <tr>
@@ -166,7 +236,7 @@ if($_SESSION["mgrAccess"]=="一般"){
                             </tr>
                             
                         </table>
-                    </div>
+                </form> -->
 
 
             </div>
@@ -176,18 +246,43 @@ if($_SESSION["mgrAccess"]=="一般"){
     <div class="clearfix"></div>
 
     <script>
-        function doFirst(){
-            var lightBoxBtn = document.getElementById('lightBoxBtn');
-            var lightBox = document.getElementById('lightBox');
-            var cancelBtn = document.getElementById('cancelBtn');
-            lightBoxBtn.addEventListener('click',function(){
-                lightBox.style.display = 'block';
-            })
-            cancelBtn.addEventListener('click',function(){
-                lightBox.style.display = 'none';
-            })
-        }
-        window.onload = doFirst;
+        // function doFirst(){
+        //     var lightBoxBtn = document.getElementById('lightBoxBtn');
+        //     var lightBox = document.getElementById('lightBox');
+        //     var cancelBtn = document.getElementById('cancelBtn');
+        //     lightBoxBtn.addEventListener('click',function(){
+        //         lightBox.style.display = 'block';
+        //     })
+        //     cancelBtn.addEventListener('click',function(){
+        //         lightBox.style.display = 'none';
+        //     })
+        // }
+        // window.onload = doFirst;
+        $(function(){
+            $('.lightBoxBtn').on('click',function(){
+                var viId = $(this).val();
+                $.ajax({
+                    url:'lanScaChangeData.php',
+                    dataType:'text',
+                    type: 'POST',
+                    data:{viewId:viId},
+                    success: function (data) {
+                        $('#lightBox').remove();
+                        $('.userTable').after(data);
+                        $('#lightBox').css('display','block');
+                        //alert(data);
+                    },
+                    error: function () {
+                        alert('error');
+                    }
+                });
+                
+                // console.log($(this).val());
+            });
+            // $('#cancelBtn').on('click',function(){
+            //     $('#lightBox').css('display','none');
+            // });
+        });
     </script>
 </body>
 </html>

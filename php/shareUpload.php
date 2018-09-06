@@ -46,9 +46,9 @@ try {
     $options = array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION);
     $pdo = new PDO( $dsn, $user, $password, $options);
 
-  $sql = "update myschedule set share=1, ItineraryPic='$picName', scheduleName='$scheduleName'
-                          where scheduleNo= $scheduleNo";
-                          echo $sql;
+  // $sql = "update myschedule set share=1, ItineraryPic='$picName', scheduleName='$scheduleName'
+  //                         where scheduleNo= $scheduleNo";
+  //                         echo $sql;
   $sql = "update myschedule set share=:share, ItineraryPic=:ItineraryPic, scheduleName=:scheduleName
                           where scheduleNo=:scheduleNo";                          	
   $datas = $pdo->prepare( $sql ); 

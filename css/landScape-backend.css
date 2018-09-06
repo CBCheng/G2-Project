@@ -127,9 +127,9 @@ nav {
       padding: 50px; }
     .wrapContent .content .lightBox {
       display: none;
-      background-color: #000;
+      background-color: #aff;
       height: 100px;
-      position: absolute;
+      position: fixed;
       left: 0;
       top: 0;
       right: 0;
