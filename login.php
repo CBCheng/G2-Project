@@ -35,11 +35,11 @@
             </li>
         </ul>
         <a href="index.html" class="logo">
-            <img src="../img/logo-1.png">
+            <img src="img/logo-1.png">
         </a>
         <ul class="menu mLeft">
             <li>
-                <a href="expert.html">專家帶你玩</a>
+                <a href="expert.php">專家帶你玩</a>
             </li>
             <li>
                 <a href="shop.html">星際商城</a>
@@ -59,10 +59,10 @@
         session_start();
             //檢查是否已登入
         if( isset($_SESSION["MEM_NAME"]) === true ){ //已登入
-        echo '<a id="mem_a" href="member_profile.php"><span id="memName">', $_SESSION["MEM_NAME"], '</span></a>';
+        echo '<a id="mem_a" href="member_profile.php"><span id="memName">', $_SESSION["MEM_NAME"], '</span></a> '; 
         echo '<span id="spanLogin">登出</span>';
       }else{
-        echo '<a id="mem_a" href="#"><span id="memName">&nbsp;</span></a>';
+        echo '<a id="mem_a" href="#"><span id="memName">&nbsp;</span></a> ';
         echo '<span id="spanLogin">登入</span>';
       }
       ?> 
@@ -172,7 +172,6 @@
         <div class="copyright">
             <p>copyright@OhPlanets 2145</p>
         </div>
-<<<<<<< HEAD:php/login.php
     </footer> -->
  
     <script src="js/style.js"></script>
