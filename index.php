@@ -1,3 +1,7 @@
+<?php
+ob_start();
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -752,3 +756,8 @@
 </body>
 
 </html>
+
+<?php
+ini_set("display_errors","On");
+error_reporting(E_ALL);
+?>

@@ -42,4 +42,6 @@ session_start();
 		echo "錯誤原因 : " , $e->getMessage(), "<br>";
 		echo "錯誤行號 : " , $e->getLine(), "<br>";	
 	}
+	ini_set("display_errors","On");
+error_reporting(E_ALL);
 ?>
