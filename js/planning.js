@@ -57,8 +57,8 @@ function doFirst(){
 		var dateBtn = document.querySelector('.selectDays');
 		dateBtn.addEventListener('click',dateLightBoxTri);
 		dateLightBoxTri();//先做一次載入
-		console.log('1');
-	},200);
+
+		},200)
 		
 		// var getDate = document.querySelectorAll('[data-date]');
 
