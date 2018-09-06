@@ -59,10 +59,10 @@
         session_start();
             //檢查是否已登入
         if( isset($_SESSION["MEM_NAME"]) === true ){ //已登入
-        echo '<span id="memName">', $_SESSION["MEM_NAME"], '</span>';
+        echo '<a id="mem_a" href="member_profile.php"><span id="memName">', $_SESSION["MEM_NAME"], '</span></a>';
         echo '<span id="spanLogin">登出</span>';
       }else{
-        echo '<span id="memName">&nbsp;</span>';
+        echo '<a id="mem_a" href="#"><span id="memName">&nbsp;</span></a>';
         echo '<span id="spanLogin">登入</span>';
       }
       ?> 
@@ -174,13 +174,10 @@
         </div>
 <<<<<<< HEAD:php/login.php
     </footer> -->
-    <script src="../js/style.js"></script>
-    <script type="text/javascript" src="../js/login.js"></script>
-=======
-    </footer>
+ 
     <script src="js/style.js"></script>
     <script type="text/javascript" src="js/login.js"></script>
->>>>>>> 320add1e1740daaf109d60ec46b86f52326b7ccc:login.php
+
 </body>
 
 </html>

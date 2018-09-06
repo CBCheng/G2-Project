@@ -301,7 +301,9 @@ function $id(id){
             alert("帳密錯誤");
           }else{
             document.getElementById("memName").innerHTML = xhr.responseText;
-            document.getElementById("spanLogin").innerHTML = "登出";  
+            document.getElementById("spanLogin").innerHTML = "登出";
+            document.getElementById("mem_a").href ='member_profile.php';
+            // window.location.reload();  
           }
 
         }else{
@@ -341,20 +343,22 @@ function $id(id){
       // $id('btnLoginCancel').onclick = cancelLogin;
 
       //檢查是否已登入
-      var xhr = new XMLHttpRequest();
-      xhr.onload = function(){
-        if(xhr.status == 200){
-          if( xhr.responseText !=""){ //己登入
-            document.getElementById("memName").innerHTML = xhr.responseText;
-            document.getElementById("spanLogin").innerHTML = "登出";  
-          }
+      // var xhr = new XMLHttpRequest();
+      // xhr.onload = function(){
+      //   if(xhr.status == 200){
+      //     if( xhr.responseText !=""){ //己登入
+      //       document.getElementById("memName").innerHTML = xhr.responseText;
+      //       document.getElementById("mem_a").href ='member_profile.php';
+      //       document.getElementById("spanLogin").innerHTML = "登出"; 
+
+      //     }
           
-        }else{
-          alert( xhr.status);
-        }
-      }
-      xhr.open("get", "php/getLoginInfo.php", true);
-      xhr.send(null);
+      //   }else{
+      //     alert( xhr.status);
+      //   }
+      // }
+      // xhr.open("get", "php/getLoginInfo.php", true);
+      // xhr.send(null);
     }; //window.onload
     
     window.onload=init;
