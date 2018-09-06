@@ -103,7 +103,7 @@ $.ajax({
 $(document).on('click', '.element-item', function(){
 	var expertName = $(this).find('input').val();
 	var expertNo = $(this).data('no');
-	console.log(expertNo);
+	// console.log(expertNo);
 	$.ajax({
 		url: 'php/expert_lightBox.php',
 		type: 'POST',	
@@ -197,14 +197,11 @@ $(document).on('click', '.element-item', function(){
 					// console.log('科技:'+$('.ch_tech').val());
 				},
 			});
-
-			
 		},
 		error: function () {
 			alert('errorerror');
 		}
 	});
-
 })
 
 

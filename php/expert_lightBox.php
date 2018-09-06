@@ -1,9 +1,14 @@
 <?php
 try {
+    ob_start();
+    session_start();
     require_once("connectExpert.php");
     $expertName = $_REQUEST['expertName'];
     $expertNo = $_REQUEST['expertNo'];
-    // $memNo = $_SESSION['MEM_NO'];
+    $memNo = $_SESSION['MEM_NO'];
+    // $expertName = '阿莫大師';
+    // $expertNo = '101';
+    // $memNo = '1';
 
     $sql = "select * from expert where expertName = '$expertName'";
     $members = $pdo->query($sql);
@@ -100,17 +105,8 @@ try {
                     </h2>
                     <?php echo $attr_phone ;?>
                     <div class="data">
-                        <!-- <div class="score">
-                            <h3>評價</h3>
-                            <span>5</span>
-                            <img src="img/expertImg/star.png" alt="star">
-                            <img src="img/expertImg/star.png" alt="star">
-                            <img src="img/expertImg/star.png" alt="star">
-                            <img src="img/expertImg/star.png" alt="star">
-                            <img src="img/expertImg/star.png" alt="star">
-                        </div> -->
                         <div class="chart">
-                            
+                            <!-- 放桌機能力值 -->
                         </div>
                     </div>
                     <div class="record">
@@ -133,17 +129,13 @@ try {
                             ?> data-expert='<?php echo $memRow["expertNo"];?>'>
                             <p id="Cnum"><?php echo $members2->rowCount();?>人收藏</p>
                         </div>
-                       <!--  <div class="writeComment">
-                            <img id="write" src="img/expertImg/write.png" alt="write" title="撰寫評論">
-                            <p id="Wnum">3則評論</p>
-                        </div> -->
                     </div>
                 </article>
             </div>
-            <!-- content_phone改變能力值和收藏位置 -->
+            
             <div class="content_phone">
                 <div class="chart_phone">
-                    
+                    <!-- 放手機能力值 -->
                 </div>
                 <div class="record_phone">
                     <div class="collect">
@@ -165,30 +157,8 @@ try {
                             ?> data-expert='<?php echo $memRow["expertNo"];?>'>
                             <p id="Cnum"><?php echo $members2->rowCount();?>人收藏</p>
                     </div>
-                    <!-- <div class="writeComment">
-                        <img id="write" src="img/expertImg/write.png" alt="write" title="撰寫評論">
-                        <p id="Wnum">3則評論</p>
-                    </div> -->
                 </div>
             </div>
-            <!-- <div class="comment">
-                <h2>評論</h2>
-                <div class="message">
-                    <div class="user">
-                        <div class="name">董董</div>
-                        <img src="img/expertImg/userPic.jpg" alt="user">
-                    </div>
-                    <p>妙麗超專業的，人很nice又漂亮，下次一定還要預約！</p>
-                </div>
-                <div class="message">
-                    <div class="user">
-                        <div class="name">董董</div>
-                        <img src="img/expertImg/userPic.jpg" alt="user">
-
-                    </div>
-                    <p>妙麗超專業的，人很nice又漂亮，下次一定還要預約！</p>
-                </div>
-            </div> -->
         </section>
 
 
