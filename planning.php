@@ -1103,6 +1103,7 @@ if(sessionStorage.getItem("planet")==null ||sessionStorage.getItem("planet")==''
 			url: 'php/getViews.php',
 			dataType:'text',
 			type:'POST',
+			async: false,
 			data:{
 					planet:$planet,
 					
@@ -1130,6 +1131,7 @@ if(sessionStorage.getItem("planet")==null ||sessionStorage.getItem("planet")==''
 			url: 'php/getViewsInfo.php',
 			dataType:'text',
 			type:'POST',
+			async: false,
 			data:{
 					viewName:$viewName,
 					
