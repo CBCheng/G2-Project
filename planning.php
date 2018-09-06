@@ -1,3 +1,19 @@
+<?php 
+ob_start();
+session_start();
+if(isset($_SESSION["indexViewNo"])==false){
+	$_SESSION["indexViewNo"]='';
+	
+}
+if(isset($_SESSION["planet"])==false){
+$_SESSION["planet"]='';	
+}
+
+if(isset($_SESSION["scheduleNo"])==false){
+	$_SESSION["scheduleNo"]='';
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,17 +35,14 @@
 <link rel="stylesheet" type="text/css" href="css/planning.css">
 <title>Examples</title>
 
-<script>
-	console.log(sessionStorage.getItem('scheduleNo'));
-</script>
 
 </head>  
 <body >    
 	<header>
 <!-- nav -->
-    <div class="navColor">
-        <!-- <img class="navPic" src="img/bg.png" alt=""> -->
-    </div>
+    <!-- <div class="navColor">
+        <img class="navPic" src="img/bg.png" alt="">
+    </div> -->
     <nav>
         <!-- desk -->
         <ul class="menu mRight">
@@ -968,7 +981,6 @@ window.onbeforeunload = function(){
 		
 };
 
-
 $.ajax({
 					url: 'php/getSession.php',
 					dataType:'text',
@@ -978,9 +990,12 @@ $.ajax({
 					success:function(data){
 						// console.log(data);
 						$('.input').append(data);
-						console.log($('.input input')[0]);
-						console.log($('.input input')[1]);
-						console.log($('.input input')[2]);
+						// console.log($('.input input')[0]);
+						// console.log($('.input input')[1]);
+						// console.log($('.input input')[2]);
+						
+
+						
 						if($('.input .indexViewNo').val()!=''){
 							sessionStorage.setItem("indexViewNo", $('.input .indexViewNo').val());
 							
@@ -995,6 +1010,7 @@ $.ajax({
 							console.log($('.input .planet').val());
 							
 							}
+						
 						},
 
 					error:function(xhr, ajaxOptions, thrownError)
