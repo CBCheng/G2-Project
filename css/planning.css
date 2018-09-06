@@ -274,7 +274,7 @@ footer{
 .step div:nth-of-type(2){
 	position: absolute;
 
-	left: 460px;
+	left: 435px;
 	color: #ccc;
 	font-size: 18px;
 	
@@ -282,11 +282,12 @@ footer{
 .step div:nth-of-type(3){
 	position: absolute;
 
-	left: 740px;
+	left: 800px;
 	color: #ccc;
 	font-size: 18px;
 	
 }
+
 .step span{
 
 }
@@ -571,6 +572,9 @@ footer{
 	}
 
 }
+.yesBtn,.noBtn{
+	color: #333;	
+}
 .Btn{
 	cursor:pointer;
 	text-align:center;
@@ -579,6 +583,8 @@ footer{
 	width: 35%;
 	min-width: 100px;
 	background-color:#5df;
+	color: #333;
+
 }
 .addDayStyle{
 	margin-top: 20px;
@@ -1084,6 +1090,9 @@ footer{
 .planetLightBox li p {
 	padding:10px;
 }
+.searchSchdule p,.editImg{
+	cursor: pointer;
+}
 /*星球燈箱end*/
 
 .planetName{
@@ -1095,9 +1104,11 @@ footer{
 	font-weight: 700;
 	margin-bottom:19px;
 	padding-top: 2px;
+	cursor:pointer;
 }
 .planetName span{
 	line-height:35px;
+
 
 }
 
@@ -1336,6 +1347,7 @@ footer{
 	top: 0;
 	left: 0;
 	background-color: rgba(0,0,0,.6);
+	z-index: 7;
 
 }
 .viewIntroduce{

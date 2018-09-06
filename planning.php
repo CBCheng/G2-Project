@@ -30,8 +30,8 @@ if(isset($_SESSION["scheduleNo"])==false){
 <script type="text/javascript" src="js/pignose.calendar.full.js"></script>
 <!-- <script type="text/javascript" src="js/planning2.js"></script> -->
 <script type="text/javascript" src="js/planning.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/login.css">
-    <link rel="stylesheet" type="text/css" href="css/member.css">
+<link rel="stylesheet" type="text/css" href="css/planningnavcss/login.css">
+<link rel="stylesheet" type="text/css" href="css/planningnavcss/member.css">
 <link rel="stylesheet" type="text/css" href="css/planning.css">
 <title>Examples</title>
 
@@ -80,7 +80,7 @@ if(isset($_SESSION["scheduleNo"])==false){
         echo '<span id="spanLogin">登出</span>';
       }else{
         echo '<span id="memName">&nbsp;</span>';
-        echo '<span id="spanLogin">登入</span>';
+        echo '<span id="spanLogin" class="chinese">登入</span>';
       }
       ?> 
                 
@@ -288,7 +288,7 @@ if(isset($_SESSION["scheduleNo"])==false){
 						step 2
 					</p>
 					<p class="stepTxt">
-						匯入行程
+						建立行程名稱
 					</p>
 				&
 					<p class="stepTxt">
@@ -301,11 +301,11 @@ if(isset($_SESSION["scheduleNo"])==false){
 					</p>
 							
 					<p class="stepTxt">
-					建立行程名稱
+					挑選專家
 					</p>
 					&
 					<p class="stepTxt">
-					儲存行程後挑選專家
+					儲存行程
 					</p>
 					
 
@@ -813,7 +813,7 @@ var planetFilter = document.querySelector('.planetFilter');
 var selectP = document.querySelector('.planetLightBox');
 var txt = selectP.querySelectorAll('li');
 
-$('.planetName').click(function(){
+$('.setPlanet').click(function(){
 	var planetName = document.querySelector('.planetName');
 	
 		$('.confirmPlanetBox').css('display','block');
@@ -972,11 +972,17 @@ window.onbeforeunload = function(){
 			sessionStorage.removeItem("viewNo");	
 			sessionStorage.removeItem("scheduleNo");
 			sessionStorage.removeItem("indexViewNo");
+			sessionStorage.removeItem('date');
+				console.log(sessionStorage.getItem('date'));
+
 			return '';
 		}else{
 			sessionStorage.removeItem("viewNo");
 			sessionStorage.removeItem("scheduleNo");
 			sessionStorage.removeItem("indexViewNo");
+			sessionStorage.removeItem('date');
+				console.log(sessionStorage.getItem('date'));
+
 		}
 		
 };
