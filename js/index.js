@@ -349,3 +349,7 @@ window.addEventListener("load", doPoa, false);
 //     // $(this).attr('herf','expert.html');
 //     $('goAllRefer').click();
 // });
+$('.btn1').on('click',function(){
+    sessionStorage.setItem('scheduleNo',1);
+    console.log(sessionStorage.getItem('scheduleNo'));
+});

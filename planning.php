@@ -19,7 +19,9 @@
 <link rel="stylesheet" type="text/css" href="css/planning.css">
 <title>Examples</title>
 
-
+<script>
+	console.log(sessionStorage.getItem('scheduleNo'));
+</script>
 
 </head>  
 <body >    

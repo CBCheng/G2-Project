@@ -196,10 +196,12 @@ nav {
     cursor: pointer;
     position: absolute;
     img{
+        width: 100%;
         height: 100%;
         position: absolute;
     }
     .planetBg{
+        width: 160%;
         height: 180%;
         top: -37%;
         right: 10%; 
