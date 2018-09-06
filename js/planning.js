@@ -1469,7 +1469,8 @@ if(sessionStorage.getItem('scheduleNo')!=null&&sessionStorage.getItem('indexView
 
 
 
-			for(var i=1;i<$('#schduleUl ul').length;i++){
+			for(var i=1;i<=$('#schduleUl ul').length;i++){
+				// console.log(i);
 				Sortable.create(document.getElementById('schduleDay'+i), {
                                 animation: 150,
                      });

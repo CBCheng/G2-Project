@@ -726,39 +726,7 @@ if(isset($_SESSION["scheduleNo"])==false){
 
 	
 
-	if(window.innerWidth<1000){
-	Sortable.create(document.getElementById('day'), {
-                                animation: 150,
-                                delay: 300,
-                            });	
-	Sortable.create(document.getElementById('schduleDay1'), {
-                                animation: 150,
-                                delay: 300,
-                            });
-	Sortable.create(document.getElementById('schduleDay2'), {
-                                animation: 150,
-                                delay: 300,
-                            });
-	Sortable.create(document.getElementById('schduleDay3'), {
-                                animation: 150,
-                                delay: 300,
-                            });
-
-
-	}else{
-			Sortable.create(document.getElementById('day'), {
-                                animation: 150,
-                            });	
-			// Sortable.create(document.getElementById('schduleDay1'), {
-   //                              animation: 150,
-   //                          });
-			// Sortable.create(document.getElementById('schduleDay2'), {
-   //                              animation: 150,
-   //                          });
-			// Sortable.create(document.getElementById('schduleDay3'), {
-   //                              animation: 150,
-   //                          });
-	}
+	
 
 				
 		
@@ -1064,7 +1032,7 @@ $.ajax({
 
 // 				});
 // }
-
+//獲得星球匯入景點
 if (sessionStorage.getItem('scheduleNo')!=null &&sessionStorage.getItem('scheduleNo')!='') {
 	var $scheduleNo = sessionStorage.getItem('scheduleNo');
 
@@ -1483,7 +1451,7 @@ $.ajax({
 						// console.log($('#planetNA').val());
 						// $('#depTime').remove();
 						// $('.schduleIN').css('display','none');
-
+							
 						},
 
 					error:function(xhr, ajaxOptions, thrownError)
@@ -1512,6 +1480,38 @@ $.ajax({
 
 
 
+</script>
+<script type="text/javascript">
+	var daycount = document.querySelectorAll('#day li').length;
+	console.log(daycount);
+	if(window.innerWidth<1000){
+	Sortable.create(document.getElementById('day'), {
+                                animation: 150,
+                                delay: 300,
+                            });	
+	for(var i=1;i<daycount;i++){
+		Sortable.create(document.getElementById('schduleDay'+i), {
+                                animation: 150,
+                                delay: 300,
+                            });
+		
+                           
+		}
+
+
+
+	}else{
+			Sortable.create(document.getElementById('day'), {
+                                animation: 150,
+                            });	
+			for(var i=1;i<=daycount;i++){
+		Sortable.create(document.getElementById('schduleDay'+i), {
+                                animation: 150,
+                                delay: 300,
+                            });
+		console.log(i);
+		}
+}
 </script>
    <script src="js/style.js"></script>
     <script type="text/javascript" src="js/login.js"></script>
