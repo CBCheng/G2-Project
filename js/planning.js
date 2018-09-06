@@ -49,14 +49,17 @@ function doFirst(){
 
 
 		//帶入日期
-		var arrows = document.querySelectorAll('.pignose-calendar-top-icon');
+		setTimeout(function(){
+			var arrows = document.querySelectorAll('.pignose-calendar-top-icon');
 
 		arrows[0].addEventListener('click',delay);
 		arrows[1].addEventListener('click',delay);
 		var dateBtn = document.querySelector('.selectDays');
 		dateBtn.addEventListener('click',dateLightBoxTri);
 		dateLightBoxTri();//先做一次載入
-
+		console.log('1');
+	},200);
+		
 		// var getDate = document.querySelectorAll('[data-date]');
 
 		var getDate = document.querySelectorAll('[data-date]');
