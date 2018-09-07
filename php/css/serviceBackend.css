@@ -157,3 +157,16 @@ nav {
     .userTable tr:nth-child(even){
       background-color: #FFF;
     }
+.pic{
+  text-align: center;
+  width: 150px;
+  height: 90px;
+}
+.pic img{
+  width: 100%;
+  height: 100%;   
+}
+.schContent{
+  line-height: 26px;
+  text-align: left;
+}
