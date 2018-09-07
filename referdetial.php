@@ -18,12 +18,12 @@ session_start();
 </head>
 <body>
 <!-- nav -->
-    <div class="navColor">
+    <!-- <div class="navColor">
         <img class="navPic" src="img/bg.png" alt=""> 
     </div>
-    <nav>          
+    <nav>           -->
         <!-- desk -->
-        <ul class="menu mRight">
+        <!-- <ul class="menu mRight">
             <li><a href="planning.html">開始冒險</a></li>
            <li><a href="expert.html">專家帶你玩</a></li>
         </ul>
@@ -36,9 +36,9 @@ session_start();
         </ul>
         <ul class="member">
             <li class="shoppingCar"><a href="#">
-                <img class="shoppingCarPic" src="img/shopping car.png" alt="">
+                <img class="shoppingCarPic" src="img/shopping car.png" alt=""> -->
                 <!-- <img class="shoppingCarHover" src="img/shoppingCarHover.png" alt=""> -->
-            </a></li>
+            <!-- </a></li>
             <li class="memberSign"><a href="#">登入</a></li>
         </ul>
         <ul class="memberSelect">
@@ -49,9 +49,9 @@ session_start();
             <li><a href="member_comment.html">專家評論</a></li>
             <li><a href="member_profile.html">會員資料修改</a></li>
             <li><a href="sign.html">登出</a></li>
-        </ul>
+        </ul> -->
         <!-- mobile -->
-        <div class="hambger">
+        <!-- <div class="hambger">
             <div class="line"></div>
         </div>
         <ul class="menuMobile">
@@ -62,9 +62,11 @@ session_start();
             <li><a href="member.html">會員專區</a></li>
             <li><a href="shop.html">購物車</a></li>
         </ul>
-    </nav>
+    </nav> -->
 
-
+<header>
+        <?php include 'login.php';?>
+    </header>
 <?php
 
 
