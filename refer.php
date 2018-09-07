@@ -5,61 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="text/css" href="img/logovb.png">
+    <!-- <link rel="stylesheet" type="text/css" href="css/login.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="css/member.css"> -->
     <title>OH~PLANETS! | 別人怎麼玩</title>
     <!-- css -->
     <link rel="stylesheet" href="css/refer.css">
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 </head>
 <body>
-     <!-- nav -->
-     <div class="navColor">
-        <img class="navPic" src="img/bg.png" alt="">
-    </div>
-    <nav>
-        <!-- desk -->
-        <ul class="menu mRight">
-            <li><a href="planning.html">開始冒險</a></li>
-            <li><a href="refer.html">別人怎麼玩</a></li>
-        </ul>
-        <a href="index.html" class="logo">
-            <img src="img/logo-1.png">
-        </a>
-        <ul class="menu mLeft">
-            <li><a href="expert.html">專家帶你玩</a></li>
-            <li><a href="shop.html">星際商城</a></li>
-        </ul>
-        <ul class="member">
-            <li class="shoppingCar">
-                <a href="#">
-                    <img class="shoppingCarPic" src="img/shopping car.png" alt="">
-                    <!-- <img class="shoppingCarHover" src="img/shoppingCarHover.png" alt=""> -->
-                </a>
-            </li>
-            <li class="memberSign"><a href="#">登入</a></li>
-        </ul>
-        <!-- <ul class="memberSelect">
-            <li>Hi ~ 冒險者</li>
-            <li><a href="member_mytrip.html">我的行程</a></li>
-            <li><a href="member_favorite.html">我的收藏</a></li>
-            <li><a href="member_order.html">我的訂單</a></li>
-            <li><a href="member_comment.html">專家評論</a></li>
-            <li><a href="member_profile.html">會員資料修改</a></li>
-            <li><a href="sign.html">登出</a></li>
-        </ul> -->
-        <!-- mobile -->
-        <div class="hambger">
-            <div class="line"></div>
-        </div>
-        <ul class="menuMobile">
-            <img class="navPic" src="img/bgM.png" alt="">
-            <li><a href="planning.html">開始冒險</a></li>
-            <li><a href="refer.html">別人怎麼玩</a></li>
-            <li><a href="expert.html">專家帶你玩</a></li>
-            <li><a href="shop.html">星際商城</a></li>
-            <li><a href="member.html">會員專區</a></li>
-            <li><a href="shop.html">購物車</a></li>
-        </ul>
-    </nav>
+     
+    <!-- nav -->
+    <header>
+        <?php include 'login.php';?>
+    </header>
+
+
 
     <!-- content -->
     <section class="wrap">
@@ -114,7 +74,7 @@
                                 </label>
                             </div>
                             <div>
-                                <input type="submit" value="分享行程">
+                                <input type="submit" value="分享行程" class="submit">
                             </div>
                         <!-- </div> -->
                     </form>
@@ -122,38 +82,33 @@
             </div>
         </div>
         <!-- 分享行程 -->
-        <div class="grid tripWrap">
-            <!-- <div class="element-item tripBox new blue">
-                <div class="tripPic">
-                    <a href="referdetial.html">
-                        <img src="img/refer/p1_v7/p1_v7_08.jpg">
-                    </a>
-                    <div class="tripTag">
-                        <span class="tripPlanet blue">瓦特星</span>
-                        <span class="tripKind adventure">冒險</span>
-                    </div>
-                    <div class="tripIcon">
-                        <div class="tripMessage">
-                            <img src="img/icon/speech-bubbles-comment-option-blue.png">
-                            <p>9487留言</p>
+            <div class="grid tripWrap">
+                <!-- <div class="element-item tripBox new blue">
+                    <div class="tripPic">
+                        <a href="referdetial.html">
+                            <img src="img/refer/p1_v7/p1_v7_08.jpg">
+                        </a>
+                        <div class="tripTag">
+                            <span class="tripPlanet blue">瓦特星</span>
+                            <span class="tripKind adventure">冒險</span>
                         </div>
-                        <div class="tripCollect">
-                            <img src="img/icon/like-red.png">
-                            <p>9487收藏</p>
+                        <div class="tripIcon">
+                            <div class="tripMessage">
+                                <img src="img/icon/speech-bubbles-comment-option-blue.png">
+                                <p>9487留言</p>
+                            </div>
+                            <div class="tripCollect">
+                                <img src="img/icon/like-red.png">
+                                <p>9487收藏</p>
+                            </div>
                         </div>
+                        <a class="grad" href="referdetial.html"></a>
                     </div>
-                    <a class="grad" href="referdetial.html"></a>
-                </div>
-                <div class="tripTxt">
-                        <h4><span>3天</span>瓦特星挑戰極限</h4>
-                </div>
-            </div>-->
-        </div>
- 
-    
-
-
-
+                    <div class="tripTxt">
+                            <h4><span>3天</span>瓦特星挑戰極限</h4>
+                    </div>
+                </div>-->
+            </div>
         </div>
     </section>
     <!-- footer -->
@@ -171,5 +126,6 @@
     <!-- <script src="js/isotope.js"></script> -->
     <script src="js/style.js"></script>
     <script src="js/refer.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
 </body>
 </html>

@@ -58,7 +58,7 @@ try {
   $datas->bindValue(":share", 1); 
   $datas->execute();
 
-    header("location:../refer.html");
+    header("location:../refer.php");
 } catch (PDOException $e) {
 	echo "錯誤原因 : " , $e->getMessage(), "<br>";
 	echo "錯誤行號 : " , $e->getLine(), "<br>";		

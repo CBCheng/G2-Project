@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="text/css" href="img/logovb.png">
-    <title>OH~PLANETS! | 瓦特星大冒險</title>
+    <title>OH~PLANETS!</title>
     <!-- css -->
     <!-- <link rel="stylesheet" href="css/site.css">
     <link rel="stylesheet" href="css/animate.css"> -->
@@ -81,7 +81,7 @@
             <li><a href="sign.html">登出</a></li>
         </ul> -->
         <!-- mobile -->
-        <div class="hambger">
+        <!-- <div class="hambger">
             <div class="line"></div>
         </div>
         <ul class="menuMobile">
@@ -211,7 +211,11 @@ try {
     <!-- content -->
     <section>
         <!-- banner -->
+<<<<<<< HEAD
         <img class="bannerPic" src="img/refer/p1_v7" alt="">
+=======
+        
+>>>>>>> 191ab5cdcc9b29deb5c67998943fbb8962b2563a
         <div class="topic">
             <div class="memberPic">
                 <img src="img/refer/<?php echo $memberRow->MEM_IMG?>" alt="">
@@ -424,10 +428,10 @@ try {
                 </div>              
             </div>
             <!-- 相關行程 -->
-            <h3 class="shareH3">相關行程分享</h3>
+            <h3 class="shareH3">推薦行程分享</h3>
             <div class="tripBox new blue">
                 <div class="tripPic">
-                    <a href="referdetial.html">
+                    <a href="referdetial.php?scheduleNo=1">
                         <img src="img/refer/p1_v7/p1_v7_08.jpg">
                     </a>
                     <div class="tripTag">
@@ -439,12 +443,12 @@ try {
                             <img src="img/icon/speech-bubbles-comment-option-blue.png">
                             <p>9487留言</p>
                         </div>
-                        <div class="tripCollect">
+                        <!-- <div class="tripCollect">
                             <img src="img/icon/like-red.png">
                             <p>9487收藏</p>
-                        </div>
+                        </div> -->
                     </div>
-                    <a class="grad" href="referdetial.html"></a>
+                    <a class="grad" href="referdetial.php?scheduleNo=1"></a>
                 </div>
                 <div class="tripTxt">
                         <h4><span>3天</span>瓦特星挑戰極限</h4>
@@ -453,7 +457,7 @@ try {
 
             <div class="tripBox new blue">
                 <div class="tripPic">
-                    <a href="referdetial.html">
+                    <a href="referdetial.php?scheduleNo=2">
                         <img src="img/refer/p1_v7/p1_v7_08.jpg">
                     </a>
                     <div class="tripTag">
@@ -465,12 +469,12 @@ try {
                             <img src="img/icon/speech-bubbles-comment-option-blue.png">
                             <p>9487留言</p>
                         </div>
-                        <div class="tripCollect">
+                        <!-- <div class="tripCollect">
                             <img src="img/icon/like-red.png">
                             <p>9487收藏</p>
-                        </div>
+                        </div> -->
                     </div>
-                    <a class="grad" href="referdetial.html"></a>
+                    <a class="grad" href="referdetial.php?scheduleNo=2"></a>
                 </div>
                 <div class="tripTxt">
                     <h4><span>3天</span>瓦特星挑戰極限</h4>

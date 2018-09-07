@@ -9,7 +9,7 @@ $(function(){
                 $('.shareLightBg').addClass('show')
             },
             error: function () {
-                alert('error');
+                alert('請先登入');
             }
         });
     });
