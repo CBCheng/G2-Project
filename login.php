@@ -61,11 +61,11 @@
         if( isset($_SESSION["MEM_NAME"]) === true ){ //已登入
         echo '<a id="mem_a" href="member_profile.php"><span id="memName">', $_SESSION["MEM_NAME"], '</span></a> '; 
         echo '<span id="spanLogin">登出</span>';
-        echo '<input type="hidden" name="memNo" value="$_SESSION["MEM_NO"]">';
+        echo '<input type="hidden" name="memNo" value="',$_SESSION["MEM_NO"],'">';
       }else{
         echo '<a id="mem_a" href="#"><span id="memName">&nbsp;</span></a> ';
         echo '<span id="spanLogin">登入</span>';
-        echo '<input type="hidden" name="memNo" value="$_SESSION["MEM_NO"]">';
+        echo '<input type="hidden" name="memNo" value="',$_SESSION["MEM_NO"],'">';
       }
       ?> 
                 
