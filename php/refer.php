@@ -40,6 +40,12 @@ try{
             $pop = '';            
         }
         // echo $pop;
+        $mes = '';
+        if($refRow["messageNum"] == NULL){
+            $mes = '0';
+        }else{
+            $mes = '$refRow["messageNum"]';
+        }
 ?>
 
 <!-- <div class="element-item tripBox new blue"> -->
@@ -57,7 +63,7 @@ try{
                 <div class="tripIcon">
                     <div class="tripMessage">
                         <img src="img/icon/speech-bubbles-comment-option-blue.png">
-                        <p><?php echo $refRow["messageNum"] ?>留言</p>
+                        <p><?php echo $mes ?>留言</p>
                     </div>
                     <!-- <div class="tripCollect">
                         <img src="img/icon/like-red.png">

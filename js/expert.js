@@ -126,7 +126,7 @@ $(document).on('click', '.element-item', function(){
 				$('#exp_lightBox').addClass('boxGreen');
 			}
 
-
+			
 			//點擊愛心收藏專家→insert into一筆資料
 			$('.heart').click(function(){
                 $.ajax({
@@ -134,16 +134,14 @@ $(document).on('click', '.element-item', function(){
                     type: 'POST',
                     dataType: 'text',
                     data: {
-                        // memNo: $_SESSION['MEM_NO'],
                         expertNo: $(this).data('expert'),
-                        // expertPopular: $(this).data('popular')
                     },  
                     success: function (data) {
                         alert(data);
                     },
-                    // error: function () {
-                    //     alert('error');
-                    // }
+                    error: function () {
+                        alert('請先登入才可收藏');
+                    }
                 })
              })
 

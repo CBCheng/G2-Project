@@ -14,8 +14,8 @@ try{
     $trip->execute();
     $tripRows = $trip->fetch(PDO::FETCH_ASSOC);
 ?>
-
-<input id="tripName" name="scheduleName" type="text" placeholder="<?php echo $tripRows["scheduleName"] ?>">
+<!-- placeholder -->
+<input id="tripName" name="scheduleName" type="text" value="<?php echo $tripRows["scheduleName"] ?>">
 <input type="hidden" name="scheduleNo" value="<?php echo $tripRows["scheduleNo"] ?>">
      
 <?php  
