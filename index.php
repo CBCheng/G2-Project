@@ -84,21 +84,21 @@ session_start();
         <!-- desk -->
         <ul class="menu mRight">
             <li>
-                <a href="planning.html">開始冒險</a>
+                <a href="planning.php">開始冒險</a>
             </li>
             <li>
-                <a href="refer.html">別人怎麼玩</a>
+                <a href="refer.php">別人怎麼玩</a>
             </li>
         </ul>
-        <a href="index.html" class="logo">
+        <a href="index.php" class="logo">
             <img src="img/logo-1.png">
         </a>
         <ul class="menu mLeft">
             <li>
-                <a href="expert.html">專家帶你玩</a>
+                <a href="expert.php">專家帶你玩</a>
             </li>
             <li>
-                <a href="shop.html">星際商城</a>
+                <a href="shop.php">星際商城</a>
             </li>
         </ul>
         <ul class="member">
@@ -139,22 +139,22 @@ session_start();
         <ul class="menuMobile">
             <!-- <img class="navPic" src="img/bgM.png" alt=""> -->
             <li>
-                <a href="planning.html">開始冒險</a>
+                <a href="planning.php">開始冒險</a>
             </li>
             <li>
-                <a href="expert.html">專家帶你玩</a>
+                <a href="expert.php">專家帶你玩</a>
             </li>
             <li>
-                <a href="refer.html">別人怎麼玩</a>
+                <a href="refer.php">別人怎麼玩</a>
             </li>
             <li>
-                <a href="shop.html">星際商城</a>
+                <a href="shop.php">星際商城</a>
             </li>
             <li>
-                <a href="member.html">會員專區</a>
+                <a href="member.php">會員專區</a>
             </li>
             <li>
-                <a href="shop.html">購物車</a>
+                <a href="shop.php">購物車</a>
             </li>
 
         </ul>
@@ -551,7 +551,7 @@ session_start();
                         <span></span>
                         <p>知性</p>
                         <span></span>
-                        <a href="expert.html" class="aaa">專家詳情</a>
+                        <!-- <a href="expert.html" class="aaa">專家詳情</a> -->
                     </div>
                 </div>
             </div>
@@ -576,7 +576,7 @@ session_start();
                         <span></span>
                         <p>知性</p>
                         <span></span>
-                        <a href="expert.html">專家詳情</a>
+                        <!-- <a href="expert.html">專家詳情</a> -->
                     </div>
                 </div>
             </div>
@@ -601,7 +601,7 @@ session_start();
                         <span></span>
                         <p>知性</p>
                         <span></span>
-                        <a href="expert.html">專家詳情</a>
+                        <!-- <a href="expert.html">專家詳情</a> -->
                     </div>
                 </div>
             </div>
@@ -628,7 +628,7 @@ session_start();
                         <span></span>
                         <p>知性</p>
                         <span></span>
-                        <a href="expert.html">專家詳情</a>
+                        <!-- <a href="expert.html">專家詳情</a> -->
                     </div>
                 </div>
             </div>
@@ -655,7 +655,7 @@ session_start();
                         <h4 class="trTitlePlanet">行星之眼</h4>
                         <h4 class="trTitleName">小資女的異星省錢之道</h4>
                         <p>
-                        烏尤尼鹽湖世界上最大的鹽湖，相當於三分之一台灣大小，在每年12月至隔年3月雨季期間，因湖面積水像是鏡子一般反射出天空的倒影，讓人如置身夢境一般，因此被稱為「天空之鏡」。烏尤尼鹽湖4至11月期間則是旱季，乾涸湖面變成一大片白色平原，別有一番風情。
+                        世界上最大的峽谷之一，是達沙星上自然界七大奇景之一。行星之眼因高原抬升時，多多河及其支流切割層層沉積岩而形成，色彩斑斕，峭壁險峻，可將近20億年來的地質變遷史一覽無餘。
                         </p>
                     </div>
                     <div class="travelPic">

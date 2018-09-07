@@ -42,3 +42,13 @@ a {
 @import "layout/footer";
 @import "layout/medium";
 @import "layout/desktop";
+
+.lightBox{
+    #upFile, #imgView, .mytrip, .close, .submit{
+        cursor: pointer;
+    }
+}
+.tripPic{
+    height: 75%;
+    overflow: hidden;
+}
