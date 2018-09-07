@@ -76,7 +76,10 @@ if($_SESSION["mgrAccess"]=="一般"){
             
             <div class="content">
             <h1>使用者管理</h1>
-            <button class="addUser">新增使用者</button>
+            <form action="addUserBackend.php" method="get">
+            <input type="submit" name="addUser" value="新增使用者">
+            <!-- <button class="addUser">新增使用者</button> -->
+            </form>
             <table class="userTable">
                     <tr class="tableTitle">
                         <td>管理員編號</td>
@@ -86,6 +89,7 @@ if($_SESSION["mgrAccess"]=="一般"){
                         <td>狀態</td>
                         <td>權限</td>
                         <td>確認修改</td>
+                        <td>刪除</td>
                     </tr>
 
 <?php
@@ -96,6 +100,7 @@ try {
         $bgmgr = $pdo->query($sql);
     while($bgmgrRow = $bgmgr->fetch(PDO::FETCH_ASSOC)){
         echo "<form action='userUpdateBackend.php' method='post'>";
+
         echo "<input type='hidden' name='mgrNo' value=".$bgmgrRow["mgrNo"].">";
         echo "<tr>";
             echo "<td>",$bgmgrRow["mgrNo"],"</td>";
@@ -136,10 +141,13 @@ try {
                     echo "<option value='專家' selected>專家</option>";
                     echo "</select></td>";
                     break;
+
             }
         
             
             echo "<td><input type='submit' value='儲存修改'></td>";
+            
+            echo "<td><input type='submit' name='delBtn' value='刪除'></td>";
         echo "</tr>";
     echo "</form>";
     }
@@ -158,6 +166,7 @@ try {
     </div>
     <div class="clearfix"></div>      
 
-<script src="js/userBackend.js"></script>
+
+
 </body>
 </html>

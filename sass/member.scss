@@ -23,6 +23,11 @@ a {
     color: $fontColorWhite;
 }
 
+.login_box img{
+    width: 95px;
+}
+
+
 @import "layout/nav";
 @import "layout/nav-small";
 
@@ -64,6 +69,11 @@ a {
     font-weight: 500;
 }
 
+
+.member_form .member_info tbody {
+    color: #6cd5ff; }
+tbody{
+        color:#fff;}
 .btn {
     background: #fff;
     cursor: pointer;

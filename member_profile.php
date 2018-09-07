@@ -131,7 +131,7 @@ $member_pic = 'member_pic/'.@$_SESSION["MEM_IMG"];
                                 <form method="post" action="php/new_upfile.php" enctype="multipart/form-data" id="file" class="member_img">
                                     <input type="hidden" name="memNo" value="140">
                                     <figure>
-                                        <img id="show_pic" src="img/<?php echo $memberInfo["MEM_IMG"]?>">
+                                        <img id="show_pic" src="img/member/<?php echo $memberInfo["MEM_IMG"]?>">
 
                                     </figure>
                                     <input id="upfile" name="upfile" type="file" name="upfile">
