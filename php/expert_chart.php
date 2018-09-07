@@ -5,7 +5,6 @@ try {
     $sql = "select * from expert where expertName = '$expertName'";
     $members = $pdo->query($sql);
     $memRows = $members->fetchAll(PDO::FETCH_ASSOC);
-    // echo json_encode($memRow);
 
 
     foreach ($memRows as $memRow) {

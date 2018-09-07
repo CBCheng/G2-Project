@@ -57,15 +57,19 @@ function doFirst(){
 		var dateBtn = document.querySelector('.selectDays');
 		dateBtn.addEventListener('click',dateLightBoxTri);
 		dateLightBoxTri();//先做一次載入
+		var getDate = document.querySelectorAll('[data-date]');
+					for(var i=0;i<getDate.length;i++){
+						getDate[i].addEventListener('click',confirm);
+					}
 
-		},200)
+		var no  = document.querySelector('.pignose-calendar-button-cancel');
+		no.addEventListener('click',cancel);
+
+		},50)
 		
 		// var getDate = document.querySelectorAll('[data-date]');
 
-		var getDate = document.querySelectorAll('[data-date]');
-			for(var i=0;i<getDate.length;i++){
-				getDate[i].addEventListener('click',confirm);
-			}
+		
 			
 
 		
@@ -157,6 +161,10 @@ function doFirst(){
 			// for(var i=0;i<txt.length;i++){
 			// 	txt[i].addEventListener('click',getPlanetName);
 			// }
+			var editPlanets = document.querySelector('.editPlanets');
+			editPlanets.addEventListener('click',function(){
+				confirmPlanetBox.style.display='block';
+			});
 			var closePlanetIcon = document.querySelector('.logoBar div span');
 				closePlanetIcon.addEventListener('click', function(){
 						planetFilter.style.display='none';
@@ -454,17 +462,23 @@ function confirm(e){
 	var no  = document.querySelector('.pignose-calendar-button-cancel');
 	var x = document.getElementById('calendar');
 	yes.addEventListener('click',function(){
-			// console.log(x);
+
+			console.log(e.target);
 			x.style.display='none';
 			// console.log(e.target.parentNode.dataset.date);
 			// console.log(e.target.parentNode);
-			if(e.target.parentNode.classList.contains('pignose-calendar-unit-first-active')==true){
-			getDates(e.target.parentNode.dataset.date);
-			}else{
-				return;
-			}
+			// if(e.target==false){
+				// alert('請選擇今天之後的日期');
+			// }else{
+				if(e.target.parentNode.classList.contains('pignose-calendar-unit-first-active')==true){
+				getDates(e.target.parentNode.dataset.date);
+				}else{
+					return;
+				}
+			// }
+			
 			sessionStorage.setItem("date", e.target.parentNode.dataset.date);
-			// console.log(window.inner=sessionStorage.getItem("date"));
+							// console.log(window.inner=sessionStorage.getItem("date"));
 			// console.log(sessionStorage.getItem("date"));
 	});
 	no.addEventListener('click',function(){
@@ -486,7 +500,7 @@ function getDates(data){
 			var x=data;
 			sessionStorage.setItem("date",x);
 			
-			// console.log(x);
+			console.log(sessionStorage.getItem('date'));
 			var currentDate =new Date();
 			var curYears = currentDate.getFullYear();
 			var curMons = currentDate.getMonth()+1;
@@ -1455,7 +1469,8 @@ if(sessionStorage.getItem('scheduleNo')!=null&&sessionStorage.getItem('indexView
 
 
 
-			for(var i=1;i<$('#schduleUl ul').length;i++){
+			for(var i=1;i<=$('#schduleUl ul').length;i++){
+				// console.log(i);
 				Sortable.create(document.getElementById('schduleDay'+i), {
                                 animation: 150,
                      });

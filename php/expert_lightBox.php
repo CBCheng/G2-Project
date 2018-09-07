@@ -6,9 +6,6 @@ try {
     $expertName = $_REQUEST['expertName'];
     $expertNo = $_REQUEST['expertNo'];
     $memNo = $_SESSION['MEM_NO'];
-    // $expertName = '阿莫大師';
-    // $expertNo = '101';
-    // $memNo = '1';
 
     $sql = "select * from expert where expertName = '$expertName'";
     $members = $pdo->query($sql);
@@ -19,7 +16,7 @@ try {
     $memRows1 = $members1->fetchAll(PDO::FETCH_ASSOC);
 
     $sql2 = "select * from expertcollect where expertNo = '$expertNo'";
-    $members2 = $pdo->query($sql1);
+    $members2 = $pdo->query($sql2);
     $memRows2 = $members2->fetchAll(PDO::FETCH_ASSOC);
 
     
@@ -155,7 +152,9 @@ try {
                                     echo '取消收藏';
                                 }
                             ?> data-expert='<?php echo $memRow["expertNo"];?>'>
-                            <p id="Cnum"><?php echo $members2->rowCount();?>人收藏</p>
+                        <p id="Cnum">
+                            <?php echo $members2->rowCount();?>人收藏
+                        </p>
                     </div>
                 </div>
             </div>

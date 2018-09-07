@@ -20,8 +20,8 @@ session_start();
 		// echo $views['viewImg1'];
 		$_SESSION["indexViewNo"]=$views["viewNo"];
 		$_SESSION["planet"]=$views["planet"];
-		echo $_SESSION["indexViewNo"];
-		echo $_SESSION["planet"];
+		// echo $_SESSION["indexViewNo"];
+		// echo $_SESSION["planet"];
 ?>
 
 <div class="viewItem">

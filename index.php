@@ -685,7 +685,7 @@ session_start();
                         </p>
                     </div>
                     <div class="travelPic">
-                        <div class="travelDay">3天</div>
+                        <div class="travelDay">5天</div>
                         <div class="travelPicGroup">
                             <img src="img/index/designer9.png">
                             <img src="img/index/designer10.png">
