@@ -61,7 +61,8 @@ table {
   margin: auto;
   overflow: auto; }
   .userFull img {
-    vertical-align: middle; }
+    vertical-align: middle;
+    }
 
 nav {
   width: 15%;
@@ -240,3 +241,13 @@ nav {
     .userTable tr:nth-child(even){
       background-color: #FFF;
     }
+.userTable tbody tr td #image{
+  width: 70px;
+  /*margin-left: -70px;*/
+}
+#expertPic{
+  margin-right: -130px;
+}
+element.style{
+  width: 50px;
+}

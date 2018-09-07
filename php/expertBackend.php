@@ -101,8 +101,12 @@ try {
         <td><?php echo $memRow["expertNo"];?></td>
         <td><?php echo $memRow["expertName"];?></td>
         <td>
-            <input id="expertPic" type='button' size="5" name='expertPic' value="更換圖片" disabled>
-            <img style="width: 70px;" src="../<?php echo $memRow["expertPic"];?>">
+            <img id="image" src="../<?php echo $memRow["expertPic"];?>">
+            <input id="expertPic" type='file' size="5" name='expertPic' value="更換圖片">
+            <!-- <input id="upfile" name="upfile" type="file" name="upfile">
+            <div class="img_btn_div">
+                <button type="button" class="btn btn-o-nb" id="member_pic" style="display: block;">上傳</button>
+            </div> -->
         </td>
         <td><?php echo $memRow["planet"];?></td>
         <td>
@@ -156,12 +160,30 @@ try {
             var expSmart = "expSmart" + no ;
             var expAdven = "expAdven" + no ;
             var expTech = "expTech" + no ;
+            // var expTech = "expertPic" + no ;
             document.getElementById(expFood).disabled=false;
             document.getElementById(expHuman).disabled=false;
             document.getElementById(expSmart).disabled=false;
             document.getElementById(expAdven).disabled=false;
             document.getElementById(expTech).disabled=false;
+            // document.getElementById(expertPic).disabled=false;
         }
+
+
+        function doFirst(){
+            document.getElementById('expertPic').onchange = fileChange;
+        }
+        function fileChange(){
+            var file = document.getElementById('expertPic').files[0];
+
+            var readFile = new FileReader();    //constructor建構函數
+            readFile.readAsDataURL(file);
+            readFile.addEventListener('load',function(e){
+                var image = document.getElementById('image');
+                image.src = this.result;
+            });
+        }
+        window.addEventListener('load',doFirst);
 
     </script>
 </body>
