@@ -941,7 +941,8 @@ window.onbeforeunload = function(){
 			sessionStorage.removeItem("scheduleNo");
 			sessionStorage.removeItem("indexViewNo");
 			sessionStorage.removeItem('date');
-				console.log(sessionStorage.getItem('date'));
+			sessionStorage.removeItem('memNo');
+				// console.log(sessionStorage.getItem('date'));
 
 			return '';
 		}else{
@@ -949,7 +950,9 @@ window.onbeforeunload = function(){
 			sessionStorage.removeItem("scheduleNo");
 			sessionStorage.removeItem("indexViewNo");
 			sessionStorage.removeItem('date');
-				console.log(sessionStorage.getItem('date'));
+			
+			
+				// console.log(sessionStorage.getItem('date'));
 
 		}
 		
