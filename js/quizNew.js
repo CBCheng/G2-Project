@@ -209,10 +209,10 @@ function showQuiz(jsonStr){
 		console.log(scheduleRow.schPlanet);
 		//星球結果
 		var resultPlanet= document.getElementById("resultPlanet");
-		resultPlanet.innerHTML=scheduleRow.schPlanet;
+		resultPlanet.innerHTML=scheduleRow.planetName;
 		//行程名稱結果
 		var resultName= document.getElementById("resultName");
-		resultName.innerHTML=scheduleRow.schName;
+		resultName.innerHTML=scheduleRow.scheduleName;
 		//行程星球圖片
 		// var resultPlanetPic= document.getElementById("resultPlanetPic").src;
 		
