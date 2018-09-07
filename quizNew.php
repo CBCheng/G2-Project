@@ -53,7 +53,7 @@
                         <img src="img/poa/resultSan.png" alt="" class="sandPlanet" id="resultPlanetPic">
                         <img src="img/poa/result2_1.jpg" alt="" class="sandPic" id="resultPic">
                         <img src="img/poa/borderimg1.png" alt="" class="sandBorder">
-                        <div class="ansBtn"><span>引入行程</span></div>
+                        <div class="ansBtn"><a href="planning.php">引入行程</a></div>
                     </div>
                     
                 </div>
@@ -68,7 +68,7 @@
                             <img src="img/poa/cyc4_11.png" alt="cir1" class="cirCenter">
                             <img src="img/poa/cyc4_22.png" alt="cir2" class="cirMiddle">
                             <img src="img/poa/borderimg2-2.png" alt="" class="cirBorder">
-                            <div class="thedays days3" data-set="3">
+                            <div class="thedays days3" data-set="103">
                                 <span>3天</span>
                             </div>
                         </div>
@@ -78,7 +78,7 @@
                             <img src="img/poa/cyc4_11.png" alt="cir1" class="cirCenter">
                             <img src="img/poa/cyc4_22.png" alt="cir2" class="cirMiddle">
                             <img src="img/poa/borderimg2-2.png" alt="" class="cirBorder">
-                            <div class="thedays days5" data-set="5">
+                            <div class="thedays days5" data-set="105">
                                 <span>5天</span>
                             </div>
                         </div>
@@ -97,7 +97,7 @@
                         <img src="img/poa/borderimg4.png" alt="" class="landPicBorder">
                     </div>
                     <div class="landscapeBtn" >
-                        <h5 class="theLands" data-set="達沙星">火山</h5>
+                        <h5 class="theLands" data-set="102">火山</h5>
                     </div>
                 </div>
                 <div class="landscape">
@@ -106,7 +106,7 @@
                         <img src="img/poa/borderimg4.png" alt="" class="landPicBorder">
                     </div>
                     <div class="landscapeBtn">
-                        <h5 class="theLands" data-set="瓦特星">冰湖</h5>
+                        <h5 class="theLands" data-set="101">冰湖</h5>
                     </div>
                 </div>
                 <div class="landscape">
@@ -115,7 +115,7 @@
                         <img src="img/poa/borderimg4.png" alt="" class="landPicBorder">
                     </div>
                     <div class="landscapeBtn">
-                        <h5 class="theLands" data-set="奧倫星">山脈</h5>
+                        <h5 class="theLands" data-set="103">山脈</h5>
                     </div>
                 </div>
             </div>

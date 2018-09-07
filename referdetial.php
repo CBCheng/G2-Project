@@ -67,8 +67,15 @@ session_start();
 
 <?php
 
-// $memNo = $_SESSION['memNo'];
+
+
+//先把行程編號存到SESSION
+$_SESSION['scheduleNo'] = $_REQUEST["scheduleNo"];
+// $memNo = $_REQUEST["MEM_NO"];
+
+//行程分享頁面傳值接收
 $scheduleNo = $_REQUEST["scheduleNo"];
+
 try {
 	require_once("php/connectCd102g2.php");
     // 我的行程資料庫語法
@@ -117,12 +124,12 @@ try {
              <div class="topicIcon">
                 <div class="topicMessage">
                     <img src="img/icon/speech-bubbles-comment-option-blue.png">
-                    <p><?php echo $scheduleRow->messageNum;?>留言</p>
+                    <p><span><?php echo $scheduleRow->messageNum;?></span>留言</p>
                 </div>
-                <div class="topicCollect">
+                <!-- <div class="topicCollect">
                     <img src="img/icon/like-red.png">
-                    <p><?php echo $scheduleRow->collectNum;?>收藏</p>
-                </div>
+                    <p>收藏</p>
+                </div> -->
             </div>
             <a class="use" href="planning.html"> 
                 <button>引用行程</button>
@@ -174,89 +181,23 @@ try {
         ?>
 
          </div>
-<!-- 行程詳細結束===================================================================================== -->
-           <!--  <div class="tripWrip wow slideInLeft">
-                <div class="tripDate">
-                    <img src="img/refer/date1.png" alt="">
-                    <img src="img/refer/date2.png" alt="">
-                    <img src="img/refer/date3.png" alt="">
-                    <p>D1</p>
-                </div>
-                
-                
-                <div class="tripContent">
-                    <div class="tripSpot">
-                        <h4>天空之境</h4>
-                        <p>景點簡介景點簡介景點簡介景點簡介景點簡介景點簡介</p>
-                    </div>
-                    <div class="tripSpot">
-                        <h4>天空之境</h4>
-                        <p>景點簡介景點簡介景點簡介景點簡介景點簡介景點簡介</p>
-                    </div>
-                    <div class="tripSpot">
-                        <h4>天空之境</h4>
-                        <p>景點簡介景點簡介景點簡介景點簡介景點簡介景點簡介</p>
-                    </div>
-                </div>
-            </div> -->
+<!-- ===================================================================================== -->
 
-
-
-            <!-- <div class="tripWrip wow slideInLeft">
-                <div class="tripDate">
-                    <img src="img/refer/date1.png" alt="">
-                    <img src="img/refer/date2.png" alt="">
-                    <img src="img/refer/date3.png" alt="">
-                    <p>D2</p>
-                </div>
-                <div class="tripContent">
-                    <div class="tripSpot">
-                        <h4>天空之境</h4>
-                        <p>景點簡介景點簡介景點簡介景點簡介景點簡介景點簡介</p>
-                    </div>
-                    <div class="tripSpot">
-                        <h4>天空之境</h4>
-                        <p>景點簡介景點簡介景點簡介景點簡介景點簡介景點簡介</p>
-                    </div>
-                    <div class="tripSpot">
-                        <h4>天空之境</h4>
-                        <p>景點簡介景點簡介景點簡介景點簡介景點簡介景點簡介</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tripWrip wow slideInLeft">
-                <div class="tripDate">
-                    <img src="img/refer/date1.png" alt="">
-                    <img src="img/refer/date2.png" alt="">
-                    <img src="img/refer/date3.png" alt="">
-                    <p>D3</p>
-                </div>
-                <div class="tripContent">
-                    <div class="tripSpot">
-                        <h4>天空之境</h4>
-                        <p>景點簡介景點簡介景點簡介景點簡介景點簡介景點簡介</p>
-                    </div>
-                    <div class="tripSpot">
-                        <h4>天空之境</h4>
-                        <p>景點簡介景點簡介景點簡介景點簡介景點簡介景點簡介</p>
-                    </div>
-                    <div class="tripSpot">
-                        <h4>天空之境</h4>
-                        <p>景點簡介景點簡介景點簡介景點簡介景點簡介景點簡介</p>
-                    </div>
-                </div>
-            </div> -->
        
-
+<!-- 留言板===================================================================================== -->
             <!-- 留言列表 -->
             <h3>相關留言</h3>
+
+
+
             <div class="commentGroup">
                 
             <?php
-            $sql5 = "select * from cd102g2.myschedule as a join cd102g2.itineraryre as b on a.scheduleNo = b.scheduleNo ORDER BY b.commentNo ASC";
+            $sql5 = "select * from cd102g2.myschedule as a join cd102g2.itineraryre as b on a.scheduleNo = b.scheduleNo where a.scheduleNo=$scheduleNo ORDER BY b.commentNo ASC";
             $comments = $pdo->query($sql5);
             $commentRow = $comments->fetchAll(PDO::FETCH_ASSOC);
+
+            
 
             foreach ($commentRow as $data) {
                 $sql6 = "select *from member where MEM_NO = ".$data["memNo"]."";
@@ -281,6 +222,7 @@ try {
                 </div>
             <?php
             }
+
             ?>
         
             </div>
@@ -295,8 +237,11 @@ try {
                 <div class="comment">
                     <button class="writeMessage">送出留言</button>        
                 </div>
+
+
                 <script>
                         $('.reportBtn').on('click',function(){
+                            
                             var commentNo = $(this).prev().prev().prev().prev().val();
                             $.ajax({
                                 url: 'php/reportMessage.php',                
@@ -313,8 +258,8 @@ try {
 
                         $('.writeMessage').on('click',function(){
                             var commentContent = $('#commentArea').val();
-
                             var commentSchNo = $('.commentSchNo').val();
+                            
                             console.log(commentSchNo);
                             $.ajax({
                                 url: 'php/writeMessage.php',                
@@ -328,12 +273,18 @@ try {
                                     $('.commentGroup').html(data);
                                     $('#commentArea').val('');
                                     console.log(commentContent);
+                                    var commTime = $('#commTime').val();
+                                    $('.topicMessage span').text(commTime);
+                                    console.log(commTime);
                                 }
                             });
                             
                         });
                     </script>
         </div>
+<!-- 留言板結束===================================================================================== -->
+
+
         <!-- 右邊欄 -->
         <div class="rightWrip">    
             <!-- 行程專家        -->
@@ -342,7 +293,7 @@ try {
                 <div class="exportPic">
                     <?php
                     foreach ($expertRow as $data) {
-                        echo '<img src="img/refer/',$data['expertPic'],'" alt="">';
+                        echo '<img src="'.$data['expertPic'].'" alt="">';
                         
                     
                     ?>

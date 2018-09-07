@@ -1,24 +1,35 @@
 <?php
 
-$content = $_REQUEST['content'];
+$content = htmlspecialchars($_REQUEST['content']);
 $scheduleNo = $_REQUEST['scheduleNo'];
 $memNo = $_REQUEST['memNo'];
 try {
 	require_once("connectCd102g2.php");
+    //把留言寫入資料庫
 	$sql = "insert into itineraryre values (null, :scheduleNo, :memNo, now(), :content, 0)";
 	$comment = $pdo->prepare($sql);
 	$comment->bindValue(":scheduleNo",$scheduleNo);
 	$comment->bindValue(":memNo",$memNo);
 	$comment->bindValue(":content",$content);
 	$comment->execute();
+    
+    //留言加起來
+    $sqlMessage = "update myschedule set messageNum = messageNum+1 where scheduleNo=$scheduleNo";
+    $message = $pdo->exec($sqlMessage);
 
-	$sqlAdd = "select * from itineraryre ORDER BY itineraryre.commentNo ASC";
+    //把留言資料傳回頁面
+	$sqlAdd = "select * from itineraryre where scheduleNo=$scheduleNo ORDER BY itineraryre.commentNo ASC";
 	$itineraryre = $pdo->query($sqlAdd);
 	$itiRow = $itineraryre->fetchAll(PDO::FETCH_ASSOC);
 	foreach ($itiRow as $data) {
+        //抓會員編號的SQL
 		$sqlMem = "select * from cd102g2.itineraryre as a join cd102g2.member as b on a.memNo = b.MEM_NO";
-		$memName = $pdo->query($sqlMem);
-		$memRow = $memName->fetch(PDO::FETCH_ASSOC);
+        $memName = $pdo->query($sqlMem);
+        $memRow = $memName->fetch(PDO::FETCH_ASSOC);
+        //抓行程編號留言數SQL
+        $sqlCom = "select * from myschedule where scheduleNo=$scheduleNo";
+		$com = $pdo->query($sqlCom);
+        $comRow = $com->fetch(PDO::FETCH_ASSOC);
 ?>
 		<div class="commentWrip">
                     <div class="commentPic">
@@ -27,6 +38,7 @@ try {
                     
                     <div class="commentContent">
                         <div class="tripSpot">
+                            <input type="hidden" id="commTime" value="<?php echo $comRow['messageNum']?>">
                             <input type="hidden" name="reportTime" value="<?php echo $data['commentNo']?>">
                             <p class="deta"><?php echo $data['commentTime']?></p>
                             <p class="memName"><?php echo $memRow['MEM_NAME']?></p>
@@ -63,5 +75,8 @@ try {
                                 }
                             });
 
-                        })
+                        });
+
+
+
 </script>
