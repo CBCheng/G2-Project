@@ -295,7 +295,8 @@ section {
   padding: 0 100px 0 100px;
   display: flex;
   position: relative;
-  margin-bottom: 100px; }
+  margin-bottom: -50px;
+margin-top: 200px }
 
 .memberPic {
   width: 180px;
@@ -330,7 +331,7 @@ section {
   position: absolute;
   bottom: 0;
   right: 100px;
-  margin: 20px; }
+  margin: 30px; }
   .topicIcon div {
     text-align: center;
     display: inline-block;

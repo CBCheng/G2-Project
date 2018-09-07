@@ -112,7 +112,7 @@ try {
     <!-- content -->
     <section>
         <!-- banner -->
-        <img class="bannerPic" src="img/refer/p1_v7/<?php echo $scheduleRow->ItineraryPic;?>" alt="">
+        
         <div class="topic">
             <div class="memberPic">
                 <img src="img/refer/<?php echo $memberRow->MEM_IMG?>" alt="">
