@@ -126,7 +126,19 @@ $(document).on('click', '.element-item', function(){
 				$('#exp_lightBox').addClass('boxGreen');
 			}
 
-
+			// $(".heart").click(function () {
+   //              //若未經過AJAX檢核，觸發動作
+   //              if (!window.ajaxValidPass) {
+   //                  //停用按鈕及輸入框
+   //                  $(".clsInput").attr("disabled", true);
+   //                  //顯示檢核中
+   //                  $("#spnDisp").text("檢核中...");
+   //                  //開始AJAX檢核
+   //                  validate();
+   //                  //先傳回false，暫時不送出表單
+   //                  return false;
+   //              }
+   //          });
 			//點擊愛心收藏專家→insert into一筆資料
 			$('.heart').click(function(){
                 $.ajax({
@@ -138,12 +150,14 @@ $(document).on('click', '.element-item', function(){
                         expertNo: $(this).data('expert'),
                         // expertPopular: $(this).data('popular')
                     },  
+                    // cache: false,
+                    // async: false
                     success: function (data) {
                         alert(data);
                     },
-                    // error: function () {
-                    //     alert('error');
-                    // }
+                    error: function () {
+                        alert('請先登入才可收藏');
+                    }
                 })
              })
 
