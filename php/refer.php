@@ -8,7 +8,7 @@ try{
     
     //判斷天數
     $day = "";
-    $sql2 = "select datediff(arrTime,depTime) as Subtract from myschedule where share = 1";
+    $sql2 = "select datediff(arrTime,depTime) as Subtract from myschedule where share = 1 ORDER BY scheduleNo DESC";
     $unplus = $pdo->query($sql2);
     $unpluss = $unplus->fetchAll(PDO::FETCH_ASSOC);
     foreach ($unpluss as $key => $data){
@@ -59,10 +59,10 @@ try{
                         <img src="img/icon/speech-bubbles-comment-option-blue.png">
                         <p><?php echo $refRow["messageNum"] ?>留言</p>
                     </div>
-                    <div class="tripCollect">
+                    <!-- <div class="tripCollect">
                         <img src="img/icon/like-red.png">
-                        <p><?php echo $refRow["collectNum"] ?>收藏</p>
-                    </div>
+                        <p>收藏</p>
+                    </div> -->
                 </div>
                 </a>
                 <a class="grad" href="referdetial.html"></a>

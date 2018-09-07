@@ -983,3 +983,10 @@ footer {
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 1px; }
+
+.lightBox #upFile, .lightBox #imgView, .lightBox .mytrip, .lightBox .close, .lightBox .submit {
+  cursor: pointer; }
+
+.tripPic {
+  height: 75%;
+  overflow: hidden; }

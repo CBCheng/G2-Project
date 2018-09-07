@@ -42,6 +42,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+* {
+  outline: 1px solid #F00; }
+
 .clearfix {
   clear: both; }
 
@@ -237,6 +240,6 @@ nav {
     background-color: #c2a25e;
     color: #000; }
 
-#expPic {
-  outline: 1px solid #f00;
-  width: 70px; }
+element.style {
+  background-color: transparent;
+  border: none; }
