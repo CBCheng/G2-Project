@@ -76,7 +76,7 @@ if(isset($_SESSION["scheduleNo"])==false){
       <?php
             //檢查是否已登入
         if( isset($_SESSION["MEM_NAME"]) === true ){ //已登入
-        echo '<span id="memName">', $_SESSION["MEM_NAME"], '</span>';
+        echo '<a id="mem_a" href="member_profile.php"><span id="memName">', $_SESSION["MEM_NAME"], '</span></a>';
         echo '<span id="spanLogin">登出</span>';
       }else{
         echo '<span id="memName">&nbsp;</span>';
@@ -1249,11 +1249,49 @@ if(sessionStorage.getItem("planet")==null ||sessionStorage.getItem("planet")==''
 	// });
 	
 	//引入專家.saveBtn
-var memNo=1;
+
+	// if( isset($_SESSION["MEM_NAME"]) === true ){ //已登入
+ //        echo '<span id="memName">', $_SESSION["MEM_NAME"], '</span>';
+ //        echo '<span id="spanLogin">登出</span>';
+ //      }
+$('#spanLogin').click(function(){
+	sessionStorage.removeItem("memNo");
+});
+
+
 	$('.saveBtn').click(function(){
-		
-		if(memNo==null ||memNo==''){
-			alert('請先登入會員');
+
+$.ajax({
+					url: 'php/getmemNo.php',
+					dataType:'text',
+					type:'POST',
+					async: false,
+					success:function(data){
+							sessionStorage.setItem('memNo',data);
+						
+						},
+
+					error:function(xhr, ajaxOptions, thrownError)
+					{ 
+					alert('請先登入會員'); 
+					}
+
+
+				});
+
+var memNo=sessionStorage.getItem('memNo');
+	
+	console.log(memNo);
+
+
+
+
+
+
+
+
+		if(memNo==null ||memNo==''||memNo==undefined){
+			// alert('請先登入會員'); 
 		}else{
 
 
