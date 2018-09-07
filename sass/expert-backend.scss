@@ -6,11 +6,12 @@
 $fontWhiteTitle:rgba(255,255,255,.8);
 $fontWhiteContent:rgba(255,255,255,.7);
 *{
-    // outline: 1px solid #F00;
+    outline: 1px solid #F00;
 }
 .clearfix{
     clear:both;
 }
+
 
 .userFull{
     background-image: url('../img/poa/backend-bg2.png');
@@ -251,15 +252,27 @@ nav{
             // }
         }
 }
+
 .userTable{
     text-align: center;
     width:100%;
     tr,td{
         padding:10px;
     }
+    // td input{
+    //     border: 1px solid transparent;
+    // }
+    
     .tableTitle{
         background-color: rgb(194, 162, 94);
         color:#000;
         // font-weight: bold;
     }
+}
+element.style {
+    background-color: transparent;
+    border: none;
+}
+#expertPic{
+    
 }

@@ -134,8 +134,9 @@ $(document).on('click', '.element-item', function(){
                     type: 'POST',
                     dataType: 'text',
                     data: {
-                        memNo: '1',
-                        expertNo: $(this).data('expert')
+                        // memNo: $_SESSION['MEM_NO'],
+                        expertNo: $(this).data('expert'),
+                        // expertPopular: $(this).data('popular')
                     },  
                     success: function (data) {
                         alert(data);

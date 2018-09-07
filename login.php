@@ -39,7 +39,7 @@
         </a>
         <ul class="menu mLeft">
             <li>
-                <a href="expert.html">專家帶你玩</a>
+                <a href="expert.php">專家帶你玩</a>
             </li>
             <li>
                 <a href="shop.html">星際商城</a>
@@ -59,11 +59,13 @@
         session_start();
             //檢查是否已登入
         if( isset($_SESSION["MEM_NAME"]) === true ){ //已登入
-        echo '<span id="memName">', $_SESSION["MEM_NAME"], '</span>';
+        echo '<a id="mem_a" href="member_profile.php"><span id="memName">', $_SESSION["MEM_NAME"], '</span></a> '; 
         echo '<span id="spanLogin">登出</span>';
+        echo '<input type="hidden" name="memNo" value="$_SESSION["MEM_NO"]">';
       }else{
-        echo '<span id="memName">&nbsp;</span>';
+        echo '<a id="mem_a" href="#"><span id="memName">&nbsp;</span></a> ';
         echo '<span id="spanLogin">登入</span>';
+        echo '<input type="hidden" name="memNo" value="$_SESSION["MEM_NO"]">';
       }
       ?> 
                 
@@ -97,7 +99,7 @@
                 <a href="shop.html">星際商城</a>
             </li>
             <li>
-                <a href="member.html">會員專區</a>
+                <a href="member_profile.php">會員專區</a>
             </li>
             <li>
                 <a href="shop.html">購物車</a>
@@ -139,7 +141,7 @@
                 </form>
 
 
-                <img src="img/login/login.png">
+                <img src="../img/login/login.png">
             </div>
 
         </div>
@@ -159,7 +161,7 @@
                     <button class="btn btn-o-nb" id="login_send">送出</button>
                 </div>
                 <span>還不是會員，立馬<span class="registBtn"> 註冊 </span></span>
-                <img src="img/login/login.png">
+                <img src="../img/login/login.png">
             </div>
         </div>
     </div>
@@ -168,13 +170,15 @@
     <!-- jquery -->
     
   
-    <footer>
+    <!-- <footer>
         <div class="copyright">
             <p>copyright@OhPlanets 2145</p>
         </div>
-    </footer>
+    </footer> -->
+ 
     <script src="js/style.js"></script>
     <script type="text/javascript" src="js/login.js"></script>
+
 </body>
 
 </html>

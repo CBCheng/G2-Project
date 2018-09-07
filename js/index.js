@@ -350,6 +350,14 @@ window.addEventListener("load", doPoa, false);
 //     $('goAllRefer').click();
 // });
 $('.btn1').on('click',function(){
-    sessionStorage.setItem('scheduleNo',1);
+    sessionStorage.setItem('scheduleNo',7);
+    console.log(sessionStorage.getItem('scheduleNo'));
+});
+$('.btn2').on('click',function(){
+    sessionStorage.setItem('scheduleNo',8);
+    console.log(sessionStorage.getItem('scheduleNo'));
+});
+$('.btn3').on('click',function(){
+    sessionStorage.setItem('scheduleNo',9);
     console.log(sessionStorage.getItem('scheduleNo'));
 });

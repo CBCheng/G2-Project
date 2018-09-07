@@ -58,6 +58,6 @@ try{
 
 
 
-header("location:../member_profile.php");
+header("location:../login.php");
 
 ?>

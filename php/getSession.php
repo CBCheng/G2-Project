@@ -1,6 +1,18 @@
 <?php 
 ob_start();
 session_start();
+if(isset($_SESSION["indexViewNo"])==false){
+	$_SESSION["indexViewNo"]='';
+	
+}
+if(isset($_SESSION["planet"])==false){
+$_SESSION["planet"]='';	
+}
+
+if(isset($_SESSION["scheduleNo"])==false){
+	$_SESSION["scheduleNo"]='';
+}
+
 ?>
 <input type="hidden" class="indexViewNo" name="indexViewNo" value="<?php echo $_SESSION["indexViewNo"]; ?>">
 <?php  

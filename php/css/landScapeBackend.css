@@ -129,15 +129,16 @@ nav {
     .wrapContent .content .lightBox {
       display: none;
       background-color: #000;
+      color: #fff;
       height: 100px;
-      position: absolute;
+      position: fixed;
       left: 0;
       top: 0;
       right: 0;
       bottom: 0;
       margin: auto;
       width: 500px;
-      height: 700px;
+      height: 710px;
       overflow: auto;
       border: 1px solid #6cd5ff; }
       .wrapContent .content .lightBox h2 {

@@ -32,7 +32,6 @@ try{
                 type: 'POST',
                 dataType: 'text',
                 success: function (data) {
-                    // alert(data);
                     $('#tripName').remove();
                     $('.upload').prepend(data);
                 },
