@@ -47,21 +47,21 @@ if(isset($_SESSION["scheduleNo"])==false){
         <!-- desk -->
         <ul class="menu mRight">
             <li>
-                <a href="planning.html">開始冒險</a>
+                <a href="planning.php">開始冒險</a>
             </li>
             <li>
-                <a href="refer.html">別人怎麼玩</a>
+                <a href="refer.php">別人怎麼玩</a>
             </li>
         </ul>
-        <a href="index.html" class="logo">
+        <a href="index.php" class="logo">
             <img src="img/logo-1.png">
         </a>
         <ul class="menu mLeft">
             <li>
-                <a href="expert.html">專家帶你玩</a>
+                <a href="expert.php">專家帶你玩</a>
             </li>
             <li>
-                <a href="shop.html">星際商城</a>
+                <a href="shop.php">星際商城</a>
             </li>
         </ul>
         <ul class="member">
@@ -1249,9 +1249,15 @@ if(sessionStorage.getItem("planet")==null ||sessionStorage.getItem("planet")==''
 	// });
 	
 	//引入專家.saveBtn
+var memNo=1;
 	$('.saveBtn').click(function(){
 		
-		var sch={};
+		if(memNo==null ||memNo==''){
+			alert('請先登入會員');
+		}else{
+
+
+						var sch={};
 										var dateSpan = document.querySelectorAll('.date');
 														
 												var firstDay = dateSpan[0].innerHTML;
@@ -1274,7 +1280,7 @@ if(sessionStorage.getItem("planet")==null ||sessionStorage.getItem("planet")==''
 										sch.arrTime = lastDay;
 										sch.planetName = planetName.trim();
 										sch.share=0;
-										sch.memNo = 2;
+										sch.memNo = memNo;
 										
 										sch.itineraryPic='p1_v1_03.jpg';
 										sch.daysData=[];
@@ -1385,7 +1391,7 @@ if(sessionStorage.getItem("planet")==null ||sessionStorage.getItem("planet")==''
 			});
 
 		
-
+		}
 	});
 		
 // $takeData = 3;
