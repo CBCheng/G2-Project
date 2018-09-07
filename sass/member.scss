@@ -22,16 +22,16 @@ a {
     text-decoration: none;
     color: $fontColorWhite;
 }
-<<<<<<< HEAD
+
 .login_box img{
     width: 95px;
 }
-=======
+
 
 @import "layout/nav";
 @import "layout/nav-small";
 
->>>>>>> 320add1e1740daaf109d60ec46b86f52326b7ccc
+
 // ========scrollBar change=========
 
 /* width */
@@ -70,6 +70,11 @@ a {
     font-weight: 500;
 }
 
+
+.member_form .member_info tbody {
+    color: #6cd5ff; }
+tbody{
+        color:#fff;}
 .btn {
     background: #fff;
     cursor: pointer;
