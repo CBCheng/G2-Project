@@ -5,8 +5,8 @@ try {
     require_once("connectExpert.php");
     $expertName = $_REQUEST['expertName'];
     $expertNo = $_REQUEST['expertNo'];
-    // $memNo = $_SESSION['MEM_NO'];
-    $memNo = '1';
+    $memNo = @$_SESSION['MEM_NO'];
+    // $memNo = '1';
 
     $sql = "select * from expert where expertName = '$expertName'";
     $members = $pdo->query($sql);
@@ -178,24 +178,32 @@ try {
 				})
 			})
 
+            <?php 
+            if(isset($_SESSION['MEM_NO'])) {
+                    echo "
+                            function switchFavorite(){
+                            if(this.title === '加入收藏'){  
+                                this.src = 'img/expertImg/heartRed.png';
+                                this.title = '取消收藏';
+                            }
+                            else{
+                                this.src = 'img/expertImg/heartWhite.png';
+                                this.title = '加入收藏';
+                            }
+                        }
+                          var heart1 = document.getElementsByClassName('heart')[0];
+                          var heart2 = document.getElementsByClassName('heart')[1];
+                          
+                        heart1.addEventListener('click', switchFavorite, false);
+                        heart2.addEventListener('click', switchFavorite, false);
+                        ";
 
+                    }
+            ?>
+
+            
+            
 			//=====愛心換圖JS=====
-            function switchFavorite(){
-                if(this.title === "加入收藏"){  
-                //if判斷的地方不可含有路徑的問題
-                    this.src = "img/expertImg/heartRed.png";
-                    this.title = "取消收藏";
-                }
-                else{
-                    this.src = "img/expertImg/heartWhite.png";
-                    this.title = "加入收藏";
-                }
-            }
-              var heart1 = document.getElementsByClassName("heart")[0];
-              var heart2 = document.getElementsByClassName("heart")[1];
-              
-            heart1.addEventListener("click", switchFavorite, false);
-            heart2.addEventListener("click", switchFavorite, false);
             
         </script>
 	
