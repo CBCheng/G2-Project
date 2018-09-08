@@ -47,21 +47,21 @@ if(isset($_SESSION["scheduleNo"])==false){
         <!-- desk -->
         <ul class="menu mRight">
             <li>
-                <a href="planning.html">開始冒險</a>
+                <a href="planning.php">開始冒險</a>
             </li>
             <li>
-                <a href="refer.html">別人怎麼玩</a>
+                <a href="refer.php">別人怎麼玩</a>
             </li>
         </ul>
-        <a href="index.html" class="logo">
+        <a href="index.php" class="logo">
             <img src="img/logo-1.png">
         </a>
         <ul class="menu mLeft">
             <li>
-                <a href="expert.html">專家帶你玩</a>
+                <a href="expert.php">專家帶你玩</a>
             </li>
             <li>
-                <a href="shop.html">星際商城</a>
+                <a href="shop.php">星際商城</a>
             </li>
         </ul>
         <ul class="member">
@@ -76,7 +76,7 @@ if(isset($_SESSION["scheduleNo"])==false){
       <?php
             //檢查是否已登入
         if( isset($_SESSION["MEM_NAME"]) === true ){ //已登入
-        echo '<span id="memName">', $_SESSION["MEM_NAME"], '</span>';
+        echo '<a id="mem_a" href="member_profile.php"><span id="memName">', $_SESSION["MEM_NAME"], '</span></a>';
         echo '<span id="spanLogin">登出</span>';
       }else{
         echo '<span id="memName">&nbsp;</span>';
@@ -933,15 +933,17 @@ window.onbeforeunload = function(){
 		
 		
 		var aa=document.querySelector('.planetFilter');
+		var bb = document.querySelectorAll('.expertFilter');
 		// $('.confirmPlanetBox').css('display','block');
-		if(aa.style.display!='block'){
+		if(aa.style.display!='block' && bb.style.display!='block'){
 			sessionStorage.setItem("planet", '瓦特星');
 			
 			sessionStorage.removeItem("viewNo");	
 			sessionStorage.removeItem("scheduleNo");
 			sessionStorage.removeItem("indexViewNo");
 			sessionStorage.removeItem('date');
-				console.log(sessionStorage.getItem('date'));
+			// sessionStorage.removeItem('memNo');
+				// console.log(sessionStorage.getItem('date'));
 
 			return '';
 		}else{
@@ -949,7 +951,9 @@ window.onbeforeunload = function(){
 			sessionStorage.removeItem("scheduleNo");
 			sessionStorage.removeItem("indexViewNo");
 			sessionStorage.removeItem('date');
-				console.log(sessionStorage.getItem('date'));
+			
+			
+				// console.log(sessionStorage.getItem('date'));
 
 		}
 		
@@ -1249,9 +1253,55 @@ if(sessionStorage.getItem("planet")==null ||sessionStorage.getItem("planet")==''
 	// });
 	
 	//引入專家.saveBtn
+
+	// if( isset($_SESSION["MEM_NAME"]) === true ){ //已登入
+ //        echo '<span id="memName">', $_SESSION["MEM_NAME"], '</span>';
+ //        echo '<span id="spanLogin">登出</span>';
+ //      }
+$('#spanLogin').click(function(){
+	// sessionStorage.removeItem("memNo");
+});
+
+
 	$('.saveBtn').click(function(){
-		
-		var sch={};
+
+$.ajax({
+					url: 'php/getmemNo.php',
+					dataType:'text',
+					type:'POST',
+					async: false,
+					success:function(data){
+							sessionStorage.setItem('memNo',data);
+						
+						},
+
+					error:function(xhr, ajaxOptions, thrownError)
+					{ 
+					alert("error");
+					alert(xhr.status); 
+					alert(thrownError);  
+					}
+
+
+				});
+
+var memNo=sessionStorage.getItem('memNo');
+	
+	console.log(memNo);
+
+
+
+
+
+
+
+
+		if(memNo==null ||memNo==''||memNo==undefined){
+			alert('請先登入會員'); 
+		}else{
+
+
+						var sch={};
 										var dateSpan = document.querySelectorAll('.date');
 														
 												var firstDay = dateSpan[0].innerHTML;
@@ -1274,8 +1324,8 @@ if(sessionStorage.getItem("planet")==null ||sessionStorage.getItem("planet")==''
 										sch.arrTime = lastDay;
 										sch.planetName = planetName.trim();
 										sch.share=0;
-										sch.memNo = 2;
-										
+										sch.memNo = memNo;
+										sch.messageNum =0;
 										sch.itineraryPic='p1_v1_03.jpg';
 										sch.daysData=[];
 
@@ -1316,15 +1366,17 @@ if(sessionStorage.getItem("planet")==null ||sessionStorage.getItem("planet")==''
 					var $expertNo = $(this).data('expert');
 					// console.log($expertNo);
 				});
-				
+					//選專家
+					var $expertPlanet =$('.planetName').text();
+					console.log($expertPlanet);
 					$.ajax({
 								url: 'php/schExpert.php',
 								dataType:'text',
 								type:'POST',
-								// data:{
-								// 		expertNo:$expertNo,
+								data:{
+										expertPlanet:$expertPlanet,
 										
-								// 		},
+										},
 								success:function(data){
 									
 									$('.expertList ul').append(data);
@@ -1341,6 +1393,7 @@ if(sessionStorage.getItem("planet")==null ||sessionStorage.getItem("planet")==''
 									    xhr.onload=function (){
 									       if( xhr.status == 200 ){
 									       	alert('儲存成功');
+									       	location.href='member_mytrip.php';
 										       	}else{
 										          alert( xhr.status );
 										       	}
@@ -1385,7 +1438,7 @@ if(sessionStorage.getItem("planet")==null ||sessionStorage.getItem("planet")==''
 			});
 
 		
-
+		}
 	});
 		
 // $takeData = 3;

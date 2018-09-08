@@ -512,12 +512,12 @@ session_start();
             <div class="yesNo no">
                 <span>NO</span>
                 <p>那就試試看<br>我們的測驗吧</p>
-                <a href="quizNew.html">開始測驗</a>
+                <a href="quizNew.php">開始測驗</a>
             </div>
             <div class="yesNo yes">
                 <span>YES</span>
                 <p>現在就開始規劃<br>您的星球之旅吧</p>
-                <a href="planning.html">開始規劃</a>
+                <a href="planning.php">開始規劃</a>
             </div>
         </div>
     </div>
@@ -528,7 +528,7 @@ session_start();
             <img src="img/index/expertTextBg.png" alt="expertTextBg" class="exTextBg">
             <h2>帶上我們的專家吧</h2>
             <h3>他會讓您的旅程更加精采</h3>
-            <a href="expert.html">查看所有專家</a>
+            <a href="expert.php">查看所有專家</a>
 
             <div class="expertAll expert1">
                 <div class="exScreen scWhite"></div>
@@ -642,7 +642,7 @@ session_start();
         <div class="part4">
             <h2>對於旅程還是沒想法嗎</h2>
             <h3>看看別人的分享吧</h3>
-            <a href="refer.html" class="goAllRefer">查看所有分享行程</a>
+            <a href="refer.php" class="goAllRefer">查看所有分享行程</a>
             <img src="img/index/backArrowBg.png" alt="backArrowBg" class="backArrowBg">
             <img src="img/index/forwardArrowBg.png" alt="forwardArrowBg" class="forwardArrowBg">
             <img class="leftPage" id="leftPage" src="img/index/leftArrow.png" alt="back-arrow">
@@ -666,7 +666,7 @@ session_start();
                         </div>
                     </div>
                     <div class="travelBtn">
-                        <a href="refer.html" class="lookTravelBtn">查看行程</a>
+                        <a href="referdetial.php?scheduleNo=12" class="lookTravelBtn">查看行程</a>
                         <a href="planning.php" class="useTravelBtn btn1">引用行程</a>
                     </div>
                     <!-- <div class="clearfix"></div> -->
@@ -692,7 +692,7 @@ session_start();
                         </div>
                     </div>
                     <div class="travelBtn">
-                        <a href="refer.html" class="lookTravelBtn">查看行程</a>
+                        <a href="referdetial.php?scheduleNo=11" class="lookTravelBtn">查看行程</a>
                         <a href="planning.php" class="useTravelBtn btn2">引用行程</a>
                     </div>
                     <!-- <div class="clearfix"></div> -->
@@ -718,7 +718,7 @@ session_start();
                         </div>
                     </div>
                     <div class="travelBtn">
-                        <a href="refer.html" class="lookTravelBtn">查看行程</a>
+                        <a href="referdetial.php?scheduleNo=10" class="lookTravelBtn">查看行程</a>
                         <a href="planning.php" class="useTravelBtn btn3">引用行程</a>
                         
                     </div>

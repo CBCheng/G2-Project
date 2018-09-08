@@ -1,6 +1,6 @@
 <?php
-// ob_start();
-// session_start();
+ob_start();
+session_start();
 try{
     $dsn = "mysql:host=localhost;port=3306;dbname=cd102g2;charset=utf8";
     $user = "cheng2";
@@ -9,6 +9,9 @@ try{
     $pdo = new PDO( $dsn, $user, $password, $options);
 
     $whoShare = $_SESSION["MEM_NO"];
+    // if( isset($_SESSION["MEM_NO"]) === true ){
+    //     $whoShare = $_SESSION["MEM_NO"];
+    // }
     $sql = "select * from myschedule where memNo = :memNo";
     $share = $pdo->prepare($sql);
 

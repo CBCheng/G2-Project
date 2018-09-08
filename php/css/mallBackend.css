@@ -135,14 +135,14 @@ nav {
       display: none;
       background-color: #000;
       height: 100px;
-      position: absolute;
+      position: fixed;
       left: 0;
-      top: 100px;
+      top: 0;
       right: 0;
       bottom: 0;
       margin: auto;
       width: 500px;
-      height: 600px;
+      height: 700px;
       overflow: auto;
       border: 1px solid #6cd5ff; }
       .wrapContent .content .lightBox h2 {
@@ -169,4 +169,11 @@ nav {
     color: #FFF; }
     .userTable tr:nth-child(even){
       background-color: #FFF;
+    }
+
+    .proList img{
+      width: 150px;
+    }
+    .lightBox{
+      color: #FFF;
     }

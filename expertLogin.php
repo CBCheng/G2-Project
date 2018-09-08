@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- css -->
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="css/member.css">
     <link rel="stylesheet" href="css/expert.css">
-    <!-- <link rel="stylesheet" href="libs/lity/lity.css"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
     <!-- plugin -->
@@ -16,16 +17,154 @@
     <script src="libs/gsap/src/minified/TweenMax.min.js"></script>
     <!-- <script type="text/javascript" src="js/parallax.min.js"></script> -->
     <!-- scroll -->
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="text/css" href="img/logovb.png">
     <title>OH~PLANETS! | 專家帶你玩</title>
 </head>
 
 <body>
    
-    <header>
-        <?php include 'login.php';?>
-    </header>
+    
+
+    <!-- nav -->
+    <div class="navColor">
+        <img class="navPic" src="img/bg.png" alt="">
+    </div>
+    <nav>
+        <!-- desk -->
+        <ul class="menu mRight">
+            <li>
+                <a href="planning.html">開始冒險</a>
+            </li>
+            <li>
+                <a href="refer.html">別人怎麼玩</a>
+            </li>
+        </ul>
+        <a href="index.html" class="logo">
+            <img src="img/logo-1.png">
+        </a>
+        <ul class="menu mLeft">
+            <li>
+                <a href="expertLogin.php">專家帶你玩</a>
+            </li>
+            <li>
+                <a href="shop.html">星際商城</a>
+            </li>
+        </ul>
+        <ul class="member">
+            <li class="shoppingCar">
+                <a href="#">
+                    <img class="shoppingCarPic" src="img/shopping car.png" alt="">
+                    <!-- <img class="shoppingCarHover" src="img/shoppingCarHover.png" alt=""> -->
+                </a>
+            </li>
+            <li class="memberSign">
+                
+      <?php
+        ob_start();
+        if (!isset($_SESSION)) { 
+            session_start(); 
+        }
+           
+            //檢查是否已登入
+        if( isset($_SESSION["MEM_NAME"]) === true ){ //已登入
+        echo '<a id="mem_a" href="member_profile.php"><span id="memName">', $_SESSION["MEM_NAME"], '</span></a> '; 
+        echo '<span id="spanLogin">登出</span>';
+        // echo '<input type="hidden" name="memNo" value="',$_SESSION["MEM_NO"],'">';
+      }else{
+        echo '<a id="mem_a" href="#"><span id="memName">&nbsp;</span></a> ';
+        echo '<span id="spanLogin">登入</span>';
+        // echo '<input type="hidden" name="memNo" value="',$_SESSION["MEM_NO"],'">';
+      }
+      ?> 
+                
+            </li>
+        </ul>
+        <!-- mobile -->
+        <div class="hambger">
+            <div class="line"></div>
+        </div>
+        <ul class="menuMobile">
+            <img class="navPic" src="img/bgM.png" alt="">
+            <li>
+                <a href="planning.html">開始冒險</a>
+            </li>
+            <li>
+                <a href="expertLogin.php">專家帶你玩</a>
+            </li>
+            <li>
+                <a href="refer.html">別人怎麼玩</a>
+            </li>
+            <li>
+                <a href="shop.html">星際商城</a>
+            </li>
+            <li>
+                <a href="member_profile.php">會員專區</a>
+            </li>
+            <li>
+                <a href="shop.html">購物車</a>
+            </li>
+
+        </ul>
+    </nav>
+    <div class="login_modal" id="lightBox" style="" ;>
+        <div class="regist_box" style="display: none;">
+            <div class="regist_content">
+                <span class="close">×</span>
+                <h3>註冊會員</h3>
+
+                <form method="post" action="php/enroll.php">
+
+                    <div>
+                        <div class="login_input">
+                            <input required="required" type="text" id="regist_name" name="regist_name">
+                            <label class="login_lable" style="top: 18px; color: grey;">*姓名 </label>
+                        </div>
+                        <div class="login_input">
+                            <input required="required" type="password" maxlength="12" id="memPsw_input" name="memPsw_input">
+                            <label class="login_lable" style="top: 18px; color: grey;">*密碼(6~12位數) </label>
+                            <span class="inputErr_notice">字數不符</span>
+                        </div>
+                        <div class="login_input">
+                            <input required="required" type="password" maxlength="12" id="memPsw_2nd_input" name="memPsw_2nd_input">
+                            <label class="login_lable" style="top: 18px; color: grey;">*確認密碼 </label>
+                            <span class="inputErr_notice">密碼不符</span>
+                        </div>
+                        <div class="login_input">
+                            <input required="required" type="text" id="regist_email" name="regist_email">
+                            <label class="login_lable" style="top: 18px; color: grey;">*電子信箱 </label>
+                            <span class="inputErr_notice">非電子信箱</span>
+                        </div>
+                        <input type="submit" id="regist_btn" class="btn btn-o-nb" value="送出">
+
+                    </div>
+                </form>
+
+
+                <img src="img/login/login.png">
+            </div>
+
+        </div>
+        <div class="login_box" style="">
+            <div class="login_content">
+                <span class="close">×</span>
+                <h3>會員登入</h3>
+                <div>
+                    <div class="login_input">
+                        <input type="text" id="memEmail" name="MEM_EMAIL">
+                        <label class="login_lable" style="top: 18px; color: grey;">電子信箱 </label>
+                    </div>
+                    <div class="login_input">
+                        <input type="password" id="memPsw" name="MEM_PSW">
+                        <label class="login_lable" style="top: 18px; color: grey;">密碼 </label>
+                    </div>
+                    <button class="btn btn-o-nb" id="login_send">送出</button>
+                </div>
+                <span>還不是會員，立馬<span class="registBtn"> 註冊 </span></span>
+                <img src="img/login/login.png">
+            </div>
+        </div>
+    </div>
 
 
 
@@ -80,150 +219,7 @@
 
 
         <div class="grid">
-            <!-- <div class="element-item expertBox blue popular ">
-                <img class="king" src="img/expertImg/crown.png" alt="crown">
-                <h2 class="h2Desk">瓦特星</h2>
-                <h3 class="h3Desk">Christina</h3>
-                <div class="attr">美食</div>
-                <div class="pic">
-                    <a>
-                        <img id="box" src="img/expertImg/A01.jpg">
-                    </a>
-                    <div class="aside">
-                        <h2 class="h2Ph">瓦特星</h2>
-                        <h3 class="h3Ph">Christina</h3>
-                        <div class="score">
-                            <span>5</span>
-                            <img src="img/expertImg/star.png" alt="star">
-                            <img src="img/expertImg/star.png" alt="star">
-                            <img src="img/expertImg/star.png" alt="star">
-                            <img src="img/expertImg/star.png" alt="star">
-                            <img src="img/expertImg/star.png" alt="star">
-                        </div>
-                        <div class="mark">
-                            <img src="img/expertImg/comment.png" alt="comment">
-                            <span>5</span>
-                            <img src="img/expertImg/love.png" alt="love">
-                            <span>20</span>
-                        </div>
-                    </div>
-                </div> 
-            </div> -->
-            <!-- <div class="element-item expertBox orange popular ">
-                <img class="king" src="img/expertImg/crown.png" alt="crown">
-                <h2 class="h2Desk">瓦特星</h2>
-                <h3 class="h3Desk">Alan</h3>
-                <div class="attr">美食</div>
-                <div class="pic">
-                    <a>
-                        <img id="box" src="img/expertImg/A01.jpg">
-                    </a>
-                    <div class="aside">
-                        <h2 class="h2Ph">瓦特星</h2>
-                        <h3 class="h3Ph">Christina</h3>
-                        <div class="score">
-                            <span>5</span>
-                            <img src="img/expertImg/star.png" alt="star">
-                            <img src="img/expertImg/star.png" alt="star">
-                            <img src="img/expertImg/star.png" alt="star">
-                            <img src="img/expertImg/star.png" alt="star">
-                            <img src="img/expertImg/star.png" alt="star">
-                        </div>
-                        <div class="mark">
-                            <img src="img/expertImg/comment.png" alt="comment">
-                            <span>5</span>
-                            <img src="img/expertImg/love.png" alt="love">
-                            <span>20</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="element-item expertBox orange ">
-                <h2 class="h2Desk">瓦特星</h2>
-                <h3 class="h3Desk">Alan</h3>
-                <div class="attr">美食</div>
-                <div class="pic">
-                    <a>
-                        <img id="box" src="img/expertImg/A01.jpg">
-                    </a>
-                    <div class="aside">
-                        <h2 class="h2Ph">瓦特星</h2>
-                        <h3 class="h3Ph">Christina</h3>
-                        <div class="score">
-                            <span>5</span>
-                            <img src="img/expertImg/star.png" alt="star">
-                            <img src="img/expertImg/star.png" alt="star">
-                            <img src="img/expertImg/star.png" alt="star">
-                            <img src="img/expertImg/star.png" alt="star">
-                            <img src="img/expertImg/star.png" alt="star">
-                        </div>
-                        <div class="mark">
-                            <img src="img/expertImg/comment.png" alt="comment">
-                            <span>5</span>
-                            <img src="img/expertImg/love.png" alt="love">
-                            <span>20</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="element-item expertBox green popular ">
-                <img class="king" src="img/expertImg/crown.png" alt="crown">
-                <h2 class="h2Desk">瓦特星</h2>
-                <h3 class="h3Desk">Alan</h3>
-                <div class="attr">美食</div>
-                <div class="pic">
-                    <a>
-                        <img id="box" src="img/expertImg/A01.jpg">
-                    </a>
-                    <div class="aside">
-                        <h2 class="h2Ph">瓦特星</h2>
-                        <h3 class="h3Ph">Christina</h3>
-                        <div class="score">
-                            <span>5</span>
-                            <img src="img/expertImg/star.png" alt="star">
-                            <img src="img/expertImg/star.png" alt="star">
-                            <img src="img/expertImg/star.png" alt="star">
-                            <img src="img/expertImg/star.png" alt="star">
-                            <img src="img/expertImg/star.png" alt="star">
-                        </div>
-                        <div class="mark">
-                            <img src="img/expertImg/comment.png" alt="comment">
-                            <span>5</span>
-                            <img src="img/expertImg/love.png" alt="love">
-                            <span>20</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="element-item expertBox green ">
-                <h2 class="h2Desk">瓦特星</h2>
-                <h3 class="h3Desk">Alan</h3>
-                <div class="attr">美食</div>
-                <div class="pic">
-                    <a>
-                        <img id="box" src="img/expertImg/A01.jpg">
-                    </a>
-                    <div class="aside">
-                        <h2 class="h2Ph">瓦特星</h2>
-                        <h3 class="h3Ph">Christina</h3>
-                        <div class="score">
-                            <span>5</span>
-                            <img src="img/expertImg/star.png" alt="star">
-                            <img src="img/expertImg/star.png" alt="star">
-                            <img src="img/expertImg/star.png" alt="star">
-                            <img src="img/expertImg/star.png" alt="star">
-                            <img src="img/expertImg/star.png" alt="star">
-                        </div>
-                        <div class="mark">
-                            <img src="img/expertImg/comment.png" alt="comment">
-                            <span>5</span>
-                            <img src="img/expertImg/love.png" alt="love">
-                            <span>20</span>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-
+            
         </div>
     </section>
     <!-- ======filter===== -->
@@ -233,114 +229,7 @@
 
     <!-- ======exp_lightBox===== -->
     <div id="exp_lightBox_father" style="display: none;">
-        <!-- <section id="exp_lightBox">
-            <i class="fas fa-times"></i>
-            <div class="content_desk">
-                <article class="conLeft">
-                    <img class="crown_phone" src="img/expertImg/crown.png" alt="crown">
-                    <div class="expPic">
-                        <img class="crown" src="img/expertImg/crown.png" alt="crown">
-                        <div class="attr">屬性</div>
-                        <img src="img/expertImg/A01.jpg" alt="A01">
-                    </div>
-                </article>
-                <article class="conRight">
-                    <h1>瓦特星專家</h1>
-                    <h2>Alan
-                        <img src="img/expertImg/rocket.png" class="rocket">
-                    </h2>
-                    <div class="attr_phone">美食</div>
-                    <div class="data">
-                        <div class="score">
-                            <h3>評價</h3>
-                            <span>5</span>
-                            <img src="img/expertImg/star.png" alt="star">
-                            <img src="img/expertImg/star.png" alt="star">
-                            <img src="img/expertImg/star.png" alt="star">
-                            <img src="img/expertImg/star.png" alt="star">
-                            <img src="img/expertImg/star.png" alt="star">
-                        </div>
-                        <div class="chart">
-                            <h3>能力值</h3>
-                            <span>美食</span>
-                            <div class="value focus"></div>
-                            <br>
-                            <span>知性</span>
-                            <div class="value"></div>
-                            <br>
-                            <span>人文</span>
-                            <div class="value"></div>
-                            <br>
-                            <span>冒險</span>
-                            <div class="value"></div>
-                            <br>
-                            <span>科技</span>
-                            <div class="value"></div>
-                            <br>
-                        </div>
-                    </div>
-                    <div class="record">
-                        <div class="collect">
-                            <img class="heart" src="img/expertImg/heartWhite.png" alt="heartWhite" title="加入收藏">
-                            <p id="Cnum">20人收藏</p>
-                        </div>
-                        <div class="writeComment">
-                            <img id="write" src="img/expertImg/write.png" alt="write" title="撰寫評論">
-                            <p id="Wnum">3則評論</p>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            
-            <div class="content_phone">
-                <div class="chart_phone">
-                    <h3>能力值</h3>
-                    <span>美食</span>
-                    <div class="value focus"></div>
-                    <br>
-                    <span>知性</span>
-                    <div class="value"></div>
-                    <br>
-                    <span>人文</span>
-                    <div class="value"></div>
-                    <br>
-                    <span>冒險</span>
-                    <div class="value"></div>
-                    <br>
-                    <span>科技</span>
-                    <div class="value"></div>
-                    <br>
-                </div>
-                <div class="record_phone">
-                    <div class="collect">
-                        <img class="heart" src="img/expertImg/heartWhite.png" alt="heartWhite" title="加入收藏">
-                        <p id="Cnum">20人收藏</p>
-                    </div>
-                    <div class="writeComment">
-                        <img id="write" src="img/expertImg/write.png" alt="write" title="撰寫評論">
-                        <p id="Wnum">3則評論</p>
-                    </div>
-                </div>
-            </div>
-            <div class="comment">
-                <h2>評論</h2>
-                <div class="message">
-                    <div class="user">
-                        <div class="name">董董</div>
-                        <img src="img/expertImg/userPic.jpg" alt="user">
-                    </div>
-                    <p>妙麗超專業的，人很nice又漂亮，下次一定還要預約！</p>
-                </div>
-                <div class="message">
-                    <div class="user">
-                        <div class="name">董董</div>
-                        <img src="img/expertImg/userPic.jpg" alt="user">
-
-                    </div>
-                    <p>妙麗超專業的，人很nice又漂亮，下次一定還要預約！</p>
-                </div>
-            </div>
-        </section> -->
+        
     </div>
     <!-- ======exp_lightBox===== -->
 

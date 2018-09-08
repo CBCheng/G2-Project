@@ -40,6 +40,12 @@ try{
             $pop = '';            
         }
         // echo $pop;
+        // $mes = '';
+        // if($refRow["messageNum"] == NULL){
+        //     $mes = '0';
+        // }else{
+        //     $mes = '$refRow["messageNum"]';
+        // }
 ?>
 
 <!-- <div class="element-item tripBox new blue"> -->
@@ -65,7 +71,7 @@ try{
                     </div> -->
                 </div>
                 </a>
-                <a class="grad" href="referdetial.html"></a>
+                <a class="grad" href="referdetial.php?scheduleNo=<?php echo $refRow["scheduleNo"] ?>"></a>
             </div>
             <div class="tripTxt">
                     <h4><span><?php echo $dayArr[$key] ?>天</span><?php echo $refRow["scheduleName"] ?></h4>

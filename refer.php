@@ -13,56 +13,10 @@
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 </head>
 <body>
-     <!-- nav -->
-     <!-- <div class="navColor">
-        <img class="navPic" src="img/bg.png" alt="">
-    </div>
-    <nav> -->
-        <!-- desk -->
-        <!-- <ul class="menu mRight">
-            <li><a href="planning.html">開始冒險</a></li>
-            <li><a href="refer.html">別人怎麼玩</a></li>
-        </ul>
-        <a href="index.html" class="logo">
-            <img src="img/logo-1.png">
-        </a>
-        <ul class="menu mLeft">
-            <li><a href="expert.html">專家帶你玩</a></li>
-            <li><a href="shop.html">星際商城</a></li>
-        </ul>
-        <ul class="member">
-            <li class="shoppingCar">
-                <a href="#">
-                    <img class="shoppingCarPic" src="img/shopping car.png" alt=""> -->
-                    <!-- <img class="shoppingCarHover" src="img/shoppingCarHover.png" alt=""> -->
-                <!-- </a>
-            </li>
-            <li class="memberSign"><a href="#">登入</a></li>
-        </ul> -->
-        <!-- <ul class="memberSelect">
-            <li>Hi ~ 冒險者</li>
-            <li><a href="member_mytrip.html">我的行程</a></li>
-            <li><a href="member_favorite.html">我的收藏</a></li>
-            <li><a href="member_order.html">我的訂單</a></li>
-            <li><a href="member_comment.html">專家評論</a></li>
-            <li><a href="member_profile.html">會員資料修改</a></li>
-            <li><a href="sign.html">登出</a></li>
-        </ul> -->
-        <!-- mobile -->
-        <!-- <div class="hambger">
-            <div class="line"></div>
-        </div>
-        <ul class="menuMobile">
-            <img class="navPic" src="img/bgM.png" alt="">
-            <li><a href="planning.html">開始冒險</a></li>
-            <li><a href="refer.html">別人怎麼玩</a></li>
-            <li><a href="expert.html">專家帶你玩</a></li>
-            <li><a href="shop.html">星際商城</a></li>
-            <li><a href="member.html">會員專區</a></li>
-            <li><a href="shop.html">購物車</a></li>
-        </ul>
-    </nav> -->
-    <div class="navColor">
+     
+    
+        <!-- nav -->
+        <div class="navColor">
         <img class="navPic" src="img/bg.png" alt="">
     </div>
     <nav>
@@ -97,14 +51,19 @@
                 
       <?php
         ob_start();
-        session_start();
+        if (!isset($_SESSION)) { 
+            session_start(); 
+        }
+           
             //檢查是否已登入
         if( isset($_SESSION["MEM_NAME"]) === true ){ //已登入
         echo '<a id="mem_a" href="member_profile.php"><span id="memName">', $_SESSION["MEM_NAME"], '</span></a> '; 
         echo '<span id="spanLogin">登出</span>';
+        // echo '<input type="hidden" name="memNo" value="',$_SESSION["MEM_NO"],'">';
       }else{
         echo '<a id="mem_a" href="#"><span id="memName">&nbsp;</span></a> ';
         echo '<span id="spanLogin">登入</span>';
+        // echo '<input type="hidden" name="memNo" value="',$_SESSION["MEM_NO"],'">';
       }
       ?> 
                 
@@ -146,7 +105,7 @@
 
         </ul>
     </nav>
-    <div class="login_modal" id="lightBox" style="" ;>
+    <div class="login_modal" id="lightBox">
         <div class="regist_box" style="display: none;">
             <div class="regist_content">
                 <span class="close">×</span>
@@ -180,7 +139,7 @@
                 </form>
 
 
-                <img src="img/login/login.png">
+                <img src="../img/login/login.png">
             </div>
 
         </div>
@@ -204,6 +163,7 @@
             </div>
         </div>
     </div>
+
 
 
     <!-- content -->

@@ -9,6 +9,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/mallBackend.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -77,7 +78,7 @@ if($_SESSION["mgrAccess"]=="一般"){
                 <option value="">類別2</option>
                 <option value="">類別3</option>
             </select>
-            <button>新增商品</button>
+            <button id="addPro">新增商品</button>
             </div>
             
                 <table class="userTable">
@@ -93,46 +94,70 @@ if($_SESSION["mgrAccess"]=="一般"){
                         <td>修改</td>
                         <td>刪除</td>
                     </tr>
-                    <tr>
-                        <td>P0001</td>
-                        <td>圖片</td>
-                        <td>多功能激光槍</td>
+
+<?php
+try{
+    $dsn = "mysql:host=localhost;port=3306;dbname=cd102g2;charset=utf8";
+    $user = "cheng2";
+    $password = "9453";
+    $options = array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION);
+    $pdo = new PDO( $dsn, $user, $password, $options);
+
+    $sql = "select * from product";
+    $pros = $pdo->query($sql);
+    $proRows = $pros->fetchAll(PDO::FETCH_ASSOC);
+
+    foreach ($proRows as $proRow) {
+    if($proRow["sale"] == '1'){
+        $proUpDown = '上架';
+    }else{
+        $proUpDown = '下架';
+    }
+?>
+                    <tr class="proList">
+                        <td><?php echo $proRow["productNo"]?></td>
+                        <td><img src="../img/shop/<?php echo $proRow["productPic1"]?>" alt="商品圖片"></td>
+                        <td><?php echo $proRow["productName"]?></td>
+                        <td><?php echo $proRow["productDital"]?></td>
+                        <td><?php echo $proRow["productPrice"]?></td>
+                        <td><?php echo $proRow["productClass"]?></td>
+                        <td><?php echo $proUpDown?></td>
                         <td>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, aliquid!
-                        </td>
-                        <td>300NT</td>
-                        <td>類別1</td>
-                        
-                        <td>
-                            <button>上架</button>
-                        </td>
-                        <td>
-                            <button id="lightBoxBtn">修改</button>
+                            <button class="lightBoxBtn" value="<?php echo $proRow["productNo"]?>">修改</button>
                         </td>
                         <td>
                             <button>刪除</button>
                         </td>
                     </tr>
-                    
+<?php
+    }              
+} catch (PODException $e) {
+    echo "錯誤原因 : " , $e->getMessage(), "<br>";
+    echo "錯誤行號 : " , $e->getLine(), "<br>";	
+}
+?>
+
+
                 </table>
+            
 
 
-
-                <div class="lightBox" id="lightBox">
-                    <h2>修改商品資料</h2>
+                <form class="lightBox addBox" action="changeProData.php" method="post" enctype="multipart/form-data">
+                    <h2>新增商品資料</h2>
                         <table border="1">
                             <tr>
                                 <td>商品編號</td>
-                                <td>P0001</td>
+                                <td>自動新增</td>
+                                <input type="hidden" name="productNo" value="0">
                             </tr>
                             <tr>
                                 <td>商品名稱</td>
-                                <td><input type="text" value="多功能激光槍"></td>
+                                <td><input type="text" name="productName" placeholder="請輸入商品名稱"></td>
                             </tr>
                             <tr>
                                 <td>商品類別</td>
                                 <td>
-                                    <select>
+                                    <select name="productClass">
                                         <option value="0">類別1</option>
                                         <option value="1">類別2</option> 
                                         <option value="2">類別3</option>            
@@ -142,7 +167,7 @@ if($_SESSION["mgrAccess"]=="一般"){
                             <tr>
                                 <td>單價</td>
                                 <td>
-                                    <input type="text" value="20">
+                                    <input type="text" name="productPrice" placeholder="請輸入商品單價">
                                 </td>
                             </tr>
                             <tr>
@@ -161,27 +186,36 @@ if($_SESSION["mgrAccess"]=="一般"){
                             <tr>
                                 <td>商品資訊</td>
                                 <td>
-                                    <textarea name="" id="" cols="30" rows="10">一位自稱曾擔任黃偉展助理的女子，在臉書爆料黃偉展男女關係複雜，自己淪為「小五」。此事引起軒然大波，黃偉展和妻子今天下午在中西區赤崁里活動中心現身，黃偉展坦承劈腿2名女子，其中1人還墮胎。
-                                            黃偉展當場向支持者及家人道歉，黃偉展的妻子也說，黃偉展是3個小孩的父親，她必須忍下來，給黃偉展一個機會彌補。</textarea>
+                                    <textarea name="proText" id="proText" cols="30" rows="10"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>狀態</td>
+                                <td>
+                                    <select name="upDown" id="upDown">
+                                        <option value="1">上架</option>
+                                        <option value="0">下架</option>
+                                    </select>
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="2">
                                     <button id="cancelBtn">取消</button>
-                                    <button>確認修改</button>
+                                    <button>確認新增</button>
                                 </td>
                             </tr>
                             
                         </table>
-                        
-                    </div>
+                </form>
+
             </div>
+            
         </div>
     </div>
     <div class="clearfix"></div>
 
 
-    <script>
+    <!-- <script>
             function doFirst(){
                 var lightBoxBtn = document.getElementById('lightBoxBtn');
                 var lightBox = document.getElementById('lightBox');
@@ -194,6 +228,38 @@ if($_SESSION["mgrAccess"]=="一般"){
                 })
             }
             window.onload = doFirst;
-        </script>
+        </script> -->
+    <script>
+    $(function(){
+            $('.lightBoxBtn').on('click',function(){
+                var proId = $(this).val();
+                $.ajax({
+                    url:'mallChangeData.php',
+                    dataType:'text',
+                    type: 'POST',
+                    data:{productId:proId},
+                    success: function (data) {
+                        $('.addBox').css('display','none');
+                        $('#lightBox').remove();
+                        $('.userTable').after(data);
+                        $('#lightBox').css('display','block');
+                        //alert(data);
+                    },
+                    error: function () {
+                        alert('error');
+                    }
+                });
+            });
+
+            $('#addPro').on('click',function(){
+                $('#lightBox').css('display','none');
+                $('.addBox').css('display','block');
+            });
+
+
+
+
+        });
+    </script>
 </body>
 </html>
