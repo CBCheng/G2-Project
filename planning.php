@@ -933,15 +933,16 @@ window.onbeforeunload = function(){
 		
 		
 		var aa=document.querySelector('.planetFilter');
+		var bb = document.querySelectorAll('.expertFilter');
 		// $('.confirmPlanetBox').css('display','block');
-		if(aa.style.display!='block'){
+		if(aa.style.display!='block' && bb.style.display!='block'){
 			sessionStorage.setItem("planet", '瓦特星');
 			
 			sessionStorage.removeItem("viewNo");	
 			sessionStorage.removeItem("scheduleNo");
 			sessionStorage.removeItem("indexViewNo");
 			sessionStorage.removeItem('date');
-			sessionStorage.removeItem('memNo');
+			// sessionStorage.removeItem('memNo');
 				// console.log(sessionStorage.getItem('date'));
 
 			return '';
@@ -1258,7 +1259,7 @@ if(sessionStorage.getItem("planet")==null ||sessionStorage.getItem("planet")==''
  //        echo '<span id="spanLogin">登出</span>';
  //      }
 $('#spanLogin').click(function(){
-	sessionStorage.removeItem("memNo");
+	// sessionStorage.removeItem("memNo");
 });
 
 
@@ -1276,7 +1277,9 @@ $.ajax({
 
 					error:function(xhr, ajaxOptions, thrownError)
 					{ 
-					alert('請先登入會員'); 
+					alert("error");
+					alert(xhr.status); 
+					alert(thrownError);  
 					}
 
 
@@ -1294,7 +1297,7 @@ var memNo=sessionStorage.getItem('memNo');
 
 
 		if(memNo==null ||memNo==''||memNo==undefined){
-			// alert('請先登入會員'); 
+			alert('請先登入會員'); 
 		}else{
 
 
@@ -1322,7 +1325,7 @@ var memNo=sessionStorage.getItem('memNo');
 										sch.planetName = planetName.trim();
 										sch.share=0;
 										sch.memNo = memNo;
-										
+										sch.messageNum =0;
 										sch.itineraryPic='p1_v1_03.jpg';
 										sch.daysData=[];
 
@@ -1363,15 +1366,17 @@ var memNo=sessionStorage.getItem('memNo');
 					var $expertNo = $(this).data('expert');
 					// console.log($expertNo);
 				});
-				
+					//選專家
+					var $expertPlanet =$('.planetName').text();
+					console.log($expertPlanet);
 					$.ajax({
 								url: 'php/schExpert.php',
 								dataType:'text',
 								type:'POST',
-								// data:{
-								// 		expertNo:$expertNo,
+								data:{
+										expertPlanet:$expertPlanet,
 										
-								// 		},
+										},
 								success:function(data){
 									
 									$('.expertList ul').append(data);
@@ -1388,6 +1393,7 @@ var memNo=sessionStorage.getItem('memNo');
 									    xhr.onload=function (){
 									       if( xhr.status == 200 ){
 									       	alert('儲存成功');
+									       	location.href='member_mytrip.php';
 										       	}else{
 										          alert( xhr.status );
 										       	}
