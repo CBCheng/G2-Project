@@ -1,18 +1,52 @@
 <?php 
-// $expertNo = $_POST["expertNo"];
+$expertPlanet = trim($_POST["expertPlanet"]);
+// $expertPlanet = '瓦特星';
 
-// $memNo = 1;
+
 
 try {
 	require_once("connectDatabase.php");
-	$pdo->beginTransaction();
-  	$sql = "select * from expert ";
+		
+	
+$arr = array(1,2,3,4,5,6);
+	for($i=1;$i<4;$i++){
+
+		if($expertPlanet==='瓦特星'){
+		$txt='10';
+		}
+		if($expertPlanet==='達沙星'){
+			$txt='20';
+		}	
+		if($expertPlanet==='奧倫星'){
+			$txt='30';
+		}
+		
+		
+		echo count($arr);
+		$num = rand(0,count($arr)-1);
+
+		foreach($arr as $key => $value){
+      		if($key == $num){
+      			$txt.=$arr[$key];
+         		unset($arr[$key]);
+         		// echo $key ;
+         		$arr = array_values($arr);
+      		}
+    }
+
+
+		// $txt.=;
+	
+	$sql = "select * from expert where planet = '$expertPlanet' and expertNo = $txt";
 
     $experts = $pdo->query($sql);
   	$expertRow = $experts->fetchAll(PDO::FETCH_ASSOC);
 
 
+// 	$num = 0;
+// 	$temp=0;
 foreach ($expertRow as $expert) {
+
 	
 
 
@@ -20,7 +54,7 @@ foreach ($expertRow as $expert) {
 <li>
 	<div class="positionRE">
 		<div class="expertImg">
-				<img src="img/expPic/<?php echo $expert['expertPic']; ?>.jpg">
+				<img src="<?php echo $expert['expertPic']; ?>">
 			</div>
 			<div class="expertNameBG ">
 												
@@ -39,8 +73,9 @@ foreach ($expertRow as $expert) {
 	
  <?php
 	}
+  }	
 } catch (PDOException $e) {
-		$pdo->rollBack();
+		
 		echo "錯誤原因 : " , $e->getMessage(), "<br>";
 		echo "錯誤行號 : " , $e->getLine(), "<br>";		
 }

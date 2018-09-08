@@ -7,17 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/member_favorite.css">
     <link rel="stylesheet" type="text/css" href="css/member.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="css/expert.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    
-    <style>
-
-    </style>
+ 
     <link rel="icon" type="text/css" href="img/logovb.png">
+    <script src="js/jquery-3.3.1.min.js"></script>
     <title>OH~PLANETS! | 專家帶你玩</title>
 </head>
 
 <body>
 
+   <!--  -->
     <header>
         <?php include 'login.php';?>
     </header>
@@ -64,25 +65,27 @@
                                     <tr>
                                         <th class="mob_hidden">專家圖片</th>
                                         <th>專家姓名</th>
-                                        <!-- <th>查看</th> -->                                        
-                                        <th>刪除</th>
+                                        <th>星球</th>                             
+                                        <th>查看</th>       
+                                        <th>取消收藏</th>
                                     </tr>
-                                    <!-- 專家收藏開始 -->
-                                    
 
                             <?php
-                            try {
-                                
+                             try {
+        //                         ob_start();
+        // if (!isset($_SESSION)) { 
+        //     session_start(); 
+        // }
                                 require_once("php/connectExpert.php");
-                                // $memNo = $_SESSION['MEM_NO'];
-                                $memNo = '20';
+                                $memNo = $_SESSION['MEM_NO'];
+                                //$memNo = '1';
 
                                 $sql = "select * from expertcollect join expert using(expertNo) where expertcollect.memNo = '$memNo'";
                                 $members = $pdo->query($sql);
                                 $memRows = $members->fetchAll(PDO::FETCH_ASSOC);
                                 if ($members->rowCount() == 0) {
                                     echo "<tr>
-                                        <td colspan='5'>無收藏專家</td>
+                                        <td colspan='5'>您尚未收藏專家</td>
                                     </tr>";
                                 }
                                 foreach ($memRows as $memRow) {
@@ -93,17 +96,20 @@
                                         <img id="member_recipe_img" src="<?php echo $memRow["expertPic"];?>">
                                     </td>
                                     <td><?php echo $memRow["expertName"];?></td>
-                                    <!-- <td>
-                                        <a href="#">
-                                            <div class="look_detail"><i class="fas fa-search"></i></div>
-                                        </a>
-                                    </td> -->
+                                    <td><?php echo $memRow["planet"];?></td>
                                     <td>
-                                        <div class="member_delete re_del" id="delete3">
+                                        <div data-name="<?php echo $memRow['expertName'];?>" class="look_detail">
+                                            <i class="fas fa-search"></i>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div data-no="<?php echo $memRow['expertNo'];?>" class="member_delete re_del" id="delete3">
                                             <i class="fas fa-trash-alt" id="delete3"></i>
                                         </div>
                                     </td>
                                 </tr>
+
+                                <div id="exp_lightBox_father" style="display: none;"></div>
 
                             <?php
                                 }
@@ -112,7 +118,6 @@
                                 echo "錯誤行號 : ", $e->getLine(), "<br>";
                              }
                              ?>
-                                    
                                     <!--專家收藏結束-->
                                 </tbody>
                             </table>
@@ -123,6 +128,16 @@
         </div>
     </div>
 
+
+    <script>
+        $(function () {
+                $(".look_detail").click(function () {
+                    $("#exp_lightBox_father").show(800);
+                })
+            })
+    </script>
+
+
     <!-- footer -->
     <footer>
         <!-- <img src="img/footerbg-1.png"> -->
@@ -131,10 +146,13 @@
         </div>
     </footer>
     <!-- jquery -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/member_like.js"></script>
-    <script src="js/member.js"></script>
+    
+    <!-- <script src="js/member_like.js"></script> -->
     <script src="js/style.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/member.js"></script>
+    <script src="js/member_favorite.js"></script>
+    
 </body>
 
 </html>

@@ -157,8 +157,8 @@ try {
 <?php
      
 }catch(PDOException $e){
-  echo "error~<br>";
-  echo $e->getMessage() , "<br>";
+  echo "錯誤原因 : " , $e->getMessage(), "<br>";
+  echo "錯誤行號 : " , $e->getLine(), "<br>"; 
 }
 ?>
   </div>
