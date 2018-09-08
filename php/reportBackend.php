@@ -66,6 +66,8 @@ if($_SESSION["mgrAccess"]=="一般"){
             </div>
         </nav>
 <!-- ==================================內容更改區================================================= -->
+
+
         <div class="wrapContent">
             
             <div class="content">
@@ -79,25 +81,38 @@ if($_SESSION["mgrAccess"]=="一般"){
                         <td>留言編號</td>
                         <td>留言內容</td>
                         <td>檢舉次數</td>
-                        <td>審核狀態</td>
-                        <td>確認修改</td>
+                        <td>刪除留言</td>
                     </tr>
+<?php 
+try {
+    require_once("connectCd102g2.php");
+    $sql = "select * from cd102g2.itineraryre as a join cd102g2.member as b on a.memNo = b.MEM_NO where a.reReportedTimes>0 order by a.reReportedTimes DESC";
+    $report = $pdo->query($sql);
+    while($reportRow = $report->fetch(PDO::FETCH_ASSOC)){
+?>
+                <form action="deleteReport.php" method="get">
+                    <input type="hidden" name="commentNo" value="<?php echo $reportRow["commentNo"]?>">
                     <tr>
-                        <td>10</td>
-                        <td>林小明</td>
-                        <td>poa123</td>
-                        <td>cd102</td>
-                        <td>cd102</td>
-                        <td>大名真的很XXX,讓我三...大明真的很</td>
-                        <td>5</td>
-                        <td>
-                            <select>
-                                <option value="0">審核中</option>
-                                <option value="1">已審核</option>   
-                            </select> 
-                        </td>
-                        <td><button>修改</button></td>
+                        <td><?php echo $reportRow["memNo"]?></td>
+                        <td><?php echo $reportRow["MEM_NAME"]?></td>
+                        <td><?php echo $reportRow["MEM_ID"]?></td>
+                        <td><?php echo $reportRow["scheduleNo"]?></td>
+                        <td><?php echo $reportRow["commentNo"]?></td>
+                        <td><?php echo $reportRow["reContent"]?></td>
+                        <td><?php echo $reportRow["reReportedTimes"]?></td>
+                        <td><input type="submit" name="delReportBtn" value="刪除"></td>
                     </tr>
+                </form>
+<?php
+
+
+    }
+} catch (PDOException $e) {
+    echo "錯誤原因 : " , $e->getMessage(), "<br>";
+    echo "錯誤行號 : " , $e->getLine(), "<br>"; 
+}
+?>
+                    
                     
                 </table>
             </div>
