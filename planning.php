@@ -76,7 +76,7 @@ if(isset($_SESSION["scheduleNo"])==false){
       <?php
             //檢查是否已登入
         if( isset($_SESSION["MEM_NAME"]) === true ){ //已登入
-        echo '<span id="memName">', $_SESSION["MEM_NAME"], '</span>';
+        echo '<a id="mem_a" href="member_profile.php"><span id="memName">', $_SESSION["MEM_NAME"], '</span></a>';
         echo '<span id="spanLogin">登出</span>';
       }else{
         echo '<span id="memName">&nbsp;</span>';
@@ -933,15 +933,17 @@ window.onbeforeunload = function(){
 		
 		
 		var aa=document.querySelector('.planetFilter');
+		var bb = document.querySelectorAll('.expertFilter');
 		// $('.confirmPlanetBox').css('display','block');
-		if(aa.style.display!='block'){
+		if(aa.style.display!='block' && bb.style.display!='block'){
 			sessionStorage.setItem("planet", '瓦特星');
 			
 			sessionStorage.removeItem("viewNo");	
 			sessionStorage.removeItem("scheduleNo");
 			sessionStorage.removeItem("indexViewNo");
 			sessionStorage.removeItem('date');
-				console.log(sessionStorage.getItem('date'));
+			// sessionStorage.removeItem('memNo');
+				// console.log(sessionStorage.getItem('date'));
 
 			return '';
 		}else{
@@ -949,7 +951,9 @@ window.onbeforeunload = function(){
 			sessionStorage.removeItem("scheduleNo");
 			sessionStorage.removeItem("indexViewNo");
 			sessionStorage.removeItem('date');
-				console.log(sessionStorage.getItem('date'));
+			
+			
+				// console.log(sessionStorage.getItem('date'));
 
 		}
 		
@@ -1249,11 +1253,51 @@ if(sessionStorage.getItem("planet")==null ||sessionStorage.getItem("planet")==''
 	// });
 	
 	//引入專家.saveBtn
-var memNo=1;
+
+	// if( isset($_SESSION["MEM_NAME"]) === true ){ //已登入
+ //        echo '<span id="memName">', $_SESSION["MEM_NAME"], '</span>';
+ //        echo '<span id="spanLogin">登出</span>';
+ //      }
+$('#spanLogin').click(function(){
+	// sessionStorage.removeItem("memNo");
+});
+
+
 	$('.saveBtn').click(function(){
-		
-		if(memNo==null ||memNo==''){
-			alert('請先登入會員');
+
+$.ajax({
+					url: 'php/getmemNo.php',
+					dataType:'text',
+					type:'POST',
+					async: false,
+					success:function(data){
+							sessionStorage.setItem('memNo',data);
+						
+						},
+
+					error:function(xhr, ajaxOptions, thrownError)
+					{ 
+					alert("error");
+					alert(xhr.status); 
+					alert(thrownError);  
+					}
+
+
+				});
+
+var memNo=sessionStorage.getItem('memNo');
+	
+	console.log(memNo);
+
+
+
+
+
+
+
+
+		if(memNo==null ||memNo==''||memNo==undefined){
+			alert('請先登入會員'); 
 		}else{
 
 
@@ -1281,7 +1325,7 @@ var memNo=1;
 										sch.planetName = planetName.trim();
 										sch.share=0;
 										sch.memNo = memNo;
-										
+										sch.messageNum =0;
 										sch.itineraryPic='p1_v1_03.jpg';
 										sch.daysData=[];
 
@@ -1322,15 +1366,17 @@ var memNo=1;
 					var $expertNo = $(this).data('expert');
 					// console.log($expertNo);
 				});
-				
+					//選專家
+					var $expertPlanet =$('.planetName').text();
+					console.log($expertPlanet);
 					$.ajax({
 								url: 'php/schExpert.php',
 								dataType:'text',
 								type:'POST',
-								// data:{
-								// 		expertNo:$expertNo,
+								data:{
+										expertPlanet:$expertPlanet,
 										
-								// 		},
+										},
 								success:function(data){
 									
 									$('.expertList ul').append(data);
@@ -1347,6 +1393,7 @@ var memNo=1;
 									    xhr.onload=function (){
 									       if( xhr.status == 200 ){
 									       	alert('儲存成功');
+									       	location.href='member_mytrip.php';
 										       	}else{
 										          alert( xhr.status );
 										       	}
