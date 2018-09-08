@@ -15,22 +15,40 @@ session_start();
 
 $MEM_NO = $_SESSION["MEM_NO"];
 require_once("connect_g2.php");
+
 switch($_FILES['upfile']['error']){
   case UPLOAD_ERR_OK:
-    if( file_exists("member_pic//")===false){
-    	mkdir("member_pic//");
+    echo "UPLOAD_ERR_OK";
+    if( file_exists("../img/member/")===false){
+      echo "making directory...";
+    	mkdir("../img/member/");
     }
-    $from = $_FILES['upfile']['tmp_name'];
-    $fileto =pathinfo($_FILES['upfile']['name']);
-    $filext = $fileto['basename'];
-    $to = "member_pic/{$filext}";
-    $filname = "{$filext}";
-    if(copy( $from, $to)){
-      $memberfile = "UPDATE member SET MEM_IMG = '{$filname}' WHERE MEM_NO = $MEM_NO";
-      $pdo->exec($memberfile);
-      $_SESSION["MEM_IMG"] = $filname;       
-    	echo "<a href='memberinfo.php'>上傳成功</a>";
-      // 回個人頁面
+    $filname = $_FILES['upfile']['name'];
+    $tmpFile = $_FILES['upfile']['tmp_name'];
+    $uploaddir = '../img/member/';
+    $uploadfile = $uploaddir . basename($filname);
+
+    try {
+      echo '<pre>';
+      if (move_uploaded_file($tmpFile, $uploadfile)) {
+          echo "File is valid, and was successfully uploaded.\n";
+          $memberfile = "UPDATE member SET MEM_IMG = '{$filname}' WHERE MEM_NO = $MEM_NO";
+          echo $memberfile;
+          $pdo->exec($memberfile);
+          echo "<script>alert('上傳成功!')</script>";
+          // 回個人頁面
+          header('location:../member_profile.php');
+      } else {
+          echo "Possible file upload attack!\n";
+      }
+
+      echo 'Here is some more debugging info:';
+      print_r($_FILES);
+
+      print "</pre>";
+    } 
+    catch (Exception $ex) {
+      echo $ex;
     }
     break;
   case UPLOAD_ERR_INI_SIZE:
@@ -46,7 +64,9 @@ switch($_FILES['upfile']['error']){
     echo "echo 未上傳檔案太大<br>";
 }
 
+// header('location:../member_profile.php');
 ?>
+
 
 </body>
 </html>

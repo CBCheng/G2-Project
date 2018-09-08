@@ -1,7 +1,41 @@
 <?php
 ob_start();
 session_start();
+require_once("connect_g2.php");
+
+//$isModified = $_REQUEST['isModified'];
+//$memberPsw = $_REQUEST['new_psw'];
+
+/* 
+TODOa: remove
+*/
+// echo $_REQUEST['isModified'];
+// echo $_REQUEST['new_psw'];
+
+
+function getMemberInfo($pdo) {
+    try {
+        $sql = "SELECT * FROM member";
+        $query = $pdo->prepare($sql);
+        
+        $query->execute();
+        if ($query->rowCount() == 0) {
+            echo "Member does not exist";
+        } else {
+            $memberRow = $query->fetchAll(PDO::FETCH_ASSOC);
+            //echo json_encode($memberRow);
+            return $memberRow;
+        }
+    } catch(Exception $ex) {
+        echo 'error：' . $ex->getMessage();
+    }
+} 
+
+$memberInfo = getMemberInfo($pdo);
+
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,26 +111,51 @@ if($_SESSION["mgrAccess"]=="一般"){
                         <td>帳號</td>
                         <td>密碼</td>
                         <td>姓名</td>
+                        <td>電話</td>
                         <td>email</td>
-                        <td>性別</td>
                         <td>生日</td>
                         <td>地址</td>
                         <td>狀態</td>
                         <td>會員圖片</td>
+                        <td>修改</td>
                     </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>poa123</td>
-                        <td>123456</td>
-                        <td>輔導長</td>
-                        <td>poa123@gmail.com</td>
-                        <td>男</td>
-                        <td>1995/07/28</td>
-                        <td>桃園市平鎮區延平路一段2號</td>
-                        <td>正常</td>
-                        <td><img src="img/poa/treeman.jpg" alt=""></td>
-                    </tr>
+                <!-- <form method="post" action="menberBackend.php" enctype="multipart/form-data" id="file" name="file" class="member_img"> -->
+                <?php
+                            $i=count($memberInfo);
+                            for($j=0 ; $j<$i ; $j++){
+                                echo '<tr>';
+                                echo '<td>'.$memberInfo[$j]['MEM_NO'].'</td>';
+                                echo '<td>'.$memberInfo[$j]['MEM_ID'].'</td>';
+                                echo '<td>'.$memberInfo[$j]['MEM_PSW'].'</td>';
+                                echo '<td>'.$memberInfo[$j]['MEM_NAME'].'</td>';
+                                echo '<td>'.$memberInfo[$j]['MEM_PHONE'].'</td>';
+                                echo '<td>'.$memberInfo[$j]['MEM_EMAIL'].'</td>';
+                                echo '<td>'.$memberInfo[$j]['MEM_BD'].'</td>';
+                                echo '<td>'.$memberInfo[$j]['MEM_ADDRESS'].'</td>';
+                                echo '<td>'.$memberInfo[$j]['MEM_STATUS'].'<input type="radio" name="memStatus" value="1">正常'.'<input type="radio" name="memStatus" value="0">停權'.'</td>';
+                                echo '<td>'.'<img id="show_pic" name="show_pic" src="../img/member/$memberInfo["MEM_IMG"]">'.'</td>';
+                                echo '<td>'.'<button id="lightBoxBtn">修改</button>'.'</td>';
+                                echo '</tr>';
+                            }
+                            
+                    /*<tr>
                     
+                        <td></td>
+                        <td>
+                            <input type="radio" name="memStatus" value="1">
+                            <input type="radio" name="memStatus" value="0">
+                        </td>
+                        <td><figure>
+                                <img id="show_pic" name="show_pic" src="../img/member/<?php echo $memberInfo["MEM_IMG"]?>">
+                            </figure>
+                        </td>
+                        <td>
+                            <button id="lightBoxBtn">修改</button>
+                        </td>
+                    </tr>
+                    */
+                    ?>    
+                <!-- </form>  -->
                 </table>
             </div>
         </div>
