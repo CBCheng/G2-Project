@@ -5,8 +5,7 @@ try {
     require_once("connectExpert.php");
     $expertName = $_REQUEST['expertName'];
     $expertNo = $_REQUEST['expertNo'];
-    // $memNo = @$_SESSION['MEM_NO'];
-    $memNo = '1';
+    $memNo = @$_SESSION['MEM_NO'];
 
     $sql = "select * from expert where expertName = '$expertName'";
     $members = $pdo->query($sql);

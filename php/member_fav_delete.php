@@ -1,10 +1,9 @@
 <?php
 try {
-    // ob_start();
-    // session_start();
+    ob_start();
+    session_start();
     require_once("connectExpert.php");
-    // $memNo = @$_SESSION['MEM_NO'];
-    $memNo = '1';
+    $memNo = @$_SESSION['MEM_NO'];
     $expertNo = $_REQUEST["expertNo"];
 
     $sql = "DELETE FROM expertcollect WHERE memNo = $memNo and expertNo = $expertNo";
