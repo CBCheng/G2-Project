@@ -102,7 +102,7 @@ try {
         <td><?php echo $memRow["expertName"];?></td>
         <td>
             <img id="image" src="../<?php echo $memRow["expertPic"];?>">
-            <input id="expertPic" type='file' size="5" name='expertPic' value="更換圖片">
+            <input class="expertPic" type='file' size="5" name='expertPic' value="更換圖片">
             <!-- <input id="upfile" name="upfile" type="file" name="upfile">
             <div class="img_btn_div">
                 <button type="button" class="btn btn-o-nb" id="member_pic" style="display: block;">上傳</button>
@@ -171,10 +171,10 @@ try {
 
 
         function doFirst(){
-            document.getElementById('expertPic').onchange = fileChange;
+            document.getElementsByClassName('expertPic').onchange = fileChange;
         }
         function fileChange(){
-            var file = document.getElementById('expertPic').files[0];
+            var file = document.getElementsByClassName('expertPic').files[0];
 
             var readFile = new FileReader();    //constructor建構函數
             readFile.readAsDataURL(file);

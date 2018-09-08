@@ -204,22 +204,6 @@ $(document).on('click', '.element-item', function(){
 })
 
 
-// $(document).on('click', '.member_delete', function(){
-// 	$.ajax({
-// 		url: 'php/member_fav_delete.php',
-// 		dataType: 'text',
-// 		data{
-// 			expertNo: $(this).data('no'),
-// 		},
-// 		success: function (data) {
-// 			alert('ok_delete');
-
-// 		},
-// 		error: function () {
-// 			alert('error_del');
-// 		}
-// 	});
-// })
 
 
 
