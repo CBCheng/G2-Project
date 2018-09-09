@@ -28,21 +28,21 @@
         <!-- desk -->
         <ul class="menu mRight">
             <li>
-                <a href="planning.html">開始冒險</a>
+                <a href="planning.php">開始冒險</a>
             </li>
             <li>
-                <a href="refer.html">別人怎麼玩</a>
+                <a href="refer.php">別人怎麼玩</a>
             </li>
         </ul>
-        <a href="index.html" class="logo">
+        <a href="index.php" class="logo">
             <img src="img/logo-1.png">
         </a>
         <ul class="menu mLeft">
             <li>
-                <a href="expert.php">專家帶你玩</a>
+                <a href="expertLogin.php">專家帶你玩</a>
             </li>
             <li>
-                <a href="shop.html">星際商城</a>
+                <a href="shop.php">星際商城</a>
             </li>
         </ul>
         <ul class="member">
@@ -90,22 +90,22 @@
         <ul class="menuMobile">
             <img class="navPic" src="img/bgM.png" alt="">
             <li>
-                <a href="planning.html">開始冒險</a>
+                <a href="planning.php">開始冒險</a>
             </li>
             <li>
-                <a href="expert.html">專家帶你玩</a>
+                <a href="expertLogin.php">專家帶你玩</a>
             </li>
             <li>
-                <a href="refer.html">別人怎麼玩</a>
+                <a href="refer.php">別人怎麼玩</a>
             </li>
             <li>
-                <a href="shop.html">星際商城</a>
+                <a href="shop.php">星際商城</a>
             </li>
             <li>
                 <a href="member_profile.php">會員專區</a>
             </li>
             <li>
-                <a href="shop.html">購物車</a>
+                <a href="shop.php">購物車</a>
             </li>
 
         </ul>

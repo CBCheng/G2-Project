@@ -1,6 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700');
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 
+.favorite_box .favorite_page table tbody tr{
+	font-size: 18px;
+}
+@media screen and (max-width: 767px) {
+	.favorite_box .favorite_page table tbody tr{
+		font-size: 16px;
+	}
+	footer p{font-size: 10px;}
+}
+
+
 .m_rightBox{
 	width: calc(100% - 10px);
 	// float: left;
