@@ -97,11 +97,7 @@ if($_SESSION["mgrAccess"]=="一般"){
 
 <?php
 try{
-    $dsn = "mysql:host=localhost;port=3306;dbname=cd102g2;charset=utf8";
-    $user = "cheng2";
-    $password = "9453";
-    $options = array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION);
-    $pdo = new PDO( $dsn, $user, $password, $options);
+    require_once("connect_g2.php");
 
     $sql = "select * from product";
     $pros = $pdo->query($sql);
