@@ -39,7 +39,7 @@
         </a>
         <ul class="menu mLeft">
             <li>
-                <a href="expert.php">專家帶你玩</a>
+                <a href="expertLogin.php">專家帶你玩</a>
             </li>
             <li>
                 <a href="shop.html">星際商城</a>
