@@ -93,7 +93,7 @@
                 <a href="planning.html">開始冒險</a>
             </li>
             <li>
-                <a href="expert.html">專家帶你玩</a>
+                <a href="expertLogin.php">專家帶你玩</a>
             </li>
             <li>
                 <a href="refer.html">別人怎麼玩</a>
