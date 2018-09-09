@@ -1045,6 +1045,10 @@ div[class^=col-] {
   .col-md-12 {
     width: 100%; } }
 
+@media screen and (max-width: 449px) {
+  .favorite_box .favorite_page table tr th {
+    padding: 0px; } }
+
 footer {
   width: 100%;
   text-align: center;

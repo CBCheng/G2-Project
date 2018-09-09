@@ -96,17 +96,15 @@ try {
 ?>
     
     <tr>
-        <form action="expBackModify.php">
+        <form action="expBackModify.php" method="post" enctype="multipart/form-data">
             <input type="hidden" name="expertNo" value="<?php echo $memRow["expertNo"];?>">
         <td><?php echo $memRow["expertNo"];?></td>
         <td><?php echo $memRow["expertName"];?></td>
         <td>
+            <label>
             <img id="image" src="../<?php echo $memRow["expertPic"];?>">
-            <input class="expertPic" type='file' size="5" name='expertPic' value="更換圖片">
-            <!-- <input id="upfile" name="upfile" type="file" name="upfile">
-            <div class="img_btn_div">
-                <button type="button" class="btn btn-o-nb" id="member_pic" style="display: block;">上傳</button>
-            </div> -->
+            <input id="upFile<?php echo $NO?>" type='file' size="5" name='upFile' disabled>
+            </label>
         </td>
         <td><?php echo $memRow["planet"];?></td>
         <td>
@@ -160,21 +158,21 @@ try {
             var expSmart = "expSmart" + no ;
             var expAdven = "expAdven" + no ;
             var expTech = "expTech" + no ;
-            // var expTech = "expertPic" + no ;
+            var upFile = "upFile" + no ;
             document.getElementById(expFood).disabled=false;
             document.getElementById(expHuman).disabled=false;
             document.getElementById(expSmart).disabled=false;
             document.getElementById(expAdven).disabled=false;
             document.getElementById(expTech).disabled=false;
-            // document.getElementById(expertPic).disabled=false;
+            document.getElementById(upFile).disabled=false;
         }
 
 
         function doFirst(){
-            document.getElementsByClassName('expertPic').onchange = fileChange;
+            document.getElementById('upFile').onchange = fileChange;
         }
         function fileChange(){
-            var file = document.getElementsByClassName('expertPic').files[0];
+            var file = document.getElementById('upFile').files[0];
 
             var readFile = new FileReader();    //constructor建構函數
             readFile.readAsDataURL(file);
@@ -184,6 +182,19 @@ try {
             });
         }
         window.addEventListener('load',doFirst);
+
+// window.addEventListener("load",function(){
+//     document.getElementById("expertPic").onchange=function(e){
+//         var file = e.target.files[0];
+//         var reader = new FileReader();
+//         reader.onload = function(){
+//             //$(this).prev().attr('src','reader.result');
+//             document.getElementByClassId("image").src =reader.result;
+//         }
+//         reader.readAsDataURL(file);
+//     };
+// },false);   
+
 
     </script>
 </body>

@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/login.css">
     <link rel="stylesheet" type="text/css" href="css/member.css">
-    <link rel="stylesheet" type="text/css" href="css/member_favorite.css">
     
     <link rel="stylesheet" type="text/css" href="css/expert.css">
+    <link rel="stylesheet" type="text/css" href="css/member_favorite.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
  
     <link rel="icon" type="text/css" href="img/logovb.png">
@@ -34,7 +34,7 @@
                         <a data-toggle="tab" rel="trip" href="member_mytrip.php">我的行程</a>
                     </li>
                     <li class="default">
-                        <a data-toggle="tab" rel="favorite" href="member_favorite.php">我的收藏</a>
+                        <a data-toggle="tab" rel="favorite" href="member_favorite.php">專家收藏</a>
                     </li>
                     <!-- <li class="">
                         <a data-toggle="tab" rel="score" href="member_comment.html">專家評論</a>
@@ -73,10 +73,11 @@
 
                             <?php
                              try {
-        //                         ob_start();
-        // if (!isset($_SESSION)) { 
-        //     session_start(); 
-        // }
+                               
+                                // ob_start();
+                                // if (!isset($_SESSION)) { 
+                                //     session_start(); 
+                                // }
                                 require_once("php/connectExpert.php");
                                 $memNo = $_SESSION['MEM_NO'];
                                 //$memNo = '1';

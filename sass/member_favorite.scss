@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700');
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 
+
+
+
 .favorite_box .favorite_page table tbody tr{
 	font-size: 18px;
 }
@@ -899,3 +902,26 @@
 
 .pingC_tab{background-color: #ce631b;}
 .pingC_tab:before{border-right: 7px solid #cca183;}
+
+
+.content_desk .conRight .data .chart {
+    margin: -6px 0 20px;
+}
+
+@media screen and (max-width: 669px){
+	.content_desk .conRight .data{
+	    margin-top: -10px;
+	    .chart h3{
+	    	margin-left: -176px;
+	    }
+	}
+}
+@media screen and (max-width: 449px){
+	.content_phone .chart_phone{
+		margin-top: 20px;
+		h3 {
+		    margin-left: -47px;
+		}
+	}
+}
+
