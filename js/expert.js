@@ -42,10 +42,73 @@ window.addEventListener('load', doSecond);
 // window.onload = doSecond;
 
 
-
 //=====兩片雲動畫=====
-TweenMax.fromTo('.cloud1', 3, { x: 200, y: 0 }, { x: -30, y: 0 });
-TweenMax.fromTo('.cloud2', 3, { x: -200, y: 0 }, { x: 30, y: 0 });
+TweenMax.fromTo('.cloud1', 0, { x: 250, y: 0 }, { x: 250, y: 0 });
+TweenMax.fromTo('.cloud2', 0, { x: -250, y: 0 }, { x: -250, y: 0 });
+
+// parallax視差 加滾動觸發
+$(function () {
+    var tls = new TimelineMax();
+    var controller = new ScrollMagic.Controller();
+
+
+    var tween_s = tls.to('.cloud_group .cloud1', 1, {
+        y: 50,
+        x: -100,
+        // alpha: 1
+    }).to('.cloud_group .cloud2', 1, {
+        y: 50,
+        x: 100,
+        // alpha: 1
+    });
+
+    var planetsan = tls.to('.planetsan', 10, {
+        y: 1200,
+        x: 1800,
+        // alpha: 1
+    })
+
+    var planettree = tls.to('.planettree', 10, {
+        y: 800,
+        x: -1800,
+        // alpha: 1
+    })
+
+
+
+    //第一個場景
+    var scence_01 = new ScrollMagic.Scene({
+        triggerElement: "#trigger_01",
+        offset: 280,
+        duration: '50%',
+        reverse: true  //動畫會返回(預設)
+    }).setTween(tween_s)
+        .addIndicators({name: 'box'})
+        .addTo(controller)
+
+    var scence_02 = new ScrollMagic.Scene({
+        triggerElement: "#trigger_02",
+        offset: 20,
+        duration: '120%',
+    }).setTween(planetsan)
+        .addIndicators({name: 'star1'})
+        .addTo(controller)
+
+    var scence_03 = new ScrollMagic.Scene({
+        triggerElement: "#trigger_03",
+        offset: 40,
+        duration: '100%',
+    }).setTween(planettree)
+        .addIndicators({name: 'star2'})
+        .addTo(controller)
+
+    console.log("scrollmagic")
+})
+
+
+
+
+
 
 
 

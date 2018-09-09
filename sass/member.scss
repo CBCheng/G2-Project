@@ -930,6 +930,13 @@ div[class^=col-] {
 }
 
 
+@media screen and (max-width: 449px){
+    .favorite_box .favorite_page table tr th{
+        padding: 0px;
+    }
+}
+
+
 @import "layout/footer";
 footer {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, .5) 100%); 
