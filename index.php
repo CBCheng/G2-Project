@@ -31,52 +31,6 @@ session_start();
 <body>
     
     <!-- nav start-->
-    <!-- <div class="navColor">
-        <img class="navPic" src="img/index/index/bg.png" alt=""> 
-    </div>
-    <nav>           -->
-        <!-- desk -->
-        <!-- <ul class="menu mRight">
-            <li><a href="planning.html">開始冒險</a></li>
-           <li><a href="expert.html">專家帶你玩</a></li>
-        </ul>
-            <a href="index.html" class="logo">
-                <img src="img/index/logo-1.png">
-            </a>
-        <ul class="menu mLeft">
-            <li><a href="refer.html">別人怎麼玩</a></li>
-            <li><a href="shop.html">星際商城</a></li>
-        </ul>
-        <ul class="member">
-            <li class="shoppingCar"><a href="#">
-                <img class="shoppingCarPic" src="img/index/shopping car.png" alt=""> -->
-                <!-- <img class="shoppingCarHover" src="img/index/shoppingCarHover.png" alt=""> -->
-            <!-- </a></li>
-            <li class="memberSign"><a href="#">登入</a></li>
-        </ul>
-        <ul class="memberSelect">
-            <li>Hi ~ 冒險者</li>
-            <li><a href="member_mytrip.html">我的行程</a></li>
-            <li><a href="member_favorite.html">我的收藏</a></li>
-            <li><a href="member_order.html">我的訂單</a></li>
-            <li><a href="member_comment.html">專家評論</a></li>
-            <li><a href="member_profile.html">會員資料修改</a></li>
-            <li><a href="sign.html">登出</a></li>
-        </ul> -->
-        <!-- mobile -->
-        <!-- <div class="hambger">
-            <div class="line"></div>
-        </div>
-        <ul class="menuMobile">
-            <li><a href="planning.html">開始冒險</a></li>
-            <li><a href="expert.html">專家帶你玩</a></li>
-            <li><a href="refer.html">別人怎麼玩</a></li>
-            <li><a href="shop.html">星際商城</a></li>
-            <li><a href="member.html">會員專區</a></li>
-            <li><a href="shop.html">購物車</a></li>
-        </ul>
-    </nav> -->
-
     <div class="navColor">
         <!-- <img class="navPic" src="../img/bg.png" alt=""> -->
     </div>
@@ -217,11 +171,6 @@ session_start();
             </div>
         </div>
     </div>
-
-
-
-
-
 
     <!-- nav end-->
 
@@ -539,18 +488,17 @@ session_start();
                         <img src="img/index/crown.png" alt="crown">
                         <h3>奧倫星人氣專家</h3>
                         <h3>May J Lee</h3>
-                        <p>人文</p>
-                        <span></span>
-                        <p>美食</p>
-                        <span></span>
-                        <p>科技</p>
-                        <span></span>
-                        <p>人氣</p>
-                        <span></span>
-                        <p>冒險</p>
-                        <span></span>
-                        <p>知性</p>
-                        <span></span>
+                        <div class="expSpan">
+                            <p class="exp">人文</p><span></span>
+                            <br>
+                            <p class="exp">美食</p><span></span>
+                            <br>
+                            <p class="exp">科技</p><span></span>
+                            <br>
+                            <p class="exp">冒險</p><span></span>
+                            <br>
+                            <p class="exp">知性</p><span></span>
+                        </div>
                         <!-- <a href="expert.html" class="aaa">專家詳情</a> -->
                     </div>
                 </div>
@@ -564,18 +512,17 @@ session_start();
                         <img src="img/index/crown.png" alt="crown">
                         <h3>瓦特星人氣專家</h3>
                         <h3>Tom Jeson</h3>
-                        <p>人文</p>
-                        <span></span>
-                        <p>美食</p>
-                        <span></span>
-                        <p>科技</p>
-                        <span></span>
-                        <p>人氣</p>
-                        <span></span>
-                        <p>冒險</p>
-                        <span></span>
-                        <p>知性</p>
-                        <span></span>
+                        <div class="expSpan">
+                            <p class="exp">人文</p><span></span>
+                            <br>
+                            <p class="exp">美食</p><span></span>
+                            <br>
+                            <p class="exp">科技</p><span></span>
+                            <br>
+                            <p class="exp">冒險</p><span></span>
+                            <br>
+                            <p class="exp">知性</p><span></span>
+                        </div>
                         <!-- <a href="expert.html">專家詳情</a> -->
                     </div>
                 </div>
@@ -589,18 +536,17 @@ session_start();
                         <img src="img/index/crown.png" alt="crown">
                         <h3>奧倫星人氣專家</h3>
                         <h3>Andy Lin</h3>
-                        <p>人文</p>
-                        <span></span>
-                        <p>美食</p>
-                        <span></span>
-                        <p>科技</p>
-                        <span></span>
-                        <p>人氣</p>
-                        <span></span>
-                        <p>冒險</p>
-                        <span></span>
-                        <p>知性</p>
-                        <span></span>
+                        <div class="expSpan">
+                            <p class="exp">人文</p><span></span>
+                            <br>
+                            <p class="exp">美食</p><span></span>
+                            <br>
+                            <p class="exp">科技</p><span></span>
+                            <br>
+                            <p class="exp">冒險</p><span></span>
+                            <br>
+                            <p class="exp">知性</p><span></span>
+                        </div>
                         <!-- <a href="expert.html">專家詳情</a> -->
                     </div>
                 </div>
@@ -616,18 +562,17 @@ session_start();
                         <img src="img/index/crown.png" alt="crown">
                         <h3>達沙星人氣專家</h3>
                         <h3>Steven Wang</h3>
-                        <p>人文</p>
-                        <span></span>
-                        <p>美食</p>
-                        <span></span>
-                        <p>科技</p>
-                        <span></span>
-                        <p>人氣</p>
-                        <span></span>
-                        <p>冒險</p>
-                        <span></span>
-                        <p>知性</p>
-                        <span></span>
+                        <div class="expSpan">
+                            <p class="exp">人文</p><span></span>
+                            <br>
+                            <p class="exp">美食</p><span></span>
+                            <br>
+                            <p class="exp">科技</p><span></span>
+                            <br>
+                            <p class="exp">冒險</p><span></span>
+                            <br>
+                            <p class="exp">知性</p><span></span>
+                        </div>
                         <!-- <a href="expert.html">專家詳情</a> -->
                     </div>
                 </div>
