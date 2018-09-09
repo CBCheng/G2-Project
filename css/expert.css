@@ -408,10 +408,6 @@ nav {
 .planetsan {
   margin-left: 50px; }
 
-.planettree {
-  float: right;
-  margin-right: 50px; }
-
 .panel {
   width: 1200px;
   margin: 30px auto 50px; }
@@ -739,13 +735,16 @@ nav {
     right: 10px; }
 
 #exp_lightBox.boxBlue {
-  border: 3px solid rgba(108, 213, 255, 0.5); }
+  border: 3px solid rgba(108, 213, 255, 0.5);
+  box-shadow: 0px 0px 50px rgba(108, 213, 255, 0.8); }
 
 #exp_lightBox.boxOrange {
-  border: 3px solid rgba(207, 169, 114, 0.5); }
+  border: 3px solid rgba(207, 169, 114, 0.5);
+  box-shadow: 0px 0px 50px rgba(207, 169, 114, 0.8); }
 
 #exp_lightBox.boxGreen {
-  border: 3px solid rgba(128, 194, 105, 0.5); }
+  border: 3px solid rgba(128, 194, 105, 0.5);
+  box-shadow: 0px 0px 50px rgba(128, 194, 105, 0.8); }
 
 #exp_lightBox:after {
   content: "";
@@ -850,7 +849,7 @@ nav {
           height: 15px;
           background-color: #aaa;
           display: inline-block;
-          transition: 1s; }
+          transition: 2s 0.5s; }
         .content_desk .conRight .data .chart .value.focus {
           background-color: #6cd5ff; }
     .content_desk .conRight .record {
@@ -996,7 +995,7 @@ nav {
         height: 12px;
         background-color: #aaa;
         display: inline-block;
-        transition: 1s; }
+        transition: 2s 0.5s; }
       .content_phone .chart_phone .value.focus {
         background-color: #6cd5ff; }
     .content_phone .record_phone {

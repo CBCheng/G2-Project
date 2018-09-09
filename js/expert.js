@@ -62,17 +62,17 @@ $(function () {
         // alpha: 1
     });
 
-    var planetsan = tls.to('.planetsan', 10, {
-        y: 1200,
-        x: 1800,
-        // alpha: 1
-    })
+    // var planetsan = tls.to('.planetsan', 100, {
+    //     y: 800,
+    //     x: 1800,
+    //     // alpha: 1
+    // })
 
-    var planettree = tls.to('.planettree', 10, {
-        y: 800,
-        x: -1800,
-        // alpha: 1
-    })
+    // var planettree = tls.to('.planettree', 100, {
+    //     y: 800,
+    //     x: -1800,
+    //     // alpha: 1
+    // })
 
 
 
@@ -83,24 +83,24 @@ $(function () {
         duration: '50%',
         reverse: true  //動畫會返回(預設)
     }).setTween(tween_s)
-        .addIndicators({name: 'box'})
+        .addIndicators({name: '1'})
         .addTo(controller)
 
-    var scence_02 = new ScrollMagic.Scene({
-        triggerElement: "#trigger_02",
-        offset: 20,
-        duration: '120%',
-    }).setTween(planetsan)
-        .addIndicators({name: 'star1'})
-        .addTo(controller)
+    // var scence_02 = new ScrollMagic.Scene({
+    //     triggerElement: "#trigger_02",
+    //     offset: 20,
+    //     duration: '120%',
+    // }).setTween(planetsan)
+    //     .addIndicators({name: '2'})
+    //     .addTo(controller)
 
-    var scence_03 = new ScrollMagic.Scene({
-        triggerElement: "#trigger_03",
-        offset: 40,
-        duration: '100%',
-    }).setTween(planettree)
-        .addIndicators({name: 'star2'})
-        .addTo(controller)
+    // var scence_03 = new ScrollMagic.Scene({
+    //     triggerElement: "#trigger_03",
+    //     offset: 40,
+    //     duration: '100%',
+    // }).setTween(planettree)
+    //     .addIndicators({name: '3'})
+    //     .addTo(controller)
 
     console.log("scrollmagic")
 })
