@@ -117,7 +117,7 @@ if($_SESSION["mgrAccess"]=="一般"){
                         <td>地址</td>
                         <td>狀態</td>
                         <td>會員圖片</td>
-                        <td>修改</td>
+                        <!-- <td>修改</td> -->
                     </tr>
                 <!-- <form method="post" action="menberBackend.php" enctype="multipart/form-data" id="file" name="file" class="member_img"> -->
                 <?php
@@ -132,9 +132,32 @@ if($_SESSION["mgrAccess"]=="一般"){
                                 echo '<td>'.$memberInfo[$j]['MEM_EMAIL'].'</td>';
                                 echo '<td>'.$memberInfo[$j]['MEM_BD'].'</td>';
                                 echo '<td>'.$memberInfo[$j]['MEM_ADDRESS'].'</td>';
-                                echo '<td>'.$memberInfo[$j]['MEM_STATUS'].'<input type="radio" name="memStatus" value="1">正常'.'<input type="radio" name="memStatus" value="0">停權'.'</td>';
-                                echo '<td>'.'<img id="show_pic" name="show_pic" src="../img/member/$memberInfo["MEM_IMG"]">'.'</td>';
-                                echo '<td>'.'<button id="lightBoxBtn">修改</button>'.'</td>';
+                                if($memberInfo[$j]['MEM_STATUS']==1) {
+                                    echo '<td>正常</td>';
+                                }
+                                else {
+                                    echo '<td>停權</td>';
+                                }
+                                // echo '<td>'.$memberInfo[$j]['MEM_STATUS'].'<input type="radio" name="memStatus" value="1">正常'.'<input type="radio" name="memStatus" value="0">停權'.'</td>';
+                               
+                                // <td><img src="../img/member/comment05.jpg"></td>
+                                //會員圖片的串接,共同的字串直接接起來,會變的要串接
+                                // arr = [1, 2, 3]
+                                // arr[2] -> 3
+                                // arr[0] -> 1
+                                /**
+                                 * memberInfo
+                                 * [
+                                 *    {
+                                 *      'MEM_IMG': 'comment.jpg'
+                                 *    },
+                                 *    {},
+                                 *    {}  
+                                 * ]
+                                 * memberInfo[0]['MEM_IMG']
+                                 */
+                                echo '<td><img id="show_pic" name="show_pic" src="../img/member/'.$memberInfo[$j]["MEM_IMG"].'"></td>';
+                                // echo '<td>'.'<button id="lightBoxBtn">修改</button>'.'</td>';
                                 echo '</tr>';
                             }
                             
