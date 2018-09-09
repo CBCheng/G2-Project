@@ -63,15 +63,18 @@ try{
             </tr>
             <tr>
                 <td>商品圖片</td>
-                <td><?php echo $pros['productPic1']?></td>
+                <td>原始圖片:<?php echo $pros['productPic1']?><br><input type="file" name="upFile[]" class="upFile"></td>
+                
             </tr>
             <tr>
                 <td></td>
-                <td><?php echo $pros['productPic2']?></td>
+                <td>原始圖片:<?php echo $pros['productPic2']?><br><input type="file" name="upFile[]" class="upFile"></td>
+                
             </tr>
             <tr>
                 <td></td>
-                <td><?php echo $pros['productPic3']?></td>
+                <td>原始圖片:<?php echo $pros['productPic3']?><br><input type="file" name="upFile[]" class="upFile"></td>
+                
             </tr>
             
             <tr>
@@ -92,14 +95,32 @@ try{
             <tr>
                 <td colspan="2">
                     <button type="button" id="cancelBtn" onclick="this.form.style.display='none';">取消</button>
-                    <button>確認修改</button>
+                    <button type="submit">確認修改</button>
                 </td>
             </tr>
             
         </table>
-        
+ 
 </form>
 
+<!-- <script>
+
+// function change(){
+//     alert($(this).val());
+//     // $(this).val()='change';
+// }
+function check(){
+    var imgFile = document.getElementsByClassName('upFile');
+    console.log(imgFile.value);
+    // var file1=window.document.lightBox.upFile;
+    if(imgFile.value == undefined){ 
+        alert("請選擇圖片");
+        // return false;
+    }else{
+        document.getElementById('lightBox').submit();
+    }
+}
+</script> -->
 
 <?php
 } catch (PODException $e) {

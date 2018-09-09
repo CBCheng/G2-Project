@@ -231,7 +231,7 @@ try {
                     <p>收藏</p>
                 </div> -->
             </div>
-            <a class="use" href="planning.html"> 
+            <a class="use" href="planning.php"> 
                 <button>引用行程</button>
             </a>
         </div>
