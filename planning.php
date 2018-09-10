@@ -368,6 +368,7 @@ if(isset($_SESSION["scheduleNo"])==false){
 
 	<div class="planningContent">
 		<div id="mobileBox">
+		<div id="calendar" class="calendar chinese"></div>	
 		</div>
 		
 	 <div class="mobilePlanningBox">
@@ -379,9 +380,7 @@ if(isset($_SESSION["scheduleNo"])==false){
 		
 		<div class="selectDaysGroup">
 					<!-- 月曆 -->
-				<div id="calendar" class="calendar chinese">
-					
-				</div>
+				
 				<!-- 月曆 -->
 			<div class="selectDays chinese " href="#">
 				<span>
