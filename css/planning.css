@@ -1913,7 +1913,8 @@ font-weight: 700;
 	}
 	#calendar{
 		width: 100%;
-		top: -81px;		
+		top: 280px;	
+		left: 0;	
 	}
 	.expert{
 		top: 20px;
