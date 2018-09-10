@@ -80,7 +80,7 @@ nav {
   height: 80px;
   box-sizing: content-box;
   padding: 20px 0 20px 0;
-  /*background-image: linear-gradient(to top, rgba(0, 255, 255, 0.3), rgba(0, 183, 255, 0.3) 100%);*/
+  background-image: linear-gradient(to top, rgba(0, 255, 255, 0.3), rgba(0, 183, 255, 0.3) 100%);
   /*position: fixed;*/
   top: 0;
   left: 0;
@@ -89,15 +89,15 @@ nav {
   letter-spacing: 2px;
   font-size: 18px; }
 
-/*.navColor {
+.navColor {
   background-color: linear-gradient(to top, rgba(0, 255, 255, 0.3), rgba(0, 183, 255, 0.3) 100%);
   width: 100%;
   height: 120px;
   z-index: 80;
-  position: fixed;
+  /*position: fixed;*/
   top: 0;
   left: 0;
-  overflow: hidden; }*/
+  overflow: hidden; }
 
 .logo {
   display: inline-block;
@@ -259,113 +259,10 @@ nav {
 .activeB {
   color: #6cd5ff; }
 
-.login_modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: 5000;
-  width: 100%;
-  background-color: rgba(66, 66, 66, 0.6); }
-
-.regist_box {
-  display: none; }
-
-.login_content,
-.regist_content {
-  /*   display: none; */
-  position: absolute;
-  top: 40%;
-  bottom: 40%;
-  right: 0;
-  left: 0;
-  margin: auto;
-  z-index: 15;
-  width: 300px;
-  min-height: 200px;
-  border-radius: 10px;
-  background-color: #08040f;
-  display: flex;
-  flex-wrap: wrap;
-  text-align: center;
-  justify-content: center; }
-
-.login_content {
-  padding: 30px 0 130px 0; }
-
-.regist_content {
-  padding: 30px 0 170px 0; }
-
-.login_content .close,
-.regist_content .close {
-  position: absolute;
-  top: 0;
-  right: 10px;
-  font-size: 30px; }
-
-.login_content .close:hover,
-.regist_content .close:hover,
-.memberSign {
-  cursor: pointer; }
-
-.login_content h3,
-.regist_content h3 {
-  width: 100%; }
-
-.login_content img,
-.regist_content img {
-  position: absolute;
-  bottom: -25px;
-  width: 95px;
-  right: 0; }
-
-.login_content .registBtn {
-  border-bottom: 1px solid black; }
-
-.login_content .registBtn:hover {
-  cursor: pointer; }
-
-/* ------登入頁測試----------*/
-.login_content h3,
-.regist_content h3 {
-  width: 100%;
-  padding-bottom: 20px;
-  font-weight: 600; }
-
-.login_input input {
-  padding: 5px;
-  width: 200px;
-  transition: 0.3s;
-  border: 1px solid black; }
-
-.login_input {
-  position: relative;
-  padding: 15px; }
-
-.login_lable {
-  position: absolute;
-  top: 18px;
-  left: 20px;
-  color: grey;
-  font-weight: 600;
-  transition: .3s; }
-
-.inputErr_notice {
-  position: absolute;
-  bottom: -5px;
-  right: 18px;
-  color: red;
-  display: none;
-  transition: .3s; }
-
-#regist_btn {
-  position: relative;
-  z-index: 10; }
-
-.login_content span {
-  padding-top: 10px; }
+section {
+  width: 80%;
+  height: 3000px;
+  margin: auto; }
 
 footer {
   width: 100%;
