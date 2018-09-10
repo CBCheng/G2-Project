@@ -470,8 +470,18 @@ function confirm(e){
 			// if(e.target==false){
 				// alert('請選擇今天之後的日期');
 			// }else{
+
+				
 				if(e.target.parentNode.classList.contains('pignose-calendar-unit-first-active')==true){
-				getDates(e.target.parentNode.dataset.date);
+					var selDate = new Date(e.target.parentNode.dataset.date);
+					// console.log(selDate);
+					var curDate =new Date();
+					var d3=(selDate-curDate)/86400000;
+						if(d3>0){
+							getDates(e.target.parentNode.dataset.date);
+						}else{
+							alert('請選擇今天之後的日期');
+							}
 				}else{
 					return;
 				}
@@ -501,7 +511,11 @@ function getDates(data){
 			sessionStorage.setItem("date",x);
 			
 			console.log(sessionStorage.getItem('date'));
+			// var selectDate = new Date(x);
+			// console.log(selectDate);
 			var currentDate =new Date();
+			// var d3=(currentDate-selectDate)/86400000;
+			// console.log(d3);
 			var curYears = currentDate.getFullYear();
 			var curMons = currentDate.getMonth()+1;
 			var curDays = currentDate.getDate();
@@ -520,14 +534,23 @@ function getDates(data){
 							var num =getDate.length-nextDay;
 									if(num>=0){
 										// console.log(upDate[i]);
-									upDate[i].innerHTML = '2018年'+mons+'月'+nextDay+'日';
+									upDate[i].innerHTML = years+'年'+mons+'月'+nextDay+'日';
 									counts+=1;
 									}
 									else if(num<0){
-									
-										var c =a+b;
-										upDate[i].innerHTML = '2018年'+(mons+1)+'月'+c+'日';
-										b+=1;
+											if((mons+1)==13){
+												mons=0;
+												years+=1;
+												var c =a+b;
+												upDate[i].innerHTML = years+'年'+(mons+1)+'月'+c+'日';
+												b+=1;
+											}else{
+												var c =a+b;
+												upDate[i].innerHTML = years+'年'+(mons+1)+'月'+c+'日';
+												b+=1;
+											}
+										
+
 										}
 
 
@@ -817,9 +840,8 @@ function resetDays(){
 				var x =sessionStorage.getItem("date");
 					
 				if(x != null){
-					
-					
-					
+						
+					var years=parseInt(x.substr(0,4));
 					var mons=parseInt(x.substr(5,2));
 					var days=parseInt(x.substr(8,2));
 					var counts=0;
@@ -832,15 +854,25 @@ function resetDays(){
 								var nextDay = days+counts;
 								var num =getDate.length-nextDay;
 								if(num>=0){
-								upDate[i].innerHTML = '2018年'+mons+'月'+nextDay+'日';
+
+								upDate[i].innerHTML = years+'年'+mons+'月'+nextDay+'日';
 								counts+=1;
 								}
 								else if(num<0){
-								
-									var c =a+b;
-									upDate[i].innerHTML = '2018年'+(mons+1)+'月'+c+'日';
-									b+=1;
-									}
+											if((mons+1)==13){
+												mons=0;
+												years+=1;
+												var c =a+b;
+												upDate[i].innerHTML = years+'年'+(mons+1)+'月'+c+'日';
+												b+=1;
+											}else{
+												var c =a+b;
+												upDate[i].innerHTML = years+'年'+(mons+1)+'月'+c+'日';
+												b+=1;
+											}
+										
+
+										}
 
 
 							}

@@ -292,9 +292,12 @@
 }
 .pignose-calendar.pignose-calendar-dark {
   border-color: #323537;
-  background-color: #4b4f51;
+  /*background-color: #4b4f51;*/
+  background-color: #333;
+  opacity: .95;
   -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+          /*box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);*/
+          box-shadow:0px 0px 100px rgba(2, 94, 181, 1);
 }
 .pignose-calendar.pignose-calendar-dark .pignose-calendar-top {
 /*  background-color: #3f4244;*/
