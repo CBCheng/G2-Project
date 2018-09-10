@@ -858,7 +858,8 @@ nav {
           background-color: #6cd5ff; }
         .content_desk .conRight .data .chart .num {
           margin-left: 10px;
-          transition: 0.3s 2.5s; }
+          opacity: 0;
+          transition: 1s 2.5s; }
     .content_desk .conRight .record {
       align-self: flex-end;
       margin-right: 30px; }

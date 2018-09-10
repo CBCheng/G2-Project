@@ -793,7 +793,8 @@ a {
                 }
                 .num{
                     margin-left: 10px;
-                    transition: 0.3s 2.5s;
+                    opacity: 0;
+                    transition: 1s 2.5s;
                 }
 
                 // .value:nth-of-type(1) {

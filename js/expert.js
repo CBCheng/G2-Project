@@ -266,6 +266,10 @@ $(document).on('click', '.element-item', function(){
 					$('.value:nth-of-type(4)').css('width',$adven*10+'px');
 					$('.value:nth-of-type(5)').css('width',$tech*10+'px');
 
+
+					$(".num").css({
+						opacity: 1
+					})
 					// $('.num:nth-of-type(3)').html('123');
 					// $('.num:nth-of-type(2)').html($human * 10 + '%');
 					// $('.num:nth-of-type(3)').html($smart * 10 + '%');
