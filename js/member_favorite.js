@@ -85,22 +85,25 @@ $(document).on('click', '.look_detail', function(){
 
 
 $(document).on('click', '.member_delete', function(){
-
-	$.ajax({
-		url: 'php/member_fav_delete.php',
-		dataType: 'text',
-		//使請求同步→可使alert確定後才執行刪除動作
-		async: false,
-		data:{
-			expertNo: $(this).data('no'),
-		},
-		success: function (data) {
-			alert(data);
-		},
-		error: function () {
-			alert('error_del');
-		}
-	});
-	//點擊後可使整條tr刪除掉
-	$(this).parent().parent().remove();
+	var $aa = confirm('確定要刪除嗎?');
+	if($aa==true){
+		$.ajax({
+			url: 'php/member_fav_delete.php',
+			dataType: 'text',
+			//使請求同步→可使alert確定後才執行刪除動作
+			async: false,
+			data:{
+				expertNo: $(this).data('no'),
+			},
+			success: function (data) {
+				// alert(data);
+			},
+			error: function () {
+				// alert('error_del');
+			}
+		});
+		//點擊後可使整條tr刪除掉
+		$(this).parent().parent().remove();
+	}
+	
 })

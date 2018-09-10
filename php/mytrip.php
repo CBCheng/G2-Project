@@ -10,7 +10,7 @@ $memNo = $_SESSION["MEM_NO"];
 // $memNo = 1;
 
 try {
-	require_once("connectDatabase.php");
+	require_once("connectCd102g2.php");
 	
   	$sql1 = "select * from myschedule where memNo = $memNo";
 

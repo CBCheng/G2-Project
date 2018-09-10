@@ -929,6 +929,15 @@ div[class^=col-] {
     }
 }
 
+.member_form .member_info tbody{
+    font-size: 16px;
+    line-height: 2;
+}
+.member_form .member_mod tbody{
+    font-size: 16px;
+    line-height: 1.5;
+}
+
 
 @media screen and (max-width: 449px){
     .favorite_box .favorite_page table tr th{

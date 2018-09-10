@@ -2,7 +2,7 @@
 ob_start();
 session_start();
 
-require_once("php/connect_g2.php");
+require_once("php/connectCd102g2.php");
 
 //$isModified = $_REQUEST['isModified'];
 //$memberPsw = $_REQUEST['new_psw'];
@@ -97,7 +97,7 @@ if (@$_REQUEST['isModified'] == true) {
                         <a data-toggle="tab" rel="trip" href="member_mytrip.php">我的行程</a>
                     </li>
                     <li class="">
-                        <a data-toggle="tab" rel="favorite" href="member_favorite.php">我的收藏</a>
+                        <a data-toggle="tab" rel="favorite" href="member_favorite.php">專家收藏</a>
                     </li>
                     <!-- <li class="">
                         <a data-toggle="tab" rel="score" href="member_comment.php">專家評論</a>
@@ -134,7 +134,7 @@ $member_pic = 'member_pic/'.@$_SESSION["MEM_IMG"];
                                     <figure>
                                         <img id="show_pic" name="show_pic" src="img/member/<?php echo $memberInfo["MEM_IMG"]?>">
                                     </figure>
-                                    <input type="file" id="upfile" name="upfile">
+                                    <input type="file" id="upfile" name="upfile" disabled>
                                     <div class="img_btn_div">
                                         <input type="submit" class="btn btn-o-nb" id="member_pic" value="上傳檔案">
                                     </div>
@@ -234,7 +234,7 @@ $member_pic = 'member_pic/'.@$_SESSION["MEM_IMG"];
                                         </tr>
                                         <tr>
                                             <td colspan="2">
-                                                <button id="member_mod_btn" class="btn btn-o-nb">修改</button>
+                                                <button id="member_mod_btn" class="btn btn-o-nb" onClick="attr()">修改</button>
                                             </td>
                                                 
                                             </td>
@@ -250,7 +250,11 @@ $member_pic = 'member_pic/'.@$_SESSION["MEM_IMG"];
         </div>
     </div>
 
-
+    <script type="text/javascript">
+        function attr(){
+            document.getElementById('upfile').disabled=false;
+        }
+    </script>
 
 	<script src="js/upfile.js"></script>
 	<script src="js/update_phone_psw.js"></script>

@@ -8,7 +8,7 @@ try {
 
     $sql = "DELETE FROM expertcollect WHERE memNo = $memNo and expertNo = $expertNo";
     $pdo->exec($sql);
-    echo '已取消收藏';
+    // echo '已取消收藏';
 
 } catch (PDOException $e) {
     echo "錯誤原因 : ", $e->getMessage(), "<br>";

@@ -9,7 +9,7 @@ $scheduleNo = $_POST["schNo"];
 // $memNo = 1;
 
 try {
-	require_once("connectDatabase.php");
+	require_once("connectCd102g2.php");
 
   	$sql = "delete from myschedule where scheduleNo = $scheduleNo and memNo = $memNo";
   	$pdo->exec($sql);
