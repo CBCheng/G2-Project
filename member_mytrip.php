@@ -390,7 +390,10 @@
                     $('.m_rightBox').html(data);             
 
                     $('.mW_delete').click(function(){
-                        alert('刪除成功');
+
+                        var $conf=confirm('確定要刪除嗎?');
+                        if($conf==true){
+                            alert('刪除成功');
                             $(this).parent().remove(); 
 
                         var $schNo = $(this).data('schno');
@@ -412,6 +415,8 @@
 
 
                              });
+                        }
+                        
                         });
 
                  },
