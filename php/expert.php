@@ -1,6 +1,6 @@
 <?php
 try {
-    require_once("connectExpert.php");
+    require_once("connectCd102g2.php");
     $sql = "select * from expert";
     $members = $pdo->query($sql);
     $memRows = $members->fetchAll(PDO::FETCH_ASSOC);

@@ -820,11 +820,20 @@
 .content_desk .conRight .data .chart {
   margin: -6px 0 20px; }
 
+.content_desk .conRight h1 {
+  margin-top: 30px; }
+
+@media screen and (max-width: 900px) {
+  .content_desk .conRight h1 {
+    margin-top: 0px; } }
+
 @media screen and (max-width: 669px) {
   .content_desk .conRight .data {
-    margin-top: -10px; }
+    margin-top: -20px; }
     .content_desk .conRight .data .chart h3 {
-      margin-left: -176px; } }
+      margin-left: -176px; }
+  .content_desk .conRight .record .collect {
+    margin-top: -10px; } }
 
 @media screen and (max-width: 449px) {
   .content_phone .chart_phone {

@@ -853,13 +853,13 @@ nav {
           height: 15px;
           background-color: #aaa;
           display: inline-block;
-          transition: 2s 0.5s; }
+          transition: 1.5s 0.5s; }
         .content_desk .conRight .data .chart .value.focus {
           background-color: #6cd5ff; }
         .content_desk .conRight .data .chart .num {
           margin-left: 10px;
           opacity: 0;
-          transition: 1s 2.5s; }
+          transition: 0.5s 2s; }
     .content_desk .conRight .record {
       align-self: flex-end;
       margin-right: 30px; }
@@ -932,7 +932,9 @@ nav {
         font-size: 17px;
         line-height: 1.5; }
       .content_desk .conRight .data .chart .value {
-        height: 12px; } }
+        height: 12px; }
+      .content_desk .conRight .data .chart .num {
+        display: none; } }
 
 @media screen and (max-width: 449px) {
   .chart, .record {
@@ -1006,6 +1008,8 @@ nav {
         transition: 2s 0.5s; }
       .content_phone .chart_phone .value.focus {
         background-color: #6cd5ff; }
+      .content_phone .chart_phone .num {
+        display: none; }
     .content_phone .record_phone {
       display: inline-block;
       width: 40%; }

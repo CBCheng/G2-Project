@@ -1,6 +1,6 @@
 <?php
 try {
-    require_once("connectExpert.php");
+    require_once("connectCd102g2.php");
     $expertName = $_REQUEST['expertName'];
     $sql = "select * from expert where expertName = '$expertName'";
     $members = $pdo->query($sql);
@@ -27,9 +27,7 @@ try {
         <span>知性</span>
         <input class="ch_smart" type="hidden" value="<?php echo $memRow["expSmart"] ;?>">
         <div class="value"></div>
-        <span class="num"><?php 
-            echo $memRow["expSmart"] * 10 ;
-        ?>%</span>
+        <span class="num"><?php echo $memRow["expSmart"] * 10 ;?>%</span>
         <br>
         <span>冒險</span>
         <input class="ch_advan" type="hidden" value="<?php echo $memRow["expAdven"] ;?>">
@@ -43,15 +41,6 @@ try {
         <br>
 
 		
-
-
-
-        
-        <script type="text/javascript">
-        
-
-    	
-        </script>
 	
 <?php
     }
