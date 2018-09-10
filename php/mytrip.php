@@ -39,10 +39,10 @@ try {
 
 	?>
   							<div class="mW_bigBox">
-                                <div class="mW_delete"><i class="fas fa-trash-alt"></i></div>
+                                <div class="mW_delete" data-schno=<?php echo $data['scheduleNo'];?>><i class="fas fa-trash-alt"></i></div>
                                 <div class="mW_box">
                                     <input type="hidden" value="30">
-                                    <div class="mW_look"><a href="referdetial.php?scheduleNo=<?php echo $data['scheduleNo']; ?>">查看詳細</a></div>
+                                    <div class="mW_look"><a style="display: block; color:#333;" href="referdetial.php?scheduleNo=<?php echo $data['scheduleNo']; ?>">查看詳細</a></div>
                                     <div class="mW_tabBox">
                                         <div class="line_tab pingC_tab"><?php echo $expertRow['expertName']; ?></div>
                                         <div class="mW_imgBox">

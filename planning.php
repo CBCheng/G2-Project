@@ -1560,7 +1560,7 @@ $.ajax({
 			for(var i=1;i<=daycount;i++){
 		Sortable.create(document.getElementById('schduleDay'+i), {
                                 animation: 150,
-                                delay: 300,
+                                
                             });
 		console.log(i);
 		}

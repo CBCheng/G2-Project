@@ -389,6 +389,31 @@
             success:function(data){
                     $('.m_rightBox').html(data);             
 
+                    $('.mW_delete').click(function(){
+                        alert('刪除成功');
+                            $(this).parent().remove(); 
+
+                        var $schNo = $(this).data('schno');
+                        // console.log($schNo);
+                        $.ajax({
+                                 url: 'php/deleteMytrip.php',
+                                dataType:'text',
+                                type:'POST',
+                                data:{schNo:$schNo},
+                                success:function(data){
+                                   
+                                },
+
+                                error:function(xhr, ajaxOptions, thrownError){ 
+                                alert("error");
+                                alert(xhr.status); 
+                                alert(thrownError);  
+                                }
+
+
+                             });
+                        });
+
                  },
 
             error:function(xhr, ajaxOptions, thrownError){ 
@@ -399,6 +424,7 @@
 
 
          });
+
 
 
     </script>
