@@ -784,12 +784,17 @@ a {
                     height: 15px;
                     background-color: #aaa;
                     display: inline-block;
-                    transition:2s 0.5s;
+                    transition: 1.5s 0.5s;
                 }
 
 
                 .value.focus {
                     background-color: $fontColorBlue;
+                }
+                .num{
+                    margin-left: 10px;
+                    opacity: 0;
+                    transition: 0.5s 2s;
                 }
 
                 // .value:nth-of-type(1) {
@@ -919,6 +924,7 @@ a {
                 .value{
                     height: 12px;
                 }
+                .num{display: none;}
             }
         }
     }
@@ -1001,6 +1007,9 @@ a {
 
             .value.focus {
                 background-color: $fontColorBlue;
+            }
+            .num{
+                display: none;
             }
 
             // .value:nth-of-type(1) {

@@ -70,6 +70,9 @@ if($_SESSION["mgrAccess"]=="一般"){
 <div class="wrapContent">
     <div class="content">
     <h1>專家管理</h1>
+        <!-- <div class="search">
+        搜尋專家：<input type="text" placeholder="請輸入關鍵字" name="">
+        </div> -->
         <table class="userTable">
             <tr class="tableTitle">
                 <td>專家編號</td>

@@ -2,7 +2,7 @@
 try {
     ob_start();
     session_start();
-    require_once("connectExpert.php");
+    require_once("connectCd102g2.php");
     $expertName = $_REQUEST['expertName'];
     $expertNo = $_REQUEST['expertNo'];
     $memNo = @$_SESSION['MEM_NO'];
@@ -106,14 +106,7 @@ try {
                             <!-- 放桌機能力值 -->
                         </div>
                     </div>
-                    <div class="record">
-                        <div class="collect">
-                            <img class="heart" style="cursor: default;"
-                            src='img/expertImg/heartRed.png'
-                             data-expert='<?php echo $memRow["expertNo"];?>'>
-                            <p id="Cnum"><?php echo $members2->rowCount();?>人收藏</p>
-                        </div>
-                    </div>
+                   
                 </article>
             </div>
             
@@ -121,16 +114,7 @@ try {
                 <div class="chart_phone">
                     <!-- 放手機能力值 -->
                 </div>
-                <div class="record_phone">
-                    <div class="collect">
-                        <img class="heart" style="cursor: default;"
-                        src='img/expertImg/heartRed.png'
-                        data-expert='<?php echo $memRow["expertNo"];?>'>
-                        <p id="Cnum">
-                            <?php echo $members2->rowCount();?>人收藏
-                        </p>
-                    </div>
-                </div>
+                
             </div>
         </section>
 

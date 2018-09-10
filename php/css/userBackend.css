@@ -128,11 +128,11 @@ nav {
       text-align: center;
       font: 36px "微軟正黑體", "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS", sans-serif;
       padding: 50px; }
-    .wrapContent .content .addUser {
+    .wrapContent .content input[name=addUser] {
       margin-left: 70px;
       margin-bottom: 20px;
       background-color: black;
-      border: 0px solid cyan;
+      border: 1px solid #000;
       border-radius: 3px;
       color: rgba(255, 255, 255, 1);
       padding: 5px 10px;
@@ -142,9 +142,10 @@ nav {
       font-size: 16px;
       outline: none;
       cursor: pointer; }
-      .wrapContent .content .addUser:hover {
-        background-color: rgba(0, 255, 255, 0.8);
-        color: #000; }
+      .wrapContent .content input[name=addUser]:hover {
+        border:1px solid #000;
+        color: rgba(255,180,100,1);
+        background-color: #FFF; }
 
 .userTable {
   width: 100%;
@@ -157,4 +158,27 @@ nav {
     color: #FFF; }
     .userTable tr:nth-child(even){
       background-color: #FFF;
+    }
+    .userTable input[type=submit]{
+      background-color:rgb(84,210,201);
+      border: 1px solid #000;
+      border-radius: 3px;
+      color: rgba(255, 255, 255, 1);
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      outline: none;
+      cursor: pointer;
+    }
+    .userTable input[type=submit]:hover{
+      color:#6cd5ff;
+      background-color: #FFF;
+    }
+    .userTable input[name=delBtn]{
+      background-color:rgba(147,147,147,.8);
+    }
+    .userTable input[name=delBtn]:hover{
+      color:#ff6600;
     }

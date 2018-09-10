@@ -67,6 +67,10 @@ $(document).on('click', '.look_detail', function(){
 					$('.value:nth-of-type(4)').css('width',$adven*10+'px');
 					$('.value:nth-of-type(5)').css('width',$tech*10+'px');
 
+					$(".num").css({
+						opacity: 1
+					})
+
 				},
 			});
 		},

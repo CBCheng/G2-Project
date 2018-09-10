@@ -33,6 +33,9 @@ if(isset($_SESSION["scheduleNo"])==false){
 <link rel="stylesheet" type="text/css" href="css/planningnavcss/login.css">
 <link rel="stylesheet" type="text/css" href="css/planningnavcss/member.css">
 <link rel="stylesheet" type="text/css" href="css/planning.css">
+<link rel="stylesheet" type="text/css" href="css/planningnavcss/style.css">
+<link rel="stylesheet" type="text/css" href="css/planningnavcss/index.css">
+
 <title>Examples</title>
 
 
@@ -268,9 +271,13 @@ if(isset($_SESSION["scheduleNo"])==false){
 	<div class="stepBoxStyle chinese">
 		<div class="stepBox">
 			<div class="stepImg">
-			<img src="img/planning/aa.png">
+			<h3>開始規劃你的行程吧</h3>
+			<img src="img/planning/step.png">
 			</div>
-			<div class="step">
+			<!-- <div class="stepImg">
+			<img src="img/planning/aa.png">
+			</div> -->
+			<!-- <div class="step">
 				<div>
 					<p class="stepNum">
 						step 1
@@ -310,7 +317,7 @@ if(isset($_SESSION["scheduleNo"])==false){
 					
 
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 	<!-- <div class="planningTitle chinese">
@@ -936,7 +943,7 @@ window.onbeforeunload = function(){
 		
 		
 		var aa=document.querySelector('.planetFilter');
-		var bb = document.querySelectorAll('.expertFilter');
+		var bb = document.querySelector('.expertFilter');
 		// $('.confirmPlanetBox').css('display','block');
 		if(aa.style.display!='block' && bb.style.display!='block'){
 			sessionStorage.setItem("planet", '瓦特星');
@@ -945,22 +952,16 @@ window.onbeforeunload = function(){
 			sessionStorage.removeItem("scheduleNo");
 			sessionStorage.removeItem("indexViewNo");
 			sessionStorage.removeItem('date');
-			// sessionStorage.removeItem('memNo');
-				// console.log(sessionStorage.getItem('date'));
-
 			return '';
 		}else{
 			sessionStorage.removeItem("viewNo");
 			sessionStorage.removeItem("scheduleNo");
 			sessionStorage.removeItem("indexViewNo");
 			sessionStorage.removeItem('date');
-			
-			
-				// console.log(sessionStorage.getItem('date'));
 
 		}
 		
-};
+}
 
 $.ajax({
 					url: 'php/getSession.php',
