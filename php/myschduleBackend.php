@@ -17,7 +17,7 @@ session_start();
         <nav>
             <div class="navUser">
                 <div class="logo">
-                    <!-- <img src="../img/phpImg/logo-backend.png" alt="LOGO"> -->
+                    <img src="../img/phpImg/logo-backend.png" alt="LOGO">
                 </div>
                 <div class="userName">
                     <?php
@@ -31,7 +31,7 @@ session_start();
                     <p>您好!</p>
                     <div class="loginOut">
                         <label for="logOutPic"></label>
-                        <!-- <img src="../img/phpImg/logout.png" alt="登出" > -->
+                        <img src="../img/phpImg/logout.png" alt="登出" >
                         <a href="indexBackend.php">登出</a>
                     </div>
                 </div>
