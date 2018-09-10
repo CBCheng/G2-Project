@@ -57,17 +57,17 @@ $(function () {
 
     var tween_s = tls.to('.cloud_group .cloud1', 1, {
         y: 50,
-        x: -100,
+        x: -80,
         alpha: 0.6
     })
 
     var tween_s2 = tls2.to('.cloud_group .cloud2', 1, {
         y: 50,
-        x: 100,
+        x: 80,
         alpha: 0.6
     });
 
-    var planetsan = tls3.to('.planetsan', 100, {
+    var planetsan = tls3.to('.planetsan', 1, {
         y: 600,
         x: 1200,
         alpha: 0.2
@@ -88,7 +88,7 @@ $(function () {
         duration: '40%',
         reverse: true  //動畫會返回(預設)
     }).setTween(tween_s)
-        .addIndicators({name: '1'})
+        // .addIndicators({name: '1'})
         .addTo(controller)
 
     var scence_02 = new ScrollMagic.Scene({
@@ -97,7 +97,7 @@ $(function () {
         duration: '40%',
         reverse: true  //動畫會返回(預設)
     }).setTween(tween_s2)
-        .addIndicators({name: '1'})
+        // .addIndicators({name: '1'})
         .addTo(controller)
 
     var scence_03 = new ScrollMagic.Scene({
@@ -105,7 +105,7 @@ $(function () {
         offset: 150,
         duration: '80%',
     }).setTween(planetsan)
-        .addIndicators({name: '2'})
+        // .addIndicators({name: '2'})
         .addTo(controller)
 
     // var scence_03 = new ScrollMagic.Scene({
@@ -265,6 +265,14 @@ $(document).on('click', '.element-item', function(){
 					$('.value:nth-of-type(3)').css('width',$smart*10+'px');
 					$('.value:nth-of-type(4)').css('width',$adven*10+'px');
 					$('.value:nth-of-type(5)').css('width',$tech*10+'px');
+
+					// $('.num:nth-of-type(3)').html('123');
+					// $('.num:nth-of-type(2)').html($human * 10 + '%');
+					// $('.num:nth-of-type(3)').html($smart * 10 + '%');
+					// $('.num:nth-of-type(4)').html($adven * 10 + '%');
+					// $('.num:nth-of-type(5)').html($tech * 10 + '%');
+
+					// $('.num').html()
 
 					// console.log('美食:'+$('.ch_food').val());
 					// console.log('人文:'+$('.ch_human').val());
