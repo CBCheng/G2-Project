@@ -51,19 +51,19 @@
                 <ul class="tab-grop">
                     <h1 class="where">會員中心</h1>
                     <li class="default">
-                        <a data-toggle="tab" rel="trip" href="member_mytrip.html">我的行程</a>
+                        <a data-toggle="tab" rel="trip" href="member_mytrip.php">我的行程</a>
                     </li> 
                      <li class="">
-                        <a data-toggle="tab" rel="favorite" href="member_favorite.html">我的收藏</a>
+                        <a data-toggle="tab" rel="favorite" href="member_favorite.php">我的收藏</a>
                     </li> 
+                    <!-- <li class="">
+                        <a data-toggle="tab" rel="score" href="member_comment.php">專家評論</a>
+                    </li> -->
                     <li class="">
-                        <a data-toggle="tab" rel="score" href="member_comment.html">專家評論</a>
+                        <a data-toggle="tab" rel="order_mg" href="member_order.php">我的訂單</a>
                     </li>
                     <li class="">
-                        <a data-toggle="tab" rel="order_mg" href="member_order.html">我的訂單</a>
-                    </li>
-                    <li class="">
-                        <a data-toggle="tab" rel="account" href="member_profile.html">會員資料修改</a>
+                        <a data-toggle="tab" rel="account" href="member_profile.php">會員資料修改</a>
                     </li>
                 </ul>
             </div>
