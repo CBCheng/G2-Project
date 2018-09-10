@@ -11,7 +11,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">    
     <link rel="stylesheet" type="text/css" href="css/login.css">
     <link rel="stylesheet" type="text/css" href="css/member.css">
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/style.css">
     <!-- plugin -->
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script src="libs/jquery/dist/jquery.min.js"></script>
@@ -71,12 +71,26 @@ session_start();
             <div class="line"></div>
         </div>
         <ul class="menuMobile">
-            <li><a href="planning.html">開始冒險</a></li>
-            <li><a href="expert.html">專家帶你玩</a></li>
-            <li><a href="refer.html">別人怎麼玩</a></li>
-            <li><a href="shop.php">星際商城</a></li>
-            <li><a href="member.html">會員專區</a></li>
-            <li><a href="cartShow.php">購物車</a></li>
+            <img class="navPic" src="img/bgM.png" alt="">
+            <li>
+                <a href="planning.php">開始冒險</a>
+            </li>
+            <li>
+                <a href="expertLogin.php">專家帶你玩</a>
+            </li>
+            <li>
+                <a href="refer.php">別人怎麼玩</a>
+            </li>
+            <li>
+                <a href="shop.php">星際商城</a>
+            </li>
+            <li>
+                <a href="member_profile.php">會員專區</a>
+            </li>
+            <li>
+                <a href="shop.php">購物車</a>
+            </li>
+
         </ul>
     </nav>
     <!-- 會員註冊lightbox -->
@@ -142,19 +156,23 @@ session_start();
     <!-- content -->
     <div class="container">
         <div class="all_content ">
-            <div class="sidebar memberPage">
+        <div class="sidebar memberPage">
                 <ul class="tab-grop">
                     <h1 class="where">會員中心</h1>
                     <li class="">
+
                         <a data-toggle="tab" rel="trip" href="member_mytrip.php">我的行程</a>
-                    </li> 
-                     <li class="">
-                        <a data-toggle="tab" rel="favorite" href="member_favorite.php">專家收藏</a>
-                    </li> 
-                    <li class="default">
-                        <a data-toggle="tab" rel="order_mg" href="member_order.php">我的訂單</a>
                     </li>
                     <li class="">
+                        <a data-toggle="tab" rel="favorite" href="member_favorite.php">我的收藏</a>
+                    </li>
+                    <!-- <li class="">
+                        <a data-toggle="tab" rel="score" href="member_comment.php">專家評論</a>
+                    </li> -->
+                    <li class="">
+                        <a data-toggle="tab" rel="order_mg" href="member_order.php">我的訂單</a>
+                    </li>
+                    <li class="default">
                         <a data-toggle="tab" rel="account" href="member_profile.php">會員資料修改</a>
                     </li>
                 </ul>

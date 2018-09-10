@@ -106,7 +106,7 @@ if (@$_REQUEST['isModified'] == true) {
                         <a data-toggle="tab" rel="order_mg" href="member_order.php">我的訂單</a>
                     </li>
                     <li class="default">
-                        <a data-toggle="tab" rel="account" href="#">會員資料修改</a>
+                        <a data-toggle="tab" rel="account" href="member_profile.php">會員資料修改</a>
                     </li>
                 </ul>
             </div>
