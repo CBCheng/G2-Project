@@ -132,11 +132,11 @@ if($_SESSION["mgrAccess"]=="一般"){
                                 echo '<td>'.$memberInfo[$j]['MEM_EMAIL'].'</td>';
                                 echo '<td>'.$memberInfo[$j]['MEM_BD'].'</td>';
                                 echo '<td>'.$memberInfo[$j]['MEM_ADDRESS'].'</td>';
-                                if($memberInfo[$j]['MEM_STATUS']==1) {
-                                    echo '<td>正常</td>';
+                                if($memberInfo[$j]['MEM_STATUS']==0) {
+                                    echo '<td>停權</td>';
                                 }
                                 else {
-                                    echo '<td>停權</td>';
+                                    echo '<td>正常</td>';
                                 }
                                 // echo '<td>'.$memberInfo[$j]['MEM_STATUS'].'<input type="radio" name="memStatus" value="1">正常'.'<input type="radio" name="memStatus" value="0">停權'.'</td>';
                                

@@ -280,7 +280,7 @@ tbody{
         padding: 0;
         position: fixed;
         z-index: 2000;
-        top: 50px;
+        bottom: 62px;
         left: 0;
     }
     .tab-grop .where {
@@ -366,7 +366,7 @@ tbody{
     .tab-grop .default::before {
         display: block;
         content: " ";
-        border-color: #FF6138 transparent transparent transparent;
+        border-color: #2c8dc7 transparent transparent transparent;
         border-style: solid solid solid solid;
         border-width: 15px 15px 15px 15px;
         height: 0px;

@@ -2,7 +2,7 @@
 try {
     ob_start();
     session_start();
-    require_once("connectExpert.php");
+    require_once("connectCd102g2.php");
     $memNo = $_SESSION['MEM_NO'];
     $expertNo = $_REQUEST["expertNo"];
 

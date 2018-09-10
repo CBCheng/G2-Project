@@ -198,20 +198,22 @@ a {
 }
 
 
+
+
 .planetsan,.planettree{
-    width: 80px;
-    opacity: 0.6;
+    position: absolute;
+    opacity: 0.8;
 }
 .planetsan{
-    margin-left: 50px;
+    top: 900px;
+    left: 130px;
+    width: 300px;
 }
-.planettree{
-    // position: absolute;
-    // float: right;
-    // margin-right: 50px;
-    // right: 50px;
-    // top: 100px;
-}
+// .planettree{
+//      top: 1200px;
+//      right: 80px;
+//      width: 200px;
+// }
 
 
 .panel {
@@ -224,6 +226,9 @@ a {
     .panel {
         width: 90%;
     }
+    .planetsan,.planettree{
+    display: none;
+}
 }
 
 @media screen and (max-width: 650px) {
@@ -779,12 +784,17 @@ a {
                     height: 15px;
                     background-color: #aaa;
                     display: inline-block;
-                    transition:2s 0.5s;
+                    transition: 1.5s 0.5s;
                 }
 
 
                 .value.focus {
                     background-color: $fontColorBlue;
+                }
+                .num{
+                    margin-left: 10px;
+                    opacity: 0;
+                    transition: 0.5s 2s;
                 }
 
                 // .value:nth-of-type(1) {
@@ -914,6 +924,7 @@ a {
                 .value{
                     height: 12px;
                 }
+                .num{display: none;}
             }
         }
     }
@@ -996,6 +1007,9 @@ a {
 
             .value.focus {
                 background-color: $fontColorBlue;
+            }
+            .num{
+                display: none;
             }
 
             // .value:nth-of-type(1) {

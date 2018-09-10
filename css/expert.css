@@ -402,11 +402,13 @@ nav {
     min-width: 200px; }
 
 .planetsan, .planettree {
-  width: 80px;
-  opacity: 0.6; }
+  position: absolute;
+  opacity: 0.8; }
 
 .planetsan {
-  margin-left: 50px; }
+  top: 900px;
+  left: 130px;
+  width: 300px; }
 
 .panel {
   width: 1200px;
@@ -414,7 +416,9 @@ nav {
 
 @media screen and (max-width: 1200px) {
   .panel {
-    width: 90%; } }
+    width: 90%; }
+  .planetsan, .planettree {
+    display: none; } }
 
 /* ---- button ---- */
 .button-group {
@@ -849,9 +853,13 @@ nav {
           height: 15px;
           background-color: #aaa;
           display: inline-block;
-          transition: 2s 0.5s; }
+          transition: 1.5s 0.5s; }
         .content_desk .conRight .data .chart .value.focus {
           background-color: #6cd5ff; }
+        .content_desk .conRight .data .chart .num {
+          margin-left: 10px;
+          opacity: 0;
+          transition: 0.5s 2s; }
     .content_desk .conRight .record {
       align-self: flex-end;
       margin-right: 30px; }
@@ -924,7 +932,9 @@ nav {
         font-size: 17px;
         line-height: 1.5; }
       .content_desk .conRight .data .chart .value {
-        height: 12px; } }
+        height: 12px; }
+      .content_desk .conRight .data .chart .num {
+        display: none; } }
 
 @media screen and (max-width: 449px) {
   .chart, .record {
@@ -998,6 +1008,8 @@ nav {
         transition: 2s 0.5s; }
       .content_phone .chart_phone .value.focus {
         background-color: #6cd5ff; }
+      .content_phone .chart_phone .num {
+        display: none; }
     .content_phone .record_phone {
       display: inline-block;
       width: 40%; }

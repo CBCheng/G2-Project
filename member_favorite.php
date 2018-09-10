@@ -78,7 +78,7 @@
                                 // if (!isset($_SESSION)) { 
                                 //     session_start(); 
                                 // }
-                                require_once("php/connectExpert.php");
+                                require_once("php/connectCd102g2.php");
                                 $memNo = $_SESSION['MEM_NO'];
                                 //$memNo = '1';
 

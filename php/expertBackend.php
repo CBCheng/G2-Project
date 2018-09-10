@@ -70,6 +70,9 @@ if($_SESSION["mgrAccess"]=="一般"){
 <div class="wrapContent">
     <div class="content">
     <h1>專家管理</h1>
+        <!-- <div class="search">
+        搜尋專家：<input type="text" placeholder="請輸入關鍵字" name="">
+        </div> -->
         <table class="userTable">
             <tr class="tableTitle">
                 <td>專家編號</td>
@@ -123,8 +126,8 @@ try {
             <input id="expTech<?php echo $NO?>" type='number' min="1" max="10" name='expTech' value="<?php echo $memRow["expTech"];?>" disabled>
         </td>
         <td>
-            <input type='button' value='修改' onclick="attr('<?php echo $NO?>')">
-            <input type='submit' value='儲存'>
+            <input id="expChange<?php echo $NO?>" type='button' value='修改' onclick="attr('<?php echo $NO?>')">
+            <input id="expSave<?php echo $NO?>" type='submit' value='儲存' disabled>
         </td>
         </form>
     </tr>
@@ -159,12 +162,17 @@ try {
             var expAdven = "expAdven" + no ;
             var expTech = "expTech" + no ;
             var upFile = "upFile" + no ;
+            var expSave = "expSave" + no;
+            var expChange = "expChange" + no;
+
             document.getElementById(expFood).disabled=false;
             document.getElementById(expHuman).disabled=false;
             document.getElementById(expSmart).disabled=false;
             document.getElementById(expAdven).disabled=false;
             document.getElementById(expTech).disabled=false;
             document.getElementById(upFile).disabled=false;
+            document.getElementById(expSave).disabled=false;
+            document.getElementById(expChange).disabled=true;
         }
 
 
