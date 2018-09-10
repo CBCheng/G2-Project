@@ -250,7 +250,12 @@ $member_pic = 'member_pic/'.@$_SESSION["MEM_IMG"];
         </div>
     </div>
 
-
+<footer>
+        <!-- <img src="img/footerbg-1.png"> -->
+        <div class="copyright">
+            <p>copyright@OhPlanets 2145</p>
+        </div>
+    </footer>
 
 	<script src="js/upfile.js"></script>
 	<script src="js/update_phone_psw.js"></script>

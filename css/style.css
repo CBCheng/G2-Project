@@ -167,15 +167,34 @@ nav {
     left: 0;
     overflow: hidden; }
   .logo {
-    width: 50px; }
-  .menu, .member {
+    width: 60px; }
+  .menu {
     display: none; }
+  .member {
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    right: 15px; }
+
+  .member li {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 20px 0 0 0; }
+
+  .memberSign a {
+    border-left: 1px solid #fff;
+    padding-left: 10px; }
+
+  .shoppingCar {
+    width: 20px; }
+
   .hambger {
     width: 22px;
     height: 20px;
     display: inline-block;
     position: absolute;
-    right: 10px;
+    left: 10px;
     top: 0;
     bottom: 0;
     z-index: 110;
@@ -231,7 +250,7 @@ nav {
     background-color: rgba(0, 255, 255, 0.1);
     position: absolute;
     top: 60px;
-    right: -100%;
+    left: -100%;
     transition: .8s; }
   .menuMobile img {
     position: absolute;
@@ -242,7 +261,7 @@ nav {
   .activeM {
     position: absolute;
     top: 60px;
-    right: 0; }
+    left: 0; }
 
   .activeB {
     color: #6cd5ff; }

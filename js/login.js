@@ -51,12 +51,12 @@ $(document).ready(function () {
   };
 
 
-  $('#menu-xs').click(function () {
+  /*$('#menu-xs').click(function () {
     $('.menu-xs-icon').toggleClass('active');
     $('.menu-list-content-xs').toggleClass('active');
     // $('.menu-xs-icon img').attr('src','images/menu/icon-6.png');
     // $('.menu-xs-icon.active img').attr('src','images/menu/icon-03.png');
-  });
+  });*/
   //----------------註冊 start---------------------// 
   $('.memberLogin').click(function () {
     // if( $('#logOut_btn').text() =="" || $('#logOut_xs').text()=="" ){
@@ -257,7 +257,7 @@ function $id(id) {
 function $id(id) {
   return document.getElementById(id);
 }
-function showLoginForm() {
+function showLoginForm2() {
   //檢查登入bar面版上 spanLogin 的字是登入或登出
   //如果是登入，就顯示登入用的燈箱(lightBox)
   //如果是登出
@@ -326,7 +326,7 @@ function cancelLogin() {
 function init() {
   //===設定spanLogin.onclick 事件處理程序是 showLoginForm
 
-  $id('spanLogin').onclick = showLoginForm;
+  $id('spanLogin').onclick = showLoginForm2;
 
   //===設定btnLogin.onclick 事件處理程序是 sendForm
   $id('login_send').onclick = sendForm;

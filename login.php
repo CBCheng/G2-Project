@@ -106,26 +106,7 @@
             <li>
                 <a href="shop.php">購物車</a>
             </li>
-            <li class="memberSign">
-            <?php
-                ob_start();
-                if (!isset($_SESSION)) { 
-                    session_start(); 
-                }
-                
-                
-                    //檢查是否已登入
-                if( isset($_SESSION["MEM_NAME"]) === true ){ //已登入
-                echo '<a id="mem_b" href="member_profile.php"><span id="memNamemobile">', $_SESSION["MEM_NAME"], '</span></a> '; 
-                echo '<span id="spanLoginmobile">登出</span>';
-                // echo '<input type="hidden" name="memNo" value="',$_SESSION["MEM_NO"],'">';
-            }else{
-                echo '<a id="mem_b" href="#"><span id="memNamemobile">&nbsp;</span></a> ';
-                echo '<span id="spanLoginmobile">登入</span>';
-                // echo '<input type="hidden" name="memNo" value="',$_SESSION["MEM_NO"],'">';
-            }
-            ?>
-            </li>
+            
 
         </ul>
     </nav>
@@ -200,7 +181,6 @@
  
     <script src="js/style.js"></script>
     <script type="text/javascript" src="js/login.js"></script>
-    <script type="text/javascript" src="js/loginmoble.js"></script>
     <script type="text/javascript">
     document.getElementById("pNu").innerHTML = <?php echo isset($_SESSION["pnu"]) ? $_SESSION["pnu"] : "" ?>;
 </script>

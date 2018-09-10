@@ -51,12 +51,12 @@ $(document).ready(function () {
   };
 
 
-  $('#menu-xs').click(function () {
-    $('.menu-xs-icon').toggleClass('active');
-    $('.menu-list-content-xs').toggleClass('active');
+  /*$('#menu-xs').click(function () {
+    $('.menu-xs-icon').toggleClass('activemobile');
+    $('.menu-list-content-xs').toggleClass('activemobile');
     // $('.menu-xs-icon img').attr('src','images/menu/icon-6.png');
-    // $('.menu-xs-icon.active img').attr('src','images/menu/icon-03.png');
-  });
+    // $('.menu-xs-icon.activemobile img').attr('src','images/menu/icon-03.png');
+  });*/
   //----------------註冊 start---------------------// 
   $('.memberLogin').click(function () {
     // if( $('#logOut_btn').text() =="" || $('#logOut_xs').text()=="" ){
@@ -265,7 +265,7 @@ function showLoginForm() {
   //spanLoginmobile的字改成登入
   //將頁面上的使用者資料清掉
   if ($id('spanLoginmobile').innerHTML == "登入") {
-    $id('lightBox').style.display = 'block';
+    $id('lightBox2').style.display = 'block';
   } else {  //登出
     var xhr = new XMLHttpRequest();
     xhr.onload = function () {
@@ -310,7 +310,7 @@ function sendForm() {
   xhr.send(data_info);
 
   //將登入表單上的資料清空，並隱藏起來
-  $id('lightBox').style.display = 'none';
+  $id('lightBox2').style.display = 'none';
   $id('memEmail').value = '';
   $id('memPsw').value = '';
 
@@ -318,7 +318,7 @@ function sendForm() {
 
 function cancelLogin() {
   //將登入表單上的資料清空，並將燈箱隱藏起來
-  $id('lightBox').style.display = 'none';
+  $id('lightBox2').style.display = 'none';
   $id('memEmail').value = '';
   $id('memPsw').value = '';
 }

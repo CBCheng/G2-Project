@@ -2,15 +2,7 @@
 ob_start();
 session_start();
 try{
-<<<<<<< HEAD
   require_once("connect_g2.php");
-=======
-  $dsn = "mysql:host=localhost;port=3306;dbname=ohplanet;charset=utf8";
-	$user = "tzuyi00";
-	$password = "tzuyi00";
-	$options = array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION);
-	$pdo = new PDO($dsn, $user, $password, $options);
->>>>>>> 0114fe5432e4b5b2200a351e3a093732070cb8cb
   $sql = "select * from member where MEM_EMAIL = :MEM_EMAIL and MEM_PSW = :MEM_PSW ";
   $member = $pdo ->prepare( $sql );
   $member->bindValue(":MEM_EMAIL", $_REQUEST["memEmail"]);
