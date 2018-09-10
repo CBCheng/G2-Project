@@ -200,78 +200,85 @@ anime.timeline({loop: false})
 console.log($(document).width());
 //====== yes&no hover ======
 $(function(){
-    if($(document).width() > 767 ){
-        var boxSdoCh = "0px 0px 30px 5px #000 inset";
-        var boxSdoOr = "0px 0px 0px 0px #000 inset";
-        $('.no').on('mouseover',function(){
-            $(this).css({'border':'2px solid #000',
-                        'box-shadow':boxSdoCh,
-                        'z-index':'5'});
-            $('.noImg').css({'clip-path':'circle(110% at 76.7% 71%)',
-            'z-index':'5'});
-            $('.yes').css('opacity','0');
-            $('.no span').css('opacity','0');
-            //$('.no img').css('opacity','0');
-            $('.no').children().not('span').css('opacity','1');
-        });
-        $('.no').on('mouseout',function(){
-            $(this).css({'border':'2px solid #6cd5ff',
-                        'box-shadow':boxSdoOr,
-                        'z-index':'0'});
-            $('.noImg').css({'clip-path':'circle(0% at 76.7% 71%)',
-            'z-index':'0'});
-            $('.yes').css('opacity','1');
-            $('.no span').css('opacity','1');
-            $('.no').children().not('span').css('opacity','0');
-        });
-        //--------------
-        $('.yes').on('mouseover',function(){
-            $(this).css({'border':'2px solid #000',
-                        'box-shadow':boxSdoCh,
-                        'z-index':'5'});
-            $('.yesImg').css({'clip-path':'circle(110% at 20.7% 70.4%)',
+    // $(window).resize(function() {
+        // wdth=$(window).width();
+        if($(document).width() > 767 ){
+            var boxSdoCh = "0px 0px 30px 5px #000 inset";
+            var boxSdoOr = "0px 0px 0px 0px #000 inset";
+            $('.no').on('mouseover',function(){
+                $(this).css({'border':'2px solid #000',
+                            'box-shadow':boxSdoCh,
                             'z-index':'5'});
-            $('.no').css('opacity','0');
-            $('.yes span').css('opacity','0');
-            $('.yes').children().not('span').css('opacity','1');
-        });
-        $('.yes').on('mouseout',function(){
-            $(this).css({'border':'2px solid #6cd5ff',
-                        'box-shadow':boxSdoOr,
-                        'z-index':'0'});
-            $('.yesImg').css({'clip-path':'circle(0% at 20.7% 70.4%)',
+                $('.noImg').css({'clip-path':'circle(110% at 76.7% 71%)',
+                'z-index':'5'});
+                $('.yes').css('opacity','0');
+                $('.no span').css('opacity','0');
+                //$('.no img').css('opacity','0');
+                $('.no').children().not('span').css('opacity','1');
+            });
+            $('.no').on('mouseout',function(){
+                $(this).css({'border':'2px solid #6cd5ff',
+                            'box-shadow':boxSdoOr,
                             'z-index':'0'});
-            $('.no').css('opacity','1');
-            $('.yes span').css('opacity','1');
-            $('.yes').children().not('span').css('opacity','0');
-        });
-    }
+                $('.noImg').css({'clip-path':'circle(0% at 76.7% 71%)',
+                'z-index':'0'});
+                $('.yes').css('opacity','1');
+                $('.no span').css('opacity','1');
+                $('.no').children().not('span').css('opacity','0');
+            });
+            //--------------
+            $('.yes').on('mouseover',function(){
+                $(this).css({'border':'2px solid #000',
+                            'box-shadow':boxSdoCh,
+                            'z-index':'5'});
+                $('.yesImg').css({'clip-path':'circle(110% at 20.7% 70.4%)',
+                                'z-index':'5'});
+                $('.no').css('opacity','0');
+                $('.yes span').css('opacity','0');
+                $('.yes').children().not('span').css('opacity','1');
+            });
+            $('.yes').on('mouseout',function(){
+                $(this).css({'border':'2px solid #6cd5ff',
+                            'box-shadow':boxSdoOr,
+                            'z-index':'0'});
+                $('.yesImg').css({'clip-path':'circle(0% at 20.7% 70.4%)',
+                                'z-index':'0'});
+                $('.no').css('opacity','1');
+                $('.yes span').css('opacity','1');
+                $('.yes').children().not('span').css('opacity','0');
+            });
+        }
+    // });
 });
 
 //====== expert hover ======
 $(function(){
-    if($(document).width() > 767 ){
-        $('.zzz').on('mouseover',function(){
-            $('.expertAll').css('z-index','0');
-            $(this).parent().css('z-index','5');
-            
-            $(this).children('img').css({'transform':'scale(1.1)',
-                                        'box-shadow':'0px 0px 20px 2px #000'});
-            $(this).prev().prev().css('transform','scale(6.5,1)');
-            $(this).prev().css('transform','scale(4.5,1)');
-        $(this).children('.exAllText').css('opacity','1');
-        });
-        $('.zzz').on('mouseout',function(){
-            $('.expertAll').css('z-index','0');
-            $(this).parent().css('z-index','5');
-            
-            $(this).children('img').css({'transform':'scale(1)',
-                                        'box-shadow':'0px 0px 0px 0px #000'});
-            $(this).prev().prev().css('transform','scale(1)');
-            $(this).prev().css('transform','scale(1)');
-            $(this).children('.exAllText').css('opacity','0');
-        });
-    }
+    // $(window).resize(function() {
+        var wth = $(document).width();
+        //console.log($(document).width());
+        if(wth > 767 ){
+            $('.zzz').on('mouseover',function(){
+                $('.expertAll').css('z-index','0');
+                $(this).parent().css('z-index','5');
+                
+                $(this).children('img').css({'transform':'scale(1.1)',
+                                            'box-shadow':'0px 0px 20px 2px #000'});
+                $(this).prev().prev().css('transform','scale(6.5,1)');
+                $(this).prev().css('transform','scale(4.5,1)');
+            $(this).children('.exAllText').css('opacity','1');
+            });
+            $('.zzz').on('mouseout',function(){
+                $('.expertAll').css('z-index','0');
+                $(this).parent().css('z-index','5');
+                
+                $(this).children('img').css({'transform':'scale(1)',
+                                            'box-shadow':'0px 0px 0px 0px #000'});
+                $(this).prev().prev().css('transform','scale(1)');
+                $(this).prev().css('transform','scale(1)');
+                $(this).children('.exAllText').css('opacity','0');
+            });
+        }
+    // });
 });
 
 

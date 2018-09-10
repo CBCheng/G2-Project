@@ -99,9 +99,9 @@ if (@$_REQUEST['isModified'] == true) {
                     <li class="">
                         <a data-toggle="tab" rel="favorite" href="member_favorite.php">我的收藏</a>
                     </li>
-                    <li class="">
+                    <!-- <li class="">
                         <a data-toggle="tab" rel="score" href="member_comment.php">專家評論</a>
-                    </li>
+                    </li> -->
                     <li class="">
                         <a data-toggle="tab" rel="order_mg" href="member_order.php">我的訂單</a>
                     </li>
