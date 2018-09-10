@@ -402,11 +402,13 @@ nav {
     min-width: 200px; }
 
 .planetsan, .planettree {
-  width: 80px;
-  opacity: 0.6; }
+  position: absolute;
+  opacity: 0.8; }
 
 .planetsan {
-  margin-left: 50px; }
+  top: 900px;
+  left: 130px;
+  width: 300px; }
 
 .panel {
   width: 1200px;
@@ -414,7 +416,9 @@ nav {
 
 @media screen and (max-width: 1200px) {
   .panel {
-    width: 90%; } }
+    width: 90%; }
+  .planetsan, .planettree {
+    display: none; } }
 
 /* ---- button ---- */
 .button-group {
