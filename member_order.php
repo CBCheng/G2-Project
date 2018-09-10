@@ -146,7 +146,7 @@ session_start();
                 <ul class="tab-grop">
                     <h1 class="where">會員中心</h1>
                     <li class="">
-                        <a data-toggle="tab" rel="trip" href="member_mytrip.html">我的行程</a>
+                        <a data-toggle="tab" rel="trip" href="member_mytrip.php">我的行程</a>
                     </li> 
                      <li class="">
                         <a data-toggle="tab" rel="favorite" href="member_favorite.php">專家收藏</a>
