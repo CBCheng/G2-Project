@@ -1360,6 +1360,9 @@ footer{
 	left: 10px;
 	/*width: 50%;*/
 }
+.tagBox span{
+	font-size: 16px;
+}
 .tag{
 	padding:5px 10px;
 	margin-right: 10px;
