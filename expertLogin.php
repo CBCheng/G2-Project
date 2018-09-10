@@ -15,8 +15,14 @@
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script src="libs/jquery/dist/jquery.min.js"></script>
     <script src="libs/gsap/src/minified/TweenMax.min.js"></script>
-    <!-- <script type="text/javascript" src="js/parallax.min.js"></script> -->
-    <!-- scroll -->
+    <script type="text/javascript" src="js/parallax.min.js"></script>
+
+    <!-- scrollmagic -->
+    <script type="text/javascript" src="libs/Scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
+    <script type="text/javascript" src="libs/Scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+    <script type="text/javascript" src="libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="text/css" href="img/logovb.png">
     <title>OH~PLANETS! | 專家帶你玩</title>
@@ -185,6 +191,14 @@
 
 
 
+    
+    <!-- <div class="section section05">
+        <div class="hi1">tweenmax</div>
+        <div class="hi2">scrollmagic is so cool</div>
+    </div> -->
+
+
+    <div id="trigger_01"></div>
     <div class="cloud_group">
         <img class="cloud1" src="img/expertImg/cloud.png">
         <img class="cloud2" src="img/expertImg/cloud.png">
@@ -192,6 +206,12 @@
 
 
 
+<div id="trigger_02"></div>
+<img class="planetsan" src="img/expertImg/planetsan.png">
+
+
+<div id="trigger_03"></div>
+<img class="planettree" src="img/expertImg/planettree.png">
 
     <!-- ======filter===== -->
     <section class="panel">
@@ -216,14 +236,15 @@
                 </button>
             </div>
         </div>
-
+        
+        
 
         <div class="grid">
             
         </div>
     </section>
     <!-- ======filter===== -->
-
+        
 
 
 

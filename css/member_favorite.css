@@ -816,3 +816,18 @@
 
 .pingC_tab:before {
   border-right: 7px solid #cca183; }
+
+.content_desk .conRight .data .chart {
+  margin: -6px 0 20px; }
+
+@media screen and (max-width: 669px) {
+  .content_desk .conRight .data {
+    margin-top: -10px; }
+    .content_desk .conRight .data .chart h3 {
+      margin-left: -176px; } }
+
+@media screen and (max-width: 449px) {
+  .content_phone .chart_phone {
+    margin-top: 20px; }
+    .content_phone .chart_phone h3 {
+      margin-left: -47px; } }

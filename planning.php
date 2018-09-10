@@ -641,6 +641,9 @@ if(isset($_SESSION["scheduleNo"])==false){
 					</span>
 					</div>
 					<div class="expertList">
+						<div class="expertBoxDel">
+							<img src="img/planning/clear-button-blue.png">
+						</div>
 						<ul>
 						<!-- 	<li>
 								<div class="positionRE">
@@ -1351,7 +1354,7 @@ var memNo=sessionStorage.getItem('memNo');
 												alert('請確認日期、行程名稱已填寫');
 											}else{
 
-
+												alert('選完專家後將會跳至會員專區');
 											
 
 
@@ -1360,6 +1363,11 @@ var memNo=sessionStorage.getItem('memNo');
 
 
 				$('.expertFilter').css('display','block');
+
+				$('.expertBoxDel').click(function(){
+					$('.expertFilter').css('display','none');
+				});
+				
 				$('.expertBtn span').click(function(){
 					
 					// alert($(this).data('expert'));
@@ -1379,7 +1387,7 @@ var memNo=sessionStorage.getItem('memNo');
 										},
 								success:function(data){
 									
-									$('.expertList ul').append(data);
+									$('.expertList ul').html(data);
 
 									$('.expertBtn span').click(function(){
 										sch.expertNo= $(this).data('expert');
@@ -1560,7 +1568,7 @@ $.ajax({
 			for(var i=1;i<=daycount;i++){
 		Sortable.create(document.getElementById('schduleDay'+i), {
                                 animation: 150,
-                                delay: 300,
+                                
                             });
 		console.log(i);
 		}

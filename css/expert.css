@@ -401,6 +401,13 @@ nav {
     width: 35%;
     min-width: 200px; }
 
+.planetsan, .planettree {
+  width: 80px;
+  opacity: 0.6; }
+
+.planetsan {
+  margin-left: 50px; }
+
 .panel {
   width: 1200px;
   margin: 30px auto 50px; }
@@ -591,7 +598,7 @@ nav {
     display: block;
     position: absolute;
     background-color: rgba(255, 255, 255, 0.3);
-    z-index: 100;
+    z-index: 40;
     width: 200px;
     height: 300px;
     top: -65px;
@@ -728,13 +735,16 @@ nav {
     right: 10px; }
 
 #exp_lightBox.boxBlue {
-  border: 3px solid rgba(108, 213, 255, 0.5); }
+  border: 3px solid rgba(108, 213, 255, 0.5);
+  box-shadow: 0px 0px 50px rgba(108, 213, 255, 0.8); }
 
 #exp_lightBox.boxOrange {
-  border: 3px solid rgba(207, 169, 114, 0.5); }
+  border: 3px solid rgba(207, 169, 114, 0.5);
+  box-shadow: 0px 0px 50px rgba(207, 169, 114, 0.8); }
 
 #exp_lightBox.boxGreen {
-  border: 3px solid rgba(128, 194, 105, 0.5); }
+  border: 3px solid rgba(128, 194, 105, 0.5);
+  box-shadow: 0px 0px 50px rgba(128, 194, 105, 0.8); }
 
 #exp_lightBox:after {
   content: "";
@@ -839,7 +849,7 @@ nav {
           height: 15px;
           background-color: #aaa;
           display: inline-block;
-          transition: 1s; }
+          transition: 2s 0.5s; }
         .content_desk .conRight .data .chart .value.focus {
           background-color: #6cd5ff; }
     .content_desk .conRight .record {
@@ -867,11 +877,23 @@ nav {
           font-size: 14px;
           color: #aaaaaa; }
 
+@media screen and (max-width: 1000px) {
+  #exp_lightBox {
+    width: 100%; } }
+
+@media screen and (max-width: 767px) {
+  #exp_lightBox {
+    height: 90%; }
+  .comment {
+    width: 90%; } }
+
 @media screen and (max-width: 860px) and (min-width: 670px) {
   .expPic {
     min-width: 200px; } }
 
 @media screen and (max-width: 669px) {
+  #exp_lightBox {
+    height: 400px; }
   .content_desk .conLeft .expPic {
     width: 80%;
     width: 150px; }
@@ -917,7 +939,7 @@ nav {
     transform: rotate(-30deg); }
   .content_desk .conLeft .expPic {
     width: 120px;
-    height: 170px;
+    height: 150px;
     overflow: hidden; }
     .content_desk .conLeft .expPic img {
       margin-top: -10px; }
@@ -957,13 +979,13 @@ nav {
     .content_phone .chart_phone {
       width: 50%;
       display: inline-block;
-      margin-top: 20px;
+      margin-top: 60px;
       margin-left: 15px;
       text-align: justify; }
       .content_phone .chart_phone h3 {
         font-size: 20px;
         margin-left: 35px;
-        margin-bottom: 10px; }
+        margin-bottom: 6px; }
       .content_phone .chart_phone span {
         font-size: 17px;
         margin-right: 10px;
@@ -973,7 +995,7 @@ nav {
         height: 12px;
         background-color: #aaa;
         display: inline-block;
-        transition: 1s; }
+        transition: 2s 0.5s; }
       .content_phone .chart_phone .value.focus {
         background-color: #6cd5ff; }
     .content_phone .record_phone {
@@ -1000,50 +1022,6 @@ nav {
           margin-top: 10px;
           font-size: 14px;
           color: #aaaaaa; } }
-
-.comment {
-  width: 60%;
-  margin: 60px auto 80px; }
-  .comment .message {
-    border-bottom: 1px dashed rgba(108, 213, 255, 0.5);
-    margin: 20px auto 0;
-    padding-bottom: 20px;
-    width: 100%; }
-    .comment .message .user {
-      width: 100%;
-      height: 80px;
-      position: relative; }
-      .comment .message .user .name {
-        position: absolute;
-        left: 60px;
-        top: 10px;
-        padding: 10px 25px;
-        -webkit-clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
-        clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
-        background-color: #094f91;
-        font-size: 16px;
-        letter-spacing: 2px; }
-      .comment .message .user img {
-        position: absolute;
-        left: 0;
-        width: 80px;
-        border-radius: 50%; }
-    .comment .message p {
-      margin-top: -10px;
-      margin-left: 90px;
-      font-size: 16px;
-      text-align: left;
-      line-height: 1.4; }
-
-@media screen and (max-width: 1000px) {
-  #exp_lightBox {
-    width: 100%; } }
-
-@media screen and (max-width: 767px) {
-  #exp_lightBox {
-    height: 90%; }
-  .comment {
-    width: 90%; } }
 
 footer {
   width: 100%;
