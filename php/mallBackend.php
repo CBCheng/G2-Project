@@ -119,10 +119,10 @@ try{
                         <td><?php echo $proRow["productClass"]?></td>
                         <td><?php echo $proUpDown?></td>
                         <td>
-                            <button class="lightBoxBtn" value="<?php echo $proRow["productNo"]?>">修改</button>
+                            <button class="lightBoxBtn" type="button" value="<?php echo $proRow["productNo"]?>">修改</button>
                         </td>
                         <td>
-                            <button>刪除</button>
+                            <button class="delProBtn" type="button" value="<?php echo $proRow["productNo"]?>">刪除</button>
                         </td>
                     </tr>
 <?php
@@ -154,9 +154,9 @@ try{
                                 <td>商品類別</td>
                                 <td>
                                     <select name="productClass">
-                                        <option value="0">類別1</option>
-                                        <option value="1">類別2</option> 
-                                        <option value="2">類別3</option>            
+                                        <option value="1">類別1</option>
+                                        <option value="2">類別2</option> 
+                                        <option value="3">類別3</option>            
                                     </select>
                                 </td>
                             </tr>
@@ -168,15 +168,15 @@ try{
                             </tr>
                             <tr>
                                 <td>商品圖片</td>
-                                <td>圖片1</td>
+                                <td>圖片1:<br><input type="file" name="upFile[]" class="upFile"></td>
                             </tr>
                             <tr>
                                 <td></td>
-                                <td>圖片2</td>
+                                <td>圖片2:<br><input type="file" name="upFile[]" class="upFile"></td>
                             </tr>
                             <tr>
                                 <td></td>
-                                <td>圖片3</td>
+                                <td>圖片3:<br><input type="file" name="upFile[]" class="upFile"></td>
                             </tr>
                             
                             <tr>
@@ -196,8 +196,8 @@ try{
                             </tr>
                             <tr>
                                 <td colspan="2">
-                                    <button id="cancelBtn">取消</button>
-                                    <button>確認新增</button>
+                                    <button type="button" id="cancelBtn">取消</button>
+                                    <button type="submit">確認新增</button>
                                 </td>
                             </tr>
                             
@@ -252,9 +252,31 @@ try{
                 $('.addBox').css('display','block');
             });
 
+            $('#cancelBtn').on('click',function(){
+                $('.addBox').css('display','none');
+            });
 
-
-
+            $('.delProBtn').on('click',function(){
+                var delId = $(this).val();
+                var r=confirm("確定刪除嗎?");
+                //alert(delId);
+                if (r==true){
+                    $.ajax({
+                        url:'delProData.php',
+                        dataType:'text',
+                        type: 'POST',
+                        data:{delProId:delId},
+                        success: function (data) {
+                            $('.proList').remove();
+                            $('.tableTitle').after(data);
+                            //alert(data);
+                        },
+                        error: function () {
+                            alert('error');
+                        }
+                    });
+                }
+            });
         });
     </script>
 </body>

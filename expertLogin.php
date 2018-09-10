@@ -15,8 +15,14 @@
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script src="libs/jquery/dist/jquery.min.js"></script>
     <script src="libs/gsap/src/minified/TweenMax.min.js"></script>
-    <!-- <script type="text/javascript" src="js/parallax.min.js"></script> -->
-    <!-- scroll -->
+    <script type="text/javascript" src="js/parallax.min.js"></script>
+
+    <!-- scrollmagic -->
+    <script type="text/javascript" src="libs/Scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
+    <script type="text/javascript" src="libs/Scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+    <script type="text/javascript" src="libs/Scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="text/css" href="img/logovb.png">
     <title>OH~PLANETS! | 專家帶你玩</title>
@@ -34,13 +40,13 @@
         <!-- desk -->
         <ul class="menu mRight">
             <li>
-                <a href="planning.html">開始冒險</a>
+                <a href="planning.php">開始冒險</a>
             </li>
             <li>
-                <a href="refer.html">別人怎麼玩</a>
+                <a href="refer.php">別人怎麼玩</a>
             </li>
         </ul>
-        <a href="index.html" class="logo">
+        <a href="index.php" class="logo">
             <img src="img/logo-1.png">
         </a>
         <ul class="menu mLeft">
@@ -48,7 +54,7 @@
                 <a href="expertLogin.php">專家帶你玩</a>
             </li>
             <li>
-                <a href="shop.html">星際商城</a>
+                <a href="shop.php">星際商城</a>
             </li>
         </ul>
         <ul class="member">
@@ -87,22 +93,22 @@
         <ul class="menuMobile">
             <img class="navPic" src="img/bgM.png" alt="">
             <li>
-                <a href="planning.html">開始冒險</a>
+                <a href="planning.php">開始冒險</a>
             </li>
             <li>
                 <a href="expertLogin.php">專家帶你玩</a>
             </li>
             <li>
-                <a href="refer.html">別人怎麼玩</a>
+                <a href="refer.php">別人怎麼玩</a>
             </li>
             <li>
-                <a href="shop.html">星際商城</a>
+                <a href="shop.php">星際商城</a>
             </li>
             <li>
                 <a href="member_profile.php">會員專區</a>
             </li>
             <li>
-                <a href="shop.html">購物車</a>
+                <a href="shop.php">購物車</a>
             </li>
 
         </ul>
@@ -185,12 +191,26 @@
 
 
 
+    
+    <!-- <div class="section section05">
+        <div class="hi1">tweenmax</div>
+        <div class="hi2">scrollmagic is so cool</div>
+    </div> -->
+
+
+    <div id="trigger_01"></div>
     <div class="cloud_group">
         <img class="cloud1" src="img/expertImg/cloud.png">
         <img class="cloud2" src="img/expertImg/cloud.png">
     </div>
 
 
+
+<div id="trigger_02"></div>
+<img class="planetsan" src="img/expertImg/planetsan.png">
+
+<div id="trigger_03"></div>
+<img class="planettree" src="img/expertImg/planettree.png">
 
 
     <!-- ======filter===== -->

@@ -42,11 +42,13 @@ function updateMember ($pdo, $memPWD, $member_add, $member_phone, $member_bd, $m
  	$member->bindParam(":MEM_ADDRESS", $_REQUEST['mem_Add'], PDO::PARAM_STR); 
  	$member->bindParam(":MEM_PHONE", $_REQUEST['mem_number'], PDO::PARAM_STR); 
  	$member->bindParam(":MEM_BD", $_REQUEST['mem_Bir'], PDO::PARAM_STR);
+    // $member->bindParam(":MEM_IMG", $_REQUEST['show_pic'], PDO::PARAM_STR);
  	$member->bindParam(":MEM_NO", $member_id, PDO::PARAM_INT);
 
  	$member->execute();
 
  	echo $member->rowCount();
+    header('location:member_profile.php');
 }
 
 //control whether modify member
@@ -128,15 +130,13 @@ $member_pic = 'member_pic/'.@$_SESSION["MEM_IMG"];
                         <div class="form_box">
                             <!-- <form action="" method="post" enctype="multipart/form-data"> -->
                             <div class="col-sm-6 col-xs-12 ">
-                                <form method="post" action="php/new_upfile.php" enctype="multipart/form-data" id="file" class="member_img">
-                                    <input type="hidden" name="memNo" value="140">
+                                <form method="post" action="php/new_upfile.php" enctype="multipart/form-data" id="file" name="file" class="member_img">
                                     <figure>
-                                        <img id="show_pic" src="img/member/<?php echo $memberInfo["MEM_IMG"]?>">
-
+                                        <img id="show_pic" name="show_pic" src="img/member/<?php echo $memberInfo["MEM_IMG"]?>">
                                     </figure>
-                                    <input id="upfile" name="upfile" type="file" name="upfile">
+                                    <input type="file" id="upfile" name="upfile">
                                     <div class="img_btn_div">
-                                        <button type="button" class="btn btn-o-nb" id="member_pic" style="display: block;">上傳</button>
+                                        <input type="submit" class="btn btn-o-nb" id="member_pic" value="上傳檔案">
                                     </div>
                                 </form>
                                 <div id="show_name"><?php echo @$_SESSION['MEM_ID']; ?></div>

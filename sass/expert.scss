@@ -45,6 +45,8 @@ a {
 @import "layout/nav";
 @import "layout/nav-small";
 
+
+
 .title {
     top: 200px;
     position: relative;
@@ -196,7 +198,17 @@ a {
 }
 
 
-
+.planetsan,.planettree{
+    width: 80px;
+    opacity: 0.6;
+}
+.planetsan{
+    margin-left: 50px;
+}
+.planettree{
+    float: right;
+    margin-right: 50px;
+}
 
 
 .panel {
@@ -437,7 +449,7 @@ a {
             display: block;
             position: absolute;
             background-color: rgba(255, 255, 255, 0.3);
-            z-index: 100;
+            z-index: 40;
             width: 200px;
             height: 300px;
             top: -65px;
@@ -483,19 +495,6 @@ a {
                 width: 140px;
                 height: 210px;
             }
-
-            // .score {
-            //     margin-top: 10px;
-
-            //     span {
-            //         font-size: 14px;
-            //         padding-right: 2px;
-            //     }
-
-            //     img {
-            //         width: 15px;
-            //     }
-            // }
         }
     }
 
@@ -840,6 +839,21 @@ a {
     }
 }
 
+@media screen and (max-width: 1000px) {
+    #exp_lightBox {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #exp_lightBox {
+        height: 90%;
+    }
+    .comment {
+        width: 90%;
+    }
+}
+
 @media screen and (max-width: 860px) and (min-width: 670px){
     .expPic{
         min-width: 200px;
@@ -847,6 +861,9 @@ a {
 }
 
 @media screen and (max-width: 669px){
+#exp_lightBox{
+    height: 400px;
+}
 .content_desk{ 
     .conLeft{
         .expPic{
@@ -906,7 +923,7 @@ a {
     }
     .content_desk .conLeft .expPic{
         width: 120px;
-        height: 170px;
+        height: 150px;
         overflow: hidden;
         img{margin-top: -10px;}
         .crown{display: none;}
@@ -942,13 +959,13 @@ a {
         .chart_phone {
             width: 50%;
             display: inline-block;
-            margin-top: 20px;
+            margin-top: 60px;
             margin-left: 15px;
             text-align: justify;
             h3 {
                 font-size: 20px;
                 margin-left: 35px;
-                margin-bottom: 10px;
+                margin-bottom: 6px;
             }
 
             span {
@@ -1027,63 +1044,50 @@ a {
 
 
 // exp_lightBox的評論
-.comment {
-    width: 60%;
-    margin: 60px auto 80px;
+// .comment {
+//     width: 60%;
+//     margin: 60px auto 80px;
 
-    h2 {
-    }
-    .message {
-        border-bottom: 1px dashed $borderColorBlue;
-        margin: 20px auto 0;
-        padding-bottom: 20px;
-        width: 100%;
-        .user {
-            width: 100%;
-            height: 80px;
-            position: relative;
-            .name {
-                position: absolute;
-                left: 60px;
-                top: 10px;
-                padding: 10px 25px;
-                -webkit-clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
-                clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
-                background-color: $attrBlue;
-                font-size: 16px;
-                letter-spacing: 2px;
-            }
-            img {
-                position: absolute;
-                left: 0;
-                width: 80px;
-                border-radius: 50%;
-            }
-        }
-        p {
-            margin-top: -10px;
-            margin-left: 90px;
-            font-size: 16px;
-            text-align: left;
-            line-height: 1.4;
-        }
-    }
-}
+//     h2 {
+//     }
+//     .message {
+//         border-bottom: 1px dashed $borderColorBlue;
+//         margin: 20px auto 0;
+//         padding-bottom: 20px;
+//         width: 100%;
+//         .user {
+//             width: 100%;
+//             height: 80px;
+//             position: relative;
+//             .name {
+//                 position: absolute;
+//                 left: 60px;
+//                 top: 10px;
+//                 padding: 10px 25px;
+//                 -webkit-clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+//                 clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+//                 background-color: $attrBlue;
+//                 font-size: 16px;
+//                 letter-spacing: 2px;
+//             }
+//             img {
+//                 position: absolute;
+//                 left: 0;
+//                 width: 80px;
+//                 border-radius: 50%;
+//             }
+//         }
+//         p {
+//             margin-top: -10px;
+//             margin-left: 90px;
+//             font-size: 16px;
+//             text-align: left;
+//             line-height: 1.4;
+//         }
+//     }
+// }
 
-@media screen and (max-width: 1000px) {
-    #exp_lightBox {
-        width: 100%;
-    }
-}
 
-@media screen and (max-width: 767px) {
-    #exp_lightBox {
-        height: 90%;
-    }
-    .comment {
-        width: 90%;
-    }
-}
 
 @import "layout/footer";
 

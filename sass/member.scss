@@ -349,6 +349,9 @@ tbody{
         padding: 0.5%;
         transition: 0.5s;
     }
+    .tab-grop li:hover{
+        background-color: #2c8dc7;
+    }
     .tab-grop li a {
         text-decoration: none;
         color: #232323;
@@ -552,7 +555,7 @@ figure img {
     max-width: 960px;
     margin: auto;
     text-align: center;
-    background-color: #08040f;
+    background-color: rgba(0,0,0,0.8);
     background-size: cover;
 }
 
@@ -579,6 +582,7 @@ figure img {
 .order_mg_box table tr:first-of-type,
 .comment_mg_box table tr:first-of-type {
     border-bottom: 3px double #2c8dc7;
+    line-height: 2;
 }
 
 .favorite_box .favorite_page table tr th,
@@ -926,12 +930,14 @@ div[class^=col-] {
 }
 
 
-footer {
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, .5) 100%); // background-image: linear-gradient(to top,rgba(0, 183, 255, .5), rgba(0, 255, 255, .5) 100%);
-    // background-color: ;
+@media screen and (max-width: 449px){
+    .favorite_box .favorite_page table tr th{
+        padding: 0px;
+    }
 }
 
 
-// @import "layout/medium";
-// @import "layout/desktop";
 @import "layout/footer";
+footer {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, .5) 100%); 
+}

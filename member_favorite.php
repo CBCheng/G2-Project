@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="css/member_favorite.css">
-    <link rel="stylesheet" type="text/css" href="css/member.css">
     <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="css/member.css">
+    
     <link rel="stylesheet" type="text/css" href="css/expert.css">
+    <link rel="stylesheet" type="text/css" href="css/member_favorite.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
  
     <link rel="icon" type="text/css" href="img/logovb.png">
@@ -30,19 +31,19 @@
                 <ul class="tab-grop">
                     <h1 class="where">會員中心</h1>
                     <li class="">
-                        <a data-toggle="tab" rel="trip" href="member_mytrip.html">我的行程</a>
+                        <a data-toggle="tab" rel="trip" href="member_mytrip.php">我的行程</a>
                     </li>
                     <li class="default">
-                        <a data-toggle="tab" rel="favorite" href="member_favorite.html">我的收藏</a>
+                        <a data-toggle="tab" rel="favorite" href="member_favorite.php">我的收藏</a>
                     </li>
-                    <li class="">
+                    <!-- <li class="">
                         <a data-toggle="tab" rel="score" href="member_comment.html">專家評論</a>
+                    </li> -->
+                    <li class="">
+                        <a data-toggle="tab" rel="order_mg" href="member_order.php">我的訂單</a>
                     </li>
                     <li class="">
-                        <a data-toggle="tab" rel="order_mg" href="member_order.html">我的訂單</a>
-                    </li>
-                    <li class="">
-                        <a data-toggle="tab" rel="account" href="member_profile.html">會員資料修改</a>
+                        <a data-toggle="tab" rel="account" href="member_profile.php">會員資料修改</a>
                     </li>
                 </ul>
             </div>
@@ -72,10 +73,11 @@
 
                             <?php
                              try {
-        //                         ob_start();
-        // if (!isset($_SESSION)) { 
-        //     session_start(); 
-        // }
+                               
+                                // ob_start();
+                                // if (!isset($_SESSION)) { 
+                                //     session_start(); 
+                                // }
                                 require_once("php/connectExpert.php");
                                 $memNo = $_SESSION['MEM_NO'];
                                 //$memNo = '1';
