@@ -52,10 +52,10 @@ $(document).ready(function () {
 
 
   /*$('#menu-xs').click(function () {
-    $('.menu-xs-icon').toggleClass('active');
-    $('.menu-list-content-xs').toggleClass('active');
+    $('.menu-xs-icon').toggleClass('activemobile');
+    $('.menu-list-content-xs').toggleClass('activemobile');
     // $('.menu-xs-icon img').attr('src','images/menu/icon-6.png');
-    // $('.menu-xs-icon.active img').attr('src','images/menu/icon-03.png');
+    // $('.menu-xs-icon.activemobile img').attr('src','images/menu/icon-03.png');
   });*/
   //----------------註冊 start---------------------// 
   $('.memberLogin').click(function () {
@@ -257,21 +257,21 @@ function $id(id) {
 function $id(id) {
   return document.getElementById(id);
 }
-function showLoginForm2() {
-  //檢查登入bar面版上 spanLogin 的字是登入或登出
+function showLoginForm() {
+  //檢查登入bar面版上 spanLoginmobile 的字是登入或登出
   //如果是登入，就顯示登入用的燈箱(lightBox)
   //如果是登出
   //將登入bar面版上，登入者資料清空 
-  //spanLogin的字改成登入
+  //spanLoginmobile的字改成登入
   //將頁面上的使用者資料清掉
-  if ($id('spanLogin').innerHTML == "登入") {
-    $id('lightBox').style.display = 'block';
+  if ($id('spanLoginmobile').innerHTML == "登入") {
+    $id('lightBox2').style.display = 'block';
   } else {  //登出
     var xhr = new XMLHttpRequest();
     xhr.onload = function () {
       if (xhr.status == 200) {
-        $id('memName').innerHTML = '&nbsp';
-        $id('spanLogin').innerHTML = '登入';
+        $id('memNamemobile').innerHTML = '&nbsp';
+        $id('spanLoginmobile').innerHTML = '登入';
         document.location.href = "/G2-Project/index.php";
       } else {
         alert(xhr.status);
@@ -292,9 +292,9 @@ function sendForm() {
       if (xhr.responseText == "NG") {
         alert("帳密錯誤");
       } else {
-        document.getElementById("memName").innerHTML = xhr.responseText;
-        document.getElementById("spanLogin").innerHTML = "登出";
-        document.getElementById("mem_a").href = 'member_profile.php';
+        document.getElementById("memNamemobile").innerHTML = xhr.responseText;
+        document.getElementById("spanLoginmobile").innerHTML = "登出";
+        document.getElementById("mem_b").href = 'member_profile.php';
         // window.location.reload();  
       }
 
@@ -310,7 +310,7 @@ function sendForm() {
   xhr.send(data_info);
 
   //將登入表單上的資料清空，並隱藏起來
-  $id('lightBox').style.display = 'none';
+  $id('lightBox2').style.display = 'none';
   $id('memEmail').value = '';
   $id('memPsw').value = '';
 
@@ -318,15 +318,15 @@ function sendForm() {
 
 function cancelLogin() {
   //將登入表單上的資料清空，並將燈箱隱藏起來
-  $id('lightBox').style.display = 'none';
+  $id('lightBox2').style.display = 'none';
   $id('memEmail').value = '';
   $id('memPsw').value = '';
 }
 
 function init() {
-  //===設定spanLogin.onclick 事件處理程序是 showLoginForm
+  //===設定spanLoginmobile.onclick 事件處理程序是 showLoginForm
 
-  $id('spanLogin').onclick = showLoginForm2;
+  $id('spanLoginmobile').onclick = showLoginForm;
 
   //===設定btnLogin.onclick 事件處理程序是 sendForm
   $id('login_send').onclick = sendForm;
@@ -339,9 +339,9 @@ function init() {
   // xhr.onload = function(){
   //   if(xhr.status == 200){
   //     if( xhr.responseText !=""){ //己登入
-  //       document.getElementById("memName").innerHTML = xhr.responseText;
-  //       document.getElementById("mem_a").href ='member_profile.php';
-  //       document.getElementById("spanLogin").innerHTML = "登出"; 
+  //       document.getElementById("memNamemobile").innerHTML = xhr.responseText;
+  //       document.getElementById("mem_b").href ='member_profile.php';
+  //       document.getElementById("spanLoginmobile").innerHTML = "登出"; 
 
   //     }
 

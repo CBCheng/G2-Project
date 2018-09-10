@@ -612,6 +612,7 @@ footer{
 
 }
 .yesBtn,.noBtn{
+	font-size: 16px;
 	color: #333;	
 }
 .Btn{
@@ -739,7 +740,7 @@ footer{
 	height: 34px;
 	color:#ccc;
 	/*padding-left:10px;*/
-	line-height: 40px;
+	line-height: 30px;
 	font-size: 26px;
 	font-weight: 700;		
 }
@@ -996,7 +997,9 @@ footer{
 
 /*引入行程燈箱end*/
 
-
+.selectPlanet p{
+	font-size: 20px;
+}
 .selectPlanets{
 	text-align:center;
 	width: 20%;
@@ -1223,6 +1226,10 @@ footer{
 	/*transition:5s;*/
 	left: 0;
 }
+.viewDescrip p:nth-child(2){
+	font-size: 18px;
+
+}
 @media screen and (max-width: 1600px){
 	.views li{
 	width: 45%;
@@ -1374,19 +1381,33 @@ footer{
 	background-color:#5df;
 }
 .int{
-	background-color:#f00;	
+	font-family: '微軟正黑體';
+	color: #ccc;
+	background-color:#00C6C7;	
 }
 .adv{
-	background-color:#0f0;	
+	font-weight: 700;
+	font-family: '微軟正黑體';
+	color: #ccc;
+	background-color:#FF492B;	
 }
 .tec{
-	background-color:#00f;	
+	font-weight: 700;
+	font-family: '微軟正黑體';
+	color: #ccc;
+	background-color:#852BFF;	
 }
 .hum{
-	background-color:#faa;	
+	font-weight: 700;
+	font-family: '微軟正黑體';
+	color: #ccc;
+	background-color:#00C759;	
 }
 .fod{
-	background-color:#afa;	
+	font-weight: 700;
+	font-family: '微軟正黑體';
+	color: #ccc;
+	background-color:#FFB22B;	
 }
 /*景點介紹燈箱start*/
 .viewFilter{
@@ -1913,7 +1934,8 @@ font-weight: 700;
 	}
 	#calendar{
 		width: 100%;
-		top: -81px;		
+		top: 280px;	
+		left: 0;	
 	}
 	.expert{
 		top: 20px;

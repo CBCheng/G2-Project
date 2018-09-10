@@ -158,8 +158,8 @@ nav {
 .memberSelect li {
   padding: 10px; }
 
-.hambger, .menuMobile {
-  display: none; }
+/*.hambger, .menuMobile {
+  display: none; }*/
 
 .member a:hover, .menu a:hover, .memberSelect a:hover {
   color: #6cd5ff; }
@@ -187,9 +187,9 @@ nav {
     overflow: hidden; }
   .logo {
     width: 50px; }
-  .menu, .member {
+  .menu {
     display: none; }
-  .hambger {
+  /*.hambger {
     width: 22px;
     height: 20px;
     display: inline-block;
@@ -198,7 +198,7 @@ nav {
     top: 0;
     bottom: 0;
     z-index: 110;
-    margin: auto; } }
+    margin: auto; }*/ }
 
 .line {
   width: 100%;
@@ -360,8 +360,8 @@ nav {
 .memberSelect li {
   padding: 10px; }
 
-.hambger, .menuMobile {
-  display: none; }
+/*.hambger, .menuMobile {
+  display: none; }*/
 
 .member a:hover, .menu a:hover, .memberSelect a:hover {
   color: #6cd5ff; }

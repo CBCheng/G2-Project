@@ -10,10 +10,10 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- css -->
-    
+    <link rel="icon" type="text/css" href="img/logovb.png">
     <link rel="stylesheet" type="text/css" href="css/login.css">
     <link rel="stylesheet" type="text/css" href="css/member.css">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
     <link rel="stylesheet" href="css/index.css">
     <!-- <link rel="stylesheet" href="css/fullpage.css"> -->
     <!-- plugin -->
@@ -77,15 +77,6 @@ session_start();
                 
             </li>
         </ul>
-        <!-- <ul class="memberSelect">
-            <li>Hi ~ 冒險者</li>
-            <li><a href="member_mytrip.html">我的行程</a></li>
-            <li><a href="member_favorite.html">我的收藏</a></li>
-            <li><a href="member_order.html">我的訂單</a></li>
-            <li><a href="member_comment.html">專家評論</a></li>
-            <li><a href="member_profile.html">會員資料修改</a></li>
-            <li><a href="sign.html">登出</a></li>
-        </ul> -->
         <!-- mobile -->
         <div class="hambger">
             <div class="line"></div>
@@ -696,7 +687,22 @@ session_start();
     <script src="js/style.js"></script>
     <script src="js/index.js"></script>
     <script src="js/login.js"></script>
-
+    <script>
+        // var bodyClass = document.getElementsByTagName('nav');
+        lastScrollY = 300;
+        window.addEventListener('scroll', function(){
+        var st = this.scrollY;
+        // 判斷是向上捲動，而且捲軸超過 200px
+        if( st < lastScrollY) {
+            $('nav').css('background-image','linear-gradient(to top, rgba(0, 255, 255, .1), rgba(0, 183, 255, .1) 100%)');
+            //bodyClass.remove('hideUp');
+        }else{
+            $('nav').css('background-image','linear-gradient(to top, rgba(0, 150, 150, .5), rgba(0, 183, 255, .8) 100%)');
+            //bodyClass.add('hideUp');
+        }
+        // lastScrollY = st;
+        });
+    </script>
     <!-- <script src="js/tween.js"></script> -->
 </body>
 

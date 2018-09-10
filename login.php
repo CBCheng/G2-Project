@@ -7,9 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/login.css">
     <link rel="stylesheet" type="text/css" href="css/member.css">
-
-    <!-- <link rel="stylesheet" href="css/expert.css"> -->
-    <!-- plugin -->
+    <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script src="libs/jquery/dist/jquery.min.js"></script>
     <!-- <script src="../libs/gsap/src/minified/TweenMax.min.js"></script> -->
@@ -49,6 +47,7 @@
             <li class="shoppingCar">
                 <a href="#">
                     <img class="shoppingCarPic" src="img/shopping car.png" alt="">
+                    <span id="pNu"></span>
                     <!-- <img class="shoppingCarHover" src="img/shoppingCarHover.png" alt=""> -->
                 </a>
             </li>
@@ -107,6 +106,7 @@
             <li>
                 <a href="shop.php">購物車</a>
             </li>
+            
 
         </ul>
     </nav>
@@ -181,6 +181,9 @@
  
     <script src="js/style.js"></script>
     <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript">
+    document.getElementById("pNu").innerHTML = <?php echo isset($_SESSION["pnu"]) ? $_SESSION["pnu"] : "" ?>;
+</script>
 
 </body>
 
