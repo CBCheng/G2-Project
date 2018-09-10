@@ -43,36 +43,41 @@ window.addEventListener('load', doSecond);
 
 
 //=====兩片雲動畫=====
-TweenMax.fromTo('.cloud1', 0, { x: 250, y: 0 }, { x: 250, y: 0 });
-TweenMax.fromTo('.cloud2', 0, { x: -250, y: 0 }, { x: -250, y: 0 });
+TweenMax.fromTo('.cloud1', 0, { x: 270, y: 0 }, { x: 270, y: 0 });
+TweenMax.fromTo('.cloud2', 0, { x: -260, y: 0 }, { x: -260, y: 0 });
 
 // parallax視差 加滾動觸發
 $(function () {
     var tls = new TimelineMax();
+    var tls2 = new TimelineMax();
+    var tls3 = new TimelineMax();
+    var tls4 = new TimelineMax();
     var controller = new ScrollMagic.Controller();
 
 
     var tween_s = tls.to('.cloud_group .cloud1', 1, {
         y: 50,
-        x: -100,
-        // alpha: 1
-    }).to('.cloud_group .cloud2', 1, {
+        x: -80,
+        alpha: 0.6
+    })
+
+    var tween_s2 = tls2.to('.cloud_group .cloud2', 1, {
         y: 50,
-        x: 100,
-        // alpha: 1
+        x: 80,
+        alpha: 0.6
     });
 
-    var planetsan = tls.to('.planetsan', 10, {
-        y: 1200,
-        x: 1800,
-        // alpha: 1
+    var planetsan = tls3.to('.planetsan', 1, {
+        y: 600,
+        x: 1200,
+        alpha: 0.2
     })
 
-    var planettree = tls.to('.planettree', 10, {
-        y: 800,
-        x: -1800,
-        // alpha: 1
-    })
+    // var planettree = tls4.to('.planettree', 100, {
+    //     y: 800,
+    //     x: -1800,
+    //     // alpha: 1
+    // })
 
 
 
@@ -80,27 +85,36 @@ $(function () {
     var scence_01 = new ScrollMagic.Scene({
         triggerElement: "#trigger_01",
         offset: 280,
-        duration: '50%',
+        duration: '40%',
         reverse: true  //動畫會返回(預設)
     }).setTween(tween_s)
-        .addIndicators({name: 'box'})
+        // .addIndicators({name: '1'})
         .addTo(controller)
 
     var scence_02 = new ScrollMagic.Scene({
-        triggerElement: "#trigger_02",
-        offset: 20,
-        duration: '120%',
-    }).setTween(planetsan)
-        .addIndicators({name: 'star1'})
+        triggerElement: "#trigger_01",
+        offset: 280,
+        duration: '40%',
+        reverse: true  //動畫會返回(預設)
+    }).setTween(tween_s2)
+        // .addIndicators({name: '1'})
         .addTo(controller)
 
     var scence_03 = new ScrollMagic.Scene({
-        triggerElement: "#trigger_03",
-        offset: 40,
-        duration: '100%',
-    }).setTween(planettree)
-        .addIndicators({name: 'star2'})
+        triggerElement: "#trigger_02",
+        offset: 150,
+        duration: '80%',
+    }).setTween(planetsan)
+        // .addIndicators({name: '2'})
         .addTo(controller)
+
+    // var scence_03 = new ScrollMagic.Scene({
+    //     triggerElement: "#trigger_03",
+    //     offset: 800,
+    //     duration: '20%',
+    // }).setTween(planettree)
+    //     .addIndicators({name: '3'})
+    //     .addTo(controller)
 
     console.log("scrollmagic")
 })
@@ -251,6 +265,14 @@ $(document).on('click', '.element-item', function(){
 					$('.value:nth-of-type(3)').css('width',$smart*10+'px');
 					$('.value:nth-of-type(4)').css('width',$adven*10+'px');
 					$('.value:nth-of-type(5)').css('width',$tech*10+'px');
+
+					// $('.num:nth-of-type(3)').html('123');
+					// $('.num:nth-of-type(2)').html($human * 10 + '%');
+					// $('.num:nth-of-type(3)').html($smart * 10 + '%');
+					// $('.num:nth-of-type(4)').html($adven * 10 + '%');
+					// $('.num:nth-of-type(5)').html($tech * 10 + '%');
+
+					// $('.num').html()
 
 					// console.log('美食:'+$('.ch_food').val());
 					// console.log('人文:'+$('.ch_human').val());

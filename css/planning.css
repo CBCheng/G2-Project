@@ -1465,7 +1465,19 @@ footer{
 	position: relative;
 }
 .expertList{
+	position: relative;
 	font-size:0;
+}
+.expertBoxDel{
+	position: absolute;
+	top: -80px;
+	right: -40px;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+.expertBoxDel img{
+	width: 100%;
 }
 .borderStyle.expertBorder{
 	padding:0;
@@ -2036,6 +2048,13 @@ font-weight: 700;
 	}
 	.planetSelect p:nth-of-type(1){
 		font-size: 20px;
+	}
+	.expertBoxDel{
+		top: -30px;
+		right: 10px;
+	}
+	.expertNameBG{
+		width: 170px;
 	}
 
 }

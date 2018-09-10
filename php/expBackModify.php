@@ -29,8 +29,6 @@ $picName = "img/expertImg/expPic/".$_FILES['upFile']['name'];
 
 
 try {
-
-    // $expertNo = $_SESSION["expertNo"];
     require_once("connectExpert.php");
 
     $sql ="UPDATE expert SET expFood = :expFood , expHuman = :expHuman , expSmart = :expSmart , expAdven = :expAdven , expTech = :expTech , expertPic = :expertPic WHERE expertNo = :expertNo";

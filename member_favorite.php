@@ -34,7 +34,7 @@
                         <a data-toggle="tab" rel="trip" href="member_mytrip.php">我的行程</a>
                     </li>
                     <li class="default">
-                        <a data-toggle="tab" rel="favorite" href="member_favorite.php">我的收藏</a>
+                        <a data-toggle="tab" rel="favorite" href="member_favorite.php">專家收藏</a>
                     </li>
                     <!-- <li class="">
                         <a data-toggle="tab" rel="score" href="member_comment.html">專家評論</a>

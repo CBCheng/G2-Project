@@ -748,6 +748,7 @@ width: 50px;
     color: #000;
     box-shadow: 0px 0px 20px 2px #000;
     background-color: #6cd5ff;
+    opacity: 0;
 }
 .no{
     left: 60%;
@@ -872,6 +873,7 @@ width: 50px;
         position: relative;
         left: 32.5%;
         width: 35%;
+        margin-top: 10%;
     }
     h3{
         position: relative;
@@ -884,12 +886,6 @@ width: 50px;
         font: 1.5vw/2vw 微軟正黑體;
         margin-bottom: 5%;
     }
-    p{
-        position: relative;
-        top: 0%;
-        left: 12.5%;
-        font: 1vw/2vw 微軟正黑體;
-    }
     a{
         position: relative;
         top: 4%;
@@ -901,36 +897,24 @@ width: 50px;
         font: 1vw/2vw 微軟正黑體;
         text-align: center;
     }
-    span{
-        position: absolute;
-        display: block;
-        background-color: #6cd5ff;
-        width: 1%;
-        height: 4%;
-        transition: 1s;
-        left: 30%;
+    .expSpan{
+        padding: 10% 0% 0% 8%;
+        .exp{
+            display: inline-block;
+            font: 1.2vw/2vw 微軟正黑體;
+        }
+        span{
+            display: inline-block;
+            background-color: #fff;
+            width: 1%;
+            padding-bottom: 7%;
+            margin-left: 5%;
+            transition: 1s;
+        }
     }
-}
+ }
 .exText4 h3+h3{
     left: 20%;
-}
-.exAllText span:nth-of-type(1){
-    top: 38.5%;
-}
-.exAllText span:nth-of-type(2){
-    top: 47.3%;
-}
-.exAllText span:nth-of-type(3){
-    top: 57%;
-}
-.exAllText span:nth-of-type(4){
-    top: 66%;
-}
-.exAllText span:nth-of-type(5){
-    top: 75.4%;
-}
-.exAllText span:nth-of-type(6){
-    top: 84.8%;
 }
 .expert1:hover span:nth-of-type(1){
     width: 10%;
@@ -943,12 +927,10 @@ width: 50px;
 }
 .expert1:hover span:nth-of-type(4){
     width: 48%;
+    background-color: #6cd5ff;
 }
 .expert1:hover span:nth-of-type(5){
     width: 22%;
-}
-.expert1:hover span:nth-of-type(6){
-    width: 32%;
 }
 //----
 .expert2:hover span:nth-of-type(1){
@@ -962,12 +944,10 @@ width: 50px;
 }
 .expert2:hover span:nth-of-type(4){
     width: 42%;
+    background-color: #6cd5ff;
 }
 .expert2:hover span:nth-of-type(5){
     width: 32%;
-}
-.expert2:hover span:nth-of-type(6){
-    width: 11%;
 }
 //------
 .expert3:hover span:nth-of-type(1){
@@ -980,32 +960,28 @@ width: 50px;
     width: 22%;
 }
 .expert3:hover span:nth-of-type(4){
-    width: 49%;
+    width: 41%;
 }
 .expert3:hover span:nth-of-type(5){
-    width: 40%;
-}
-.expert3:hover span:nth-of-type(6){
-    width: 14%;
+    width: 50%;
+    background-color: #6cd5ff;
 }
 //------
 .expert4:hover span:nth-of-type(1){
     width: 36%;
 }
 .expert4:hover span:nth-of-type(2){
-    width: 42%;
+    width: 50%;
+    background-color: #6cd5ff;
 }
 .expert4:hover span:nth-of-type(3){
     width: 18%;
 }
 .expert4:hover span:nth-of-type(4){
-    width: 50%;
+    width: 42%;
 }
 .expert4:hover span:nth-of-type(5){
     width: 30%;
-}
-.expert4:hover span:nth-of-type(6){
-    width: 20%;
 }
 // <!-- part3 end -->
 
@@ -1255,4 +1231,16 @@ width: 50px;
 
 @media all and (min-width: 768px){
     @import "layout/indexDesk";
+}
+@media all and (min-width: 768px)and(max-width: 1330px){
+    .choPlanet{
+        span{
+            right: -100%;
+        }
+    }
+}
+@media all and (min-width: 768px)and(max-width: 1700px){
+    .travelDay{
+        font-size: 1.5vw;
+    }
 }

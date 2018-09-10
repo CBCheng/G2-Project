@@ -402,15 +402,13 @@ nav {
     min-width: 200px; }
 
 .planetsan, .planettree {
-  width: 80px;
-  opacity: 0.6; }
+  position: absolute;
+  opacity: 0.8; }
 
 .planetsan {
-  margin-left: 50px; }
-
-.planettree {
-  float: right;
-  margin-right: 50px; }
+  top: 900px;
+  left: 130px;
+  width: 300px; }
 
 .panel {
   width: 1200px;
@@ -418,7 +416,9 @@ nav {
 
 @media screen and (max-width: 1200px) {
   .panel {
-    width: 90%; } }
+    width: 90%; }
+  .planetsan, .planettree {
+    display: none; } }
 
 /* ---- button ---- */
 .button-group {
@@ -739,13 +739,16 @@ nav {
     right: 10px; }
 
 #exp_lightBox.boxBlue {
-  border: 3px solid rgba(108, 213, 255, 0.5); }
+  border: 3px solid rgba(108, 213, 255, 0.5);
+  box-shadow: 0px 0px 50px rgba(108, 213, 255, 0.8); }
 
 #exp_lightBox.boxOrange {
-  border: 3px solid rgba(207, 169, 114, 0.5); }
+  border: 3px solid rgba(207, 169, 114, 0.5);
+  box-shadow: 0px 0px 50px rgba(207, 169, 114, 0.8); }
 
 #exp_lightBox.boxGreen {
-  border: 3px solid rgba(128, 194, 105, 0.5); }
+  border: 3px solid rgba(128, 194, 105, 0.5);
+  box-shadow: 0px 0px 50px rgba(128, 194, 105, 0.8); }
 
 #exp_lightBox:after {
   content: "";
@@ -850,9 +853,12 @@ nav {
           height: 15px;
           background-color: #aaa;
           display: inline-block;
-          transition: 1s; }
+          transition: 2s 0.5s; }
         .content_desk .conRight .data .chart .value.focus {
           background-color: #6cd5ff; }
+        .content_desk .conRight .data .chart .num {
+          margin-left: 10px;
+          transition: 0.3s 2.5s; }
     .content_desk .conRight .record {
       align-self: flex-end;
       margin-right: 30px; }
@@ -996,7 +1002,7 @@ nav {
         height: 12px;
         background-color: #aaa;
         display: inline-block;
-        transition: 1s; }
+        transition: 2s 0.5s; }
       .content_phone .chart_phone .value.focus {
         background-color: #6cd5ff; }
     .content_phone .record_phone {
