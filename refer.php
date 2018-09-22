@@ -42,7 +42,7 @@
         </ul>
         <ul class="member">
             <li class="shoppingCar">
-                <a href="#">
+                <a href="cartShow.php">
                     <img class="shoppingCarPic" src="img/shopping car.png" alt="">
                     <!-- <img class="shoppingCarHover" src="img/shoppingCarHover.png" alt=""> -->
                 </a>
@@ -183,8 +183,16 @@
         </div>
         <!-- content -->
         <!-- 分享按鈕 -->
+        <?php
+            if(isset($_SESSION["MEM_NO"])==true){
+                $meNo=$_SESSION["MEM_NO"];
+            }else{
+                $meNo=0;
+            }
+        ?>
         <div class="shareBtn">
             <button id="tripShare" ><span>我要分享</span></button>
+            <input type="hidden" name="meNo" value="<?php echo $meNo?>">
         </div>
         <div class="content">
             <!-- 分類按鈕 -->

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="text/css" href="img/logovb.png">
+    <link rel="stylesheet" href="css/forIndex.css">
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="libs/parallax/parallax.min.js"></script>
+    <title>Oh~ Planets!</title>
+</head>
+<body>
+    <div class="wrap">
+        <div class="item" id="parallax_box" data-hover-only="true">
+            <div class="box-area bgStar" data-depth="0.05">
+                <img src="img/bgStar.png" alt="/bgStar">
+            </div>
+            <div class="box-area bgStar2" data-depth="0.1">
+                <img src="img/bgStar.png" alt="/bgStar">
+            </div>
+            <div class="box-area bgStar3" data-depth="0.1">
+                <img src="img/bgStar.png" alt="/bgStar">
+            </div>
+            <div class="box-area a04" data-depth="0.1">
+                <img src="img/spaceCloud1.png" alt="spaceCloud">
+            </div>
+            <div class="box-area a05" data-depth="0.3">
+                <img src="img/spaceCloud2.png" alt="spaceCloud">
+            </div>
+            <div class="box-area a06" data-depth="0.1">
+                <img src="img/spaceCloud3.png" alt="spaceCloud">
+            </div>
+            <div class="box-area a07" data-depth="0.3">
+                <img src="img/spaceCloud4.png" alt="spaceCloud">
+            </div>
+            <div class="box-area a03" data-depth="0.3">
+                <img src="img/index/planetwater.png" alt="planetsan">
+            </div>
+            <div class="box-area a02" data-depth="0.1">
+                <img src="img/index/planettree.png" alt="planetsan">
+            </div>
+            <div class="box-area a01" data-depth="0.6">
+                <img src="img/index/planetsan.png" alt="planetsan">
+            </div>
+        </div>
+        <div class="fontBack">
+            <div class="fbItem">
+                <div class="fb font">
+                    <img class="fbImg" src="img/fb.png" alt="fb">
+                    <a href="home.php">前端</a>
+                </div>
+                <div class="fb back">
+                    <img class="fbImg" src="img/fb.png" alt="fb">
+                    <a  href="php/indexBackend.php">後端</a>
+                </div>
+                <img class="logo" src="img/logo-1.png" alt="logo">
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var scene = document.getElementById('parallax_box');
+    //把滾動視差加入場景
+    var parallax = new Parallax(scene);
+
+    // var tl_para = new TimelineMax({
+    //     onComplete: parallax
+    // });
+
+    // tl_para.to('.item .a01', 1, {
+    //     //x: 800,
+    //     //ease: Bounce.easeOut
+    // }).to('.item .a02', 1, {
+    //     //width: 630
+    // }).to('.item .a03', 1, {
+    //     //backgroundColor: '#f20'
+    // });
+
+    $('.fb a').on('mouseover',function(){
+        $(this).prev('img').css('animation',' fb1 0.8s linear infinite')
+    });
+    $('.fb a').on('mouseout',function(){
+        $(this).prev('img').css('animation',' fb1 5s linear infinite')
+    });
+</script>
+</html>

@@ -1,0 +1,194 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* =========== */
+.wrap{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url('../img/index/inBg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.item{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.box-area{
+    position: absolute;
+}
+.box-area img{
+    width: 100%;
+}
+.item .bgStar{
+    width: 40%;
+    left: 15% !important;
+    top: 20% !important;
+    animation: starType2 12s infinite;
+}
+.item .bgStar2{
+    width: 30%;
+    left: 40% !important;
+    top: 10% !important;
+    animation: starType1 6s infinite;
+}
+.item .bgStar3{
+    width: 20%;
+    left: 80% !important;
+    top: 10% !important;
+    animation: starType1 12s infinite;
+}
+.item .a01 {
+    width: 22%;
+    left: 0% !important;
+    top: 0% !important; 
+}
+.item .a02 {
+    width: 10%;
+    left: 20% !important;
+    top: 25% !important; 
+}
+.item .a03 {
+    width: 30%;
+    left: 70% !important;
+    top: 35% !important; 
+}
+.item .a04 {
+    width: 15%;
+    left: 20% !important;
+    top: 40% !important; 
+    animation: cloudType1 6s infinite;
+}
+.item .a05 {
+    width: 20%;
+    left: 50% !important;
+    top: 10% !important; 
+    animation: cloudType1 8s infinite;
+}
+.item .a06 {
+    width: 25%;
+    left: 80% !important;
+    top: 35% !important;
+    animation: cloudType1 12s infinite; 
+}
+.item .a07 {
+    width: 10%;
+    left: 50% !important;
+    top: 30% !important; 
+    animation: cloudType1 8s infinite;
+}
+@keyframes cloudType1{
+    0%{opacity: .5;}
+    50%{opacity: 1;}
+    100%{opacity: .5;}
+}
+@keyframes starType1{
+    0%{opacity: .4;}
+    50%{opacity: 1;}
+    100%{opacity: .4;}
+}
+@keyframes starType2{
+    0%{opacity: .3;}
+    50%{opacity: .6;}
+    100%{opacity: .3;}
+}
+.fontBack{
+    position: absolute;
+    top: 30%;
+    left: 22.5%;
+    width: 55%;
+    padding-bottom: 25%;
+}
+.fbItem{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.fb{
+    display: block;
+    width: 40%;
+    height: 88%;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.fb a{
+    font: 4vw/1vw 微軟正黑體;
+    text-decoration: none;
+    position: absolute;
+    color: #fff;
+}
+.font{
+    float: left;
+}
+.font a{
+    top: 41%;
+    left: 13%;
+}
+.back{
+    float: right;
+}
+.back a{
+    top: 41%;
+    right: 13%;
+}
+.fbImg{
+    width: 100%;
+    animation: fb1 5s linear infinite;
+    transform-origin:50% 52%;
+}
+@keyframes fb1{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+/* .fb a:hover{
+    color: #6cd5ff;
+} */
+.logo{
+    width: 15%;
+    position: absolute;
+    top: -40%;
+    left: 42.5%;
+}
+

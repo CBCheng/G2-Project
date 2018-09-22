@@ -1,17 +1,31 @@
 // 行程分享跳窗
+
 $(function(){
     $('#tripShare').click(function(){
-        $.ajax({
-            url: 'php/referShare.php',
+		// var meNo = $('#meNo').val();
+		// console.log(meNo);
+		// if(meNo == 0){
+		// 	alert('請先登入');
+		// }else{
+			$.ajax({
+			url: 'php/referShare.php',
+			type: 'POST',	
             dataType: 'text',
+            // data: {meme:meNo},
             success: function (data) {
+				if(data!='1'){
                 $('.mytripSocll').html(data);
-                $('.shareLightBg').addClass('show')
+				$('.shareLightBg').addClass('show')
+				}else{
+					alert('請先登入');
+				}
             },
             error: function () {
-                alert('請先登入');
+                alert('error');
             }
         });
+		// }
+        
     });
 });
 // hambager menu close

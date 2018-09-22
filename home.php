@@ -15,15 +15,14 @@ session_start();
     <link rel="stylesheet" type="text/css" href="css/member.css">
     <!-- <link rel="stylesheet" href="css/style.css"> -->
     <link rel="stylesheet" href="css/index.css">
-    <!-- <link rel="stylesheet" href="css/fullpage.css"> -->
+    
     <!-- plugin -->
     <!-- <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script> -->
     <!-- <script src="libs/jquery/dist/jquery.min.js"></script> -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="libs/anime/anime.min.js"></script>
     <!-- <script src="libs/gsap/src/minified/TweenMax.min.js"></script> -->
-    <!-- <script type="text/javascript" src="/libs/parallax/parallax.min.js"></script> -->
-    <!-- scroll -->
+    
 
     <title>Oh~ Planets!</title>
 </head>
@@ -57,7 +56,7 @@ session_start();
         </ul>
         <ul class="member">
             <li class="shoppingCar">
-                <a href="#">
+                <a href="cartShow.php">
                     <img class="shoppingCarPic" src="img/shopping car.png" alt="">
                     <!-- <img class="shoppingCarHover" src="img/shoppingCarHover.png" alt=""> -->
                 </a>
@@ -665,13 +664,7 @@ session_start();
         </div>
     </div>
     <!-- part4 end -->
-    
-    
-    
 
-
-
-    
     <!-- footer start -->
     <footer>
         
