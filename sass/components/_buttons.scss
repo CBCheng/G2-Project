@@ -1,0 +1,150 @@
+//button按鈕預設透明背景
+@mixin btn($wi:100px, $he:45px, $fs:18px, $lh:34px) {
+    width: $wi;
+    height: $he;
+    color: #fff;
+    font-size: $fs;
+    line-height: $lh;
+    border: 1px solid #6cd5ff;
+    background-color: transparent;
+    text-align: center;
+    cursor: pointer;
+}
+
+//button按鈕預設50%黑背景
+@mixin btnBlBg($wi:100px, $he:45px, $fs:18px, $lh:34px, $al:0.5) {
+    width: $wi;
+    height: $he;
+    color: #fff;
+    font-size: $fs;
+    line-height: $lh;
+    border: 1px solid #6cd5ff;
+    background-color: rgba(0, 0, 0, $al);
+    text-align: center;
+    cursor: pointer;
+}
+
+//button按鈕預設50%白背景
+@mixin btnWhBg($wi:100px, $he:45px, $fs:18px, $lh:34px, $al:0.5) {
+    width: $wi;
+    height: $he;
+    color: #fff;
+    font-size: $fs;
+    line-height: $lh;
+    border: 1px solid #6cd5ff;
+    background-color: rgba(255, 255, 255, $al);
+    text-align: center;
+    cursor: pointer;
+}
+
+//button按鈕hover效果
+@mixin btnHover() {
+    background-color: #6cd5ff;
+    color: #000;
+}
+
+//a連結按鈕預設透明背景
+@mixin aLinkBtn($wi:100px, $he:45px, $fs:18px, $lh:34px) {
+    width: $wi;
+    height: $he;
+    color: #fff;
+    font-size: $fs;
+    line-height: $lh;
+    border: 1px solid #6cd5ff;
+    background-color: transparent;
+    text-align: center;
+    cursor: pointer;
+}
+
+//a連結按鈕預設50%黑背景
+@mixin btnBlBg($wi:100px, $he:45px, $fs:18px, $lh:34px, $al:0.5) {
+    width: $wi;
+    height: $he;
+    color: #fff;
+    font-size: $fs;
+    line-height: $lh;
+    border: 1px solid #6cd5ff;
+    background-color: rgba(0, 0, 0, $al);
+    text-align: center;
+    cursor: pointer;
+}
+
+//a連結按鈕預設50%白背景
+@mixin btnWhBg($wi:100px, $he:45px, $fs:18px, $lh:34px, $al:0.5) {
+    width: $wi;
+    height: $he;
+    color: #fff;
+    font-size: $fs;
+    line-height: $lh;
+    border: 1px solid #6cd5ff;
+    background-color: rgba(255, 255, 255, $al);
+    text-align: center;
+    cursor: pointer;
+}
+
+//a連結按鈕hover效果
+@mixin aLinkBtnHover() {
+    background-color: #6cd5ff;
+    color: #000;
+}
+
+//=========== 傾斜選單按鈕 ==========
+//一般按鈕狀態 (用在個別選項)
+@mixin skewBtn($skBtnW:145px, $skBtnH:45px) {
+    transform: skewX(25deg);
+    display: inline-block;
+    width: $skBtnW;
+    height: $skBtnH;
+    color: #fff;
+    font: 18px/34px 微軟正黑體;
+    border: 0px solid #6cd5ff;
+    background-color: rgba(255, 255, 255, .5);
+    text-align: center;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+//ALL一般按鈕狀態 (用在所有選項)
+@mixin skewBtnAll($skBtnAllW:145px, $skBtnAllH:45px) {
+    clip-path: polygon(0 0, 80% 0%, 100% 100%, 0% 100%);
+    transform: skewX(0deg);
+    display: inline-block;
+    width: $skBtnAllW;
+    height: $skBtnAllH;
+    color: #fff;
+    font: 18px/34px 微軟正黑體;
+    border: 0px solid #6cd5ff;
+    background-color: rgba(71, 138, 245, 0.6);
+    text-align: center;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+//一般文字一般狀態 針對button裡的span
+@mixin skewBtnText($skTeTop:4px, $skTeLeft:40px) {
+    position: absolute;
+    transform: skewX(-25deg);
+    top: $skTeTop;
+    left: $skTeLeft;
+}
+
+//ALL文字一般狀態 針對button裡的span
+@mixin skewBtnTextAll($skTeTop:4px, $skTeLeft:40px) {
+    transform: skewX(0deg);
+    position: absolute;
+    top: $skTeTop;
+    left: $skTeLeft;
+}
+
+//按鈕hover狀態 針對button裡的span
+@mixin skewBtnHover() {
+    color: #000;
+}
+
+//====== 注意寫法 =====
+//button裡面的文字要被span包住
+//藉此span改變文字樣式
+//<button>
+//   <span>我是文字</span>
+//</button>
+//====================

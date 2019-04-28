@@ -1,0 +1,93 @@
+@import 'base/var';
+@import 'base/reset';
+
+@import 'mixin/mixin';
+
+$fontWhiteTitle:rgba(255,255,255,.8);
+$fontWhiteContent:rgba(255,255,255,.7);
+
+.backendFull{
+    position: fixed;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+    margin:auto;
+    background-image: url('../img/poa/bg11.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mask{
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,.4);
+}
+.wrapPanel{
+    width: 600px;
+    margin:auto;
+    padding-top: 150px;
+    
+    img{
+        display: block;
+        margin:auto;
+        padding-bottom:50px;
+    }
+}
+.loginPanel{
+    width:300px;
+    margin: auto;
+    color:$fontWhiteTitle;
+    background-color: rgba(0,0,0,.5);
+    border:1px solid $bottomColor;
+    padding:10px;
+    // height:300px;
+    h2{
+        font:30px $fontfamily;
+        padding-bottom: 50px;
+    }
+    span{
+        font:18px $fontfamily;
+        display:block;
+        padding-top:10px;
+        // padding-bottom:10px;
+    }
+    input[type=text],
+    input[type=password]{
+        font: 16px $fontfamily;
+        width:250px;
+        color:#FFF;
+        text-decoration: none;
+        border:none;
+        border-bottom: 1px solid rgba(147,147,147,.8);
+        background-color:transparent;
+        padding:10px;
+        outline: none;
+        -webkit-transition: 0.2s;
+    }
+    input[type=text]:focus {
+        border-bottom: 1px solid $bottomColor;
+        // background-color: lightblue;
+    }
+    span:last-child{
+        padding-top:60px; 
+        text-align: center;
+    }
+    input[type=submit]{
+        cursor: pointer;
+        color:$fontWhiteTitle;
+        font:18px $fontfamily;
+        line-height: 30px;
+        width:100px;
+        height:30px;
+        border-radius: 3px;
+        background-color:rgba(0,0,0,.2);
+        border:1px solid $fontWhiteContent;
+        outline: none;
+        -webkit-transition: 0.2s;
+    }
+    input[type=submit]:hover{
+        background-color: $bottomColor;
+    }
+}

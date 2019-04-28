@@ -1,19 +1,31 @@
 nav{
     width: 100%;
-    height: 100px;
+    height: 80px;
     box-sizing: content-box;
     padding: 20px 0 20px 0;
     background-image: $gradation;
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 100;
     text-align: center;
     letter-spacing: 2px;
     font-size: 18px;
+
+}
+.navColor{
+    background-color:$gradation; 
+    width: 100%;
+    height: 120px;
+    z-index: 80;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
 }
 .logo{
     display: inline-block;
-    width: 100px;
+    width: 80px;
 }
 .menu{
     display: inline-block;
@@ -35,10 +47,17 @@ nav{
 .member li{
     display: inline-block;
     vertical-align: middle;
-    padding: 60px 0 0 0; 
+    padding: 50px 0 0 0; 
+}
+.memberSign a {
+    border-left: 1px solid $fontColorWhite;
+    padding-left: 10px;
 }
 .active{
-    color:#6cd5ff;
+    color:$fontColorBlue;
+}
+.shoppingCar{
+    margin-right: 8px;
 }
 .shoppingCar{
     width: 25px;
@@ -49,16 +68,18 @@ nav{
     top: 150px;
     right: 10px;
     text-align:left;
-    background-color: rgba(0,255,255,.3);
+    background-color: $navColor;
     display: none;
 }
 .memberSelect li{
     padding: 10px; 
 }
-
+.hambger,.menuMobile{
+    display: none;
+}
 // hover
 .member a:hover,.menu a:hover,.memberSelect a:hover{
-    color:#6cd5ff;
+    color:$fontColorBlue;
 }
 
 

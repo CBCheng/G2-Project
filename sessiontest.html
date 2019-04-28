@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Examples</title>
+
+</head>
+<body>
+<!--  
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div> -->
+
+ <script type="text/javascript">
+	var sch={};
+	sch.memNo = 100;
+	sch.expertNo= 103;
+	sch.depTime= '2018-10-15';
+	sch.arrTime= '2018-10-19';
+	sch.name = '雨林探險';
+	sch.planetName='奧倫星';
+	sch.share=0;
+	sch.itineraryPic='p1_v1_03.jpg';
+    sch.daysData = [['龍血樹','雲霧林山','山水洞森林'],
+          ['BaBa村莊','飛龍風景區','巧克力巨人島'],
+          ['壹陸國家公園','胖子樹','扭曲森林']
+          //,
+          // ['水上國王殿','藍綠夢湖','Horseshoe Bend'],
+          // ['鏡海','格林冰谷','神秘谷','深水裂縫']
+          ];
+    // sch.daysData = [['水上國王殿','鏡海','藍綠夢湖','格林冰谷'],
+    //       ['瓦特水神廟','斷層黃金瀑布','玫瑰粉紅湖','三色火山湖'],
+    //       ['彩虹河','藍色大理石','溫泉鏡湖','福爾摩斯瀑布'],
+    //       ['水上國王殿','鏡海','藍綠夢湖','格林冰谷'],
+    //       ['瓦特水神廟','斷層黃金瀑布','玫瑰粉紅湖','三色火山湖']];
+  sch.quizPic = 'result3_2';
+  sch.quizPlanetPic = 'resultTree';
+	// sch.daysData = [['水上國王殿','鏡海','藍綠夢湖'],
+	// 				['瓦特水神廟','斷層黃金瀑布','玫瑰粉紅湖','詩的洞窟'],
+	// 				['三色火山湖','彩虹河','藍色大理石'],
+	// 				['溫泉鏡湖','格林冰谷','福爾摩斯瀑布','山水洞'],
+	// 				['奧斯卡湖','貝加爾湖','深水裂縫']];
+				console.log(sch.daysData);
+ 	// var arr = [];
+ 	// arr[0]=['第一天','新竹','台北','桃園'];
+ 	// arr[1]=['第二天','屏東','彰化','台南'];
+ 	// arr[2]=['第三天','宜蘭','花蓮','台東'];
+ 	// document.write(sch.keys(name));
+ 	// console.log(sch);
+ 	// sessionStorage.setItem("schedules", sch);
+ 	// var getSession = sessionStorage.getItem("schedules");
+
+ 	// console.log(getSession);
+
+ 	var jsonStr = JSON.stringify(sch);
+ 	  document.write(jsonStr);
+     // console.log(jsonStr.length);
+    var xhr=new XMLHttpRequest();
+    xhr.onload=function (){
+       if( xhr.status == 200 ){
+        // var aa =xhr.responseText;
+        // var aa=JSON.parse(xhr.responseText);
+         // console.log(xhr.responseText);
+        // console.log(aa);
+       }else{
+          alert( xhr.status );
+       }
+  }
+
+    xhr.open("POST", "scheduleAdd.php",true);
+    xhr.setRequestHeader("content-type","application/x-www-form-urlencoded"); 
+    xhr.send("schedules="+jsonStr);
+    // alert(xhr.responseText);
+
+//  	var divs = document.getElementsByTagName('div');
+// for (var i = 0, div; div = divs[i]; i++) {
+//   /* 以同樣方式處理 div */
+// }
+ </script>
+</body>
+</html>

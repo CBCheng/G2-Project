@@ -1,0 +1,66 @@
+@import "base/var";
+@import "base/reset";
+@import "mixin/mixin";
+@include body(12px);
+//  *{
+//      outline: 1px solid #fff;
+//  }
+img{
+    width: 100%;
+    vertical-align: middle;
+}
+a {
+    text-decoration: none;
+    color: $fontColorWhite;
+}
+
+@import "layout/nav";
+@import "layout/nav-small";
+section {
+    width: 100%;
+    margin: auto;
+}
+.banner{
+    width:70%;
+    margin: auto;
+    margin-top: 100px;
+}
+.productGroup{
+    width: 70%;
+    margin: auto;
+    display: flex;
+}
+// 商品分類
+.productKind{
+    width: 25%;
+    margin: 1%
+}
+// 商品列表
+.productList{
+    width: 70%;
+    margin: 1%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.product{
+    width: 31.15%;
+    margin: 1%;
+}
+.productPic{
+    img{
+        border-radius: 10px;
+    }
+}
+.productTxt{
+    input{
+       width: 100%;
+       background-color: transparent;
+       border: 1px solid $fontColorWhite;
+       border-radius: 3px;
+       color: $fontColorWhite;
+    }
+}
+
+@import "layout/footer";
+@import "layout/medium";
+@import "layout/desktop";

@@ -1,0 +1,2184 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+ 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;  
+	border: 0; 
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+
+}
+
+
+*{
+	/*outline:1px solid red;*/
+}
+
+
+body{
+	background-color: rgba(9,8,44);
+/*1800 2520*/
+	background: url(../img/planning/bg.png) repeat;
+				/*url(../img/planning/footerbg-1.png) 0 900px no-repeat;*/
+	/*height: 1620px;*/
+	user-select:none;/*禁止反白*/
+	/*width: 100%;*/
+	background-color: rgba(9,8,44);
+}
+body::-webkit-resizer{
+
+}
+body::-webkit-scrollbar {
+		  width: 15px;
+		  background-color: rgba(2, 94, 141, 1);
+		   /*border-radius:15px; */
+	} /* 这是针对缺省样式 (必须的) */
+body::-webkit-scrollbar-track {
+      background-color: rgba(2, 94, 141, 1);
+      border-radius:15px; 
+} /* the new scrollbar will have a flat appearance with the set background color */
+ 
+body::-webkit-scrollbar-thumb {
+      background-color: rgba(139, 181, 243, .5);
+      border-radius:15px; 
+} /* this will style the thumb, ignoring the track */
+ 
+body::-webkit-scrollbar-button {
+      background-color: rgba(139, 181, 243, 0);
+	border-radius:15px;
+} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+nav {
+  width: 100%;
+  height: 80px;
+  box-sizing: content-box;
+  padding: 10px 0 10px 0;
+  /*background: #000033;*/
+  background-image: linear-gradient(to top, rgba(0, 255, 255, 0.1), rgba(0, 183, 255, 0.1) 100%);
+  top: 0;
+  left: 0;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 16px; 
+	z-index: 6;}
+
+nav a{
+	text-decoration: none;
+  	color: #fff;
+  	font-family: 微軟正黑體;
+}
+content{
+	position: relative;
+}
+
+.logo {
+  display: inline-block;
+  width: 80px; }
+.logo img{
+	width:100%;
+	vertical-align: middle;
+}
+.menu {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center; }
+
+.menu li {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 50px 50px 0 50px;
+  transition: .5s; }
+
+.member {
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  right: 20px; }
+
+.member li {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 50px 0 0 0; }
+
+.memberSign a {
+  border-left: 1px solid #fff;
+  padding-left: 10px; }
+
+.active {
+  color: #6cd5ff; }
+
+.shoppingCar {
+  margin-right: 8px; }
+
+.shoppingCar {
+  width: 25px; }
+.shoppingCar img{
+	width: 100%;
+}
+.memberSelect {
+  width: 200px;
+  position: absolute;
+  top: 150px;
+  right: 10px;
+  text-align: left;
+  background-color: rgba(0, 255, 255, 0.3);
+  display: none; }
+
+.memberSelect li {
+  padding: 10px; }
+
+.hambger, .menuMobile {
+  display: none; }
+
+.member a:hover, .menu a:hover, .memberSelect a:hover {
+  color: #6cd5ff; }
+
+footer{
+    width: 100%;
+    /*position: relative;
+    z-index: -100;*/
+    text-align: center;
+}
+.copyright{
+    padding: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+   /* position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;*/
+    margin: auto;
+}
+/*.space{
+	height: 150px;
+}*/
+@media screen and (max-width: 999px){
+	nav{
+		display: none;
+	}
+}
+.cloneDayLi{
+	display: none;
+}
+.chinese{
+		font-family:微軟正黑體;
+}
+.borderStyle{
+	padding:20px 25px;
+	/*border:2px solid  rgba(100,150,200,.5);*/
+	border: 2px solid rgba(100, 150, 220, 1);
+	/*box-shadow: 0px 0px 150px rgba(2, 94, 120, 1);*/
+	/*box-shadow: inset 0px 0px 100px rgba(2, 94, 181, 1);*/
+	box-shadow: 0px 0px 100px rgba(2, 94, 181, 1);
+}
+.imgBorderStyle{
+	/*padding:20px 25px;*/
+	border:2px solid  rgba(100,150,200,.5);
+}
+
+
+.navbar{
+	width: 100%;
+	height: 100px;
+	background-color: rgba(0,0,150,.5) ;
+	/*position:absolute;*/
+
+}
+
+.stepBoxStyle{
+
+	padding:50px 0;
+	width: 100%;
+	height: 350px;
+	/*outline: 1px red solid;*/
+}
+.stepBox{
+	margin: auto;
+	width: 45%;
+	min-width: 1000px;
+}
+.stepImg{
+	padding-top:40px ;
+	text-align: center;
+}
+
+.stepImg img{
+	width: 80%;
+	opacity: .7;
+
+}
+.stepImg h3{
+	color: #5bbde4;
+	font-size: 25px;
+	text-align: center;
+	padding: 20px 0 50px 0;
+}
+.step{
+	position: relative;
+	margin: auto;
+	text-align: center;	
+}
+.stepNum{
+	font-size: 28px;
+	font-weight: 700;
+	padding: 10px 0 20px 0;
+	/*line-height: 50px;*/
+}
+.stepTxt{
+		font-size: 23px;
+	line-height: 40px;		
+}
+.step div{
+		top: -230px;
+}
+.step div:nth-of-type(1){
+	position: absolute;
+
+	left: 90px;
+	color: #ccc;
+	font-size: 18px;
+
+}
+.step div:nth-of-type(2){
+	position: absolute;
+
+	left: 435px;
+	color: #ccc;
+	font-size: 18px;
+	
+}
+.step div:nth-of-type(3){
+	position: absolute;
+
+	left: 800px;
+	color: #ccc;
+	font-size: 18px;
+	
+}
+
+.step span{
+
+}
+@media screen and (max-width: 999px){
+	.stepBoxStyle{
+		display: none;
+	}
+}
+.circle{
+	width: 20px;
+	height: 20px;
+	border-radius:2px solid red; 
+}
+.planningTitle{
+	/*width: 45%;*/
+	margin-left:-20px;
+	padding:100px 0;
+	text-align:center;
+}
+.planningTitle h1 {
+	font-size:30px;
+	color:#5df;
+	/*font-family:微軟正黑體;*/
+
+	/*width:100%;	*/
+
+}
+.planningTitle p{
+	display:inline-block;	
+}
+.planningTitle a{
+
+	display:inline-block;
+	color:#333;
+		/*width:45%;	*/
+	background-color:#5df;
+	text-decoration:none;
+	/*line-height:50px;*/
+	margin-left:20px;
+	padding:10px;
+}
+
+.planningContent{
+	width: 100%;
+	position: relative;
+}
+
+.selectDaysGroup{
+
+	float:left;
+	margin-left:3.5%;
+	width: 17%;
+	min-width: 270px;
+
+}
+
+.schduleList{
+	/*box-shadow:inset 1000px 10px 1px rgba(100,0,0,.8);*/
+	position: relative;
+	float:left;
+	margin-left:30px;
+	width: 43%;
+	min-width: 320px;
+	/*background-color: rgba(100,0,0,.8);*/
+	/*height: 500px;*/
+}
+@media screen and (max-width: 1600px){
+	.schduleList{
+			width: 40%;
+	}
+}
+@media screen and (max-width: 1500px){
+	.schduleList{
+			width: 36%;
+	}
+}
+@media screen and (max-width: 1400px){
+	.schduleList{
+			width: 32%;
+	}
+
+}
+@media screen and (max-width: 1200px){
+	.schduleList{
+			width: 29%;
+	}
+
+}
+@media screen and (max-width: 1400px){
+	.schduleList{
+			margin-left:15px;
+	}
+}
+
+.selectViews{
+
+	position: relative;
+	float:left;
+	margin-left:30px;
+	width: 30%;
+	min-width: 500px;
+	/*width: 730px;*/
+	/*height: 500px;	*/
+}
+@media screen and (max-width:1400px){
+
+	.selectViews{
+		min-width: 470px;
+		margin-left:15px;	
+	}
+} 
+.selectDays{
+
+	text-align:center;
+	width: 40%;
+	min-width:125px;
+	display: block;
+	text-decoration:none;
+	background-color:#5df;
+	cursor:pointer;
+	padding: 10px 10px;
+	margin-bottom:20px;
+	color:#333;
+}
+
+#calendar{
+	display: none;
+	position: absolute;
+	top: 40px;
+	width: 700px;
+	z-index: 3;
+	text-align: center;
+}
+#calendar a{
+	display: inline-block;
+
+	text-decoration:none;
+	font-size: 18px;
+}
+#calendar a+a{
+	margin-left: 20px;
+}
+#calendar a:hover{
+	color: #5df;
+
+}
+.day{}
+.dayDel{
+	position: absolute;
+	top: -5px;
+	right: 4px;
+	display: block;
+	width: 30px;
+	height: 30px;
+	padding-right: 30px; 
+	transition: .3s;
+	opacity: 0;
+	padding-right:0px ;
+	/*margin-right: 25px;*/
+
+}
+#moveIcon{
+
+	display: block;
+	width: 30px;
+	height: 30px;
+	transition: .3s;
+	opacity: 1;
+
+}
+#cloneDayLi{
+	display: none;
+}
+
+
+
+.dayDel img{
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+}
+#moveIcon img{
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;	
+}
+.selectDaysGroup li{
+	position: relative;
+	list-style-type:none;
+	margin:0 -25px; 
+	padding:25px  25px;
+	cursor:pointer;
+	transition:.3s;
+}
+.selectDays{
+	font-size: 16px;
+}
+.selectDaysGroup li:hover{
+	background-color: rgba(255,255,255,.5);
+}
+
+.day div:nth-child(1){
+	width: 60px;
+	height: 60px;
+	border-radius:50%;
+	background-color: rgba(91,189,228);
+	color:#333;
+	text-align:center;
+	line-height:60px;
+	float:left;
+
+}
+#dayParent,.tagsBox,#schduleBox,.viewsBox{
+	background-color: rgba(0,0,0,.2);
+}
+
+
+.day div:nth-child(3){
+ 
+	width: 20px;
+	height: 20px;
+	/*padding-right: 10px; */
+	float:right;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 25px;
+	margin:auto;
+	cursor:pointer;
+}
+@media screen and (min-width: 1000px){
+	.dayList:hover .dayDel {
+		opacity: 1;
+	}
+		.dayList:hover #moveIcon {
+		opacity: 0;
+		z-index: -1;
+	}	
+	#moveIcon{
+	float: right;
+	}	
+	.day div:nth-child(3){
+ 
+
+	right: 5px;
+
+	}
+}
+@media screen  and (max-width: 1200px){
+	.day div:nth-child(3){
+		right: 10px;
+	}
+}
+@media screen  and (max-width: 999px){
+	.day div:nth-child(3){
+		/*right: 10px;*/
+		left: 260px;
+	}
+}
+/*.day div:nth-child(3) span{
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin:auto;
+	width: 30px;
+	height: 3px;
+	background-color: #ccc;
+
+}*/
+/*.day div:nth-child(3) span:before{
+	position: absolute;
+	top: 10px;
+	content: '';
+	display: block;
+	width: 30px;
+	height: 3px;
+	background-color: #ccc;
+
+}*/
+/*.day div:nth-child(3) span:after{
+	position: absolute;
+	top: -10px;
+	content: '';
+	display: block;
+	width: 30px;
+	height: 3px;
+	background-color: #ccc;
+}*/
+.day span:nth-child(1){
+		font-size:23px;
+}
+.day span:nth-child(2){
+		/*float:left;*/
+		color:#ccc;
+		line-height:60px;
+		font-size:18px;
+		padding-left:20px;
+
+}
+@media screen and (max-width: 1700px){
+	.day span:nth-child(2){
+		font-size:16px;
+			
+	}
+
+}
+@media screen and (max-width: 1400px){
+	.day span:nth-child(2){
+		
+		padding-left:10px;		
+	}
+
+}
+.yesBtn,.noBtn{
+	font-size: 16px;
+	color: #333;	
+}
+.Btn{
+	cursor:pointer;
+	text-align:center;
+	margin: 0 auto;
+	padding: 10px;
+	width: 35%;
+	min-width: 100px;
+	background-color:#5df;
+	color: #333;
+
+}
+.addDayStyle{
+	font-size: 16px;
+	margin-top: 20px;
+}
+
+/*天數RWD START*/
+@media screen and (max-width: 1300px){
+	.selectDaysGroup{
+			margin-left:30px;
+	}
+}
+
+@media screen and (max-width: 1150px){
+	.selectDaysGroup{
+			margin-left:10px;
+	}
+}
+
+@media screen and (max-width: 999px){
+	.day{
+		/*float: none;*/
+		text-align: center;
+	}
+	.selectDaysGroup{
+		width: 100%;
+		box-sizing: border-box;
+
+
+	}
+	.selectDays{
+		width: 100%;
+		padding: 10px 0;
+	}
+
+	.dayDel{
+		opacity: 1;
+		left: 0;
+	}
+	.selectDaysGroup li{
+		/*margin-left: -50px;*/
+	}
+	.day div:nth-child(1){
+
+		float: none;
+		display: inline-block;
+	}
+	.addDayStyle{
+
+		width: 50%;
+		padding: 10px 0;
+		margin: 20px auto;
+	}
+	.borderStyle {
+		/*padding: 0;*/
+	}
+
+}
+/*天數RWD END*/
+
+.getSchdule{
+	
+	position: relative;
+	display: block;
+	float:right;
+	text-decoration:none;
+	
+
+	padding: 10px 0;
+	margin-bottom:20px;
+	color:#333;
+}
+.getSchdule span{
+	padding: 8px 10px;
+
+
+}
+.clearfix{
+	content: '';
+	display: block;
+	clear:both;
+}
+.schduleList li{
+	position: relative;
+	list-style-type:none;
+	margin:25px 0; 
+}
+.searchSchdule{
+	/*width: 220px;*/
+	float: left;
+	height: 55px;
+	/*margin-left: 30%;*/
+
+}
+
+.searchSchdule input{
+	display: block;
+	float: left;	
+	width: 200px;
+	height: 34px;
+	border:none;
+	background-color: transparent;
+	padding-left:10px;
+	border: 2px solid  rgba(100, 150, 220, 1);
+	color:#ccc;
+	font-size: 18px;
+	font
+}
+.searchSchdule p{
+	display: none;
+	float: left;
+	/*width: 150px;*/
+	height: 34px;
+	color:#ccc;
+	/*padding-left:10px;*/
+	line-height: 30px;
+	font-size: 26px;
+	font-weight: 700;		
+}
+/*.searchSchdule span:nth-of-type(2){
+	display: none;
+}*/
+.searchSchdule input::placeholder { 
+	color:#999;
+	/*font-family:微軟正黑體;*/
+}
+
+.editImg {
+	width: 40px;
+	float: left;
+	margin-bottom:16px;
+
+
+	margin-left:10px;
+}
+.editImg img{
+	width: 100%;
+	vertical-align: bottom;
+	/*color: #ccc;*/
+	/*background-color: #ccc;*/
+	opacity: .6;
+}
+
+.canselFloat{
+
+	float: none;
+	display: inline-block;	
+}
+.center{
+	text-align: center;
+}
+/*.searchSchdule div span{
+
+	margin:0; 
+	display: block;
+		width: 100%;
+
+}*/
+.schduleEmptyTxt p{
+	display: block;
+	color: #ccc;
+	font-size: 23px;
+	text-align: center;
+	/*line-height: 100px;*/
+	padding: 100px 0; 
+}
+.schduleDay{
+	padding:0 25px;
+	margin:0 -25px;
+	border-bottom:2px solid rgba(100,150,200,.5);
+}
+.schduleItems li{
+	position: relative;
+	color:#ccc;
+	font-size:23px;
+	margin:0 -25px;
+	padding:25px;
+
+	overflow: hidden;
+	cursor:pointer;
+	background-color: rgba(255,255,255,0);
+	transition:.3s;
+}
+
+.schduleItems li:after{
+	content:'';
+	display: block;
+	width: 60%;
+	min-width:220px;
+	height: 10px;
+	background-color: #5df;
+	transform:skewX(-60deg);
+	margin:10px 0 0 -35px ;	
+
+
+}
+.list{
+	display: none;
+}
+/*#schduleDay2{
+	display: none;
+}
+#schduleDay3{
+	display: none;
+}
+#schduleDay4{
+	display: none;
+}
+#schduleDay5{
+	display: none;
+}*/
+.Itemcontent{
+	position: relative;
+}
+.Itemcontent p{
+	font-size: 20px;
+}
+.Itemcontent .tagBox{
+	position: absolute;
+	top:-4px;
+	left: 38%;
+		/*right: 60%;*/
+}
+.Itemcontent span:nth-of-type(1){
+	/*position: absolute;*/
+	display: inline-block;
+	/*top: 0px;*/
+	/*right: 0;*/
+	/*right: 60%;*/
+	/*left: 40%;*/
+	font-size: 14px;
+}
+.Itemcontent span:nth-of-type(2){
+	/*position: absolute;*/
+	display: inline-block;
+	/*top: 0px;*/
+	/*right: 0;*/
+	/*right: 60%;*/
+	/*left: 40%;*/
+	font-size: 14px;
+}
+@media screen and (max-width: 1500px){
+	.Itemcontent .tagBox{
+		left:140px;
+	}
+	.tagBox span:nth-of-type(1){
+		margin-right: 5px;
+	}
+}
+@media screen and (max-width: 1400px){
+	.Itemcontent span:nth-of-type(1){
+		/*left: 50%;*/
+	}
+
+}
+
+.deleteIcon{
+	font-size:30px;
+	display: block;
+	position: absolute;
+	top: 10px;
+	right: 0;
+	cursor:pointer;
+	transition:.3s;
+	opacity: 0;
+	width: 30px;
+
+}
+.deleteIcon img{
+	width: 100%;
+	vertical-align: middle;
+
+}
+.schduleItems li:hover {
+	background-color: rgba(255,255,255,.5);
+}
+@media screen and (min-width:1000px){
+	.schduleItems li:hover .deleteIcon{
+			opacity: 1;
+	}
+}
+
+#copyLiStyle{
+	display: none;
+}
+
+/*引入行程燈箱start*/
+.schduleIN{
+	display:none;
+	width: 450px;
+	height: 400px;
+	position: absolute;
+	left: 0px;
+	top: 36px;
+	background-color: rgba(0,0,0,.8);
+	z-index: 3;
+	padding: 0;
+
+}
+.schduleINDel{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+}
+.schduleINDel img{
+	width: 100%;
+
+}
+
+.schduleINTitle{
+	font-size:20px;
+	text-align:center;
+	padding:20px;
+	background-color: #5df;
+	opacity: .8;
+}
+.schduleINContent{
+	text-align:center;
+	padding-top:30px;
+}
+.schduleINContent p{
+	font-size:20px;
+	color:#ccc;
+	padding:50px;
+}
+.schduleINContent a{
+	text-decoration:none;
+	padding: 10px 20px;
+	color:#333;
+	background-color: #5df;
+	margin-right:10px ;
+}
+.mySchduleList li{
+	cursor: pointer;
+	position: relative;
+	text-align: left;
+	padding: 20px 10px;
+	margin: 5px;
+}
+.mySchduleList li p{
+	display: inline-block;
+	padding: 0 30px;
+
+}
+.mySchduleList li p:nth-of-type(1){
+	width: 140px;
+}
+
+.mySchduleList li div{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top: 0;
+	right: 20px;
+	bottom: 0;
+	margin: auto;
+
+
+}
+.mySchduleList li div img{
+	width: 100%;
+	vertical-align: middle;
+}
+.mySchduleList li:hover{
+	background-color: rgba(255,255,255,.5);
+}
+
+/*引入行程燈箱end*/
+
+.selectPlanet p{
+	font-size: 20px;
+}
+.selectPlanets{
+	text-align:center;
+	width: 20%;
+	display: block;
+	float:right;
+	text-decoration:none;
+	background-color:#5df;
+	cursor:pointer;
+	padding: 10px 10px;
+	margin-bottom:20px;
+	color:#333;
+}
+#replaceDays{
+	display: none;
+}
+.confirmPlanetBox{
+	display: none;
+}
+.planetSelect p:nth-of-type(1){
+	text-align: left;
+	/*width: 80%;*/
+	font-size: 24px;
+	padding: 50px ;
+	line-height: 30px;
+
+}
+
+.confirmPlanetBox p:nth-of-type(1){
+	font-size: 24px;
+}
+.confirmPlanetBox p{
+	/*text-align: left;*/
+	font-size: 20px;
+	line-height: 150px;
+	color: #ccc;
+	font-weight: 700;
+}
+/*星球燈箱start*/
+.planetFilter{
+	display: none;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	height: 1080px;
+	background-color: rgba(0,0,0,.6);
+	z-index: 4;
+	font-size: 0;
+}
+.planetLightBox{
+
+	width: 700px;
+	height: 400px;
+	position: fixed;
+	font-weight: 700;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	background-color: rgba(0,0,0,.6);
+	/*background-color: #888;*/
+	color: #ccc;
+
+}
+.logoBar{
+	position: relative;
+	width: 100%;
+	/*margin: -20px;*/
+	background-color: rgba(0,160,234,.8);
+	/*background-color:#5df;*/
+	/*opacity: .8;*/
+}
+.logoBar div{
+
+	margin: auto;
+	width: 70px;
+	text-align: center;
+	padding: 15px 0;
+}
+.logoBar div span{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top: -70px;
+	right: -70px;
+	display: block;
+	font-size: 40px;
+	z-index: 6;
+	color: #333;
+	cursor: pointer;
+
+}
+.logoBar img{
+	width: 100%;
+/*margin: 15px 0;*/
+	vertical-align: middle;
+}
+.selectPlanetTitle{
+	padding: 30px;
+	text-align: center;
+	font-size: 26px;
+	line-height: 40px;
+}
+.selectPlanetTitle span{
+	font-weight: 500;
+	font-size: 20px;
+	color:#f00;
+}
+.planetLightBox ul{
+
+	text-align: center;
+}
+.planetLightBox li+li{
+	margin-left: 100px;
+}
+.planetLightBox li{
+	font-size: 23px;
+	display: inline-block;
+	cursor:pointer;
+
+}
+.planetLightBox li div{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	overflow: hidden;
+
+}
+.planetLightBox li div img{
+	width: 100%;
+	vertical-align: middle;
+}
+.planetLightBox li p {
+	padding:10px;
+}
+.searchSchdule p,.editImg{
+	cursor: pointer;
+}
+/*星球燈箱end*/
+
+.planetName{
+	vertical-align: top;
+	color:#ccc;
+	/*float:left;*/
+	display: inline-block;
+	font-size:26px;
+	font-weight: 700;
+	margin-bottom:19px;
+	padding-top: 2px;
+	cursor:pointer;
+}
+.planetName span{
+	line-height:35px;
+
+
+}
+
+.tagList{
+ font-size: 16px;
+}
+.tagList ul{
+	color:#ccc;
+}
+
+.tagList li{
+	display: inline-block;
+	padding:5px 10px;
+	border:2px solid  rgba(100,150,200,.5);
+	cursor:pointer;
+	font-weight:700;
+	margin-right: 10px;
+
+}
+/*.tagList li:nth-of-type(1){
+	background-color:#5df;
+	color:#333;	
+}*/
+.blurStyle{
+	background-color:transparent;
+	color:#ccc;	
+}
+.focusStyle{
+	background-color:#5df;
+	color:#333;	
+}
+.transparentTop{
+	border-top:transparent;
+}
+.viewBorderStyle{
+	border:2px solid rgba(2, 94, 200, 1);
+	box-shadow: 0px 0px 100px rgba(2, 94, 181, 1);
+}
+
+.views {
+	height: 570px;
+	overflow: auto;
+	position: relative;
+}
+.views::-webkit-scrollbar {
+		  width: 15px;
+	} /* 这是针对缺省样式 (必须的) */
+.views::-webkit-scrollbar-track {
+      background-color: rgba(2, 94, 141, .5);
+      border-radius:15px; 
+} /* the new scrollbar will have a flat appearance with the set background color */
+ 
+.views::-webkit-scrollbar-thumb {
+      background-color: rgba(139, 181, 243, .6);
+      border-radius:15px; 
+} /* this will style the thumb, ignoring the track */
+ 
+.views::-webkit-scrollbar-button {
+      background-color: none;
+
+} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+ 
+
+.views li{
+	position: relative;
+	width: 46%;
+	margin:15px 15px 15px 0;
+	display: inline-block;	
+	/*transition:5s;*/
+	left: 0;
+}
+.viewDescrip p:nth-child(2){
+	font-size: 18px;
+
+}
+@media screen and (max-width: 1600px){
+	.views li{
+	width: 45%;
+
+	}
+}
+@media screen and (max-width: 1200px){
+	.views li{
+	margin:10px 10px 10px 0;
+	borderStyle 
+	}
+}
+.viewImgBox img{
+	/*min-width: 170px;*/
+	width: 100%;
+
+}
+.views p{
+	font-size: 16px;
+	padding:0 15px;
+	line-height:30px;
+	font-weight:700;
+	color:#ccc;
+
+}
+.views p:nth-of-type(1){
+	margin-top:10px ;
+	font-size:23px;
+}
+.viewsBoxSetting{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transition:.5s;
+}
+.addSchdule input{
+	position: absolute;
+	opacity: 0;
+	/*margin: -200px;*/
+	cursor: pointer;
+
+}
+#schduleTrig{
+		display: none;
+	}
+.viewContent p:nth-of-type{
+	font-size: 16px;
+}
+@media screen and (min-width: 1000px){
+	.viewsBoxSetting:hover .viewContent{
+		filter: brightness(.5);
+	}
+	.addSchdule{
+		display: block;
+		position: absolute;
+		width: 50%;
+		line-height: 195px;
+		padding-bottom: 23px;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		/*right: 0;*/
+		/*bottom: 0;*/
+		margin: auto;
+
+		font-size:70px;
+		/*color: rgba(91,189,228);*/
+		color: #fff;
+		text-align:center;
+		/*color:#ccc;*/
+		cursor:pointer;
+		transition:.3s;
+
+	}
+	.mobiTxt{
+		display: none;
+		
+	}
+	.viewInfo{
+		display: block;
+		position: absolute;
+		width: 50%;
+		padding-bottom: 14px;
+		line-height: 205px;
+		opacity: 0;
+		top: 0;
+		/*left: 0;*/
+		right: 0;
+		/*bottom: 0;*/
+		margin: auto;
+
+		/*font-size:70px;*/
+
+
+		text-align:center;
+		color:#ccc;
+		cursor:pointer;
+		transition:.3s;
+
+	}
+	.viewInfo img{
+		vertical-align: middle;
+		width: 35%;
+	}
+
+	.viewsBoxSetting:hover .addSchdule{
+		opacity: 1;
+	}
+	.viewsBoxSetting:hover .viewInfo{
+		opacity: 1;
+	}
+}
+
+
+
+.viewContent{
+	width: 100%;
+	/*height: 100%;*/
+	position: relative;	
+	cursor:pointer;
+}
+.viewImgBox{
+	position: relative;
+	width: 100%;
+	padding-bottom: 65%;
+	overflow: hidden;
+}
+.viewImgBox img{
+	width: 105%;
+	position: absolute;
+}
+.tagBox{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	/*width: 50%;*/
+}
+.tagBox span{
+	font-size: 16px;
+}
+.tag{
+	padding:5px 10px;
+	margin-right: 10px;
+	display: inline-block;
+	/*position: absolute;*/
+	/*top: 10px;*/
+	/*left: 10px;*/
+	color:#333;
+	background-color:#5df;
+}
+.int{
+	font-family: '微軟正黑體';
+	color: #ccc;
+	background-color:#00C6C7;	
+}
+.adv{
+	font-weight: 700;
+	font-family: '微軟正黑體';
+	color: #ccc;
+	background-color:#FF492B;	
+}
+.tec{
+	font-weight: 700;
+	font-family: '微軟正黑體';
+	color: #ccc;
+	background-color:#852BFF;	
+}
+.hum{
+	font-weight: 700;
+	font-family: '微軟正黑體';
+	color: #ccc;
+	background-color:#00C759;	
+}
+.fod{
+	font-weight: 700;
+	font-family: '微軟正黑體';
+	color: #ccc;
+	background-color:#FFB22B;	
+}
+/*景點介紹燈箱start*/
+.viewFilter{
+	width: 100%;
+	height: 100%;
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,.6);
+	z-index: 51;
+
+}
+.viewIntroduce{
+
+	width: 600px;
+	min-height: 600px;
+	height: 90%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+
+
+	background-color: rgba(0,0,0,.6);
+	padding: 0;
+	margin: auto;
+	z-index: 51;
+}
+.addViewImg{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	bottom: 20px;
+	right: 20px;
+	cursor: pointer;
+
+}
+.addViewImg img{
+	width: 100%;
+}
+.viewName p{
+	text-align:center;
+	font-size:28px;
+	color:#ccc;
+	padding:20px;
+	font-weight:700;
+	border-bottom:2px solid #060;
+}
+
+.viewName span:nth-of-type(1){
+
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	display: block;
+	top: 15px;
+	right:15px;
+	color:#5df;
+	cursor:pointer;
+}
+.viewName{
+	position: relative;
+	width: 100%;
+}
+.viewName img{
+	width: 100%;
+}
+.viewImg{
+	position: relative;
+	padding: 10px;
+	margin:10px auto;
+	width: 85%;
+	/*height: 30%;*/
+}
+.viewImg img{
+	width: 100%;
+}
+.viewDescrip{
+	padding: 10px;
+	margin:10px auto;
+	width: 85%;	
+}
+.viewDescrip p{
+	/*padding: 10px;*/
+	margin:10px auto;
+	width: 90%;	
+}
+.viewDescrip p:nth-of-type(1){
+	font-weight: 700;
+}
+.viewDescrip p{
+	color:#ccc;
+}
+.viewDescrip p:nth-child(1){
+	font-size:23px;
+	padding: 10px 0;
+
+}
+.viewDescrip p:nth-child(2){
+	line-height:30px;
+			font-weight: 700;
+}
+/*景點介紹燈箱end*/
+.expertFilter{
+	position: fixed;
+	width: 100%;
+	top: 20px;
+	height: 1080px;
+	background-color: rgba(0,0,0,.6);
+	z-index: 51;
+	display: none;
+	/*font-size: 0;*/
+}
+.expert{
+	background-color: rgba(0,0,0,.5);
+	position: absolute;
+	top: 250px;
+	right: 0;
+	left: 0;
+	margin: auto;
+
+	/*padding-right:90px;*/
+
+	width: 820px;
+	z-index: 7;
+}
+.positionRE{
+	width: 100%;
+	position: relative;
+}
+.expertList{
+	font-size:0;
+}
+.expertBoxDel{
+	position: absolute;
+	top: -80px;
+	right: -40px;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+.expertBoxDel img{
+	width: 100%;
+}
+.borderStyle.expertBorder{
+	padding:0;
+}
+.expertTitle{
+	padding:15px 0px 0px 20px ;
+	font-size:30px;
+	color:#ccc;
+	text-align: center;
+	font-weight: 700;
+
+}
+.expertList li{
+	display: inline-block;
+	width: 267px;
+	/*width: 205.9px;*/
+	padding:40px 20px 40px 20px;
+	/*background-color: rgba(0,0,0,.5);*/
+}
+
+.expertImg{
+	position:relative; 
+	width: 100px;
+	height: 100px;
+	border-radius:50%;
+	overflow:hidden;
+	z-index:1;
+
+}
+.expertImg img{
+	width: 100%;
+	vertical-align:middle;
+}
+.expertNameBG{
+	position: absolute;
+	width: 180px;
+	height: 40px;
+	top: 15px;
+	left: 60px;
+	z-index:0;
+	background-color:rgba(91,189,228);
+	transform:skewX(-30deg);
+}
+.expertName{
+	width: 140px;
+	position: absolute;
+	top: 15px;
+	left: 110px;
+	font-weight:700;
+	display: block;
+	padding:7px 10px;
+	font-size:23px;
+	color:#ccc;
+	z-index:3;
+}
+.expertBtn{
+
+	width: 70px;
+	position: absolute;
+	right: 40px;
+	
+	bottom: 0;
+
+
+	color:#333;
+	cursor:pointer;
+	text-align:center;
+	margin: auto;
+	background-color:#5df;
+}
+.expertBtn a{
+	display: block;
+}
+.expertBtn span{
+	padding: 5px 0;
+	display: block;
+	width: 100%;
+	font-size:18px;	
+}
+.cancelBtn{
+	display: none;
+	position: absolute;
+	top: 0px;
+	right: 10px;
+	color: #fff;
+	font-size: 50px;
+	cursor: pointer;
+
+}
+
+.commit{
+	font-size: 16px;
+	padding:50px 0;
+	text-align: center;
+	margin-bottom:100px; 
+
+}
+.commit span{
+	line-height: 50px;
+	padding:10px 50px;
+}
+.dayBtn,.schBtn,.viewBtn{
+		display: none;
+}
+.deleteBox{
+	display: none;
+}
+.Filter{
+
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,.5);
+	z-index: 5;
+}
+.delBox{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	width: 500px;
+	height: 300px;
+	margin: auto;
+	text-align: center;
+	background-color: rgba(0,0,0,.6);
+
+}
+.sizeSetting{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	width: 500px;
+	height: 300px;
+	margin: auto;
+	text-align: center;
+	background-color: rgba(0,0,0,.6);
+
+}
+.saveDataBox{
+	display: none;
+}
+.saveDataBox p:nth-of-type(1){
+	font-size: 24px;
+}
+.saveData p{
+	/*text-align: left;*/
+	font-size: 20px;
+	line-height: 55px;
+	color: #ccc;
+	font-weight: 700;
+}
+
+
+.delBox p{
+font-size: 24px;
+line-height: 150px;
+color: #ccc;
+font-weight: 700;
+}
+.btnBox{
+	margin-top: 30px;
+	/*padding:50px; */
+}
+.yesBtn,.noBtn{
+	margin: 0 20px;
+	padding: 15px 20px;
+	display: inline-block;
+	background-color: rgba(91,189,228);
+	cursor: pointer;
+}
+
+@media screen and (max-width: 999px){
+	.planningContent{
+		width: 100%;
+		height: 1070px;
+		overflow: hidden;
+		box-sizing: border-box;
+		padding: 50px 20px 20px 20px;		
+	}
+
+	.searchSchdule {
+		width: 100%;
+		/*padding:10px 0 0 10px ;*/
+		float: none;
+		margin: 30px 0;
+	}
+	.searchSchdule input{
+
+		width: 51%;
+	}
+	#mobileBox{
+		box-sizing: border-box;
+		width: 100%;
+		padding: 0px;
+		/*margin: 10px;*/
+	}
+	.day div:nth-child(1){
+		margin-left:-60px ;
+	}
+
+	.schMoveInBox{
+		margin: 30px 0;
+	}
+	.schMoveIn{
+		width: 50%;
+		display: block;
+		margin: 0 ;
+	}
+	.center{
+		text-align: left;
+	}
+	.editImg{
+		margin-bottom: 0;
+	}
+	.planetName{
+		margin-bottom: 0;
+	}
+	.schduleList{
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	.schduleDay{
+		margin: 0;
+		padding: 0;
+	}
+	.borderStyle{
+
+		padding: 0;
+	}
+	.selectDaysGroup{
+		margin: 0;
+
+	}
+	.selectDaysGroup li{
+		margin: 0;
+		padding: 25px 0;
+	}
+	.schduleItems li{
+		margin: 0;
+	}
+	.deleteIcon{
+		opacity: 1;
+	}
+	.selectViews{
+		width: 100%;
+		margin: 0;
+	}
+	.views{
+		/*height: 700px;*/
+	}
+	.views li{
+
+		width: 45%;
+		margin: 10px;
+	}
+	.tagList li{
+		margin: 10px;
+	}
+	.tagList ul{
+		text-align: center;
+	}
+	.addSchdule{
+	width: 100%;
+	font-size:30px;
+	display: inline-block;
+	padding:15px 0;
+	text-align:center;
+	color:#ccc;
+	background-color: rgba(200,200,200,.5);
+	cursor: pointer;
+
+	}
+
+	.viewInfo img{
+		display: none;
+
+	}
+
+	.mobiTxt{
+		font-size: 26px;
+
+	}
+	.mobilePlanningBox{
+		width: 100%;
+		position: relative;
+		
+	}
+	.PlanningBtn{
+		display: flex;
+		justify-content:space-around;
+		font-size: 0;
+		width: 100%;
+	}
+	.dayBtn,.schBtn,.viewBtn{
+		text-align: center;
+		padding: 20px 0;
+		width: 100%;
+		display: inline-block;
+		color: #ccc;
+		cursor: pointer;
+		font-size: 20px;
+		border-bottom: transparent;
+		margin-bottom: -1px; 
+	}
+	.dayBtn,.schBtn{
+		border-right: transparent;
+	}
+	.schBtn,.viewBtn{
+		/*margin-left: -1px;*/
+	}
+	.schBtn{
+		position: relative;
+	}
+	.selectDaysGroup{
+
+		position: absolute;
+		top: 62px;
+		left: 0;
+/*		height: 500px;
+		overflow: auto;*/
+	}
+	#dayParent{
+		height: 650px;
+		overflow: auto;
+	}
+#dayParent::-webkit-scrollbar {
+		  width: 15px;
+	} /* 这是针对缺省样式 (必须的) */
+#dayParent::-webkit-scrollbar-track {
+      background-color: rgba(2, 94, 141, .5);
+      border-radius:15px; 
+} /* the new scrollbar will have a flat appearance with the set background color */
+ 
+#dayParent::-webkit-scrollbar-thumb {
+      background-color: rgba(139, 181, 243, .6);
+      border-radius:15px; 
+} /* this will style the thumb, ignoring the track */
+ 
+#dayParent::-webkit-scrollbar-button {
+      background-color: none;
+
+}
+	.getSchdule{
+		display: none;
+	}
+	.schduleList{
+		position: absolute;
+		top: 62px;
+		left: 110%;
+	}
+	.selectViews{
+		position: absolute;
+		top: 62px;
+		left: 110%;
+		min-width: 0;
+	}
+
+	.viewsCount{
+		text-align: center;
+		top: 4px;
+		right: 0px;
+
+	}
+	.schduleIN {
+		width: 90%;
+		top:85px;
+		right: 0;
+		left: 0;
+		margin: auto;
+	}
+	.pignose-calendar{
+		width: 100%;
+	}
+	#calendar{
+		width: 100%;
+		top: 280px;	
+		left: 0;	
+	}
+	.expert{
+		top: 20px;
+		width: 90%;
+	}
+	.expertList li{
+	margin: auto;
+	width: 50%;
+	display: block;
+	width: 280px;
+	padding:40px 20px 40px 20px;
+
+	}
+	.commit{
+		/*height: 200px;*/
+		padding: 0;
+		margin: 10px;
+	}
+	.viewIntroduce{
+		width: 90%;
+		position: fixed;
+		margin: auto;
+		height: 90%;
+		z-index: 51;
+		top: 20px;
+		left: 0;
+	}
+
+	.deldayFilter{
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,.5);
+	z-index: 5;
+}
+	.delBox{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		width: 90%;
+		height: 250px;
+		margin: auto;
+		text-align: center;
+		background-color: rgba(0,0,0,.8);
+
+	}
+	/*	.delBox p{
+		font-size: 26px;
+		line-height: 150px;
+		color: #ccc;
+		font-weight: 700;
+		}*/
+		/*.btnBox{*/
+			/*margin-top: 50px;*/
+			/*padding:50px; */
+		/*}*/
+	/*	.yesBtn,.noBtn{
+			margin: 0 20px;
+			padding: 15px 20px;
+			display: inline-block;
+			background-color: rgba(91,189,228);
+			cursor: pointer;
+		}*/
+
+
+	.planetFilter{
+		width: 100%;
+		height: 100%;
+
+	}
+	.planetLightBox{
+
+		width: 90%;
+		/*height: 800px;*/
+		position: fixed;
+		font-weight: 700;
+		z-index: 5;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		background-color: rgba(0,0,0,.6);
+		/*background-color: #888;*/
+		color: #ccc;
+
+	}
+	.logoBar{
+		position: relative;
+		width: 100%;
+		/*margin: -20px;*/
+		background-color: rgba(0,160,234,.8);
+		/*background-color:#5df;*/
+		/*opacity: .8;*/
+	}
+	.logoBar div{
+
+		margin: auto;
+		width: 70px;
+		text-align: center;
+		padding: 15px 0;
+	}
+	.logoBar div span{
+		position: absolute;
+		width: 30px;
+		height: 30px;
+		top: 0px;
+		right: 10px;
+		display: block;
+		font-size: 40px;
+		z-index: 6;
+		color: #333;
+		cursor: pointer;
+
+	}
+	.logoBar img{
+		width: 100%;
+	/*margin: 15px 0;*/
+		vertical-align: middle;
+	}
+	.selectPlanetTitle{
+		padding: 30px;
+		text-align: center;
+		font-size: 26px;
+		line-height: 40px;
+	}
+	.selectPlanetTitle span{
+		font-weight: 500;
+		font-size: 20px;
+		color:#f00;
+	}
+	.planetLightBox ul{
+
+		text-align: center;
+	}
+	.planetLightBox li+li{
+		margin-left: 0;
+	}
+	.planetLightBox li{
+		font-size: 23px;
+		/*width: 100%;	*/
+		display: inline-block;
+		cursor:pointer;
+
+	}
+	.Itemcontent .tagBox{
+		/*width: 50%;*/
+		left: 150px;
+	}
+	.Itemcontent span:nth-of-type(1){
+		/*position: absolute;*/
+		top: -3px;
+		display: inline-block;
+		/*left: 180px;*/
+		right: -10px;
+		padding: 5px;
+		margin-right: 4px;
+		/*left: 0;*/
+		font-size: 16px;
+	}
+
+	.Itemcontent span:nth-of-type(2){
+		/*position: absolute;*/
+		top: -3px;
+		display: inline-block;
+		/*left: 130px;*/
+		/*right: 250px;*/
+		/*left: 0;*/
+				padding: 5px;
+
+		font-size: 16px;
+	}
+	#moveIcon{
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		left: -530px;
+	}
+	.dayDel{
+		top: 0;
+		width: 20px;
+		height: 20px;
+	}
+
+	.sizeSetting{
+	width: 90%;
+	}
+	.sizeSetting p{
+	font-size: 18px;
+	}
+	.saveDataBox p:nth-of-type(1){
+	font-size: 24px;
+	}
+	.planetSelect p:nth-of-type(1){
+		font-size: 20px;
+	}
+	.expertBoxDel{
+		top: 15px;
+		right: 15px;
+	}
+	.expertNameBG{
+		width: 170px;
+	}
+
+}
+
+@media screen and (max-width: 765px){
+	.views li{
+		font-size: 18px;
+		/*width: 40%;*/
+
+	}
+.setPlanet{
+	width: 135px;
+	/*padding-left: 120px;*/
+	/*margin: auto;*/
+}
+
+
+}
+@media screen and (max-width: 500px){
+	.views li{
+		padding: 15px 20px 0px 20px;
+		font-size: 18px;
+		width: 95%;
+
+	}
+	.addViewImg{
+	width: 50px;
+	height: 50px;
+	}
+	.day div:nth-child(3){
+		/*right: 10px;*/
+		left: 260px;
+		width: 20px;
+		height: 20px;
+	}
+
+
+
+}

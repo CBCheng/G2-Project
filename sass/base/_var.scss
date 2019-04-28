@@ -1,27 +1,43 @@
 // body
 $bgcolor: rgb(27, 52, 11);
 $bgimg: url(../img/bg.png);
-$fontfamily: '微軟正黑體','Gill Sans','Gill Sans MT','Calibri','Trebuchet MS',sans-serif;
+$fontfamily: '微軟正黑體',
+'Gill Sans',
+'Gill Sans MT',
+'Calibri',
+'Trebuchet MS',
+sans-serif;
 $margintop: 13px;
- 
-
 // nav
-$gradation:linear-gradient(to top,rgba(0,255,255,.3), rgba(0,183,255,.3) 100%);
-$navColor:  rgba(108,213,255,.3);
-
-
+$gradation:linear-gradient(to top, rgba(0, 255, 255, .3), rgba(0, 183, 255, .3) 100%);
+$gradation2:linear-gradient(to top,rgba(0, 183, 255, .3), rgba(0, 255, 255, .3) 100%);
+$navColor: rgba(0, 255, 255, .3);
 // bottom
 $bottomColor: #6cd5ff;
-
-
 //rwd
-$small : 374px;
-$medium: 767px;
-$desktop: 1366px;
-
-// color
+$small: 767px;
+$medium: 992px;
+$desktop: 1233px;
+// 文字顏色
 $fontColorWhite:#fff;
 $fontColorBlue:#6cd5ff;
 $fontColorBlack:#000;
-
+$fontColorOrange: #cfa972;
+$fontColorGreen: #80c269;
 // 方框樣式
+$borderColorBlue: rgba(108, 213, 255, 0.5);
+$borderColorOrange: rgba(207, 169, 114, 0.5);
+$borderColorGreen: rgba(128, 194, 105, 0.5);
+// 屬性顏色
+$adventure:#ff492b;
+$food:#ffb22b;
+$culture:#00c759;
+$nalgene:#00c6c7;
+$technology:#852bff;
+$attrBlue: #094f91;
+$attrOrange: #ad7f43;
+$attrGreen: #486a00;
+// 星球顏色
+$waterPlanet: #6cd5ff;
+$treePlanet: rgb(128, 194, 105);
+$sandPlanet:rgb(207, 169, 114);

@@ -2,8 +2,6 @@
 @mixin body($font-base-size) {
     body {
      font-size: $font-base-size;
-     padding-left: ceil($font-base-size * 1.1);
-     padding-right : ceil($font-base-size * 1.1);
      background-image: $bgimg;
      background-repeat:repeat; 
      font-family: $fontfamily;
@@ -43,4 +41,95 @@
             @content;
         }
     }
+}
+
+
+//=========== 0821新增 ==============
+
+
+// ====== scrollBar change =======
+@mixin scrollbar() {
+    width: 15px;
+    background: #202164;
+}
+@mixin scrollbarTrack() {
+    box-shadow: inset 0 0 5px grey;
+}
+@mixin scrollbarThumb() {
+    background: #95cce4;
+    border-radius: 10px;
+}
+@mixin scrollbarThumbHover() {
+    background: #2f83ad;
+}
+
+// ====== 景點屬性標籤 =======
+//知性
+@mixin tagNalgene(){
+    font-size: 16px;
+    vertical-align: middle;
+    padding: 5px 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    border: 1px solid #00c6c7;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+//科技
+@mixin tagTechnology(){
+    font-size: 16px;
+    vertical-align: middle;
+    padding: 5px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    border: 1px solid #852bff;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+//冒險
+@mixin tagAdventure(){
+    font-size: 16px;
+    vertical-align: middle;
+    padding: 5px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    border: 1px solid #ff492b;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+//美食
+@mixin tagFood(){
+    font-size: 16px;
+    vertical-align: middle;
+    padding: 5px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    border: 1px solid #ffb22b;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+//人文
+@mixin tagCulture(){
+    font-size: 16px;
+    vertical-align: middle;
+    padding: 5px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    border: 1px solid #00c759;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, .5);
 }

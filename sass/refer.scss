@@ -1,0 +1,54 @@
+@import "base/var";
+@import "base/reset";
+@import "mixin/mixin";
+@import "components/buttons";
+
+@include body(12px);
+// *{
+//     outline: .3px solid #fff;
+// }
+img{
+    width: 100%;
+    vertical-align: middle;
+}
+a {
+    text-decoration: none;
+    color: $fontColorWhite;
+}
+@import "layout/nav";
+@import "layout/nav-small";
+
+// scrollBar
+::-webkit-scrollbar {
+    width: 15px;
+    background: #202164;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #95cce4;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #2f83ad;
+}
+@import "layout/refer/refer-desk";
+@import "layout/refer/refer-mobile";
+@import "layout/footer";
+@import "layout/medium";
+@import "layout/desktop";
+
+.lightBox{
+    #upFile, #imgView, .mytrip, .close, .submit{
+        cursor: pointer;
+    }
+}
+.tripPic{
+    height: 75%;
+    overflow: hidden;
+}

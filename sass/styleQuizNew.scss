@@ -1,0 +1,27 @@
+@import 'base/var';
+@import 'base/reset';
+
+@import 'mixin/mixin';
+@import 'components/buttons';
+
+@import 'layout/nav';
+@import "layout/nav-small";
+
+
+//額外變數
+$bottonborderR:3px;
+$fontChinese:'微軟正黑體';
+//body
+@include body(14px);
+*{
+    // outline: 1px solid #F00;
+}
+//nav
+
+
+
+
+
+@import 'layout/quizNew-small';
+@import 'layout/quizNew-medium';
+@import 'layout/quizNew-desktop';

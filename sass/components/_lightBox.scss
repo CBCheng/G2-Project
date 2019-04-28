@@ -1,0 +1,27 @@
+//燈箱背後遮罩
+@mixin lIghtBoxFather($zi:10) {
+    position: absolute;
+    z-index: $zi;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+}
+
+//燈箱本體
+@mixin lIghtBox($wi:45%, $he:60%, $mt:13%) {
+    position: relative;
+    width: $wi;
+    height: $he;
+    margin: auto;
+    margin-top: $mt;
+    border: 2px solid #6cd5ff;
+}
+
+//==========================
+//燈箱本體div要被包在遮罩div中
+//<div class="遮罩">
+//      <div class="燈箱">
+//
+//      </div>
+//</div>
+//==========================

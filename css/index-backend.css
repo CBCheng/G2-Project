@@ -1,0 +1,116 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.backendFull {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background-image: url("../img/poa/bg11.png");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.mask {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); }
+
+.wrapPanel {
+  width: 600px;
+  margin: auto;
+  padding-top: 150px; }
+  .wrapPanel img {
+    display: block;
+    margin: auto;
+    padding-bottom: 50px; }
+
+.loginPanel {
+  width: 300px;
+  margin: auto;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #6cd5ff;
+  padding: 10px; }
+  .loginPanel h2 {
+    font: 30px "微軟正黑體", "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS", sans-serif;
+    padding-bottom: 50px; }
+  .loginPanel span {
+    font: 18px "微軟正黑體", "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS", sans-serif;
+    display: block;
+    padding-top: 10px; }
+  .loginPanel input[type=text],
+  .loginPanel input[type=password] {
+    font: 16px "微軟正黑體", "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS", sans-serif;
+    width: 250px;
+    color: #FFF;
+    text-decoration: none;
+    border: none;
+    border-bottom: 1px solid rgba(147, 147, 147, 0.8);
+    background-color: transparent;
+    padding: 10px;
+    outline: none;
+    -webkit-transition: 0.2s; }
+  .loginPanel input[type=text]:focus {
+    border-bottom: 1px solid #6cd5ff; }
+  .loginPanel span:last-child {
+    padding-top: 60px;
+    text-align: center; }
+  .loginPanel input[type=submit] {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.8);
+    font: 18px "微軟正黑體", "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS", sans-serif;
+    line-height: 30px;
+    width: 100px;
+    height: 30px;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    outline: none;
+    -webkit-transition: 0.2s; }
+  .loginPanel input[type=submit]:hover {
+    background-color: #6cd5ff; }
